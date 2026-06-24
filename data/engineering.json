@@ -1,1 +1,30 @@
-
+[
+  {
+    "id": 1,
+    "title": "Employability Skills",
+    "category": "Employability Skills",
+    "date": "23 June 2026",
+    "link": "../engineering/employability-skills/index.html"
+  },
+  {
+    "id": 2,
+    "title": "Automobile Engineering",
+    "category": "Automobile",
+    "date": "23 June 2026",
+    "link": "../engineering/automobile/index.html"
+  },
+  {
+    "id": 3,
+    "title": "Engineering Topics",
+    "category": "Engineering Topics",
+    "date": "23 June 2026",
+    "link": "../engineering/engineering-topics/index.html"
+  },
+  {
+    "id": 4,
+    "title": "Other Engineering Topics",
+    "category": "Other Topics",
+    "date": "23 June 2026",
+    "link": "../engineering/other-topics/index.html"
+  }
+]
