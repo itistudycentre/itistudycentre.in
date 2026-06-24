@@ -440,6 +440,21 @@ font-weight:bold;
 }
 
 .download-btn:hover{
+  .main-footer{
+
+background:#003b75;
+
+color:#fff;
+
+text-align:center;
+
+padding:25px;
+
+margin-top:50px;
+
+font-size:15px;
+
+}
 
 background:#002d5a;
 
