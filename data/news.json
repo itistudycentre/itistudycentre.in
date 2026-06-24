@@ -1,1 +1,42 @@
-
+[
+  {
+    "id": 1,
+    "title": "CTS Mains Schedule 2026 Released",
+    "category": "Exam",
+    "date": "23 June 2026",
+    "link": "../news/exam/index.html",
+    "pdf": "../pdf/exam/CTS Mains Schedule 2026 Rev 2.pdf"
+  },
+  {
+    "id": 2,
+    "title": "ITI Admission 2026 Registration Started",
+    "category": "Admission",
+    "date": "23 June 2026",
+    "link": "../news/admission/index.html",
+    "pdf": ""
+  },
+  {
+    "id": 3,
+    "title": "NCVT Result 2026 Published",
+    "category": "Result",
+    "date": "23 June 2026",
+    "link": "../news/result/index.html",
+    "pdf": ""
+  },
+  {
+    "id": 4,
+    "title": "DGT Official Notification",
+    "category": "Notification",
+    "date": "23 June 2026",
+    "link": "../news/notification/index.html",
+    "pdf": ""
+  },
+  {
+    "id": 5,
+    "title": "ITI Counselling Schedule",
+    "category": "Counselling",
+    "date": "23 June 2026",
+    "link": "../news/counselling/index.html",
+    "pdf": ""
+  }
+]
