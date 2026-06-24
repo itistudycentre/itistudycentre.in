@@ -1,1 +1,23 @@
-
+[
+  {
+    "id": 1,
+    "title": "Introduction to Fitter Trade",
+    "category": "Fitter",
+    "date": "23 June 2026",
+    "link": "../notes/fitter/index.html"
+  },
+  {
+    "id": 2,
+    "title": "Introduction to Plumber Trade",
+    "category": "Plumber",
+    "date": "23 June 2026",
+    "link": "../notes/plumber/index.html"
+  },
+  {
+    "id": 3,
+    "title": "Workshop Calculation & Science",
+    "category": "Other",
+    "date": "23 June 2026",
+    "link": "../notes/other/index.html"
+  }
+]
