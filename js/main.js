@@ -32,7 +32,36 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
         });
+// Future Dynamic System
 
+fetch("data/news.json")
+.then(response => response.json())
+.then(data => {
+
+console.log("News Loaded");
+
+console.log(data);
+
+})
+.catch(error => console.log(error));
     }
 
 });
+
+fetch("data/notes.json")
+.then(response => response.json())
+.then(data => {
+
+console.log("Notes Loaded");
+
+})
+.catch(error => console.log(error));
+
+fetch("data/engineering.json")
+.then(response => response.json())
+.then(data => {
+
+console.log("Engineering Loaded");
+
+})
+.catch(error => console.log(error));
