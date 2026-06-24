@@ -238,6 +238,109 @@ transition:.3s;
 nav a:hover{
 
 background:#ffffff;
+  .hero-banner{
+
+max-width:1200px;
+
+margin:30px auto;
+
+padding:60px 30px;
+
+text-align:center;
+
+background:linear-gradient(135deg,#004080,#0073e6);
+
+color:#fff;
+
+border-radius:12px;
+
+}
+
+.hero-banner h1{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+.hero-banner p{
+
+font-size:20px;
+
+margin-bottom:25px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+.btn-primary,
+
+.btn-secondary{
+
+padding:12px 24px;
+
+border-radius:6px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+.btn-primary{
+
+background:#ffffff;
+
+color:#004080;
+
+}
+
+.btn-secondary{
+
+background:#ffcc00;
+
+color:#000;
+
+}
+
+.breadcrumb{
+
+max-width:1200px;
+
+margin:20px auto;
+
+font-size:15px;
+
+}
+
+.breadcrumb a{
+
+text-decoration:none;
+
+color:#004080;
+
+font-weight:bold;
+
+}
+
+.breadcrumb span{
+
+margin:0 8px;
+
+color:#888;
+
+}
 
 color:#003b75;
 
