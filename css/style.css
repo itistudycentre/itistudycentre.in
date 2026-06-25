@@ -551,5 +551,122 @@ text-decoration:underline;
 }
 
 /* ===========================
+GOVERNMENT LINK GRID
+=========================== */
+
+.gov-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:18px;
+
+margin-top:20px;
+
+}
+
+.gov-grid a{
+
+display:block;
+
+text-align:center;
+
+padding:15px;
+
+background:#0056b3;
+
+color:#fff;
+
+border-radius:8px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.gov-grid a:hover{
+
+background:#003b75;
+
+transform:translateY(-3px);
+
+}
+
+/* ===========================
+TRADE TABLE
+=========================== */
+
+.trade-table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:20px;
+
+}
+
+.trade-table th{
+
+background:#0056b3;
+
+color:#fff;
+
+padding:14px;
+
+text-align:left;
+
+}
+
+.trade-table td{
+
+padding:12px;
+
+border:1px solid #ddd;
+
+}
+
+.trade-table tr:nth-child(even){
+
+background:#f7f9fc;
+
+}
+
+.trade-table tr:hover{
+
+background:#eef5ff;
+
+}
+
+/* ===========================
+HOME RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.home-row{
+
+grid-template-columns:1fr;
+
+}
+
+.trade-table{
+
+display:block;
+
+overflow-x:auto;
+
+}
+
+.gov-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ===========================
 END
 =========================== */
