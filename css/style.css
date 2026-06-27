@@ -732,6 +732,28 @@ z-index:999;
 #scrollTop:hover{
 background:var(--secondary);
 }
+/* =====================================
+COPY PROTECTION
+===================================== */
+
+.no-copy{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    -webkit-touch-callout:none;
+}
+
+img{
+    -webkit-user-drag:none;
+    user-drag:none;
+    pointer-events:none;
+}
+
+::selection{
+    background:#003b75;
+    color:#ffffff;
+   }
 
 /* ===========================
 END
