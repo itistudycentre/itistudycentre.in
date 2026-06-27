@@ -189,6 +189,65 @@ window.addEventListener("error", (event) => {
     console.error("JavaScript Error:", event.message);
 
 });
+/* =====================================
+   BASIC CONTENT PROTECTION
+===================================== */
+
+// Disable Right Click
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
+
+// Disable Copy
+document.addEventListener("copy", function (e) {
+    e.preventDefault();
+    alert("Copying is disabled on this website.");
+});
+
+// Disable Cut
+document.addEventListener("cut", function (e) {
+    e.preventDefault();
+});
+
+// Disable Drag
+document.addEventListener("dragstart", function (e) {
+    e.preventDefault();
+});
+
+// Disable Common Shortcut Keys
+document.addEventListener("keydown", function (e) {
+
+    // F12
+    if (e.key === "F12") {
+        e.preventDefault();
+    }
+
+    // Ctrl+Shift+I
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
+        e.preventDefault();
+    }
+
+    // Ctrl+Shift+J
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j") {
+        e.preventDefault();
+    }
+
+    // Ctrl+U
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+    }
+
+    // Ctrl+S
+    if (e.ctrlKey && e.key.toLowerCase() === "s") {
+        e.preventDefault();
+    }
+
+    // Ctrl+C
+    if (e.ctrlKey && e.key.toLowerCase() === "c") {
+        e.preventDefault();
+    }
+
+});
 
 // =========================
 // END
