@@ -21,25 +21,25 @@ document.addEventListener("DOMContentLoaded", () => {
 // SEARCH
 // =========================
 
-function initSearch(){
+function initSearch() {
 
-    const input=document.querySelector(".search-section input");
+    const input = document.querySelector(".search-section input");
 
-    if(!input) return;
+    if (!input) return;
 
-    input.addEventListener("keyup",function(){
+    input.addEventListener("keyup", function () {
 
-        const filter=this.value.toLowerCase();
+        const filter = this.value.toLowerCase();
 
-        const items=document.querySelectorAll(
+        const items = document.querySelectorAll(
             ".card,.update-card,.news-card,.result-card,.updates-card"
         );
 
-        items.forEach(item=>{
+        items.forEach(item => {
 
-            const text=item.innerText.toLowerCase();
+            const text = item.innerText.toLowerCase();
 
-            item.style.display=text.includes(filter)?"":"none";
+            item.style.display = text.includes(filter) ? "" : "none";
 
         });
 
@@ -48,23 +48,24 @@ function initSearch(){
 }
 
 // =========================
-// JSON LOADER
+// COMMON JSON LOADER
 // =========================
 
-async function loadJSON(file){
+async function loadJSON(file) {
 
-    try{
+    try {
 
-        const response=await fetch(file);
+        const response = await fetch(file);
 
-        if(!response.ok)
+        if (!response.ok) {
             throw new Error(file);
+        }
 
         return await response.json();
 
-    }catch(error){
+    } catch (error) {
 
-        console.error("Loading Error :",file,error);
+        console.error("Loading Error:", file, error);
 
         return [];
 
@@ -76,11 +77,11 @@ async function loadJSON(file){
 // NEWS
 // =========================
 
-async function loadNews(){
+async function loadNews() {
 
-    const news=await loadJSON("data/news.json");
+    const news = await loadJSON("data/news.json");
 
-    console.log("News Loaded",news);
+    console.log("News Loaded", news);
 
 }
 
@@ -88,18 +89,19 @@ async function loadNews(){
 // NOTES
 // =========================
 
-async function loadNotes(){
+async function loadNotes() {
 
-    const notes=await loadJSON("data/notes.json");
+    const notes = await loadJSON("data/notes.json");
 
-    console.log("Notes Loaded",notes);
+    console.log("Notes Loaded", notes);
 
 }
+
 // =========================
 // ENGINEERING
 // =========================
 
-async function loadEngineering(){
+async function loadEngineering() {
 
     const engineering = await loadJSON("data/engineering.json");
 
@@ -111,7 +113,7 @@ async function loadEngineering(){
 // UPDATES
 // =========================
 
-async function loadUpdates(){
+async function loadUpdates() {
 
     const updates = await loadJSON("data/updates.json");
 
@@ -123,14 +125,12 @@ async function loadUpdates(){
 // FOOTER YEAR
 // =========================
 
-function updateFooterYear(){
+function updateFooterYear() {
 
     const year = document.getElementById("current-year");
 
-    if(year){
-
+    if (year) {
         year.textContent = new Date().getFullYear();
-
     }
 
 }
@@ -139,31 +139,27 @@ function updateFooterYear(){
 // SCROLL TO TOP
 // =========================
 
-function initScrollTop(){
+function initScrollTop() {
 
     const btn = document.getElementById("scrollTop");
 
-    if(!btn) return;
+    if (!btn) return;
 
-    window.addEventListener("scroll",()=>{
+    window.addEventListener("scroll", () => {
 
-        if(window.scrollY > 300){
-
-            btn.style.display="block";
-
-        }else{
-
-            btn.style.display="none";
-
+        if (window.scrollY > 300) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
         }
 
     });
 
-    btn.addEventListener("click",()=>{
+    btn.addEventListener("click", () => {
 
         window.scrollTo({
-            top:0,
-            behavior:"smooth"
+            top: 0,
+            behavior: "smooth"
         });
 
     });
@@ -171,17 +167,15 @@ function initScrollTop(){
 }
 
 // =========================
-// FUTURE MOBILE MENU
+// MOBILE MENU (Future Ready)
 // =========================
 
-function toggleMobileMenu(){
+function toggleMobileMenu() {
 
-    const nav=document.querySelector("nav");
+    const nav = document.querySelector("nav");
 
-    if(nav){
-
+    if (nav) {
         nav.classList.toggle("active");
-
     }
 
 }
@@ -190,9 +184,9 @@ function toggleMobileMenu(){
 // GLOBAL ERROR HANDLER
 // =========================
 
-window.addEventListener("error",(event)=>{
+window.addEventListener("error", (event) => {
 
-    console.error("JavaScript Error :",event.message);
+    console.error("JavaScript Error:", event.message);
 
 });
 
