@@ -714,6 +714,24 @@ border:none;
 }
 
 }
+#scrollTop{
+position:fixed;
+right:20px;
+bottom:20px;
+display:none;
+padding:12px 15px;
+border:none;
+border-radius:50%;
+background:var(--primary);
+color:#fff;
+cursor:pointer;
+box-shadow:var(--shadow);
+z-index:999;
+}
+
+#scrollTop:hover{
+background:var(--secondary);
+}
 
 /* ===========================
 END
