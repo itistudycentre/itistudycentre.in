@@ -1,1 +1,27 @@
-[]
+[
+    {
+        "source": "DGT",
+        "title": "मुख्य विषयवस्तु में जाएं",
+        "url": "#block-rvs-main-menu"
+    },
+    {
+        "source": "DGT",
+        "title": "प्रशिक्षण महानिदेशालय",
+        "url": "https://dgt.gov.in/hi"
+    },
+    {
+        "source": "DGT",
+        "title": "DIRECTORATE GENERAL OF TRAINING",
+        "url": "https://dgt.gov.in/hi"
+    },
+    {
+        "source": "DGT",
+        "title": "Main navigation",
+        "url": "#show-block-rvs-main-menu"
+    },
+    {
+        "source": "DGT",
+        "title": "Main navigation",
+        "url": "#hide-block-rvs-main-menu"
+    }
+]
