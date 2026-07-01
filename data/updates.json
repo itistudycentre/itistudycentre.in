@@ -1,27 +1,47 @@
 [
-    {
-        "source": "DGT",
-        "title": "मुख्य विषयवस्तु में जाएं",
-        "url": "#block-rvs-main-menu"
-    },
-    {
-        "source": "DGT",
-        "title": "प्रशिक्षण महानिदेशालय",
-        "url": "https://dgt.gov.in/hi"
-    },
-    {
-        "source": "DGT",
-        "title": "DIRECTORATE GENERAL OF TRAINING",
-        "url": "https://dgt.gov.in/hi"
-    },
-    {
-        "source": "DGT",
-        "title": "Main navigation",
-        "url": "#show-block-rvs-main-menu"
-    },
-    {
-        "source": "DGT",
-        "title": "Main navigation",
-        "url": "#hide-block-rvs-main-menu"
-    }
+  {
+    "id": 1,
+    "title": "CTS Mains Schedule 2026 Released",
+    "category": "Exam",
+    "description": "CTS Mains Examination Schedule 2026 has been officially released.",
+    "date": "01 July 2026",
+    "status": "Latest",
+    "link": "https://dgt.gov.in/"
+  },
+  {
+    "id": 2,
+    "title": "ITI Admission Registration Started",
+    "category": "Admission",
+    "description": "Online registration has started for ITI Admission.",
+    "date": "30 June 2026",
+    "status": "Open",
+    "link": "https://www.skillindiadigital.gov.in/"
+  },
+  {
+    "id": 3,
+    "title": "NCVT Result Published",
+    "category": "Result",
+    "description": "NCVT examination results are now available.",
+    "date": "28 June 2026",
+    "status": "Published",
+    "link": "https://www.skillindiadigital.gov.in/"
+  },
+  {
+    "id": 4,
+    "title": "New Study Material Available",
+    "category": "Bharat Skills",
+    "description": "Latest e-books and CBT study material are available on Bharat Skills.",
+    "date": "26 June 2026",
+    "status": "Available",
+    "link": "https://bharatskills.gov.in/"
+  },
+  {
+    "id": 5,
+    "title": "Apprenticeship Registration Open",
+    "category": "Apprenticeship",
+    "description": "Apply online through the Apprenticeship India Portal.",
+    "date": "25 June 2026",
+    "status": "Open",
+    "link": "https://www.apprenticeshipindia.gov.in/"
+  }
 ]
