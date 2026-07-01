@@ -1,55 +1,100 @@
-// =====================================
-// ITI STUDY CENTRE
-// MAIN JAVASCRIPT v1.0
-// =====================================
+/* =====================================
+   ITI STUDY CENTRE
+   MAIN JAVASCRIPT v2.0
+===================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     console.log("ITI Study Centre Loaded");
 
+    initActiveMenu();
+
     initSearch();
+
     loadNews();
+
     loadNotes();
+
     loadEngineering();
+
     loadUpdates();
+
     updateFooterYear();
+
     initScrollTop();
+
+    initContentProtection();
 
 });
 
-// =========================
-// SEARCH
-// =========================
+/* =====================================
+   ACTIVE MENU
+===================================== */
+
+function initActiveMenu() {
+
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll("nav a").forEach(link => {
+
+        const href = link.getAttribute("href");
+
+        if (href === currentPage) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+}
+
+/* =====================================
+   SEARCH
+===================================== */
 
 function initSearch() {
 
-    const input = document.querySelector(".search-section input");
+    const input =
+        document.querySelector(".search-section input");
 
     if (!input) return;
 
     input.addEventListener("keyup", function () {
 
-        const filter = this.value.toLowerCase();
+        const keyword =
+            this.value.toLowerCase().trim();
 
-        const items = document.querySelectorAll(
-            ".card,.update-card,.news-card,.result-card,.updates-card"
+        const cards = document.querySelectorAll(
+
+            ".card,.result-card,.updates-card,.feature-card"
+
         );
 
-        items.forEach(item => {
+        cards.forEach(card => {
 
-            const text = item.innerText.toLowerCase();
+            const text =
+                card.innerText.toLowerCase();
 
-            item.style.display = text.includes(filter) ? "" : "none";
+            if (text.includes(keyword)) {
+
+                card.style.display = "";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
 
         });
 
     });
 
 }
-
-// =========================
-// COMMON JSON LOADER
-// =========================
+/* =====================================
+   COMMON JSON LOADER
+===================================== */
 
 async function loadJSON(file) {
 
@@ -58,14 +103,18 @@ async function loadJSON(file) {
         const response = await fetch(file);
 
         if (!response.ok) {
+
             throw new Error(file);
+
         }
 
         return await response.json();
 
-    } catch (error) {
+    }
 
-        console.error("Loading Error:", file, error);
+    catch (error) {
+
+        console.error("Loading Error :", file);
 
         return [];
 
@@ -73,71 +122,119 @@ async function loadJSON(file) {
 
 }
 
-// =========================
-// NEWS
-// =========================
+/* =====================================
+   NEWS
+===================================== */
 
 async function loadNews() {
 
     const news = await loadJSON("data/news.json");
 
+    if (!news.length) return;
+
     console.log("News Loaded", news);
 
 }
 
-// =========================
-// NOTES
-// =========================
+/* =====================================
+   NOTES
+===================================== */
 
 async function loadNotes() {
 
     const notes = await loadJSON("data/notes.json");
 
+    if (!notes.length) return;
+
     console.log("Notes Loaded", notes);
 
 }
 
-// =========================
-// ENGINEERING
-// =========================
+/* =====================================
+   ENGINEERING
+===================================== */
 
 async function loadEngineering() {
 
-    const engineering = await loadJSON("data/engineering.json");
+    const engineering =
+        await loadJSON("data/engineering.json");
+
+    if (!engineering.length) return;
 
     console.log("Engineering Loaded", engineering);
 
 }
 
-// =========================
-// UPDATES
-// =========================
+/* =====================================
+   LATEST OFFICIAL UPDATES
+===================================== */
 
 async function loadUpdates() {
 
-    const updates = await loadJSON("data/updates.json");
+    const updates =
+        await loadJSON("data/updates.json");
 
-    console.log("Latest Updates Loaded", updates);
+    const container =
+        document.getElementById("official-updates");
+
+    if (!container) return;
+
+    if (!updates.length) {
+
+        container.innerHTML =
+
+        "<p>No latest updates available.</p>";
+
+        return;
+
+    }
+
+    let html = "<ul>";
+
+    updates.forEach(item => {
+
+        html += `
+
+        <li>
+
+        <a href="${item.link}"
+
+        target="_blank">
+
+        ${item.title}
+
+        </a>
+
+        </li>
+
+        `;
+
+    });
+
+    html += "</ul>";
+
+    container.innerHTML = html;
 
 }
-
-// =========================
-// FOOTER YEAR
-// =========================
+/* =====================================
+   FOOTER YEAR
+===================================== */
 
 function updateFooterYear() {
 
     const year = document.getElementById("current-year");
 
     if (year) {
+
         year.textContent = new Date().getFullYear();
+
     }
 
 }
 
-// =========================
-// SCROLL TO TOP
-// =========================
+/* =====================================
+   SCROLL TO TOP
+===================================== */
 
 function initScrollTop() {
 
@@ -148,9 +245,13 @@ function initScrollTop() {
     window.addEventListener("scroll", () => {
 
         if (window.scrollY > 300) {
+
             btn.style.display = "block";
+
         } else {
+
             btn.style.display = "none";
+
         }
 
     });
@@ -158,97 +259,149 @@ function initScrollTop() {
     btn.addEventListener("click", () => {
 
         window.scrollTo({
+
             top: 0,
+
             behavior: "smooth"
+
         });
 
     });
 
 }
 
-// =========================
-// MOBILE MENU (Future Ready)
-// =========================
+/* =====================================
+   MOBILE MENU
+===================================== */
 
 function toggleMobileMenu() {
 
     const nav = document.querySelector("nav");
 
     if (nav) {
+
         nav.classList.toggle("active");
+
     }
 
 }
 
-// =========================
-// GLOBAL ERROR HANDLER
-// =========================
+/* =====================================
+   GLOBAL ERROR HANDLER
+===================================== */
 
 window.addEventListener("error", (event) => {
 
-    console.error("JavaScript Error:", event.message);
+    console.error(
+
+        "JavaScript Error:",
+
+        event.message,
+
+        "File:",
+
+        event.filename,
+
+        "Line:",
+
+        event.lineno
+
+    );
 
 });
 /* =====================================
-   BASIC CONTENT PROTECTION
+   CONTENT PROTECTION
+   (ONLY FOR NOTES PAGES)
 ===================================== */
 
-// Disable Right Click
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-});
+function initContentProtection() {
 
-// Disable Copy
-document.addEventListener("copy", function (e) {
-    e.preventDefault();
-    alert("Copying is disabled on this website.");
-});
+    const path = window.location.pathname.toLowerCase();
 
-// Disable Cut
-document.addEventListener("cut", function (e) {
-    e.preventDefault();
-});
+    const protectedPage =
+        path.includes("/notes/") ||
+        path.includes("/engineering/");
 
-// Disable Drag
-document.addEventListener("dragstart", function (e) {
-    e.preventDefault();
-});
+    if (!protectedPage) return;
 
-// Disable Common Shortcut Keys
-document.addEventListener("keydown", function (e) {
+    console.log("Content Protection Enabled");
 
-    // F12
-    if (e.key === "F12") {
+    /* Disable Right Click */
+
+    document.addEventListener("contextmenu", function (e) {
+
         e.preventDefault();
-    }
 
-    // Ctrl+Shift+I
-    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
+    });
+
+    /* Disable Drag */
+
+    document.addEventListener("dragstart", function (e) {
+
         e.preventDefault();
-    }
 
-    // Ctrl+Shift+J
-    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j") {
+    });
+
+    /* Disable Copy */
+
+    document.addEventListener("copy", function (e) {
+
         e.preventDefault();
-    }
 
-    // Ctrl+U
-    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        alert("Copying is disabled on Notes pages.");
+
+    });
+
+    /* Disable Cut */
+
+    document.addEventListener("cut", function (e) {
+
         e.preventDefault();
-    }
 
-    // Ctrl+S
-    if (e.ctrlKey && e.key.toLowerCase() === "s") {
-        e.preventDefault();
-    }
+    });
 
-    // Ctrl+C
-    if (e.ctrlKey && e.key.toLowerCase() === "c") {
-        e.preventDefault();
-    }
+    /* Disable Keyboard Shortcuts */
 
-});
+    document.addEventListener("keydown", function (e) {
 
-// =========================
-// END
-// =========================
+        /* Ctrl + C */
+
+        if (e.ctrlKey && e.key.toLowerCase() === "c") {
+
+            e.preventDefault();
+
+        }
+
+        /* Ctrl + A */
+
+        if (e.ctrlKey && e.key.toLowerCase() === "a") {
+
+            e.preventDefault();
+
+        }
+
+        /* Ctrl + X */
+
+        if (e.ctrlKey && e.key.toLowerCase() === "x") {
+
+            e.preventDefault();
+
+        }
+
+        /* Ctrl + S */
+
+        if (e.ctrlKey && e.key.toLowerCase() === "s") {
+
+            e.preventDefault();
+
+        }
+
+    });
+
+}
+
+/* =====================================
+   END OF FILE
+===================================== */
+
+console.log("ITI Study Centre JavaScript v2.0 Loaded Successfully");
