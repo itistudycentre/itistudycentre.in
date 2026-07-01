@@ -1,1 +1,11 @@
 
+{
+  "name": "iti-study-centre",
+  "version": "1.0.0",
+  "description": "Automatic Official Updates",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cheerio": "^1.0.0"
+  }
+}
