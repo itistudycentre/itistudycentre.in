@@ -1,80 +1,207 @@
 import json
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime
 
-updates = []
+# ==========================================
+# CONFIGURATION
+# ==========================================
 
-headers = {
-    "User-Agent": "Mozilla/5.0"
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 Chrome/137 Safari/537.36"
+    )
 }
 
-# -----------------------------
+MAX_ITEMS = 10
+
+updates = []
+seen = set()
+
+# ==========================================
+# COMMON FUNCTIONS
+# ==========================================
+
+def normalize_url(base, href):
+
+    if not href:
+        return ""
+
+    href = href.strip()
+
+    if href.startswith("http"):
+        return href
+
+    if href.startswith("/"):
+        return base.rstrip("/") + href
+
+    return base.rstrip("/") + "/" + href
+
+
+def clean_text(text):
+
+    if text is None:
+        return ""
+
+    return " ".join(text.split()).strip()
+
+
+def is_duplicate(title):
+
+    key = title.lower()
+
+    if key in seen:
+        return True
+
+    seen.add(key)
+
+    return False
+
+
+def add_update(source, title, url):
+
+    title = clean_text(title)
+
+    if len(title) < 10:
+        return
+
+    if is_duplicate(title):
+        return
+
+    updates.append({
+
+        "source": source,
+
+        "title": title,
+
+        "date": datetime.now().strftime("%d %B %Y"),
+
+        "link": url
+
+    })
+
+
+# ==========================================
+# FILTER KEYWORDS
+# ==========================================
+
+DGT_KEYWORDS = [
+
+    "exam",
+    "examination",
+    "schedule",
+    "result",
+    "notification",
+    "notice",
+    "cbt",
+    "cts",
+    "aitt",
+
+    "परीक्षा",
+    "परिणाम",
+    "सूचना",
+    "शेड्यूल"
+
+]
+
+SCVT_KEYWORDS = [
+
+    "admission",
+    "registration",
+    "merit",
+    "counselling",
+    "seat",
+    "allotment",
+    "notice",
+
+    "प्रवेश",
+    "रजिस्ट्रेशन",
+    "मेरिट",
+    "काउंसलिंग",
+    "सीट"
+
+]
+# ==========================================
 # DGT EXAM CORNER
-# -----------------------------
-try:
+# ==========================================
+
+def fetch_dgt():
+
+    print("Checking DGT Exam Corner...")
+
+    base = "https://dgt.gov.in"
+
     url = "https://dgt.gov.in/hi/exam-corner"
 
-    r = requests.get(url, headers=headers, timeout=20)
+    try:
 
-    soup = BeautifulSoup(r.text, "html.parser")
+        response = requests.get(
+            url,
+            headers=HEADERS,
+            timeout=30
+        )
 
-    links = soup.find_all("a")
+        response.raise_for_status()
 
-    count = 0
+        soup = BeautifulSoup(response.text, "lxml")
 
-    for link in links:
+        rows = soup.find_all("tr")
 
-        title = link.get_text(strip=True)
+        for row in rows:
 
-        href = link.get("href")
+            text = clean_text(row.get_text(" ", strip=True))
 
-        if not title:
-            continue
+            if len(text) < 15:
+                continue
 
-        if len(title) < 8:
-            continue
+            ok = False
 
-        if href is None:
-            continue
+            for word in DGT_KEYWORDS:
 
-        if href.startswith("/"):
-            href = "https://dgt.gov.in" + href
+                if word.lower() in text.lower():
+                    ok = True
+                    break
 
-        updates.append({
-            "source": "DGT",
-            "title": title,
-            "url": href
-        })
+            if not ok:
+                continue
 
-        count += 1
+            a = row.find("a")
 
-        if count >= 5:
-            break
+            if not a:
+                continue
 
-except Exception as e:
-    print(e)
+            href = normalize_url(
+                base,
+                a.get("href")
+            )
 
-# -----------------------------
-# SAVE JSON
-# -----------------------------
+            title = clean_text(a.get_text())
 
-with open("data/updates.json","w",encoding="utf-8") as f:
+            if not title:
+                title = text[:150]
 
-    json.dump(
-        updates,
-        f,
-        ensure_ascii=False,
-        indent=4
-    )
+            add_update(
+                "DGT",
+                title,
+                href
+            )
 
-print("Done")
-# ==========================================
+            if len(updates) >= MAX_ITEMS:
+                return
+
+    except Exception as e:
+
+        print("DGT ERROR :", e)
+        # ==========================================
 # UP SCVT / VPPUP
 # ==========================================
 
 def fetch_scvt():
 
     print("Checking UP SCVT...")
+
+    base = "https://www.vppup.in"
 
     urls = [
 
@@ -84,61 +211,47 @@ def fetch_scvt():
 
     ]
 
-    keywords = [
+    try:
 
-        "admission",
-        "registration",
-        "merit",
-        "counselling",
-        "seat",
-        "allotment",
-        "notification",
-
-        "प्रवेश",
-        "रजिस्ट्रेशन",
-        "मेरिट",
-        "काउंसलिंग",
-        "सीट"
-
-    ]
-
-    for site in urls:
-
-        try:
+        for url in urls:
 
             response = requests.get(
 
-                site,
+                url,
 
                 headers=HEADERS,
 
-                timeout=20
+                timeout=30
 
             )
+
+            response.raise_for_status()
 
             soup = BeautifulSoup(
 
                 response.text,
 
-                "html.parser"
+                "lxml"
 
             )
 
-            for link in soup.find_all("a"):
+            # Links
 
-                title = link.get_text(strip=True)
+            for a in soup.find_all("a"):
 
-                href = link.get("href")
+                title = clean_text(
 
-                if not href:
+                    a.get_text()
+
+                )
+
+                if len(title) < 8:
+
                     continue
-
-                if href.startswith("/"):
-                    href = site.rstrip("/") + href
 
                 ok = False
 
-                for word in keywords:
+                for word in SCVT_KEYWORDS:
 
                     if word.lower() in title.lower():
 
@@ -146,41 +259,25 @@ def fetch_scvt():
                         break
 
                 if not ok:
-                    continue
 
-                add_update(
-
-                    "UP SCVT",
-
-                    title,
-
-                    href
-
-                )
-
-                if len(updates) >= MAX_UPDATES:
-
-                    return
-
-        except Exception as e:
-
-            print(site, e)
-
-
+                  # ==========================================
+# RUN SCRAPERS
 # ==========================================
-# RUN BOTH SOURCES
-# ==========================================
+
+print("----------------------------------------")
+print("Starting Official Update Checker")
+print("----------------------------------------")
 
 fetch_dgt()
 
-if len(updates) < MAX_UPDATES:
-
+if len(updates) < MAX_ITEMS:
     fetch_scvt()
-    # ==========================================
-# SORT UPDATES
+
+# ==========================================
+# LIMIT RESULTS
 # ==========================================
 
-updates = updates[:MAX_UPDATES]
+updates = updates[:MAX_ITEMS]
 
 # ==========================================
 # SAVE JSON
@@ -200,36 +297,21 @@ for i, item in enumerate(updates, start=1):
 
         "date": item["date"],
 
-        "link": item["url"]
+        "link": item["link"]
 
     })
 
 with open(
-
     "data/updates.json",
-
     "w",
-
     encoding="utf-8"
-
 ) as f:
 
     json.dump(
-
         output,
-
         f,
-
         ensure_ascii=False,
-
         indent=4
-
     )
 
-print("--------------------------------")
-
-print("Official Updates Saved Successfully")
-
-print("Total Updates :", len(output))
-
-print("--------------------------------")
+print("---------------------------------------- 
