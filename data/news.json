@@ -3,6 +3,8 @@
     "id": 1,
     "title": "CTS Mains Schedule 2026 Released",
     "category": "Exam",
+    "description": "CTS Main Examination Schedule 2026 has been released by the concerned authority.",
+    "status": "Latest",
     "date": "23 June 2026",
     "link": "../news/exam/index.html",
     "pdf": "../pdf/exam/CTS Mains Schedule 2026 Rev 2.pdf"
@@ -11,6 +13,8 @@
     "id": 2,
     "title": "ITI Admission 2026 Registration Started",
     "category": "Admission",
+    "description": "Online registration process has started for ITI Admission 2026.",
+    "status": "Open",
     "date": "23 June 2026",
     "link": "../news/admission/index.html",
     "pdf": ""
@@ -19,6 +23,8 @@
     "id": 3,
     "title": "NCVT Result 2026 Published",
     "category": "Result",
+    "description": "NCVT Result 2026 has been published for eligible trainees.",
+    "status": "Published",
     "date": "23 June 2026",
     "link": "../news/result/index.html",
     "pdf": ""
@@ -27,6 +33,8 @@
     "id": 4,
     "title": "DGT Official Notification",
     "category": "Notification",
+    "description": "Latest official notification issued by the Directorate General of Training (DGT).",
+    "status": "Latest",
     "date": "23 June 2026",
     "link": "../news/notification/index.html",
     "pdf": ""
@@ -35,6 +43,8 @@
     "id": 5,
     "title": "ITI Counselling Schedule",
     "category": "Counselling",
+    "description": "ITI Counselling Schedule and important dates for eligible candidates.",
+    "status": "Upcoming",
     "date": "23 June 2026",
     "link": "../news/counselling/index.html",
     "pdf": ""
