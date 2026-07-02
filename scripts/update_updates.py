@@ -98,6 +98,7 @@ DGT_KEYWORDS = [
     "cts",
     "aitt",
 
+    
     "परीक्षा",
     "परिणाम",
     "सूचना",
@@ -120,8 +121,6 @@ SCVT_KEYWORDS = [
     "मेरिट",
     "काउंसलिंग",
     "सीट"
-
-]
 # ==========================================
 # DGT EXAM CORNER
 # ==========================================
@@ -260,7 +259,69 @@ def fetch_scvt():
 
                 if not ok:
 
-                  # ==========================================
+                    continue
+
+                href = normalize_url(
+
+                    base,
+
+                    a.get("href")
+
+                )
+
+                add_update(
+
+                    "UP SCVT",
+
+                    title,
+
+                    href
+
+                )
+
+                if len(updates) >= MAX_ITEMS:
+
+                    return
+
+            # Popup Buttons
+
+            for button in soup.find_all("button"):
+
+                title = clean_text(
+
+                    button.get_text()
+
+                )
+
+                if len(title) < 8:
+
+                    continue
+
+                ok = False
+
+                for word in SCVT_KEYWORDS:
+
+                    if word.lower() in title.lower():
+
+                        ok = True
+                        break
+
+                if ok:
+
+                    add_update(
+
+                        "UP SCVT",
+
+                        title,
+
+                        url
+
+                    )
+
+    except Exception as e:
+
+        print("SCVT ERROR :", e)
+        # ==========================================
 # RUN SCRAPERS
 # ==========================================
 
@@ -314,4 +375,8 @@ with open(
         indent=4
     )
 
-print("---------------------------------------- 
+print("----------------------------------------")
+print("Official Updates Saved Successfully")
+print("Total Updates :", len(output))
+print("----------------------------------------")
+]
