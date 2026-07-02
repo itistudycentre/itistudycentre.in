@@ -380,4 +380,4 @@ print("----------------------------------------")
 print("Official Updates Saved Successfully")
 print("Total Updates :", len(output))
 print("----------------------------------------")
-]
+
