@@ -131,7 +131,6 @@ def fetch_dgt():
     print("Checking DGT Exam Corner...")
 
     base = "https://dgt.gov.in"
-
     url = "https://dgt.gov.in/hi/exam-corner"
 
     try:
@@ -146,46 +145,49 @@ def fetch_dgt():
 
         soup = BeautifulSoup(response.text, "lxml")
 
-        rows = soup.find_all("tr")
+        table = soup.select_one("table.views-table")
+
+        if table is None:
+            print("DGT table not found")
+            return
+
+        rows = table.select("tbody tr")
+
+        print("Rows Found :", len(rows))
 
         for row in rows:
 
-            text = clean_text(row.get_text(" ", strip=True))
+            cols = row.find_all("td")
 
-            if len(text) < 15:
+            if len(cols) < 4:
                 continue
 
-            ok = False
+            title = clean_text(
+                cols[1].get_text(" ", strip=True)
+            )
 
-            for word in DGT_KEYWORDS:
+            details = clean_text(
+                cols[2].get_text(" ", strip=True)
+            )
 
-                if word.lower() in text.lower():
-                    ok = True
-                    break
+            link_tag = cols[3].find("a")
 
-            if not ok:
-                continue
-
-            a = row.find("a")
-
-            if not a:
+            if not link_tag:
                 continue
 
             href = normalize_url(
                 base,
-                a.get("href")
+                link_tag.get("href")
             )
-
-            title = clean_text(a.get_text())
-
-            if not title:
-                title = text[:150]
 
             add_update(
                 "DGT",
                 title,
                 href
             )
+
+            if updates:
+                updates[-1]["date"] = details
 
             if len(updates) >= MAX_ITEMS:
                 return
