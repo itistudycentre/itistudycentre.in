@@ -2,6 +2,7 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
+from urllib.parse import urljoin
 
 # ==========================================
 # CONFIGURATION
@@ -28,15 +29,7 @@ def normalize_url(base, href):
     if not href:
         return ""
 
-    href = href.strip()
-
-    if href.startswith("http"):
-        return href
-
-    if href.startswith("/"):
-        return base.rstrip("/") + href
-
-    return base.rstrip("/") + "/" + href
+    return urljoin(base, href.strip())
 
 
 def clean_text(text):
@@ -59,7 +52,7 @@ def is_duplicate(title):
     return False
 
 
-def add_update(source, title, url):
+def add_update(source, title, date, url):
 
     title = clean_text(title)
 
@@ -70,15 +63,10 @@ def add_update(source, title, url):
         return
 
     updates.append({
-
         "source": source,
-
         "title": title,
-
-        "date": datetime.now().strftime("%d %B %Y"),
-
+        "date": date,
         "link": url
-
     })
 
 
@@ -87,7 +75,6 @@ def add_update(source, title, url):
 # ==========================================
 
 DGT_KEYWORDS = [
-
     "exam",
     "examination",
     "schedule",
@@ -97,17 +84,13 @@ DGT_KEYWORDS = [
     "cbt",
     "cts",
     "aitt",
-
-    
     "परीक्षा",
     "परिणाम",
     "सूचना",
     "शेड्यूल"
-
 ]
 
 SCVT_KEYWORDS = [
-
     "admission",
     "registration",
     "merit",
@@ -115,13 +98,12 @@ SCVT_KEYWORDS = [
     "seat",
     "allotment",
     "notice",
-
     "प्रवेश",
     "रजिस्ट्रेशन",
     "मेरिट",
     "काउंसलिंग",
     "सीट"
- ]   
+]
 # ==========================================
 # DGT EXAM CORNER
 # ==========================================
@@ -143,7 +125,10 @@ def fetch_dgt():
 
         response.raise_for_status()
 
-        soup = BeautifulSoup(response.text, "lxml")
+        soup = BeautifulSoup(
+            response.text,
+            "lxml"
+        )
 
         table = soup.select_one("table.views-table")
 
@@ -170,24 +155,22 @@ def fetch_dgt():
                 cols[2].get_text(" ", strip=True)
             )
 
-            link_tag = cols[3].find("a")
+            link = cols[3].find("a")
 
-            if not link_tag:
+            if not link:
                 continue
 
             href = normalize_url(
                 base,
-                link_tag.get("href")
+                link.get("href")
             )
 
             add_update(
                 "DGT",
                 title,
+                details,
                 href
             )
-
-            if updates:
-                updates[-1]["date"] = details
 
             if len(updates) >= MAX_ITEMS:
                 return
@@ -203,9 +186,7 @@ def fetch_scvt():
 
     print("Checking UP SCVT...")
 
-    base = "https://www.vppup.in"
-
-    urls = [
+    sites = [
 
         "https://www.vppup.in/",
         "https://www.scvtup.in/",
@@ -215,171 +196,200 @@ def fetch_scvt():
 
     try:
 
-        for url in urls:
+        for url in sites:
 
             response = requests.get(
-
                 url,
-
                 headers=HEADERS,
-
                 timeout=30
-
             )
 
             response.raise_for_status()
 
             soup = BeautifulSoup(
-
                 response.text,
-
                 "lxml"
-
             )
 
-            # Links
+            # All Links
 
             for a in soup.find_all("a"):
 
                 title = clean_text(
-
-                    a.get_text()
-
+                    a.get_text(" ", strip=True)
                 )
 
                 if len(title) < 8:
-
                     continue
 
-                ok = False
+                matched = False
 
                 for word in SCVT_KEYWORDS:
 
                     if word.lower() in title.lower():
 
-                        ok = True
+                        matched = True
                         break
 
-                if not ok:
-
+                if not matched:
                     continue
 
                 href = normalize_url(
-
-                    base,
-
+                    url,
                     a.get("href")
-
                 )
 
                 add_update(
-
                     "UP SCVT",
-
                     title,
-
+                    datetime.now().strftime("%d-%m-%Y"),
                     href
-
                 )
 
                 if len(updates) >= MAX_ITEMS:
-
                     return
 
             # Popup Buttons
 
-            for button in soup.find_all("button"):
+            for btn in soup.find_all("button"):
 
                 title = clean_text(
-
-                    button.get_text()
-
+                    btn.get_text(" ", strip=True)
                 )
 
                 if len(title) < 8:
-
                     continue
 
-                ok = False
+                matched = False
 
                 for word in SCVT_KEYWORDS:
 
                     if word.lower() in title.lower():
 
-                        ok = True
+                        matched = True
                         break
 
-                if ok:
+                if not matched:
+                    continue
 
-                    add_update(
+                add_update(
+                    "UP SCVT",
+                    title,
+                    datetime.now().strftime("%d-%m-%Y"),
+                    url
+                )
 
-                        "UP SCVT",
-
-                        title,
-
-                        url
-
-                    )
+                if len(updates) >= MAX_ITEMS:
+                    return
 
     except Exception as e:
 
         print("SCVT ERROR :", e)
         # ==========================================
-# RUN SCRAPERS
+# UP SCVT / VPPUP
 # ==========================================
 
-print("----------------------------------------")
-print("Starting Official Update Checker")
-print("----------------------------------------")
+def fetch_scvt():
 
-fetch_dgt()
+    print("Checking UP SCVT...")
 
-if len(updates) < MAX_ITEMS:
-    fetch_scvt()
+    sites = [
 
-# ==========================================
-# LIMIT RESULTS
-# ==========================================
+        "https://www.vppup.in/",
+        "https://www.scvtup.in/",
+        "https://admissionscvtup.in/"
 
-updates = updates[:MAX_ITEMS]
+    ]
 
-# ==========================================
-# SAVE JSON
-# ==========================================
+    try:
 
-output = []
+        for url in sites:
 
-for i, item in enumerate(updates, start=1):
+            response = requests.get(
+                url,
+                headers=HEADERS,
+                timeout=30
+            )
 
-    output.append({
+            response.raise_for_status()
 
-        "id": i,
+            soup = BeautifulSoup(
+                response.text,
+                "lxml"
+            )
 
-        "source": item["source"],
+            # All Links
 
-        "title": item["title"],
+            for a in soup.find_all("a"):
 
-        "date": item["date"],
+                title = clean_text(
+                    a.get_text(" ", strip=True)
+                )
 
-        "link": item["link"]
+                if len(title) < 8:
+                    continue
 
-    })
+                matched = False
 
-with open(
-    "data/updates.json",
-    "w",
-    encoding="utf-8"
-) as f:
+                for word in SCVT_KEYWORDS:
 
-    json.dump(
-        output,
-        f,
-        ensure_ascii=False,
-        indent=4
-    )
+                    if word.lower() in title.lower():
 
-print("----------------------------------------")
-print("Official Updates Saved Successfully")
-print("Total Updates :", len(output))
-print("----------------------------------------")
+                        matched = True
+                        break
 
+                if not matched:
+                    continue
+
+                href = normalize_url(
+                    url,
+                    a.get("href")
+                )
+
+                add_update(
+                    "UP SCVT",
+                    title,
+                    datetime.now().strftime("%d-%m-%Y"),
+                    href
+                )
+
+                if len(updates) >= MAX_ITEMS:
+                    return
+
+            # Popup Buttons
+
+            for btn in soup.find_all("button"):
+
+                title = clean_text(
+                    btn.get_text(" ", strip=True)
+                )
+
+                if len(title) < 8:
+                    continue
+
+                matched = False
+
+                for word in SCVT_KEYWORDS:
+
+                    if word.lower() in title.lower():
+
+                        matched = True
+                        break
+
+                if not matched:
+                    continue
+
+                add_update(
+                    "UP SCVT",
+                    title,
+                    datetime.now().strftime("%d-%m-%Y"),
+                    url
+                )
+
+                if len(updates) >= MAX_ITEMS:
+                    return
+
+    except Exception as e:
+
+        print("SCVT ERROR :", e)
+        
