@@ -12,4 +12,4 @@ Disallow: /templates/
 Disallow: /.github/
 Disallow: /data/
 
-Sitemap: https://itistudycentre.in/sitemap.xml
+Sitemap: https://www.itistudycentre.in/sitemap.xml
