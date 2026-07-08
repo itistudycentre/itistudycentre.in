@@ -294,6 +294,7 @@ const module1Questions = [
 
     examTip:
         "Digital Skills = Future Ready Skills"
+     }, 
   {
     id: "ES-M1-011",
 
@@ -437,7 +438,7 @@ const module1Questions = [
 
     examTip:
         "नई Skill सीखना = Upskilling"
-},
+
 },
 {
     id: "ES-M1-016",
