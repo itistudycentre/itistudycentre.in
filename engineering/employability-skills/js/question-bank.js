@@ -55,3 +55,18 @@ function previousQuestion(){
     }
 
 }
+// ======================================
+// Load Module 1
+// ======================================
+
+if (typeof module1Questions !== "undefined") {
+
+    loadModule(module1Questions);
+
+    console.log("Module 1 Loaded Successfully");
+
+} else {
+
+    console.error("Module 1 Not Found");
+
+}
