@@ -24,9 +24,27 @@ function loadModule(moduleData) {
 }
 
 // Show Question
-function showQuestion(index){
+function showQuestion(index) {
 
-    console.log(questions[index]);
+    const box = document.getElementById("question-box");
+
+    if (!box) return;
+
+    const q = questions[index];
+
+    box.innerHTML = `
+        <h3>Question ${index + 1}</h3>
+
+        <p><strong>${q.question}</strong></p>
+
+        <ol type="A">
+            <li>${q.options[0]}</li>
+            <li>${q.options[1]}</li>
+            <li>${q.options[2]}</li>
+            <li>${q.options[3]}</li>
+        </ol>
+    `;
+
 
 }
 
