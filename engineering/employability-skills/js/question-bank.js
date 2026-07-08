@@ -80,7 +80,7 @@ function previousQuestion(){
 if (typeof module1Questions !== "undefined") {
 
     loadModule(module1Questions);
-
+showQuestion(0);
     console.log("Module 1 Loaded Successfully");
 
 } else {
