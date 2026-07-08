@@ -77,14 +77,21 @@ function previousQuestion(){
 // Load Module 1
 // ======================================
 
-if (typeof module1Questions !== "undefined") {
+window.onload = function () {
 
-    loadModule(module1Questions);
-showQuestion(0);
-    console.log("Module 1 Loaded Successfully");
+    if (typeof module1Questions !== "undefined") {
 
-} else {
+        loadModule(module1Questions);
 
-    console.error("Module 1 Not Found");
+        showQuestion(0);
 
-}
+        console.log("Module 1 Loaded Successfully");
+
+    } else {
+
+        document.getElementById("question-box").innerHTML =
+        "<h3 style='color:red'>module1.js Load नहीं हुआ</h3>";
+
+    }
+
+};
