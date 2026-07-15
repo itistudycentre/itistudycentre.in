@@ -1,0 +1,35 @@
+name: Daily Website Backup
+
+on:
+  schedule:
+    - cron: '30 13 * * *'
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Website
+        uses: actions/checkout@v4
+
+      - name: Checkout Backup Repository
+        uses: actions/checkout@v4
+        with:
+          repository: itistudycentre/itistudycentre-backup
+          token: ${{ secrets.BACKUP_TOKEN }}
+          path: backup-repo
+
+      - name: Copy Website Files
+        run: |
+          find backup-repo -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          rsync -av --exclude='.git' --exclude='backup-repo' ./ backup-repo/
+
+      - name: Save Backup
+        run: |
+          cd backup-repo
+          git config user.name "ITI Study Centre Backup"
+          git config user.email "backup@itistudycentre.in"
+          git add -A
+          git diff --cached --quiet || git commit -m "Daily backup $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
