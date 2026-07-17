@@ -20,21 +20,25 @@ jobs:
           token: ${{ secrets.BACKUP_TOKEN }}
           path: backup
 
-      - name: Copy Website Files
+      - name: Sync Website Files
         run: |
-          rm -rf backup/*
-          rsync -av \
+          rsync -av --delete \
             --exclude=".git" \
             --exclude=".github" \
             ./ backup/
 
-      - name: Commit and Push Backup
+      - name: Commit and Push
         run: |
           cd backup
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions.noreply.github.com"
+          git config user.name "ITI Study Centre Backup"
+          git config user.email "backup@itistudycentre.in"
 
           git add .
-          git commit -m "Daily backup $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes"
 
+          if git diff --cached --quiet; then
+            echo "No changes to backup."
+            exit 0
+          fi
+
+          git commit -m "Backup: $(date '+%Y-%m-%d %H:%M:%S UTC')"
           git push https://x-access-token:${{ secrets.BACKUP_TOKEN }}@github.com/itistudycentre/itistudycentre-backup.git HEAD:main
