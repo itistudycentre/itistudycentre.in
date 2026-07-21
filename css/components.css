@@ -449,3 +449,96 @@
     background:var(--primary);
     transform:translateY(-3px);
 }
+/* ==========================================
+   SHARE BOX
+========================================== */
+
+.share-box{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:22px;
+    margin:25px 0;
+    text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.share-box h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.share-box p{
+    color:#555;
+    margin-bottom:18px;
+}
+
+.share-buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.share-buttons a,
+.share-buttons button{
+    padding:12px 18px;
+    border:none;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.whatsapp-share{
+    background:#25d366;
+    color:#fff;
+}
+
+.native-share{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.copy-share{
+    background:#f3f4f6;
+    color:#222;
+}
+
+/* ==========================================
+   STUDY BOXES
+========================================== */
+
+.definition-box,
+.highlight-box,
+.exam-tip,
+.warning-box,
+.summary-box{
+    margin:25px 0;
+    padding:18px 22px;
+    border-radius:10px;
+}
+
+.definition-box{
+    background:#e8f5e9;
+    border-left:6px solid #2e7d32;
+}
+
+.highlight-box{
+    background:#fff8e1;
+    border-left:6px solid #ff9800;
+}
+
+.exam-tip{
+    background:#e3f2fd;
+    border-left:6px solid #1976d2;
+}
+
+.warning-box{
+    background:#ffebee;
+    border-left:6px solid #d32f2f;
+}
+
+.summary-box{
+    background:#f3f4f6;
+    border-left:6px solid #4b5563;
+   }
