@@ -204,3 +204,98 @@
     margin-bottom:15px;
   }
 
+/* ==========================================
+   QUESTION BANK
+========================================== */
+
+.question-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin:30px 0;
+}
+
+.question-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:22px;
+    transition:.3s;
+    box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+.question-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.question-card h3{
+    color:var(--primary);
+    margin-bottom:12px;
+}
+
+.question-card p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+/* ==========================================
+   CONTACT / SUGGESTION PAGE
+========================================== */
+
+.contact-box{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    margin:30px 0;
+}
+
+.contact-box form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-box input,
+.contact-box textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid var(--border);
+    border-radius:8px;
+    font-size:16px;
+}
+
+.contact-box textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+.contact-box button{
+    align-self:flex-start;
+}
+
+/* ==========================================
+   PAGE UTILITIES
+========================================== */
+
+.text-center{
+    text-align:center;
+}
+
+.mt-20{
+    margin-top:20px;
+}
+
+.mt-30{
+    margin-top:30px;
+}
+
+.mb-20{
+    margin-bottom:20px;
+}
+
+.mb-30{
+    margin-bottom:30px;
+}
