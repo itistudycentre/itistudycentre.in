@@ -391,3 +391,61 @@
     gap:12px;
     flex-wrap:wrap;
   }
+/* ==========================================
+   TRADE TABLE
+========================================== */
+
+.trade-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+.trade-table th{
+    background:var(--secondary);
+    color:var(--white);
+    padding:14px;
+    text-align:left;
+}
+
+.trade-table td{
+    padding:12px;
+    border:1px solid var(--border);
+}
+
+.trade-table tr:nth-child(even){
+    background:#f7f9fc;
+}
+
+.trade-table tr:hover{
+    background:#eef5ff;
+}
+
+.trade-table td a{
+    color:var(--secondary);
+    font-weight:600;
+}
+
+.trade-table td a:hover{
+    color:var(--primary);
+}
+
+/* ==========================================
+   GOVERNMENT PORTAL BUTTONS
+========================================== */
+
+.gov-grid a{
+    display:block;
+    text-align:center;
+    padding:16px;
+    background:var(--secondary);
+    color:var(--white);
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.gov-grid a:hover{
+    background:var(--primary);
+    transform:translateY(-3px);
+}
