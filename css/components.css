@@ -1,1 +1,393 @@
+/* ==================================================
+   ITI STUDY CENTRE
+   COMPONENTS CSS
+================================================== */
 
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero-banner{
+    max-width:1200px;
+    margin:30px auto;
+    padding:60px 30px;
+    text-align:center;
+    background:linear-gradient(135deg,var(--hero-start),var(--hero-end));
+    color:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+}
+
+.hero-banner h1{
+    font-size:42px;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.hero-banner p{
+    font-size:20px;
+    margin-bottom:25px;
+    opacity:.95;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn-primary,
+.btn-secondary,
+.news-btn,
+.download-btn{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--white);
+    color:var(--primary);
+}
+
+.btn-primary:hover{
+    background:#e8eef7;
+    transform:translateY(-2px);
+}
+
+.btn-secondary{
+    background:var(--warning);
+    color:#000;
+}
+
+.btn-secondary:hover{
+    background:#ffd633;
+    transform:translateY(-2px);
+}
+
+.news-btn,
+.download-btn{
+    background:var(--secondary);
+    color:var(--white);
+}
+
+.news-btn:hover,
+.download-btn:hover{
+    background:var(--primary);
+    transform:translateY(-2px);
+}
+/* ==========================================
+   CARDS
+========================================== */
+
+.card,
+.update-card,
+.news-card,
+.result-card,
+.updates-card{
+    background:var(--white);
+    padding:25px;
+    margin:25px 0;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    border-left:5px solid var(--secondary);
+    transition:.3s;
+}
+
+.card:hover,
+.update-card:hover,
+.news-card:hover,
+.result-card:hover,
+.updates-card:hover{
+    transform:translateY(-4px);
+}
+
+.card h2,
+.update-card h2,
+.news-card h2,
+.result-card h2,
+.updates-card h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.card h3,
+.update-card h3,
+.news-card h3{
+    color:var(--secondary);
+    margin-bottom:10px;
+}
+
+/* ==========================================
+   FEATURE CARDS
+========================================== */
+
+.feature-card{
+    background:var(--white);
+    border:1px solid #e5e5e5;
+    border-radius:12px;
+    padding:22px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.feature-card h3{
+    color:var(--primary);
+    margin-bottom:12px;
+}
+
+.feature-card p{
+    color:#444;
+    margin-bottom:18px;
+    line-height:1.7;
+}
+
+/* ==========================================
+   MODULE CARDS
+========================================== */
+
+.module-card{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.module-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.module-card h3{
+    margin-bottom:10px;
+    font-size:22px;
+    color:#0f172a;
+}
+
+.module-card p{
+    font-size:15px;
+    line-height:1.7;
+    color:#555;
+    margin-bottom:18px;
+  }
+/* ==========================================
+   CARDS
+========================================== */
+
+.card,
+.result-card,
+.updates-card,
+.news-card,
+.update-card{
+    background:var(--white);
+    padding:25px;
+    margin:25px 0;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    border-left:5px solid var(--secondary);
+    transition:.3s;
+}
+
+.card:hover,
+.result-card:hover,
+.updates-card:hover,
+.news-card:hover,
+.update-card:hover{
+    transform:translateY(-4px);
+}
+
+.card h2,
+.result-card h2,
+.updates-card h2,
+.news-card h2,
+.update-card h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.card h3,
+.news-card h3,
+.update-card h3{
+    color:var(--secondary);
+    margin-bottom:10px;
+}
+
+/* ==========================================
+   FEATURE CARD
+========================================== */
+
+.feature-card{
+    background:var(--white);
+    border:1px solid #e5e5e5;
+    border-radius:12px;
+    padding:22px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.feature-card h3{
+    color:var(--primary);
+    margin-bottom:12px;
+}
+
+.feature-card p{
+    color:#444;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+/* ==========================================
+   MODULE CARD
+========================================== */
+
+.module-card{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.module-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.module-card h3{
+    font-size:22px;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.module-card p{
+    font-size:15px;
+    color:#555;
+    line-height:1.7;
+    margin-bottom:18px;
+  }
+/* ==========================================
+   COMMON CARDS
+========================================== */
+
+.card,
+.result-card,
+.updates-card,
+.news-card,
+.update-card{
+    background:var(--white);
+    padding:25px;
+    margin:25px 0;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    border-left:5px solid var(--secondary);
+    transition:.3s;
+}
+
+.card:hover,
+.result-card:hover,
+.updates-card:hover,
+.news-card:hover,
+.update-card:hover{
+    transform:translateY(-4px);
+}
+
+.card h2,
+.result-card h2,
+.updates-card h2,
+.news-card h2,
+.update-card h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.card h3,
+.news-card h3,
+.update-card h3{
+    color:var(--secondary);
+    margin-bottom:10px;
+}
+
+/* ==========================================
+   FEATURE CARDS
+========================================== */
+
+.feature-card{
+    background:var(--white);
+    border:1px solid #e5e5e5;
+    border-radius:12px;
+    padding:22px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.feature-card h3{
+    color:var(--primary);
+    margin-bottom:12px;
+}
+
+.feature-card p{
+    color:#444;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+/* ==========================================
+   MODULE CARDS
+========================================== */
+
+.module-card{
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.module-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.module-card h3{
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.module-card p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.module-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+  }
