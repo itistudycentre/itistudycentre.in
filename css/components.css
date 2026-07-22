@@ -1,544 +1,101 @@
-/* ==================================================
-   ITI STUDY CENTRE
-   COMPONENTS CSS
-================================================== */
+/* =========================
+   Components CSS
+========================= */
 
-/* ==========================================
-   HERO SECTION
-========================================== */
+/* Buttons */
 
-.hero-banner{
-    max-width:1200px;
-    margin:30px auto;
-    padding:60px 30px;
-    text-align:center;
-    background:linear-gradient(135deg,var(--hero-start),var(--hero-end));
-    color:var(--white);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-}
-
-.hero-banner h1{
-    font-size:42px;
-    margin-bottom:15px;
-    font-weight:700;
-}
-
-.hero-banner p{
-    font-size:20px;
-    margin-bottom:25px;
-    opacity:.95;
-}
-
-.hero-buttons{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-/* ==========================================
-   BUTTONS
-========================================== */
-
-.btn-primary,
-.btn-secondary,
-.news-btn,
-.download-btn{
+.btn{
     display:inline-block;
-    padding:12px 22px;
+    padding:10px 18px;
     border-radius:8px;
-    font-weight:bold;
+    background:#0d6efd;
+    color:#fff;
+    font-weight:600;
     transition:.3s;
 }
 
-.btn-primary{
-    background:var(--white);
-    color:var(--primary);
+.btn:hover{
+    background:#0b5ed7;
 }
 
-.btn-primary:hover{
-    background:#e8eef7;
-    transform:translateY(-2px);
-}
+/* Cards */
 
-.btn-secondary{
-    background:var(--warning);
-    color:#000;
-}
-
-.btn-secondary:hover{
-    background:#ffd633;
-    transform:translateY(-2px);
-}
-
-.news-btn,
-.download-btn{
-    background:var(--secondary);
-    color:var(--white);
-}
-
-.news-btn:hover,
-.download-btn:hover{
-    background:var(--primary);
-    transform:translateY(-2px);
-}
-/* ==========================================
-   CARDS
-========================================== */
-
-.card,
-.update-card,
-.news-card,
-.result-card,
-.updates-card{
-    background:var(--white);
-    padding:25px;
-    margin:25px 0;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    border-left:5px solid var(--secondary);
-    transition:.3s;
-}
-
-.card:hover,
-.update-card:hover,
-.news-card:hover,
-.result-card:hover,
-.updates-card:hover{
-    transform:translateY(-4px);
+.card{
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    padding:20px;
+    margin-bottom:20px;
 }
 
 .card h2,
-.update-card h2,
-.news-card h2,
-.result-card h2,
-.updates-card h2{
-    color:var(--primary);
-    margin-bottom:15px;
-}
-
-.card h3,
-.update-card h3,
-.news-card h3{
-    color:var(--secondary);
+.card h3{
     margin-bottom:10px;
 }
 
-/* ==========================================
-   FEATURE CARDS
-========================================== */
-
-.feature-card{
-    background:var(--white);
-    border:1px solid #e5e5e5;
-    border-radius:12px;
-    padding:22px;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.feature-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
-
-.feature-card h3{
-    color:var(--primary);
-    margin-bottom:12px;
-}
-
-.feature-card p{
-    color:#444;
-    margin-bottom:18px;
-    line-height:1.7;
-}
-
-/* ==========================================
-   MODULE CARDS
-========================================== */
-
-.module-card{
-    background:#ffffff;
-    border:1px solid #e5e7eb;
-    border-radius:14px;
-    padding:22px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.module-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.module-card h3{
-    margin-bottom:10px;
-    font-size:22px;
-    color:#0f172a;
-}
-
-.module-card p{
-    font-size:15px;
-    line-height:1.7;
-    color:#555;
-    margin-bottom:18px;
-  }
-/* ==========================================
-   CARDS
-========================================== */
-
-.card,
-.result-card,
-.updates-card,
-.news-card,
-.update-card{
-    background:var(--white);
-    padding:25px;
-    margin:25px 0;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    border-left:5px solid var(--secondary);
-    transition:.3s;
-}
-
-.card:hover,
-.result-card:hover,
-.updates-card:hover,
-.news-card:hover,
-.update-card:hover{
-    transform:translateY(-4px);
-}
-
-.card h2,
-.result-card h2,
-.updates-card h2,
-.news-card h2,
-.update-card h2{
-    color:var(--primary);
-    margin-bottom:15px;
-}
-
-.card h3,
-.news-card h3,
-.update-card h3{
-    color:var(--secondary);
+.card p{
     margin-bottom:10px;
 }
 
-/* ==========================================
-   FEATURE CARD
-========================================== */
+/* Tables */
 
-.feature-card{
-    background:var(--white);
-    border:1px solid #e5e5e5;
-    border-radius:12px;
-    padding:22px;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-    transition:.3s;
+.table-responsive{
+    overflow-x:auto;
 }
 
-.feature-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+table{
+    background:#fff;
 }
 
-.feature-card h3{
-    color:var(--primary);
-    margin-bottom:12px;
-}
-
-.feature-card p{
-    color:#444;
-    line-height:1.7;
-    margin-bottom:18px;
-}
-
-/* ==========================================
-   MODULE CARD
-========================================== */
-
-.module-card{
-    background:#ffffff;
-    border:1px solid #e5e7eb;
-    border-radius:14px;
-    padding:22px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.module-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.module-card h3{
-    font-size:22px;
-    color:#0f172a;
-    margin-bottom:10px;
-}
-
-.module-card p{
-    font-size:15px;
-    color:#555;
-    line-height:1.7;
-    margin-bottom:18px;
-  }
-/* ==========================================
-   COMMON CARDS
-========================================== */
-
-.card,
-.result-card,
-.updates-card,
-.news-card,
-.update-card{
-    background:var(--white);
-    padding:25px;
-    margin:25px 0;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    border-left:5px solid var(--secondary);
-    transition:.3s;
-}
-
-.card:hover,
-.result-card:hover,
-.updates-card:hover,
-.news-card:hover,
-.update-card:hover{
-    transform:translateY(-4px);
-}
-
-.card h2,
-.result-card h2,
-.updates-card h2,
-.news-card h2,
-.update-card h2{
-    color:var(--primary);
-    margin-bottom:15px;
-}
-
-.card h3,
-.news-card h3,
-.update-card h3{
-    color:var(--secondary);
-    margin-bottom:10px;
-}
-
-/* ==========================================
-   FEATURE CARDS
-========================================== */
-
-.feature-card{
-    background:var(--white);
-    border:1px solid #e5e5e5;
-    border-radius:12px;
-    padding:22px;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.feature-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
-
-.feature-card h3{
-    color:var(--primary);
-    margin-bottom:12px;
-}
-
-.feature-card p{
-    color:#444;
-    line-height:1.7;
-    margin-bottom:18px;
-}
-
-/* ==========================================
-   MODULE CARDS
-========================================== */
-
-.module-card{
-    background:#ffffff;
-    border:1px solid #e5e7eb;
-    border-radius:14px;
-    padding:22px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.module-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-}
-
-.module-card h3{
-    color:#0f172a;
-    margin-bottom:10px;
-}
-
-.module-card p{
-    color:#555;
-    line-height:1.7;
-    margin-bottom:18px;
-}
-
-.module-actions{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-  }
-/* ==========================================
-   TRADE TABLE
-========================================== */
-
-.trade-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
-}
-
-.trade-table th{
-    background:var(--secondary);
-    color:var(--white);
-    padding:14px;
+th,
+td{
+    border:1px solid #ddd;
+    padding:10px;
     text-align:left;
 }
 
-.trade-table td{
-    padding:12px;
-    border:1px solid var(--border);
-}
-
-.trade-table tr:nth-child(even){
-    background:#f7f9fc;
-}
-
-.trade-table tr:hover{
-    background:#eef5ff;
-}
-
-.trade-table td a{
-    color:var(--secondary);
-    font-weight:600;
-}
-
-.trade-table td a:hover{
-    color:var(--primary);
-}
-
-/* ==========================================
-   GOVERNMENT PORTAL BUTTONS
-========================================== */
-
-.gov-grid a{
-    display:block;
-    text-align:center;
-    padding:16px;
-    background:var(--secondary);
-    color:var(--white);
-    border-radius:10px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.gov-grid a:hover{
-    background:var(--primary);
-    transform:translateY(-3px);
-}
-/* ==========================================
-   SHARE BOX
-========================================== */
-
-.share-box{
-    background:#ffffff;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-    padding:22px;
-    margin:25px 0;
-    text-align:center;
-    box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-.share-box h3{
-    color:var(--primary);
-    margin-bottom:10px;
-}
-
-.share-box p{
-    color:#555;
-    margin-bottom:18px;
-}
-
-.share-buttons{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.share-buttons a,
-.share-buttons button{
-    padding:12px 18px;
-    border:none;
-    border-radius:8px;
-    font-weight:600;
-    cursor:pointer;
-}
-
-.whatsapp-share{
-    background:#25d366;
-    color:#fff;
-}
-
-.native-share{
+th{
     background:#0d6efd;
     color:#fff;
 }
 
-.copy-share{
-    background:#f3f4f6;
-    color:#222;
+/* Forms */
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    margin-bottom:15px;
 }
 
-/* ==========================================
-   STUDY BOXES
-========================================== */
-
-.definition-box,
-.highlight-box,
-.exam-tip,
-.warning-box,
-.summary-box{
-    margin:25px 0;
-    padding:18px 22px;
-    border-radius:10px;
+label{
+    font-weight:600;
+    display:block;
+    margin-bottom:5px;
 }
 
-.definition-box{
-    background:#e8f5e9;
-    border-left:6px solid #2e7d32;
+/* Alerts */
+
+.alert{
+    padding:12px 15px;
+    border-radius:8px;
+    margin-bottom:15px;
 }
 
-.highlight-box{
-    background:#fff8e1;
-    border-left:6px solid #ff9800;
+.alert-success{
+    background:#d1e7dd;
+    color:#0f5132;
 }
 
-.exam-tip{
-    background:#e3f2fd;
-    border-left:6px solid #1976d2;
+.alert-warning{
+    background:#fff3cd;
+    color:#664d03;
 }
 
-.warning-box{
-    background:#ffebee;
-    border-left:6px solid #d32f2f;
+.alert-danger{
+    background:#f8d7da;
+    color:#842029;
 }
-
-.summary-box{
-    background:#f3f4f6;
-    border-left:6px solid #4b5563;
-   }
