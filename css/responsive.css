@@ -2,58 +2,65 @@
    Responsive CSS
 ========================= */
 
-@media (max-width:992px){
-
-    nav ul{
-        gap:12px;
-    }
-
-}
-
 @media (max-width:768px){
 
-    .main-header .container{
-        flex-direction:column;
-        padding:12px 0;
-    }
+.container{
+width:95%;
+}
 
-    nav ul{
-        flex-direction:column;
-        width:100%;
-        gap:8px;
-        text-align:center;
-    }
+.main-header{
+position:sticky;
+top:0;
+}
 
-    .hero{
-        padding:40px 15px;
-    }
+.main-header .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+min-height:46px;
+padding:4px 0;
+}
 
-    .hero h1{
-        font-size:1.8rem;
-    }
+.logo a{
+font-size:17px;
+}
 
-    .section-title{
-        font-size:1.6rem;
-    }
+nav ul{
+display:flex;
+flex-wrap:wrap;
+justify-content:flex-end;
+gap:6px;
+margin:0;
+padding:0;
+}
 
-    .grid{
-        grid-template-columns:1fr;
-    }
+nav a{
+font-size:12px;
+padding:2px 4px;
+}
+
+.hero{
+padding:30px 12px;
+}
+
+.hero h1{
+font-size:1.5rem;
+}
+
+.section-title{
+font-size:1.4rem;
+}
 
 }
 
 @media (max-width:480px){
 
-    body{
-        font-size:15px;
-    }
+.logo a{
+font-size:16px;
+}
 
-    .container{
-        width:94%;
-    }
-
-    .hero h1{
-        font-size:1.5rem;
-    }
+nav a{
+font-size:11px;
+}
 
 }
