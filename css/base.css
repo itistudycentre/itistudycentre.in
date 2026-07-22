@@ -1,33 +1,35 @@
-/* ==========================================
-   ITI STUDY CENTRE
-   BASE CSS
-========================================== */
+/* =========================
+   ITI Study Centre
+   Base CSS
+========================= */
 
-/* ========= VARIABLES ========= */
-
+/* CSS Variables */
 :root{
-    --primary:#003b75;
-    --secondary:#0056b3;
-    --hero-start:#004080;
-    --hero-end:#0073e6;
-    --success:#198754;
-    --warning:#ffc107;
+    --primary:#0d6efd;
+    --secondary:#198754;
     --danger:#dc3545;
-    --background:#f5f7fb;
+    --warning:#ffc107;
+
+    --dark:#212529;
+    --light:#f8f9fa;
     --white:#ffffff;
-    --text:#222222;
+
+    --text:#333333;
     --border:#dddddd;
-    --radius:12px;
-    --shadow:0 3px 12px rgba(0,0,0,.10);
+
+    --radius:8px;
+
+    --shadow:0 2px 8px rgba(0,0,0,.10);
+
+    --transition:.3s ease;
 }
 
-/* ========= RESET ========= */
+/* Reset */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
 }
 
 html{
@@ -35,45 +37,53 @@ html{
 }
 
 body{
-    background:var(--background);
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    line-height:1.6;
     color:var(--text);
-    line-height:1.7;
+    background:var(--light);
 }
 
-a{
-    text-decoration:none;
-    transition:.3s;
-}
+/* Images */
 
 img{
     max-width:100%;
     display:block;
-    border-radius:8px;
 }
+
+/* Links */
+
+a{
+    text-decoration:none;
+    color:inherit;
+    transition:var(--transition);
+}
+
+/* Lists */
+
+ul{
+    list-style:none;
+}
+
+/* Buttons */
 
 button{
     cursor:pointer;
-    transition:.3s;
+    border:none;
+    outline:none;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+/* Inputs */
+
+input,
+select,
+textarea{
+    font:inherit;
 }
 
-/* ==========================================
-   ACCESSIBILITY
-========================================== */
+/* Tables */
 
-a:focus,
-button:focus,
-input:focus{
-    outline:3px solid var(--warning);
-    outline-offset:2px;
-}
-
-::selection{
-    background:var(--secondary);
-    color:#fff;
+table{
+    width:100%;
+    border-collapse:collapse;
 }
