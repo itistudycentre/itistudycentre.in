@@ -1,174 +1,59 @@
-/* ==========================================
-   LARGE TABLETS (1024px)
-========================================== */
+/* =========================
+   Responsive CSS
+========================= */
 
-@media (max-width:1024px){
+@media (max-width:992px){
 
-.container{
-    width:95%;
-}
-
-.hero{
-    padding:50px 20px;
-}
-
-.hero h1{
-    font-size:2rem;
-}
-
-.cards,
-.notes-grid,
-.question-grid{
-    grid-template-columns:repeat(2,1fr);
-}
+    nav ul{
+        gap:12px;
+    }
 
 }
-/* ==========================================
-   TABLETS (768px)
-========================================== */
 
 @media (max-width:768px){
 
-.cards,
-.notes-grid,
-.question-grid{
-    grid-template-columns:1fr;
-}
+    .main-header .container{
+        flex-direction:column;
+        padding:12px 0;
+    }
 
-.page-content{
-    padding:20px;
-}
+    nav ul{
+        flex-direction:column;
+        width:100%;
+        gap:8px;
+        text-align:center;
+    }
 
-.page-header{
-    padding:30px 15px;
-}
+    .hero{
+        padding:40px 15px;
+    }
 
-.page-header h1{
-    font-size:1.8rem;
-}
+    .hero h1{
+        font-size:1.8rem;
+    }
 
-.trade-table{
-    display:block;
-    overflow-x:auto;
-    white-space:nowrap;
-}
+    .section-title{
+        font-size:1.6rem;
+    }
 
-.share-buttons{
-    flex-direction:column;
-}
-
-.share-buttons a,
-.share-buttons button{
-    width:100%;
-}
+    .grid{
+        grid-template-columns:1fr;
+    }
 
 }
-/* ==========================================
-   MOBILE DEVICES (576px)
-========================================== */
 
-@media (max-width:576px){
+@media (max-width:480px){
 
-.container{
-    width:94%;
+    body{
+        font-size:15px;
+    }
+
+    .container{
+        width:94%;
+    }
+
+    .hero h1{
+        font-size:1.5rem;
+    }
+
 }
-
-.hero{
-    padding:40px 15px;
-}
-
-.hero h1{
-    font-size:1.6rem;
-    line-height:1.4;
-}
-
-.hero p{
-    font-size:15px;
-}
-
-.page-header h1{
-    font-size:1.5rem;
-}
-
-.page-content{
-    padding:15px;
-}
-
-.btn,
-.btn-primary,
-.btn-secondary{
-    width:100%;
-    text-align:center;
-}
-
-.trade-table th,
-.trade-table td{
-    padding:10px;
-    font-size:14px;
-}
-
-.footer{
-    text-align:center;
-}
-
-.footer-links{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.share-box{
-    padding:15px;
-}
-
-   }
-/* ==========================================
-   EXTRA SMALL DEVICES (400px)
-========================================== */
-
-@media (max-width:400px){
-
-.hero h1{
-    font-size:1.35rem;
-}
-
-.hero p{
-    font-size:14px;
-}
-
-.page-header h1{
-    font-size:1.3rem;
-}
-
-.page-content{
-    padding:12px;
-}
-
-.note-card,
-.question-card,
-.result-box,
-.about-box,
-.contact-box,
-.share-box{
-    padding:15px;
-}
-
-.trade-table th,
-.trade-table td{
-    font-size:13px;
-    padding:8px;
-}
-
-.btn,
-.btn-primary,
-.btn-secondary{
-    font-size:14px;
-    padding:12px;
-}
-
-img{
-    max-width:100%;
-    height:auto;
-}
-
-   }
