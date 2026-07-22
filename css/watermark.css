@@ -1,1 +1,21 @@
+/* =========================
+   Watermark CSS
+========================= */
 
+body::before{
+    content:"ITI Study Centre";
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) rotate(-30deg);
+
+    font-size:70px;
+    font-weight:700;
+    color:rgba(0,0,0,0.03);
+
+    white-space:nowrap;
+    pointer-events:none;
+    user-select:none;
+
+    z-index:-1;
+}
