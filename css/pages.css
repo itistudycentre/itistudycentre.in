@@ -801,3 +801,126 @@
 }
 
 }
+/* ==========================================
+   IMAGE CAPTION
+========================================== */
+
+.image-caption{
+    text-align:center;
+    font-size:15px;
+    color:#666;
+    margin-top:10px;
+    font-style:italic;
+}
+
+
+/* ==========================================
+   IMAGE FRAME
+========================================== */
+
+.image-frame{
+    background:#ffffff;
+    padding:12px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,.10);
+    margin:25px 0;
+}
+
+.image-frame img{
+    width:100%;
+    border-radius:8px;
+}
+
+
+/* ==========================================
+   INFORMATION LIST
+========================================== */
+
+.info-list{
+    list-style:none;
+    margin:20px 0;
+    padding:0;
+}
+
+.info-list li{
+    padding:12px 15px;
+    margin-bottom:10px;
+    background:#f8f9fb;
+    border-left:4px solid var(--secondary);
+    border-radius:8px;
+}
+
+
+/* ==========================================
+   STEP BOX
+========================================== */
+
+.step-box{
+    background:#ffffff;
+    border-left:5px solid var(--success);
+    padding:18px 22px;
+    margin:25px 0;
+    border-radius:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.step-box h4{
+    color:var(--success);
+    margin-bottom:10px;
+}
+
+
+/* ==========================================
+   KEY POINT BOX
+========================================== */
+
+.key-point{
+    background:#eef5ff;
+    border-left:5px solid var(--primary);
+    padding:18px;
+    margin:25px 0;
+    border-radius:10px;
+}
+
+
+/* ==========================================
+   FORMULA BOX
+========================================== */
+
+.formula-box{
+    background:#fafafa;
+    border:2px dashed var(--secondary);
+    border-radius:10px;
+    padding:20px;
+    margin:30px 0;
+    text-align:center;
+    font-weight:bold;
+    font-size:18px;
+}
+
+
+/* ==========================================
+   MOBILE IMAGE IMPROVEMENT
+========================================== */
+
+@media(max-width:768px){
+
+.image-frame{
+    padding:10px;
+}
+
+.image-caption{
+    font-size:14px;
+}
+
+.info-list li{
+    font-size:15px;
+}
+
+.step-box,
+.key-point,
+.formula-box{
+    padding:16px;
+}
+
+}
