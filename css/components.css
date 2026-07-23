@@ -130,3 +130,27 @@ border-radius:12px;
 box-shadow:0 3px 12px rgba(0,0,0,.10);
 
 }
+/* ===== Buttons Fix ===== */
+
+.news-btn{
+display:inline-block;
+background:#0056b3;
+color:#ffffff !important;
+padding:12px 22px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+text-align:center;
+box-shadow:0 2px 6px rgba(0,0,0,.20);
+transition:.3s;
+}
+
+.news-btn:hover{
+background:#003b75;
+color:#ffffff;
+}
+
+.feature-card .news-btn,
+.result-card .news-btn{
+margin-top:15px;
+}
