@@ -1,66 +1,72 @@
-/* =========================
-   Responsive CSS
-========================= */
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
 
 @media (max-width:768px){
 
-.container{
-width:95%;
-}
-
 .main-header{
-position:sticky;
-top:0;
+padding:10px 0;
 }
 
-.main-header .container{
-display:flex;
-justify-content:space-between;
-align-items:center;
-min-height:46px;
-padding:4px 0;
+.logo{
+margin-bottom:10px;
+text-align:center;
 }
 
 .logo a{
-font-size:17px;
+font-size:22px;
+}
+
+nav{
+width:100%;
 }
 
 nav ul{
 display:flex;
+justify-content:center;
 flex-wrap:wrap;
-justify-content:flex-end;
-gap:6px;
-margin:0;
+gap:10px 18px;
 padding:0;
+margin:0;
+}
+
+nav li{
+list-style:none;
+}
+
+nav li::after{
+content:"";
 }
 
 nav a{
-font-size:12px;
-padding:2px 4px;
+font-size:15px;
+padding:2px 0;
 }
 
-.hero{
-padding:30px 12px;
+.home-grid{
+grid-template-columns:1fr;
 }
 
-.hero h1{
-font-size:1.5rem;
+.home-card-grid{
+grid-template-columns:1fr;
 }
 
-.section-title{
-font-size:1.4rem;
+.hero-buttons{
+flex-direction:column;
 }
 
+.btn-primary,
+.btn-secondary{
+width:90%;
+text-align:center;
 }
 
-@media (max-width:480px){
-
-.logo a{
-font-size:16px;
+.gov-grid{
+grid-template-columns:1fr;
 }
 
-nav a{
-font-size:11px;
+.trade-table{
+font-size:14px;
 }
 
 }
