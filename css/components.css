@@ -54,16 +54,23 @@ transform:translateY(-2px);
 /* News */
 
 .news-btn{
-
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-width:180px;
+padding:12px 20px;
 background:#0056b3;
-color:#ffffff;
-
+color:#ffffff !important;
+font-size:16px;
+font-weight:600;
+text-decoration:none;
+border-radius:8px;
+border:none;
 }
 
 .news-btn:hover{
-
 background:#003b75;
-
+color:#ffffff !important;
 }
 
 /* Download */
