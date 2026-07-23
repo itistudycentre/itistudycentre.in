@@ -1,134 +1,201 @@
-/* ==========================================
-   LAYOUT CSS
-========================================== */
+/* =====================================================
+   ITI STUDY CENTRE
+   LAYOUT.CSS
+===================================================== */
 
-.container{
-width:95%;
-max-width:1200px;
-margin:auto;
-}
 
 /* ==========================
    HEADER
 ========================== */
 
 .main-header{
-position:sticky;
-top:0;
-z-index:1000;
-background:#0d6efd;
-box-shadow:0 2px 8px rgba(0,0,0,.15);
-padding:8px 0;
+    background:var(--primary);
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:var(--shadow);
 }
 
 .main-header .container{
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
 }
 
-/* Logo */
 
-.logo{
-margin-bottom:8px;
-text-align:center;
-}
+/* ==========================
+   LOGO
+========================== */
 
 .logo a{
-font-size:18px;
-font-weight:700;
-color:#ffffff;
-text-decoration:none;
+    color:var(--white);
+    font-size:30px;
+    font-weight:700;
 }
 
-/* Navigation */
+
+/* ==========================
+   NAVIGATION
+========================== */
 
 nav{
-width:100%;
-}
-
-nav ul{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-align-items:center;
-gap:8px;
-list-style:none;
-margin:0;
-padding:0;
-}
-
-nav li{
-display:flex;
-align-items:center;
-}
-
-nav li::after{
-content:"|";
-color:#ffffff;
-margin-left:8px;
-}
-
-nav li:last-child::after{
-content:"";
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
 }
 
 nav a{
-display:inline-block;
-padding:3px 0;
-font-size:14px;
-font-weight:500;
-color:#ffffff;
-text-decoration:none;
-transition:.3s;
+    color:var(--white);
+    padding:8px 14px;
+    border-radius:6px;
+    font-weight:700;
 }
 
-nav a:hover{
-color:#ffd54f;
+nav a:hover,
+nav a.active{
+    background:var(--white);
+    color:var(--primary);
 }
+
 
 /* ==========================
-   MAIN
+   HERO
 ========================== */
 
-main{
-padding:20px 0;
+.hero-banner{
+    max-width:1200px;
+    margin:30px auto;
+    padding:60px 30px;
+    text-align:center;
+    background:linear-gradient(
+        135deg,
+        var(--hero-start),
+        var(--hero-end)
+    );
+    color:var(--white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
 }
+
+.hero-banner h1{
+    font-size:42px;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.hero-banner p{
+    font-size:20px;
+    margin-bottom:25px;
+    opacity:.95;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+
+/* ==========================
+   BREADCRUMB
+========================== */
+
+.breadcrumb{
+    max-width:1200px;
+    margin:20px auto;
+    padding:0 15px;
+    font-size:15px;
+}
+
+.breadcrumb a{
+    color:var(--primary);
+    font-weight:700;
+}
+
+.breadcrumb span{
+    margin:0 8px;
+    color:#888;
+}
+
+
+/* ==========================
+   PAGE TITLE
+========================== */
+
+.page-title{
+    max-width:1200px;
+    margin:30px auto;
+    background:var(--white);
+    padding:35px;
+    border-radius:var(--radius);
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+
+.page-title h1{
+    font-size:38px;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.page-title p{
+    font-size:18px;
+    color:#555;
+}
+
 
 /* ==========================
    FOOTER
 ========================== */
 
 .main-footer{
-background:#003b75;
-color:#ffffff;
-margin-top:40px;
-padding:25px 15px;
-text-align:center;
-}
-
-.main-footer ul{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:12px;
-list-style:none;
-margin-bottom:15px;
-padding:0;
+    background:var(--primary);
+    color:var(--white);
+    margin-top:50px;
+    padding:35px 20px;
+    text-align:center;
 }
 
 .main-footer a{
-color:#ffffff;
-text-decoration:none;
-font-weight:600;
+    color:var(--white);
+    margin:0 10px;
+    font-weight:700;
 }
 
 .main-footer a:hover{
-text-decoration:underline;
+    text-decoration:underline;
 }
 
-.main-footer p{
-font-size:14px;
-margin:0;
-   }
+
+/* ==========================
+   SCROLL TO TOP
+========================== */
+
+#scrollTop{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:none;
+
+    width:48px;
+    height:48px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--primary);
+    color:#ffffff;
+
+    cursor:pointer;
+    box-shadow:var(--shadow);
+
+    z-index:999;
+}
+
+#scrollTop:hover{
+    background:var(--secondary);
+}
