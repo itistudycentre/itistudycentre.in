@@ -227,3 +227,19 @@ background:#f7f9fc;
 .trade-table tr:hover{
 background:#eef5ff;
    }
+/* ===== Mobile Home Grid ===== */
+
+@media (max-width:768px){
+
+.home-grid{
+display:grid !important;
+grid-template-columns:1fr !important;
+gap:20px;
+}
+
+.result-card,
+.updates-card{
+width:100%;
+}
+
+}
