@@ -58,7 +58,9 @@ a{
     color:inherit;
     transition:var(--transition);
 }
-
+.news-btn{
+color:#ffffff !important;
+}
 /* Lists */
 
 ul{
