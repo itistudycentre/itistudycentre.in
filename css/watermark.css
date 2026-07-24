@@ -1,21 +1,230 @@
-/* =========================
-   Watermark CSS
-========================= */
+/*====================================================
+  WATERMARK.CSS
+  ITI STUDY CENTRE
+  Version 1.0
+====================================================*/
 
-body::before{
-    content:"ITI Study Centre";
+
+/*====================================================
+  WEBSITE WATERMARK
+====================================================*/
+
+body::after{
+
+    content:"www.itistudycentre.in";
+
     position:fixed;
+
     top:50%;
     left:50%;
+
     transform:translate(-50%,-50%) rotate(-30deg);
 
     font-size:70px;
+
     font-weight:700;
-    color:rgba(0,0,0,0.03);
+
+    color:rgba(0,0,0,.04);
 
     white-space:nowrap;
+
     pointer-events:none;
+
     user-select:none;
 
-    z-index:-1;
+    z-index:0;
+
 }
+
+
+/*====================================================
+  CONTENT ABOVE WATERMARK
+====================================================*/
+
+header,
+main,
+footer,
+section,
+article,
+aside,
+nav,
+.container,
+.page-wrapper,
+.content-card,
+.hero-banner,
+.card,
+.result-card,
+.news-card,
+.update-card,
+.updates-card,
+.module-card,
+.feature-card{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+
+/*====================================================
+  IMAGE WATERMARK
+====================================================*/
+
+.watermark-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.watermark-image::after{
+
+    content:"ITI STUDY CENTRE";
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%) rotate(-30deg);
+
+    font-size:26px;
+
+    font-weight:700;
+
+    color:rgba(255,255,255,.35);
+
+    pointer-events:none;
+
+    white-space:nowrap;
+
+}
+
+
+/*====================================================
+  PDF / NOTES WATERMARK
+====================================================*/
+
+.pdf-watermark{
+
+    position:relative;
+
+}
+
+.pdf-watermark::before{
+
+    content:"© ITI STUDY CENTRE";
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%) rotate(-35deg);
+
+    font-size:54px;
+
+    font-weight:700;
+
+    color:rgba(0,0,0,.06);
+
+    pointer-events:none;
+
+    white-space:nowrap;
+
+}
+
+
+/*====================================================
+  COPYRIGHT TEXT
+====================================================*/
+
+.copyright-text{
+
+    font-size:14px;
+
+    color:#777;
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+
+/*====================================================
+  PRINT
+====================================================*/
+
+@media print{
+
+body::after{
+
+    color:rgba(0,0,0,.08);
+
+}
+
+}
+
+
+/*====================================================
+  TABLET
+====================================================*/
+
+@media(max-width:768px){
+
+body::after{
+
+    font-size:42px;
+
+}
+
+.watermark-image::after{
+
+    font-size:18px;
+
+}
+
+.pdf-watermark::before{
+
+    font-size:34px;
+
+}
+
+}
+
+
+/*====================================================
+  SMALL MOBILE
+====================================================*/
+
+@media(max-width:480px){
+
+body::after{
+
+    font-size:28px;
+
+}
+
+.watermark-image::after{
+
+    font-size:15px;
+
+}
+
+.pdf-watermark::before{
+
+    font-size:24px;
+
+}
+
+}
+
+
+/*====================================================
+  END OF WATERMARK.CSS
+
+  ===== WATERMARK.CSS COMPLETED =====
+====================================================*/
