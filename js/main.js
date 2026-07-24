@@ -4,7 +4,8 @@
 ===================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-
+loadHeader();
+loadFooter();
     console.log("ITI Study Centre Loaded");
 
     initActiveMenu();
@@ -90,6 +91,57 @@ function initSearch() {
         });
 
     });
+
+}
+/* =====================================
+   LOAD HEADER
+===================================== */
+
+async function loadHeader() {
+
+    const header = document.getElementById("header");
+
+    if (!header) return;
+
+    try {
+
+        const response = await fetch("header.html");
+
+        header.innerHTML = await response.text();
+
+        initActiveMenu();
+
+    } catch (e) {
+
+        console.error("Header loading failed", e);
+
+    }
+
+}
+
+/* =====================================
+   LOAD FOOTER
+===================================== */
+
+async function loadFooter() {
+
+    const footer = document.getElementById("footer");
+
+    if (!footer) return;
+
+    try {
+
+        const response = await fetch("footer.html");
+
+        footer.innerHTML = await response.text();
+
+        updateFooterYear();
+
+    } catch (e) {
+
+        console.error("Footer loading failed", e);
+
+    }
 
 }
 /* =====================================
