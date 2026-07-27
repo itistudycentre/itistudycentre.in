@@ -1,4 +1,4 @@
-name: पूरी वेबसाइट का हेडर/फूटर ऑटो-फिक्स
+name: 🔧 ऑटोमैटिक हेडर/फूटर फिक्स (सारी फाइलें एक साथ)
 
 on:
   push:
@@ -6,63 +6,49 @@ on:
   workflow_dispatch:
 
 jobs:
-  analyze-and-fix:
+  fix-all-headers:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: 🔍 स्कैन करें और सारे हेडर/फूटर ठीक करें
+      - name: 🧹 सारे HTML पेज स्कैन करो और फिक्स करो
         run: |
           python -c "
 import os, re, glob
-
 print('🚀 स्कैनिंग शुरू...')
 fixed_count = 0
-error_count = 0
-
 for filepath in glob.glob('**/*.html', recursive=True):
-    # .git या node_modules फोल्डर को इग्नोर करें
     if '/.git/' in filepath or 'node_modules' in filepath:
         continue
-    
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
         content = f.read()
-    
-    original_content = content
-    
-    # ---- 1. सारे पुराने <header> टैग हटाएँ (भले ही कितने भी अलग-अलग हों) ----
+    original = content
+    # 1. पुराने हार्डकोडेड हेडर हटाएँ (सभी किस्म के)
+    content = re.sub(r'<div id="header"[^>]*>.*?</div>', '', content, flags=re.DOTALL | re.IGNORECASE)
     content = re.sub(r'<header[^>]*>.*?</header>', '', content, flags=re.DOTALL | re.IGNORECASE)
-    
-    # ---- 2. सारे पुराने <footer> टैग हटाएँ ----
+    content = re.sub(r'<div class="main-header"[^>]*>.*?</div>', '', content, flags=re.DOTALL | re.IGNORECASE)
+    # 2. पुराने हार्डकोडेड फूटर हटाएँ
+    content = re.sub(r'<div id="footer"[^>]*>.*?</div>', '', content, flags=re.DOTALL | re.IGNORECASE)
     content = re.sub(r'<footer[^>]*>.*?</footer>', '', content, flags=re.DOTALL | re.IGNORECASE)
-    
-    # ---- 3. अगर प्लेसहोल्डर नहीं है तो <body> के अंदर डालें ----
-    if '<div id=\"header-placeholder\"' not in content:
+    # 3. नए प्लेसहोल्डर डालें
+    if '<div id="header-placeholder"' not in content:
         content = content.replace('<body>', '<body>\n    <div id=\"header-placeholder\"></div>')
-    
-    if '<div id=\"footer-placeholder\"' not in content:
+    if '<div id="footer-placeholder"' not in content:
         content = content.replace('</body>', '    <div id=\"footer-placeholder\"></div>\n</body>')
-    
-    # ---- 4. पक्का करें कि main.js हर पेज पर लोड हो (Absolute Path से) ----
+    # 4. main.js लिंक करें
     if '/js/main.js' not in content:
         content = content.replace('</body>', '    <script src=\"/js/main.js\"></script>\n</body>')
-    
-    # ---- 5. फाइल को सेव करें (अगर कुछ बदला है तो ही) ----
-    if content != original_content:
+    if content != original:
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(content)
-        print(f'✅ फिक्स किया: {filepath}')
+        print(f'✅ ठीक किया: {filepath}')
         fixed_count += 1
-    else:
-        print(f'⏩ पहले से सही है: {filepath}')
-
-print(f'\n🎉 कुल {fixed_count} फाइलें ठीक कर दी गईं!')
+print(f'\n🎉 कुल {fixed_count} फाइलें ठीक हो गईं!')
 "
-
-      - name: 📤 ठीक की गई फाइलें GitHub पर पुश करें
+      - name: 📤 GitHub पर पुश करें
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "bot@github.com"
           git add -A
-          git diff --staged --quiet || git commit -m "✅ Action: सारे पेजों का हेडर/फूटर एक जैसा कर दिया"
+          git diff --staged --quiet || git commit -m "🤖 Action: सारे पेजों में यूनिफॉर्म हेडर/फूटर डाल दिया"
           git push
