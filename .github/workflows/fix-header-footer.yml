@@ -1,0 +1,68 @@
+name: पूरी वेबसाइट का हेडर/फूटर ऑटो-फिक्स
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  analyze-and-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 🔍 स्कैन करें और सारे हेडर/फूटर ठीक करें
+        run: |
+          python -c "
+import os, re, glob
+
+print('🚀 स्कैनिंग शुरू...')
+fixed_count = 0
+error_count = 0
+
+for filepath in glob.glob('**/*.html', recursive=True):
+    # .git या node_modules फोल्डर को इग्नोर करें
+    if '/.git/' in filepath or 'node_modules' in filepath:
+        continue
+    
+    with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+        content = f.read()
+    
+    original_content = content
+    
+    # ---- 1. सारे पुराने <header> टैग हटाएँ (भले ही कितने भी अलग-अलग हों) ----
+    content = re.sub(r'<header[^>]*>.*?</header>', '', content, flags=re.DOTALL | re.IGNORECASE)
+    
+    # ---- 2. सारे पुराने <footer> टैग हटाएँ ----
+    content = re.sub(r'<footer[^>]*>.*?</footer>', '', content, flags=re.DOTALL | re.IGNORECASE)
+    
+    # ---- 3. अगर प्लेसहोल्डर नहीं है तो <body> के अंदर डालें ----
+    if '<div id=\"header-placeholder\"' not in content:
+        content = content.replace('<body>', '<body>\n    <div id=\"header-placeholder\"></div>')
+    
+    if '<div id=\"footer-placeholder\"' not in content:
+        content = content.replace('</body>', '    <div id=\"footer-placeholder\"></div>\n</body>')
+    
+    # ---- 4. पक्का करें कि main.js हर पेज पर लोड हो (Absolute Path से) ----
+    if '/js/main.js' not in content:
+        content = content.replace('</body>', '    <script src=\"/js/main.js\"></script>\n</body>')
+    
+    # ---- 5. फाइल को सेव करें (अगर कुछ बदला है तो ही) ----
+    if content != original_content:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f'✅ फिक्स किया: {filepath}')
+        fixed_count += 1
+    else:
+        print(f'⏩ पहले से सही है: {filepath}')
+
+print(f'\n🎉 कुल {fixed_count} फाइलें ठीक कर दी गईं!')
+"
+
+      - name: 📤 ठीक की गई फाइलें GitHub पर पुश करें
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "bot@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "✅ Action: सारे पेजों का हेडर/फूटर एक जैसा कर दिया"
+          git push
