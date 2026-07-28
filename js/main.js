@@ -1,11 +1,11 @@
 /* =====================================
    ITI STUDY CENTRE
-   MAIN JAVASCRIPT v4.0 (FINAL WITH REMOVAL)
+   MAIN JAVASCRIPT v5.0 (AGGRESSIVE FIX)
 ===================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
-    // ----- सबसे पहले: पुराने हार्डकोडेड हेडर/फूटर हटाएँ -----
-    removeOldHeadersAndFooters();
+document.addEventListener("DOMContentLoaded", function() {
+    // ----- पहले काम: HTML से पुराने सारे हेडर/फूटर हटाएँ (ब्रूट फोर्स) -----
+    removeAllOldHeadersAndFooters();
 
     // ----- नया हेडर/फूटर लोड करें -----
     initHeaderFooter();
@@ -19,44 +19,48 @@ document.addEventListener("DOMContentLoaded", () => {
     updateFooterYear();
     initScrollTop();
     initContentProtection();
-    console.log("ITI Study Centre v4.0 Loaded Successfully");
+    console.log("ITI Study Centre v5.0 Aggressive Fix Loaded");
 });
 
 /* =====================================
-   पुराने हार्डकोडेड हेडर/फूटर हटाएँ
+   अल्टीमेट रिमूवर (सब कुछ हटाएगा)
 ===================================== */
-function removeOldHeadersAndFooters() {
-    // सभी संभावित हेडर सेलेक्टर्स
-    const headerSelectors = [
-        'header',
-        '.main-header',
-        'div#header',
-        'div.header',
-        '.header'
-    ];
-    const footerSelectors = [
-        'footer',
-        '.main-footer',
-        'div#footer',
-        'div.footer',
-        '.footer'
+function removeAllOldHeadersAndFooters() {
+    // 1. उन सभी एलिमेंट्स को ढूँढें और हटाएँ जो हेडर/फूटर हो सकते हैं
+    const selectors = [
+        'header', 'footer',
+        '.main-header', '.main-footer',
+        'div#header', 'div#footer',
+        'div.header', 'div.footer',
+        '[class*="main-header"]', '[class*="main-footer"]'
     ];
 
-    // हेडर हटाएँ
-    headerSelectors.forEach(sel => {
-        const elements = document.querySelectorAll(sel);
-        elements.forEach(el => el.remove());
+    selectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach(el => {
+            // सुरक्षा: अगर किसी एलिमेंट में 'nav' या 'logo' है, तो हटाएँ
+            if (el.querySelector('nav') || el.querySelector('.logo') || el.querySelector('.nav-link')) {
+                el.remove();
+            }
+        });
     });
 
-    // फूटर हटाएँ
-    footerSelectors.forEach(sel => {
-        const elements = document.querySelectorAll(sel);
-        elements.forEach(el => el.remove());
+    // 2. सीधे body के अंदर मौजूद अकेले <nav> को भी हटाएँ (अगर वह हेडर का हिस्सा था)
+    document.querySelectorAll('body > nav').forEach(el => el.remove());
+
+    // 3. उन सभी डिव्स को हटाएँ जिनके अंदर 'Home', 'ITI Result', 'ITI Notes' जैसे लिंक्स हों
+    // (यह उन पुराने Pandoc-markdown वाले हेडर को पकड़ लेगा)
+    const allDivs = document.querySelectorAll('div');
+    allDivs.forEach(div => {
+        const text = div.innerText || '';
+        // अगर किसी डिव में ये सारे लिंक्स एक साथ हैं, तो यह नेविगेशन है
+        if (text.includes('Home') && text.includes('ITI Result') && text.includes('ITI Notes')) {
+            div.remove();
+        }
     });
 }
 
 /* =====================================
-   हेडर/फूटर लोडर (यूनिवर्सल)
+   हेडर/फूटर लोडर (बिना किसी रुकावट के)
 ===================================== */
 function getRoot() {
     let path = window.location.pathname;
@@ -68,23 +72,17 @@ function getRoot() {
 function initHeaderFooter() {
     let root = getRoot();
 
-    // ---- हेडर कंटेनर ----
-    let headerContainer = document.getElementById('header-placeholder');
-    if (!headerContainer) {
-        headerContainer = document.createElement('div');
-        headerContainer.id = 'header-placeholder';
-        document.body.insertBefore(headerContainer, document.body.firstChild);
-    }
+    // हेडर कंटेनर बनाएँ (Body की शुरुआत में)
+    let headerContainer = document.createElement('div');
+    headerContainer.id = 'header-placeholder';
+    document.body.insertBefore(headerContainer, document.body.firstChild);
 
-    // ---- फूटर कंटेनर ----
-    let footerContainer = document.getElementById('footer-placeholder');
-    if (!footerContainer) {
-        footerContainer = document.createElement('div');
-        footerContainer.id = 'footer-placeholder';
-        document.body.appendChild(footerContainer);
-    }
+    // फूटर कंटेनर बनाएँ (Body के अंत में)
+    let footerContainer = document.createElement('div');
+    footerContainer.id = 'footer-placeholder';
+    document.body.appendChild(footerContainer);
 
-    // ---- हेडर लोड करें ----
+    // हेडर लोड करें
     fetch(root + 'header.html')
         .then(r => r.text())
         .then(data => {
@@ -92,20 +90,36 @@ function initHeaderFooter() {
             initActiveMenu();
         })
         .catch(() => {
-            headerContainer.innerHTML = '<p style="color:red; background:#ffe6e6; padding:10px;">⚠️ Header लोड नहीं हुआ।</p>';
+            // अगर रिलेटिव पाथ से न मिले तो रूट से डायरेक्ट लोड करें
+            fetch('header.html')
+                .then(r => r.text())
+                .then(data => {
+                    headerContainer.innerHTML = data;
+                    initActiveMenu();
+                })
+                .catch(() => {
+                    headerContainer.innerHTML = '<p style="color:red;">⚠️ Header नहीं मिला। कृपया header.html रूट में अपलोड करें।</p>';
+                });
         });
 
-    // ---- फूटर लोड करें ----
+    // फूटर लोड करें
     fetch(root + 'footer.html')
         .then(r => r.text())
         .then(data => {
             footerContainer.innerHTML = data;
         })
         .catch(() => {
-            footerContainer.innerHTML = '<p style="color:red; background:#ffe6e6; padding:10px;">⚠️ Footer लोड नहीं हुआ।</p>';
+            fetch('footer.html')
+                .then(r => r.text())
+                .then(data => {
+                    footerContainer.innerHTML = data;
+                })
+                .catch(() => {
+                    footerContainer.innerHTML = '<p style="color:red;">⚠️ Footer नहीं मिला।</p>';
+                });
         });
 
-    // ---- ब्रेडक्रंब ----
+    // ब्रेडक्रंब (अगर मौजूद है)
     let bc = document.getElementById('breadcrumb');
     if (bc) {
         let path = window.location.pathname.replace(/^\/|\/$/g, '').split('/');
@@ -248,23 +262,6 @@ function initScrollTop() {
 }
 
 /* =====================================
-   MOBILE MENU
-===================================== */
-function toggleMobileMenu() {
-    const nav = document.querySelector("nav");
-    if (nav) {
-        nav.classList.toggle("active");
-    }
-}
-
-/* =====================================
-   GLOBAL ERROR HANDLER
-===================================== */
-window.addEventListener("error", (event) => {
-    console.error("JavaScript Error:", event.message, "File:", event.filename, "Line:", event.lineno);
-});
-
-/* =====================================
    CONTENT PROTECTION
 ===================================== */
 function initContentProtection() {
@@ -272,20 +269,10 @@ function initContentProtection() {
     const protectedPage = path.includes("/notes/") || path.includes("/engineering/");
     if (!protectedPage) return;
     console.log("Content Protection Enabled");
-
-    document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-    });
-    document.addEventListener("dragstart", function (e) {
-        e.preventDefault();
-    });
-    document.addEventListener("copy", function (e) {
-        e.preventDefault();
-        alert("Copying is disabled on Notes pages.");
-    });
-    document.addEventListener("cut", function (e) {
-        e.preventDefault();
-    });
+    document.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+    document.addEventListener("dragstart", function (e) { e.preventDefault(); });
+    document.addEventListener("copy", function (e) { e.preventDefault(); alert("Copying is disabled."); });
+    document.addEventListener("cut", function (e) { e.preventDefault(); });
     document.addEventListener("keydown", function (e) {
         if (e.ctrlKey && e.key.toLowerCase() === "c") e.preventDefault();
         if (e.ctrlKey && e.key.toLowerCase() === "a") e.preventDefault();
@@ -294,4 +281,12 @@ function initContentProtection() {
     });
 }
 
-console.log("ITI Study Centre JavaScript v4.0 Final Loaded Successfully");
+/* =====================================
+   MOBILE MENU
+===================================== */
+function toggleMobileMenu() {
+    const nav = document.querySelector("nav");
+    if (nav) nav.classList.toggle("active");
+}
+
+console.log("ITI Study Centre v5.0 Aggressive Fix Loaded Successfully");
