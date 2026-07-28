@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
     headerSelectors.forEach(sel => {
         document.querySelectorAll(sel).forEach(el => {
-            // अगर एलिमेंट body का डायरेक्ट चाइल्ड है या प्लेसहोल्डर है तो हटाएँ
             if (el.id === 'header' || el.id === 'header-placeholder' || el.tagName === 'HEADER') {
                 el.remove();
             }
@@ -79,13 +78,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // ----- 7. ब्रेडक्रंब जनरेट करें -----
+    // ----- 7. ब्रेडक्रंब जनरेट करें (सुंदर और सही नामों के साथ) -----
     function generateBreadcrumb() {
         let bc = document.getElementById('breadcrumb');
         if (!bc) return;
         let path = window.location.pathname.replace(/^\/|\/$/g, '').split('/');
         let html = '<a href="/" style="text-decoration:none; color:#003366;">🏠 Home</a>';
-        // Map common folder names to display names
         const folderMap = {
             'engineering': 'Engineering Notes',
             'notes': 'ITI Notes',
@@ -122,9 +120,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /* =====================================
-   बाकी सारे पुराने फीचर्स (नीचे कॉपी किए गए हैं)
+   बाकी सारे पुराने फीचर्स
 ===================================== */
-
 function initSearch() {
     const input = document.querySelector(".search-section input");
     if (!input) return;
@@ -141,7 +138,6 @@ function initSearch() {
         });
     });
 }
-
 async function loadJSON(file) {
     try {
         const response = await fetch(file);
@@ -152,53 +148,27 @@ async function loadJSON(file) {
         return [];
     }
 }
-
-async function loadNews() {
-    const news = await loadJSON("data/news.json");
-    if (!news.length) return;
-    console.log("News Loaded", news);
-}
-async function loadNotes() {
-    const notes = await loadJSON("data/notes.json");
-    if (!notes.length) return;
-    console.log("Notes Loaded", notes);
-}
-async function loadEngineering() {
-    const engineering = await loadJSON("data/engineering.json");
-    if (!engineering.length) return;
-    console.log("Engineering Loaded", engineering);
-}
+async function loadNews() { const news = await loadJSON("data/news.json"); if (!news.length) return; console.log("News Loaded", news); }
+async function loadNotes() { const notes = await loadJSON("data/notes.json"); if (!notes.length) return; console.log("Notes Loaded", notes); }
+async function loadEngineering() { const engineering = await loadJSON("data/engineering.json"); if (!engineering.length) return; console.log("Engineering Loaded", engineering); }
 async function loadUpdates() {
     const updates = await loadJSON("data/updates.json");
     const container = document.getElementById("official-updates");
     if (!container) return;
-    if (!updates.length) {
-        container.innerHTML = "<p>No latest updates available.</p>";
-        return;
-    }
+    if (!updates.length) { container.innerHTML = "<p>No latest updates available.</p>"; return; }
     let html = "<ul>";
-    updates.forEach(item => {
-        html += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
-    });
+    updates.forEach(item => { html += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`; });
     html += "</ul>";
     container.innerHTML = html;
 }
-
 function initScrollTop() {
     const btn = document.getElementById("scrollTop");
     if (!btn) return;
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            btn.style.display = "block";
-        } else {
-            btn.style.display = "none";
-        }
+        if (window.scrollY > 300) { btn.style.display = "block"; } else { btn.style.display = "none"; }
     });
-    btn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+    btn.addEventListener("click", () => { window.scrollTo({ top: 0, behavior: "smooth" }); });
 }
-
 function initContentProtection() {
     const path = window.location.pathname.toLowerCase();
     const protectedPage = path.includes("/notes/") || path.includes("/engineering/");
@@ -215,5 +185,4 @@ function initContentProtection() {
         if (e.ctrlKey && e.key.toLowerCase() === "s") e.preventDefault();
     });
 }
-
 console.log("ITI Study Centre v8.0 Final Loaded");
