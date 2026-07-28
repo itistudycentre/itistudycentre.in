@@ -282,5 +282,8 @@ function initContentProtection() {
         if (e.ctrlKey && e.key.toLowerCase() === "s") e.preventDefault();
     });
 }
-
+// ---- पेज खुलते ही टॉप पर स्क्रॉल करें ----
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+});
 console.log("ITI Study Centre v7.0 Self-Sufficient Loaded");
