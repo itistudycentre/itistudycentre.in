@@ -1,515 +1,76 @@
 /* =====================================
    ITI STUDY CENTRE
-   MAIN JAVASCRIPT v2.0
+   MAIN JAVASCRIPT v3.0 (FINAL MERGED)
 ===================================== */
 
+/* =====================================
+   DOM CONTENT LOADED
+===================================== */
 document.addEventListener("DOMContentLoaded", () => {
-loadHeader();
-loadFooter();
-    console.log("ITI Study Centre Loaded");
-
-    initActiveMenu();
-
+    initHeaderFooter(); // यह पुराने loadHeader/loadFooter की जगह लेगा
     initSearch();
-
     loadNews();
-
     loadNotes();
-
     loadEngineering();
-
     loadUpdates();
-
     updateFooterYear();
-
     initScrollTop();
-
     initContentProtection();
-
+    console.log("ITI Study Centre v3.0 Loaded Successfully");
 });
 
 /* =====================================
-   ACTIVE MENU
+   HEADER & FOOTER LOADER (UNIVERSAL)
 ===================================== */
-
-function initActiveMenu() {
-
-    const currentPage =
-        window.location.pathname.split("/").pop() || "index.html";
-
-    document.querySelectorAll("nav a").forEach(link => {
-
-        const href = link.getAttribute("href");
-
-        if (href === currentPage) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
+function getRoot() {
+    let path = window.location.pathname;
+    let parts = path.split('/').filter(p => p && !p.includes('.html') && !p.includes('.'));
+    let depth = parts.length;
+    return depth === 0 ? './' : '../'.repeat(depth);
 }
 
-/* =====================================
-   SEARCH
-===================================== */
-
-function initSearch() {
-
-    const input =
-        document.querySelector(".search-section input");
-
-    if (!input) return;
-
-    input.addEventListener("keyup", function () {
-
-        const keyword =
-            this.value.toLowerCase().trim();
-
-        const cards = document.querySelectorAll(
-
-            ".card,.result-card,.updates-card,.feature-card"
-
-        );
-
-        cards.forEach(card => {
-
-            const text =
-                card.innerText.toLowerCase();
-
-            if (text.includes(keyword)) {
-
-                card.style.display = "";
-
-            } else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    });
-
-}
-/* =====================================
-   LOAD HEADER
-===================================== */
-
-async function loadHeader() {
-
-    const header = document.getElementById("header");
-
-    if (!header) return;
-
-    try {
-
-        const response = await fetch("header.html");
-
-        header.innerHTML = await response.text();
-
-        initActiveMenu();
-
-    } catch (e) {
-
-        console.error("Header loading failed", e);
-
-    }
-
-}
-
-/* =====================================
-   LOAD FOOTER
-===================================== */
-
-async function loadFooter() {
-
-    const footer = document.getElementById("footer");
-
-    if (!footer) return;
-
-    try {
-
-        const response = await fetch("footer.html");
-
-        footer.innerHTML = await response.text();
-
-        updateFooterYear();
-
-    } catch (e) {
-
-        console.error("Footer loading failed", e);
-
-    }
-
-}
-/* =====================================
-   COMMON JSON LOADER
-===================================== */
-
-async function loadJSON(file) {
-
-    try {
-
-        const response = await fetch(file);
-
-        if (!response.ok) {
-
-            throw new Error(file);
-
-        }
-
-        return await response.json();
-
-    }
-
-    catch (error) {
-
-        console.error("Loading Error :", file);
-
-        return [];
-
-    }
-
-}
-
-/* =====================================
-   NEWS
-===================================== */
-
-async function loadNews() {
-
-    const news = await loadJSON("data/news.json");
-
-    if (!news.length) return;
-
-    console.log("News Loaded", news);
-
-}
-
-/* =====================================
-   NOTES
-===================================== */
-
-async function loadNotes() {
-
-    const notes = await loadJSON("data/notes.json");
-
-    if (!notes.length) return;
-
-    console.log("Notes Loaded", notes);
-
-}
-
-/* =====================================
-   ENGINEERING
-===================================== */
-
-async function loadEngineering() {
-
-    const engineering =
-        await loadJSON("data/engineering.json");
-
-    if (!engineering.length) return;
-
-    console.log("Engineering Loaded", engineering);
-
-}
-
-/* =====================================
-   LATEST OFFICIAL UPDATES
-===================================== */
-
-async function loadUpdates() {
-
-    const updates =
-        await loadJSON("data/updates.json");
-
-    const container =
-        document.getElementById("official-updates");
-
-    if (!container) return;
-
-    if (!updates.length) {
-
-        container.innerHTML =
-
-        "<p>No latest updates available.</p>";
-
-        return;
-
-    }
-
-    let html = "<ul>";
-
-    updates.forEach(item => {
-
-        html += `
-
-        <li>
-
-        <a href="${item.link}"
-
-        target="_blank">
-
-        ${item.title}
-
-        </a>
-
-        </li>
-
-        `;
-
-    });
-
-    html += "</ul>";
-
-    container.innerHTML = html;
-
-}
-/* =====================================
-   FOOTER YEAR
-===================================== */
-
-function updateFooterYear() {
-
-    const year = document.getElementById("current-year");
-
-    if (year) {
-
-        year.textContent = new Date().getFullYear();
-
-    }
-
-}
-
-/* =====================================
-   SCROLL TO TOP
-===================================== */
-
-function initScrollTop() {
-
-    const btn = document.getElementById("scrollTop");
-
-    if (!btn) return;
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 300) {
-
-            btn.style.display = "block";
-
-        } else {
-
-            btn.style.display = "none";
-
-        }
-
-    });
-
-    btn.addEventListener("click", () => {
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-
-        });
-
-    });
-
-}
-
-/* =====================================
-   MOBILE MENU
-===================================== */
-
-function toggleMobileMenu() {
-
-    const nav = document.querySelector("nav");
-
-    if (nav) {
-
-        nav.classList.toggle("active");
-
-    }
-
-}
-
-/* =====================================
-   GLOBAL ERROR HANDLER
-===================================== */
-
-window.addEventListener("error", (event) => {
-
-    console.error(
-
-        "JavaScript Error:",
-
-        event.message,
-
-        "File:",
-
-        event.filename,
-
-        "Line:",
-
-        event.lineno
-
-    );
-
-});
-/* =====================================
-   CONTENT PROTECTION
-   (ONLY FOR NOTES PAGES)
-===================================== */
-
-function initContentProtection() {
-
-    const path = window.location.pathname.toLowerCase();
-
-    const protectedPage =
-        path.includes("/notes/") ||
-        path.includes("/engineering/");
-
-    if (!protectedPage) return;
-
-    console.log("Content Protection Enabled");
-
-    /* Disable Right Click */
-
-    document.addEventListener("contextmenu", function (e) {
-
-        e.preventDefault();
-
-    });
-
-    /* Disable Drag */
-
-    document.addEventListener("dragstart", function (e) {
-
-        e.preventDefault();
-
-    });
-
-    /* Disable Copy */
-
-    document.addEventListener("copy", function (e) {
-
-        e.preventDefault();
-
-        alert("Copying is disabled on Notes pages.");
-
-    });
-
-    /* Disable Cut */
-
-    document.addEventListener("cut", function (e) {
-
-        e.preventDefault();
-
-    });
-
-    /* Disable Keyboard Shortcuts */
-
-    document.addEventListener("keydown", function (e) {
-
-        /* Ctrl + C */
-
-        if (e.ctrlKey && e.key.toLowerCase() === "c") {
-
-            e.preventDefault();
-
-        }
-
-        /* Ctrl + A */
-
-        if (e.ctrlKey && e.key.toLowerCase() === "a") {
-
-            e.preventDefault();
-
-        }
-
-        /* Ctrl + X */
-
-        if (e.ctrlKey && e.key.toLowerCase() === "x") {
-
-            e.preventDefault();
-
-        }
-
-        /* Ctrl + S */
-
-        if (e.ctrlKey && e.key.toLowerCase() === "s") {
-
-            e.preventDefault();
-
-        }
-
-    });
-
-}
-// ========== 🚀 नया Header/Footer Loader + Breadcrumb (पुराने कोड को नुकसान नहीं पहुँचाता) ==========
-// यह कोड तभी चलेगा जब पेज में "header-placeholder" मौजूद हो, वरना इग्नोर कर देगा।
-document.addEventListener("DOMContentLoaded", function() {
-    // अगर header-placeholder मौजूद नहीं है, तो यह कोड आगे नहीं बढ़ेगा (सुरक्षित)
-    if (!document.getElementById('header-placeholder')) return;
-
-    // ---- 1. डायनामिक रूट पाथ (सब-फोल्डर डिटेक्ट) ----
-    function getRoot() {
-        let path = window.location.pathname;
-        let parts = path.split('/').filter(p => p && !p.includes('.html') && !p.includes('.'));
-        let depth = parts.length;
-        return depth === 0 ? './' : '../'.repeat(depth);
-    }
+function initHeaderFooter() {
     let root = getRoot();
 
-    // ---- 2. हेडर लोड करें ----
+    // ---- Header Container ढूँढें (या खुद बनाएँ) ----
+    let headerContainer = document.getElementById('header-placeholder') || document.getElementById('header');
+    if (!headerContainer) {
+        // अगर किसी पेज में कोई Header Container नहीं है, तो body की शुरुआत में बना दें (Engineering Notes ठीक हो जाएगा)
+        headerContainer = document.createElement('div');
+        headerContainer.id = 'header-placeholder';
+        document.body.insertBefore(headerContainer, document.body.firstChild);
+    }
+
+    // ---- Footer Container ढूँढें (या खुद बनाएँ) ----
+    let footerContainer = document.getElementById('footer-placeholder') || document.getElementById('footer');
+    if (!footerContainer) {
+        footerContainer = document.createElement('div');
+        footerContainer.id = 'footer-placeholder';
+        document.body.appendChild(footerContainer);
+    }
+
+    // ---- Header Load करें ----
     fetch(root + 'header.html')
         .then(r => r.text())
         .then(data => {
-            let placeholder = document.getElementById('header-placeholder');
-            if (placeholder) {
-                placeholder.innerHTML = data;
-                highlightActiveMenu();
-            }
+            headerContainer.innerHTML = data;
+            initActiveMenu(); // Menu Highlight करें
         })
         .catch(() => {
-            let placeholder = document.getElementById('header-placeholder');
-            if (placeholder) placeholder.innerHTML = '<p style="color:red; padding:10px;">⚠️ Header नहीं मिला</p>';
+            headerContainer.innerHTML = '<p style="color:red; background:#ffe6e6; padding:10px;">⚠️ Header लोड नहीं हुआ। कृपया root folder में header.html चेक करें।</p>';
         });
 
-    // ---- 3. फूटर लोड करें ----
+    // ---- Footer Load करें ----
     fetch(root + 'footer.html')
         .then(r => r.text())
         .then(data => {
-            let placeholder = document.getElementById('footer-placeholder');
-            if (placeholder) placeholder.innerHTML = data;
+            footerContainer.innerHTML = data;
         })
         .catch(() => {
-            let placeholder = document.getElementById('footer-placeholder');
-            if (placeholder) placeholder.innerHTML = '<p style="color:red; padding:10px;">⚠️ Footer नहीं मिला</p>';
+            footerContainer.innerHTML = '<p style="color:red; background:#ffe6e6; padding:10px;">⚠️ Footer लोड नहीं हुआ।</p>';
         });
 
-    // ---- 4. एक्टिव मेनू हाइलाइट करें ----
-    function highlightActiveMenu() {
-        let current = window.location.pathname.split('/').pop() || 'index.html';
-        let links = document.querySelectorAll('#header-placeholder .nav-link, #header-placeholder a');
-        links.forEach(link => {
-            let href = link.getAttribute('href');
-            if (!href) return;
-            let target = href.replace(/^\//, '').split('?')[0];
-            if (target === current || (current === 'index.html' && (target === '' || target === 'index.html'))) {
-                link.style.fontWeight = 'bold';
-                link.style.textDecoration = 'underline';
-                link.style.color = '#ffcc00';
-            }
-        });
-    }
-
-    // ---- 5. ब्रेडक्रंब जनरेट करें ----
+    // ---- Breadcrumb जनरेट करें ----
     let bc = document.getElementById('breadcrumb');
     if (bc) {
         let path = window.location.pathname.replace(/^\/|\/$/g, '').split('/');
@@ -525,9 +86,189 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         bc.innerHTML = html;
     }
-});
-/* =====================================
-   END OF FILE
-===================================== */
+}
 
-console.log("ITI Study Centre JavaScript v2.0 Loaded Successfully");
+/* =====================================
+   ACTIVE MENU
+===================================== */
+function initActiveMenu() {
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("nav a").forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === currentPage) {
+            link.classList.add("active");
+            // Extra highlight for safety
+            link.style.fontWeight = 'bold';
+            link.style.textDecoration = 'underline';
+            link.style.color = '#ffcc00';
+        }
+    });
+}
+
+/* =====================================
+   SEARCH
+===================================== */
+function initSearch() {
+    const input = document.querySelector(".search-section input");
+    if (!input) return;
+    input.addEventListener("keyup", function () {
+        const keyword = this.value.toLowerCase().trim();
+        const cards = document.querySelectorAll(".card,.result-card,.updates-card,.feature-card");
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            if (text.includes(keyword)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+}
+
+/* =====================================
+   COMMON JSON LOADER
+===================================== */
+async function loadJSON(file) {
+    try {
+        const response = await fetch(file);
+        if (!response.ok) {
+            throw new Error(file);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error("Loading Error :", file);
+        return [];
+    }
+}
+
+/* =====================================
+   NEWS
+===================================== */
+async function loadNews() {
+    const news = await loadJSON("data/news.json");
+    if (!news.length) return;
+    console.log("News Loaded", news);
+}
+
+/* =====================================
+   NOTES
+===================================== */
+async function loadNotes() {
+    const notes = await loadJSON("data/notes.json");
+    if (!notes.length) return;
+    console.log("Notes Loaded", notes);
+}
+
+/* =====================================
+   ENGINEERING
+===================================== */
+async function loadEngineering() {
+    const engineering = await loadJSON("data/engineering.json");
+    if (!engineering.length) return;
+    console.log("Engineering Loaded", engineering);
+}
+
+/* =====================================
+   LATEST OFFICIAL UPDATES
+===================================== */
+async function loadUpdates() {
+    const updates = await loadJSON("data/updates.json");
+    const container = document.getElementById("official-updates");
+    if (!container) return;
+    if (!updates.length) {
+        container.innerHTML = "<p>No latest updates available.</p>";
+        return;
+    }
+    let html = "<ul>";
+    updates.forEach(item => {
+        html += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
+    });
+    html += "</ul>";
+    container.innerHTML = html;
+}
+
+/* =====================================
+   FOOTER YEAR
+===================================== */
+function updateFooterYear() {
+    const year = document.getElementById("current-year");
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+}
+
+/* =====================================
+   SCROLL TO TOP
+===================================== */
+function initScrollTop() {
+    const btn = document.getElementById("scrollTop");
+    if (!btn) return;
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    });
+    btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
+
+/* =====================================
+   MOBILE MENU
+===================================== */
+function toggleMobileMenu() {
+    const nav = document.querySelector("nav");
+    if (nav) {
+        nav.classList.toggle("active");
+    }
+}
+
+/* =====================================
+   GLOBAL ERROR HANDLER
+===================================== */
+window.addEventListener("error", (event) => {
+    console.error("JavaScript Error:", event.message, "File:", event.filename, "Line:", event.lineno);
+});
+
+/* =====================================
+   CONTENT PROTECTION (ONLY FOR NOTES PAGES)
+===================================== */
+function initContentProtection() {
+    const path = window.location.pathname.toLowerCase();
+    const protectedPage = path.includes("/notes/") || path.includes("/engineering/");
+    if (!protectedPage) return;
+    console.log("Content Protection Enabled");
+
+    // Disable Right Click
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    });
+
+    // Disable Drag
+    document.addEventListener("dragstart", function (e) {
+        e.preventDefault();
+    });
+
+    // Disable Copy
+    document.addEventListener("copy", function (e) {
+        e.preventDefault();
+        alert("Copying is disabled on Notes pages.");
+    });
+
+    // Disable Cut
+    document.addEventListener("cut", function (e) {
+        e.preventDefault();
+    });
+
+    // Disable Keyboard Shortcuts
+    document.addEventListener("keydown", function (e) {
+        if (e.ctrlKey && e.key.toLowerCase() === "c") e.preventDefault();
+        if (e.ctrlKey && e.key.toLowerCase() === "a") e.preventDefault();
+        if (e.ctrlKey && e.key.toLowerCase() === "x") e.preventDefault();
+        if (e.ctrlKey && e.key.toLowerCase() === "s") e.preventDefault();
+    });
+}
+
+console.log("ITI Study Centre JavaScript v3.0 Final Loaded Successfully");
