@@ -1,0 +1,26 @@
+name: 🔗 Fix Broken Links
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fix links
+        run: |
+          find . -name "*.html" -exec sed -i 's/notes\/other\//notes\/other-trades\//g' {} \;
+          find . -name "*.html" -exec sed -i 's/notes\/other\/index.html/notes\/other-trades\/index.html/g' {} \;
+          find . -name "*.html" -exec sed -i 's/href="\.\.\/index.html"/href="\/index.html"/g' {} \;
+          find . -name "*.html" -exec sed -i 's/href="\.\.\/iti-result.html"/href="\/iti-result.html"/g' {} \;
+          find . -name "*.html" -exec sed -i 's/href="\.\.\/engineering-notes.html"/href="\/engineering-notes.html"/g' {} \;
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "bot@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "fix: broken links"
+          git push
