@@ -1,0 +1,86 @@
+name: 📊 Full Website Check & Report
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 🔍 Scan all HTML files and find broken links
+        run: |
+          python3 -c "
+import os, re, glob
+
+report = []
+print('🚀 Scanning all HTML files...')
+
+html_files = glob.glob('**/*.html', recursive=True)
+total = len(html_files)
+print(f'📁 Found {total} HTML files.')
+
+all_files = []
+for root, dirs, files in os.walk('.'):
+    for file in files:
+        all_files.append(file)
+
+for filepath in html_files:
+    if '/.git/' in filepath:
+        continue
+    with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+        content = f.read()
+    
+    hrefs = re.findall(r'href=[\"\']([^\"\']+)[\"\']', content)
+    for href in hrefs:
+        if href.startswith(('http', 'https', '#', 'mailto:', 'tel:', 'javascript')):
+            continue
+        if href.endswith(('.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.pdf', '.css', '.js')):
+            # Check if file exists
+            target = href.split('?')[0].split('#')[0]
+            if not target:
+                continue
+            if not os.path.exists(os.path.join(os.path.dirname(filepath), target)):
+                if not os.path.exists(target):
+                    report.append(f'❌ {filepath} -> {href}')
+        elif href.endswith('.html') or href.endswith('/'):
+            target = href.split('?')[0].split('#')[0]
+            if not target:
+                continue
+            # Check if file or folder exists
+            full_path = os.path.join(os.path.dirname(filepath), target)
+            if not os.path.exists(full_path):
+                # Try removing trailing slash
+                if target.endswith('/'):
+                    full_path = full_path[:-1]
+                if not os.path.exists(full_path):
+                    report.append(f'❌ {filepath} -> {href}')
+
+# Write report
+with open('broken_links_report.txt', 'w', encoding='utf-8') as f:
+    f.write('🚨 BROKEN LINKS REPORT\n')
+    f.write('=' * 50 + '\n\n')
+    if report:
+        f.write(f'Total broken links found: {len(report)}\n\n')
+        for line in report:
+            f.write(line + '\n')
+        f.write('\n💡 To fix: Either create the missing page or correct the link path.\n')
+    else:
+        f.write('✅ No broken links found! Your website is perfect.\n')
+
+print(f'📄 Report generated: broken_links_report.txt')
+print(f'🔴 Total broken links: {len(report)}')
+"
+
+      - name: 📤 Commit and push report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "bot@github.com"
+          git add broken_links_report.txt
+          git diff --staged --quiet || git commit -m "📊 Broken Links Report"
+          git push
