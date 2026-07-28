@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 
@@ -39,6 +40,52 @@ gtag('config','G-RDLMQ0BNWF');
 
 </script>
 <link rel="canonical" href="https://www.itistudycentre.in/">
+
+<!-- 🚀 सर्च बटन को बड़ा और चौड़ा करने के लिए सिर्फ 4 लाइन का CSS (बाकी डिजाइन वैसा ही) -->
+<style>
+/* Desktop पर सर्च सेक्शन को बड़ा करें */
+@media (min-width: 768px) {
+  .search-section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .search-section input {
+    flex: 1;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+  .search-section button {
+    padding: 14px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 150px;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .search-section button:hover {
+    background: #002244;
+  }
+}
+/* मोबाइल पर वैसा ही रहे (Responsive) */
+@media (max-width: 767px) {
+  .search-section input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .search-section button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+</style>
+
 </head>
 
 <body>
@@ -90,7 +137,7 @@ class="btn-secondary">
 </section>
 
 <!-- ===========================================
-SEARCH
+SEARCH (बड़ा और चौड़ा किया गया)
 =========================================== -->
 
 <section class="search-section container">
@@ -105,7 +152,7 @@ placeholder="Search Trade, Result, Notes, Employability Skills..."
 
 <button>
 
-Search
+🔍 Search
 
 </button>
 
@@ -778,4 +825,3 @@ SEO SCHEMA
 </body>
 
 </html>
-
