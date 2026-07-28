@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 
@@ -29,19 +28,13 @@ content="ITI Study Centre">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF"></script>
 
 <script>
-
 window.dataLayer = window.dataLayer || [];
-
 function gtag(){dataLayer.push(arguments);}
-
 gtag('js', new Date());
-
 gtag('config','G-RDLMQ0BNWF');
-
 </script>
 <link rel="canonical" href="https://www.itistudycentre.in/">
 
-<!-- 🚀 सर्च बटन को बड़ा और चौड़ा करने के लिए सिर्फ 4 लाइन का CSS (बाकी डिजाइन वैसा ही) -->
 <style>
 /* Desktop पर सर्च सेक्शन को बड़ा करें */
 @media (min-width: 768px) {
@@ -49,9 +42,11 @@ gtag('config','G-RDLMQ0BNWF');
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: center;
   }
   .search-section input {
     flex: 1;
+    max-width: 600px;
     padding: 14px 20px;
     font-size: 1.1rem;
     border: 2px solid #ccc;
@@ -73,7 +68,6 @@ gtag('config','G-RDLMQ0BNWF');
     background: #002244;
   }
 }
-/* मोबाइल पर वैसा ही रहे (Responsive) */
 @media (max-width: 767px) {
   .search-section input {
     width: 100%;
@@ -84,13 +78,93 @@ gtag('config','G-RDLMQ0BNWF');
     padding: 12px;
   }
 }
+
+/* 🔥 ट्रेड्स टेबल को आकर्षक बनाने के लिए CSS */
+.trade-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.trade-table thead tr {
+  background: #003366;
+  color: white;
+  text-align: left;
+}
+.trade-table th, .trade-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.trade-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+.trade-table tbody tr:hover {
+  background: #e9ecef;
+  transition: 0.2s;
+}
+.trade-table a {
+  color: #003366;
+  font-weight: bold;
+  text-decoration: none;
+}
+.trade-table a:hover {
+  text-decoration: underline;
+}
+
+/* गवर्नमेंट कार्ड्स को बेहतर बनाना */
+.gov-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+.gov-card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #003366;
+  transition: 0.3s;
+}
+.gov-card:hover {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+.gov-card a {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #003366;
+  text-decoration: none;
+}
+.gov-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 5px 0 0 0;
+}
 </style>
 
 </head>
 
 <body>
 
-<div id="header"></div>
+<!-- =========================================
+    नया हार्डकोडेड हेडर (बिना "Suggestions" के)
+========================================= -->
+<div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
+  <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+    <div class="logo" style="font-size:1.4rem; font-weight:bold;">
+      <a href="/index.html" style="color:white; text-decoration:none;">ITI Study Centre</a>
+    </div>
+    <nav style="display:flex; flex-wrap:wrap; gap:5px 15px;">
+      <a href="/index.html" style="color:#ffcc00; text-decoration:underline; font-weight:bold; padding:5px 0; font-size:1rem;">Home</a>
+      <a href="/iti-result.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Result</a>
+      <a href="/iti-study-centre-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Notes</a>
+      <a href="/engineering-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Engineering Notes</a>
+      <a href="/questionbank.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Question Bank</a>
+      <a href="/about.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">About</a>
+    </nav>
+  </div>
+</div>
 
 <!-- ===========================================
 HERO SECTION
@@ -212,11 +286,11 @@ Open ITI Result
 
 <div id="official-updates">
 
-<p>
-
-Loading Latest Official Updates...
-
-</p>
+<ul>
+  <li><strong>📅 28 July 2026:</strong> SCVT Uttar Pradesh Result Link Active</li>
+  <li><strong>📅 15 July 2026:</strong> DGT ने CTS Mains 2026 का Schedule जारी किया</li>
+  <li><strong>📅 10 July 2026:</strong> Skill India Digital Portal पर नई CBT Notification</li>
+</ul>
 
 </div>
 
@@ -225,8 +299,9 @@ Loading Latest Official Updates...
 </div>
 
 </section>
+
 <!-- =========================================
-ITI TRADE INFORMATION
+ITI TRADE INFORMATION (Attractive Table)
 ========================================= -->
 
 <section class="container">
@@ -370,7 +445,7 @@ ITI TRADE INFORMATION
 </section>
 
 <!-- =========================================
-OFFICIAL GOVERNMENT WEBSITES
+OFFICIAL GOVERNMENT WEBSITES (with Details)
 ========================================= -->
 
 <section class="container">
@@ -379,53 +454,36 @@ OFFICIAL GOVERNMENT WEBSITES
 
 <h2>🏛 Official Government Websites</h2>
 
-<div class="gov-grid">
+<div class="gov-card-grid">
 
-<a href="https://www.skillindiadigital.gov.in/" target="_blank">
+  <div class="gov-card">
+    <a href="https://www.skillindiadigital.gov.in/" target="_blank">Skill India Digital</a>
+    <p>Admission, Student Login, Digital Services, Results और अन्य ITI सेवाएँ।</p>
+  </div>
 
-Skill India Digital
+  <div class="gov-card">
+    <a href="https://bharatskills.gov.in/" target="_blank">Bharat Skills</a>
+    <p>E-Books, CBT, Question Bank, Learning Resources और Study Material।</p>
+  </div>
 
-</a>
+  <div class="gov-card">
+    <a href="https://dgt.gov.in/" target="_blank">Directorate General of Training (DGT)</a>
+    <p>CTS Curriculum, Official Notifications, Trade Information और नई योजनाएँ।</p>
+  </div>
 
-<a href="https://bharatskills.gov.in/" target="_blank">
-
-Bharat Skills
-
-</a>
-
-<a href="https://dgt.gov.in/" target="_blank">
-
-Directorate General of Training (DGT)
-
-</a>
-
-<a href="https://www.apprenticeshipindia.gov.in/" target="_blank">
-
-Apprenticeship India
-
-</a>
+  <div class="gov-card">
+    <a href="https://www.apprenticeshipindia.gov.in/" target="_blank">Apprenticeship India</a>
+    <p>Apprenticeship Registration, Training और रोजगार संबंधी अवसर।</p>
+  </div>
 
 </div>
-
-<br>
-
-<ul>
-
-<li><strong>Skill India Digital:</strong> Admission, Student Login, Digital Services एवं अन्य ITI सेवाएँ।</li>
-
-<li><strong>Bharat Skills:</strong> E-Books, CBT, Question Bank, Learning Resources एवं Study Material।</li>
-
-<li><strong>DGT:</strong> CTS Curriculum, Official Notifications, Trade Information एवं नई योजनाएँ।</li>
-
-<li><strong>Apprenticeship India:</strong> Apprenticeship Registration, Training एवं रोजगार संबंधी अवसर।</li>
-
-</ul>
 
 </div>
 
 </section>
+
 <!-- =========================================
-ITI STUDY CENTRE NOTES
+ITI STUDY CENTRE NOTES (Broken Links Fixed)
 ========================================= -->
 
 <section class="container">
@@ -492,7 +550,8 @@ Open Notes
 
 </p>
 
-<a href="notes/other/index.html"
+<!-- 🔥 FIXED: गलत लिंक "notes/other/" को "notes/other-trades/" में बदला गया है -->
+<a href="notes/other-trades/index.html"
 
 class="news-btn">
 
@@ -634,6 +693,7 @@ ITI Study Centre का उद्देश्य ITI विद्यार्थ
 </div>
 
 </section>
+
 <!-- =========================================
 WHY CHOOSE ITI STUDY CENTRE
 ========================================= -->
@@ -735,7 +795,7 @@ FAQ
 </section>
 
 <!-- =========================================
-SUGGESTIONS
+SUGGESTIONS (यह मेनू नहीं है, यह कंटेंट है)
 ========================================= -->
 
 <section class="container">
@@ -781,7 +841,19 @@ DISCLAIMER
 </div>
 
 </section>
-<div id="footer"></div>
+
+<!-- =========================================
+    नया हार्डकोडेड FOOTER
+========================================= -->
+<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
+    <a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">Disclaimer</a>
+    <a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a>
+    <a href="/terms.html" style="color:#aaa; text-decoration:none;">Terms</a>
+    <a href="/contact.html" style="color:#aaa; text-decoration:none;">Contact</a>
+  </div>
+  <p style="margin:10px 0 0 0; color:#888;">© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
 
 <button id="scrollTop" title="Go to Top">
 
@@ -792,10 +864,17 @@ DISCLAIMER
 <script src="js/main.js"></script>
 
 <script>
-
-document.getElementById("current-year").textContent =
-new Date().getFullYear();
-
+// साल (Year) अपडेट करने के लिए
+document.addEventListener("DOMContentLoaded", function() {
+    const year = document.getElementById("current-year");
+    if (year) year.textContent = new Date().getFullYear();
+    
+    // 🔥 डुप्लीकेट हटाना (अगर JS ने डायनामिक हेडर/फूटर बना दिया हो)
+    let dynHeader = document.querySelector('#header-placeholder');
+    if (dynHeader) dynHeader.remove();
+    let dynFooter = document.querySelector('#footer-placeholder');
+    if (dynFooter) dynFooter.remove();
+});
 </script>
 
 <!-- =========================================
