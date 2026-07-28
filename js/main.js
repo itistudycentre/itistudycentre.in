@@ -1,16 +1,13 @@
 /* =====================================
    ITI STUDY CENTRE
-   MAIN JAVASCRIPT v5.0 (AGGRESSIVE FIX)
+   MAIN JAVASCRIPT v6.0 (DIRECT REPLACE)
 ===================================== */
 
 document.addEventListener("DOMContentLoaded", function() {
-    // ----- पहले काम: HTML से पुराने सारे हेडर/फूटर हटाएँ (ब्रूट फोर्स) -----
-    removeAllOldHeadersAndFooters();
-
-    // ----- नया हेडर/फूटर लोड करें -----
+    // ----- 1. हेडर/फूटर लोड करें (सीधे #header और #footer में) -----
     initHeaderFooter();
 
-    // ----- बाकी फीचर्स -----
+    // ----- 2. बाकी फीचर्स -----
     initSearch();
     loadNews();
     loadNotes();
@@ -19,48 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
     updateFooterYear();
     initScrollTop();
     initContentProtection();
-    console.log("ITI Study Centre v5.0 Aggressive Fix Loaded");
+    console.log("ITI Study Centre v6.0 Loaded");
 });
 
 /* =====================================
-   अल्टीमेट रिमूवर (सब कुछ हटाएगा)
-===================================== */
-function removeAllOldHeadersAndFooters() {
-    // 1. उन सभी एलिमेंट्स को ढूँढें और हटाएँ जो हेडर/फूटर हो सकते हैं
-    const selectors = [
-        'header', 'footer',
-        '.main-header', '.main-footer',
-        'div#header', 'div#footer',
-        'div.header', 'div.footer',
-        '[class*="main-header"]', '[class*="main-footer"]'
-    ];
-
-    selectors.forEach(selector => {
-        document.querySelectorAll(selector).forEach(el => {
-            // सुरक्षा: अगर किसी एलिमेंट में 'nav' या 'logo' है, तो हटाएँ
-            if (el.querySelector('nav') || el.querySelector('.logo') || el.querySelector('.nav-link')) {
-                el.remove();
-            }
-        });
-    });
-
-    // 2. सीधे body के अंदर मौजूद अकेले <nav> को भी हटाएँ (अगर वह हेडर का हिस्सा था)
-    document.querySelectorAll('body > nav').forEach(el => el.remove());
-
-    // 3. उन सभी डिव्स को हटाएँ जिनके अंदर 'Home', 'ITI Result', 'ITI Notes' जैसे लिंक्स हों
-    // (यह उन पुराने Pandoc-markdown वाले हेडर को पकड़ लेगा)
-    const allDivs = document.querySelectorAll('div');
-    allDivs.forEach(div => {
-        const text = div.innerText || '';
-        // अगर किसी डिव में ये सारे लिंक्स एक साथ हैं, तो यह नेविगेशन है
-        if (text.includes('Home') && text.includes('ITI Result') && text.includes('ITI Notes')) {
-            div.remove();
-        }
-    });
-}
-
-/* =====================================
-   हेडर/फूटर लोडर (बिना किसी रुकावट के)
+   हेडर/फूटर लोडर (कोई रिमूव नहीं)
 ===================================== */
 function getRoot() {
     let path = window.location.pathname;
@@ -72,17 +32,23 @@ function getRoot() {
 function initHeaderFooter() {
     let root = getRoot();
 
-    // हेडर कंटेनर बनाएँ (Body की शुरुआत में)
-    let headerContainer = document.createElement('div');
-    headerContainer.id = 'header-placeholder';
-    document.body.insertBefore(headerContainer, document.body.firstChild);
+    // ---- 1. हेडर कंटेनर ढूँढें (अगर नहीं है तो बना दें) ----
+    let headerContainer = document.getElementById('header');
+    if (!headerContainer) {
+        headerContainer = document.createElement('div');
+        headerContainer.id = 'header';
+        document.body.insertBefore(headerContainer, document.body.firstChild);
+    }
 
-    // फूटर कंटेनर बनाएँ (Body के अंत में)
-    let footerContainer = document.createElement('div');
-    footerContainer.id = 'footer-placeholder';
-    document.body.appendChild(footerContainer);
+    // ---- 2. फूटर कंटेनर ढूँढें (अगर नहीं है तो बना दें) ----
+    let footerContainer = document.getElementById('footer');
+    if (!footerContainer) {
+        footerContainer = document.createElement('div');
+        footerContainer.id = 'footer';
+        document.body.appendChild(footerContainer);
+    }
 
-    // हेडर लोड करें
+    // ---- 3. हेडर लोड करें और सीधे कंटेनर में डालें ----
     fetch(root + 'header.html')
         .then(r => r.text())
         .then(data => {
@@ -98,11 +64,11 @@ function initHeaderFooter() {
                     initActiveMenu();
                 })
                 .catch(() => {
-                    headerContainer.innerHTML = '<p style="color:red;">⚠️ Header नहीं मिला। कृपया header.html रूट में अपलोड करें।</p>';
+                    headerContainer.innerHTML = '<p style="color:red;">⚠️ Header नहीं मिला।</p>';
                 });
         });
 
-    // फूटर लोड करें
+    // ---- 4. फूटर लोड करें और सीधे कंटेनर में डालें ----
     fetch(root + 'footer.html')
         .then(r => r.text())
         .then(data => {
@@ -119,7 +85,7 @@ function initHeaderFooter() {
                 });
         });
 
-    // ब्रेडक्रंब (अगर मौजूद है)
+    // ---- 5. ब्रेडक्रंब (अगर मौजूद है) ----
     let bc = document.getElementById('breadcrumb');
     if (bc) {
         let path = window.location.pathname.replace(/^\/|\/$/g, '').split('/');
@@ -289,4 +255,4 @@ function toggleMobileMenu() {
     if (nav) nav.classList.toggle("active");
 }
 
-console.log("ITI Study Centre v5.0 Aggressive Fix Loaded Successfully");
+console.log("ITI Study Centre v6.0 Direct Replace Loaded");
