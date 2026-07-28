@@ -31,10 +31,41 @@ gtag('js', new Date());
 gtag('config', 'G-RDLMQ0BNWF');
 </script>
 <link rel="canonical" href="https://www.itistudycentre.in/engineering-notes.html">
+
+<!-- =========================================
+    यहाँ पर हार्डकोडेड स्टाइल (जरूरत पड़ने पर) - बाकी CSS style.css से आ जाएगी
+========================================= -->
 </head>
 
 <body>
-<div id="header"></div>
+
+<!-- =========================================
+    नया हेडर (सीधे HTML में, "Suggestions" हटा दिया गया है)
+========================================= -->
+<div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
+  <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+    <div class="logo" style="font-size:1.4rem; font-weight:bold;">
+      <a href="/index.html" style="color:white; text-decoration:none;">ITI Study Centre</a>
+    </div>
+    <nav style="display:flex; flex-wrap:wrap; gap:5px 15px;">
+      <a href="/index.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Home</a>
+      <a href="/iti-result.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Result</a>
+      <a href="/iti-study-centre-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Notes</a>
+      <!-- यह लिंक Active है (Engineering Notes) -->
+      <a href="/engineering-notes.html" style="color:#ffcc00; text-decoration:underline; font-weight:bold; padding:5px 0; font-size:1rem;">Engineering Notes</a>
+      <a href="/questionbank.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Question Bank</a>
+      <a href="/about.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">About</a>
+      <!-- ⚠️ "Suggestions" या "Contact" का कोई लिंक नहीं है -->
+    </nav>
+  </div>
+</div>
+
+<!-- ===========================
+    BREADCRUMB (स्टेटिक)
+=========================== -->
+<div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
+    <a href="/" style="text-decoration:none; color:#003366;">🏠 Home</a> &nbsp;›&nbsp; <span style="color:#555; font-weight:bold;">Engineering Notes</span>
+</div>
 
 <!-- ===========================
 PAGE TITLE
@@ -149,7 +180,8 @@ ENGINEERING CATEGORIES
 </div>
 
 </section>
-  <!-- =====================================
+
+<!-- =====================================
 ENGINEERING TOPICS
 ===================================== -->
 
@@ -308,6 +340,7 @@ IMPORTANT INFORMATION
 </div>
 
 </section>
+
 <!-- =====================================
 FREQUENTLY ASKED QUESTIONS (FAQ)
 ===================================== -->
@@ -401,7 +434,7 @@ Engineering Notes में ITI विद्यार्थियों के �
 </section>
 
 <!-- =====================================
-SUGGESTIONS
+SUGGESTIONS (यह मेनू नहीं है, यह पेज का कंटेंट है)
 ===================================== -->
 
 <section class="container">
@@ -427,9 +460,22 @@ Give Your Suggestion
 </div>
 
 </section>
-<div id="footer"></div>
+
 <!-- =====================================
-DISCLAIMER
+नया FOOTER (सीधे HTML में)
+===================================== -->
+<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
+    <a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">Disclaimer</a>
+    <a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a>
+    <a href="/terms.html" style="color:#aaa; text-decoration:none;">Terms</a>
+    <a href="/contact.html" style="color:#aaa; text-decoration:none;">Contact</a>
+  </div>
+  <p style="margin:10px 0 0 0; color:#888;">© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<!-- =====================================
+DISCLAIMER (पेज का कंटेंट)
 ===================================== -->
 
 <section class="container">
@@ -446,4 +492,21 @@ ITI Study Centre एक शैक्षणिक एवं सूचना प�
 
 </div>
 
-  </section>
+</section>
+
+<!-- Scroll to Top Button (अगर CSS में है तो काम करेगा) -->
+<button id="scrollTop" title="Go to Top" style="display:none; position:fixed; bottom:20px; right:20px; background:#003366; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;">⬆</button>
+
+<!-- JS (बाकी फीचर्स के लिए, हेडर/फूटर अब हार्डकोडेड हैं इसलिए यह सिर्फ Search/Updates आदि के लिए काम करेगा) -->
+<script src="js/main.js"></script>
+
+<!-- साल अपडेट करने के लिए (अगर footer में current-year id हो) -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const year = document.getElementById("current-year");
+    if (year) year.textContent = new Date().getFullYear();
+});
+</script>
+
+</body>
+</html>
