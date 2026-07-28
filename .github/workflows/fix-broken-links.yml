@@ -1,4 +1,4 @@
-name: 🔧 ऑटोमैटिक ब्रोकन लिंक & पाथ फिक्सर
+name: 🔗 100% ऑटोमैटिक लिंक रिपेयर (डेप्थ फिक्स)
 
 on:
   push:
@@ -6,76 +6,101 @@ on:
   workflow_dispatch:
 
 jobs:
-  fix-broken-links:
+  deep-repair:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: 🧹 सारे HTML स्कैन करें और लिंक/पाथ ठीक करें
+      - name: 🧠 पूरी वेबसाइट स्कैन करें और डेप्थ एडजस्ट करें
         run: |
           python -c "
 import os, re, glob
 
-print('🚀 पूरी वेबसाइट स्कैन की जा रही है...')
+print('🚀 डीप स्कैन शुरू...')
 fixed_count = 0
+missing_files = []
 
-for filepath in glob.glob('**/*.html', recursive=True):
-    if '/.git/' in filepath or 'node_modules' in filepath:
-        continue
-    
+def get_depth(filepath):
+    # फोल्डर की गहराई निकालें
+    parts = filepath.replace('\\', '/').split('/')
+    depth = 0
+    for part in parts[:-1]:  # filename छोड़कर
+        if part and part not in ['.', '..']:
+            depth += 1
+    return depth
+
+def fix_links_in_file(filepath):
+    global fixed_count
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
         content = f.read()
-    
     original = content
-    
-    # ---- 1. ब्रोकन लिंक फिक्स (जो आपने बताए) ----
-    # Other Trades का पाथ सही करें (अगर गलत है तो)
-    content = content.replace('notes/other/index.html', 'notes/other-trades/index.html')
-    content = content.replace('notes/other/', 'notes/other-trades/')
-    
-    # Employability Skills के पाथ में कोई गड़बड़ी हो तो ठीक करें
-    content = content.replace('notes/employability-skills/index.html', 'notes/employability-skills/index.html')  # पहले से सही है, पर स्कैन कर लें
-    
-    # Engineering Links में 'Engineering Notes' को सही करें
-    content = content.replace('engineering-notes.html', 'engineering-notes.html')  # सुरक्षित रखें
-    
-    # ---- 2. सारे पुराने हेडर/फूटर हटाएँ (डुप्लीकेट रोकने के लिए) ----
-    content = re.sub(r'<div id="header"[^>]*>.*?</div>', '', content, flags=re.DOTALL | re.IGNORECASE)
-    content = re.sub(r'<div id="footer"[^>]*>.*?</div>', '', content, flags=re.DOTALL | re.IGNORECASE)
-    content = re.sub(r'<header[^>]*>.*?</header>', '', content, flags=re.DOTALL | re.IGNORECASE)
-    content = re.sub(r'<footer[^>]*>.*?</footer>', '', content, flags=re.DOTALL | re.IGNORECASE)
-    
-    # ---- 3. हार्डकोडेड Header/Footer (जो हमने डाले हैं) को सुरक्षित रखने के लिए, हम डुप्लीकेट कंटेनर हटाएँगे ----
-    # अगर पेज में .main-header (हार्डकोडेड) है, तो #header-placeholder को हटा दें (ताकि Double न आए)
-    if '<div class="main-header"' in content:
-        content = re.sub(r'<div id="header-placeholder"[^>]*>.*?</div>', '', content, flags=re.DOTALL | re.IGNORECASE)
-        content = re.sub(r'<div id="footer-placeholder"[^>]*>.*?</div>', '', content, flags=re.DOTALL | re.IGNORECASE)
-        # अगर hardcoded है तो JS को रोकने के लिए कोई जरूरत नहीं, बस प्लेसहोल्डर हटाओ
-    else:
-        # अगर hardcoded नहीं है, तो प्लेसहोल्डर डालें (ताकि JS लोड कर सके)
-        if '<div id="header-placeholder"' not in content:
-            content = content.replace('<body>', '<body>\n    <div id="header-placeholder"></div>')
-        if '<div id="footer-placeholder"' not in content:
-            content = content.replace('</body>', '    <div id="footer-placeholder"></div>\n</body>')
 
-    # ---- 4. main.js लिंक करें (अगर नहीं है) ----
-    if '/js/main.js' not in content:
-        content = content.replace('</body>', '    <script src=\"/js/main.js\"></script>\n</body>')
-    
+    # फाइल की डेप्थ
+    current_depth = get_depth(filepath)
+
+    # सारे href ढूंढें
+    pattern = r'href=[\"\']([^\"\']+)[\"\']'
+    matches = re.findall(pattern, content)
+
+    for href in matches:
+        # बाहरी लिंक या एंकर को इग्नोर करें
+        if href.startswith(('http', 'https', '#', 'mailto:', 'tel:')):
+            continue
+        
+        # खाली या सिर्फ '/' वाला लिंक
+        if href in ['', '/']:
+            continue
+
+        # अगर लिंक .html या फोल्डर पर है
+        if href.endswith('.html') or href.endswith('/'):
+            # लक्ष्य फाइल का पूरा पथ निकालें
+            target_path = os.path.normpath(os.path.join(os.path.dirname(filepath), href))
+            if not os.path.exists(target_path):
+                # अगर फाइल नहीं मिली, तो रूट में ढूंढें
+                root_target = os.path.basename(target_path)
+                if root_target and os.path.exists(root_target):
+                    # रूट में मिल गई, तो सही पाथ बनाएँ
+                    target_depth = 0
+                    relative_path = '../' * current_depth + root_target
+                    content = content.replace(f'href=\"{href}\"', f'href=\"{relative_path}\"')
+                    print(f'  🔧 फिक्स: {href} -> {relative_path}')
+                    fixed_count += 1
+                    # डुप्लीकेट रिप्लेस से बचने के लिए ब्रेक (एक बार में एक)
+                    # लेकिन हर लिंक अलग है, इसलिए हम चेक करते रहेंगे
+            # else:
+                # फाइल मिल गई है, कुछ नहीं करना
+                # pass
+
+        # विशेष फिक्स: notes/other/ को notes/other-trades/ में बदलें
+        if 'notes/other/index.html' in href or 'notes/other/' in href:
+            new_href = href.replace('notes/other/index.html', 'notes/other-trades/index.html').replace('notes/other/', 'notes/other-trades/')
+            content = content.replace(href, new_href)
+            print(f'  🔧 फिक्स: {href} -> {new_href}')
+            fixed_count += 1
+
+    # अगर बदलाव हुआ है तो सेव करें
     if content != original:
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(content)
-        print(f'✅ ठीक किया: {filepath}')
-        fixed_count += 1
-    else:
-        print(f'⏩ पहले से सही: {filepath}')
+        print(f'✅ फिक्स किया: {filepath}')
+        return True
+    return False
 
-print(f'\n🎉 कुल {fixed_count} फाइलें ठीक कर दी गईं!')
+# सभी HTML फाइलों पर लूप करें
+html_files = glob.glob('**/*.html', recursive=True)
+for file in html_files:
+    if '/.git/' in file:
+        continue
+    if fix_links_in_file(file):
+        fixed_count += 1
+
+print(f'\n🎉 कुल {fixed_count} लिंक्स ठीक कर दिए गए!')
+print('📄 अब अपनी वेबसाइट Hard Refresh (Ctrl+Shift+R) करके देखें।')
 "
       - name: 📤 GitHub पर पुश करें
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "bot@github.com"
           git add -A
-          git diff --staged --quiet || git commit -m "🤖 Action: सारे टूटे लिंक और पाथ ठीक कर दिए"
+          git diff --staged --quiet || git commit -m "🤖 डीप लिंक रिपेयर - सारी डेप्थ एरर ठीक कर दी गईं"
           git push
