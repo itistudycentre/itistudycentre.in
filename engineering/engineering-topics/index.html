@@ -4,30 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Engineering Topics | ITI Study Centre</title>
+  <meta name="description" content="Engineering Topics Notes: Basic Engineering, Workshop Calculation, Engineering Science for ITI Students.">
+  <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="https://www.itistudycentre.in/engineering/engineering-topics/index.html">
 </head>
 <body>
+
+  <!-- Header will be loaded here -->
   <div id="header-placeholder"></div>
 
+  <!-- Page Title Section -->
   <section class="page-title">
-    <h1>📘 Engineering Topics</h1>
-    <p>Basic Engineering, Workshop Calculation, Engineering Science</p>
-  </section>
-
-  <section class="container">
-    <div class="card">
-      <h2>📖 Engineering Topics Notes</h2>
-      <ul>
-        <li><a href="#">Chapter 1: Engineering Drawing</a></li>
-        <li><a href="#">Chapter 2: Workshop Calculation</a></li>
-        <li><a href="#">Chapter 3: Engineering Science</a></li>
-        <li><a href="#">Chapter 4: Materials & Measurement</a></li>
-      </ul>
-      <p>⚠️ ये Notes जल्द ही उपलब्ध कराए जाएंगे।</p>
+    <div class="container">
+      <h1>📘 Engineering Topics</h1>
+      <p>Basic Engineering, Workshop Calculation, Engineering Science</p>
     </div>
   </section>
 
+  <!-- Main Content Section -->
+  <section class="container">
+    <div class="card">
+      <h2>📖 Engineering Topics Notes</h2>
+      <p>यहाँ पर Engineering Topics के Chapter Wise Notes उपलब्ध कराए जाएंगे।</p>
+      <ul>
+        <li><strong>Chapter 1:</strong> Engineering Drawing</li>
+        <li><strong>Chapter 2:</strong> Workshop Calculation</li>
+        <li><strong>Chapter 3:</strong> Engineering Science</li>
+        <li><strong>Chapter 4:</strong> Materials & Measurement</li>
+        <li><strong>Chapter 5:</strong> Safety & Environment</li>
+      </ul>
+      <div class="notice-box">
+        <p>⚠️ <strong>सूचना:</strong> ये Notes जल्द ही उपलब्ध कराए जाएंगे। कृपया बाद में देखें।</p>
+      </div>
+      <a href="/engineering-notes.html" class="news-btn">⬅ वापस Engineering Notes पर जाएं</a>
+    </div>
+  </section>
+
+  <!-- Footer will be loaded here -->
   <div id="footer-placeholder"></div>
+
+  <button id="scrollTop" title="Go to Top">⬆</button>
+
+  <!-- Main JavaScript -->
   <script src="/js/main.js"></script>
+  <script>
+    // Scroll to Top Button functionality
+    document.addEventListener("DOMContentLoaded", function() {
+      const btn = document.getElementById("scrollTop");
+      if (btn) {
+        window.addEventListener("scroll", function() {
+          if (window.scrollY > 300) {
+            btn.style.display = "block";
+          } else {
+            btn.style.display = "none";
+          }
+        });
+        btn.addEventListener("click", function() {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
