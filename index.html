@@ -22,7 +22,7 @@
   </script>
 
   <style>
-    /* Desktop Search */
+    /* ----- Responsive Search ----- */
     @media (min-width: 768px) {
       .search-section {
         display: flex;
@@ -65,7 +65,7 @@
       }
     }
 
-    /* Attractive Trade Table */
+    /* ----- Trade Table ----- */
     .trade-table {
       width: 100%;
       border-collapse: collapse;
@@ -97,7 +97,7 @@
       text-decoration: underline;
     }
 
-    /* Government Cards */
+    /* ----- Government Cards ----- */
     .gov-card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -156,6 +156,7 @@
       transform: scale(1.02);
     }
 
+    /* ----- Common Buttons ----- */
     .btn {
       display: inline-block;
       padding: 10px 25px;
@@ -191,6 +192,44 @@
     .news-btn:hover {
       background: #002244;
       transform: scale(1.02);
+    }
+
+    /* ----- Home Card Grid ----- */
+    .home-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .feature-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border: 1px solid #eee;
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .feature-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #003366;
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .feature-card .news-btn {
+      align-self: flex-start;
+      margin-top: 10px;
     }
   </style>
 
@@ -337,77 +376,82 @@
 </section>
 
 <!-- =========================================
-    ITI NOTES
+    ITI NOTES (सुपर-क्लीन)
 ========================================= -->
 <section class="container">
   <div class="card">
     <h2>📚 ITI Study Centre Notes</h2>
+    <p>ITI विद्यार्थियों के लिए Trade Wise, Chapter Wise और Employability Skills के Module Wise Notes उपलब्ध हैं।</p>
     <div class="home-card-grid">
+
       <div class="feature-card">
         <h3>🔧 Fitter Notes</h3>
         <p>Fitter Trade के सभी Chapter Wise Theory Notes, Study Material एवं भविष्य में PDF उपलब्ध कराए जाएंगे।</p>
         <a href="notes/fitter/index.html" class="news-btn">🔧 Click Here →</a>
       </div>
+
       <div class="feature-card">
         <h3>🚰 Plumber Notes</h3>
         <p>Plumber Trade के सभी महत्वपूर्ण Notes, Theory एवं Practical Study Material उपलब्ध कराया जाएगा।</p>
         <a href="notes/plumber/index.html" class="news-btn">🚰 Click Here →</a>
       </div>
+
       <div class="feature-card">
         <h3>📚 Other Trade Notes</h3>
         <p>अन्य सभी ITI Trades के Notes चरणबद्ध तरीके से उपलब्ध कराए जाएंगे।</p>
         <a href="notes/other-trades/index.html" class="news-btn">📚 Click Here →</a>
       </div>
+
       <div class="feature-card">
         <h3>💼 Employability Skills</h3>
         <p>ITI विद्यार्थियों के लिए Employability Skills के Module Wise Theory Notes एवं Question Bank।</p>
         <a href="notes/employability-skills/index.html" class="news-btn">💼 Click Here →</a>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- =========================================
-    ENGINEERING NOTES
+    ENGINEERING NOTES (सुपर-क्लीन)
 ========================================= -->
 <section class="container">
   <div class="card">
     <h2>⚙ Engineering Notes</h2>
+    <p>Engineering Subjects के Chapter Wise Study Notes नीचे दिए गए Sections में उपलब्ध कराए जाएंगे।</p>
     <div class="home-card-grid">
+
       <div class="feature-card">
         <h3>📘 Engineering Topics</h3>
         <p>Basic Engineering, Workshop Calculation एवं Engineering Science से संबंधित Notes।</p>
         <a href="engineering/engineering-topics/index.html" class="news-btn">📘 Click Here →</a>
       </div>
+
       <div class="feature-card">
         <h3>🚗 Automobile Engineering</h3>
         <p>Automobile Technology, Engine, Transmission तथा Vehicle Systems से संबंधित Notes।</p>
         <a href="engineering/automobile/index.html" class="news-btn">🚗 Click Here →</a>
       </div>
+
       <div class="feature-card">
         <h3>📖 Other Engineering Topics</h3>
         <p>अन्य Engineering Subjects के Chapter Wise Notes भविष्य में उपलब्ध कराए जाएंगे।</p>
         <a href="engineering/other-topics/index.html" class="news-btn">📖 Click Here →</a>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- =========================================
-    ABOUT, WHY CHOOSE, FAQ
+    ABOUT, WHY CHOOSE, FAQ, SUGGESTIONS, DISCLAIMER
 ========================================= -->
 <section class="container"><div class="card"><h2>🎯 About ITI Study Centre</h2><p>ITI Study Centre का उद्देश्य ITI विद्यार्थियों को एक ही स्थान पर Result, Study Notes, Engineering Notes, Official Government Links तथा अन्य उपयोगी अध्ययन सामग्री उपलब्ध कराना है।</p></div></section>
 
 <section class="container"><div class="card"><h2>⭐ Why Choose ITI Study Centre?</h2><div class="home-card-grid"><div class="feature-card"><h3>📚 Free Study Notes</h3><p>सभी विद्यार्थियों के लिए निःशुल्क एवं सरल हिन्दी भाषा में Study Notes।</p></div><div class="feature-card"><h3>📊 ITI Result</h3><p>NCVT एवं SCVT Result, Marksheet, Certificate एवं Verification की जानकारी।</p></div><div class="feature-card"><h3>⚙ Engineering Notes</h3><p>Engineering Subjects के Chapter Wise Notes एक ही स्थान पर।</p></div><div class="feature-card"><h3>🏛 Official Government Links</h3><p>केवल आधिकारिक सरकारी वेबसाइटों के उपयोगी लिंक उपलब्ध।</p></div><div class="feature-card"><h3>📱 Mobile Friendly</h3><p>मोबाइल, टैबलेट एवं कंप्यूटर सभी उपकरणों के लिए अनुकूल।</p></div><div class="feature-card"><h3>🔄 Regular Updates</h3><p>नई जानकारी, Notes एवं अध्ययन सामग्री समय-समय पर जोड़ी जाएगी।</p></div></div></div></section>
 
-<!-- =========================================
-    FAQ
-========================================= -->
-<section class="container"><div class="card"><h2>❓ Frequently Asked Questions (FAQ)</h2><h3>1. ITI Study Centre क्या है?</h3><p>यह ITI विद्यार्थियों के लिए अध्ययन सामग्री, Result, Engineering Notes तथा आधिकारिक जानकारी उपलब्ध कराने वाला शैक्षणिक प्लेटफ़ॉर्म है।</p><hr><h3>2. क्या सभी Study Notes निःशुल्क हैं?</h3><p>हाँ, वेबसाइट पर उपलब्ध सभी Study Notes एवं सामग्री निःशुल्क उपलब्ध कराई जाती है।</p><hr><h3>3. क्या Official Government Links उपलब्ध हैं?</h3><p>हाँ, वेबसाइट पर केवल उपयोगी एवं आधिकारिक सरकारी वेबसाइटों के लिंक दिए गए हैं।</p><hr><h3>4. क्या सभी Trades के Notes उपलब्ध होंगे?</h3><p>हाँ, सभी प्रमुख ITI Trades के Notes चरणबद्ध तरीके से प्रकाशित किए जाएंगे।</p><hr><h3>5. क्या Engineering Notes भी उपलब्ध होंगे?</h3><p>हाँ, Engineering Topics, Automobile एवं अन्य Engineering Subjects के Notes चरणबद्ध तरीके से उपलब्ध कराए जाएंगे।</p></div></section>
+<section class="container"><div class="card"><h2>❓ FAQ</h2><h3>1. ITI Study Centre क्या है?</h3><p>यह ITI विद्यार्थियों के लिए अध्ययन सामग्री, Result, Engineering Notes तथा आधिकारिक जानकारी उपलब्ध कराने वाला शैक्षणिक प्लेटफ़ॉर्म है।</p><hr><h3>2. क्या सभी Study Notes निःशुल्क हैं?</h3><p>हाँ, वेबसाइट पर उपलब्ध सभी Study Notes एवं सामग्री निःशुल्क उपलब्ध कराई जाती है।</p><hr><h3>3. क्या Official Government Links उपलब्ध हैं?</h3><p>हाँ, वेबसाइट पर केवल उपयोगी एवं आधिकारिक सरकारी वेबसाइटों के लिंक दिए गए हैं।</p></div></section>
 
-<!-- =========================================
-    SUGGESTIONS + DISCLAIMER
-========================================= -->
 <section class="container">
   <div class="card">
     <h2>💬 सुझाव दें</h2>
@@ -467,4 +511,3 @@
 
 </body>
 </html>
-
