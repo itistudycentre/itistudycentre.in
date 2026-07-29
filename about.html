@@ -1,319 +1,327 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html lang="hi">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About Us | ITI Study Centre</title>
-
-<meta name="description"
-content="About ITI Study Centre - Free ITI Notes, Engineering Notes, Latest Official Updates and Educational Resources.">
-
-<link rel="icon" href="images/favicon.png">
-
-<link rel="stylesheet" href="css/style.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RDLMQ0BNWF');
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | ITI Study Centre</title>
+  <meta name="description" content="About ITI Study Centre - Free ITI Notes, Engineering Notes, Latest Official Updates and Educational Resources.">
+  <meta name="keywords" content="About ITI Study Centre, ITI Education, ITI Notes, Engineering Notes, Skill India">
+  <meta name="author" content="ITI Study Centre">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="canonical" href="https://www.itistudycentre.in/about.html">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config','G-RDLMQ0BNWF');
+  </script>
+
+  <style>
+    /* Search Box (Home Page Style) */
+    .search-section {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .search-section input {
+      flex: 1;
+      max-width: 600px;
+      padding: 14px 20px;
+      font-size: 1.1rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .search-section input:focus {
+      border-color: #003366;
+      box-shadow: 0 0 8px rgba(0,51,102,0.2);
+    }
+    .search-section button {
+      padding: 14px 40px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      min-width: 150px;
+      background: #003366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .search-section button:hover {
+      background: #002244;
+      transform: scale(1.02);
+    }
+    @media (max-width: 767px) {
+      .search-section { flex-direction: column; gap: 10px; }
+      .search-section input { width: 100%; max-width: 100%; }
+      .search-section button { width: 100%; padding: 12px; min-width: unset; }
+    }
+
+    /* Feature Grid */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .feature-item {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 4px solid #003366;
+      transition: 0.3s;
+    }
+    .feature-item:hover {
+      background: #e9ecef;
+      transform: translateY(-3px);
+    }
+    .feature-item h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    /* Common Buttons */
+    .news-btn {
+      display: inline-block;
+      background: #003366;
+      padding: 8px 20px;
+      border-radius: 5px;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .news-btn:hover {
+      background: #002244;
+      transform: scale(1.02);
+    }
+  </style>
+
 </head>
 
 <body>
 
-<!-- ===========================
-HEADER
-=========================== -->
-
-<header class="main-header">
-
-<div class="container">
-
-<div class="logo">
-
-<a href="index.html">ITI Study Centre</a>
-
+<!-- =========================================
+    1. HEADER (बिना "Suggestions" - बिल्कुल पक्का)
+========================================= -->
+<div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
+  <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+    <div class="logo" style="font-size:1.4rem; font-weight:bold;">
+      <a href="/index.html" style="color:white; text-decoration:none;">ITI Study Centre</a>
+    </div>
+    <nav style="display:flex; flex-wrap:wrap; gap:5px 15px;">
+      <a href="/index.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Home</a>
+      <a href="/iti-result.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Result</a>
+      <a href="/iti-study-centre-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Notes</a>
+      <a href="/engineering-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Engineering Notes</a>
+      <a href="/questionbank.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Question Bank</a>
+      <a href="/about.html" style="color:#ffcc00; text-decoration:underline; font-weight:bold; padding:5px 0; font-size:1rem;">About</a>
+    </nav>
+  </div>
 </div>
 
-<nav>
-
-<a href="index.html">Home</a>
-
-<a href="iti-result.html">ITI Result</a>
-
-<a href="iti-study-centre-notes.html">ITI Notes</a>
-
-<a href="engineering-notes.html">Engineering</a>
-
-
-<a href="about.html">About</a>
-
-<a href="contact.html">Suggestions</a>
-
-</nav>
-
+<!-- =========================================
+    2. BREADCRUMB
+========================================= -->
+<div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
+  <a href="/" style="text-decoration:none; color:#003366;">🏠 Home</a> &nbsp;›&nbsp; <span style="color:#555; font-weight:bold;">About Us</span>
 </div>
 
-</header>
-
-<!-- ===========================
-PAGE TITLE
-=========================== -->
-
+<!-- =========================================
+    3. PAGE TITLE
+========================================= -->
 <section class="page-title">
-
-<h1>👤 About ITI Study Centre</h1>
-
-<p>
-
-Free ITI Learning Platform for Every Student
-
-</p>
-
+  <div class="container">
+    <h1>👤 About ITI Study Centre</h1>
+    <p>Free ITI Learning Platform for Every Student</p>
+  </div>
 </section>
 
-<!-- ===========================
-OUR MISSION
-=========================== -->
+<!-- =========================================
+    4. SEARCH BOX
+========================================= -->
+<section class="search-section container">
+  <input type="text" placeholder="Search ITI Notes, Results, Engineering Topics...">
+  <button>🔍 Search</button>
+</section>
 
+<!-- =========================================
+    5. MISSION
+========================================= -->
 <section class="container">
-
-<div class="card">
-
-<h2>🎯 Our Mission</h2>
-
-<p>
-
-ITI Study Centre का उद्देश्य सभी ITI विद्यार्थियों को सरल हिंदी भाषा में गुणवत्तापूर्ण अध्ययन सामग्री, आधिकारिक जानकारी एवं नवीनतम अपडेट एक ही स्थान पर उपलब्ध कराना है।
-
-</p>
-
-<p>
-
-हमारा लक्ष्य विद्यार्थियों को परीक्षा, रोजगार एवं तकनीकी ज्ञान के लिए विश्वसनीय एवं उपयोगी सामग्री उपलब्ध कराना है।
-
-</p>
-
-</div>
-
+  <div class="card">
+    <h2>🎯 Our Mission</h2>
+    <p>
+      ITI Study Centre का उद्देश्य सभी ITI विद्यार्थियों को सरल हिंदी भाषा में गुणवत्तापूर्ण अध्ययन सामग्री, आधिकारिक जानकारी एवं नवीनतम अपडेट एक ही स्थान पर उपलब्ध कराना है।
+    </p>
+    <p>
+      हमारा लक्ष्य विद्यार्थियों को परीक्षा, रोजगार एवं तकनीकी ज्ञान के लिए विश्वसनीय एवं उपयोगी सामग्री उपलब्ध कराना है।
+    </p>
+  </div>
 </section>
 
-<!-- ===========================
-OUR SERVICES
-=========================== -->
-
+<!-- =========================================
+    6. OUR SERVICES
+========================================= -->
 <section class="container">
-
-<div class="card">
-
-<h2>📚 Our Services</h2>
-
-<div class="gov-grid">
-
-<a href="iti-study-centre-notes.html">
-
-📘 ITI Notes
-
-</a>
-
-<a href="engineering-notes.html">
-
-⚙ Engineering Notes
-
-</a>
-
-<a href="iti-result.html">
-
-📊 ITI Result
-
-</a>
-
-<a href="iti-news.html">
-
-📰 Latest ITI News
-  
-
-</a>
-
-</div>
-
-</div>
-
+  <div class="card">
+    <h2>📚 Our Services</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>📘 ITI Notes</h3>
+        <p>Trade Wise, Chapter Wise Theory Notes सरल हिन्दी भाषा में।</p>
+        <a href="/iti-study-centre-notes.html" class="news-btn">📘 Click Here →</a>
+      </div>
+      <div class="feature-item">
+        <h3>⚙ Engineering Notes</h3>
+        <p>Engineering Subjects के Chapter Wise Study Notes।</p>
+        <a href="/engineering-notes.html" class="news-btn">⚙ Click Here →</a>
+      </div>
+      <div class="feature-item">
+        <h3>📊 ITI Result</h3>
+        <p>NCVT, SCVT Result, Marksheet, Certificate, Verification।</p>
+        <a href="/iti-result.html" class="news-btn">📊 Click Here →</a>
+      </div>
+      <div class="feature-item">
+        <h3>📰 ITI News & Updates</h3>
+        <p>DGT, Skill India, SCVT की नवीनतम आधिकारिक सूचनाएँ।</p>
+        <a href="/iti-result.html" class="news-btn">📰 Click Here →</a>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- ===========================
-WHY CHOOSE ITI STUDY CENTRE
-=========================== -->
 
+<!-- =========================================
+    7. WHY CHOOSE US
+========================================= -->
 <section class="container">
-
-<div class="card">
-
-<h2>⭐ Why Choose ITI Study Centre?</h2>
-
-<ul>
-
-<li>✅ Free Online Study Material</li>
-
-<li>✅ Easy Hindi Language</li>
-
-<li>✅ Chapter Wise Notes</li>
-
-<li>✅ Regular Official Updates</li>
-
-<li>✅ Mobile Friendly Website</li>
-
-<li>✅ Trusted Educational Content</li>
-
-<li>✅ ITI Students Focused Platform</li>
-
-</ul>
-
-</div>
-
+  <div class="card">
+    <h2>⭐ Why Choose ITI Study Centre?</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>✅ Free Online Study Material</h3>
+        <p>सभी Study Notes, Question Bank और Resources निःशुल्क उपलब्ध।</p>
+      </div>
+      <div class="feature-item">
+        <h3>✅ Easy Hindi Language</h3>
+        <p>सभी Notes सरल एवं आसान हिन्दी भाषा में तैयार किए गए हैं।</p>
+      </div>
+      <div class="feature-item">
+        <h3>✅ Chapter Wise Notes</h3>
+        <p>सभी Notes Chapter Wise प्रकाशित किए जाते हैं।</p>
+      </div>
+      <div class="feature-item">
+        <h3>✅ Regular Official Updates</h3>
+        <p>DGT, NCVT, SCVT की नवीनतम अपडेट नियमित रूप से उपलब्ध।</p>
+      </div>
+      <div class="feature-item">
+        <h3>✅ Mobile Friendly Website</h3>
+        <p>मोबाइल, टैबलेट एवं कंप्यूटर सभी उपकरणों के लिए अनुकूल।</p>
+      </div>
+      <div class="feature-item">
+        <h3>✅ Trusted Educational Content</h3>
+        <p>विद्यार्थियों की आवश्यकताओं के अनुसार विश्वसनीय सामग्री।</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ===========================
-OUR YOUTUBE CHANNEL
-=========================== -->
-
+<!-- =========================================
+    8. YOUTUBE CHANNEL
+========================================= -->
 <section class="container">
-
-<div class="card">
-
-<h2>🎥 Our YouTube Channel</h2>
-
-<p>
-
-<strong>ITI Study Centre by Amresh Yadav</strong> YouTube Channel पर ITI Theory, Practical, Engineering Topics, सरकारी अपडेट एवं महत्वपूर्ण शैक्षणिक वीडियो नियमित रूप से उपलब्ध कराए जाते हैं।
-
-</p>
-
-<p>
-
-वेबसाइट पर उपलब्ध अधिकांश Topics के साथ संबंधित YouTube Video भी जोड़े जाएंगे ताकि विद्यार्थी पढ़ाई के साथ-साथ वीडियो द्वारा भी आसानी से सीख सकें।
-
-</p>
-
-</div>
-
+  <div class="card">
+    <h2>🎥 Our YouTube Channel</h2>
+    <p>
+      <strong>ITI Study Centre by Amresh Yadav</strong> YouTube Channel पर ITI Theory, Practical, Engineering Topics, सरकारी अपडेट एवं महत्वपूर्ण शैक्षणिक वीडियो नियमित रूप से उपलब्ध कराए जाते हैं।
+    </p>
+    <p>
+      वेबसाइट पर उपलब्ध अधिकांश Topics के साथ संबंधित YouTube Video भी जोड़े जाएंगे ताकि विद्यार्थी पढ़ाई के साथ-साथ वीडियो द्वारा भी आसानी से सीख सकें।
+    </p>
+  </div>
 </section>
 
-<!-- ===========================
-WEBSITE FEATURES
-=========================== -->
-
+<!-- =========================================
+    9. WEBSITE FEATURES
+========================================= -->
 <section class="container">
-
-<div class="card">
-
-<h2>🚀 Website Features</h2>
-
-<ul>
-
-<li>📚 Chapter Wise ITI Notes</li>
-
-<li>📊 NCVT & SCVT Result Information</li>
-
-<li>📰 Latest ITI News & Official Updates</li>
-
-<li>⚙️ Engineering Notes</li>
-
-<li>🎥 YouTube Learning Support</li>
-
-<li>📱 Mobile Friendly Design</li>
-
-<li>🔍 Fast Search Facility</li>
-
-</ul>
-
-</div>
-
+  <div class="card">
+    <h2>🚀 Website Features</h2>
+    <ul>
+      <li>📚 Chapter Wise ITI Notes</li>
+      <li>📊 NCVT & SCVT Result Information</li>
+      <li>📰 Latest ITI News & Official Updates</li>
+      <li>⚙️ Engineering Notes</li>
+      <li>🎥 YouTube Learning Support</li>
+      <li>📱 Mobile Friendly Design</li>
+      <li>🔍 Fast Search Facility</li>
+    </ul>
+  </div>
 </section>
 
-<!-- ===========================
-SUGGESTIONS
-=========================== -->
-
+<!-- =========================================
+    10. SUGGESTIONS (कंटेंट में - मेनू में नहीं)
+========================================= -->
 <section class="container">
-
-<div class="card">
-
-<h2>💬 Suggestions</h2>
-
-<p>
-
-यदि आपके पास इस वेबसाइट को बेहतर बनाने के लिए कोई सुझाव है या किसी नए Topic पर Notes चाहते हैं, तो कृपया Suggestions Page के माध्यम से हमें बताएं।
-
-</p>
-
-<a href="contact.html" class="news-btn">
-
-Give Your Suggestion
-
-</a>
-
-</div>
-
+  <div class="card">
+    <h2>💬 Suggestions</h2>
+    <p>
+      यदि आपके पास इस वेबसाइट को बेहतर बनाने के लिए कोई सुझाव है या किसी नए Topic पर Notes चाहते हैं, तो कृपया हमें अवश्य बताएं।
+    </p>
+    <br>
+    <a href="/contact.html" class="news-btn">💬 Click Here →</a>
+  </div>
 </section>
-<!-- ===========================
-FOOTER
-=========================== -->
 
-<footer class="main-footer">
+<!-- =========================================
+    11. DISCLAIMER
+========================================= -->
+<section class="container">
+  <div class="card">
+    <h2>⚠ Disclaimer</h2>
+    <p>
+      ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।
+    </p>
+  </div>
+</section>
 
-<div class="container">
-
-<p>
-
-© <span id="current-year"></span> ITI Study Centre. All Rights Reserved.
-
-</p>
-
-<p>
-
-Developed & Managed by ITI Study Centre
-
-</p>
-
-<br>
-
-<a href="index.html">🏠 Home</a>
-
-<a href="iti-result.html">📊 ITI Result</a>
-
-<a href="iti-study-centre-notes.html">📚 ITI Notes</a>
-
-<a href="engineering-notes.html">⚙️ Engineering</a>
-
-<a href="contact.html">💬 Suggestions</a>
-
-<a href="privacy-policy.html">🔒 Privacy Policy</a>
-
-<a href="disclaimer.html">⚠️ Disclaimer</a>
-
-</div>
-
+<!-- =========================================
+    12. FOOTER (पक्का)
+========================================= -->
+<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
+    <a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">Disclaimer</a>
+    <a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a>
+    <a href="/terms.html" style="color:#aaa; text-decoration:none;">Terms</a>
+    <a href="/contact.html" style="color:#aaa; text-decoration:none;">Contact</a>
+  </div>
+  <p style="margin:10px 0 0 0; color:#888;">© 2026 ITI Study Centre. All Rights Reserved.</p>
 </footer>
 
-<!-- Scroll To Top -->
-
-<button id="scrollTop" title="Go to Top">
-
-⬆
-
-</button>
-
+<!-- =========================================
+    13. SCROLL TO TOP + MAIN.JS
+========================================= -->
+<button id="scrollTop" title="Go to Top" style="position:fixed; bottom:20px; right:20px; background:#003366; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;">⬆</button>
 <script src="js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const year = document.querySelector('footer p');
+    if (year) {
+      year.textContent = "© " + new Date().getFullYear() + " ITI Study Centre. All Rights Reserved.";
+    }
+  });
+</script>
 
 </body>
-
-</html>
+  </html>
