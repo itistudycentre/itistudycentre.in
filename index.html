@@ -22,46 +22,84 @@
   </script>
 
   <style>
-    /* ----- Responsive Search ----- */
-    @media (min-width: 768px) {
-      .search-section {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
-      }
-      .search-section input {
-        flex: 1;
-        max-width: 600px;
-        padding: 14px 20px;
-        font-size: 1.1rem;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-      }
-      .search-section button {
-        padding: 14px 40px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        min-width: 150px;
-        background: #003366;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-      .search-section button:hover {
-        background: #002244;
-      }
+    /* ----- Hero Buttons (एक जैसे) ----- */
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
     }
+    .hero-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: #003366;
+      color: #ffffff !important;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: 0.3s;
+      border: 2px solid #ffcc00;
+    }
+    .hero-btn:hover {
+      background: #002244;
+      transform: scale(1.04);
+      border-color: #ffaa00;
+    }
+
+    /* ----- Search Box (Home Page Style) ----- */
+    .search-section {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .search-section input {
+      flex: 1;
+      max-width: 600px;
+      padding: 14px 20px;
+      font-size: 1.1rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .search-section input:focus {
+      border-color: #003366;
+      box-shadow: 0 0 8px rgba(0,51,102,0.2);
+    }
+    .search-section button {
+      padding: 14px 40px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      min-width: 150px;
+      background: #003366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .search-section button:hover {
+      background: #002244;
+      transform: scale(1.02);
+    }
+
     @media (max-width: 767px) {
+      .search-section {
+        flex-direction: column;
+        gap: 10px;
+      }
       .search-section input {
         width: 100%;
-        margin-bottom: 10px;
+        max-width: 100%;
       }
       .search-section button {
         width: 100%;
         padding: 12px;
+        min-width: unset;
       }
     }
 
@@ -156,7 +194,7 @@
       transform: scale(1.02);
     }
 
-    /* ----- Common Buttons (CLEAN & VISIBLE) ----- */
+    /* ----- Common Buttons (CLEAR & VISIBLE) ----- */
     .btn {
       display: inline-block;
       padding: 10px 25px;
@@ -172,12 +210,6 @@
     .btn:hover {
       background: #002244;
       transform: scale(1.02);
-    }
-    .btn-primary {
-      background: #003366;
-    }
-    .btn-secondary {
-      background: #0066cc;
     }
     .news-btn {
       display: inline-block;
@@ -242,7 +274,7 @@
 <body>
 
 <!-- =========================================
-    HEADER
+    HEADER (बिना "Suggestions")
 ========================================= -->
 <div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
   <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
@@ -261,15 +293,15 @@
 </div>
 
 <!-- ===========================================
-    HERO
+    HERO (दोनों बटन एक जैसे)
 =========================================== -->
 <section class="hero-banner">
   <div class="container">
     <h1>ITI Study Centre</h1>
     <p>One Platform for ITI Result, Study Notes, Engineering Notes, Official Government Information and Technical Learning Resources.</p>
     <div class="hero-buttons">
-      <a href="iti-result.html" class="btn btn-primary">📊 Click Here →</a>
-      <a href="iti-study-centre-notes.html" class="btn btn-secondary">📚 Click Here →</a>
+      <a href="iti-result.html" class="hero-btn">📊 Click Here →</a>
+      <a href="iti-study-centre-notes.html" class="hero-btn">📚 Click Here →</a>
     </div>
   </div>
 </section>
@@ -380,69 +412,60 @@
 </section>
 
 <!-- =========================================
-    ITI NOTES (बटन साफ-सुथरे)
+    ITI NOTES
 ========================================= -->
 <section class="container">
   <div class="card">
     <h2>📚 ITI Study Centre Notes</h2>
     <p>ITI विद्यार्थियों के लिए Trade Wise, Chapter Wise और Employability Skills के Module Wise Notes उपलब्ध हैं।</p>
     <div class="home-card-grid">
-
       <div class="feature-card">
         <h3>🔧 Fitter Notes</h3>
         <p>Fitter Trade के सभी Chapter Wise Theory Notes, Study Material एवं PDF उपलब्ध कराए जाएंगे।</p>
         <a href="notes/fitter/index.html" class="news-btn">🔧 Click Here →</a>
       </div>
-
       <div class="feature-card">
         <h3>🚰 Plumber Notes</h3>
         <p>Plumber Trade के सभी महत्वपूर्ण Notes, Theory एवं Practical Study Material उपलब्ध कराया जाएगा।</p>
         <a href="notes/plumber/index.html" class="news-btn">🚰 Click Here →</a>
       </div>
-
       <div class="feature-card">
         <h3>📚 Other Trade Notes</h3>
         <p>अन्य सभी ITI Trades के Notes चरणबद्ध तरीके से उपलब्ध कराए जाएंगे।</p>
         <a href="notes/other-trades/index.html" class="news-btn">📚 Click Here →</a>
       </div>
-
       <div class="feature-card">
         <h3>💼 Employability Skills</h3>
         <p>Employability Skills के Module Wise Theory Notes एवं Question Bank उपलब्ध हैं।</p>
         <a href="notes/employability-skills/index.html" class="news-btn">💼 Click Here →</a>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- =========================================
-    ENGINEERING NOTES (बटन साफ-सुथरे)
+    ENGINEERING NOTES
 ========================================= -->
 <section class="container">
   <div class="card">
     <h2>⚙ Engineering Notes</h2>
     <p>Engineering Subjects के Chapter Wise Study Notes नीचे दिए गए Sections में उपलब्ध कराए जाएंगे।</p>
     <div class="home-card-grid">
-
       <div class="feature-card">
         <h3>📘 Engineering Topics</h3>
         <p>Basic Engineering, Workshop Calculation एवं Engineering Science से संबंधित Notes।</p>
         <a href="engineering/engineering-topics/index.html" class="news-btn">📘 Click Here →</a>
       </div>
-
       <div class="feature-card">
         <h3>🚗 Automobile Engineering</h3>
         <p>Automobile Technology, Engine, Transmission तथा Vehicle Systems से संबंधित Notes।</p>
         <a href="engineering/automobile/index.html" class="news-btn">🚗 Click Here →</a>
       </div>
-
       <div class="feature-card">
         <h3>📖 Other Engineering Topics</h3>
         <p>अन्य Engineering Subjects के Chapter Wise Notes भविष्य में उपलब्ध कराए जाएंगे।</p>
         <a href="engineering/other-topics/index.html" class="news-btn">📖 Click Here →</a>
       </div>
-
     </div>
   </div>
 </section>
@@ -473,7 +496,7 @@
 </section>
 
 <!-- =========================================
-    FOOTER
+    FOOTER (अब पूरा दिखेगा)
 ========================================= -->
 <footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
   <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
@@ -497,6 +520,9 @@
   });
 </script>
 
+<!-- =========================================
+    SEO SCHEMA
+========================================= -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
