@@ -156,13 +156,7 @@
       transform: scale(1.02);
     }
 
-    /* Button with Description */
-    .btn-with-desc {
-      display: inline-block;
-      text-align: center;
-      margin: 5px 0;
-    }
-    .btn-with-desc .btn {
+    .btn {
       display: inline-block;
       padding: 10px 25px;
       background: #003366;
@@ -174,36 +168,25 @@
       border: none;
       cursor: pointer;
     }
-    .btn-with-desc .btn:hover {
+    .btn:hover {
       background: #002244;
       transform: scale(1.02);
     }
-    .btn-with-desc .desc {
-      display: block;
-      font-size: 0.8rem;
-      color: #555;
-      margin-top: 3px;
-    }
-
     .btn-primary {
       background: #003366;
-      color: white;
     }
     .btn-secondary {
       background: #0066cc;
-      color: white;
     }
     .news-btn {
       background: #003366;
-      color: white;
       padding: 8px 20px;
       border-radius: 5px;
+      color: white;
       text-decoration: none;
       font-weight: bold;
       display: inline-block;
       transition: 0.3s;
-      border: none;
-      cursor: pointer;
     }
     .news-btn:hover {
       background: #002244;
@@ -216,7 +199,7 @@
 <body>
 
 <!-- =========================================
-    HARDCODED HEADER (बिना "Suggestions")
+    HEADER
 ========================================= -->
 <div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
   <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
@@ -235,15 +218,15 @@
 </div>
 
 <!-- ===========================================
-    HERO SECTION
+    HERO
 =========================================== -->
 <section class="hero-banner">
   <div class="container">
     <h1>ITI Study Centre</h1>
     <p>One Platform for ITI Result, Study Notes, Engineering Notes, Official Government Information and Technical Learning Resources.</p>
     <div class="hero-buttons">
-      <a href="iti-result.html" class="btn btn-primary">📊 ITI Result →</a>
-      <a href="iti-study-centre-notes.html" class="btn btn-secondary">📚 Study Notes →</a>
+      <a href="iti-result.html" class="btn btn-primary">📊 Click Here →</a>
+      <a href="iti-study-centre-notes.html" class="btn btn-secondary">📚 Click Here →</a>
     </div>
   </div>
 </section>
@@ -257,7 +240,7 @@
 </section>
 
 <!-- ===========================================
-    RESULT + LATEST UPDATES
+    RESULT + UPDATES
 =========================================== -->
 <section class="container">
   <div class="home-grid">
@@ -265,7 +248,7 @@
       <h2>📊 ITI Result</h2>
       <p>NCVT एवं SCVT Result, Marksheet, Certificate, Verification तथा Admit Card से संबंधित सभी सेवाएँ एक ही स्थान पर उपलब्ध हैं।</p>
       <br>
-      <a href="iti-result.html" class="btn news-btn">📊 Click Here →</a>
+      <a href="iti-result.html" class="news-btn">📊 Click Here →</a>
     </div>
     <div class="updates-card">
       <h2>📢 Latest Official Updates</h2>
@@ -282,17 +265,15 @@
 </section>
 
 <!-- =========================================
-    ITI TRADES TABLE
+    POPULAR TRADES
 ========================================= -->
 <section class="container">
   <div class="card">
     <h2>🔧 Popular ITI Trades</h2>
-    <p>नीचे भारत के सबसे लोकप्रिय ITI Trades की संक्षिप्त जानकारी दी गई है। प्रत्येक Trade की विस्तृत जानकारी, Curriculum एवं Syllabus के लिए Official Details देखें।</p>
+    <p>नीचे भारत के सबसे लोकप्रिय ITI Trades की संक्षिप्त जानकारी दी गई है।</p>
     <div style="overflow-x:auto;">
       <table class="trade-table">
-        <thead>
-          <tr><th>Trade</th><th>Duration</th><th>क्या पढ़ाया जाता है?</th><th>Official Details</th></tr>
-        </thead>
+        <thead><tr><th>Trade</th><th>Duration</th><th>क्या पढ़ाया जाता है?</th><th>Official Details</th></tr></thead>
         <tbody>
           <tr><td>Fitter</td><td>2 Years</td><td>Bench Work, Measuring Tools, Drilling, Tapping, Machine Shop Practice</td><td><a href="https://www.skillindiadigital.gov.in/" target="_blank">🔗 Click Here →</a></td></tr>
           <tr><td>Electrician</td><td>2 Years</td><td>Electrical Wiring, Motors, Transformers, Installation & Maintenance</td><td><a href="https://www.skillindiadigital.gov.in/" target="_blank">🔗 Click Here →</a></td></tr>
@@ -305,13 +286,13 @@
           <tr><td>Machinist</td><td>2 Years</td><td>Milling, Grinding, Drilling, Machine Operations</td><td><a href="https://www.skillindiadigital.gov.in/" target="_blank">🔗 Click Here →</a></td></tr>
           <tr><td>Wireman</td><td>2 Years</td><td>Domestic & Industrial Wiring, Electrical Safety</td><td><a href="https://www.skillindiadigital.gov.in/" target="_blank">🔗 Click Here →</a></td></tr>
           <tr><td>Electronics Mechanic</td><td>2 Years</td><td>Electronic Components, PCB Testing, Repair & Maintenance</td><td><a href="https://www.skillindiadigital.gov.in/" target="_blank">🔗 Click Here →</a></td></tr>
-          <tr><td>Refrigeration & Air Conditioning Technician</td><td>2 Years</td><td>Refrigerator, Air Conditioner Installation & Servicing</td><td><a href="https://www.skillindiadigital.gov.in/" target="_blank">🔗 Click Here →</a></td></tr>
+          <tr><td>Refrigeration & AC Technician</td><td>2 Years</td><td>Refrigerator, Air Conditioner Installation & Servicing</td><td><a href="https://www.skillindiadigital.gov.in/" target="_blank">🔗 Click Here →</a></td></tr>
         </tbody>
       </table>
     </div>
     <br>
     <div style="text-align:center;">
-      <a href="https://dgt.gov.in/cts" target="_blank" class="btn news-btn">📋 Complete ITI Trade List (Official DGT) →</a>
+      <a href="https://dgt.gov.in/cts" target="_blank" class="news-btn">📋 Click Here → (Complete List)</a>
     </div>
   </div>
 </section>
@@ -327,28 +308,28 @@
         <a href="https://www.skillindiadigital.gov.in/" target="_blank" class="gov-link">🔗 Skill India Digital →</a>
         <div class="gov-desc-box">
           <p><strong>Admission, Student Login, Digital Services, Results</strong> और अन्य ITI सेवाएँ।</p>
-          <a href="https://www.skillindiadigital.gov.in/" target="_blank" class="btn gov-btn">📌 Click Here →</a>
+          <a href="https://www.skillindiadigital.gov.in/" target="_blank" class="gov-btn">📌 Click Here →</a>
         </div>
       </div>
       <div class="gov-card">
         <a href="https://bharatskills.gov.in/" target="_blank" class="gov-link">🔗 Bharat Skills →</a>
         <div class="gov-desc-box">
           <p><strong>E-Books, CBT, Question Bank, Learning Resources</strong> और Study Material।</p>
-          <a href="https://bharatskills.gov.in/" target="_blank" class="btn gov-btn">📌 Click Here →</a>
+          <a href="https://bharatskills.gov.in/" target="_blank" class="gov-btn">📌 Click Here →</a>
         </div>
       </div>
       <div class="gov-card">
         <a href="https://dgt.gov.in/" target="_blank" class="gov-link">🔗 DGT →</a>
         <div class="gov-desc-box">
           <p><strong>CTS Curriculum, Official Notifications, Trade Information</strong> और नई योजनाएँ।</p>
-          <a href="https://dgt.gov.in/" target="_blank" class="btn gov-btn">📌 Click Here →</a>
+          <a href="https://dgt.gov.in/" target="_blank" class="gov-btn">📌 Click Here →</a>
         </div>
       </div>
       <div class="gov-card">
         <a href="https://www.apprenticeshipindia.gov.in/" target="_blank" class="gov-link">🔗 Apprenticeship India →</a>
         <div class="gov-desc-box">
           <p><strong>Apprenticeship Registration, Training</strong> और रोजगार संबंधी अवसर।</p>
-          <a href="https://www.apprenticeshipindia.gov.in/" target="_blank" class="btn gov-btn">📌 Click Here →</a>
+          <a href="https://www.apprenticeshipindia.gov.in/" target="_blank" class="gov-btn">📌 Click Here →</a>
         </div>
       </div>
     </div>
@@ -356,59 +337,57 @@
 </section>
 
 <!-- =========================================
-    ITI STUDY CENTRE NOTES (Yellow Text Fix)
+    ITI NOTES
 ========================================= -->
 <section class="container">
   <div class="card">
     <h2>📚 ITI Study Centre Notes</h2>
-    <p>ITI विद्यार्थियों के लिए Trade Wise, Chapter Wise और Employability Skills के Module Wise Notes उपलब्ध हैं। सामग्री सरल हिन्दी एवं आवश्यक English Terms के साथ तैयार की गई है।</p>
     <div class="home-card-grid">
       <div class="feature-card">
         <h3>🔧 Fitter Notes</h3>
         <p>Fitter Trade के सभी Chapter Wise Theory Notes, Study Material एवं भविष्य में PDF उपलब्ध कराए जाएंगे।</p>
-        <a href="notes/fitter/index.html" class="btn news-btn">🔧 Click Here →</a>
+        <a href="notes/fitter/index.html" class="news-btn">🔧 Click Here →</a>
       </div>
       <div class="feature-card">
         <h3>🚰 Plumber Notes</h3>
         <p>Plumber Trade के सभी महत्वपूर्ण Notes, Theory एवं Practical Study Material उपलब्ध कराया जाएगा।</p>
-        <a href="notes/plumber/index.html" class="btn news-btn">🚰 Click Here →</a>
+        <a href="notes/plumber/index.html" class="news-btn">🚰 Click Here →</a>
       </div>
       <div class="feature-card">
         <h3>📚 Other Trade Notes</h3>
         <p>अन्य सभी ITI Trades के Notes चरणबद्ध तरीके से उपलब्ध कराए जाएंगे।</p>
-        <a href="notes/other-trades/index.html" class="btn news-btn">📚 Click Here →</a>
+        <a href="notes/other-trades/index.html" class="news-btn">📚 Click Here →</a>
       </div>
       <div class="feature-card">
         <h3>💼 Employability Skills</h3>
         <p>ITI विद्यार्थियों के लिए Employability Skills के Module Wise Theory Notes एवं Question Bank।</p>
-        <a href="notes/employability-skills/index.html" class="btn news-btn">💼 Click Here →</a>
+        <a href="notes/employability-skills/index.html" class="news-btn">💼 Click Here →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- =========================================
-    ENGINEERING NOTES (Yellow Text Fixed)
+    ENGINEERING NOTES
 ========================================= -->
 <section class="container">
   <div class="card">
     <h2>⚙ Engineering Notes</h2>
-    <p>Engineering Subjects के Chapter Wise Study Notes नीचे दिए गए Sections में उपलब्ध कराए जाएंगे।</p>
     <div class="home-card-grid">
       <div class="feature-card">
         <h3>📘 Engineering Topics</h3>
         <p>Basic Engineering, Workshop Calculation एवं Engineering Science से संबंधित Notes।</p>
-        <a href="engineering/engineering-topics/index.html" class="btn news-btn">📘 Click Here →</a>
+        <a href="engineering/engineering-topics/index.html" class="news-btn">📘 Click Here →</a>
       </div>
       <div class="feature-card">
         <h3>🚗 Automobile Engineering</h3>
         <p>Automobile Technology, Engine, Transmission तथा Vehicle Systems से संबंधित Notes।</p>
-        <a href="engineering/automobile/index.html" class="btn news-btn">🚗 Click Here →</a>
+        <a href="engineering/automobile/index.html" class="news-btn">🚗 Click Here →</a>
       </div>
       <div class="feature-card">
         <h3>📖 Other Engineering Topics</h3>
         <p>अन्य Engineering Subjects के Chapter Wise Notes भविष्य में उपलब्ध कराए जाएंगे।</p>
-        <a href="engineering/other-topics/index.html" class="btn news-btn">📖 Click Here →</a>
+        <a href="engineering/other-topics/index.html" class="news-btn">📖 Click Here →</a>
       </div>
     </div>
   </div>
@@ -417,10 +396,13 @@
 <!-- =========================================
     ABOUT, WHY CHOOSE, FAQ
 ========================================= -->
-<section class="container"><div class="card"><h2>🎯 About ITI Study Centre</h2><p>ITI Study Centre का उद्देश्य ITI विद्यार्थियों को एक ही स्थान पर Result, Study Notes, Engineering Notes, Official Government Links तथा अन्य उपयोगी अध्ययन सामग्री उपलब्ध कराना है।</p><p>इस वेबसाइट पर उपलब्ध सामग्री समय-समय पर अपडेट की जाती रहेगी। भविष्य में सभी प्रमुख ITI Trades के Chapter Wise Notes, PDF, Question Bank, Mock Test तथा अन्य Study Resources भी जोड़े जाएंगे।</p></div></section>
+<section class="container"><div class="card"><h2>🎯 About ITI Study Centre</h2><p>ITI Study Centre का उद्देश्य ITI विद्यार्थियों को एक ही स्थान पर Result, Study Notes, Engineering Notes, Official Government Links तथा अन्य उपयोगी अध्ययन सामग्री उपलब्ध कराना है।</p></div></section>
 
 <section class="container"><div class="card"><h2>⭐ Why Choose ITI Study Centre?</h2><div class="home-card-grid"><div class="feature-card"><h3>📚 Free Study Notes</h3><p>सभी विद्यार्थियों के लिए निःशुल्क एवं सरल हिन्दी भाषा में Study Notes।</p></div><div class="feature-card"><h3>📊 ITI Result</h3><p>NCVT एवं SCVT Result, Marksheet, Certificate एवं Verification की जानकारी।</p></div><div class="feature-card"><h3>⚙ Engineering Notes</h3><p>Engineering Subjects के Chapter Wise Notes एक ही स्थान पर।</p></div><div class="feature-card"><h3>🏛 Official Government Links</h3><p>केवल आधिकारिक सरकारी वेबसाइटों के उपयोगी लिंक उपलब्ध।</p></div><div class="feature-card"><h3>📱 Mobile Friendly</h3><p>मोबाइल, टैबलेट एवं कंप्यूटर सभी उपकरणों के लिए अनुकूल।</p></div><div class="feature-card"><h3>🔄 Regular Updates</h3><p>नई जानकारी, Notes एवं अध्ययन सामग्री समय-समय पर जोड़ी जाएगी।</p></div></div></div></section>
 
+<!-- =========================================
+    FAQ
+========================================= -->
 <section class="container"><div class="card"><h2>❓ Frequently Asked Questions (FAQ)</h2><h3>1. ITI Study Centre क्या है?</h3><p>यह ITI विद्यार्थियों के लिए अध्ययन सामग्री, Result, Engineering Notes तथा आधिकारिक जानकारी उपलब्ध कराने वाला शैक्षणिक प्लेटफ़ॉर्म है।</p><hr><h3>2. क्या सभी Study Notes निःशुल्क हैं?</h3><p>हाँ, वेबसाइट पर उपलब्ध सभी Study Notes एवं सामग्री निःशुल्क उपलब्ध कराई जाती है।</p><hr><h3>3. क्या Official Government Links उपलब्ध हैं?</h3><p>हाँ, वेबसाइट पर केवल उपयोगी एवं आधिकारिक सरकारी वेबसाइटों के लिंक दिए गए हैं।</p><hr><h3>4. क्या सभी Trades के Notes उपलब्ध होंगे?</h3><p>हाँ, सभी प्रमुख ITI Trades के Notes चरणबद्ध तरीके से प्रकाशित किए जाएंगे।</p><hr><h3>5. क्या Engineering Notes भी उपलब्ध होंगे?</h3><p>हाँ, Engineering Topics, Automobile एवं अन्य Engineering Subjects के Notes चरणबद्ध तरीके से उपलब्ध कराए जाएंगे।</p></div></section>
 
 <!-- =========================================
@@ -431,7 +413,7 @@
     <h2>💬 सुझाव दें</h2>
     <p>यदि आप किसी नए Trade, Notes, Engineering Topic या वेबसाइट सुधार के संबंध में सुझाव देना चाहते हैं, तो कृपया हमें अवश्य बताएं।</p>
     <br>
-    <a href="contact.html" class="btn news-btn">💬 Click Here →</a>
+    <a href="contact.html" class="news-btn">💬 Click Here →</a>
   </div>
 </section>
 
@@ -467,9 +449,6 @@
   });
 </script>
 
-<!-- =========================================
-    SEO SCHEMA
-========================================= -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
