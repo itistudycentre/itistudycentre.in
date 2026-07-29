@@ -2,835 +2,577 @@
 <html lang="hi">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITI Result | Marksheet | Certificate | SCVT | ITI Study Centre</title>
+  <meta name="description" content="Official ITI Result, Download Marksheet, Download Certificate, Marksheet Verification, Certificate Verification, ITI Admit Card, SCVT Student Login and Official Student Services.">
+  <meta name="keywords" content="ITI Result, NCVT Result, SCVT Result, ITI Marksheet, ITI Certificate, Skill India, SCVT Login">
+  <meta name="author" content="ITI Study Centre">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://www.itistudycentre.in/iti-result.html">
 
-<meta charset="UTF-8">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RDLMQ0BNWF');
+  </script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* ----- SEARCH BOX (Home Page Style) ----- */
+    .search-section {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .search-section input {
+      flex: 1;
+      max-width: 600px;
+      padding: 14px 20px;
+      font-size: 1.1rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.3s;
+    }
+    .search-section input:focus {
+      border-color: #003366;
+      box-shadow: 0 0 8px rgba(0,51,102,0.2);
+    }
+    .search-section button {
+      padding: 14px 40px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      min-width: 150px;
+      background: #003366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .search-section button:hover {
+      background: #002244;
+      transform: scale(1.02);
+    }
 
-<title>ITI Result | Marksheet | Certificate | SCVT | ITI Study Centre</title>
+    /* Mobile Responsive Search */
+    @media (max-width: 767px) {
+      .search-section {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .search-section input {
+        width: 100%;
+        max-width: 100%;
+      }
+      .search-section button {
+        width: 100%;
+        padding: 12px;
+        min-width: unset;
+      }
+    }
 
-<meta name="description"
-content="Official ITI Result, Download Marksheet, Download Certificate, Marksheet Verification, Certificate Verification, ITI Admit Card, SCVT Student Login and Official Student Services.">
+    /* ----- Common Buttons (CLEAR & VISIBLE) ----- */
+    .btn {
+      display: inline-block;
+      padding: 10px 25px;
+      background: #003366;
+      color: #ffffff !important;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #002244;
+      transform: scale(1.02);
+    }
+    .btn-primary {
+      background: #003366;
+    }
+    .btn-secondary {
+      background: #0066cc;
+    }
+    .news-btn {
+      display: inline-block;
+      background: #003366;
+      padding: 8px 20px;
+      border-radius: 5px;
+      color: #ffffff !important;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .news-btn:hover {
+      background: #002244;
+      transform: scale(1.02);
+    }
 
-<meta name="keywords"
-content="ITI Result, NCVT Result, SCVT Result, ITI Marksheet, ITI Certificate, Skill India, SCVT Login">
+    /* ----- Government Grid (Links with Box) ----- */
+    .gov-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 15px 0;
+    }
+    .gov-grid a {
+      display: block;
+      background: #f8f9fa;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border-left: 4px solid #003366;
+      text-decoration: none;
+      font-weight: bold;
+      color: #003366;
+      transition: 0.3s;
+    }
+    .gov-grid a:hover {
+      background: #e9ecef;
+      transform: translateY(-2px);
+    }
+    .gov-grid .link-desc {
+      display: block;
+      font-weight: normal;
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 4px;
+    }
 
-<meta name="author" content="ITI Study Centre">
+    /* ----- Notice Box (PRN Guide) ----- */
+    .notice-box {
+      background: #fff3cd;
+      padding: 15px 20px;
+      border-left: 6px solid #ffc107;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+    .notice-box strong {
+      color: #856404;
+    }
 
-<link rel="icon" href="images/favicon.png">
+    /* ----- Important List ----- */
+    .important-list {
+      list-style: none;
+      padding: 0;
+    }
+    .important-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .important-list li:last-child {
+      border-bottom: none;
+    }
+  </style>
 
-<link rel="stylesheet" href="css/style.css">
-
-<!-- Google tag (gtag.js) -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF"></script>
-
-<script>
-
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){dataLayer.push(arguments);}
-
-gtag('js', new Date());
-
-gtag('config', 'G-RDLMQ0BNWF');
-
-</script>
-<link rel="canonical" href="https://www.itistudycentre.in/iti-result.html">
 </head>
 
 <body>
 
-<div id="header"></div>
+<!-- =========================================
+    HARDCODED HEADER (बिना "Suggestions")
+========================================= -->
+<div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
+  <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+    <div class="logo" style="font-size:1.4rem; font-weight:bold;">
+      <a href="/index.html" style="color:white; text-decoration:none;">ITI Study Centre</a>
+    </div>
+    <nav style="display:flex; flex-wrap:wrap; gap:5px 15px;">
+      <a href="/index.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Home</a>
+      <a href="/iti-result.html" style="color:#ffcc00; text-decoration:underline; font-weight:bold; padding:5px 0; font-size:1rem;">ITI Result</a>
+      <a href="/iti-study-centre-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Notes</a>
+      <a href="/engineering-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Engineering Notes</a>
+      <a href="/questionbank.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Question Bank</a>
+      <a href="/about.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">About</a>
+    </nav>
+  </div>
+</div>
 
 <!-- ===========================
 PAGE TITLE
 =========================== -->
-
 <section class="page-title">
-
-<h1>📊 ITI Result Centre</h1>
-
-<p>
-
-Official DGT Skill India एवं SCVT Uttar Pradesh Student Services
-
-</p>
-
+  <div class="container">
+    <h1>📊 ITI Result Centre</h1>
+    <p>Official DGT Skill India एवं SCVT Uttar Pradesh Student Services</p>
+  </div>
 </section>
 
 <!-- ===========================
-SEARCH BOX
+SEARCH BOX (Home Page Style - बड़ा और सेंटर)
 =========================== -->
-
 <section class="search-section container">
-
-<input
-type="text"
-placeholder="Search Result, Marksheet, Certificate, SCVT Services...">
-
-<button>
-
-Search
-
-</button>
-
+  <input type="text" placeholder="Search Result, Marksheet, Certificate, SCVT Services...">
+  <button>🔍 Search</button>
 </section>
 
 <!-- ===========================
 DGT SKILL INDIA DIGITAL SERVICES
 =========================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2> DGT Skill India Digital Services</h2>
-
-<p>
-
-नीचे दिए गए सभी लिंक भारत सरकार के आधिकारिक DGT Skill India Digital Portal के हैं।
-
-</p>
-
-<div class="gov-grid">
-
-<a href="https://dgt.skillindiadigital.gov.in/result" target="_blank">
-
-📊 ITI Result
-
-</a>
-
-<a href="https://dgt.skillindiadigital.gov.in/download-marksheet" target="_blank">
-
-📄 Download Marksheet
-
-</a>
-
-<a href="https://dgt.skillindiadigital.gov.in/download-certificate" target="_blank">
-
-🏆 Download Certificate
-
-</a>
-
-<a href="https://dgt.skillindiadigital.gov.in/marksheet-verification" target="_blank">
-
-✅ Marksheet Verification
-
-</a>
-
-<a href="https://dgt.skillindiadigital.gov.in/certificate-verification" target="_blank">
-
-🎓 Certificate Verification
-
-</a>
-
-<a href="#admit-card">
-
-🪪 ITI Admit Card
-
-</a>
-
-<a href="https://dgt.skillindiadigital.gov.in/open-service-utilities/iti-search" target="_blank">
-
-🏫 ITI Search
-
-</a>
-
-<a href="https://dgt.skillindiadigital.gov.in/grievance-open-service-utility/raise-grievance" target="_blank">
-
-📝 Raise Grievance
-
-</a>
-
-</div>
-
-</div>
-
+  <div class="card">
+    <h2>📌 DGT Skill India Digital Services</h2>
+    <p>नीचे दिए गए सभी लिंक भारत सरकार के आधिकारिक DGT Skill India Digital Portal के हैं।</p>
+    <div class="gov-grid">
+      <a href="https://dgt.skillindiadigital.gov.in/result" target="_blank">
+        📊 ITI Result
+        <span class="link-desc">NCVT/CTS Result देखें</span>
+      </a>
+      <a href="https://dgt.skillindiadigital.gov.in/download-marksheet" target="_blank">
+        📄 Download Marksheet
+        <span class="link-desc">Digital Marksheet डाउनलोड करें</span>
+      </a>
+      <a href="https://dgt.skillindiadigital.gov.in/download-certificate" target="_blank">
+        🏆 Download Certificate
+        <span class="link-desc">Digital Certificate डाउनलोड करें</span>
+      </a>
+      <a href="https://dgt.skillindiadigital.gov.in/marksheet-verification" target="_blank">
+        ✅ Marksheet Verification
+        <span class="link-desc">Marksheet की सत्यता जाँचें</span>
+      </a>
+      <a href="https://dgt.skillindiadigital.gov.in/certificate-verification" target="_blank">
+        🎓 Certificate Verification
+        <span class="link-desc">Certificate की सत्यता जाँचें</span>
+      </a>
+      <a href="#admit-card">
+        🪪 ITI Admit Card
+        <span class="link-desc">Admit Card Download Guide</span>
+      </a>
+      <a href="https://dgt.skillindiadigital.gov.in/open-service-utilities/iti-search" target="_blank">
+        🏫 ITI Search
+        <span class="link-desc">देशभर के ITI संस्थान खोजें</span>
+      </a>
+      <a href="https://dgt.skillindiadigital.gov.in/grievance-open-service-utility/raise-grievance" target="_blank">
+        📝 Raise Grievance
+        <span class="link-desc">शिकायत दर्ज करें</span>
+      </a>
+    </div>
+  </div>
 </section>
 
 <!-- ===========================
-SCVT UTTAR PRADESH
+SCVT UTTAR PRADESH SERVICES
 =========================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>🏛️ SCVT Uttar Pradesh Student Services</h2>
-
-<p>
-
-उत्तर प्रदेश राज्य व्यावसायिक प्रशिक्षण परिषद (SCVT Uttar Pradesh) से संबंधित आधिकारिक सेवाओं के लिए नीचे दिए गए लिंक का उपयोग करें।
-
-</p>
-
-<div class="gov-grid">
-
-<a href="http://update.vppup.in/student/studentlogin" target="_blank">
-
-👨‍🎓 SCVT Trainee Login
-
-</a>
-
-<a href="https://vppup.in/verification/index.html" target="_blank">
-
-📄 SCVT Marksheet / Certificate Verification
-
-</a>
-
-<a href="https://scvtup.in" target="_blank">
-
-🌐 SCVT Official Website
-
-</a>
-
-</div>
-
-<br>
-
-<div class="notice-box">
-
-<p>
-
-<strong>महत्वपूर्ण सूचना :</strong>
-
-SCVT उत्तर प्रदेश से संबंधित Result, Trainee Login, Admission, Marksheet Verification, Certificate Verification तथा अन्य छात्र सेवाओं की विस्तृत जानकारी SCVT की आधिकारिक वेबसाइट पर उपलब्ध है।
-
-वेबसाइट के नीचे उपलब्ध <strong>Student Services</strong> एवं अन्य विकल्पों के माध्यम से सभी सुविधाओं का उपयोग किया जा सकता है।
-
-</p>
-
-</div>
-
-</div>
-
+  <div class="card">
+    <h2>🏛️ SCVT Uttar Pradesh Student Services</h2>
+    <p>उत्तर प्रदेश राज्य व्यावसायिक प्रशिक्षण परिषद (SCVT Uttar Pradesh) से संबंधित आधिकारिक सेवाओं के लिए नीचे दिए गए लिंक का उपयोग करें।</p>
+    <div class="gov-grid">
+      <a href="http://update.vppup.in/student/studentlogin" target="_blank">
+        👨‍🎓 SCVT Trainee Login
+        <span class="link-desc">SCVT Student Login</span>
+      </a>
+      <a href="https://vppup.in/verification/index.html" target="_blank">
+        📄 SCVT Marksheet / Certificate Verification
+        <span class="link-desc">SCVT Marksheet/Certificate Verify करें</span>
+      </a>
+      <a href="https://scvtup.in" target="_blank">
+        🌐 SCVT Official Website
+        <span class="link-desc">SCVT Uttar Pradesh Official Portal</span>
+      </a>
+    </div>
+  </div>
 </section>
-  <!-- =====================================
-ITI RESULT PROCESS
+
+<!-- =====================================
+ITI RESULT PROCESS (Step-by-Step)
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>📊 ITI Result कैसे देखें?</h2>
-
-<p>
-
-ITI Result देखने के लिए नीचे दी गई प्रक्रिया अपनाएँ।
-
-</p>
-
-<ol>
-
-<li>ऊपर दिए गए <strong>ITI Result</strong> बटन पर क्लिक करें।</li>
-
-<li>Official DGT Skill India Digital Portal खुलेगा।</li>
-
-<li>अपना PRN Number / Registration Number अथवा आवश्यक विवरण दर्ज करें।</li>
-
-<li>Submit बटन पर क्लिक करें।</li>
-
-<li>आपका ITI Result स्क्रीन पर प्रदर्शित हो जाएगा।</li>
-
-<li>भविष्य के उपयोग के लिए Result डाउनलोड अथवा प्रिंट कर लें।</li>
-
-</ol>
-
-<br>
-
-<a href="https://dgt.skillindiadigital.gov.in/result"
-target="_blank"
-class="news-btn">
-
-📊 Open Official Result Portal
-
-</a>
-
-</div>
-
+  <div class="card">
+    <h2>📊 ITI Result कैसे देखें?</h2>
+    <p>ITI Result देखने के लिए नीचे दी गई प्रक्रिया अपनाएँ।</p>
+    <ol>
+      <li>ऊपर दिए गए <strong>ITI Result</strong> बटन पर क्लिक करें।</li>
+      <li>Official DGT Skill India Digital Portal खुलेगा।</li>
+      <li>अपना PRN Number / Registration Number अथवा आवश्यक विवरण दर्ज करें।</li>
+      <li>Submit बटन पर क्लिक करें।</li>
+      <li>आपका ITI Result स्क्रीन पर प्रदर्शित हो जाएगा।</li>
+      <li>भविष्य के उपयोग के लिए Result डाउनलोड अथवा प्रिंट कर लें।</li>
+    </ol>
+    <br>
+    <a href="https://dgt.skillindiadigital.gov.in/result" target="_blank" class="news-btn">📊 Click Here →</a>
+  </div>
 </section>
 
 <!-- =====================================
 MARKSHEET DOWNLOAD
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>📄 ITI Marksheet Download</h2>
-
-<p>
-
-Result जारी होने के बाद विद्यार्थी अपनी Digital Marksheet आधिकारिक Portal से डाउनलोड कर सकते हैं।
-
-</p>
-
-<ol>
-
-<li>Download Marksheet पर क्लिक करें।</li>
-
-<li>अपनी आवश्यक जानकारी दर्ज करें।</li>
-
-<li>Verification पूर्ण होने के बाद Marksheet डाउनलोड करें।</li>
-
-<li>डाउनलोड की गई Marksheet सुरक्षित रखें।</li>
-
-</ol>
-
-<br>
-
-<a href="https://dgt.skillindiadigital.gov.in/download-marksheet"
-target="_blank"
-class="news-btn">
-
-📄 Download Marksheet
-
-</a>
-
-</div>
-
+  <div class="card">
+    <h2>📄 ITI Marksheet Download</h2>
+    <p>Result जारी होने के बाद विद्यार्थी अपनी Digital Marksheet आधिकारिक Portal से डाउनलोड कर सकते हैं।</p>
+    <ol>
+      <li>Download Marksheet पर क्लिक करें।</li>
+      <li>अपनी आवश्यक जानकारी दर्ज करें।</li>
+      <li>Verification पूर्ण होने के बाद Marksheet डाउनलोड करें।</li>
+      <li>डाउनलोड की गई Marksheet सुरक्षित रखें।</li>
+    </ol>
+    <br>
+    <a href="https://dgt.skillindiadigital.gov.in/download-marksheet" target="_blank" class="news-btn">📄 Click Here →</a>
+  </div>
 </section>
 
 <!-- =====================================
 CERTIFICATE DOWNLOAD
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>🏆 ITI Certificate Download</h2>
-
-<p>
-
-ITI उत्तीर्ण विद्यार्थी अपना Digital Certificate आधिकारिक Portal से डाउनलोड कर सकते हैं।
-
-</p>
-
-<ol>
-
-<li>Download Certificate लिंक खोलें।</li>
-
-<li>आवश्यक जानकारी भरें।</li>
-
-<li>Verification के बाद Digital Certificate डाउनलोड करें।</li>
-
-<li>Certificate की एक प्रति सुरक्षित रखें।</li>
-
-</ol>
-
-<br>
-
-<a href="https://dgt.skillindiadigital.gov.in/download-certificate"
-target="_blank"
-class="news-btn">
-
-🏆 Download Certificate
-
-</a>
-
-</div>
-
+  <div class="card">
+    <h2>🏆 ITI Certificate Download</h2>
+    <p>ITI उत्तीर्ण विद्यार्थी अपना Digital Certificate आधिकारिक Portal से डाउनलोड कर सकते हैं।</p>
+    <ol>
+      <li>Download Certificate लिंक खोलें।</li>
+      <li>आवश्यक जानकारी भरें।</li>
+      <li>Verification के बाद Digital Certificate डाउनलोड करें।</li>
+      <li>Certificate की एक प्रति सुरक्षित रखें।</li>
+    </ol>
+    <br>
+    <a href="https://dgt.skillindiadigital.gov.in/download-certificate" target="_blank" class="news-btn">🏆 Click Here →</a>
+  </div>
 </section>
 
 <!-- =====================================
 MARKSHEET VERIFICATION
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>✅ Marksheet Verification</h2>
-
-<p>
-
-किसी भी संस्था या Employer द्वारा आपकी Marksheet की सत्यता जाँचने के लिए Official Verification Portal का उपयोग किया जा सकता है।
-
-</p>
-
-<br>
-
-<a href="https://dgt.skillindiadigital.gov.in/marksheet-verification"
-target="_blank"
-class="news-btn">
-
-Verify Marksheet
-
-</a>
-
-</div>
-
+  <div class="card">
+    <h2>✅ Marksheet Verification</h2>
+    <p>किसी भी संस्था या Employer द्वारा आपकी Marksheet की सत्यता जाँचने के लिए Official Verification Portal का उपयोग किया जा सकता है।</p>
+    <br>
+    <a href="https://dgt.skillindiadigital.gov.in/marksheet-verification" target="_blank" class="news-btn">✅ Click Here →</a>
+  </div>
 </section>
 
 <!-- =====================================
 CERTIFICATE VERIFICATION
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>🎓 Certificate Verification</h2>
-
-<p>
-
-Digital ITI Certificate की सत्यता जाँचने के लिए Official Certificate Verification Portal का उपयोग करें।
-
-</p>
-
-<br>
-
-<a href="https://dgt.skillindiadigital.gov.in/certificate-verification"
-target="_blank"
-class="news-btn">
-
-Verify Certificate
-
-</a>
-
-</div>
-
+  <div class="card">
+    <h2>🎓 Certificate Verification</h2>
+    <p>Digital ITI Certificate की सत्यता जाँचने के लिए Official Certificate Verification Portal का उपयोग करें।</p>
+    <br>
+    <a href="https://dgt.skillindiadigital.gov.in/certificate-verification" target="_blank" class="news-btn">🎓 Click Here →</a>
+  </div>
 </section>
 
 <!-- =====================================
-ITI ADMIT CARD
+ITI ADMIT CARD + PRN GUIDE (MOVED HERE)
 ===================================== -->
-
 <section class="container" id="admit-card">
+  <div class="card">
+    <h2>🪪 ITI Admit Card Download</h2>
+    <p>ITI Admit Card डाउनलोड करने के लिए <strong>SIDH (Skill India Digital Hub)</strong> Portal में <strong>Trainee Login</strong> करना आवश्यक है।</p>
+    
+    <!-- 🔥 PRN / Roll Number Conversion Guide (बदला हुआ Text + Admit Card में Shift) -->
+    <div class="notice-box">
+      <h3 style="margin-top:0; color:#856404;">📌 Roll Number से PRN कैसे बनाएँ? (SIDH Login / Admit Card के लिए)</h3>
+      <p><strong>उदाहरण:</strong></p>
+      <p style="background:#fff; padding:10px; border-radius:4px; font-family:monospace;">
+        Roll Number: <strong>0024080012345</strong>
+        <br>↓ (शुरू के <strong>00</strong> हटाकर <strong>R</strong> लगाएँ)
+        <br><strong style="color:#003366;">PRN: R24080012345</strong>
+      </p>
+      <p style="color:#d9534f; font-size:0.95rem; margin-top:10px;">
+        ⚠️ <strong>महत्वपूर्ण:</strong> यह <strong>PRN</strong> SIDH Portal पर <strong>Trainee Login</strong> करने और <strong>Admit Card</strong> डाउनलोड करने के लिए आवश्यक है। 
+        यदि इस फॉर्मेट से Login न हो तो अपने ITI संस्थान से सही <strong>Registration Number (PRN)</strong> प्राप्त करें।
+      </p>
+    </div>
 
-<div class="card">
-
-<h2>🪪 ITI Admit Card Download</h2>
-
-<p>
-
-ITI Admit Card डाउनलोड करने के लिए <strong>SIDH (Skill India Digital Hub)</strong> Portal में <strong>Trainee Login</strong> करना आवश्यक है। वर्तमान में Admit Card का अलग Public Download Link उपलब्ध नहीं है।
-
-</p>
-
-<h3>📌 Step by Step प्रक्रिया</h3>
-
-<ol>
-
-<li>नीचे दिए गए <strong>Open SIDH Portal</strong> बटन पर क्लिक करें।</li>
-
-<li>SIDH Portal खुलने के बाद ऊपर दाईं ओर <strong>Login</strong> पर क्लिक करें।</li>
-
-<li>अब आपके सामने चार विकल्प दिखाई देंगे:
-<ul>
-<li>Learner / Participant</li>
-<li>Partner</li>
-<li><strong>DGT Ecosystem</strong></li>
-<li>ITI Result</li>
-</ul>
-</li>
-
-<li><strong>DGT Ecosystem</strong> विकल्प चुनें।</li>
-
-<li>अब पुनः Login स्क्रीन खुलेगी।</li>
-
-<li><strong>Trainee Login</strong> विकल्प चुनें।</li>
-
-<li>अपना <strong>PRN Number</strong> तथा <strong>Date of Birth</strong> दर्ज करके Login करें।</li>
-
-<li>Login सफल होने के बाद आपका <strong>Trainee Dashboard</strong> खुल जाएगा।</li>
-
-<li>यदि Admit Card जारी हो चुका होगा तो Dashboard से <strong>Admit Card</strong> डाउनलोड करें। इसी Dashboard से आवश्यकतानुसार <strong>Digital Marksheet, Digital Certificate तथा अन्य Student Services</strong> का भी उपयोग किया जा सकता है।</li>
-
-</ol>
-
-<br>
-
-<a href="https://www.skillindiadigital.gov.in/"
-target="_blank"
-class="news-btn">
-
-🔗 Open SIDH Portal
-
-</a>
-
-<p style="margin-top:15px;">
-
-<strong>नोट:</strong> यदि Login करने में समस्या आए या Dashboard में Admit Card उपलब्ध न हो तो अपने ITI संस्थान से संपर्क करें अथवा ऊपर दिए गए <strong>Raise Grievance</strong> विकल्प का उपयोग करें।
-
-</p>
-
-</div>
-
+    <h3>📌 Step by Step प्रक्रिया</h3>
+    <ol>
+      <li>नीचे दिए गए <strong>Open SIDH Portal</strong> बटन पर क्लिक करें।</li>
+      <li>SIDH Portal खुलने के बाद ऊपर दाईं ओर <strong>Login</strong> पर क्लिक करें।</li>
+      <li><strong>DGT Ecosystem</strong> विकल्प चुनें।</li>
+      <li><strong>Trainee Login</strong> विकल्प चुनें।</li>
+      <li>अपना <strong>PRN Number</strong> तथा <strong>Date of Birth</strong> दर्ज करके Login करें।</li>
+      <li>Login सफल होने के बाद <strong>Dashboard</strong> से Admit Card डाउनलोड करें।</li>
+    </ol>
+    <br>
+    <a href="https://www.skillindiadigital.gov.in/" target="_blank" class="news-btn">🔗 Click Here →</a>
+    <p style="margin-top:15px;"><strong>नोट:</strong> यदि Login करने में समस्या आए या Admit Card उपलब्ध न हो तो अपने ITI संस्थान से संपर्क करें अथवा <strong>Raise Grievance</strong> विकल्प का उपयोग करें।</p>
+  </div>
 </section>
 
 <!-- =====================================
 ITI SEARCH
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>🏫 ITI Search</h2>
-
-<p>
-
-देशभर के ITI संस्थानों की जानकारी देखने के लिए Official ITI Search Portal का उपयोग करें।
-
-</p>
-
-<a href="https://dgt.skillindiadigital.gov.in/open-service-utilities/iti-search"
-target="_blank"
-class="news-btn">
-
-🏫 Open ITI Search
-
-</a>
-
-</div>
-
+  <div class="card">
+    <h2>🏫 ITI Search</h2>
+    <p>देशभर के ITI संस्थानों की जानकारी देखने के लिए Official ITI Search Portal का उपयोग करें।</p>
+    <a href="https://dgt.skillindiadigital.gov.in/open-service-utilities/iti-search" target="_blank" class="news-btn">🏫 Click Here →</a>
+  </div>
 </section>
 
 <!-- =====================================
 RAISE GRIEVANCE
 ===================================== -->
-
 <section class="container">
+  <div class="card">
+    <h2>📝 Raise Grievance</h2>
+    <p>यदि Result, Marksheet, Certificate अथवा अन्य किसी सेवा में समस्या हो तो Official Grievance Portal पर शिकायत दर्ज करें।</p>
+    <a href="https://dgt.skillindiadigital.gov.in/grievance-open-service-utility/raise-grievance" target="_blank" class="news-btn">📝 Click Here →</a>
+  </div>
+</section>
 
-<div class="card">
-
-<h2>📝 Raise Grievance</h2>
-
-<p>
-
-यदि Result, Marksheet, Certificate अथवा अन्य किसी सेवा में समस्या हो तो Official Grievance Portal पर शिकायत दर्ज करें।
-
-</p>
-
-<a href="https://dgt.skillindiadigital.gov.in/grievance-open-service-utility/raise-grievance"
-target="_blank"
-class="news-btn">
-
-📝 Raise Grievance
-
-</a>
-
-</div>
-
-  </section>
-  <!-- =====================================
-FREQUENTLY ASKED QUESTIONS (FAQ)
+<!-- =====================================
+FAQ
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>❓ अक्सर पूछे जाने वाले प्रश्न (FAQ)</h2>
-
-<h3>1. ITI Result कब जारी होता है?</h3>
-
-<p>
-ITI Result परीक्षा समाप्त होने के बाद संबंधित विभाग द्वारा आधिकारिक रूप से जारी किया जाता है। नवीनतम जानकारी के लिए केवल Official Portal देखें।
-</p>
-
-<hr>
-
-<h3>2. ITI Result देखने के लिए क्या आवश्यक है?</h3>
-
-<p>
-आमतौर पर PRN Number, Registration Number अथवा अन्य आवश्यक विवरण की आवश्यकता होती है।
-</p>
-
-<hr>
-
-<h3>3. ITI Marksheet कब डाउनलोड की जा सकती है?</h3>
-
-<p>
-Result घोषित होने के बाद Digital Marksheet Official Portal पर उपलब्ध करा दी जाती है।
-</p>
-
-<hr>
-
-<h3>4. Digital Certificate कैसे डाउनलोड करें?</h3>
-
-<p>
-Official Download Certificate Portal से आवश्यक जानकारी भरकर Digital Certificate डाउनलोड किया जा सकता है।
-</p>
-
-<hr>
-
-<h3>5. Marksheet एवं Certificate Verification कैसे करें?</h3>
-
-<p>
-इस पेज पर उपलब्ध Official Verification Links के माध्यम से Marksheet एवं Certificate की सत्यता जाँची जा सकती है।
-</p>
-
-<hr>
-
-<h3>6. ITI Admit Card कहाँ से डाउनलोड करें?</h3>
-
-<p>
-SIDH Portal → Login → DGT Ecosystem → Trainee Login के माध्यम से Dashboard में उपलब्ध होने पर Admit Card डाउनलोड किया जा सकता है।
-</p>
-
-<hr>
-
-<h3>7. यदि Result या Marksheet में त्रुटि हो तो क्या करें?</h3>
-
-<p>
-सबसे पहले अपने ITI संस्थान से संपर्क करें। आवश्यकता होने पर Official Raise Grievance Portal पर शिकायत दर्ज करें।
-</p>
-
-<hr>
-
-<h3>8. SCVT उत्तर प्रदेश के विद्यार्थियों के लिए कौन-सा Portal है?</h3>
-
-<p>
-SCVT Trainee Login, Verification तथा अन्य सेवाओं के लिए इस पेज में दिए गए Official SCVT Links का उपयोग करें।
-</p>
-
-<hr>
-
-<h3>9. ITI Search का क्या उपयोग है?</h3>
-
-<p>
-ITI Search के माध्यम से देशभर के पंजीकृत ITI संस्थानों की जानकारी प्राप्त की जा सकती है।
-</p>
-
-<hr>
-
-<h3>10. क्या ITI Study Centre सरकारी वेबसाइट है?</h3>
-
-<p>
-नहीं। ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। सभी आधिकारिक सेवाओं के लिए संबंधित सरकारी पोर्टल का ही उपयोग करें।
-</p>
-
-</div>
-
+  <div class="card">
+    <h2>❓ अक्सर पूछे जाने वाले प्रश्न (FAQ)</h2>
+    <h3>1. ITI Result कब जारी होता है?</h3>
+    <p>ITI Result परीक्षा समाप्त होने के बाद संबंधित विभाग द्वारा आधिकारिक रूप से जारी किया जाता है।</p>
+    <hr>
+    <h3>2. ITI Result देखने के लिए क्या आवश्यक है?</h3>
+    <p>PRN Number, Registration Number अथवा अन्य आवश्यक विवरण की आवश्यकता होती है।</p>
+    <hr>
+    <h3>3. ITI Marksheet कब डाउनलोड की जा सकती है?</h3>
+    <p>Result घोषित होने के बाद Digital Marksheet Official Portal पर उपलब्ध करा दी जाती है।</p>
+    <hr>
+    <h3>4. Digital Certificate कैसे डाउनलोड करें?</h3>
+    <p>Official Download Certificate Portal से आवश्यक जानकारी भरकर डाउनलोड किया जा सकता है।</p>
+    <hr>
+    <h3>5. Marksheet एवं Certificate Verification कैसे करें?</h3>
+    <p>इस पेज पर उपलब्ध Official Verification Links के माध्यम से करें।</p>
+    <hr>
+    <h3>6. ITI Admit Card कहाँ से डाउनलोड करें?</h3>
+    <p>SIDH Portal → Login → DGT Ecosystem → Trainee Login → Dashboard से डाउनलोड करें।</p>
+    <hr>
+    <h3>7. यदि Result में त्रुटि हो तो क्या करें?</h3>
+    <p>अपने ITI संस्थान से संपर्क करें या Raise Grievance Portal पर शिकायत दर्ज करें।</p>
+    <hr>
+    <h3>8. SCVT उत्तर प्रदेश के विद्यार्थियों के लिए कौन-सा Portal है?</h3>
+    <p>SCVT Trainee Login, Verification आदि के लिए इस पेज में दिए गए Official SCVT Links का उपयोग करें।</p>
+    <hr>
+    <h3>9. ITI Search का क्या उपयोग है?</h3>
+    <p>देशभर के पंजीकृत ITI संस्थानों की जानकारी प्राप्त करना।</p>
+    <hr>
+    <h3>10. क्या ITI Study Centre सरकारी वेबसाइट है?</h3>
+    <p>नहीं। यह एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है।</p>
+  </div>
 </section>
 
 <!-- =====================================
 IMPORTANT INFORMATION
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>📢 महत्वपूर्ण सूचना</h2>
-
-<ul>
-
-<li>✔ केवल आधिकारिक DGT एवं SCVT Portal का ही उपयोग करें।</li>
-
-<li>✔ PRN Number एवं Registration Number सुरक्षित रखें।</li>
-
-<li>✔ Marksheet एवं Certificate डाउनलोड करने के बाद उसकी एक प्रति सुरक्षित रखें।</li>
-
-<li>✔ किसी भी अनधिकृत वेबसाइट पर अपनी व्यक्तिगत जानकारी साझा न करें।</li>
-
-<li>✔ यदि किसी प्रकार की समस्या हो तो पहले अपने ITI संस्थान से संपर्क करें।</li>
-
-<li>✔ आवश्यकता होने पर Official Raise Grievance Portal का उपयोग करें।</li>
-
-<li>✔ इस पेज पर उपलब्ध सभी सरकारी लिंक समय-समय पर अपडेट किए जाते रहेंगे।</li>
-
-</ul>
-
-</div>
-
+  <div class="card">
+    <h2>📢 महत्वपूर्ण सूचना</h2>
+    <ul class="important-list">
+      <li>✔ केवल आधिकारिक DGT एवं SCVT Portal का ही उपयोग करें।</li>
+      <li>✔ PRN Number एवं Registration Number सुरक्षित रखें।</li>
+      <li>✔ Marksheet एवं Certificate डाउनलोड करने के बाद उसकी एक प्रति सुरक्षित रखें।</li>
+      <li>✔ किसी भी अनधिकृत वेबसाइट पर अपनी व्यक्तिगत जानकारी साझा न करें।</li>
+      <li>✔ यदि किसी प्रकार की समस्या हो तो पहले अपने ITI संस्थान से संपर्क करें।</li>
+    </ul>
+  </div>
 </section>
 
 <!-- =====================================
 SUGGESTIONS
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>💬 सुझाव दें</h2>
-
-<p>
-
-यदि इस पेज में किसी लिंक में समस्या हो, कोई सरकारी लिंक बदल गया हो, कोई नई सेवा जोड़नी हो अथवा किसी प्रकार का सुझाव देना चाहते हों, तो कृपया Suggestions पेज के माध्यम से हमें अवश्य बताएं।
-
-</p>
-
-<br>
-
-<a href="contact.html" class="news-btn">
-
-Give Your Suggestion
-
-</a>
-
-</div>
-
+  <div class="card">
+    <h2>💬 सुझाव दें</h2>
+    <p>यदि इस पेज में किसी लिंक में समस्या हो, कोई सरकारी लिंक बदल गया हो, तो कृपया हमें अवश्य बताएं।</p>
+    <br>
+    <a href="contact.html" class="news-btn">💬 Click Here →</a>
+  </div>
 </section>
 
 <!-- =====================================
 DISCLAIMER
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>⚠ Disclaimer</h2>
-
-<p>
-
-ITI Study Centre किसी भी सरकारी विभाग की आधिकारिक वेबसाइट नहीं है। इस पेज पर उपलब्ध सभी लिंक संबंधित सरकारी विभागों की आधिकारिक वेबसाइटों के हैं। विद्यार्थियों को अंतिम एवं प्रमाणिक जानकारी के लिए संबंधित विभाग की आधिकारिक वेबसाइट का ही उपयोग करना चाहिए।
-
-</p>
-
-</div>
-
+  <div class="card">
+    <h2>⚠ Disclaimer</h2>
+    <p>ITI Study Centre किसी भी सरकारी विभाग की आधिकारिक वेबसाइट नहीं है। इस पेज पर उपलब्ध सभी लिंक संबंधित सरकारी विभागों की आधिकारिक वेबसाइटों के हैं। विद्यार्थियों को अंतिम एवं प्रमाणिक जानकारी के लिए संबंधित विभाग की आधिकारिक वेबसाइट का ही उपयोग करना चाहिए।</p>
+  </div>
 </section>
-  <!-- =====================================
+
+<!-- =====================================
 RELATED PAGES
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>🔗 अन्य महत्वपूर्ण पेज</h2>
-
-<div class="gov-grid">
-
-<a href="index.html">
-
-🏠 Home
-
-</a>
-
-<a href="iti-study-centre-notes.html">
-
-📚 ITI Notes
-
-</a>
-
-<a href="engineering-notes.html">
-
-⚙ Engineering Notes
-
-</a>
-
-<a href="about.html">
-
-👤 About Us
-
-</a>
-
-<a href="contact.html">
-
-💬 Suggestions
-
-</a>
-
-</div>
-
-</div>
-
+  <div class="card">
+    <h2>🔗 अन्य महत्वपूर्ण पेज</h2>
+    <div class="gov-grid">
+      <a href="index.html">🏠 Home</a>
+      <a href="iti-study-centre-notes.html">📚 ITI Notes</a>
+      <a href="engineering-notes.html">⚙ Engineering Notes</a>
+      <a href="about.html">👤 About Us</a>
+    </div>
+  </div>
 </section>
 
 <!-- =====================================
 LAST UPDATED
 ===================================== -->
-
 <section class="container">
-
-<div class="card">
-
-<h2>📅 Last Updated</h2>
-
-<p>
-
-29 June 2026
-
-</p>
-
-<p>
-
-यह पेज समय-समय पर DGT Skill India Digital एवं SCVT Uttar Pradesh की आधिकारिक वेबसाइटों पर उपलब्ध नवीनतम जानकारी के अनुसार अपडेट किया जाता रहेगा।
-
-</p>
-
-</div>
-
+  <div class="card">
+    <h2>📅 Last Updated</h2>
+    <p><strong>29 June 2026</strong></p>
+    <p>यह पेज समय-समय पर DGT Skill India Digital एवं SCVT Uttar Pradesh की आधिकारिक वेबसाइटों पर उपलब्ध नवीनतम जानकारी के अनुसार अपडेट किया जाता रहेगा।</p>
+  </div>
 </section>
 
-<div id="footer"></div>
+<!-- =========================================
+    HARDCODED FOOTER
+========================================= -->
+<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
+    <a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">Disclaimer</a>
+    <a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a>
+    <a href="/terms.html" style="color:#aaa; text-decoration:none;">Terms</a>
+    <a href="/contact.html" style="color:#aaa; text-decoration:none;">Contact</a>
+  </div>
+  <p style="margin:10px 0 0 0; color:#888;">© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
 
-<!-- =====================================
-SCROLL TO TOP
-===================================== -->
-
-<button id="scrollTop" title="Go to Top">
-
-⬆
-
-</button>
-
-<!-- =====================================
-MAIN JS
-===================================== -->
+<button id="scrollTop" title="Go to Top">⬆</button>
 
 <script src="js/main.js"></script>
-
 <script>
-
-document.getElementById("current-year").textContent =
-new Date().getFullYear();
-
+  document.addEventListener("DOMContentLoaded", function() {
+    let dynHeader = document.querySelector('#header-placeholder');
+    if (dynHeader) dynHeader.remove();
+    let dynFooter = document.querySelector('#footer-placeholder');
+    if (dynFooter) dynFooter.remove();
+  });
 </script>
 
 <!-- =====================================
 SEO SCHEMA
 ===================================== -->
-
 <script type="application/ld+json">
-
 {
-"@context":"https://schema.org",
-
-"@type":"WebPage",
-
-"name":"ITI Result",
-
-"url":"https://itistudycentre.in/iti-result.html",
-
-"description":"Official ITI Result, Download Marksheet, Download Certificate, Marksheet Verification, Certificate Verification, ITI Admit Card, SCVT Student Login, ITI Search and Grievance Services.",
-
-"inLanguage":"hi-IN",
-
-"isPartOf":{
-
-"@type":"WebSite",
-
-"name":"ITI Study Centre",
-
-"url":"https://itistudycentre.in"
-
-},
-
-"publisher":{
-
-"@type":"Organization",
-
-"name":"ITI Study Centre",
-
-"url":"https://itistudycentre.in"
-
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"ITI Result",
+  "url":"https://itistudycentre.in/iti-result.html",
+  "description":"Official ITI Result, Download Marksheet, Download Certificate, Marksheet Verification, Certificate Verification, ITI Admit Card, SCVT Student Login, ITI Search and Grievance Services.",
+  "inLanguage":"hi-IN",
+  "isPartOf":{
+    "@type":"WebSite",
+    "name":"ITI Study Centre",
+    "url":"https://itistudycentre.in"
+  },
+  "publisher":{
+    "@type":"Organization",
+    "name":"ITI Study Centre",
+    "url":"https://itistudycentre.in"
+  }
 }
-
-}
-
 </script>
 
 </body>
-
 </html>
