@@ -156,12 +156,12 @@
       transform: scale(1.02);
     }
 
-    /* ----- Common Buttons ----- */
+    /* ----- Common Buttons (CLEAN & VISIBLE) ----- */
     .btn {
       display: inline-block;
       padding: 10px 25px;
       background: #003366;
-      color: white;
+      color: #ffffff !important;
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
@@ -180,14 +180,16 @@
       background: #0066cc;
     }
     .news-btn {
+      display: inline-block;
       background: #003366;
       padding: 8px 20px;
       border-radius: 5px;
-      color: white;
+      color: #ffffff !important;
       text-decoration: none;
       font-weight: bold;
-      display: inline-block;
       transition: 0.3s;
+      border: none;
+      cursor: pointer;
     }
     .news-btn:hover {
       background: #002244;
@@ -228,8 +230,10 @@
       flex: 1;
     }
     .feature-card .news-btn {
-      align-self: flex-start;
-      margin-top: 10px;
+      align-self: center;
+      margin-top: 15px;
+      width: auto;
+      text-align: center;
     }
   </style>
 
@@ -376,7 +380,7 @@
 </section>
 
 <!-- =========================================
-    ITI NOTES (सुपर-क्लीन)
+    ITI NOTES (बटन साफ-सुथरे)
 ========================================= -->
 <section class="container">
   <div class="card">
@@ -386,7 +390,7 @@
 
       <div class="feature-card">
         <h3>🔧 Fitter Notes</h3>
-        <p>Fitter Trade के सभी Chapter Wise Theory Notes, Study Material एवं भविष्य में PDF उपलब्ध कराए जाएंगे।</p>
+        <p>Fitter Trade के सभी Chapter Wise Theory Notes, Study Material एवं PDF उपलब्ध कराए जाएंगे।</p>
         <a href="notes/fitter/index.html" class="news-btn">🔧 Click Here →</a>
       </div>
 
@@ -404,7 +408,7 @@
 
       <div class="feature-card">
         <h3>💼 Employability Skills</h3>
-        <p>ITI विद्यार्थियों के लिए Employability Skills के Module Wise Theory Notes एवं Question Bank।</p>
+        <p>Employability Skills के Module Wise Theory Notes एवं Question Bank उपलब्ध हैं।</p>
         <a href="notes/employability-skills/index.html" class="news-btn">💼 Click Here →</a>
       </div>
 
@@ -413,7 +417,7 @@
 </section>
 
 <!-- =========================================
-    ENGINEERING NOTES (सुपर-क्लीन)
+    ENGINEERING NOTES (बटन साफ-सुथरे)
 ========================================= -->
 <section class="container">
   <div class="card">
@@ -511,3 +515,4 @@
 
 </body>
 </html>
+
