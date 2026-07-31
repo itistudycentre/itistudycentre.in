@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employability Skills – Chapter Wise Index | ITI Study Centre</title>
-  <meta name="description" content="Complete chapter wise index of Employability Skills modules for 1st and 2nd year ITI students. Bilingual (Hindi + English) notes.">
-  <meta name="keywords" content="Employability Skills, Chapters, Modules, ITI Notes, ES Notes, Hindi, English">
+  <title>Employability Skills – Complete Index | ITI Study Centre</title>
+  <meta name="description" content="Complete index of Employability Skills modules for 1st and 2nd year ITI students. Bilingual (Hindi + English) chapter list.">
+  <meta name="keywords" content="Employability Skills, Modules, 1st Year, 2nd Year, ITI Notes, ES Notes, Hindi, English">
   <meta name="author" content="ITI Study Centre">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="canonical" href="https://www.itistudycentre.in/notes/employability-skills/index.html">
 
   <style>
-    /* ---- Search Box ---- */
+    /* ---- Search ---- */
     .search-section {
       display: flex;
       gap: 10px;
@@ -57,7 +57,7 @@
       .search-section button { width: 100%; padding: 12px; min-width: unset; }
     }
 
-    /* ---- Year Tabs ---- */
+    /* ---- Tabs ---- */
     .tab-container {
       display: flex;
       flex-wrap: wrap;
@@ -92,7 +92,7 @@
       color: white;
     }
 
-    /* ---- Year Section ---- */
+    /* ---- Section ---- */
     .year-section {
       display: none;
     }
@@ -106,7 +106,7 @@
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.06);
       border: 1px solid #eee;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       overflow: hidden;
       transition: 0.3s;
     }
@@ -114,7 +114,7 @@
       box-shadow: 0 4px 18px rgba(0,0,0,0.1);
     }
     .module-header {
-      padding: 16px 20px;
+      padding: 14px 20px;
       background: #f8f9fa;
       cursor: pointer;
       display: flex;
@@ -127,15 +127,17 @@
       background: #eef0f2;
     }
     .module-header .code {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: #888;
       font-weight: bold;
       background: #e9ecef;
       padding: 2px 12px;
       border-radius: 12px;
+      min-width: 50px;
+      text-align: center;
     }
     .module-header .title {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: #003366;
       flex: 1;
@@ -144,23 +146,26 @@
     .module-header .title .hi {
       font-weight: 400;
       color: #555;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       margin-left: 10px;
     }
     .module-header .toggle-icon {
       font-size: 1.2rem;
       color: #003366;
       transition: 0.3s;
+      min-width: 30px;
+      text-align: center;
     }
     .module-header .toggle-icon.open {
       transform: rotate(180deg);
     }
 
-    /* ---- Chapters List ---- */
+    /* ---- Chapters List (Inner Content) ---- */
     .chapters-list {
-      padding: 0 20px 20px 20px;
+      padding: 0 20px 16px 20px;
       display: none;
       border-top: 1px solid #eee;
+      background: #fafcff;
     }
     .chapters-list.open {
       display: block;
@@ -168,49 +173,49 @@
     .chapter-item {
       display: flex;
       align-items: center;
-      padding: 10px 14px;
+      padding: 8px 14px;
       border-bottom: 1px dashed #f0f0f0;
       transition: 0.2s;
       border-radius: 6px;
-      gap: 12px;
+      gap: 10px;
     }
     .chapter-item:hover {
-      background: #f5f7fa;
+      background: #f0f4ff;
     }
     .chapter-item:last-child {
       border-bottom: none;
     }
     .chapter-item .num {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: bold;
       color: #888;
-      min-width: 28px;
+      min-width: 26px;
     }
     .chapter-item .en {
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       color: #222;
       font-weight: 500;
     }
     .chapter-item .hi {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: #666;
       font-weight: 400;
     }
     .chapter-item .arrow {
       margin-left: auto;
       color: #003366;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
     .chapter-item a {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       text-decoration: none;
       color: inherit;
       flex: 1;
     }
 
-    /* ---- Notice Box ---- */
+    /* ---- Notice ---- */
     .notice-box {
       background: #fff3cd;
       padding: 15px 20px;
@@ -261,27 +266,27 @@
     @media (max-width: 600px) {
       .module-header {
         flex-wrap: wrap;
-        gap: 6px;
+        gap: 4px;
       }
       .module-header .title {
-        font-size: 1rem;
-        margin: 0 5px;
+        font-size: 0.95rem;
+        margin: 0 4px;
       }
       .module-header .title .hi {
         display: block;
         margin-left: 0;
-        font-size: 0.8rem;
+        font-size: 0.78rem;
       }
       .chapter-item {
         flex-wrap: wrap;
-        gap: 4px;
+        gap: 2px;
       }
       .chapter-item .en {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
       }
       .tab-btn {
-        padding: 8px 16px;
-        font-size: 0.85rem;
+        padding: 8px 14px;
+        font-size: 0.8rem;
       }
     }
   </style>
@@ -314,7 +319,7 @@
 <div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
   <a href="/" style="text-decoration:none; color:#003366;">🏠 Home</a> &nbsp;›&nbsp;
   <a href="/iti-study-centre-notes.html" style="text-decoration:none; color:#003366;">ITI Notes</a> &nbsp;›&nbsp;
-  <span style="color:#555; font-weight:bold;">Employability Skills – Chapter Wise</span>
+  <span style="color:#555; font-weight:bold;">Employability Skills – Index</span>
 </div>
 
 <!-- =========================================
@@ -322,8 +327,8 @@
 ========================================= -->
 <section class="page-title">
   <div class="container">
-    <h1>📘 Employability Skills <span style="font-size:0.6em; color:#888;">Chapter Wise</span></h1>
-    <p>सभी Modules के Chapters की पूरी सूची — हिंदी + English में</p>
+    <h1>📘 Employability Skills <span style="font-size:0.6em; color:#888;">Complete Index</span></h1>
+    <p>सभी Modules की पूरी सूची — हिंदी + English में</p>
   </div>
 </section>
 
@@ -331,12 +336,12 @@
     SEARCH
 ========================================= -->
 <section class="search-section container">
-  <input type="text" id="chapterSearch" placeholder="Search Module or Chapter (English / Hindi)...">
+  <input type="text" id="chapterSearch" placeholder="Search Module or Chapter...">
   <button onclick="filterChapters()">🔍 Search</button>
 </section>
 
 <!-- =========================================
-    YEAR TABS
+    TABS
 ========================================= -->
 <div class="container">
   <div class="tab-container">
@@ -347,21 +352,21 @@
 </div>
 
 <!-- =========================================
-    YEAR 1 SECTION
+    1ST YEAR
 ========================================= -->
 <div id="year1" class="year-section active">
   <div class="container" id="year1-container"></div>
 </div>
 
 <!-- =========================================
-    YEAR 2 SECTION
+    2ND YEAR
 ========================================= -->
 <div id="year2" class="year-section">
   <div class="container" id="year2-container"></div>
 </div>
 
 <!-- =========================================
-    AI SECTION
+    AI MODULE
 ========================================= -->
 <div id="ai" class="year-section">
   <div class="container" id="ai-container"></div>
@@ -373,7 +378,7 @@
 <section class="container">
   <div class="notice-box">
     <h3>📢 वर्तमान स्थिति</h3>
-    <p>सभी Chapters के Notes, Question Bank और Practice Sets जल्द ही उपलब्ध कराए जाएंगे। <strong>हर Chapter पर क्लिक करके आप उसका पेज खोल सकते हैं।</strong></p>
+    <p>सभी Chapters के Notes, Question Bank और Practice Sets जल्द ही उपलब्ध कराए जाएंगे। <strong>हर Module पर क्लिक करके आप उसके अंदर के सभी Chapters देख सकते हैं।</strong></p>
   </div>
 </section>
 
@@ -417,710 +422,133 @@
 <script src="/js/main.js"></script>
 <script>
   // ============================================================
-  //  DATA: सभी Modules के Chapters (बिलिंगुअल)
+  //  DATA: 1st Year, 2nd Year, AI Module (सिर्फ Main Headings)
   // ============================================================
   const modulesData = {
     year1: [
-      { id: '1.1', name: 'Importance of Employability Skills', nameHi: 'एम्प्लॉयबिलिटी स्किल्स का महत्व',
-        chapters: [
-          { en: 'What are Employability Skills?', hi: 'एम्प्लॉयबिलिटी स्किल्स क्या हैं?' },
-          { en: 'Importance of Employability Skills', hi: 'एम्प्लॉयबिलिटी स्किल्स का महत्व' },
-          { en: 'Self-Learner & Growth Mindset', hi: 'सेल्फ-लर्नर और ग्रोथ माइंडसेट' }
-        ] },
-      { id: '1.2', name: 'Learning Employability Skills Online', nameHi: 'ऑनलाइन एम्प्लॉयबिलिटी स्किल्स सीखना',
-        chapters: [
-          { en: 'What is E-Learning?', hi: 'ई-लर्निंग क्या है?' },
-          { en: 'Benefits of E-Learning', hi: 'ई-लर्निंग के फायदे' },
-          { en: 'How to Login to E-Learning Portals', hi: 'ई-लर्निंग पोर्टल्स पर लॉगिन कैसे करें' }
-        ] },
-      { id: '1.3', name: 'Explore the Future of Work', nameHi: 'भविष्य के काम की खोज',
-        chapters: [
-          { en: 'Post-COVID Job Market', hi: 'कोविड के बाद का जॉब मार्केट' },
-          { en: 'The Future of Work', hi: 'काम का भविष्य' },
-          { en: 'Skills for the Future of Work', hi: 'भविष्य के काम के लिए स्किल्स' }
-        ] },
-      { id: '2.1', name: 'My Values and Ethics', nameHi: 'मेरे मूल्य और नैतिकता',
-        chapters: [
-          { en: 'What are Values & Ethics?', hi: 'मूल्य और नैतिकता क्या हैं?' },
-          { en: 'How Ethics & Values Impact Behavior', hi: 'नैतिकता और मूल्य व्यवहार को कैसे प्रभावित करते हैं' },
-          { en: 'Identify My Personal Values', hi: 'मेरे व्यक्तिगत मूल्यों को पहचानें' }
-        ] },
-      { id: '2.2', name: 'Our Constitution: Guiding Principles', nameHi: 'हमारा संविधान: मार्गदर्शक सिद्धांत',
-        chapters: [
-          { en: 'Introduction to Indian Constitution', hi: 'भारतीय संविधान का परिचय' },
-          { en: 'Guiding Principles of the Constitution', hi: 'संविधान के मार्गदर्शक सिद्धांत' },
-          { en: 'Rights and Duties as an Indian Citizen', hi: 'भारतीय नागरिक के अधिकार और कर्तव्य' }
-        ] },
-      { id: '2.3', name: 'Protecting Our Environment', nameHi: 'हमारे पर्यावरण की रक्षा',
-        chapters: [
-          { en: 'What is Environmental Crisis?', hi: 'पर्यावरणीय संकट क्या है?' },
-          { en: 'Need for Sustainable Environment', hi: 'टिकाऊ पर्यावरण की आवश्यकता' },
-          { en: 'Developing a Green Lifestyle', hi: 'ग्रीन लाइफस्टाइल विकसित करना' }
-        ] },
-      { id: '3.1', name: '21st Century Employability Skills', nameHi: '21वीं सदी की एम्प्लॉयबिलिटी स्किल्स',
-        chapters: [
-          { en: 'Introduction to 21st Century', hi: '21वीं सदी का परिचय' },
-          { en: 'How to Assess Your Skills?', hi: 'अपनी स्किल्स का आकलन कैसे करें?' },
-          { en: 'Plan for Skill Development', hi: 'स्किल डेवलपमेंट की योजना' }
-        ] },
-      { id: '3.2', name: 'Know Yourself', nameHi: 'खुद को जानें',
-        chapters: [
-          { en: 'What Does "Know Yourself" Mean?', hi: '"खुद को जानें" का क्या मतलब है?' },
-          { en: 'What are Strengths?', hi: 'ताकत (Strengths) क्या हैं?' },
-          { en: 'Describing Qualities, Abilities & Talents', hi: 'गुणों, क्षमताओं और प्रतिभाओं का वर्णन' }
-        ] },
-      { id: '3.3', name: 'Behaviour and Attitude', nameHi: 'व्यवहार और दृष्टिकोण',
-        chapters: [
-          { en: 'What are Behavioural Skills?', hi: 'व्यवहारिक स्किल्स क्या हैं?' },
-          { en: 'Developing a Positive Attitude', hi: 'सकारात्मक दृष्टिकोण विकसित करना' },
-          { en: 'Self-Motivation', hi: 'सेल्फ-मोटिवेशन' }
-        ] },
-      { id: '3.4', name: 'Critical Thinking & Decision Making', nameHi: 'आलोचनात्मक सोच और निर्णय लेना',
-        chapters: [
-          { en: 'What is Critical Thinking?', hi: 'आलोचनात्मक सोच क्या है?' },
-          { en: 'How to Make Decisions', hi: 'निर्णय कैसे लें?' },
-          { en: 'Practice Decision Making', hi: 'निर्णय लेने का अभ्यास' }
-        ] },
-      { id: '3.5', name: 'Time Management in the Workplace', nameHi: 'कार्यस्थल पर समय प्रबंधन',
-        chapters: [
-          { en: 'What is Time Management?', hi: 'समय प्रबंधन क्या है?' },
-          { en: 'Why is Time Management Important?', hi: 'समय प्रबंधन क्यों महत्वपूर्ण है?' },
-          { en: 'How to Manage Time in Daily Life', hi: 'दैनिक जीवन में समय कैसे प्रबंधित करें' }
-        ] },
-      { id: '3.6', name: 'Problem Solving', nameHi: 'समस्या समाधान',
-        chapters: [
-          { en: 'Creative Problem Solving Techniques', hi: 'रचनात्मक समस्या समाधान तकनीक' },
-          { en: 'Practicing Problem Solving', hi: 'समस्या समाधान का अभ्यास' }
-        ] },
-      { id: '4.1', name: 'Motivation to Learn English', nameHi: 'अंग्रेज़ी सीखने की प्रेरणा',
-        chapters: [
-          { en: 'Importance of English Language', hi: 'अंग्रेज़ी भाषा का महत्व' },
-          { en: 'Fun Ways to Learn English', hi: 'अंग्रेज़ी सीखने के मजेदार तरीके' }
-        ] },
-      { id: '4.2', name: 'Naming Words', nameHi: 'नाम देने वाले शब्द',
-        chapters: [
-          { en: 'Meaning of Naming Words (Common Nouns)', hi: 'नाम देने वाले शब्द (कॉमन नाउन) का अर्थ' },
-          { en: 'Naming Words with Different Meanings', hi: 'अलग-अलग अर्थ वाले नाम देने वाले शब्द' }
-        ] },
-      { id: '4.3', name: 'Naming Words – Singular and Plural', nameHi: 'नाम देने वाले शब्द – एकवचन और बहुवचन',
-        chapters: [
-          { en: 'Singular vs Plural Forms', hi: 'एकवचन और बहुवचन के रूप' },
-          { en: 'Using Singular and Plural Correctly', hi: 'एकवचन और बहुवचन का सही उपयोग' }
-        ] },
-      { id: '4.4', name: 'Pronouns', nameHi: 'सर्वनाम',
-        chapters: [
-          { en: 'Purpose and Usage of Pronouns', hi: 'सर्वनाम का उद्देश्य और उपयोग' },
-          { en: 'Using Appropriate Pronouns', hi: 'उचित सर्वनाम का उपयोग' }
-        ] },
-      { id: '4.5', name: 'Action Words', nameHi: 'क्रिया शब्द',
-        chapters: [
-          { en: 'Action Words (Verbs)', hi: 'क्रिया शब्द (वर्ब्स)' },
-          { en: 'Using Action Words Correctly in Sentences', hi: 'वाक्यों में क्रिया शब्दों का सही उपयोग' }
-        ] },
-      { id: '4.6', name: 'Describing Objects, Surroundings and Processes', nameHi: 'वस्तुओं, परिवेश और प्रक्रियाओं का वर्णन',
-        chapters: [
-          { en: 'Describing Words (Adjectives)', hi: 'वर्णनात्मक शब्द (एडजेक्टिव्स)' },
-          { en: 'Describing Size, Shape, Texture and Color', hi: 'आकार, आकृति, बनावट और रंग का वर्णन' }
-        ] },
-      { id: '4.7', name: 'Introduction to Punctuation', nameHi: 'विराम चिह्न का परिचय',
-        chapters: [
-          { en: 'Importance of Punctuation Marks', hi: 'विराम चिह्नों का महत्व' },
-          { en: 'Using Punctuation Marks Correctly', hi: 'विराम चिह्नों का सही उपयोग' }
-        ] },
-      { id: '4.8', name: 'Kinds of Sentences – Introduction', nameHi: 'वाक्यों के प्रकार – परिचय',
-        chapters: [
-          { en: 'Different Types of Sentences', hi: 'विभिन्न प्रकार के वाक्य' },
-          { en: 'Making Sentences for Different Situations', hi: 'विभिन्न स्थितियों के लिए वाक्य बनाना' }
-        ] },
-      { id: '4.9', name: 'Writing Simple Sentences', nameHi: 'सरल वाक्य लिखना',
-        chapters: [
-          { en: 'Importance of Word Order', hi: 'शब्द क्रम का महत्व' },
-          { en: 'Rearranging Words to Create Meaningful Sentences', hi: 'अर्थपूर्ण वाक्य बनाने के लिए शब्दों को पुनर्व्यवस्थित करना' }
-        ] },
-      { id: '4.10', name: 'Reading Activity', nameHi: 'पठन गतिविधि',
-        chapters: [
-          { en: 'Strategies to Become a Better Reader', hi: 'बेहतर पाठक बनने की रणनीतियाँ' },
-          { en: 'Reading Posters and Signs', hi: 'पोस्टर और संकेत पढ़ना' }
-        ] },
-      { id: '4.11', name: 'Speaking', nameHi: 'बोलना',
-        chapters: [
-          { en: 'Appropriate Expressions for Speaking', hi: 'बोलने के लिए उपयुक्त अभिव्यक्तियाँ' },
-          { en: 'Communicating Your Views Clearly', hi: 'अपने विचारों को स्पष्ट रूप से संप्रेषित करना' }
-        ] },
-      { id: '4.12', name: 'Listening', nameHi: 'सुनना',
-        chapters: [
-          { en: 'Purpose and Importance of Listening', hi: 'सुनने का उद्देश्य और महत्व' },
-          { en: 'Practicing Listening to Follow Instructions', hi: 'निर्देशों का पालन करने के लिए सुनने का अभ्यास' }
-        ] },
-      { id: '4.13', name: 'Talking about Likes and Dislikes', nameHi: 'पसंद और नापसंद के बारे में बात करना',
-        chapters: [
-          { en: 'Difference between Likes and Dislikes', hi: 'पसंद और नापसंद में अंतर' },
-          { en: 'How to Share Your Likes and Dislikes', hi: 'अपनी पसंद-नापसंद कैसे साझा करें' },
-          { en: 'Talking about Others\' Likes and Dislikes', hi: 'दूसरों की पसंद-नापसंद के बारे में बात करना' }
-        ] },
-      { id: '4.14', name: 'Greetings and Self-Introduction', nameHi: 'अभिवादन और आत्म-परिचय',
-        chapters: [
-          { en: 'Formal and Informal Greetings', hi: 'औपचारिक और अनौपचारिक अभिवादन' },
-          { en: 'Effective Self-Introduction', hi: 'प्रभावी आत्म-परिचय' }
-        ] },
-      { id: '4.15', name: 'Asking and Responding to Questions', nameHi: 'प्रश्न पूछना और उत्तर देना',
-        chapters: [
-          { en: 'Difference between Questions and Responses', hi: 'प्रश्न और उत्तर में अंतर' },
-          { en: 'Asking and Responding Correctly', hi: 'सही ढंग से प्रश्न पूछना और उत्तर देना' }
-        ] },
-      { id: '4.16', name: 'Group Discussion on Simple Topics', nameHi: 'सरल विषयों पर समूह चर्चा',
-        chapters: [
-          { en: 'Expressing Thoughts Clearly in Group', hi: 'समूह में विचारों को स्पष्ट रूप से व्यक्त करना' },
-          { en: 'Useful Expressions for Discussion', hi: 'चर्चा के लिए उपयोगी अभिव्यक्तियाँ' }
-        ] },
-      { id: '4.17', name: 'Telephone Skills', nameHi: 'टेलीफोन कौशल',
-        chapters: [
-          { en: 'Three Phases of a Call', hi: 'कॉल के तीन चरण' },
-          { en: 'Professional Phrases for Calls', hi: 'कॉल के लिए पेशेवर वाक्यांश' }
-        ] },
-      { id: '4.18', name: 'Reading and Understanding Job Descriptions', nameHi: 'नौकरी विवरण पढ़ना और समझना',
-        chapters: [
-          { en: 'What are Job Descriptions?', hi: 'नौकरी विवरण क्या हैं?' },
-          { en: 'Relating Skills to Job Description', hi: 'स्किल्स को नौकरी विवरण से जोड़ना' }
-        ] },
-      { id: '4.19', name: 'Speak and Share Information about Workplace', nameHi: 'कार्यस्थल के बारे में जानकारी साझा करें',
-        chapters: [
-          { en: 'Sharing Information about a Job', hi: 'नौकरी के बारे में जानकारी साझा करना' },
-          { en: 'Communicating Views about Workplace', hi: 'कार्यस्थल के बारे में विचार व्यक्त करना' }
-        ] },
-      { id: '4.20', name: 'Writing Applications & Cover Letters', nameHi: 'आवेदन और कवर लेटर लिखना',
-        chapters: [
-          { en: 'How to Write Job Applications', hi: 'नौकरी के आवेदन कैसे लिखें' },
-          { en: 'Types of Cover Letters', hi: 'कवर लेटर के प्रकार' }
-        ] },
-      { id: '5.1', name: 'Importance of Communication', nameHi: 'संचार का महत्व',
-        chapters: [
-          { en: 'Importance of Communication', hi: 'संचार का महत्व' },
-          { en: 'Characteristics of Effective Communication', hi: 'प्रभावी संचार की विशेषताएँ' },
-          { en: 'Types of Communication', hi: 'संचार के प्रकार' }
-        ] },
-      { id: '5.2', name: 'Verbal Communication: Speaking', nameHi: 'मौखिक संचार: बोलना',
-        chapters: [
-          { en: 'What is Verbal Communication?', hi: 'मौखिक संचार क्या है?' },
-          { en: 'Spoken vs Written Communication', hi: 'बोली गई बनाम लिखित संचार' },
-          { en: 'Importance of Good Verbal Communication', hi: 'अच्छे मौखिक संचार का महत्व' }
-        ] },
-      { id: '5.3', name: 'Verbal Communication: Writing', nameHi: 'मौखिक संचार: लिखना',
-        chapters: [
-          { en: 'Letter Writing', hi: 'पत्र लेखन' },
-          { en: 'Email Writing', hi: 'ईमेल लेखन' },
-          { en: 'Resume Writing', hi: 'रेज़्यूमे लेखन' }
-        ] },
-      { id: '5.4', name: 'Non-Verbal Communication', nameHi: 'अशाब्दिक संचार',
-        chapters: [
-          { en: 'Meaning of Non-Verbal Communication', hi: 'अशाब्दिक संचार का अर्थ' },
-          { en: 'Appropriate Spatial Distance', hi: 'उचित स्थानिक दूरी' },
-          { en: 'Body Movements and Appearance', hi: 'शारीरिक गतिविधियाँ और उपस्थिति' }
-        ] },
-      { id: '5.5', name: 'Practicing Effective Communication', nameHi: 'प्रभावी संचार का अभ्यास',
-        chapters: [
-          { en: 'Identifying Formal and Informal Communication', hi: 'औपचारिक और अनौपचारिक संचार की पहचान' },
-          { en: 'Effective Self-Introduction', hi: 'प्रभावी आत्म-परिचय' }
-        ] },
-      { id: '5.6', name: 'Workplace Communication: Introduction', nameHi: 'कार्यस्थल संचार: परिचय',
-        chapters: [
-          { en: 'Effective Communication at Workplace', hi: 'कार्यस्थल पर प्रभावी संचार' },
-          { en: 'Barriers to Effective Communication', hi: 'प्रभावी संचार में बाधाएँ' },
-          { en: 'Text Messaging at Work', hi: 'काम पर टेक्स्ट मैसेजिंग' }
-        ] },
-      { id: '5.7', name: 'Effective Team Work', nameHi: 'प्रभावी टीम वर्क',
-        chapters: [
-          { en: 'Importance of Teamwork', hi: 'टीम वर्क का महत्व' },
-          { en: 'How to Work Well in a Team', hi: 'टीम में अच्छी तरह से कैसे काम करें' }
-        ] },
-      { id: '5.8', name: 'Managing Conflicts', nameHi: 'संघर्ष प्रबंधन',
-        chapters: [
-          { en: 'What is Workplace Conflict?', hi: 'कार्यस्थल संघर्ष क्या है?' },
-          { en: 'Common Causes of Workplace Conflict', hi: 'कार्यस्थल संघर्ष के सामान्य कारण' },
-          { en: 'Resolving Conflict Effectively', hi: 'संघर्ष को प्रभावी ढंग से हल करना' }
-        ] },
-      { id: '5.9', name: 'Handling Criticism', nameHi: 'आलोचना को संभालना',
-        chapters: [
-          { en: 'Constructive vs Unfair Criticism', hi: 'रचनात्मक बनाम अनुचित आलोचना' },
-          { en: 'Dealing with Criticism at Work', hi: 'काम पर आलोचना से निपटना' }
-        ] },
-      { id: '5.10', name: 'Assessing Your Communication Ability', nameHi: 'अपनी संचार क्षमता का आकलन',
-        chapters: [
-          { en: 'Identifying Communication Strengths', hi: 'संचार में ताकत की पहचान' },
-          { en: 'Areas of Improvement in Communication', hi: 'संचार में सुधार के क्षेत्र' }
-        ] },
-      { id: '6.1', name: 'Introduction to Digital Skills', nameHi: 'डिजिटल स्किल्स का परिचय',
-        chapters: [
-          { en: 'What is Digital Literacy?', hi: 'डिजिटल साक्षरता क्या है?' },
-          { en: 'Digital Technology in Everyday Life', hi: 'दैनिक जीवन में डिजिटल तकनीक' },
-          { en: 'Digital Skills Required at Work', hi: 'काम के लिए आवश्यक डिजिटल स्किल्स' }
-        ] },
-      { id: '6.2', name: 'Basics of Computers', nameHi: 'कंप्यूटर की बुनियादी बातें',
-        chapters: [
-          { en: 'Parts of a Computer', hi: 'कंप्यूटर के भाग' },
-          { en: 'Functions of Important Parts', hi: 'महत्वपूर्ण भागों के कार्य' }
-        ] },
-      { id: '6.3', name: 'Exploring a Computer', nameHi: 'कंप्यूटर की खोज',
-        chapters: [
-          { en: 'Starting and Shutting Down', hi: 'स्टार्ट और शट डाउन' },
-          { en: 'Connecting Devices to a Computer', hi: 'कंप्यूटर से डिवाइस कनेक्ट करना' }
-        ] },
-      { id: '6.4', name: 'Exploring Windows Operating System', nameHi: 'विंडोज़ ऑपरेटिंग सिस्टम की खोज',
-        chapters: [
-          { en: 'Windows 7 vs Windows 8', hi: 'विंडोज़ 7 बनाम विंडोज़ 8' },
-          { en: 'Features of Windows 10', hi: 'विंडोज़ 10 की विशेषताएँ' }
-        ] },
-      { id: '6.5', name: 'Creating and Saving Files', nameHi: 'फाइलें बनाना और सहेजना',
-        chapters: [
-          { en: 'How to Create Files', hi: 'फाइलें कैसे बनाएँ' },
-          { en: 'Safe Ways to Save Information', hi: 'जानकारी सहेजने के सुरक्षित तरीके' },
-          { en: 'Transferring Files', hi: 'फाइलों को स्थानांतरित करना' }
-        ] },
-      { id: '6.6', name: 'Basics of MS Word', nameHi: 'एमएस वर्ड की बुनियादी बातें',
-        chapters: [
-          { en: 'Features of MS Word', hi: 'एमएस वर्ड की विशेषताएँ' },
-          { en: 'Creating and Saving MS Word Files', hi: 'एमएस वर्ड फाइलें बनाना और सहेजना' }
-        ] },
-      { id: '6.7', name: 'Creating Documents on MS Word', nameHi: 'एमएस वर्ड पर दस्तावेज़ बनाना',
-        chapters: [
-          { en: 'Basic Formatting in MS Word', hi: 'एमएस वर्ड में बुनियादी फ़ॉर्मेटिंग' },
-          { en: 'Keyboard Shortcuts', hi: 'कीबोर्ड शॉर्टकट' },
-          { en: 'Printing a Document', hi: 'दस्तावेज़ प्रिंट करना' }
-        ] },
-      { id: '6.8', name: 'Basics of MS Excel', nameHi: 'एमएस एक्सेल की बुनियादी बातें',
-        chapters: [
-          { en: 'Importance of MS Excel', hi: 'एमएस एक्सेल का महत्व' },
-          { en: 'Entering Data in Excel', hi: 'एक्सेल में डेटा डालना' }
-        ] },
-      { id: '6.9', name: 'Simple Functions on MS Excel', nameHi: 'एमएस एक्सेल पर सरल कार्य',
-        chapters: [
-          { en: 'Saving and Printing in Excel', hi: 'एक्सेल में सहेजना और प्रिंट करना' },
-          { en: 'SUM and AVERAGE Functions', hi: 'SUM और AVERAGE फंक्शन' }
-        ] },
-      { id: '6.10', name: 'Introduction to the Internet', nameHi: 'इंटरनेट का परिचय',
-        chapters: [
-          { en: 'Internet and Its Benefits', hi: 'इंटरनेट और इसके लाभ' },
-          { en: 'Accessing the Internet', hi: 'इंटरनेट का उपयोग करना' }
-        ] },
-      { id: '6.11', name: 'Using Search Engines', nameHi: 'सर्च इंजन का उपयोग',
-        chapters: [
-          { en: 'What are Search Engines?', hi: 'सर्च इंजन क्या हैं?' },
-          { en: 'Google and Other Search Engines', hi: 'गूगल और अन्य सर्च इंजन' },
-          { en: 'Using Keywords Effectively', hi: 'कीवर्ड का प्रभावी उपयोग' }
-        ] },
-      { id: '6.12', name: 'Searching for the Right Information Online', nameHi: 'सही जानकारी ऑनलाइन खोजना',
-        chapters: [
-          { en: 'Searching for Important Information', hi: 'महत्वपूर्ण जानकारी खोजना' },
-          { en: 'Government Portals (India.gov.in, IRCTC, SWAYAM)', hi: 'सरकारी पोर्टल्स' }
-        ] },
-      { id: '6.13', name: 'Social Media', nameHi: 'सोशल मीडिया',
-        chapters: [
-          { en: 'What is Social Media?', hi: 'सोशल मीडिया क्या है?' },
-          { en: 'Social Media Profiles', hi: 'सोशल मीडिया प्रोफाइल' },
-          { en: 'Safety Measures on Social Media', hi: 'सोशल मीडिया पर सुरक्षा उपाय' }
-        ] },
-      { id: '6.14', name: 'Social Media for Professional Development', nameHi: 'सोशल मीडिया पेशेवर विकास के लिए',
-        chapters: [
-          { en: 'Using Social Media for Professional Growth', hi: 'पेशेवर विकास के लिए सोशल मीडिया का उपयोग' },
-          { en: 'Responsible Usage of Social Media', hi: 'सोशल मीडिया का जिम्मेदार उपयोग' },
-          { en: 'Success Stories', hi: 'सफलता की कहानियाँ' }
-        ] },
-      { id: '6.15', name: 'Internet Safety', nameHi: 'इंटरनेट सुरक्षा',
-        chapters: [
-          { en: 'Basics of Internet Safety', hi: 'इंटरनेट सुरक्षा की बुनियादी बातें' },
-          { en: 'SafeSearch', hi: 'सुरक्षित खोज' },
-          { en: 'Cyber Crime', hi: 'साइबर अपराध' }
-        ] },
-      { id: '6.16', name: 'Communication Using Email', nameHi: 'ईमेल का उपयोग करके संचार',
-        chapters: [
-          { en: 'Features of Email', hi: 'ईमेल की विशेषताएँ' },
-          { en: 'Creating and Using Email Account', hi: 'ईमेल खाता बनाना और उपयोग करना' },
-          { en: 'Attachments, CC and BCC', hi: 'अटैचमेंट, CC और BCC' }
-        ] },
-      { id: '6.17', name: 'Introduction to Mobile Applications', nameHi: 'मोबाइल एप्लिकेशन का परिचय',
-        chapters: [
-          { en: 'Benefits of Mobile Apps', hi: 'मोबाइल ऐप्स के लाभ' },
-          { en: 'Using Mobile for Learning', hi: 'सीखने के लिए मोबाइल का उपयोग' }
-        ] },
-      { id: '6.18', name: 'Internet of Things (IoT)', nameHi: 'इंटरनेट ऑफ थिंग्स (IoT)',
-        chapters: [
-          { en: 'Digital Devices in Daily Life', hi: 'दैनिक जीवन में डिजिटल डिवाइस' },
-          { en: 'Siri and Alexa', hi: 'सिरी और एलेक्सा' }
-        ] },
-      { id: '6.19', name: 'Using Online Meeting Tools for Interviews', nameHi: 'साक्षात्कार के लिए ऑनलाइन मीटिंग टूल्स',
-        chapters: [
-          { en: 'Online Meeting Tools', hi: 'ऑनलाइन मीटिंग टूल्स' },
-          { en: 'How to Use Zoom', hi: 'Zoom का उपयोग कैसे करें' },
-          { en: 'How to Use Google Meet', hi: 'Google Meet का उपयोग कैसे करें' }
-        ] },
-      { id: '6.20', name: 'Exploring Popular Sites for Learning and Career Growth', nameHi: 'सीखने और करियर विकास के लिए लोकप्रिय साइट्स',
-        chapters: [
-          { en: 'Popular Learning Sites (Khan Academy, Coursera, NPTEL)', hi: 'लोकप्रिय लर्निंग साइट्स' },
-          { en: 'Using Internet for Continuous Professional Development', hi: 'निरंतर पेशेवर विकास के लिए इंटरनेट का उपयोग' }
-        ] }
+      { id: '1.1', name: 'Importance of Employability Skills', nameHi: 'एम्प्लॉयबिलिटी स्किल्स का महत्व' },
+      { id: '1.2', name: 'Learning Employability Skills Online', nameHi: 'ऑनलाइन एम्प्लॉयबिलिटी स्किल्स सीखना' },
+      { id: '1.3', name: 'Explore the Future of Work', nameHi: 'भविष्य के काम की खोज' },
+      { id: '2.1', name: 'My Values and Ethics', nameHi: 'मेरे मूल्य और नैतिकता' },
+      { id: '2.2', name: 'Our Constitution: Guiding Principles', nameHi: 'हमारा संविधान: मार्गदर्शक सिद्धांत' },
+      { id: '2.3', name: 'Protecting Our Environment', nameHi: 'हमारे पर्यावरण की रक्षा' },
+      { id: '3.1', name: '21st Century Employability Skills', nameHi: '21वीं सदी की एम्प्लॉयबिलिटी स्किल्स' },
+      { id: '3.2', name: 'Know Yourself', nameHi: 'खुद को जानें' },
+      { id: '3.3', name: 'Behaviour and Attitude', nameHi: 'व्यवहार और दृष्टिकोण' },
+      { id: '3.4', name: 'Critical Thinking & Decision Making', nameHi: 'आलोचनात्मक सोच और निर्णय लेना' },
+      { id: '3.5', name: 'Time Management in the Workplace', nameHi: 'कार्यस्थल पर समय प्रबंधन' },
+      { id: '3.6', name: 'Problem Solving', nameHi: 'समस्या समाधान' },
+      { id: '4.1', name: 'Motivation to Learn English', nameHi: 'अंग्रेज़ी सीखने की प्रेरणा' },
+      { id: '4.2', name: 'Naming Words', nameHi: 'नाम देने वाले शब्द' },
+      { id: '4.3', name: 'Naming Words – Singular and Plural', nameHi: 'नाम देने वाले शब्द – एकवचन और बहुवचन' },
+      { id: '4.4', name: 'Pronouns', nameHi: 'सर्वनाम' },
+      { id: '4.5', name: 'Action Words', nameHi: 'क्रिया शब्द' },
+      { id: '4.6', name: 'Describing Objects, Surroundings and Processes', nameHi: 'वस्तुओं, परिवेश और प्रक्रियाओं का वर्णन' },
+      { id: '4.7', name: 'Introduction to Punctuation', nameHi: 'विराम चिह्न का परिचय' },
+      { id: '4.8', name: 'Kinds of Sentences – Introduction', nameHi: 'वाक्यों के प्रकार – परिचय' },
+      { id: '4.9', name: 'Writing Simple Sentences', nameHi: 'सरल वाक्य लिखना' },
+      { id: '5.1', name: 'Importance of Communication', nameHi: 'संचार का महत्व' },
+      { id: '5.2', name: 'Verbal Communication: Speaking', nameHi: 'मौखिक संचार: बोलना' },
+      { id: '5.3', name: 'Verbal Communication: Writing', nameHi: 'मौखिक संचार: लिखना' },
+      { id: '5.4', name: 'Non-Verbal Communication', nameHi: 'अशाब्दिक संचार' },
+      { id: '5.5', name: 'Practicing Effective Communication', nameHi: 'प्रभावी संचार का अभ्यास' },
+      { id: '5.6', name: 'Workplace Communication: Introduction', nameHi: 'कार्यस्थल संचार: परिचय' },
+      { id: '5.7', name: 'Effective Team Work', nameHi: 'प्रभावी टीम वर्क' },
+      { id: '5.8', name: 'Managing Conflicts', nameHi: 'संघर्ष प्रबंधन' },
+      { id: '5.9', name: 'Handling Criticism', nameHi: 'आलोचना को संभालना' },
+      { id: '5.10', name: 'Assessing Your Communication Ability', nameHi: 'अपनी संचार क्षमता का आकलन' },
+      { id: '6.1', name: 'Introduction to Digital Skills', nameHi: 'डिजिटल स्किल्स का परिचय' },
+      { id: '6.2', name: 'Basics of Computers', nameHi: 'कंप्यूटर की बुनियादी बातें' },
+      { id: '6.3', name: 'Exploring a Computer', nameHi: 'कंप्यूटर की खोज' },
+      { id: '6.4', name: 'Exploring Windows Operating System', nameHi: 'विंडोज़ ऑपरेटिंग सिस्टम की खोज' },
+      { id: '6.5', name: 'Creating and Saving Files', nameHi: 'फाइलें बनाना और सहेजना' },
+      { id: '6.6', name: 'Basics of MS Word', nameHi: 'एमएस वर्ड की बुनियादी बातें' },
+      { id: '6.7', name: 'Creating Documents on MS Word', nameHi: 'एमएस वर्ड पर दस्तावेज़ बनाना' },
+      { id: '6.8', name: 'Basics of MS Excel', nameHi: 'एमएस एक्सेल की बुनियादी बातें' },
+      { id: '6.9', name: 'Simple Functions on MS Excel', nameHi: 'एमएस एक्सेल पर सरल कार्य' },
+      { id: '6.10', name: 'Introduction to the Internet', nameHi: 'इंटरनेट का परिचय' },
+      { id: '6.11', name: 'Using Search Engines', nameHi: 'सर्च इंजन का उपयोग' },
+      { id: '6.12', name: 'Searching for the Right Information Online', nameHi: 'सही जानकारी ऑनलाइन खोजना' },
+      { id: '6.13', name: 'Social Media', nameHi: 'सोशल मीडिया' },
+      { id: '6.14', name: 'Social Media for Professional Development', nameHi: 'सोशल मीडिया पेशेवर विकास के लिए' },
+      { id: '6.15', name: 'Internet Safety', nameHi: 'इंटरनेट सुरक्षा' },
+      { id: '6.16', name: 'Communication Using Email', nameHi: 'ईमेल का उपयोग करके संचार' },
+      { id: '6.17', name: 'Introduction to Mobile Applications', nameHi: 'मोबाइल एप्लिकेशन का परिचय' },
+      { id: '6.18', name: 'Internet of Things (IoT)', nameHi: 'इंटरनेट ऑफ थिंग्स (IoT)' },
+      { id: '6.19', name: 'Using Online Meeting Tools for Interviews', nameHi: 'साक्षात्कार के लिए ऑनलाइन मीटिंग टूल्स' },
+      { id: '6.20', name: 'Exploring Popular Sites for Learning and Career Growth', nameHi: 'सीखने और करियर विकास के लिए लोकप्रिय साइट्स' }
     ],
     year2: [
-      { id: '7.1', name: 'Gender Stereotypes', nameHi: 'लैंगिक रूढ़ियाँ',
-        chapters: [
-          { en: 'Meaning of Gender Stereotype', hi: 'लैंगिक रूढ़ियों का अर्थ' },
-          { en: 'Identifying Gender Stereotypes', hi: 'लैंगिक रूढ़ियों की पहचान' },
-          { en: 'How Stereotypes Affect Daily Lives', hi: 'रूढ़ियाँ दैनिक जीवन को कैसे प्रभावित करती हैं' }
-        ] },
-      { id: '7.2', name: 'Understanding Gender-Based Discrimination', nameHi: 'लैंगिक भेदभाव को समझना',
-        chapters: [
-          { en: 'What is Discrimination?', hi: 'भेदभाव क्या है?' },
-          { en: 'Gender-Based Discrimination', hi: 'लैंगिक भेदभाव' }
-        ] },
-      { id: '7.3', name: 'Understanding Gender Equality', nameHi: 'लैंगिक समानता को समझना',
-        chapters: [
-          { en: 'Equality and Gender Equality', hi: 'समानता और लैंगिक समानता' },
-          { en: 'Importance of Gender Equality', hi: 'लैंगिक समानता का महत्व' },
-          { en: 'Gender Equality and Career Development', hi: 'लैंगिक समानता और करियर विकास' }
-        ] },
-      { id: '7.4', name: 'Diversity in the Workplace', nameHi: 'कार्यस्थल में विविधता',
-        chapters: [
-          { en: 'Meaning of Diversity in Workplace', hi: 'कार्यस्थल में विविधता का अर्थ' },
-          { en: 'Importance of Diversity in Workplace', hi: 'कार्यस्थल में विविधता का महत्व' },
-          { en: 'Barriers to Diversity', hi: 'विविधता में बाधाएँ' },
-          { en: 'Overcoming Barriers', hi: 'बाधाओं को दूर करना' }
-        ] },
-      { id: '7.5', name: 'Inclusion in the Workplace', nameHi: 'कार्यस्थल में समावेशन',
-        chapters: [
-          { en: 'Meaning of Inclusion in Workplace', hi: 'कार्यस्थल में समावेशन का अर्थ' },
-          { en: 'Importance of Inclusive Workplaces', hi: 'समावेशी कार्यस्थलों का महत्व' },
-          { en: 'Creating Inclusive Workplaces', hi: 'समावेशी कार्यस्थल बनाना' }
-        ] },
-      { id: '7.6', name: 'Sexual Harassment in the Workplace (POSH Act)', nameHi: 'कार्यस्थल पर यौन उत्पीड़न (POSH अधिनियम)',
-        chapters: [
-          { en: 'Meaning of Sexual Harassment', hi: 'यौन उत्पीड़न का अर्थ' },
-          { en: 'Provisions of POSH Act', hi: 'POSH अधिनियम के प्रावधान' },
-          { en: 'Do\'s and Don\'ts under POSH', hi: 'POSH के तहत Do\'s और Don\'ts' }
-        ] },
-      { id: '8.1', name: 'Introduction to Money Management', nameHi: 'धन प्रबंधन का परिचय',
-        chapters: [
-          { en: 'What is Financial Literacy?', hi: 'वित्तीय साक्षरता क्या है?' },
-          { en: 'Needs vs Wants vs Luxuries', hi: 'आवश्यकता बनाम चाहत बनाम विलासिता' },
-          { en: 'Calculating Income and Expenditure', hi: 'आय और व्यय की गणना' }
-        ] },
-      { id: '8.2', name: 'Basics of Banking', nameHi: 'बैंकिंग की बुनियादी बातें',
-        chapters: [
-          { en: 'What is Banking?', hi: 'बैंकिंग क्या है?' },
-          { en: 'Types of Bank Accounts', hi: 'बैंक खातों के प्रकार' },
-          { en: 'Bank Transactions (Passbook, Cheque, Debit/Credit Card)', hi: 'बैंक लेनदेन' }
-        ] },
-      { id: '8.3', name: 'Online Banking and Digital Transactions', nameHi: 'ऑनलाइन बैंकिंग और डिजिटल लेनदेन',
-        chapters: [
-          { en: 'What is Online Banking?', hi: 'ऑनलाइन बैंकिंग क्या है?' },
-          { en: 'How to Perform Digital Transactions', hi: 'डिजिटल लेनदेन कैसे करें' }
-        ] },
-      { id: '8.4', name: 'Mobile Banking Apps', nameHi: 'मोबाइल बैंकिंग ऐप्स',
-        chapters: [
-          { en: 'How to Perform Mobile Banking', hi: 'मोबाइल बैंकिंग कैसे करें' },
-          { en: 'Safe Mobile Banking', hi: 'सुरक्षित मोबाइल बैंकिंग' }
-        ] },
-      { id: '8.5', name: 'Online Payments', nameHi: 'ऑनलाइन भुगतान',
-        chapters: [
-          { en: 'Digital Wallets', hi: 'डिजिटल वॉलेट' },
-          { en: 'BHIM UPI, PayTM, Google Pay', hi: 'BHIM UPI, PayTM, Google Pay' },
-          { en: 'Benefits of Online Payments', hi: 'ऑनलाइन भुगतान के लाभ' }
-        ] },
-      { id: '8.6', name: 'Salary', nameHi: 'वेतन',
-        chapters: [
-          { en: 'Gross Salary vs Net Salary', hi: 'सकल वेतन बनाम शुद्ध वेतन' },
-          { en: 'Components of Salary', hi: 'वेतन के घटक' },
-          { en: 'Income Tax', hi: 'आयकर' }
-        ] },
-      { id: '8.7', name: 'Savings', nameHi: 'बचत',
-        chapters: [
-          { en: 'What are Savings?', hi: 'बचत क्या है?' },
-          { en: 'Types of Savings Options', hi: 'बचत के प्रकार' },
-          { en: 'How to Save Effectively', hi: 'प्रभावी ढंग से बचत कैसे करें' }
-        ] },
-      { id: '8.8', name: 'Loans and Insurance', nameHi: 'ऋण और बीमा',
-        chapters: [
-          { en: 'What are Loans?', hi: 'ऋण क्या हैं?' },
-          { en: 'Types of Loans', hi: 'ऋण के प्रकार' },
-          { en: 'What is Insurance?', hi: 'बीमा क्या है?' }
-        ] },
-      { id: '8.9', name: 'Legal Literacy', nameHi: 'कानूनी साक्षरता',
-        chapters: [
-          { en: 'Legal Literacy Mission', hi: 'कानूनी साक्षरता मिशन' },
-          { en: 'RTI and Public Grievances', hi: 'RTI और सार्वजनिक शिकायतें' },
-          { en: 'Employee Rights and Minimum Wages', hi: 'कर्मचारी अधिकार और न्यूनतम मजदूरी' }
-        ] },
-      { id: '9.1', name: 'Introduction to Entrepreneurship', nameHi: 'उद्यमिता का परिचय',
-        chapters: [
-          { en: 'Definition of Entrepreneurship', hi: 'उद्यमिता की परिभाषा' },
-          { en: 'Characteristics of an Entrepreneur', hi: 'एक उद्यमी की विशेषताएँ' },
-          { en: 'Roles and Responsibilities of an Entrepreneur', hi: 'उद्यमी की भूमिकाएँ और जिम्मेदारियाँ' }
-        ] },
-      { id: '9.2', name: 'Entrepreneurial Mindset', nameHi: 'उद्यमी मानसिकता',
-        chapters: [
-          { en: 'What is Entrepreneurial Mindset?', hi: 'उद्यमी मानसिकता क्या है?' },
-          { en: 'How to Set Up a Business', hi: 'व्यवसाय कैसे स्थापित करें' }
-        ] },
-      { id: '9.3', name: 'Difference between Self-Employment and Entrepreneurship', nameHi: 'स्व-रोज़गार और उद्यमिता के बीच अंतर',
-        chapters: [
-          { en: 'Self-Employment vs Entrepreneurship', hi: 'स्व-रोज़गार बनाम उद्यमिता' },
-          { en: 'Connection between Self-Employment and Entrepreneurship', hi: 'स्व-रोज़गार और उद्यमिता के बीच संबंध' },
-          { en: 'How Self-Employment Can Lead to Entrepreneurship', hi: 'स्व-रोज़गार उद्यमिता की ओर कैसे ले जा सकता है' }
-        ] },
-      { id: '9.4', name: 'Market Scan: Exploring the Market', nameHi: 'बाजार स्कैन: बाजार की खोज',
-        chapters: [
-          { en: 'What is Market Scan?', hi: 'बाजार स्कैन क्या है?' },
-          { en: 'How to Conduct a Market Scan', hi: 'बाजार स्कैन कैसे करें' },
-          { en: 'Practice Market Scan', hi: 'बाजार स्कैन का अभ्यास' }
-        ] },
-      { id: '9.5', name: 'Understanding Customer Needs', nameHi: 'ग्राहक की जरूरतों को समझना',
-        chapters: [
-          { en: 'What are Customer Needs?', hi: 'ग्राहक की ज़रूरतें क्या हैं?' },
-          { en: 'Customer Needs Analysis', hi: 'ग्राहक आवश्यकता विश्लेषण' },
-          { en: 'How to Identify Customers', hi: 'ग्राहकों की पहचान कैसे करें' }
-        ] },
-      { id: '9.6', name: 'Selecting a Type of Business: Product or Service', nameHi: 'व्यवसाय का प्रकार चुनना: उत्पाद या सेवा',
-        chapters: [
-          { en: 'Difference between Product and Service', hi: 'उत्पाद और सेवा के बीच अंतर' },
-          { en: 'Things to Consider When Choosing', hi: 'चयन करते समय विचार करने योग्य बातें' },
-          { en: 'How to Choose the Right Business Idea', hi: 'सही व्यवसाय विचार कैसे चुनें' }
-        ] },
-      { id: '9.7', name: 'My Final Business Idea', nameHi: 'मेरा अंतिम व्यवसाय विचार',
-        chapters: [
-          { en: 'Importance of a Business Idea', hi: 'व्यवसाय विचार का महत्व' },
-          { en: 'Process of Creating a Business Idea', hi: 'व्यवसाय विचार बनाने की प्रक्रिया' },
-          { en: 'Creating Your Business Idea', hi: 'अपना व्यवसाय विचार बनाना' }
-        ] },
-      { id: '9.8', name: 'Building Your Business Plan', nameHi: 'अपनी व्यवसाय योजना बनाना',
-        chapters: [
-          { en: 'What is a Business Plan?', hi: 'व्यवसाय योजना क्या है?' },
-          { en: 'Importance of a Business Plan', hi: 'व्यवसाय योजना का महत्व' },
-          { en: 'Process of Building a Business Plan', hi: 'व्यवसाय योजना बनाने की प्रक्रिया' }
-        ] },
-      { id: '9.9', name: 'Pitching for Your Business', nameHi: 'अपने व्यवसाय के लिए पिचिंग',
-        chapters: [
-          { en: 'What is a Business Pitch?', hi: 'व्यवसाय पिच क्या है?' },
-          { en: 'Who Hears Your Pitch?', hi: 'आपकी पिच कौन सुनता है?' },
-          { en: 'How to Present Your Pitch', hi: 'अपनी पिच कैसे प्रस्तुत करें' }
-        ] },
-      { id: '9.10', name: 'Basic Legal Functions Needed for Any Business', nameHi: 'किसी भी व्यवसाय के लिए आवश्यक बुनियादी कानूनी कार्य',
-        chapters: [
-          { en: 'Business Registrations', hi: 'व्यवसाय पंजीकरण' },
-          { en: 'How to Register on Udyam', hi: 'Udyam पर पंजीकरण कैसे करें' },
-          { en: 'Rules for Sole Proprietorship', hi: 'एकल स्वामित्व के लिए नियम' }
-        ] },
-      { id: '9.11', name: 'Marketing in the 21st Century', nameHi: '21वीं सदी में विपणन',
-        chapters: [
-          { en: 'What is Marketing?', hi: 'विपणन क्या है?' },
-          { en: 'Importance of Marketing', hi: 'विपणन का महत्व' },
-          { en: '7Ps of Marketing', hi: 'विपणन के 7Ps' }
-        ] },
-      { id: '9.12', name: 'Accounting for Business', nameHi: 'व्यवसाय के लिए लेखांकन',
-        chapters: [
-          { en: 'Basics of Business Accounting', hi: 'व्यवसाय लेखांकन की बुनियादी बातें' },
-          { en: 'Calculating Cost of Goods/Services', hi: 'वस्तुओं/सेवाओं की लागत की गणना' },
-          { en: 'Money Tracking Template', hi: 'धन ट्रैकिंग टेम्पलेट' }
-        ] },
-      { id: '9.13', name: 'Funding for Your Business', nameHi: 'अपने व्यवसाय के लिए वित्त पोषण',
-        chapters: [
-          { en: 'Sources of Funds for Business', hi: 'व्यवसाय के लिए धन के स्रोत' },
-          { en: 'How to Apply for Funds', hi: 'धन के लिए आवेदन कैसे करें' },
-          { en: 'Requirements for Loan Application', hi: 'ऋण आवेदन के लिए आवश्यकताएँ' }
-        ] },
-      { id: '9.14', name: 'Business Stories: Learning from Successes and Failures', nameHi: 'व्यवसाय कहानियाँ: सफलताओं और असफलताओं से सीखना',
-        chapters: [
-          { en: 'Success Stories of Entrepreneurs', hi: 'उद्यमियों की सफलता की कहानियाँ' },
-          { en: 'Learning from Failures', hi: 'असफलताओं से सीखना' }
-        ] },
-      { id: '10.1', name: 'Introduction to the World of Work', nameHi: 'काम की दुनिया का परिचय',
-        chapters: [
-          { en: 'Job vs Career', hi: 'नौकरी बनाम करियर' },
-          { en: 'Personal vs Professional Life', hi: 'व्यक्तिगत बनाम पेशेवर जीवन' },
-          { en: 'Preparing for the World of Work', hi: 'काम की दुनिया के लिए तैयारी' }
-        ] },
-      { id: '10.2', name: 'My Interests and Abilities', nameHi: 'मेरी रुचियाँ और क्षमताएँ',
-        chapters: [
-          { en: 'Difference between Interests and Abilities', hi: 'रुचि और क्षमता के बीच अंतर' },
-          { en: 'Identifying Your Own Interests and Abilities', hi: 'अपनी रुचियों और क्षमताओं की पहचान' }
-        ] },
-      { id: '10.3', name: 'Building Your Career Pathway', nameHi: 'अपना करियर पथ बनाना',
-        chapters: [
-          { en: 'Importance of Career Pathways', hi: 'करियर पथ का महत्व' },
-          { en: 'Exploring Career Pathways in Different Industries', hi: 'विभिन्न उद्योगों में करियर पथ की खोज' }
-        ] },
-      { id: '10.4', name: 'Job Market Research', nameHi: 'नौकरी बाजार अनुसंधान',
-        chapters: [
-          { en: 'How to Explore the World of Work', hi: 'काम की दुनिया की खोज कैसे करें' },
-          { en: 'How to Conduct a Market Scan', hi: 'बाजार स्कैन कैसे करें' }
-        ] },
-      { id: '10.5', name: 'Setting Goals for Your Career', nameHi: 'अपने करियर के लिए लक्ष्य निर्धारित करना',
-        chapters: [
-          { en: 'Defining Long-Term and Short-Term Goals', hi: 'दीर्घकालिक और अल्पकालिक लक्ष्यों को परिभाषित करना' },
-          { en: 'SMART Goals for Career', hi: 'करियर के लिए SMART लक्ष्य' }
-        ] },
-      { id: '11.1', name: 'Customer Service and Relationship Building', nameHi: 'ग्राहक सेवा और संबंध निर्माण',
-        chapters: [
-          { en: 'Importance of Customer Service', hi: 'ग्राहक सेवा का महत्व' },
-          { en: 'Need to Build Customer Relationships', hi: 'ग्राहक संबंध बनाने की आवश्यकता' },
-          { en: 'How to Build Good Relationships with Customers', hi: 'ग्राहकों के साथ अच्छे संबंध कैसे बनाएँ' }
-        ] },
-      { id: '11.2', name: 'Types of Customers', nameHi: 'ग्राहकों के प्रकार',
-        chapters: [
-          { en: 'Who is a Customer?', hi: 'ग्राहक कौन है?' },
-          { en: 'Different Types of Customers', hi: 'विभिन्न प्रकार के ग्राहक' },
-          { en: 'How to Communicate with Different Customers', hi: 'विभिन्न ग्राहकों के साथ कैसे संवाद करें' }
-        ] },
-      { id: '11.3', name: 'Probing to Identify Customer Needs', nameHi: 'ग्राहक की जरूरतों की पहचान के लिए पूछताछ',
-        chapters: [
-          { en: 'Importance of Understanding Customer Needs', hi: 'ग्राहक की जरूरतों को समझने का महत्व' },
-          { en: 'How to Identify Customer Needs', hi: 'ग्राहक की जरूरतों की पहचान कैसे करें' },
-          { en: 'Practice Probing with Customers', hi: 'ग्राहकों के साथ पूछताछ का अभ्यास' }
-        ] },
-      { id: '11.4', name: 'Simple Techniques for Communicating with Customers', nameHi: 'ग्राहकों के साथ संवाद करने की सरल तकनीकें',
-        chapters: [
-          { en: 'Importance of Selling Techniques', hi: 'बिक्री तकनीकों का महत्व' },
-          { en: 'FAB Technique and Cross Selling', hi: 'FAB तकनीक और क्रॉस सेलिंग' },
-          { en: 'Selling to Customers', hi: 'ग्राहकों को बेचना' }
-        ] },
-      { id: '11.5', name: 'Closing Sales and Customer Feedback', nameHi: 'बिक्री समाप्त करना और ग्राहक प्रतिक्रिया',
-        chapters: [
-          { en: 'How to Close a Sale', hi: 'बिक्री कैसे समाप्त करें' },
-          { en: 'Customer Feedback and Satisfaction', hi: 'ग्राहक प्रतिक्रिया और संतुष्टि' }
-        ] },
-      { id: '12.1', name: 'Positive Work Environment', nameHi: 'सकारात्मक कार्य वातावरण',
-        chapters: [
-          { en: 'Being Part of a Positive Workplace', hi: 'सकारात्मक कार्यस्थल का हिस्सा बनना' },
-          { en: 'Building Healthy Relationships at Work', hi: 'काम पर स्वस्थ संबंध बनाना' },
-          { en: 'Energy Conservation in the Workplace', hi: 'कार्यस्थल में ऊर्जा संरक्षण' }
-        ] },
-      { id: '12.2', name: 'Personal Grooming and Hygiene', nameHi: 'व्यक्तिगत संवारना और स्वच्छता',
-        chapters: [
-          { en: 'Importance of Personal Grooming', hi: 'व्यक्तिगत संवारने का महत्व' },
-          { en: 'Maintaining Personal Hygiene', hi: 'व्यक्तिगत स्वच्छता बनाए रखना' },
-          { en: 'How to Groom Yourself', hi: 'खुद को कैसे संवारें' }
-        ] },
-      { id: '12.3', name: 'Managing Stress in the Workplace', nameHi: 'कार्यस्थल पर तनाव प्रबंधन',
-        chapters: [
-          { en: 'Meaning of Stress', hi: 'तनाव का अर्थ' },
-          { en: 'Types of Stress', hi: 'तनाव के प्रकार' },
-          { en: 'How to Deal with Stress at Work', hi: 'काम पर तनाव से कैसे निपटें' }
-        ] },
-      { id: '12.4', name: 'Building My Resume', nameHi: 'अपना रेज़्यूमे बनाना',
-        chapters: [
-          { en: 'Key Elements of a Resume', hi: 'रेज़्यूमे के मुख्य तत्व' },
-          { en: 'How to Write a Resume', hi: 'रेज़्यूमे कैसे लिखें' },
-          { en: 'Checking for Common Mistakes', hi: 'सामान्य गलतियों की जाँच' }
-        ] },
-      { id: '12.5', name: 'Preparing for an Interview', nameHi: 'साक्षात्कार की तैयारी',
-        chapters: [
-          { en: 'What are Interview Skills?', hi: 'साक्षात्कार कौशल क्या हैं?' },
-          { en: 'How to Prepare for an Interview', hi: 'साक्षात्कार की तैयारी कैसे करें' },
-          { en: 'How to Follow Up After Interview', hi: 'साक्षात्कार के बाद फॉलो-अप कैसे करें' }
-        ] },
-      { id: '12.6', name: 'Decoding Interviews', nameHi: 'साक्षात्कार को डिकोड करना',
-        chapters: [
-          { en: 'Do\'s and Don\'ts of Facing an Interview', hi: 'साक्षात्कार के दौरान Do\'s और Don\'ts' },
-          { en: 'Common Interview Questions', hi: 'सामान्य साक्षात्कार प्रश्न' }
-        ] },
-      { id: '12.7', name: 'Mock Interviews', nameHi: 'मॉक साक्षात्कार',
-        chapters: [
-          { en: 'What are Mock Interviews?', hi: 'मॉक साक्षात्कार क्या हैं?' },
-          { en: 'Benefits of Mock Interviews', hi: 'मॉक साक्षात्कार के लाभ' },
-          { en: 'Practice Mock Interviews', hi: 'मॉक साक्षात्कार का अभ्यास' }
-        ] },
-      { id: '12.8', name: 'Professional Networking', nameHi: 'पेशेवर नेटवर्किंग',
-        chapters: [
-          { en: 'Meaning and Importance of Professional Networking', hi: 'पेशेवर नेटवर्किंग का अर्थ और महत्व' },
-          { en: 'How to Build a Professional Network', hi: 'पेशेवर नेटवर्क कैसे बनाएँ' }
-        ] },
-      { id: '12.9', name: 'Handling Rejection and Failure', nameHi: 'अस्वीकृति और असफलता को संभालना',
-        chapters: [
-          { en: 'Identifying Failure as Stepping Stone', hi: 'असफलता को सीढ़ी के रूप में पहचानना' },
-          { en: 'Handling Rejection and Failure Positively', hi: 'अस्वीकृति और असफलता को सकारात्मक रूप से संभालना' }
-        ] },
-      { id: '12.10', name: 'Industry Visit: 1', nameHi: 'उद्योग भ्रमण: 1',
-        chapters: [
-          { en: 'Preparing Questions for Industry Visit', hi: 'उद्योग भ्रमण के लिए प्रश्न तैयार करना' }
-        ] },
-      { id: '12.11', name: 'Industry Visit: 2', nameHi: 'उद्योग भ्रमण: 2',
-        chapters: [
-          { en: 'Continuation of Industry Visit Preparation', hi: 'उद्योग भ्रमण की तैयारी जारी' }
-        ] },
-      { id: '12.12', name: 'Reflection After Industry Visit', nameHi: 'उद्योग भ्रमण के बाद चिंतन',
-        chapters: [
-          { en: 'Reflecting on Industry Visit Experience', hi: 'उद्योग भ्रमण अनुभव पर चिंतन' }
-        ] },
-      { id: '12.13', name: 'Guest Lecture by Alumni or HR', nameHi: 'पूर्व छात्र या HR द्वारा अतिथि व्याख्यान',
-        chapters: [
-          { en: 'Questions to Ask Alumni and HR', hi: 'पूर्व छात्रों और HR से पूछने के लिए प्रश्न' },
-          { en: 'Understanding the Job Market', hi: 'नौकरी बाजार को समझना' }
-        ] },
-      { id: '12.14', name: 'Introduction to Platform-Based Jobs', nameHi: 'प्लेटफ़ॉर्म-आधारित नौकरियों का परिचय',
-        chapters: [
-          { en: 'What are Platform-Based Jobs?', hi: 'प्लेटफ़ॉर्म-आधारित नौकरियाँ क्या हैं?' },
-          { en: 'Exploring Portals (Urban Company, Helpr)', hi: 'पोर्टल्स की खोज (Urban Company, Helpr)' },
-          { en: 'How to Register on Portals', hi: 'पोर्टल्स पर पंजीकरण कैसे करें' }
-        ] },
-      { id: '12.15', name: 'Applying for Jobs Through Online Portals', nameHi: 'ऑनलाइन पोर्टल्स के माध्यम से नौकरी के लिए आवेदन',
-        chapters: [
-          { en: 'What are Job Search Engines?', hi: 'जॉब सर्च इंजन क्या हैं?' },
-          { en: 'How to Find and Apply for Jobs Online', hi: 'ऑनलाइन नौकरी कैसे खोजें और आवेदन करें' },
-          { en: 'Finding Technician Job Roles', hi: 'तकनीशियन नौकरी की भूमिकाएँ खोजना' }
-        ] },
-      { id: '12.16', name: 'Enrolling for Apprenticeships', nameHi: 'अप्रेंटिसशिप के लिए पंजीकरण',
-        chapters: [
-          { en: 'About the NAPS Portal', hi: 'NAPS पोर्टल के बारे में' },
-          { en: 'How to Register on NAPS', hi: 'NAPS पर पंजीकरण कैसे करें' },
-          { en: 'How to Apply for Jobs on NAPS', hi: 'NAPS पर नौकरी के लिए आवेदन कैसे करें' }
-        ] }
+      { id: '7.1', name: 'Gender Stereotypes', nameHi: 'लैंगिक रूढ़ियाँ' },
+      { id: '7.2', name: 'Understanding Gender-Based Discrimination', nameHi: 'लैंगिक भेदभाव को समझना' },
+      { id: '7.3', name: 'Understanding Gender Equality', nameHi: 'लैंगिक समानता को समझना' },
+      { id: '7.4', name: 'Diversity in the Workplace', nameHi: 'कार्यस्थल में विविधता' },
+      { id: '7.5', name: 'Inclusion in the Workplace', nameHi: 'कार्यस्थल में समावेशन' },
+      { id: '7.6', name: 'Sexual Harassment in the Workplace (POSH Act)', nameHi: 'कार्यस्थल पर यौन उत्पीड़न (POSH अधिनियम)' },
+      { id: '8.1', name: 'Introduction to Money Management', nameHi: 'धन प्रबंधन का परिचय' },
+      { id: '8.2', name: 'Basics of Banking', nameHi: 'बैंकिंग की बुनियादी बातें' },
+      { id: '8.3', name: 'Online Banking and Digital Transactions', nameHi: 'ऑनलाइन बैंकिंग और डिजिटल लेनदेन' },
+      { id: '8.4', name: 'Mobile Banking Apps', nameHi: 'मोबाइल बैंकिंग ऐप्स' },
+      { id: '8.5', name: 'Online Payments', nameHi: 'ऑनलाइन भुगतान' },
+      { id: '8.6', name: 'Salary', nameHi: 'वेतन' },
+      { id: '8.7', name: 'Savings', nameHi: 'बचत' },
+      { id: '8.8', name: 'Loans and Insurance', nameHi: 'ऋण और बीमा' },
+      { id: '8.9', name: 'Legal Literacy', nameHi: 'कानूनी साक्षरता' },
+      { id: '9.1', name: 'Introduction to Entrepreneurship', nameHi: 'उद्यमिता का परिचय' },
+      { id: '9.2', name: 'Entrepreneurial Mindset', nameHi: 'उद्यमी मानसिकता' },
+      { id: '9.3', name: 'Difference between Self-Employment and Entrepreneurship', nameHi: 'स्व-रोज़गार और उद्यमिता के बीच अंतर' },
+      { id: '9.4', name: 'Market Scan: Exploring the Market', nameHi: 'बाजार स्कैन: बाजार की खोज' },
+      { id: '9.5', name: 'Understanding Customer Needs', nameHi: 'ग्राहक की जरूरतों को समझना' },
+      { id: '9.6', name: 'Selecting a Type of Business: Product or Service', nameHi: 'व्यवसाय का प्रकार चुनना: उत्पाद या सेवा' },
+      { id: '9.7', name: 'My Final Business Idea', nameHi: 'मेरा अंतिम व्यवसाय विचार' },
+      { id: '9.8', name: 'Building Your Business Plan', nameHi: 'अपनी व्यवसाय योजना बनाना' },
+      { id: '9.9', name: 'Pitching for Your Business', nameHi: 'अपने व्यवसाय के लिए पिचिंग' },
+      { id: '9.10', name: 'Basic Legal Functions Needed for Any Business', nameHi: 'किसी भी व्यवसाय के लिए आवश्यक बुनियादी कानूनी कार्य' },
+      { id: '9.11', name: 'Marketing in the 21st Century', nameHi: '21वीं सदी में विपणन' },
+      { id: '9.12', name: 'Accounting for Business', nameHi: 'व्यवसाय के लिए लेखांकन' },
+      { id: '9.13', name: 'Funding for Your Business', nameHi: 'अपने व्यवसाय के लिए वित्त पोषण' },
+      { id: '9.14', name: 'Business Stories: Learning from Successes and Failures', nameHi: 'व्यवसाय कहानियाँ: सफलताओं और असफलताओं से सीखना' },
+      { id: '10.1', name: 'Introduction to the World of Work', nameHi: 'काम की दुनिया का परिचय' },
+      { id: '10.2', name: 'My Interests and Abilities', nameHi: 'मेरी रुचियाँ और क्षमताएँ' },
+      { id: '10.3', name: 'Building Your Career Pathway', nameHi: 'अपना करियर पथ बनाना' },
+      { id: '10.4', name: 'Job Market Research', nameHi: 'नौकरी बाजार अनुसंधान' },
+      { id: '10.5', name: 'Setting Goals for Your Career', nameHi: 'अपने करियर के लिए लक्ष्य निर्धारित करना' },
+      { id: '11.1', name: 'Customer Service and Relationship Building', nameHi: 'ग्राहक सेवा और संबंध निर्माण' },
+      { id: '11.2', name: 'Types of Customers', nameHi: 'ग्राहकों के प्रकार' },
+      { id: '11.3', name: 'Probing to Identify Customer Needs', nameHi: 'ग्राहक की जरूरतों की पहचान के लिए पूछताछ' },
+      { id: '11.4', name: 'Simple Techniques for Communicating with Customers', nameHi: 'ग्राहकों के साथ संवाद करने की सरल तकनीकें' },
+      { id: '11.5', name: 'Closing Sales and Customer Feedback', nameHi: 'बिक्री समाप्त करना और ग्राहक प्रतिक्रिया' },
+      { id: '12.1', name: 'Positive Work Environment', nameHi: 'सकारात्मक कार्य वातावरण' },
+      { id: '12.2', name: 'Personal Grooming and Hygiene', nameHi: 'व्यक्तिगत संवारना और स्वच्छता' },
+      { id: '12.3', name: 'Managing Stress in the Workplace', nameHi: 'कार्यस्थल पर तनाव प्रबंधन' },
+      { id: '12.4', name: 'Building My Resume', nameHi: 'अपना रेज़्यूमे बनाना' },
+      { id: '12.5', name: 'Preparing for an Interview', nameHi: 'साक्षात्कार की तैयारी' },
+      { id: '12.6', name: 'Decoding Interviews', nameHi: 'साक्षात्कार को डिकोड करना' },
+      { id: '12.7', name: 'Mock Interviews', nameHi: 'मॉक साक्षात्कार' },
+      { id: '12.8', name: 'Professional Networking', nameHi: 'पेशेवर नेटवर्किंग' },
+      { id: '12.9', name: 'Handling Rejection and Failure', nameHi: 'अस्वीकृति और असफलता को संभालना' },
+      { id: '12.10', name: 'Industry Visit: 1', nameHi: 'उद्योग भ्रमण: 1' },
+      { id: '12.11', name: 'Industry Visit: 2', nameHi: 'उद्योग भ्रमण: 2' },
+      { id: '12.12', name: 'Reflection After Industry Visit', nameHi: 'उद्योग भ्रमण के बाद चिंतन' },
+      { id: '12.13', name: 'Guest Lecture by Alumni or HR', nameHi: 'पूर्व छात्र या HR द्वारा अतिथि व्याख्यान' },
+      { id: '12.14', name: 'Introduction to Platform-Based Jobs', nameHi: 'प्लेटफ़ॉर्म-आधारित नौकरियों का परिचय' },
+      { id: '12.15', name: 'Applying for Jobs Through Online Portals', nameHi: 'ऑनलाइन पोर्टल्स के माध्यम से नौकरी के लिए आवेदन' },
+      { id: '12.16', name: 'Enrolling for Apprenticeships', nameHi: 'अप्रेंटिसशिप के लिए पंजीकरण' }
     ],
     ai: [
-      { id: 'AI-1', name: 'Understanding AI', nameHi: 'AI को समझना',
-        chapters: [
-          { en: 'What is AI?', hi: 'AI क्या है?' },
-          { en: 'Where to Find AI?', hi: 'AI कहाँ मिलता है?' },
-          { en: 'What is Not AI?', hi: 'AI क्या नहीं है?' },
-          { en: 'Using Prompts with AI Tools', hi: 'AI टूल्स के साथ प्रॉम्प्ट्स का उपयोग' }
-        ] },
-      { id: 'AI-2', name: 'How does AI work?', nameHi: 'AI कैसे काम करता है?',
-        chapters: [
-          { en: 'How AI Works', hi: 'AI कैसे काम करता है' },
-          { en: 'Data and Its Importance', hi: 'डेटा और उसका महत्व' },
-          { en: 'Machine Learning vs Deep Learning', hi: 'मशीन लर्निंग बनाम डीप लर्निंग' }
-        ] },
-      { id: 'AI-3', name: 'Types of AI', nameHi: 'AI के प्रकार',
-        chapters: [
-          { en: 'Narrow AI vs General AI', hi: 'नैरो AI बनाम जनरल AI' },
-          { en: 'History of AI', hi: 'AI का इतिहास' }
-        ] },
-      { id: 'AI-4', name: 'What can AI do?', nameHi: 'AI क्या कर सकता है?',
-        chapters: [
-          { en: 'What is Generative AI?', hi: 'जनरेटिव AI क्या है?' },
-          { en: 'How to Talk to AI', hi: 'AI से कैसे बात करें' },
-          { en: 'Uses of Generative AI', hi: 'जनरेटिव AI के उपयोग' }
-        ] },
-      { id: 'AI-5', name: 'Impact of AI on Jobs & Industries', nameHi: 'AI का नौकरियों और उद्योगों पर प्रभाव',
-        chapters: [
-          { en: 'How AI is Impacting Jobs', hi: 'AI नौकरियों को कैसे प्रभावित कर रहा है' },
-          { en: 'Advantages and Disadvantages of AI at Work', hi: 'काम पर AI के फायदे और नुकसान' }
-        ] },
-      { id: 'AI-6', name: 'Exploring Careers with AI', nameHi: 'AI के साथ करियर की खोज',
-        chapters: [
-          { en: 'Exploring Career Options with AI', hi: 'AI के साथ करियर विकल्पों की खोज' }
-        ] },
-      { id: 'AI-7', name: 'Learning with AI', nameHi: 'AI के साथ सीखना',
-        chapters: [
-          { en: 'How AI Can Help You Learn Better', hi: 'AI आपको बेहतर सीखने में कैसे मदद कर सकता है' }
-        ] },
-      { id: 'AI-8', name: 'Using AI Responsibly', nameHi: 'AI का जिम्मेदारी से उपयोग',
-        chapters: [
-          { en: 'What is Ethical AI?', hi: 'नैतिक AI क्या है?' },
-          { en: 'Ethical Challenges in AI', hi: 'AI में नैतिक चुनौतियाँ' },
-          { en: 'Responsible Usage of AI', hi: 'AI का जिम्मेदार उपयोग' }
-        ] }
+      { id: 'AI-1', name: 'Understanding AI', nameHi: 'AI को समझना' },
+      { id: 'AI-2', name: 'How does AI work?', nameHi: 'AI कैसे काम करता है?' },
+      { id: 'AI-3', name: 'Types of AI', nameHi: 'AI के प्रकार' },
+      { id: 'AI-4', name: 'What can AI do?', nameHi: 'AI क्या कर सकता है?' },
+      { id: 'AI-5', name: 'Impact of AI on Jobs & Industries', nameHi: 'AI का नौकरियों और उद्योगों पर प्रभाव' },
+      { id: 'AI-6', name: 'Exploring Careers with AI', nameHi: 'AI के साथ करियर की खोज' },
+      { id: 'AI-7', name: 'Learning with AI', nameHi: 'AI के साथ सीखना' },
+      { id: 'AI-8', name: 'Using AI Responsibly', nameHi: 'AI का जिम्मेदारी से उपयोग' }
     ]
   };
 
   // ============================================================
-  //  RENDER MODULES
+  //  RENDER
   // ============================================================
   function renderModules(containerId, modules, prefix = 'module-') {
     const container = document.getElementById(containerId);
@@ -1128,31 +556,18 @@
     let html = '';
     modules.forEach((mod, index) => {
       const linkBase = `${prefix}${index + 1}.html`;
-      // Chapter items
-      let chaptersHtml = '';
-      mod.chapters.forEach((ch, ci) => {
-        const chLink = `${linkBase}#ch-${ci + 1}`;
-        chaptersHtml += `
-          <div class="chapter-item">
-            <a href="${chLink}">
-              <span class="num">${ci + 1}</span>
-              <span class="en">${ch.en}</span>
-              <span class="hi">— ${ch.hi}</span>
-              <span class="arrow">➜</span>
-            </a>
-          </div>
-        `;
-      });
-
       html += `
-        <div class="module-card" data-module="${mod.id}" data-search="${mod.name} ${mod.nameHi} ${mod.chapters.map(c => c.en + ' ' + c.hi).join(' ')}">
+        <div class="module-card" data-search="${mod.id} ${mod.name} ${mod.nameHi}">
           <div class="module-header" onclick="toggleModule(this)">
             <span class="code">${mod.id}</span>
             <span class="title">${mod.name} <span class="hi">${mod.nameHi}</span></span>
             <span class="toggle-icon">▼</span>
           </div>
           <div class="chapters-list">
-            ${chaptersHtml}
+            <div style="padding:12px 0; text-align:center; color:#888; font-size:0.9rem;">
+              📖 <a href="${linkBase}" style="color:#003366; font-weight:bold; text-decoration:none;">Open Module →</a>
+              <span style="display:block; font-size:0.8rem; margin-top:4px;">(इस Module के सभी Chapters यहाँ दिखेंगे)</span>
+            </div>
           </div>
         </div>
       `;
@@ -1160,7 +575,7 @@
     container.innerHTML = html;
   }
 
-  // ---- Toggle Module ----
+  // ---- Toggle ----
   function toggleModule(header) {
     const list = header.nextElementSibling;
     const icon = header.querySelector('.toggle-icon');
@@ -1175,7 +590,7 @@
     }
   }
 
-  // ---- Tab Switching ----
+  // ---- Tab Switch ----
   function switchTab(year) {
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelector(`.tab-btn[data-year="${year}"]`).classList.add('active');
@@ -1189,7 +604,7 @@
     });
   });
 
-  // ---- Search / Filter ----
+  // ---- Search ----
   function filterChapters() {
     const keyword = document.getElementById('chapterSearch').value.toLowerCase().trim();
     const cards = document.querySelectorAll('.module-card');
@@ -1218,7 +633,6 @@
     if (year) {
       year.textContent = "© " + new Date().getFullYear() + " ITI Study Centre. All Rights Reserved.";
     }
-    // Scroll to Top
     const btn = document.getElementById('scrollTop');
     if (btn) {
       window.addEventListener('scroll', function() {
@@ -1230,7 +644,7 @@
     }
   });
 
-  console.log('Employability Skills Chapter-Wise Index loaded!');
+  console.log('Employability Skills Index loaded!');
 </script>
 
 </body>
