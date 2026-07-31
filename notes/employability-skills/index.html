@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employability Skills – Complete Index | ITI Study Centre</title>
-  <meta name="description" content="Complete index of Employability Skills modules for 1st and 2nd year ITI students. Bilingual (Hindi + English) chapter list.">
-  <meta name="keywords" content="Employability Skills, Modules, 1st Year, 2nd Year, ITI Notes, ES Notes, Hindi, English">
+  <title>Module 1: Importance of Employability Skills | ITI Study Centre</title>
+  <meta name="description" content="Complete notes for Employability Skills Module 1: Importance of Employability Skills in Hindi and English with tables, examples, and MCQ link.">
+  <meta name="keywords" content="Employability Skills, Module 1, Importance, Notes, ITI, Hindi, English">
   <meta name="author" content="ITI Study Centre">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="canonical" href="https://www.itistudycentre.in/notes/employability-skills/index.html">
+  <link rel="canonical" href="https://www.itistudycentre.in/notes/employability-skills/module-1.html">
 
   <style>
-    /* ---- Search ---- */
+    /* ---- Common Styles ---- */
     .search-section {
       display: flex;
       gap: 10px;
@@ -57,178 +57,141 @@
       .search-section button { width: 100%; padding: 12px; min-width: unset; }
     }
 
-    /* ---- Tabs ---- */
-    .tab-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 20px 0;
-      justify-content: center;
-    }
-    .tab-btn {
-      padding: 12px 28px;
-      background: #e9ecef;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #333;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .tab-btn:hover {
-      background: #d0d5db;
-    }
-    .tab-btn.active {
-      background: #003366;
-      color: white;
-    }
-    .tab-btn.ai-tab {
-      background: #ff9900;
-      color: #222;
-    }
-    .tab-btn.ai-tab.active {
-      background: #e68a00;
-      color: white;
-    }
-
-    /* ---- Section ---- */
-    .year-section {
-      display: none;
-    }
-    .year-section.active {
-      display: block;
-    }
-
-    /* ---- Module Card (Expandable) ---- */
-    .module-card {
+    /* ---- Content Sections ---- */
+    .content-section {
+      margin-bottom: 30px;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.06);
       border: 1px solid #eee;
-      margin-bottom: 14px;
       overflow: hidden;
-      transition: 0.3s;
     }
-    .module-card:hover {
-      box-shadow: 0 4px 18px rgba(0,0,0,0.1);
-    }
-    .module-header {
-      padding: 14px 20px;
+    .section-header {
       background: #f8f9fa;
+      padding: 14px 20px;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
       user-select: none;
       transition: 0.2s;
+      border-bottom: 1px solid #eee;
     }
-    .module-header:hover {
+    .section-header:hover {
       background: #eef0f2;
     }
-    .module-header .code {
-      font-size: 0.75rem;
-      color: #888;
-      font-weight: bold;
-      background: #e9ecef;
-      padding: 2px 12px;
-      border-radius: 12px;
-      min-width: 50px;
-      text-align: center;
-    }
-    .module-header .title {
-      font-size: 1.05rem;
+    .section-header .title {
+      font-size: 1.1rem;
       font-weight: 600;
       color: #003366;
-      flex: 1;
-      margin: 0 15px;
     }
-    .module-header .title .hi {
-      font-weight: 400;
-      color: #555;
-      font-size: 0.85rem;
-      margin-left: 10px;
+    .section-header .icon {
+      font-size: 1.4rem;
+      margin-right: 10px;
     }
-    .module-header .toggle-icon {
+    .section-header .toggle-icon {
       font-size: 1.2rem;
       color: #003366;
       transition: 0.3s;
-      min-width: 30px;
-      text-align: center;
     }
-    .module-header .toggle-icon.open {
+    .section-header .toggle-icon.open {
       transform: rotate(180deg);
     }
-
-    /* ---- Chapters List (Inner Content) ---- */
-    .chapters-list {
-      padding: 0 20px 16px 20px;
+    .section-body {
+      padding: 20px 25px;
       display: none;
       border-top: 1px solid #eee;
       background: #fafcff;
     }
-    .chapters-list.open {
+    .section-body.open {
       display: block;
     }
-    .chapter-item {
-      display: flex;
-      align-items: center;
-      padding: 8px 14px;
-      border-bottom: 1px dashed #f0f0f0;
-      transition: 0.2s;
-      border-radius: 6px;
-      gap: 10px;
+
+    .bilingual-box {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0;
     }
-    .chapter-item:hover {
-      background: #f0f4ff;
+    .bilingual-box .english {
+      border-bottom: 2px dashed #ccc;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
     }
-    .chapter-item:last-child {
-      border-bottom: none;
-    }
-    .chapter-item .num {
-      font-size: 0.7rem;
-      font-weight: bold;
-      color: #888;
-      min-width: 26px;
-    }
-    .chapter-item .en {
-      font-size: 0.92rem;
-      color: #222;
-      font-weight: 500;
-    }
-    .chapter-item .hi {
-      font-size: 0.82rem;
-      color: #666;
-      font-weight: 400;
-    }
-    .chapter-item .arrow {
-      margin-left: auto;
+    .bilingual-box .english h4 {
       color: #003366;
-      font-size: 0.8rem;
-    }
-    .chapter-item a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: inherit;
-      flex: 1;
-    }
-
-    /* ---- Notice ---- */
-    .notice-box {
-      background: #fff3cd;
-      padding: 15px 20px;
-      border-left: 6px solid #ffc107;
-      border-radius: 6px;
-      margin: 20px 0;
-    }
-    .notice-box h3 {
       margin-top: 0;
-      color: #856404;
+    }
+    .bilingual-box .hindi h4 {
+      color: #cc3300;
+      margin-top: 0;
     }
 
-    /* ---- Buttons ---- */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 15px 0;
+    }
+    .table-wrap table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    .table-wrap th {
+      background: #003366;
+      color: white;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    .table-wrap td, .table-wrap th {
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+    }
+    .table-wrap tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+
+    .img-placeholder {
+      background: #e9ecef;
+      padding: 30px;
+      text-align: center;
+      border-radius: 8px;
+      color: #666;
+      border: 2px dashed #ccc;
+      margin: 15px 0;
+    }
+
+    .example-box {
+      background: #e8f4fd;
+      border-left: 5px solid #003366;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+    .example-box strong {
+      color: #003366;
+    }
+
+    .important-points {
+      background: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+    .important-points ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .short-notes {
+      background: #d4edda;
+      border-left: 5px solid #28a745;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+
     .btn {
       display: inline-block;
       padding: 10px 25px;
@@ -262,31 +225,73 @@
       transform: scale(1.02);
     }
 
+    .mcq-link {
+      background: #f0f4ff;
+      border: 2px solid #003366;
+      border-radius: 8px;
+      padding: 15px 20px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .mcq-link a {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #003366;
+      text-decoration: none;
+    }
+    .mcq-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---- Comments & Topic Request ---- */
+    .comments-section, .topic-request {
+      margin: 20px 0;
+    }
+    .comments-section textarea, .topic-request textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .comments-section input, .topic-request input {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      width: 48%;
+      margin-right: 2%;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      background: #222;
+      color: #ccc;
+      padding: 20px 15px;
+      text-align: center;
+      margin-top: 40px;
+      border-top: 4px solid #003366;
+    }
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
     /* ---- Responsive ---- */
     @media (max-width: 600px) {
-      .module-header {
-        flex-wrap: wrap;
-        gap: 4px;
+      .section-header .title {
+        font-size: 1rem;
       }
-      .module-header .title {
-        font-size: 0.95rem;
-        margin: 0 4px;
+      .section-body {
+        padding: 15px;
       }
-      .module-header .title .hi {
-        display: block;
-        margin-left: 0;
-        font-size: 0.78rem;
+      .bilingual-box {
+        padding: 15px;
       }
-      .chapter-item {
-        flex-wrap: wrap;
-        gap: 2px;
-      }
-      .chapter-item .en {
-        font-size: 0.85rem;
-      }
-      .tab-btn {
-        padding: 8px 14px;
-        font-size: 0.8rem;
+      .comments-section input, .topic-request input {
+        width: 100%;
+        margin-bottom: 10px;
       }
     }
   </style>
@@ -295,7 +300,7 @@
 <body>
 
 <!-- =========================================
-    HEADER
+    HEADER (Hardcoded, बिना "Suggestions")
 ========================================= -->
 <div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
   <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
@@ -319,7 +324,8 @@
 <div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
   <a href="/" style="text-decoration:none; color:#003366;">🏠 Home</a> &nbsp;›&nbsp;
   <a href="/iti-study-centre-notes.html" style="text-decoration:none; color:#003366;">ITI Notes</a> &nbsp;›&nbsp;
-  <span style="color:#555; font-weight:bold;">Employability Skills – Index</span>
+  <a href="/notes/employability-skills/index.html" style="text-decoration:none; color:#003366;">Employability Skills</a> &nbsp;›&nbsp;
+  <span style="color:#555; font-weight:bold;">Module 1: Importance of Employability Skills</span>
 </div>
 
 <!-- =========================================
@@ -327,8 +333,8 @@
 ========================================= -->
 <section class="page-title">
   <div class="container">
-    <h1>📘 Employability Skills <span style="font-size:0.6em; color:#888;">Complete Index</span></h1>
-    <p>सभी Modules की पूरी सूची — हिंदी + English में</p>
+    <h1>📖 Module 1: Importance of Employability Skills</h1>
+    <p>Complete notes with examples, tables, and practice questions</p>
   </div>
 </section>
 
@@ -336,67 +342,384 @@
     SEARCH
 ========================================= -->
 <section class="search-section container">
-  <input type="text" id="chapterSearch" placeholder="Search Module or Chapter...">
-  <button onclick="filterChapters()">🔍 Search</button>
+  <input type="text" placeholder="Search within this module...">
+  <button>🔍 Search</button>
 </section>
 
 <!-- =========================================
-    TABS
+    CONTENT SECTIONS (Expandable)
 ========================================= -->
+
+<!-- 1. INTRODUCTION -->
 <div class="container">
-  <div class="tab-container">
-    <button class="tab-btn active" data-year="year1">📚 1st Year</button>
-    <button class="tab-btn" data-year="year2">📚 2nd Year</button>
-    <button class="tab-btn ai-tab" data-year="ai">🤖 AI Module</button>
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">📖</span> <span class="title">Introduction / परिचय</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body open">
+      <div class="bilingual-box">
+        <div class="english">
+          <h4>🇬🇧 English</h4>
+          <p><strong>Employability skills</strong> are a set of many skills which we need to be successfully employed. Employability skills not only help in our work life, but also help us lead a better life. For example, learning financial skills will help you manage your money for personal needs also.</p>
+          <p>In this book you are going to learn about many skills that help you in the short term and long term for work &amp; personal life.</p>
+          <p><strong>Key Terms:</strong></p>
+          <ul>
+            <li><strong>Employ:</strong> To be given a job by an employer or to have one's own business. A person is said to be employed when they get paid for their work on a regular basis.</li>
+            <li><strong>Ability:</strong> To have the skills to perform a task well.</li>
+            <li><strong>Skills:</strong> The ability to do something well.</li>
+          </ul>
+        </div>
+        <div class="hindi">
+          <h4>🇮🇳 हिन्दी</h4>
+          <p><strong>एम्प्लॉयबिलिटी स्किल्स</strong> कई स्किल्स का एक समूह है, जिनकी हमें सफलतापूर्वक नौकरी पाने के लिए आवश्यकता होती है। एम्प्लॉयबिलिटी स्किल्स न केवल हमारे कामकाजी जीवन में, बल्कि एक बेहतर जीवन जीने में भी हमारी मदद करती हैं। उदाहरण के लिए, वित्तीय स्किल्स सीखने से आप अपने व्यक्तिगत जरूरतों के लिए भी पैसे का प्रबंधन कर सकते हैं।</p>
+          <p>इस किताब में आप कई स्किल्स के बारे में सीखेंगे जो आपको काम और व्यक्तिगत जीवन में अल्पकालिक और दीर्घकालिक रूप से मदद करेंगी।</p>
+          <p><strong>मुख्य शब्द:</strong></p>
+          <ul>
+            <li><strong>रोज़गार (Employ):</strong> किसी नियोक्ता द्वारा नौकरी दिया जाना या अपना खुद का व्यवसाय होना। जब किसी व्यक्ति को उसके काम के लिए नियमित रूप से भुगतान मिलता है, तो उसे रोज़गार प्राप्त कहा जाता है।</li>
+            <li><strong>क्षमता (Ability):</strong> किसी कार्य को अच्छी तरह से करने की स्किल होना।</li>
+            <li><strong>स्किल्स (Skills):</strong> किसी काम को अच्छी तरह से करने की क्षमता।</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. LEARNING OUTCOMES -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">🎯</span> <span class="title">Learning Outcomes / सीखने के परिणाम</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body open">
+      <div class="bilingual-box">
+        <div class="english">
+          <h4>🇬🇧 English</h4>
+          <ul>
+            <li>Understand what employability skills are.</li>
+            <li>Recognize the importance of employability skills in career growth.</li>
+            <li>Identify the difference between technical skills and employability skills.</li>
+            <li>Develop a growth mindset and become a self-learner.</li>
+          </ul>
+        </div>
+        <div class="hindi">
+          <h4>🇮🇳 हिन्दी</h4>
+          <ul>
+            <li>एम्प्लॉयबिलिटी स्किल्स क्या हैं, यह समझना।</li>
+            <li>करियर विकास में एम्प्लॉयबिलिटी स्किल्स के महत्व को पहचानना।</li>
+            <li>तकनीकी स्किल्स और एम्प्लॉयबिलिटी स्किल्स के बीच अंतर को पहचानना।</li>
+            <li>ग्रोथ माइंडसेट विकसित करना और सेल्फ-लर्नर बनना।</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. COMPLETE NOTES -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">📚</span> <span class="title">Complete Notes / पूर्ण नोट्स</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body open">
+      <!-- Sub-section 1: What are Employability Skills? -->
+      <h3>1. What are Employability Skills? / एम्प्लॉयबिलिटी स्किल्स क्या हैं?</h3>
+      <div class="bilingual-box">
+        <div class="english">
+          <p><strong>Employability skills</strong> are the skills you need to get a job and succeed in your career. They are also called <em>soft skills</em> or <em>transferable skills</em>. These include communication, teamwork, problem-solving, time management, and digital literacy.</p>
+          <p>Employability skills help you to:</p>
+          <ul>
+            <li>Work well with others</li>
+            <li>Solve problems creatively</li>
+            <li>Manage your time effectively</li>
+            <li>Communicate clearly</li>
+            <li>Use technology confidently</li>
+          </ul>
+        </div>
+        <div class="hindi">
+          <p><strong>एम्प्लॉयबिलिटी स्किल्स</strong> वे स्किल्स हैं जिनकी आपको नौकरी पाने और अपने करियर में सफल होने के लिए आवश्यकता होती है। इन्हें <em>सॉफ्ट स्किल्स</em> या <em>ट्रांसफरेबल स्किल्स</em> भी कहा जाता है। इनमें संचार, टीम वर्क, समस्या-समाधान, समय प्रबंधन और डिजिटल साक्षरता शामिल हैं।</p>
+          <p>एम्प्लॉयबिलिटी स्किल्स आपको इसमें मदद करती हैं:</p>
+          <ul>
+            <li>दूसरों के साथ अच्छी तरह से काम करना</li>
+            <li>रचनात्मक रूप से समस्याओं को हल करना</li>
+            <li>अपने समय का प्रभावी ढंग से प्रबंधन करना</li>
+            <li>स्पष्ट रूप से संवाद करना</li>
+            <li>तकनीक का आत्मविश्वास से उपयोग करना</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sub-section 2: Technical vs Employability Skills -->
+      <h3>2. Technical vs Employability Skills / तकनीकी बनाम एम्प्लॉयबिलिटी स्किल्स</h3>
+      <div class="bilingual-box">
+        <div class="english">
+          <p>To get a good job and grow in your career, you need <strong>two types of skills:</strong></p>
+          <ul>
+            <li><strong>Technical Skills</strong> (Hard Skills): Specific knowledge and abilities related to your trade. Example: Stitching, Carpentry, Plumbing, IT.</li>
+            <li><strong>Employability Skills</strong> (Soft Skills): General skills that help you use your technical skills effectively. Example: Communication, Teamwork, Problem-solving, Time Management.</li>
+          </ul>
+          <p>Employers often make hiring decisions based on how well candidates have both kinds of skills.</p>
+        </div>
+        <div class="hindi">
+          <p>एक अच्छी नौकरी पाने और अपने करियर में बढ़ने के लिए, आपको <strong>दो प्रकार की स्किल्स</strong> की आवश्यकता होती है:</p>
+          <ul>
+            <li><strong>तकनीकी स्किल्स (हार्ड स्किल्स):</strong> आपके ट्रेड से संबंधित विशिष्ट ज्ञान और क्षमताएँ। उदाहरण: सिलाई, बढ़ईगीरी, प्लंबिंग, आईटी।</li>
+            <li><strong>एम्प्लॉयबिलिटी स्किल्स (सॉफ्ट स्किल्स):</strong> सामान्य स्किल्स जो आपको अपनी तकनीकी स्किल्स का प्रभावी ढंग से उपयोग करने में मदद करती हैं। उदाहरण: संचार, टीम वर्क, समस्या-समाधान, समय प्रबंधन।</li>
+          </ul>
+          <p>नियोक्ता अक्सर उम्मीदवारों में दोनों प्रकार की स्किल्स के आधार पर नियुक्ति के निर्णय लेते हैं।</p>
+        </div>
+      </div>
+
+      <!-- Sub-section 3: Growth Mindset -->
+      <h3>3. Growth Mindset vs Fixed Mindset / ग्रोथ माइंडसेट बनाम फिक्स्ड माइंडसेट</h3>
+      <div class="bilingual-box">
+        <div class="english">
+          <p><strong>Growth Mindset:</strong> People with a growth mindset believe that abilities can be developed through hard work, good strategies, and input from others. They embrace challenges, persist in the face of setbacks, and learn from criticism.</p>
+          <p><strong>Fixed Mindset:</strong> People with a fixed mindset believe that intelligence and talent are fixed traits. They avoid challenges, give up easily, and ignore feedback.</p>
+          <p>To become a self-learner, you need a growth mindset. When you learn by yourself, you may make mistakes or fail a few times. But learning to keep trying and not giving up is what helps you grow in life.</p>
+        </div>
+        <div class="hindi">
+          <p><strong>ग्रोथ माइंडसेट:</strong> ग्रोथ माइंडसेट वाले लोग मानते हैं कि कड़ी मेहनत, अच्छी रणनीतियों और दूसरों से सीखने से क्षमताओं को विकसित किया जा सकता है। वे चुनौतियों को स्वीकार करते हैं, असफलताओं के बावजूद प्रयास जारी रखते हैं, और आलोचना से सीखते हैं।</p>
+          <p><strong>फिक्स्ड माइंडसेट:</strong> फिक्स्ड माइंडसेट वाले लोग मानते हैं कि बुद्धि और प्रतिभा स्थायी गुण हैं। वे चुनौतियों से बचते हैं, जल्दी हार मान लेते हैं, और फीडबैक को अनदेखा करते हैं।</p>
+          <p>सेल्फ-लर्नर बनने के लिए, आपको ग्रोथ माइंडसेट की आवश्यकता है। जब आप खुद कुछ सीखते हैं, तो आप गलतियाँ कर सकते हैं या कुछ बार असफल हो सकते हैं। लेकिन कोशिश करते रहना और हार न मानना ही आपको जीवन में बढ़ने में मदद करता है।</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. IMPORTANT TABLES -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">📋</span> <span class="title">Important Tables / महत्वपूर्ण तालिकाएँ</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Technical Skills (Hard)</th><th>Employability Skills (Soft)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Stitching</td><td>Communication</td></tr>
+            <tr><td>Carpentry</td><td>Teamwork</td></tr>
+            <tr><td>Plumbing</td><td>Problem-Solving</td></tr>
+            <tr><td>IT / Computer</td><td>Time Management</td></tr>
+            <tr><td>Welding</td><td>Digital Literacy</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption style="caption-side:top; font-weight:bold; margin-bottom:10px;">Growth Mindset vs Fixed Mindset</caption>
+          <thead>
+            <tr><th>Growth Mindset</th><th>Fixed Mindset</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>✅ "I can do this"</td><td>❌ "I cannot do this"</td></tr>
+            <tr><td>✅ "Mistakes are normal"</td><td>❌ "Mistakes are unacceptable"</td></tr>
+            <tr><td>✅ "I will learn from mistakes"</td><td>❌ "Mistakes mean failure"</td></tr>
+            <tr><td>✅ "I will try again"</td><td>❌ "If I fail once, I'll always fail"</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. DIAGRAMS / IMAGES -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">🖼️</span> <span class="title">Diagrams / Images / आरेख व चित्र</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="img-placeholder">
+        <p>📊 <strong>Diagram: Employability Skills Wheel</strong></p>
+        <p>(Image will be added here soon – shows communication, teamwork, problem-solving, time management, digital literacy)</p>
+        <p style="font-size:0.85rem; color:#888;">Placeholder for future image</p>
+      </div>
+      <div class="img-placeholder">
+        <p>🧠 <strong>Diagram: Growth Mindset vs Fixed Mindset</strong></p>
+        <p>(Visual comparison of the two mindsets)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 6. REAL-LIFE EXAMPLES -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">💡</span> <span class="title">Real-Life Examples / वास्तविक जीवन के उदाहरण</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="example-box">
+        <p><strong>🇬🇧 Example 1:</strong> Ravi is a mechanic. He has excellent technical skills in repairing cars. But he often gets into arguments with customers because he cannot explain the problem clearly. He decides to take a communication skills course. After learning, he explains issues politely and his customers trust him more. His business grows.</p>
+        <p><strong>🇮🇳 उदाहरण 1:</strong> रवि एक मैकेनिक है। उसके पास कारों की मरम्मत में उत्कृष्ट तकनीकी स्किल्स हैं। लेकिन वह अक्सर ग्राहकों के साथ बहस कर लेता है क्योंकि वह समस्या को स्पष्ट रूप से नहीं समझा पाता। वह संचार स्किल्स का कोर्स करने का फैसला करता है। सीखने के बाद, वह विनम्रता से समस्याएँ समझाता है और उसके ग्राहक उस पर अधिक भरोसा करते हैं। उसका व्यवसाय बढ़ता है।</p>
+      </div>
+      <div class="example-box">
+        <p><strong>🇬🇧 Example 2:</strong> Sunita is an electrician. She is very skilled but often feels stressed and overwhelmed with work. She learns time management techniques like the Pomodoro method. Now she finishes tasks on time, takes breaks, and feels more in control. Her employer appreciates her efficiency.</p>
+        <p><strong>🇮🇳 उदाहरण 2:</strong> सुनीता एक इलेक्ट्रीशियन है। वह बहुत कुशल है लेकिन अक्सर काम के दबाव में तनाव महसूस करती है। वह पोमोडोरो विधि जैसी समय प्रबंधन तकनीक सीखती है। अब वह काम समय पर पूरा करती है, ब्रेक लेती है, और अधिक नियंत्रण महसूस करती है। उसका नियोक्ता उसकी कार्यक्षमता की सराहना करता है।</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 7. IMPORTANT POINTS -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">⚠️</span> <span class="title">Important Points / महत्वपूर्ण बिंदु</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="important-points">
+        <ul>
+          <li><strong>✅</strong> Employability skills are essential for every job, not just technical roles.</li>
+          <li><strong>✅</strong> Employers value soft skills as much as hard skills.</li>
+          <li><strong>✅</strong> Self-learning and a growth mindset are key to career advancement.</li>
+          <li><strong>✅</strong> Communication skills can make or break your professional relationships.</li>
+          <li><strong>✅</strong> Time management reduces stress and increases productivity.</li>
+        </ul>
+        <p><strong>🇮🇳 हिन्दी:</strong></p>
+        <ul>
+          <li><strong>✅</strong> एम्प्लॉयबिलिटी स्किल्स हर नौकरी के लिए आवश्यक हैं, न कि केवल तकनीकी भूमिकाओं के लिए।</li>
+          <li><strong>✅</strong> नियोक्ता सॉफ्ट स्किल्स को उतना ही महत्व देते हैं जितना कि हार्ड स्किल्स को।</li>
+          <li><strong>✅</strong> सेल्फ-लर्निंग और ग्रोथ माइंडसेट करियर की उन्नति के लिए महत्वपूर्ण हैं।</li>
+          <li><strong>✅</strong> संचार कौशल आपके पेशेवर संबंधों को बना या बिगाड़ सकते हैं।</li>
+          <li><strong>✅</strong> समय प्रबंधन तनाव को कम करता है और उत्पादकता बढ़ाता है।</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. SHORT NOTES -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">📝</span> <span class="title">Short Notes / संक्षिप्त नोट्स</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="short-notes">
+        <ul>
+          <li><strong>Employability Skills = Soft Skills = Life Skills</strong></li>
+          <li><strong>Two types of skills:</strong> Technical (Hard) + Employability (Soft)</li>
+          <li><strong>Growth Mindset:</strong> Believe in improvement, embrace challenges.</li>
+          <li><strong>Fixed Mindset:</strong> Believe in fixed abilities, avoid challenges.</li>
+          <li><strong>Self-learning:</strong> Taking responsibility for your own learning.</li>
+        </ul>
+        <p><strong>🇮🇳 हिन्दी:</strong></p>
+        <ul>
+          <li><strong>एम्प्लॉयबिलिटी स्किल्स = सॉफ्ट स्किल्स = जीवन कौशल</strong></li>
+          <li><strong>दो प्रकार की स्किल्स:</strong> तकनीकी (हार्ड) + एम्प्लॉयबिलिटी (सॉफ्ट)</li>
+          <li><strong>ग्रोथ माइंडसेट:</strong> सुधार में विश्वास, चुनौतियों को स्वीकार करना।</li>
+          <li><strong>फिक्स्ड माइंडसेट:</strong> निश्चित क्षमताओं में विश्वास, चुनौतियों से बचना।</li>
+          <li><strong>सेल्फ-लर्निंग:</strong> अपनी सीखने की जिम्मेदारी लेना।</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 9. MCQ LINK -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">❓</span> <span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body">
+      <div class="mcq-link">
+        <p><strong>📌 Click the link below to practice multiple-choice questions for this module.</strong></p>
+        <a href="/question-bank/employability-skills/module-1.html" target="_blank">📝 Go to Question Bank →</a>
+        <p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 10. RELATED CHAPTERS -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">🔗</span> <span class="title">Related Chapters / संबंधित अध्याय</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li><a href="module-2.html" style="color:#003366; text-decoration:none; font-weight:bold;">📘 Module 2: Learning Employability Skills Online</a></li>
+        <li><a href="module-3.html" style="color:#003366; text-decoration:none; font-weight:bold;">📘 Module 3: Explore the Future of Work</a></li>
+        <li><a href="../fitter/index.html" style="color:#003366; text-decoration:none; font-weight:bold;">🔧 Fitter Trade Notes</a></li>
+        <li><a href="../plumber/index.html" style="color:#003366; text-decoration:none; font-weight:bold;">🚰 Plumber Trade Notes</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 11. COMMENTS (Firebase Ready) -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">💬</span> <span class="title">Comments / टिप्पणियाँ</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body">
+      <div id="comments-section" class="comments-section">
+        <p>💬 <strong>Share your thoughts or ask questions about this module.</strong></p>
+        <textarea id="comment-text" rows="3" placeholder="Write your comment here..."></textarea>
+        <input type="text" id="comment-name" placeholder="Your Name (optional)">
+        <button onclick="postComment()" class="btn" style="margin-top:10px;">Post Comment</button>
+        <div id="comment-list" style="margin-top:15px; max-height:300px; overflow-y:auto;">
+          <p style="color:#888; font-style:italic;">No comments yet. Be the first to comment!</p>
+        </div>
+        <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ Comments are moderated and will appear after review.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 12. TOPIC REQUEST FORM -->
+<div class="container">
+  <div class="content-section">
+    <div class="section-header" onclick="toggleSection(this)">
+      <span><span class="icon">💭</span> <span class="title">Topic Request / विषय अनुरोध</span></span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="section-body">
+      <div id="topic-request" class="topic-request">
+        <p>📝 <strong>Request a new topic or suggest an improvement.</strong></p>
+        <input type="text" id="topic-name" placeholder="Your Name (optional)" style="width:48%; margin-right:2%;">
+        <input type="email" id="topic-email" placeholder="Your Email (optional)" style="width:48%;">
+        <textarea id="topic-message" rows="4" placeholder="Describe the topic or improvement you'd like to see..." style="width:100%; margin:10px 0;"></textarea>
+        <button onclick="submitTopicRequest()" class="btn">📤 Submit Request</button>
+        <p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ Your request will be reviewed by the admin and added soon.</p>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- =========================================
-    1ST YEAR
-========================================= -->
-<div id="year1" class="year-section active">
-  <div class="container" id="year1-container"></div>
-</div>
-
-<!-- =========================================
-    2ND YEAR
-========================================= -->
-<div id="year2" class="year-section">
-  <div class="container" id="year2-container"></div>
-</div>
-
-<!-- =========================================
-    AI MODULE
-========================================= -->
-<div id="ai" class="year-section">
-  <div class="container" id="ai-container"></div>
-</div>
-
-<!-- =========================================
-    NOTICE
-========================================= -->
-<section class="container">
-  <div class="notice-box">
-    <h3>📢 वर्तमान स्थिति</h3>
-    <p>सभी Chapters के Notes, Question Bank और Practice Sets जल्द ही उपलब्ध कराए जाएंगे। <strong>हर Module पर क्लिक करके आप उसके अंदर के सभी Chapters देख सकते हैं।</strong></p>
-  </div>
-</section>
-
-<!-- =========================================
-    SUGGESTIONS
+    SUGGESTIONS & DISCLAIMER
 ========================================= -->
 <section class="container">
   <div class="card">
     <h2>💬 सुझाव दें</h2>
-    <p>यदि आपको किसी Chapter में सुधार चाहिए या नया Topic जोड़ना है, तो हमें बताएं।</p>
+    <p>यदि इस Module में कोई सुधार सुझाना है, तो हमें बताएं।</p>
     <br>
     <a href="/contact.html" class="news-btn">💬 Click Here →</a>
   </div>
 </section>
 
-<!-- =========================================
-    DISCLAIMER
-========================================= -->
 <section class="container">
   <div class="card">
     <h2>⚠ Disclaimer</h2>
@@ -422,212 +745,62 @@
 <script src="/js/main.js"></script>
 <script>
   // ============================================================
-  //  DATA: 1st Year, 2nd Year, AI Module (सिर्फ Main Headings)
+  //  TOGGLE SECTIONS
   // ============================================================
-  const modulesData = {
-    year1: [
-      { id: '1.1', name: 'Importance of Employability Skills', nameHi: 'एम्प्लॉयबिलिटी स्किल्स का महत्व' },
-      { id: '1.2', name: 'Learning Employability Skills Online', nameHi: 'ऑनलाइन एम्प्लॉयबिलिटी स्किल्स सीखना' },
-      { id: '1.3', name: 'Explore the Future of Work', nameHi: 'भविष्य के काम की खोज' },
-      { id: '2.1', name: 'My Values and Ethics', nameHi: 'मेरे मूल्य और नैतिकता' },
-      { id: '2.2', name: 'Our Constitution: Guiding Principles', nameHi: 'हमारा संविधान: मार्गदर्शक सिद्धांत' },
-      { id: '2.3', name: 'Protecting Our Environment', nameHi: 'हमारे पर्यावरण की रक्षा' },
-      { id: '3.1', name: '21st Century Employability Skills', nameHi: '21वीं सदी की एम्प्लॉयबिलिटी स्किल्स' },
-      { id: '3.2', name: 'Know Yourself', nameHi: 'खुद को जानें' },
-      { id: '3.3', name: 'Behaviour and Attitude', nameHi: 'व्यवहार और दृष्टिकोण' },
-      { id: '3.4', name: 'Critical Thinking & Decision Making', nameHi: 'आलोचनात्मक सोच और निर्णय लेना' },
-      { id: '3.5', name: 'Time Management in the Workplace', nameHi: 'कार्यस्थल पर समय प्रबंधन' },
-      { id: '3.6', name: 'Problem Solving', nameHi: 'समस्या समाधान' },
-      { id: '4.1', name: 'Motivation to Learn English', nameHi: 'अंग्रेज़ी सीखने की प्रेरणा' },
-      { id: '4.2', name: 'Naming Words', nameHi: 'नाम देने वाले शब्द' },
-      { id: '4.3', name: 'Naming Words – Singular and Plural', nameHi: 'नाम देने वाले शब्द – एकवचन और बहुवचन' },
-      { id: '4.4', name: 'Pronouns', nameHi: 'सर्वनाम' },
-      { id: '4.5', name: 'Action Words', nameHi: 'क्रिया शब्द' },
-      { id: '4.6', name: 'Describing Objects, Surroundings and Processes', nameHi: 'वस्तुओं, परिवेश और प्रक्रियाओं का वर्णन' },
-      { id: '4.7', name: 'Introduction to Punctuation', nameHi: 'विराम चिह्न का परिचय' },
-      { id: '4.8', name: 'Kinds of Sentences – Introduction', nameHi: 'वाक्यों के प्रकार – परिचय' },
-      { id: '4.9', name: 'Writing Simple Sentences', nameHi: 'सरल वाक्य लिखना' },
-      { id: '5.1', name: 'Importance of Communication', nameHi: 'संचार का महत्व' },
-      { id: '5.2', name: 'Verbal Communication: Speaking', nameHi: 'मौखिक संचार: बोलना' },
-      { id: '5.3', name: 'Verbal Communication: Writing', nameHi: 'मौखिक संचार: लिखना' },
-      { id: '5.4', name: 'Non-Verbal Communication', nameHi: 'अशाब्दिक संचार' },
-      { id: '5.5', name: 'Practicing Effective Communication', nameHi: 'प्रभावी संचार का अभ्यास' },
-      { id: '5.6', name: 'Workplace Communication: Introduction', nameHi: 'कार्यस्थल संचार: परिचय' },
-      { id: '5.7', name: 'Effective Team Work', nameHi: 'प्रभावी टीम वर्क' },
-      { id: '5.8', name: 'Managing Conflicts', nameHi: 'संघर्ष प्रबंधन' },
-      { id: '5.9', name: 'Handling Criticism', nameHi: 'आलोचना को संभालना' },
-      { id: '5.10', name: 'Assessing Your Communication Ability', nameHi: 'अपनी संचार क्षमता का आकलन' },
-      { id: '6.1', name: 'Introduction to Digital Skills', nameHi: 'डिजिटल स्किल्स का परिचय' },
-      { id: '6.2', name: 'Basics of Computers', nameHi: 'कंप्यूटर की बुनियादी बातें' },
-      { id: '6.3', name: 'Exploring a Computer', nameHi: 'कंप्यूटर की खोज' },
-      { id: '6.4', name: 'Exploring Windows Operating System', nameHi: 'विंडोज़ ऑपरेटिंग सिस्टम की खोज' },
-      { id: '6.5', name: 'Creating and Saving Files', nameHi: 'फाइलें बनाना और सहेजना' },
-      { id: '6.6', name: 'Basics of MS Word', nameHi: 'एमएस वर्ड की बुनियादी बातें' },
-      { id: '6.7', name: 'Creating Documents on MS Word', nameHi: 'एमएस वर्ड पर दस्तावेज़ बनाना' },
-      { id: '6.8', name: 'Basics of MS Excel', nameHi: 'एमएस एक्सेल की बुनियादी बातें' },
-      { id: '6.9', name: 'Simple Functions on MS Excel', nameHi: 'एमएस एक्सेल पर सरल कार्य' },
-      { id: '6.10', name: 'Introduction to the Internet', nameHi: 'इंटरनेट का परिचय' },
-      { id: '6.11', name: 'Using Search Engines', nameHi: 'सर्च इंजन का उपयोग' },
-      { id: '6.12', name: 'Searching for the Right Information Online', nameHi: 'सही जानकारी ऑनलाइन खोजना' },
-      { id: '6.13', name: 'Social Media', nameHi: 'सोशल मीडिया' },
-      { id: '6.14', name: 'Social Media for Professional Development', nameHi: 'सोशल मीडिया पेशेवर विकास के लिए' },
-      { id: '6.15', name: 'Internet Safety', nameHi: 'इंटरनेट सुरक्षा' },
-      { id: '6.16', name: 'Communication Using Email', nameHi: 'ईमेल का उपयोग करके संचार' },
-      { id: '6.17', name: 'Introduction to Mobile Applications', nameHi: 'मोबाइल एप्लिकेशन का परिचय' },
-      { id: '6.18', name: 'Internet of Things (IoT)', nameHi: 'इंटरनेट ऑफ थिंग्स (IoT)' },
-      { id: '6.19', name: 'Using Online Meeting Tools for Interviews', nameHi: 'साक्षात्कार के लिए ऑनलाइन मीटिंग टूल्स' },
-      { id: '6.20', name: 'Exploring Popular Sites for Learning and Career Growth', nameHi: 'सीखने और करियर विकास के लिए लोकप्रिय साइट्स' }
-    ],
-    year2: [
-      { id: '7.1', name: 'Gender Stereotypes', nameHi: 'लैंगिक रूढ़ियाँ' },
-      { id: '7.2', name: 'Understanding Gender-Based Discrimination', nameHi: 'लैंगिक भेदभाव को समझना' },
-      { id: '7.3', name: 'Understanding Gender Equality', nameHi: 'लैंगिक समानता को समझना' },
-      { id: '7.4', name: 'Diversity in the Workplace', nameHi: 'कार्यस्थल में विविधता' },
-      { id: '7.5', name: 'Inclusion in the Workplace', nameHi: 'कार्यस्थल में समावेशन' },
-      { id: '7.6', name: 'Sexual Harassment in the Workplace (POSH Act)', nameHi: 'कार्यस्थल पर यौन उत्पीड़न (POSH अधिनियम)' },
-      { id: '8.1', name: 'Introduction to Money Management', nameHi: 'धन प्रबंधन का परिचय' },
-      { id: '8.2', name: 'Basics of Banking', nameHi: 'बैंकिंग की बुनियादी बातें' },
-      { id: '8.3', name: 'Online Banking and Digital Transactions', nameHi: 'ऑनलाइन बैंकिंग और डिजिटल लेनदेन' },
-      { id: '8.4', name: 'Mobile Banking Apps', nameHi: 'मोबाइल बैंकिंग ऐप्स' },
-      { id: '8.5', name: 'Online Payments', nameHi: 'ऑनलाइन भुगतान' },
-      { id: '8.6', name: 'Salary', nameHi: 'वेतन' },
-      { id: '8.7', name: 'Savings', nameHi: 'बचत' },
-      { id: '8.8', name: 'Loans and Insurance', nameHi: 'ऋण और बीमा' },
-      { id: '8.9', name: 'Legal Literacy', nameHi: 'कानूनी साक्षरता' },
-      { id: '9.1', name: 'Introduction to Entrepreneurship', nameHi: 'उद्यमिता का परिचय' },
-      { id: '9.2', name: 'Entrepreneurial Mindset', nameHi: 'उद्यमी मानसिकता' },
-      { id: '9.3', name: 'Difference between Self-Employment and Entrepreneurship', nameHi: 'स्व-रोज़गार और उद्यमिता के बीच अंतर' },
-      { id: '9.4', name: 'Market Scan: Exploring the Market', nameHi: 'बाजार स्कैन: बाजार की खोज' },
-      { id: '9.5', name: 'Understanding Customer Needs', nameHi: 'ग्राहक की जरूरतों को समझना' },
-      { id: '9.6', name: 'Selecting a Type of Business: Product or Service', nameHi: 'व्यवसाय का प्रकार चुनना: उत्पाद या सेवा' },
-      { id: '9.7', name: 'My Final Business Idea', nameHi: 'मेरा अंतिम व्यवसाय विचार' },
-      { id: '9.8', name: 'Building Your Business Plan', nameHi: 'अपनी व्यवसाय योजना बनाना' },
-      { id: '9.9', name: 'Pitching for Your Business', nameHi: 'अपने व्यवसाय के लिए पिचिंग' },
-      { id: '9.10', name: 'Basic Legal Functions Needed for Any Business', nameHi: 'किसी भी व्यवसाय के लिए आवश्यक बुनियादी कानूनी कार्य' },
-      { id: '9.11', name: 'Marketing in the 21st Century', nameHi: '21वीं सदी में विपणन' },
-      { id: '9.12', name: 'Accounting for Business', nameHi: 'व्यवसाय के लिए लेखांकन' },
-      { id: '9.13', name: 'Funding for Your Business', nameHi: 'अपने व्यवसाय के लिए वित्त पोषण' },
-      { id: '9.14', name: 'Business Stories: Learning from Successes and Failures', nameHi: 'व्यवसाय कहानियाँ: सफलताओं और असफलताओं से सीखना' },
-      { id: '10.1', name: 'Introduction to the World of Work', nameHi: 'काम की दुनिया का परिचय' },
-      { id: '10.2', name: 'My Interests and Abilities', nameHi: 'मेरी रुचियाँ और क्षमताएँ' },
-      { id: '10.3', name: 'Building Your Career Pathway', nameHi: 'अपना करियर पथ बनाना' },
-      { id: '10.4', name: 'Job Market Research', nameHi: 'नौकरी बाजार अनुसंधान' },
-      { id: '10.5', name: 'Setting Goals for Your Career', nameHi: 'अपने करियर के लिए लक्ष्य निर्धारित करना' },
-      { id: '11.1', name: 'Customer Service and Relationship Building', nameHi: 'ग्राहक सेवा और संबंध निर्माण' },
-      { id: '11.2', name: 'Types of Customers', nameHi: 'ग्राहकों के प्रकार' },
-      { id: '11.3', name: 'Probing to Identify Customer Needs', nameHi: 'ग्राहक की जरूरतों की पहचान के लिए पूछताछ' },
-      { id: '11.4', name: 'Simple Techniques for Communicating with Customers', nameHi: 'ग्राहकों के साथ संवाद करने की सरल तकनीकें' },
-      { id: '11.5', name: 'Closing Sales and Customer Feedback', nameHi: 'बिक्री समाप्त करना और ग्राहक प्रतिक्रिया' },
-      { id: '12.1', name: 'Positive Work Environment', nameHi: 'सकारात्मक कार्य वातावरण' },
-      { id: '12.2', name: 'Personal Grooming and Hygiene', nameHi: 'व्यक्तिगत संवारना और स्वच्छता' },
-      { id: '12.3', name: 'Managing Stress in the Workplace', nameHi: 'कार्यस्थल पर तनाव प्रबंधन' },
-      { id: '12.4', name: 'Building My Resume', nameHi: 'अपना रेज़्यूमे बनाना' },
-      { id: '12.5', name: 'Preparing for an Interview', nameHi: 'साक्षात्कार की तैयारी' },
-      { id: '12.6', name: 'Decoding Interviews', nameHi: 'साक्षात्कार को डिकोड करना' },
-      { id: '12.7', name: 'Mock Interviews', nameHi: 'मॉक साक्षात्कार' },
-      { id: '12.8', name: 'Professional Networking', nameHi: 'पेशेवर नेटवर्किंग' },
-      { id: '12.9', name: 'Handling Rejection and Failure', nameHi: 'अस्वीकृति और असफलता को संभालना' },
-      { id: '12.10', name: 'Industry Visit: 1', nameHi: 'उद्योग भ्रमण: 1' },
-      { id: '12.11', name: 'Industry Visit: 2', nameHi: 'उद्योग भ्रमण: 2' },
-      { id: '12.12', name: 'Reflection After Industry Visit', nameHi: 'उद्योग भ्रमण के बाद चिंतन' },
-      { id: '12.13', name: 'Guest Lecture by Alumni or HR', nameHi: 'पूर्व छात्र या HR द्वारा अतिथि व्याख्यान' },
-      { id: '12.14', name: 'Introduction to Platform-Based Jobs', nameHi: 'प्लेटफ़ॉर्म-आधारित नौकरियों का परिचय' },
-      { id: '12.15', name: 'Applying for Jobs Through Online Portals', nameHi: 'ऑनलाइन पोर्टल्स के माध्यम से नौकरी के लिए आवेदन' },
-      { id: '12.16', name: 'Enrolling for Apprenticeships', nameHi: 'अप्रेंटिसशिप के लिए पंजीकरण' }
-    ],
-    ai: [
-      { id: 'AI-1', name: 'Understanding AI', nameHi: 'AI को समझना' },
-      { id: 'AI-2', name: 'How does AI work?', nameHi: 'AI कैसे काम करता है?' },
-      { id: 'AI-3', name: 'Types of AI', nameHi: 'AI के प्रकार' },
-      { id: 'AI-4', name: 'What can AI do?', nameHi: 'AI क्या कर सकता है?' },
-      { id: 'AI-5', name: 'Impact of AI on Jobs & Industries', nameHi: 'AI का नौकरियों और उद्योगों पर प्रभाव' },
-      { id: 'AI-6', name: 'Exploring Careers with AI', nameHi: 'AI के साथ करियर की खोज' },
-      { id: 'AI-7', name: 'Learning with AI', nameHi: 'AI के साथ सीखना' },
-      { id: 'AI-8', name: 'Using AI Responsibly', nameHi: 'AI का जिम्मेदारी से उपयोग' }
-    ]
-  };
-
-  // ============================================================
-  //  RENDER
-  // ============================================================
-  function renderModules(containerId, modules, prefix = 'module-') {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    let html = '';
-    modules.forEach((mod, index) => {
-      const linkBase = `${prefix}${index + 1}.html`;
-      html += `
-        <div class="module-card" data-search="${mod.id} ${mod.name} ${mod.nameHi}">
-          <div class="module-header" onclick="toggleModule(this)">
-            <span class="code">${mod.id}</span>
-            <span class="title">${mod.name} <span class="hi">${mod.nameHi}</span></span>
-            <span class="toggle-icon">▼</span>
-          </div>
-          <div class="chapters-list">
-            <div style="padding:12px 0; text-align:center; color:#888; font-size:0.9rem;">
-              📖 <a href="${linkBase}" style="color:#003366; font-weight:bold; text-decoration:none;">Open Module →</a>
-              <span style="display:block; font-size:0.8rem; margin-top:4px;">(इस Module के सभी Chapters यहाँ दिखेंगे)</span>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-    container.innerHTML = html;
-  }
-
-  // ---- Toggle ----
-  function toggleModule(header) {
-    const list = header.nextElementSibling;
+  function toggleSection(header) {
+    const body = header.nextElementSibling;
     const icon = header.querySelector('.toggle-icon');
-    if (list.classList.contains('open')) {
-      list.classList.remove('open');
+    if (body.classList.contains('open')) {
+      body.classList.remove('open');
       icon.classList.remove('open');
       icon.textContent = '▼';
     } else {
-      list.classList.add('open');
+      body.classList.add('open');
       icon.classList.add('open');
       icon.textContent = '▲';
     }
   }
 
-  // ---- Tab Switch ----
-  function switchTab(year) {
-    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`.tab-btn[data-year="${year}"]`).classList.add('active');
-    document.querySelectorAll('.year-section').forEach(el => el.classList.remove('active'));
-    document.getElementById(year).classList.add('active');
+  // ============================================================
+  //  COMMENTS (Firebase Placeholder)
+  // ============================================================
+  function postComment() {
+    const text = document.getElementById('comment-text').value.trim();
+    const name = document.getElementById('comment-name').value.trim() || 'Anonymous';
+    if (!text) {
+      alert('Please write a comment.');
+      return;
+    }
+    const list = document.getElementById('comment-list');
+    const div = document.createElement('div');
+    div.style.cssText = 'background:#f1f1f1; padding:12px; margin:8px 0; border-radius:6px; border-left:3px solid #003366;';
+    div.innerHTML = `<strong>${name}</strong> <span style="color:#888; font-size:0.8rem;">(Pending Approval)</span><p style="margin:5px 0 0 0;">${text}</p>`;
+    list.prepend(div);
+    document.getElementById('comment-text').value = '';
+    document.getElementById('comment-name').value = '';
+    alert('Your comment has been submitted for moderation.');
   }
 
-  document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      switchTab(this.dataset.year);
-    });
-  });
-
-  // ---- Search ----
-  function filterChapters() {
-    const keyword = document.getElementById('chapterSearch').value.toLowerCase().trim();
-    const cards = document.querySelectorAll('.module-card');
-    cards.forEach(card => {
-      const data = card.dataset.search || '';
-      if (data.toLowerCase().includes(keyword) || keyword === '') {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
-    });
+  // ============================================================
+  //  TOPIC REQUEST (Form Submit)
+  // ============================================================
+  function submitTopicRequest() {
+    const name = document.getElementById('topic-name').value.trim() || 'Anonymous';
+    const email = document.getElementById('topic-email').value.trim() || '';
+    const message = document.getElementById('topic-message').value.trim();
+    if (!message) {
+      alert('Please describe your topic request.');
+      return;
+    }
+    alert(`Thank you ${name}! Your topic request has been sent.`);
+    document.getElementById('topic-name').value = '';
+    document.getElementById('topic-email').value = '';
+    document.getElementById('topic-message').value = '';
   }
 
-  document.getElementById('chapterSearch').addEventListener('keyup', function(e) {
-    if (e.key === 'Enter') filterChapters();
-  });
-
-  // ---- Render All ----
-  renderModules('year1-container', modulesData.year1, 'module-');
-  renderModules('year2-container', modulesData.year2, 'module-');
-  renderModules('ai-container', modulesData.ai, 'ai-module-');
-
-  // ---- Footer Year ----
+  // ============================================================
+  //  SCROLL TO TOP & FOOTER YEAR
+  // ============================================================
   document.addEventListener("DOMContentLoaded", function() {
     const year = document.querySelector('footer p');
     if (year) {
@@ -644,7 +817,7 @@
     }
   });
 
-  console.log('Employability Skills Index loaded!');
+  console.log('Module 1 page loaded successfully!');
 </script>
 
 </body>
