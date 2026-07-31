@@ -1,1 +1,1323 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 2: Constitutional Values – Citizenship | ITI Study Centre</title>
+    <meta name="description" content="Complete notes for Employability Skills Module 2: Constitutional Values – Citizenship. Bilingual (Hindi + English) with charts and examples." />
+    <link rel="icon" href="/images/favicon.png" />
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.7;
+            user-select: none;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
+        /* ===== HEADER ===== */
+        .main-header {
+            background: #003366;
+            padding: 14px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        .main-header nav a.notes-link {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb .current {
+            color: #555;
+            font-weight: 600;
+        }
+
+        /* ===== PAGE TITLE ===== */
+        .page-title {
+            padding: 30px 0 20px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.2rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+
+        /* ===== SEARCH ===== */
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 520px;
+            padding: 13px 18px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+        }
+        .search-section button {
+            padding: 13px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        @media (max-width: 640px) {
+            .search-section {
+                flex-direction: column;
+            }
+            .search-section input {
+                max-width: 100%;
+                width: 100%;
+            }
+            .search-section button {
+                width: 100%;
+            }
+        }
+
+        /* ===== CONTENT SECTIONS (fully open) ===== */
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            margin-bottom: 28px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 18px 26px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: default;
+            user-select: none;
+        }
+        .section-header .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .section-header .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-body {
+            padding: 24px 28px;
+            background: #fafcff;
+        }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin: 28px 0 16px;
+            border-left: 4px solid #ffcc00;
+            padding-left: 16px;
+        }
+        .section-body h3:first-of-type {
+            margin-top: 0;
+        }
+
+        /* ===== BILINGUAL (no emoji prefixes) ===== */
+        .bilingual {
+            margin: 14px 0;
+        }
+        .bilingual .en {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1a2a3a;
+        }
+        .bilingual .hi {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #3d3d3d;
+            background: #f0f5ff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border-left: 5px solid #003366;
+            margin-top: 12px;
+        }
+        .bilingual ul,
+        .bilingual ol {
+            padding-left: 24px;
+            margin: 8px 0;
+        }
+        .bilingual ul li,
+        .bilingual ol li {
+            margin-bottom: 4px;
+        }
+
+        /* ===== INFO CARDS ===== */
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+        }
+        .info-card.blue {
+            border-left: 5px solid #003366;
+        }
+        .info-card.green {
+            border-left: 5px solid #28a745;
+        }
+        .info-card.orange {
+            border-left: 5px solid #ff9900;
+        }
+        .info-card.purple {
+            border-left: 5px solid #6f42c1;
+        }
+        .info-card.highlight {
+            border-left: 5px solid #ffc107;
+            background: #fffdf0;
+        }
+
+        /* ===== TABLES ===== */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) {
+            background: #f8f9fc;
+        }
+        .table-wrap tr:hover {
+            background: #eef2f7;
+        }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        /* ===== PILLAR CARDS (for 2.1) ===== */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            margin: 18px 0;
+        }
+        .pillar-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px 14px;
+            text-align: center;
+            border: 2px solid #e6eaef;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+            transition: 0.2s;
+        }
+        .pillar-card:hover {
+            border-color: #003366;
+        }
+        .pillar-card .pillar-icon {
+            font-size: 2.2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .pillar-card .pillar-name {
+            font-weight: 700;
+            color: #003366;
+            font-size: 1rem;
+        }
+        .pillar-card .pillar-desc {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 4px;
+        }
+
+        /* ===== PRINCIPLE CARDS (for 2.2) ===== */
+        .principle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 16px;
+            margin: 18px 0;
+        }
+        .principle-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px 14px;
+            text-align: center;
+            border: 2px solid #e6eaef;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+        .principle-card .principle-icon {
+            font-size: 2.4rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .principle-card .principle-name {
+            font-weight: 700;
+            color: #003366;
+            font-size: 1.05rem;
+        }
+        .principle-card .principle-desc {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 4px;
+        }
+
+        /* ===== CHARTS ===== */
+        .chart-container {
+            margin: 20px 0 10px;
+        }
+        .chart-container .chart-title {
+            font-weight: 600;
+            color: #003366;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+        }
+        .chart-bar {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .chart-bar .label {
+            min-width: 120px;
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+        }
+        .chart-bar .bar-track {
+            flex: 1;
+            min-width: 140px;
+            height: 26px;
+            background: #e9edf2;
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+        }
+        .chart-bar .bar-track .fill {
+            height: 100%;
+            border-radius: 14px;
+            background: linear-gradient(90deg, #003366, #4a90d9);
+            transition: width 0.6s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8px;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .chart-bar .bar-track .fill.green {
+            background: linear-gradient(90deg, #1e7e34, #5ddb6f);
+        }
+        .chart-bar .bar-track .fill.orange {
+            background: linear-gradient(90deg, #cc7a00, #ffb84d);
+        }
+        .chart-bar .bar-track .fill.purple {
+            background: linear-gradient(90deg, #5a2d91, #a37bdb);
+        }
+        .chart-bar .bar-track .fill.teal {
+            background: linear-gradient(90deg, #0f7b8a, #56d4dd);
+        }
+        .chart-bar .value {
+            min-width: 44px;
+            font-weight: 700;
+            color: #1e3a5f;
+            font-size: 0.9rem;
+            text-align: right;
+        }
+        .chart-note {
+            font-size: 0.82rem;
+            color: #888;
+            margin-top: 6px;
+        }
+
+        /* ===== EXAMPLE BOX ===== */
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .example-box strong {
+            color: #003366;
+        }
+
+        /* ===== IMPORTANT / SHORT NOTES ===== */
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .important-box ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .short-notes ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+
+        /* ===== MCQ LINK ===== */
+        .mcq-link {
+            background: #f0f5ff;
+            border: 2px solid #003366;
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            margin: 16px 0;
+        }
+        .mcq-link a {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #003366;
+            background: #fff;
+            padding: 10px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: 0.25s;
+            border: 1px solid #003366;
+        }
+        .mcq-link a:hover {
+            background: #003366;
+            color: #fff;
+            transform: scale(1.02);
+        }
+
+        /* ===== SHARE BUTTONS ===== */
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 20px;
+            padding: 14px 18px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover {
+            transform: scale(1.04);
+            opacity: 0.9;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+        }
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+        .share-btn.link {
+            background: #6c757d;
+        }
+        .share-btn.link.copied {
+            background: #28a745;
+        }
+        .share-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #003366;
+            color: #fff !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+
+        /* ===== COMMENTS ===== */
+        .comments-section textarea,
+        .topic-request textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            resize: vertical;
+            font-family: inherit;
+            user-select: text;
+        }
+        .comments-section input,
+        .topic-request input {
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            width: 48%;
+            margin-right: 2%;
+            margin-bottom: 10px;
+            font-family: inherit;
+            user-select: text;
+        }
+        @media (max-width: 600px) {
+            .comments-section input,
+            .topic-request input {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .comment-item {
+            background: #f1f4f9;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #003366;
+        }
+        .comment-item .meta {
+            color: #888;
+            font-size: 0.8rem;
+        }
+        .comment-item .status-pending {
+            color: #ff9900;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #fff3cd;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        .comment-item .status-approved {
+            color: #28a745;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #d4edda;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 24px 20px;
+            text-align: center;
+            margin-top: 44px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 24px;
+            margin-bottom: 12px;
+        }
+        footer .footer-links a {
+            color: #b0b8c5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        footer .footer-links a:hover {
+            color: #fff;
+        }
+        footer p {
+            margin: 8px 0 0;
+            font-size: 0.85rem;
+            color: #7a8494;
+        }
+
+        /* ===== SCROLL TOP ===== */
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.25s;
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover {
+            background: #002244;
+            transform: scale(1.05);
+        }
+
+        /* ===== COPY PROTECTION ===== */
+        .copy-protect::selection {
+            background: #b3d4fc;
+            color: #000;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .main-header nav {
+                justify-content: center;
+                gap: 6px 12px;
+            }
+            .main-header nav a {
+                font-size: 0.9rem;
+            }
+            .page-title h1 {
+                font-size: 1.6rem;
+            }
+            .section-header {
+                padding: 14px 18px;
+                flex-wrap: wrap;
+            }
+            .section-header .title {
+                font-size: 1.05rem;
+            }
+            .section-body {
+                padding: 16px 18px;
+            }
+            .section-body h3 {
+                font-size: 1.1rem;
+            }
+            .bilingual .en {
+                font-size: 0.95rem;
+            }
+            .bilingual .hi {
+                font-size: 0.9rem;
+                padding: 12px 16px;
+            }
+            .pillar-grid {
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            }
+            .principle-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            }
+            .share-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .share-section .share-label {
+                text-align: center;
+            }
+            .share-btn {
+                justify-content: center;
+            }
+            .chart-bar .label {
+                min-width: 90px;
+                font-size: 0.85rem;
+            }
+            .chart-bar .bar-track {
+                min-width: 100px;
+                height: 22px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            .section-body {
+                padding: 12px 14px;
+            }
+            .section-header .icon {
+                font-size: 1.3rem;
+            }
+            .section-header .title {
+                font-size: 0.95rem;
+            }
+            .chart-bar {
+                gap: 8px;
+            }
+            .chart-bar .label {
+                min-width: 70px;
+                font-size: 0.8rem;
+            }
+            .chart-bar .bar-track {
+                min-width: 70px;
+                height: 20px;
+            }
+            .chart-bar .value {
+                font-size: 0.8rem;
+                min-width: 32px;
+            }
+            .pillar-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .principle-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="/">ITI Study Centre</a></div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/iti-result.html">ITI Result</a>
+                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
+                <a href="/engineering-notes.html">Engineering Notes</a>
+                <a href="/questionbank.html">Question Bank</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
+            <a href="/notes/employability-skills/index.html">Employability Skills</a> &nbsp;›&nbsp;
+            <span class="current">Module 2: Constitutional Values – Citizenship</span>
+        </div>
+    </div>
+
+    <!-- ===== PAGE TITLE ===== -->
+    <section class="page-title">
+        <div class="container">
+            <h1>🇮🇳 Module 2: Constitutional Values – Citizenship</h1>
+            <p>Complete notes based on NSDC / DGT curriculum • Bilingual (English + Hindi) • With charts &amp; diagrams</p>
+        </div>
+    </section>
+
+    <!-- ===== SEARCH ===== -->
+    <section class="search-section container">
+        <input type="text" id="sectionSearch" placeholder="🔍 Search within this module...">
+        <button onclick="filterSections()">Search</button>
+    </section>
+
+    <!-- ===== SHARE BUTTONS ===== -->
+    <div class="container">
+        <div class="share-section" id="shareSection">
+            <span class="share-label">📤 Share this page:</span>
+            <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </button>
+            <button class="share-btn facebook" onclick="shareFacebook()">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter()">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Twitter
+            </button>
+            <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+                <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <span id="copyLinkText">Copy Link</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    2.1 MY VALUES AND ETHICS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="values">
+            <div class="section-header">
+                <span class="icon">🌟</span>
+                <span class="title">2.1 My Values and Ethics / मेरे मूल्य और नीतिशास्त्र</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Ethics</strong> means to decide what is right and wrong for human conduct. Ethics is necessary to have a good society, where everyone feels safe and respected. Ethics is usually the same for the whole of society.</p>
+                        <p><strong>Values</strong> are the beliefs that guide or motivate our attitudes or actions. They show how a person thinks, feels and behaves at home, at work and in society. They decide the 'character' of a person. Values are more personal than ethics.</p>
+                        <p><strong>The Six Pillars of Character:</strong></p>
+                        <ul>
+                            <li><strong>Trustworthiness:</strong> Be honest, reliable, and loyal.</li>
+                            <li><strong>Responsibility:</strong> Be accountable, keep trying, do your best, think before you act, use self-control.</li>
+                            <li><strong>Caring:</strong> Be kind, compassionate, show empathy, help others in need.</li>
+                            <li><strong>Citizenship:</strong> Respect public property, protect the environment, vote and abide by the law, act for the welfare of society.</li>
+                            <li><strong>Fairness:</strong> Be non-judgemental, make decisions based on facts, be open-minded, do not spread fake news.</li>
+                            <li><strong>Respect:</strong> Be kind and respect all those who are different from you despite their age, gender, sexuality, colour, caste, religion or class. Don't hurt other people's feelings.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>नीतिशास्त्र (Ethics)</strong> का अर्थ है मानव व्यवहार के लिए सही और गलत का निर्णय लेना। एक अच्छे समाज के लिए नीतिशास्त्र आवश्यक है, जहाँ हर कोई सुरक्षित और सम्मानित महसूस करे। नीतिशास्त्र आमतौर पर पूरे समाज के लिए समान होता है।</p>
+                        <p><strong>मूल्य (Values)</strong> वे विश्वास हैं जो हमारे दृष्टिकोण या कार्यों का मार्गदर्शन या प्रेरणा देते हैं। वे दिखाते हैं कि एक व्यक्ति घर, काम और समाज में कैसे सोचता, महसूस करता और व्यवहार करता है। वे व्यक्ति के 'चरित्र' का निर्धारण करते हैं। मूल्य नीतिशास्त्र की तुलना में अधिक व्यक्तिगत होते हैं।</p>
+                        <p><strong>चरित्र के छह स्तंभ:</strong></p>
+                        <ul>
+                            <li><strong>विश्वसनीयता:</strong> ईमानदार, भरोसेमंद और वफादार बनें।</li>
+                            <li><strong>जिम्मेदारी:</strong> जवाबदेह बनें, कोशिश करते रहें, अपना सर्वश्रेष्ठ करें, कार्य करने से पहले सोचें, आत्म-नियंत्रण का उपयोग करें।</li>
+                            <li><strong>देखभाल:</strong> दयालु और करुणामय बनें, सहानुभूति दिखाएँ, जरूरतमंदों की मदद करें।</li>
+                            <li><strong>नागरिकता:</strong> सार्वजनिक संपत्ति का सम्मान करें, पर्यावरण की रक्षा करें, मतदान करें और कानून का पालन करें, समाज के कल्याण के लिए कार्य करें।</li>
+                            <li><strong>निष्पक्षता:</strong> निर्णय न लें, तथ्यों के आधार पर निर्णय लें, खुले विचारों वाले बनें, फेक न्यूज़ न फैलाएँ।</li>
+                            <li><strong>सम्मान:</strong> अपनी उम्र, लिंग, जाति, धर्म या वर्ग के बावजूद अपने से भिन्न सभी लोगों के प्रति दयालु और सम्मानजनक बनें। दूसरों की भावनाओं को ठेस न पहुँचाएँ।</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar Cards -->
+                <div class="pillar-grid">
+                    <div class="pillar-card"><span class="pillar-icon">🤝</span><div class="pillar-name">Trustworthiness</div><div class="pillar-desc">Honest, reliable, loyal</div></div>
+                    <div class="pillar-card"><span class="pillar-icon">⚖️</span><div class="pillar-name">Responsibility</div><div class="pillar-desc">Accountable, self‑control</div></div>
+                    <div class="pillar-card"><span class="pillar-icon">❤️</span><div class="pillar-name">Caring</div><div class="pillar-desc">Kind, empathetic, helpful</div></div>
+                    <div class="pillar-card"><span class="pillar-icon">🏛️</span><div class="pillar-name">Citizenship</div><div class="pillar-desc">Respect law, environment</div></div>
+                    <div class="pillar-card"><span class="pillar-icon">🎯</span><div class="pillar-name">Fairness</div><div class="pillar-desc">Open‑minded, factual</div></div>
+                    <div class="pillar-card"><span class="pillar-icon">🙏</span><div class="pillar-name">Respect</div><div class="pillar-desc">Kind to all differences</div></div>
+                </div>
+
+                <div class="example-box">
+                    <p><strong>Example:</strong> Someone has mistakenly left their mobile phone on the bus. You immediately run to return it. This shows the ethics of honesty.</p>
+                    <p><strong>उदाहरण:</strong> किसी ने गलती से अपना मोबाइल फोन बस में छोड़ दिया। आप तुरंत उसे वापस करने के लिए दौड़ते हैं। यह ईमानदारी की नीति को दर्शाता है।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    2.2 OUR CONSTITUTION – GUIDING PRINCIPLES
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="constitution">
+            <div class="section-header">
+                <span class="icon">📜</span>
+                <span class="title">2.2 Our Constitution: Guiding Principles / हमारा संविधान: मार्गदर्शक सिद्धांत</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>The <strong>Constitution of India (Bhartiya Samvidhan)</strong> is like a rule book. It is made of laws and rules for the country. It also tells the rights and duties of its citizens. It helps to manage the country in a good and fair way.</p>
+                        <p><strong>Preamble:</strong> "WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC..."</p>
+                        <p><strong>The five guiding principles are:</strong></p>
+                        <ul>
+                            <li><strong>Sovereign:</strong> India can make its own decisions.</li>
+                            <li><strong>Socialist:</strong> Equal access to resources and opportunities for all citizens.</li>
+                            <li><strong>Secular:</strong> All religions are treated equally.</li>
+                            <li><strong>Democratic:</strong> Everyone has the right to their own opinion.</li>
+                            <li><strong>Republic:</strong> Citizens elect their leaders.</li>
+                        </ul>
+                        <p><strong>Fundamental Rights:</strong> Right to Equality, Right to Freedom, Right against Exploitation, Right to Freedom of Religion, Cultural and Educational Rights, Right to Constitutional Remedies.</p>
+                        <p><strong>Duties:</strong> Responsibilities of a citizen, e.g., following traffic rules, wearing a helmet.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>भारत का संविधान (Bhartiya Samvidhan)</strong> एक नियम पुस्तिका की तरह है। यह देश के लिए कानूनों और नियमों से बना है। यह अपने नागरिकों के अधिकारों और कर्तव्यों को भी बताता है। यह देश को अच्छे और निष्पक्ष तरीके से चलाने में मदद करता है।</p>
+                        <p><strong>प्रस्तावना:</strong> "हम, भारत के लोग, भारत को एक संप्रभु, समाजवादी, धर्मनिरपेक्ष, लोकतांत्रिक गणराज्य बनाने का गंभीर संकल्प लेते हुए..."</p>
+                        <p><strong>पाँच मार्गदर्शक सिद्धांत हैं:</strong></p>
+                        <ul>
+                            <li><strong>संप्रभु:</strong> भारत अपने निर्णय स्वयं ले सकता है।</li>
+                            <li><strong>समाजवादी:</strong> सभी नागरिकों के लिए संसाधनों और अवसरों की समान पहुँच।</li>
+                            <li><strong>धर्मनिरपेक्ष:</strong> सभी धर्मों के साथ समान व्यवहार किया जाता है।</li>
+                            <li><strong>लोकतांत्रिक:</strong> प्रत्येक व्यक्ति को अपनी राय रखने का अधिकार है।</li>
+                            <li><strong>गणतंत्र:</strong> नागरिक अपने नेताओं का चुनाव करते हैं।</li>
+                        </ul>
+                        <p><strong>मौलिक अधिकार:</strong> समानता का अधिकार, स्वतंत्रता का अधिकार, शोषण के विरुद्ध अधिकार, धार्मिक स्वतंत्रता का अधिकार, सांस्कृतिक और शैक्षिक अधिकार, संवैधानिक उपचारों का अधिकार।</p>
+                        <p><strong>कर्तव्य:</strong> नागरिक की जिम्मेदारियाँ, जैसे यातायात नियमों का पालन करना, हेलमेट पहनना।</p>
+                    </div>
+                </div>
+
+                <!-- Principle Cards -->
+                <div class="principle-grid">
+                    <div class="principle-card"><span class="principle-icon">🗳️</span><div class="principle-name">Sovereign</div><div class="principle-desc">Self‑governing, independent decisions</div></div>
+                    <div class="principle-card"><span class="principle-icon">🤝</span><div class="principle-name">Socialist</div><div class="principle-desc">Equal opportunities for all</div></div>
+                    <div class="principle-card"><span class="principle-icon">🕊️</span><div class="principle-name">Secular</div><div class="principle-desc">Equal respect for all religions</div></div>
+                    <div class="principle-card"><span class="principle-icon">🗣️</span><div class="principle-name">Democratic</div><div class="principle-desc">Freedom of opinion</div></div>
+                    <div class="principle-card"><span class="principle-icon">🏛️</span><div class="principle-name">Republic</div><div class="principle-desc">Citizens elect leaders</div></div>
+                </div>
+
+                <div class="info-card blue">
+                    <h4 style="margin:0 0 6px; color:#003366;">📌 Fun Facts</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>All countries have a Constitution.</li>
+                        <li>The Indian Constitution is the longest in the world.</li>
+                        <li>Dr. B.R. Ambedkar was the chairperson of the drafting committee.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    2.3 PROTECTING OUR ENVIRONMENT
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="environment">
+            <div class="section-header">
+                <span class="icon">🌍</span>
+                <span class="title">2.3 Protecting Our Environment / हमारे पर्यावरण की रक्षा</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Pollution</strong> is when gases, smoke and chemicals enter the environment in large amounts and make it harmful for plants, animals and humans.</p>
+                        <p><strong>Major environmental problems:</strong> Land Pollution (solid waste, chemicals), Air Pollution (vehicles, industries), Water Pollution (paints, plastics, chemicals), Deforestation (cutting trees), Soil Erosion (water, wind).</p>
+                        <p><strong>Effects:</strong> Ozone depletion, Global warming (rise in earth's temperature), Loss of biodiversity, Health risks (heart disease, lung congestion, cancer).</p>
+                        <p><strong>Green habits to adopt:</strong></p>
+                        <ul>
+                            <li>Use bicycles and public transport.</li>
+                            <li>Avoid chemical pesticides and fertilisers.</li>
+                            <li>Save electricity – turn off appliances and lights.</li>
+                            <li>Reduce plastic waste.</li>
+                            <li>Carry reusable cloth/paper bags.</li>
+                            <li>Recycle cans, bottles, paper, books.</li>
+                            <li>Plant trees and encourage others.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>प्रदूषण</strong> तब होता है जब गैसें, धुआँ और रसायन बड़ी मात्रा में पर्यावरण में प्रवेश करते हैं और पौधों, जानवरों और मनुष्यों के लिए हानिकारक बनाते हैं।</p>
+                        <p><strong>प्रमुख पर्यावरणीय समस्याएँ:</strong> भूमि प्रदूषण (ठोस अपशिष्ट, रसायन), वायु प्रदूषण (वाहन, उद्योग), जल प्रदूषण (पेंट, प्लास्टिक, रसायन), वनों की कटाई (पेड़ काटना), मिट्टी का कटाव (पानी, हवा)।</p>
+                        <p><strong>प्रभाव:</strong> ओजोन परत का क्षरण, ग्लोबल वार्मिंग (पृथ्वी के तापमान में वृद्धि), जैव विविधता की हानि, स्वास्थ्य जोखिम (हृदय रोग, फेफड़ों की भीड़, कैंसर)।</p>
+                        <p><strong>हरी आदतें अपनाएँ:</strong></p>
+                        <ul>
+                            <li>साइकिल और सार्वजनिक परिवहन का उपयोग करें।</li>
+                            <li>रासायनिक कीटनाशकों और उर्वरकों से बचें।</li>
+                            <li>बिजली बचाएँ – उपकरणों और लाइटों को बंद करें।</li>
+                            <li>प्लास्टिक कचरा कम करें।</li>
+                            <li>पुन: प्रयोज्य कपड़े/कागज़ के बैग ले जाएँ।</li>
+                            <li>डिब्बे, बोतलें, कागज़, किताबें रीसायकल करें।</li>
+                            <li>पेड़ लगाएँ और दूसरों को प्रोत्साहित करें।</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Chart: Environmental Concerns -->
+                <div class="chart-container">
+                    <div class="chart-title">🌿 Major Environmental Concerns (Global Impact)</div>
+                    <div class="chart-bar">
+                        <span class="label">Land Pollution</span>
+                        <div class="bar-track"><div class="fill orange" style="width:85%;">85%</div></div>
+                    </div>
+                    <div class="chart-bar">
+                        <span class="label">Air Pollution</span>
+                        <div class="bar-track"><div class="fill" style="width:90%;">90%</div></div>
+                    </div>
+                    <div class="chart-bar">
+                        <span class="label">Water Pollution</span>
+                        <div class="bar-track"><div class="fill teal" style="width:88%;">88%</div></div>
+                    </div>
+                    <div class="chart-bar">
+                        <span class="label">Deforestation</span>
+                        <div class="bar-track"><div class="fill green" style="width:75%;">75%</div></div>
+                    </div>
+                    <div class="chart-bar">
+                        <span class="label">Soil Erosion</span>
+                        <div class="bar-track"><div class="fill purple" style="width:70%;">70%</div></div>
+                    </div>
+                    <div class="chart-note">* Estimated percentage of global environmental damage attributed to each factor</div>
+                </div>
+
+                <div class="info-card green">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">🌱 Simple Green Steps for Everyone</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>🚲 Use bicycles or walk for short distances.</li>
+                        <li>💡 Switch off lights and fans when not in use.</li>
+                        <li>🛍️ Carry a reusable bag when shopping.</li>
+                        <li>🌳 Plant at least one tree every year.</li>
+                        <li>♻️ Segregate waste into dry and wet.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    MCQ LINK
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="mcq">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="mcq-link">
+                    <p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+                    <a href="/question-bank/employability-skills/module-2.html" target="_blank">📝 Go to Question Bank →</a>
+                    <p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    RELATED CHAPTERS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="related">
+            <div class="section-header">
+                <span class="icon">🔗</span>
+                <span class="title">Related Modules / संबंधित मॉड्यूल</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div style="display:flex; flex-wrap:wrap; gap:12px;">
+                    <a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Importance of Employability Skills</a>
+                    <a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Becoming a Professional</a>
+                    <a href="../fitter/index.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">🔧 Fitter Trade Notes</a>
+                    <a href="../plumber/index.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">🚰 Plumber Trade Notes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    COMMENTS with MODERATION
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comments">
+            <div class="section-header">
+                <span class="icon">💬</span>
+                <span class="title">Comments / टिप्पणियाँ – with Moderation Review</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="comments-section">
+                    <p>💬 <strong>Share your thoughts or ask questions about this module.</strong></p>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 All comments are reviewed by the admin before being published.</p>
+                    <textarea id="comment-text" rows="3" placeholder="Write your comment here..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
+                    <input type="text" id="comment-name" placeholder="Your Name (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <button onclick="postComment()" class="btn" style="margin-top:6px;">💬 Post Comment (Pending Review)</button>
+                    <div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
+                        <div class="comment-item">
+                            <strong>Admin</strong> <span class="meta">(Moderator)</span> <span class="status-approved">✅ Approved</span>
+                            <p style="margin:4px 0 0 0; font-size:0.95rem;">Welcome to Module 2! Feel free to ask questions about Values, Constitution, or Environment.</p>
+                        </div>
+                        <p style="color:#888; font-style:italic; margin-top:8px;">Your comment will appear here after admin approval.</p>
+                    </div>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ Comments are moderated. Please be respectful.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    TOPIC REQUEST
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="topicrequest">
+            <div class="section-header">
+                <span class="icon">💭</span>
+                <span class="title">Topic Request / विषय अनुरोध</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="topic-request">
+                    <p>📝 <strong>Request a new topic or suggest an improvement.</strong></p>
+                    <input type="text" id="topic-name" placeholder="Your Name (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <input type="email" id="topic-email" placeholder="Your Email (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <textarea id="topic-message" rows="4" placeholder="Describe the topic or improvement you'd like to see..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
+                    <button onclick="submitTopicRequest()" class="btn">📤 Submit Request</button>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ Your request will be reviewed by the admin and added soon.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    SUGGESTIONS & DISCLAIMER
+    ============================================================ -->
+    <div class="container" style="margin-top:16px;">
+        <div style="background:#fff; border-radius:14px; padding:20px 24px; border:1px solid #e6eaef; margin-bottom:20px;">
+            <h2 style="color:#003366; font-size:1.3rem; margin:0 0 6px;">💬 सुझाव दें</h2>
+            <p style="margin:0 0 12px;">यदि इस Module में कोई सुधार सुझाना है, तो हमें बताएं।</p>
+            <a href="/contact.html" class="btn">💬 Click Here →</a>
+        </div>
+        <div style="background:#fff8e1; border-radius:14px; padding:18px 22px; border:1px solid #ffe082; margin-bottom:20px;">
+            <h2 style="color:#856404; font-size:1.2rem; margin:0 0 4px;">⚠ Disclaimer</h2>
+            <p style="margin:0; font-size:0.95rem; color:#6c6c6c;">ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="/disclaimer.html">Disclaimer</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+    </footer>
+
+    <button id="scrollTop" title="Go to Top">⬆</button>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('📚 Content is protected. Please use the share buttons to share this page.');
+        });
+
+        // Disable Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Copying content is disabled. Please use the share buttons to share this page.');
+            }
+        });
+
+        // Search
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        // Share functions
+        function getPageUrl() { return window.location.href; }
+
+        function getPageTitle() { return document.querySelector('title').textContent; }
+
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle() + ' - Check out this study material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareFacebook() {
+            const url = getPageUrl();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareTwitter() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(url), '_blank');
+        }
+
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        span.textContent = 'Copy Link';
+                        btn.classList.remove('copied');
+                    }, 3000);
+                }).catch(() => { fallbackCopy(url); });
+            } else {
+                fallbackCopy(url);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    span.textContent = 'Copy Link';
+                    btn.classList.remove('copied');
+                }, 3000);
+            } catch (err) {
+                alert('Unable to copy. Please select and copy the URL manually.');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // Comments with moderation
+        function postComment() {
+            const text = document.getElementById('comment-text').value.trim();
+            const name = document.getElementById('comment-name').value.trim() || 'Anonymous';
+            if (!text) {
+                alert('Please write a comment.');
+                return;
+            }
+            const list = document.getElementById('comment-list');
+            const noMsg = list.querySelector('p[style]');
+            if (noMsg && noMsg.style.fontStyle === 'italic') {
+                noMsg.remove();
+            }
+            const div = document.createElement('div');
+            div.className = 'comment-item';
+            div.innerHTML = `
+                <strong>${name}</strong> <span class="meta">(Pending Review)</span> <span class="status-pending">⏳ Pending</span>
+                <p style="margin:4px 0 0 0; font-size:0.95rem;">${text}</p>
+                <p style="margin:4px 0 0 0; font-size:0.75rem; color:#888;">⏱️ Submitted for admin review. Will appear after approval.</p>
+            `;
+            list.prepend(div);
+            document.getElementById('comment-text').value = '';
+            document.getElementById('comment-name').value = '';
+            alert('✅ Your comment has been submitted for review. It will appear after admin approval.');
+        }
+
+        // Topic request
+        function submitTopicRequest() {
+            const name = document.getElementById('topic-name').value.trim() || 'Anonymous';
+            const message = document.getElementById('topic-message').value.trim();
+            if (!message) {
+                alert('Please describe your topic request.');
+                return;
+            }
+            alert(`✅ Thank you ${name}! Your topic request has been sent to the admin.`);
+            document.getElementById('topic-name').value = '';
+            document.getElementById('topic-email').value = '';
+            document.getElementById('topic-message').value = '';
+        }
+
+        // Scroll to top
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Footer year
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
+            ' ITI Study Centre. All Rights Reserved.';
+
+        console.log('Module 2 loaded: Constitutional Values – Citizenship, fully open, bilingual.');
+    </script>
+</body>
+</html>
