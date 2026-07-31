@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Employability Skills – Index | ITI Study Centre</title>
-  <meta name="description" content="Complete index of Employability Skills modules with chapter names for 1st and 2nd year ITI students.">
+  <meta name="description" content="Complete index of Employability Skills modules for 1st and 2nd year ITI students.">
   <link rel="icon" href="/images/favicon.png">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="canonical" href="https://www.itistudycentre.in/notes/employability-skills/index.html">
@@ -105,16 +105,6 @@
     .module-header:hover {
       background: #eef0f2;
     }
-    .module-header .code {
-      font-size: 0.75rem;
-      color: #888;
-      font-weight: bold;
-      background: #e9ecef;
-      padding: 2px 12px;
-      border-radius: 12px;
-      min-width: 50px;
-      text-align: center;
-    }
     .module-header .title {
       font-size: 1.05rem;
       font-weight: 600;
@@ -162,12 +152,6 @@
     }
     .chapter-item:last-child {
       border-bottom: none;
-    }
-    .chapter-item .num {
-      font-size: 0.7rem;
-      font-weight: bold;
-      color: #888;
-      min-width: 26px;
     }
     .chapter-item .en {
       font-size: 0.92rem;
@@ -339,269 +323,1085 @@
 <script src="/js/main.js"></script>
 <script>
   // ============================================================
-  //  DATA: 1ST YEAR MODULES (सिर्फ Headings + Chapter Names)
+  //  DATA: ONLY MODULE NAME (बिना 1.1, 1.2 वाला नंबर)
   // ============================================================
   const modulesData = {
     year1: [
-      { id: '1.1', name: 'Module 1: Importance of Employability Skills', nameHi: 'मॉड्यूल 1: एम्प्लॉयबिलिटी स्किल्स का महत्व',
-        chapters: [{ en: 'What are Employability Skills?', hi: 'एम्प्लॉयबिलिटी स्किल्स क्या हैं?' }, { en: 'Importance of Employability Skills', hi: 'एम्प्लॉयबिलिटी स्किल्स का महत्व' }, { en: 'Self-Learner & Growth Mindset', hi: 'सेल्फ-लर्नर और ग्रोथ माइंडसेट' }] },
-      { id: '1.2', name: 'Module 2: Learning Employability Skills Online', nameHi: 'मॉड्यूल 2: ऑनलाइन एम्प्लॉयबिलिटी स्किल्स सीखना',
-        chapters: [{ en: 'What is E-Learning?', hi: 'ई-लर्निंग क्या है?' }, { en: 'Benefits of E-Learning', hi: 'ई-लर्निंग के फायदे' }, { en: 'How to Login to E-Learning Portals', hi: 'ई-लर्निंग पोर्टल्स पर लॉगिन कैसे करें' }] },
-      { id: '1.3', name: 'Module 3: Explore the Future of Work', nameHi: 'मॉड्यूल 3: भविष्य के काम की खोज',
-        chapters: [{ en: 'Post-COVID Job Market', hi: 'कोविड के बाद का जॉब मार्केट' }, { en: 'The Future of Work', hi: 'काम का भविष्य' }, { en: 'Skills for the Future of Work', hi: 'भविष्य के काम के लिए स्किल्स' }] },
-      { id: '2.1', name: 'Module 4: My Values and Ethics', nameHi: 'मॉड्यूल 4: मेरे मूल्य और नैतिकता',
-        chapters: [{ en: 'What are Values & Ethics?', hi: 'मूल्य और नैतिकता क्या हैं?' }, { en: 'How Ethics & Values Impact Behavior', hi: 'नैतिकता और मूल्य व्यवहार को कैसे प्रभावित करते हैं' }, { en: 'Identify My Personal Values', hi: 'मेरे व्यक्तिगत मूल्यों को पहचानें' }] },
-      { id: '2.2', name: 'Module 5: Our Constitution: Guiding Principles', nameHi: 'मॉड्यूल 5: हमारा संविधान: मार्गदर्शक सिद्धांत',
-        chapters: [{ en: 'Introduction to Indian Constitution', hi: 'भारतीय संविधान का परिचय' }, { en: 'Guiding Principles of the Constitution', hi: 'संविधान के मार्गदर्शक सिद्धांत' }, { en: 'Rights and Duties as an Indian Citizen', hi: 'भारतीय नागरिक के अधिकार और कर्तव्य' }] },
-      { id: '2.3', name: 'Module 6: Protecting Our Environment', nameHi: 'मॉड्यूल 6: हमारे पर्यावरण की रक्षा',
-        chapters: [{ en: 'What is Environmental Crisis?', hi: 'पर्यावरणीय संकट क्या है?' }, { en: 'Need for Sustainable Environment', hi: 'टिकाऊ पर्यावरण की आवश्यकता' }, { en: 'Developing a Green Lifestyle', hi: 'ग्रीन लाइफस्टाइल विकसित करना' }] },
-      { id: '3.1', name: 'Module 7: 21st Century Employability Skills', nameHi: 'मॉड्यूल 7: 21वीं सदी की एम्प्लॉयबिलिटी स्किल्स',
-        chapters: [{ en: 'Introduction to 21st Century', hi: '21वीं सदी का परिचय' }, { en: 'How to Assess Your Skills?', hi: 'अपनी स्किल्स का आकलन कैसे करें?' }, { en: 'Plan for Skill Development', hi: 'स्किल डेवलपमेंट की योजना' }] },
-      { id: '3.2', name: 'Module 8: Know Yourself', nameHi: 'मॉड्यूल 8: खुद को जानें',
-        chapters: [{ en: 'What Does "Know Yourself" Mean?', hi: '"खुद को जानें" का क्या मतलब है?' }, { en: 'What are Strengths?', hi: 'ताकत (Strengths) क्या हैं?' }, { en: 'Describing Qualities, Abilities & Talents', hi: 'गुणों, क्षमताओं और प्रतिभाओं का वर्णन' }] },
-      { id: '3.3', name: 'Module 9: Behaviour and Attitude', nameHi: 'मॉड्यूल 9: व्यवहार और दृष्टिकोण',
-        chapters: [{ en: 'What are Behavioural Skills?', hi: 'व्यवहारिक स्किल्स क्या हैं?' }, { en: 'Developing a Positive Attitude', hi: 'सकारात्मक दृष्टिकोण विकसित करना' }, { en: 'Self-Motivation', hi: 'सेल्फ-मोटिवेशन' }] },
-      { id: '3.4', name: 'Module 10: Critical Thinking & Decision Making', nameHi: 'मॉड्यूल 10: आलोचनात्मक सोच और निर्णय लेना',
-        chapters: [{ en: 'What is Critical Thinking?', hi: 'आलोचनात्मक सोच क्या है?' }, { en: 'How to Make Decisions', hi: 'निर्णय कैसे लें?' }, { en: 'Practice Decision Making', hi: 'निर्णय लेने का अभ्यास' }] },
-      { id: '3.5', name: 'Module 11: Time Management in the Workplace', nameHi: 'मॉड्यूल 11: कार्यस्थल पर समय प्रबंधन',
-        chapters: [{ en: 'What is Time Management?', hi: 'समय प्रबंधन क्या है?' }, { en: 'Why is Time Management Important?', hi: 'समय प्रबंधन क्यों महत्वपूर्ण है?' }, { en: 'How to Manage Time in Daily Life', hi: 'दैनिक जीवन में समय कैसे प्रबंधित करें' }] },
-      { id: '3.6', name: 'Module 12: Problem Solving', nameHi: 'मॉड्यूल 12: समस्या समाधान',
-        chapters: [{ en: 'Creative Problem Solving Techniques', hi: 'रचनात्मक समस्या समाधान तकनीक' }, { en: 'Practicing Problem Solving', hi: 'समस्या समाधान का अभ्यास' }] },
-      { id: '4.1', name: 'Module 13: Motivation to Learn English', nameHi: 'मॉड्यूल 13: अंग्रेज़ी सीखने की प्रेरणा',
-        chapters: [{ en: 'Importance of English Language', hi: 'अंग्रेज़ी भाषा का महत्व' }, { en: 'Fun Ways to Learn English', hi: 'अंग्रेज़ी सीखने के मजेदार तरीके' }] },
-      { id: '4.2', name: 'Module 14: Naming Words', nameHi: 'मॉड्यूल 14: नाम देने वाले शब्द',
-        chapters: [{ en: 'Meaning of Naming Words (Common Nouns)', hi: 'नाम देने वाले शब्द (कॉमन नाउन) का अर्थ' }, { en: 'Naming Words with Different Meanings', hi: 'अलग-अलग अर्थ वाले नाम देने वाले शब्द' }] },
-      { id: '4.3', name: 'Module 15: Naming Words – Singular and Plural', nameHi: 'मॉड्यूल 15: नाम देने वाले शब्द – एकवचन और बहुवचन',
-        chapters: [{ en: 'Singular vs Plural Forms', hi: 'एकवचन और बहुवचन के रूप' }, { en: 'Using Singular and Plural Correctly', hi: 'एकवचन और बहुवचन का सही उपयोग' }] },
-      { id: '4.4', name: 'Module 16: Pronouns', nameHi: 'मॉड्यूल 16: सर्वनाम',
-        chapters: [{ en: 'Purpose and Usage of Pronouns', hi: 'सर्वनाम का उद्देश्य और उपयोग' }, { en: 'Using Appropriate Pronouns', hi: 'उचित सर्वनाम का उपयोग' }] },
-      { id: '4.5', name: 'Module 17: Action Words', nameHi: 'मॉड्यूल 17: क्रिया शब्द',
-        chapters: [{ en: 'Action Words (Verbs)', hi: 'क्रिया शब्द (वर्ब्स)' }, { en: 'Using Action Words Correctly in Sentences', hi: 'वाक्यों में क्रिया शब्दों का सही उपयोग' }] },
-      { id: '4.6', name: 'Module 18: Describing Objects, Surroundings and Processes', nameHi: 'मॉड्यूल 18: वस्तुओं, परिवेश और प्रक्रियाओं का वर्णन',
-        chapters: [{ en: 'Describing Words (Adjectives)', hi: 'वर्णनात्मक शब्द (एडजेक्टिव्स)' }, { en: 'Describing Size, Shape, Texture and Color', hi: 'आकार, आकृति, बनावट और रंग का वर्णन' }] },
-      { id: '4.7', name: 'Module 19: Introduction to Punctuation', nameHi: 'मॉड्यूल 19: विराम चिह्न का परिचय',
-        chapters: [{ en: 'Importance of Punctuation Marks', hi: 'विराम चिह्नों का महत्व' }, { en: 'Using Punctuation Marks Correctly', hi: 'विराम चिह्नों का सही उपयोग' }] },
-      { id: '4.8', name: 'Module 20: Kinds of Sentences – Introduction', nameHi: 'मॉड्यूल 20: वाक्यों के प्रकार – परिचय',
-        chapters: [{ en: 'Different Types of Sentences', hi: 'विभिन्न प्रकार के वाक्य' }, { en: 'Making Sentences for Different Situations', hi: 'विभिन्न स्थितियों के लिए वाक्य बनाना' }] },
-      { id: '4.9', name: 'Module 21: Writing Simple Sentences', nameHi: 'मॉड्यूल 21: सरल वाक्य लिखना',
-        chapters: [{ en: 'Importance of Word Order', hi: 'शब्द क्रम का महत्व' }, { en: 'Rearranging Words to Create Meaningful Sentences', hi: 'अर्थपूर्ण वाक्य बनाने के लिए शब्दों को पुनर्व्यवस्थित करना' }] },
-      { id: '4.10', name: 'Module 22: Reading Activity', nameHi: 'मॉड्यूल 22: पठन गतिविधि',
-        chapters: [{ en: 'Strategies to Become a Better Reader', hi: 'बेहतर पाठक बनने की रणनीतियाँ' }, { en: 'Reading Posters and Signs', hi: 'पोस्टर और संकेत पढ़ना' }] },
-      { id: '4.11', name: 'Module 23: Speaking', nameHi: 'मॉड्यूल 23: बोलना',
-        chapters: [{ en: 'Appropriate Expressions for Speaking', hi: 'बोलने के लिए उपयुक्त अभिव्यक्तियाँ' }, { en: 'Communicating Your Views Clearly', hi: 'अपने विचारों को स्पष्ट रूप से संप्रेषित करना' }] },
-      { id: '4.12', name: 'Module 24: Listening', nameHi: 'मॉड्यूल 24: सुनना',
-        chapters: [{ en: 'Purpose and Importance of Listening', hi: 'सुनने का उद्देश्य और महत्व' }, { en: 'Practicing Listening to Follow Instructions', hi: 'निर्देशों का पालन करने के लिए सुनने का अभ्यास' }] },
-      { id: '4.13', name: 'Module 25: Talking about Likes and Dislikes', nameHi: 'मॉड्यूल 25: पसंद और नापसंद के बारे में बात करना',
-        chapters: [{ en: 'Difference between Likes and Dislikes', hi: 'पसंद और नापसंद में अंतर' }, { en: 'How to Share Your Likes and Dislikes', hi: 'अपनी पसंद-नापसंद कैसे साझा करें' }, { en: 'Talking about Others\' Likes and Dislikes', hi: 'दूसरों की पसंद-नापसंद के बारे में बात करना' }] },
-      { id: '4.14', name: 'Module 26: Greetings and Self-Introduction', nameHi: 'मॉड्यूल 26: अभिवादन और आत्म-परिचय',
-        chapters: [{ en: 'Formal and Informal Greetings', hi: 'औपचारिक और अनौपचारिक अभिवादन' }, { en: 'Effective Self-Introduction', hi: 'प्रभावी आत्म-परिचय' }] },
-      { id: '4.15', name: 'Module 27: Asking and Responding to Questions', nameHi: 'मॉड्यूल 27: प्रश्न पूछना और उत्तर देना',
-        chapters: [{ en: 'Difference between Questions and Responses', hi: 'प्रश्न और उत्तर में अंतर' }, { en: 'Asking and Responding Correctly', hi: 'सही ढंग से प्रश्न पूछना और उत्तर देना' }] },
-      { id: '4.16', name: 'Module 28: Group Discussion on Simple Topics', nameHi: 'मॉड्यूल 28: सरल विषयों पर समूह चर्चा',
-        chapters: [{ en: 'Expressing Thoughts Clearly in Group', hi: 'समूह में विचारों को स्पष्ट रूप से व्यक्त करना' }, { en: 'Useful Expressions for Discussion', hi: 'चर्चा के लिए उपयोगी अभिव्यक्तियाँ' }] },
-      { id: '4.17', name: 'Module 29: Telephone Skills', nameHi: 'मॉड्यूल 29: टेलीफोन कौशल',
-        chapters: [{ en: 'Three Phases of a Call', hi: 'कॉल के तीन चरण' }, { en: 'Professional Phrases for Calls', hi: 'कॉल के लिए पेशेवर वाक्यांश' }] },
-      { id: '4.18', name: 'Module 30: Reading and Understanding Job Descriptions', nameHi: 'मॉड्यूल 30: नौकरी विवरण पढ़ना और समझना',
-        chapters: [{ en: 'What are Job Descriptions?', hi: 'नौकरी विवरण क्या हैं?' }, { en: 'Relating Skills to Job Description', hi: 'स्किल्स को नौकरी विवरण से जोड़ना' }] },
-      { id: '4.19', name: 'Module 31: Speak and Share Information about Workplace', nameHi: 'मॉड्यूल 31: कार्यस्थल के बारे में जानकारी साझा करें',
-        chapters: [{ en: 'Sharing Information about a Job', hi: 'नौकरी के बारे में जानकारी साझा करना' }, { en: 'Communicating Views about Workplace', hi: 'कार्यस्थल के बारे में विचार व्यक्त करना' }] },
-      { id: '4.20', name: 'Module 32: Writing Applications & Cover Letters', nameHi: 'मॉड्यूल 32: आवेदन और कवर लेटर लिखना',
-        chapters: [{ en: 'How to Write Job Applications', hi: 'नौकरी के आवेदन कैसे लिखें' }, { en: 'Types of Cover Letters', hi: 'कवर लेटर के प्रकार' }] },
-      { id: '5.1', name: 'Module 33: Importance of Communication', nameHi: 'मॉड्यूल 33: संचार का महत्व',
-        chapters: [{ en: 'Importance of Communication', hi: 'संचार का महत्व' }, { en: 'Characteristics of Effective Communication', hi: 'प्रभावी संचार की विशेषताएँ' }, { en: 'Types of Communication', hi: 'संचार के प्रकार' }] },
-      { id: '5.2', name: 'Module 34: Verbal Communication: Speaking', nameHi: 'मॉड्यूल 34: मौखिक संचार: बोलना',
-        chapters: [{ en: 'What is Verbal Communication?', hi: 'मौखिक संचार क्या है?' }, { en: 'Spoken vs Written Communication', hi: 'बोली गई बनाम लिखित संचार' }, { en: 'Importance of Good Verbal Communication', hi: 'अच्छे मौखिक संचार का महत्व' }] },
-      { id: '5.3', name: 'Module 35: Verbal Communication: Writing', nameHi: 'मॉड्यूल 35: मौखिक संचार: लिखना',
-        chapters: [{ en: 'Letter Writing', hi: 'पत्र लेखन' }, { en: 'Email Writing', hi: 'ईमेल लेखन' }, { en: 'Resume Writing', hi: 'रेज़्यूमे लेखन' }] },
-      { id: '5.4', name: 'Module 36: Non-Verbal Communication', nameHi: 'मॉड्यूल 36: अशाब्दिक संचार',
-        chapters: [{ en: 'Meaning of Non-Verbal Communication', hi: 'अशाब्दिक संचार का अर्थ' }, { en: 'Appropriate Spatial Distance', hi: 'उचित स्थानिक दूरी' }, { en: 'Body Movements and Appearance', hi: 'शारीरिक गतिविधियाँ और उपस्थिति' }] },
-      { id: '5.5', name: 'Module 37: Practicing Effective Communication', nameHi: 'मॉड्यूल 37: प्रभावी संचार का अभ्यास',
-        chapters: [{ en: 'Identifying Formal and Informal Communication', hi: 'औपचारिक और अनौपचारिक संचार की पहचान' }, { en: 'Effective Self-Introduction', hi: 'प्रभावी आत्म-परिचय' }] },
-      { id: '5.6', name: 'Module 38: Workplace Communication: Introduction', nameHi: 'मॉड्यूल 38: कार्यस्थल संचार: परिचय',
-        chapters: [{ en: 'Effective Communication at Workplace', hi: 'कार्यस्थल पर प्रभावी संचार' }, { en: 'Barriers to Effective Communication', hi: 'प्रभावी संचार में बाधाएँ' }, { en: 'Text Messaging at Work', hi: 'काम पर टेक्स्ट मैसेजिंग' }] },
-      { id: '5.7', name: 'Module 39: Effective Team Work', nameHi: 'मॉड्यूल 39: प्रभावी टीम वर्क',
-        chapters: [{ en: 'Importance of Teamwork', hi: 'टीम वर्क का महत्व' }, { en: 'How to Work Well in a Team', hi: 'टीम में अच्छी तरह से कैसे काम करें' }] },
-      { id: '5.8', name: 'Module 40: Managing Conflicts', nameHi: 'मॉड्यूल 40: संघर्ष प्रबंधन',
-        chapters: [{ en: 'What is Workplace Conflict?', hi: 'कार्यस्थल संघर्ष क्या है?' }, { en: 'Common Causes of Workplace Conflict', hi: 'कार्यस्थल संघर्ष के सामान्य कारण' }, { en: 'Resolving Conflict Effectively', hi: 'संघर्ष को प्रभावी ढंग से हल करना' }] },
-      { id: '5.9', name: 'Module 41: Handling Criticism', nameHi: 'मॉड्यूल 41: आलोचना को संभालना',
-        chapters: [{ en: 'Constructive vs Unfair Criticism', hi: 'रचनात्मक बनाम अनुचित आलोचना' }, { en: 'Dealing with Criticism at Work', hi: 'काम पर आलोचना से निपटना' }] },
-      { id: '5.10', name: 'Module 42: Assessing Your Communication Ability', nameHi: 'मॉड्यूल 42: अपनी संचार क्षमता का आकलन',
-        chapters: [{ en: 'Identifying Communication Strengths', hi: 'संचार में ताकत की पहचान' }, { en: 'Areas of Improvement in Communication', hi: 'संचार में सुधार के क्षेत्र' }] },
-      { id: '6.1', name: 'Module 43: Introduction to Digital Skills', nameHi: 'मॉड्यूल 43: डिजिटल स्किल्स का परिचय',
-        chapters: [{ en: 'What is Digital Literacy?', hi: 'डिजिटल साक्षरता क्या है?' }, { en: 'Digital Technology in Everyday Life', hi: 'दैनिक जीवन में डिजिटल तकनीक' }, { en: 'Digital Skills Required at Work', hi: 'काम के लिए आवश्यक डिजिटल स्किल्स' }] },
-      { id: '6.2', name: 'Module 44: Basics of Computers', nameHi: 'मॉड्यूल 44: कंप्यूटर की बुनियादी बातें',
-        chapters: [{ en: 'Parts of a Computer', hi: 'कंप्यूटर के भाग' }, { en: 'Functions of Important Parts', hi: 'महत्वपूर्ण भागों के कार्य' }] },
-      { id: '6.3', name: 'Module 45: Exploring a Computer', nameHi: 'मॉड्यूल 45: कंप्यूटर की खोज',
-        chapters: [{ en: 'Starting and Shutting Down', hi: 'स्टार्ट और शट डाउन' }, { en: 'Connecting Devices to a Computer', hi: 'कंप्यूटर से डिवाइस कनेक्ट करना' }] },
-      { id: '6.4', name: 'Module 46: Exploring Windows Operating System', nameHi: 'मॉड्यूल 46: विंडोज़ ऑपरेटिंग सिस्टम की खोज',
-        chapters: [{ en: 'Windows 7 vs Windows 8', hi: 'विंडोज़ 7 बनाम विंडोज़ 8' }, { en: 'Features of Windows 10', hi: 'विंडोज़ 10 की विशेषताएँ' }] },
-      { id: '6.5', name: 'Module 47: Creating and Saving Files', nameHi: 'मॉड्यूल 47: फाइलें बनाना और सहेजना',
-        chapters: [{ en: 'How to Create Files', hi: 'फाइलें कैसे बनाएँ' }, { en: 'Safe Ways to Save Information', hi: 'जानकारी सहेजने के सुरक्षित तरीके' }, { en: 'Transferring Files', hi: 'फाइलों को स्थानांतरित करना' }] },
-      { id: '6.6', name: 'Module 48: Basics of MS Word', nameHi: 'मॉड्यूल 48: एमएस वर्ड की बुनियादी बातें',
-        chapters: [{ en: 'Features of MS Word', hi: 'एमएस वर्ड की विशेषताएँ' }, { en: 'Creating and Saving MS Word Files', hi: 'एमएस वर्ड फाइलें बनाना और सहेजना' }] },
-      { id: '6.7', name: 'Module 49: Creating Documents on MS Word', nameHi: 'मॉड्यूल 49: एमएस वर्ड पर दस्तावेज़ बनाना',
-        chapters: [{ en: 'Basic Formatting in MS Word', hi: 'एमएस वर्ड में बुनियादी फ़ॉर्मेटिंग' }, { en: 'Keyboard Shortcuts', hi: 'कीबोर्ड शॉर्टकट' }, { en: 'Printing a Document', hi: 'दस्तावेज़ प्रिंट करना' }] },
-      { id: '6.8', name: 'Module 50: Basics of MS Excel', nameHi: 'मॉड्यूल 50: एमएस एक्सेल की बुनियादी बातें',
-        chapters: [{ en: 'Importance of MS Excel', hi: 'एमएस एक्सेल का महत्व' }, { en: 'Entering Data in Excel', hi: 'एक्सेल में डेटा डालना' }] },
-      { id: '6.9', name: 'Module 51: Simple Functions on MS Excel', nameHi: 'मॉड्यूल 51: एमएस एक्सेल पर सरल कार्य',
-        chapters: [{ en: 'Saving and Printing in Excel', hi: 'एक्सेल में सहेजना और प्रिंट करना' }, { en: 'SUM and AVERAGE Functions', hi: 'SUM और AVERAGE फंक्शन' }] },
-      { id: '6.10', name: 'Module 52: Introduction to the Internet', nameHi: 'मॉड्यूल 52: इंटरनेट का परिचय',
-        chapters: [{ en: 'Internet and Its Benefits', hi: 'इंटरनेट और इसके लाभ' }, { en: 'Accessing the Internet', hi: 'इंटरनेट का उपयोग करना' }] },
-      { id: '6.11', name: 'Module 53: Using Search Engines', nameHi: 'मॉड्यूल 53: सर्च इंजन का उपयोग',
-        chapters: [{ en: 'What are Search Engines?', hi: 'सर्च इंजन क्या हैं?' }, { en: 'Google and Other Search Engines', hi: 'गूगल और अन्य सर्च इंजन' }, { en: 'Using Keywords Effectively', hi: 'कीवर्ड का प्रभावी उपयोग' }] },
-      { id: '6.12', name: 'Module 54: Searching for the Right Information Online', nameHi: 'मॉड्यूल 54: सही जानकारी ऑनलाइन खोजना',
-        chapters: [{ en: 'Searching for Important Information', hi: 'महत्वपूर्ण जानकारी खोजना' }, { en: 'Government Portals', hi: 'सरकारी पोर्टल्स' }] },
-      { id: '6.13', name: 'Module 55: Social Media', nameHi: 'मॉड्यूल 55: सोशल मीडिया',
-        chapters: [{ en: 'What is Social Media?', hi: 'सोशल मीडिया क्या है?' }, { en: 'Social Media Profiles', hi: 'सोशल मीडिया प्रोफाइल' }, { en: 'Safety Measures on Social Media', hi: 'सोशल मीडिया पर सुरक्षा उपाय' }] },
-      { id: '6.14', name: 'Module 56: Social Media for Professional Development', nameHi: 'मॉड्यूल 56: सोशल मीडिया पेशेवर विकास के लिए',
-        chapters: [{ en: 'Using Social Media for Professional Growth', hi: 'पेशेवर विकास के लिए सोशल मीडिया का उपयोग' }, { en: 'Responsible Usage of Social Media', hi: 'सोशल मीडिया का जिम्मेदार उपयोग' }, { en: 'Success Stories', hi: 'सफलता की कहानियाँ' }] },
-      { id: '6.15', name: 'Module 57: Internet Safety', nameHi: 'मॉड्यूल 57: इंटरनेट सुरक्षा',
-        chapters: [{ en: 'Basics of Internet Safety', hi: 'इंटरनेट सुरक्षा की बुनियादी बातें' }, { en: 'SafeSearch', hi: 'सुरक्षित खोज' }, { en: 'Cyber Crime', hi: 'साइबर अपराध' }] },
-      { id: '6.16', name: 'Module 58: Communication Using Email', nameHi: 'मॉड्यूल 58: ईमेल का उपयोग करके संचार',
-        chapters: [{ en: 'Features of Email', hi: 'ईमेल की विशेषताएँ' }, { en: 'Creating and Using Email Account', hi: 'ईमेल खाता बनाना और उपयोग करना' }, { en: 'Attachments, CC and BCC', hi: 'अटैचमेंट, CC और BCC' }] },
-      { id: '6.17', name: 'Module 59: Introduction to Mobile Applications', nameHi: 'मॉड्यूल 59: मोबाइल एप्लिकेशन का परिचय',
-        chapters: [{ en: 'Benefits of Mobile Apps', hi: 'मोबाइल ऐप्स के लाभ' }, { en: 'Using Mobile for Learning', hi: 'सीखने के लिए मोबाइल का उपयोग' }] },
-      { id: '6.18', name: 'Module 60: Internet of Things (IoT)', nameHi: 'मॉड्यूल 60: इंटरनेट ऑफ थिंग्स (IoT)',
-        chapters: [{ en: 'Digital Devices in Daily Life', hi: 'दैनिक जीवन में डिजिटल डिवाइस' }, { en: 'Siri and Alexa', hi: 'सिरी और एलेक्सा' }] },
-      { id: '6.19', name: 'Module 61: Using Online Meeting Tools for Interviews', nameHi: 'मॉड्यूल 61: साक्षात्कार के लिए ऑनलाइन मीटिंग टूल्स',
-        chapters: [{ en: 'Online Meeting Tools', hi: 'ऑनलाइन मीटिंग टूल्स' }, { en: 'How to Use Zoom', hi: 'Zoom का उपयोग कैसे करें' }, { en: 'How to Use Google Meet', hi: 'Google Meet का उपयोग कैसे करें' }] },
-      { id: '6.20', name: 'Module 62: Exploring Popular Sites for Learning and Career Growth', nameHi: 'मॉड्यूल 62: सीखने और करियर विकास के लिए लोकप्रिय साइट्स',
-        chapters: [{ en: 'Popular Learning Sites', hi: 'लोकप्रिय लर्निंग साइट्स' }, { en: 'Using Internet for Continuous Professional Development', hi: 'निरंतर पेशेवर विकास के लिए इंटरनेट का उपयोग' }] }
+      {
+        name: 'Module 1: Importance of Employability Skills',
+        nameHi: 'मॉड्यूल 1: एम्प्लॉयबिलिटी स्किल्स का महत्व',
+        chapters: [
+          'What are Employability Skills?',
+          'Importance of Employability Skills',
+          'Self-Learner & Growth Mindset'
+        ]
+      },
+      {
+        name: 'Module 2: Learning Employability Skills Online',
+        nameHi: 'मॉड्यूल 2: ऑनलाइन एम्प्लॉयबिलिटी स्किल्स सीखना',
+        chapters: [
+          'What is E-Learning?',
+          'Benefits of E-Learning',
+          'How to Login to E-Learning Portals'
+        ]
+      },
+      {
+        name: 'Module 3: Explore the Future of Work',
+        nameHi: 'मॉड्यूल 3: भविष्य के काम की खोज',
+        chapters: [
+          'Post-COVID Job Market',
+          'The Future of Work',
+          'Skills for the Future of Work'
+        ]
+      },
+      {
+        name: 'Module 4: My Values and Ethics',
+        nameHi: 'मॉड्यूल 4: मेरे मूल्य और नैतिकता',
+        chapters: [
+          'What are Values & Ethics?',
+          'How Ethics & Values Impact Behavior',
+          'Identify My Personal Values'
+        ]
+      },
+      {
+        name: 'Module 5: Our Constitution: Guiding Principles',
+        nameHi: 'मॉड्यूल 5: हमारा संविधान: मार्गदर्शक सिद्धांत',
+        chapters: [
+          'Introduction to Indian Constitution',
+          'Guiding Principles of the Constitution',
+          'Rights and Duties as an Indian Citizen'
+        ]
+      },
+      {
+        name: 'Module 6: Protecting Our Environment',
+        nameHi: 'मॉड्यूल 6: हमारे पर्यावरण की रक्षा',
+        chapters: [
+          'What is Environmental Crisis?',
+          'Need for Sustainable Environment',
+          'Developing a Green Lifestyle'
+        ]
+      },
+      {
+        name: 'Module 7: 21st Century Employability Skills',
+        nameHi: 'मॉड्यूल 7: 21वीं सदी की एम्प्लॉयबिलिटी स्किल्स',
+        chapters: [
+          'Introduction to 21st Century',
+          'How to Assess Your Skills?',
+          'Plan for Skill Development'
+        ]
+      },
+      {
+        name: 'Module 8: Know Yourself',
+        nameHi: 'मॉड्यूल 8: खुद को जानें',
+        chapters: [
+          'What Does "Know Yourself" Mean?',
+          'What are Strengths?',
+          'Describing Qualities, Abilities & Talents'
+        ]
+      },
+      {
+        name: 'Module 9: Behaviour and Attitude',
+        nameHi: 'मॉड्यूल 9: व्यवहार और दृष्टिकोण',
+        chapters: [
+          'What are Behavioural Skills?',
+          'Developing a Positive Attitude',
+          'Self-Motivation'
+        ]
+      },
+      {
+        name: 'Module 10: Critical Thinking & Decision Making',
+        nameHi: 'मॉड्यूल 10: आलोचनात्मक सोच और निर्णय लेना',
+        chapters: [
+          'What is Critical Thinking?',
+          'How to Make Decisions',
+          'Practice Decision Making'
+        ]
+      },
+      {
+        name: 'Module 11: Time Management in the Workplace',
+        nameHi: 'मॉड्यूल 11: कार्यस्थल पर समय प्रबंधन',
+        chapters: [
+          'What is Time Management?',
+          'Why is Time Management Important?',
+          'How to Manage Time in Daily Life'
+        ]
+      },
+      {
+        name: 'Module 12: Problem Solving',
+        nameHi: 'मॉड्यूल 12: समस्या समाधान',
+        chapters: [
+          'Creative Problem Solving Techniques',
+          'Practicing Problem Solving'
+        ]
+      },
+      {
+        name: 'Module 13: Motivation to Learn English',
+        nameHi: 'मॉड्यूल 13: अंग्रेज़ी सीखने की प्रेरणा',
+        chapters: [
+          'Importance of English Language',
+          'Fun Ways to Learn English'
+        ]
+      },
+      {
+        name: 'Module 14: Naming Words',
+        nameHi: 'मॉड्यूल 14: नाम देने वाले शब्द',
+        chapters: [
+          'Meaning of Naming Words (Common Nouns)',
+          'Naming Words with Different Meanings'
+        ]
+      },
+      {
+        name: 'Module 15: Naming Words – Singular and Plural',
+        nameHi: 'मॉड्यूल 15: नाम देने वाले शब्द – एकवचन और बहुवचन',
+        chapters: [
+          'Singular vs Plural Forms',
+          'Using Singular and Plural Correctly'
+        ]
+      },
+      {
+        name: 'Module 16: Pronouns',
+        nameHi: 'मॉड्यूल 16: सर्वनाम',
+        chapters: [
+          'Purpose and Usage of Pronouns',
+          'Using Appropriate Pronouns'
+        ]
+      },
+      {
+        name: 'Module 17: Action Words',
+        nameHi: 'मॉड्यूल 17: क्रिया शब्द',
+        chapters: [
+          'Action Words (Verbs)',
+          'Using Action Words Correctly in Sentences'
+        ]
+      },
+      {
+        name: 'Module 18: Describing Objects, Surroundings and Processes',
+        nameHi: 'मॉड्यूल 18: वस्तुओं, परिवेश और प्रक्रियाओं का वर्णन',
+        chapters: [
+          'Describing Words (Adjectives)',
+          'Describing Size, Shape, Texture and Color'
+        ]
+      },
+      {
+        name: 'Module 19: Introduction to Punctuation',
+        nameHi: 'मॉड्यूल 19: विराम चिह्न का परिचय',
+        chapters: [
+          'Importance of Punctuation Marks',
+          'Using Punctuation Marks Correctly'
+        ]
+      },
+      {
+        name: 'Module 20: Kinds of Sentences – Introduction',
+        nameHi: 'मॉड्यूल 20: वाक्यों के प्रकार – परिचय',
+        chapters: [
+          'Different Types of Sentences',
+          'Making Sentences for Different Situations'
+        ]
+      },
+      {
+        name: 'Module 21: Writing Simple Sentences',
+        nameHi: 'मॉड्यूल 21: सरल वाक्य लिखना',
+        chapters: [
+          'Importance of Word Order',
+          'Rearranging Words to Create Meaningful Sentences'
+        ]
+      },
+      {
+        name: 'Module 22: Reading Activity',
+        nameHi: 'मॉड्यूल 22: पठन गतिविधि',
+        chapters: [
+          'Strategies to Become a Better Reader',
+          'Reading Posters and Signs'
+        ]
+      },
+      {
+        name: 'Module 23: Speaking',
+        nameHi: 'मॉड्यूल 23: बोलना',
+        chapters: [
+          'Appropriate Expressions for Speaking',
+          'Communicating Your Views Clearly'
+        ]
+      },
+      {
+        name: 'Module 24: Listening',
+        nameHi: 'मॉड्यूल 24: सुनना',
+        chapters: [
+          'Purpose and Importance of Listening',
+          'Practicing Listening to Follow Instructions'
+        ]
+      },
+      {
+        name: 'Module 25: Talking about Likes and Dislikes',
+        nameHi: 'मॉड्यूल 25: पसंद और नापसंद के बारे में बात करना',
+        chapters: [
+          'Difference between Likes and Dislikes',
+          'How to Share Your Likes and Dislikes',
+          'Talking about Others\' Likes and Dislikes'
+        ]
+      },
+      {
+        name: 'Module 26: Greetings and Self-Introduction',
+        nameHi: 'मॉड्यूल 26: अभिवादन और आत्म-परिचय',
+        chapters: [
+          'Formal and Informal Greetings',
+          'Effective Self-Introduction'
+        ]
+      },
+      {
+        name: 'Module 27: Asking and Responding to Questions',
+        nameHi: 'मॉड्यूल 27: प्रश्न पूछना और उत्तर देना',
+        chapters: [
+          'Difference between Questions and Responses',
+          'Asking and Responding Correctly'
+        ]
+      },
+      {
+        name: 'Module 28: Group Discussion on Simple Topics',
+        nameHi: 'मॉड्यूल 28: सरल विषयों पर समूह चर्चा',
+        chapters: [
+          'Expressing Thoughts Clearly in Group',
+          'Useful Expressions for Discussion'
+        ]
+      },
+      {
+        name: 'Module 29: Telephone Skills',
+        nameHi: 'मॉड्यूल 29: टेलीफोन कौशल',
+        chapters: [
+          'Three Phases of a Call',
+          'Professional Phrases for Calls'
+        ]
+      },
+      {
+        name: 'Module 30: Reading and Understanding Job Descriptions',
+        nameHi: 'मॉड्यूल 30: नौकरी विवरण पढ़ना और समझना',
+        chapters: [
+          'What are Job Descriptions?',
+          'Relating Skills to Job Description'
+        ]
+      },
+      {
+        name: 'Module 31: Speak and Share Information about Workplace',
+        nameHi: 'मॉड्यूल 31: कार्यस्थल के बारे में जानकारी साझा करें',
+        chapters: [
+          'Sharing Information about a Job',
+          'Communicating Views about Workplace'
+        ]
+      },
+      {
+        name: 'Module 32: Writing Applications & Cover Letters',
+        nameHi: 'मॉड्यूल 32: आवेदन और कवर लेटर लिखना',
+        chapters: [
+          'How to Write Job Applications',
+          'Types of Cover Letters'
+        ]
+      },
+      {
+        name: 'Module 33: Importance of Communication',
+        nameHi: 'मॉड्यूल 33: संचार का महत्व',
+        chapters: [
+          'Importance of Communication',
+          'Characteristics of Effective Communication',
+          'Types of Communication'
+        ]
+      },
+      {
+        name: 'Module 34: Verbal Communication: Speaking',
+        nameHi: 'मॉड्यूल 34: मौखिक संचार: बोलना',
+        chapters: [
+          'What is Verbal Communication?',
+          'Spoken vs Written Communication',
+          'Importance of Good Verbal Communication'
+        ]
+      },
+      {
+        name: 'Module 35: Verbal Communication: Writing',
+        nameHi: 'मॉड्यूल 35: मौखिक संचार: लिखना',
+        chapters: [
+          'Letter Writing',
+          'Email Writing',
+          'Resume Writing'
+        ]
+      },
+      {
+        name: 'Module 36: Non-Verbal Communication',
+        nameHi: 'मॉड्यूल 36: अशाब्दिक संचार',
+        chapters: [
+          'Meaning of Non-Verbal Communication',
+          'Appropriate Spatial Distance',
+          'Body Movements and Appearance'
+        ]
+      },
+      {
+        name: 'Module 37: Practicing Effective Communication',
+        nameHi: 'मॉड्यूल 37: प्रभावी संचार का अभ्यास',
+        chapters: [
+          'Identifying Formal and Informal Communication',
+          'Effective Self-Introduction'
+        ]
+      },
+      {
+        name: 'Module 38: Workplace Communication: Introduction',
+        nameHi: 'मॉड्यूल 38: कार्यस्थल संचार: परिचय',
+        chapters: [
+          'Effective Communication at Workplace',
+          'Barriers to Effective Communication',
+          'Text Messaging at Work'
+        ]
+      },
+      {
+        name: 'Module 39: Effective Team Work',
+        nameHi: 'मॉड्यूल 39: प्रभावी टीम वर्क',
+        chapters: [
+          'Importance of Teamwork',
+          'How to Work Well in a Team'
+        ]
+      },
+      {
+        name: 'Module 40: Managing Conflicts',
+        nameHi: 'मॉड्यूल 40: संघर्ष प्रबंधन',
+        chapters: [
+          'What is Workplace Conflict?',
+          'Common Causes of Workplace Conflict',
+          'Resolving Conflict Effectively'
+        ]
+      },
+      {
+        name: 'Module 41: Handling Criticism',
+        nameHi: 'मॉड्यूल 41: आलोचना को संभालना',
+        chapters: [
+          'Constructive vs Unfair Criticism',
+          'Dealing with Criticism at Work'
+        ]
+      },
+      {
+        name: 'Module 42: Assessing Your Communication Ability',
+        nameHi: 'मॉड्यूल 42: अपनी संचार क्षमता का आकलन',
+        chapters: [
+          'Identifying Communication Strengths',
+          'Areas of Improvement in Communication'
+        ]
+      },
+      {
+        name: 'Module 43: Introduction to Digital Skills',
+        nameHi: 'मॉड्यूल 43: डिजिटल स्किल्स का परिचय',
+        chapters: [
+          'What is Digital Literacy?',
+          'Digital Technology in Everyday Life',
+          'Digital Skills Required at Work'
+        ]
+      },
+      {
+        name: 'Module 44: Basics of Computers',
+        nameHi: 'मॉड्यूल 44: कंप्यूटर की बुनियादी बातें',
+        chapters: [
+          'Parts of a Computer',
+          'Functions of Important Parts'
+        ]
+      },
+      {
+        name: 'Module 45: Exploring a Computer',
+        nameHi: 'मॉड्यूल 45: कंप्यूटर की खोज',
+        chapters: [
+          'Starting and Shutting Down',
+          'Connecting Devices to a Computer'
+        ]
+      },
+      {
+        name: 'Module 46: Exploring Windows Operating System',
+        nameHi: 'मॉड्यूल 46: विंडोज़ ऑपरेटिंग सिस्टम की खोज',
+        chapters: [
+          'Windows 7 vs Windows 8',
+          'Features of Windows 10'
+        ]
+      },
+      {
+        name: 'Module 47: Creating and Saving Files',
+        nameHi: 'मॉड्यूल 47: फाइलें बनाना और सहेजना',
+        chapters: [
+          'How to Create Files',
+          'Safe Ways to Save Information',
+          'Transferring Files'
+        ]
+      },
+      {
+        name: 'Module 48: Basics of MS Word',
+        nameHi: 'मॉड्यूल 48: एमएस वर्ड की बुनियादी बातें',
+        chapters: [
+          'Features of MS Word',
+          'Creating and Saving MS Word Files'
+        ]
+      },
+      {
+        name: 'Module 49: Creating Documents on MS Word',
+        nameHi: 'मॉड्यूल 49: एमएस वर्ड पर दस्तावेज़ बनाना',
+        chapters: [
+          'Basic Formatting in MS Word',
+          'Keyboard Shortcuts',
+          'Printing a Document'
+        ]
+      },
+      {
+        name: 'Module 50: Basics of MS Excel',
+        nameHi: 'मॉड्यूल 50: एमएस एक्सेल की बुनियादी बातें',
+        chapters: [
+          'Importance of MS Excel',
+          'Entering Data in Excel'
+        ]
+      },
+      {
+        name: 'Module 51: Simple Functions on MS Excel',
+        nameHi: 'मॉड्यूल 51: एमएस एक्सेल पर सरल कार्य',
+        chapters: [
+          'Saving and Printing in Excel',
+          'SUM and AVERAGE Functions'
+        ]
+      },
+      {
+        name: 'Module 52: Introduction to the Internet',
+        nameHi: 'मॉड्यूल 52: इंटरनेट का परिचय',
+        chapters: [
+          'Internet and Its Benefits',
+          'Accessing the Internet'
+        ]
+      },
+      {
+        name: 'Module 53: Using Search Engines',
+        nameHi: 'मॉड्यूल 53: सर्च इंजन का उपयोग',
+        chapters: [
+          'What are Search Engines?',
+          'Google and Other Search Engines',
+          'Using Keywords Effectively'
+        ]
+      },
+      {
+        name: 'Module 54: Searching for the Right Information Online',
+        nameHi: 'मॉड्यूल 54: सही जानकारी ऑनलाइन खोजना',
+        chapters: [
+          'Searching for Important Information',
+          'Government Portals'
+        ]
+      },
+      {
+        name: 'Module 55: Social Media',
+        nameHi: 'मॉड्यूल 55: सोशल मीडिया',
+        chapters: [
+          'What is Social Media?',
+          'Social Media Profiles',
+          'Safety Measures on Social Media'
+        ]
+      },
+      {
+        name: 'Module 56: Social Media for Professional Development',
+        nameHi: 'मॉड्यूल 56: सोशल मीडिया पेशेवर विकास के लिए',
+        chapters: [
+          'Using Social Media for Professional Growth',
+          'Responsible Usage of Social Media',
+          'Success Stories'
+        ]
+      },
+      {
+        name: 'Module 57: Internet Safety',
+        nameHi: 'मॉड्यूल 57: इंटरनेट सुरक्षा',
+        chapters: [
+          'Basics of Internet Safety',
+          'SafeSearch',
+          'Cyber Crime'
+        ]
+      },
+      {
+        name: 'Module 58: Communication Using Email',
+        nameHi: 'मॉड्यूल 58: ईमेल का उपयोग करके संचार',
+        chapters: [
+          'Features of Email',
+          'Creating and Using Email Account',
+          'Attachments, CC and BCC'
+        ]
+      },
+      {
+        name: 'Module 59: Introduction to Mobile Applications',
+        nameHi: 'मॉड्यूल 59: मोबाइल एप्लिकेशन का परिचय',
+        chapters: [
+          'Benefits of Mobile Apps',
+          'Using Mobile for Learning'
+        ]
+      },
+      {
+        name: 'Module 60: Internet of Things (IoT)',
+        nameHi: 'मॉड्यूल 60: इंटरनेट ऑफ थिंग्स (IoT)',
+        chapters: [
+          'Digital Devices in Daily Life',
+          'Siri and Alexa'
+        ]
+      },
+      {
+        name: 'Module 61: Using Online Meeting Tools for Interviews',
+        nameHi: 'मॉड्यूल 61: साक्षात्कार के लिए ऑनलाइन मीटिंग टूल्स',
+        chapters: [
+          'Online Meeting Tools',
+          'How to Use Zoom',
+          'How to Use Google Meet'
+        ]
+      },
+      {
+        name: 'Module 62: Exploring Popular Sites for Learning and Career Growth',
+        nameHi: 'मॉड्यूल 62: सीखने और करियर विकास के लिए लोकप्रिय साइट्स',
+        chapters: [
+          'Popular Learning Sites',
+          'Using Internet for Continuous Professional Development'
+        ]
+      }
     ],
     year2: [
-      { id: '7.1', name: 'Module 1: Gender Stereotypes', nameHi: 'मॉड्यूल 1: लैंगिक रूढ़ियाँ',
-        chapters: [{ en: 'Meaning of Gender Stereotype', hi: 'लैंगिक रूढ़ियों का अर्थ' }, { en: 'Identifying Gender Stereotypes', hi: 'लैंगिक रूढ़ियों की पहचान' }, { en: 'How Stereotypes Affect Daily Lives', hi: 'रूढ़ियाँ दैनिक जीवन को कैसे प्रभावित करती हैं' }] },
-      { id: '7.2', name: 'Module 2: Understanding Gender-Based Discrimination', nameHi: 'मॉड्यूल 2: लैंगिक भेदभाव को समझना',
-        chapters: [{ en: 'What is Discrimination?', hi: 'भेदभाव क्या है?' }, { en: 'Gender-Based Discrimination', hi: 'लैंगिक भेदभाव' }] },
-      { id: '7.3', name: 'Module 3: Understanding Gender Equality', nameHi: 'मॉड्यूल 3: लैंगिक समानता को समझना',
-        chapters: [{ en: 'Equality and Gender Equality', hi: 'समानता और लैंगिक समानता' }, { en: 'Importance of Gender Equality', hi: 'लैंगिक समानता का महत्व' }, { en: 'Gender Equality and Career Development', hi: 'लैंगिक समानता और करियर विकास' }] },
-      { id: '7.4', name: 'Module 4: Diversity in the Workplace', nameHi: 'मॉड्यूल 4: कार्यस्थल में विविधता',
-        chapters: [{ en: 'Meaning of Diversity in Workplace', hi: 'कार्यस्थल में विविधता का अर्थ' }, { en: 'Importance of Diversity in Workplace', hi: 'कार्यस्थल में विविधता का महत्व' }, { en: 'Barriers to Diversity', hi: 'विविधता में बाधाएँ' }, { en: 'Overcoming Barriers', hi: 'बाधाओं को दूर करना' }] },
-      { id: '7.5', name: 'Module 5: Inclusion in the Workplace', nameHi: 'मॉड्यूल 5: कार्यस्थल में समावेशन',
-        chapters: [{ en: 'Meaning of Inclusion in Workplace', hi: 'कार्यस्थल में समावेशन का अर्थ' }, { en: 'Importance of Inclusive Workplaces', hi: 'समावेशी कार्यस्थलों का महत्व' }, { en: 'Creating Inclusive Workplaces', hi: 'समावेशी कार्यस्थल बनाना' }] },
-      { id: '7.6', name: 'Module 6: Sexual Harassment in the Workplace (POSH Act)', nameHi: 'मॉड्यूल 6: कार्यस्थल पर यौन उत्पीड़न (POSH अधिनियम)',
-        chapters: [{ en: 'Meaning of Sexual Harassment', hi: 'यौन उत्पीड़न का अर्थ' }, { en: 'Provisions of POSH Act', hi: 'POSH अधिनियम के प्रावधान' }, { en: 'Do\'s and Don\'ts under POSH', hi: 'POSH के तहत Do\'s और Don\'ts' }] },
-      { id: '8.1', name: 'Module 7: Introduction to Money Management', nameHi: 'मॉड्यूल 7: धन प्रबंधन का परिचय',
-        chapters: [{ en: 'What is Financial Literacy?', hi: 'वित्तीय साक्षरता क्या है?' }, { en: 'Needs vs Wants vs Luxuries', hi: 'आवश्यकता बनाम चाहत बनाम विलासिता' }, { en: 'Calculating Income and Expenditure', hi: 'आय और व्यय की गणना' }] },
-      { id: '8.2', name: 'Module 8: Basics of Banking', nameHi: 'मॉड्यूल 8: बैंकिंग की बुनियादी बातें',
-        chapters: [{ en: 'What is Banking?', hi: 'बैंकिंग क्या है?' }, { en: 'Types of Bank Accounts', hi: 'बैंक खातों के प्रकार' }, { en: 'Bank Transactions', hi: 'बैंक लेनदेन' }] },
-      { id: '8.3', name: 'Module 9: Online Banking and Digital Transactions', nameHi: 'मॉड्यूल 9: ऑनलाइन बैंकिंग और डिजिटल लेनदेन',
-        chapters: [{ en: 'What is Online Banking?', hi: 'ऑनलाइन बैंकिंग क्या है?' }, { en: 'How to Perform Digital Transactions', hi: 'डिजिटल लेनदेन कैसे करें' }] },
-      { id: '8.4', name: 'Module 10: Mobile Banking Apps', nameHi: 'मॉड्यूल 10: मोबाइल बैंकिंग ऐप्स',
-        chapters: [{ en: 'How to Perform Mobile Banking', hi: 'मोबाइल बैंकिंग कैसे करें' }, { en: 'Safe Mobile Banking', hi: 'सुरक्षित मोबाइल बैंकिंग' }] },
-      { id: '8.5', name: 'Module 11: Online Payments', nameHi: 'मॉड्यूल 11: ऑनलाइन भुगतान',
-        chapters: [{ en: 'Digital Wallets', hi: 'डिजिटल वॉलेट' }, { en: 'BHIM UPI, PayTM, Google Pay', hi: 'BHIM UPI, PayTM, Google Pay' }, { en: 'Benefits of Online Payments', hi: 'ऑनलाइन भुगतान के लाभ' }] },
-      { id: '8.6', name: 'Module 12: Salary', nameHi: 'मॉड्यूल 12: वेतन',
-        chapters: [{ en: 'Gross Salary vs Net Salary', hi: 'सकल वेतन बनाम शुद्ध वेतन' }, { en: 'Components of Salary', hi: 'वेतन के घटक' }, { en: 'Income Tax', hi: 'आयकर' }] },
-      { id: '8.7', name: 'Module 13: Savings', nameHi: 'मॉड्यूल 13: बचत',
-        chapters: [{ en: 'What are Savings?', hi: 'बचत क्या है?' }, { en: 'Types of Savings Options', hi: 'बचत के प्रकार' }, { en: 'How to Save Effectively', hi: 'प्रभावी ढंग से बचत कैसे करें' }] },
-      { id: '8.8', name: 'Module 14: Loans and Insurance', nameHi: 'मॉड्यूल 14: ऋण और बीमा',
-        chapters: [{ en: 'What are Loans?', hi: 'ऋण क्या हैं?' }, { en: 'Types of Loans', hi: 'ऋण के प्रकार' }, { en: 'What is Insurance?', hi: 'बीमा क्या है?' }] },
-      { id: '8.9', name: 'Module 15: Legal Literacy', nameHi: 'मॉड्यूल 15: कानूनी साक्षरता',
-        chapters: [{ en: 'Legal Literacy Mission', hi: 'कानूनी साक्षरता मिशन' }, { en: 'RTI and Public Grievances', hi: 'RTI और सार्वजनिक शिकायतें' }, { en: 'Employee Rights and Minimum Wages', hi: 'कर्मचारी अधिकार और न्यूनतम मजदूरी' }] },
-      { id: '9.1', name: 'Module 16: Introduction to Entrepreneurship', nameHi: 'मॉड्यूल 16: उद्यमिता का परिचय',
-        chapters: [{ en: 'Definition of Entrepreneurship', hi: 'उद्यमिता की परिभाषा' }, { en: 'Characteristics of an Entrepreneur', hi: 'एक उद्यमी की विशेषताएँ' }, { en: 'Roles and Responsibilities of an Entrepreneur', hi: 'उद्यमी की भूमिकाएँ और जिम्मेदारियाँ' }] },
-      { id: '9.2', name: 'Module 17: Entrepreneurial Mindset', nameHi: 'मॉड्यूल 17: उद्यमी मानसिकता',
-        chapters: [{ en: 'What is Entrepreneurial Mindset?', hi: 'उद्यमी मानसिकता क्या है?' }, { en: 'How to Set Up a Business', hi: 'व्यवसाय कैसे स्थापित करें' }] },
-      { id: '9.3', name: 'Module 18: Self-Employment vs Entrepreneurship', nameHi: 'मॉड्यूल 18: स्व-रोज़गार बनाम उद्यमिता',
-        chapters: [{ en: 'Self-Employment vs Entrepreneurship', hi: 'स्व-रोज़गार बनाम उद्यमिता' }, { en: 'Connection between Self-Employment and Entrepreneurship', hi: 'स्व-रोज़गार और उद्यमिता के बीच संबंध' }, { en: 'How Self-Employment Can Lead to Entrepreneurship', hi: 'स्व-रोज़गार उद्यमिता की ओर कैसे ले जा सकता है' }] },
-      { id: '9.4', name: 'Module 19: Market Scan', nameHi: 'मॉड्यूल 19: बाजार स्कैन',
-        chapters: [{ en: 'What is Market Scan?', hi: 'बाजार स्कैन क्या है?' }, { en: 'How to Conduct a Market Scan', hi: 'बाजार स्कैन कैसे करें' }, { en: 'Practice Market Scan', hi: 'बाजार स्कैन का अभ्यास' }] },
-      { id: '9.5', name: 'Module 20: Understanding Customer Needs', nameHi: 'मॉड्यूल 20: ग्राहक की जरूरतों को समझना',
-        chapters: [{ en: 'What are Customer Needs?', hi: 'ग्राहक की ज़रूरतें क्या हैं?' }, { en: 'Customer Needs Analysis', hi: 'ग्राहक आवश्यकता विश्लेषण' }, { en: 'How to Identify Customers', hi: 'ग्राहकों की पहचान कैसे करें' }] },
-      { id: '9.6', name: 'Module 21: Selecting a Type of Business', nameHi: 'मॉड्यूल 21: व्यवसाय का प्रकार चुनना',
-        chapters: [{ en: 'Product vs Service', hi: 'उत्पाद बनाम सेवा' }, { en: 'Things to Consider When Choosing', hi: 'चयन करते समय विचार करने योग्य बातें' }, { en: 'How to Choose the Right Business Idea', hi: 'सही व्यवसाय विचार कैसे चुनें' }] },
-      { id: '9.7', name: 'Module 22: My Final Business Idea', nameHi: 'मॉड्यूल 22: मेरा अंतिम व्यवसाय विचार',
-        chapters: [{ en: 'Importance of a Business Idea', hi: 'व्यवसाय विचार का महत्व' }, { en: 'Process of Creating a Business Idea', hi: 'व्यवसाय विचार बनाने की प्रक्रिया' }, { en: 'Creating Your Business Idea', hi: 'अपना व्यवसाय विचार बनाना' }] },
-      { id: '9.8', name: 'Module 23: Building Your Business Plan', nameHi: 'मॉड्यूल 23: अपनी व्यवसाय योजना बनाना',
-        chapters: [{ en: 'What is a Business Plan?', hi: 'व्यवसाय योजना क्या है?' }, { en: 'Importance of a Business Plan', hi: 'व्यवसाय योजना का महत्व' }, { en: 'Process of Building a Business Plan', hi: 'व्यवसाय योजना बनाने की प्रक्रिया' }] },
-      { id: '9.9', name: 'Module 24: Pitching for Your Business', nameHi: 'मॉड्यूल 24: अपने व्यवसाय के लिए पिचिंग',
-        chapters: [{ en: 'What is a Business Pitch?', hi: 'व्यवसाय पिच क्या है?' }, { en: 'Who Hears Your Pitch?', hi: 'आपकी पिच कौन सुनता है?' }, { en: 'How to Present Your Pitch', hi: 'अपनी पिच कैसे प्रस्तुत करें' }] },
-      { id: '9.10', name: 'Module 25: Basic Legal Functions for Business', nameHi: 'मॉड्यूल 25: व्यवसाय के लिए बुनियादी कानूनी कार्य',
-        chapters: [{ en: 'Business Registrations', hi: 'व्यवसाय पंजीकरण' }, { en: 'How to Register on Udyam', hi: 'Udyam पर पंजीकरण कैसे करें' }, { en: 'Rules for Sole Proprietorship', hi: 'एकल स्वामित्व के लिए नियम' }] },
-      { id: '9.11', name: 'Module 26: Marketing in the 21st Century', nameHi: 'मॉड्यूल 26: 21वीं सदी में विपणन',
-        chapters: [{ en: 'What is Marketing?', hi: 'विपणन क्या है?' }, { en: 'Importance of Marketing', hi: 'विपणन का महत्व' }, { en: '7Ps of Marketing', hi: 'विपणन के 7Ps' }] },
-      { id: '9.12', name: 'Module 27: Accounting for Business', nameHi: 'मॉड्यूल 27: व्यवसाय के लिए लेखांकन',
-        chapters: [{ en: 'Basics of Business Accounting', hi: 'व्यवसाय लेखांकन की बुनियादी बातें' }, { en: 'Calculating Cost of Goods/Services', hi: 'वस्तुओं/सेवाओं की लागत की गणना' }, { en: 'Money Tracking Template', hi: 'धन ट्रैकिंग टेम्पलेट' }] },
-      { id: '9.13', name: 'Module 28: Funding for Your Business', nameHi: 'मॉड्यूल 28: अपने व्यवसाय के लिए वित्त पोषण',
-        chapters: [{ en: 'Sources of Funds for Business', hi: 'व्यवसाय के लिए धन के स्रोत' }, { en: 'How to Apply for Funds', hi: 'धन के लिए आवेदन कैसे करें' }, { en: 'Requirements for Loan Application', hi: 'ऋण आवेदन के लिए आवश्यकताएँ' }] },
-      { id: '9.14', name: 'Module 29: Business Stories', nameHi: 'मॉड्यूल 29: व्यवसाय कहानियाँ',
-        chapters: [{ en: 'Success Stories of Entrepreneurs', hi: 'उद्यमियों की सफलता की कहानियाँ' }, { en: 'Learning from Failures', hi: 'असफलताओं से सीखना' }] },
-      { id: '10.1', name: 'Module 30: Introduction to the World of Work', nameHi: 'मॉड्यूल 30: काम की दुनिया का परिचय',
-        chapters: [{ en: 'Job vs Career', hi: 'नौकरी बनाम करियर' }, { en: 'Personal vs Professional Life', hi: 'व्यक्तिगत बनाम पेशेवर जीवन' }, { en: 'Preparing for the World of Work', hi: 'काम की दुनिया के लिए तैयारी' }] },
-      { id: '10.2', name: 'Module 31: My Interests and Abilities', nameHi: 'मॉड्यूल 31: मेरी रुचियाँ और क्षमताएँ',
-        chapters: [{ en: 'Interests vs Abilities', hi: 'रुचि बनाम क्षमता' }, { en: 'Identifying Your Own Interests and Abilities', hi: 'अपनी रुचियों और क्षमताओं की पहचान' }] },
-      { id: '10.3', name: 'Module 32: Building Your Career Pathway', nameHi: 'मॉड्यूल 32: अपना करियर पथ बनाना',
-        chapters: [{ en: 'Importance of Career Pathways', hi: 'करियर पथ का महत्व' }, { en: 'Exploring Career Pathways in Different Industries', hi: 'विभिन्न उद्योगों में करियर पथ की खोज' }] },
-      { id: '10.4', name: 'Module 33: Job Market Research', nameHi: 'मॉड्यूल 33: नौकरी बाजार अनुसंधान',
-        chapters: [{ en: 'How to Explore the World of Work', hi: 'काम की दुनिया की खोज कैसे करें' }, { en: 'How to Conduct a Market Scan', hi: 'बाजार स्कैन कैसे करें' }] },
-      { id: '10.5', name: 'Module 34: Setting Goals for Your Career', nameHi: 'मॉड्यूल 34: अपने करियर के लिए लक्ष्य निर्धारित करना',
-        chapters: [{ en: 'Long-Term and Short-Term Goals', hi: 'दीर्घकालिक और अल्पकालिक लक्ष्य' }, { en: 'SMART Goals for Career', hi: 'करियर के लिए SMART लक्ष्य' }] },
-      { id: '11.1', name: 'Module 35: Customer Service and Relationship Building', nameHi: 'मॉड्यूल 35: ग्राहक सेवा और संबंध निर्माण',
-        chapters: [{ en: 'Importance of Customer Service', hi: 'ग्राहक सेवा का महत्व' }, { en: 'Need to Build Customer Relationships', hi: 'ग्राहक संबंध बनाने की आवश्यकता' }, { en: 'How to Build Good Relationships with Customers', hi: 'ग्राहकों के साथ अच्छे संबंध कैसे बनाएँ' }] },
-      { id: '11.2', name: 'Module 36: Types of Customers', nameHi: 'मॉड्यूल 36: ग्राहकों के प्रकार',
-        chapters: [{ en: 'Who is a Customer?', hi: 'ग्राहक कौन है?' }, { en: 'Different Types of Customers', hi: 'विभिन्न प्रकार के ग्राहक' }, { en: 'How to Communicate with Different Customers', hi: 'विभिन्न ग्राहकों के साथ कैसे संवाद करें' }] },
-      { id: '11.3', name: 'Module 37: Probing to Identify Customer Needs', nameHi: 'मॉड्यूल 37: ग्राहक की जरूरतों की पहचान के लिए पूछताछ',
-        chapters: [{ en: 'Importance of Understanding Customer Needs', hi: 'ग्राहक की जरूरतों को समझने का महत्व' }, { en: 'How to Identify Customer Needs', hi: 'ग्राहक की जरूरतों की पहचान कैसे करें' }, { en: 'Practice Probing with Customers', hi: 'ग्राहकों के साथ पूछताछ का अभ्यास' }] },
-      { id: '11.4', name: 'Module 38: Simple Techniques for Communicating with Customers', nameHi: 'मॉड्यूल 38: ग्राहकों के साथ संवाद करने की सरल तकनीकें',
-        chapters: [{ en: 'Importance of Selling Techniques', hi: 'बिक्री तकनीकों का महत्व' }, { en: 'FAB Technique and Cross Selling', hi: 'FAB तकनीक और क्रॉस सेलिंग' }, { en: 'Selling to Customers', hi: 'ग्राहकों को बेचना' }] },
-      { id: '11.5', name: 'Module 39: Closing Sales and Customer Feedback', nameHi: 'मॉड्यूल 39: बिक्री समाप्त करना और ग्राहक प्रतिक्रिया',
-        chapters: [{ en: 'How to Close a Sale', hi: 'बिक्री कैसे समाप्त करें' }, { en: 'Customer Feedback and Satisfaction', hi: 'ग्राहक प्रतिक्रिया और संतुष्टि' }] },
-      { id: '12.1', name: 'Module 40: Positive Work Environment', nameHi: 'मॉड्यूल 40: सकारात्मक कार्य वातावरण',
-        chapters: [{ en: 'Being Part of a Positive Workplace', hi: 'सकारात्मक कार्यस्थल का हिस्सा बनना' }, { en: 'Building Healthy Relationships at Work', hi: 'काम पर स्वस्थ संबंध बनाना' }, { en: 'Energy Conservation in the Workplace', hi: 'कार्यस्थल में ऊर्जा संरक्षण' }] },
-      { id: '12.2', name: 'Module 41: Personal Grooming and Hygiene', nameHi: 'मॉड्यूल 41: व्यक्तिगत संवारना और स्वच्छता',
-        chapters: [{ en: 'Importance of Personal Grooming', hi: 'व्यक्तिगत संवारने का महत्व' }, { en: 'Maintaining Personal Hygiene', hi: 'व्यक्तिगत स्वच्छता बनाए रखना' }, { en: 'How to Groom Yourself', hi: 'खुद को कैसे संवारें' }] },
-      { id: '12.3', name: 'Module 42: Managing Stress in the Workplace', nameHi: 'मॉड्यूल 42: कार्यस्थल पर तनाव प्रबंधन',
-        chapters: [{ en: 'Meaning of Stress', hi: 'तनाव का अर्थ' }, { en: 'Types of Stress', hi: 'तनाव के प्रकार' }, { en: 'How to Deal with Stress at Work', hi: 'काम पर तनाव से कैसे निपटें' }] },
-      { id: '12.4', name: 'Module 43: Building My Resume', nameHi: 'मॉड्यूल 43: अपना रेज़्यूमे बनाना',
-        chapters: [{ en: 'Key Elements of a Resume', hi: 'रेज़्यूमे के मुख्य तत्व' }, { en: 'How to Write a Resume', hi: 'रेज़्यूमे कैसे लिखें' }, { en: 'Checking for Common Mistakes', hi: 'सामान्य गलतियों की जाँच' }] },
-      { id: '12.5', name: 'Module 44: Preparing for an Interview', nameHi: 'मॉड्यूल 44: साक्षात्कार की तैयारी',
-        chapters: [{ en: 'What are Interview Skills?', hi: 'साक्षात्कार कौशल क्या हैं?' }, { en: 'How to Prepare for an Interview', hi: 'साक्षात्कार की तैयारी कैसे करें' }, { en: 'How to Follow Up After Interview', hi: 'साक्षात्कार के बाद फॉलो-अप कैसे करें' }] },
-      { id: '12.6', name: 'Module 45: Decoding Interviews', nameHi: 'मॉड्यूल 45: साक्षात्कार को डिकोड करना',
-        chapters: [{ en: 'Do\'s and Don\'ts of Facing an Interview', hi: 'साक्षात्कार के दौरान Do\'s और Don\'ts' }, { en: 'Common Interview Questions', hi: 'सामान्य साक्षात्कार प्रश्न' }] },
-      { id: '12.7', name: 'Module 46: Mock Interviews', nameHi: 'मॉड्यूल 46: मॉक साक्षात्कार',
-        chapters: [{ en: 'What are Mock Interviews?', hi: 'मॉक साक्षात्कार क्या हैं?' }, { en: 'Benefits of Mock Interviews', hi: 'मॉक साक्षात्कार के लाभ' }, { en: 'Practice Mock Interviews', hi: 'मॉक साक्षात्कार का अभ्यास' }] },
-      { id: '12.8', name: 'Module 47: Professional Networking', nameHi: 'मॉड्यूल 47: पेशेवर नेटवर्किंग',
-        chapters: [{ en: 'Meaning and Importance of Professional Networking', hi: 'पेशेवर नेटवर्किंग का अर्थ और महत्व' }, { en: 'How to Build a Professional Network', hi: 'पेशेवर नेटवर्क कैसे बनाएँ' }] },
-      { id: '12.9', name: 'Module 48: Handling Rejection and Failure', nameHi: 'मॉड्यूल 48: अस्वीकृति और असफलता को संभालना',
-        chapters: [{ en: 'Identifying Failure as Stepping Stone', hi: 'असफलता को सीढ़ी के रूप में पहचानना' }, { en: 'Handling Rejection and Failure Positively', hi: 'अस्वीकृति और असफलता को सकारात्मक रूप से संभालना' }] },
-      { id: '12.10', name: 'Module 49: Industry Visit: 1', nameHi: 'मॉड्यूल 49: उद्योग भ्रमण: 1',
-        chapters: [{ en: 'Preparing Questions for Industry Visit', hi: 'उद्योग भ्रमण के लिए प्रश्न तैयार करना' }] },
-      { id: '12.11', name: 'Module 50: Industry Visit: 2', nameHi: 'मॉड्यूल 50: उद्योग भ्रमण: 2',
-        chapters: [{ en: 'Continuation of Industry Visit Preparation', hi: 'उद्योग भ्रमण की तैयारी जारी' }] },
-      { id: '12.12', name: 'Module 51: Reflection After Industry Visit', nameHi: 'मॉड्यूल 51: उद्योग भ्रमण के बाद चिंतन',
-        chapters: [{ en: 'Reflecting on Industry Visit Experience', hi: 'उद्योग भ्रमण अनुभव पर चिंतन' }] },
-      { id: '12.13', name: 'Module 52: Guest Lecture by Alumni or HR', nameHi: 'मॉड्यूल 52: पूर्व छात्र या HR द्वारा अतिथि व्याख्यान',
-        chapters: [{ en: 'Questions to Ask Alumni and HR', hi: 'पूर्व छात्रों और HR से पूछने के लिए प्रश्न' }, { en: 'Understanding the Job Market', hi: 'नौकरी बाजार को समझना' }] },
-      { id: '12.14', name: 'Module 53: Introduction to Platform-Based Jobs', nameHi: 'मॉड्यूल 53: प्लेटफ़ॉर्म-आधारित नौकरियों का परिचय',
-        chapters: [{ en: 'What are Platform-Based Jobs?', hi: 'प्लेटफ़ॉर्म-आधारित नौकरियाँ क्या हैं?' }, { en: 'Exploring Portals', hi: 'पोर्टल्स की खोज' }, { en: 'How to Register on Portals', hi: 'पोर्टल्स पर पंजीकरण कैसे करें' }] },
-      { id: '12.15', name: 'Module 54: Applying for Jobs Through Online Portals', nameHi: 'मॉड्यूल 54: ऑनलाइन पोर्टल्स के माध्यम से नौकरी के लिए आवेदन',
-        chapters: [{ en: 'What are Job Search Engines?', hi: 'जॉब सर्च इंजन क्या हैं?' }, { en: 'How to Find and Apply for Jobs Online', hi: 'ऑनलाइन नौकरी कैसे खोजें और आवेदन करें' }, { en: 'Finding Technician Job Roles', hi: 'तकनीशियन नौकरी की भूमिकाएँ खोजना' }] },
-      { id: '12.16', name: 'Module 55: Enrolling for Apprenticeships', nameHi: 'मॉड्यूल 55: अप्रेंटिसशिप के लिए पंजीकरण',
-        chapters: [{ en: 'About the NAPS Portal', hi: 'NAPS पोर्टल के बारे में' }, { en: 'How to Register on NAPS', hi: 'NAPS पर पंजीकरण कैसे करें' }, { en: 'How to Apply for Jobs on NAPS', hi: 'NAPS पर नौकरी के लिए आवेदन कैसे करें' }] }
+      {
+        name: 'Module 1: Gender Stereotypes',
+        nameHi: 'मॉड्यूल 1: लैंगिक रूढ़ियाँ',
+        chapters: [
+          'Meaning of Gender Stereotype',
+          'Identifying Gender Stereotypes',
+          'How Stereotypes Affect Daily Lives'
+        ]
+      },
+      {
+        name: 'Module 2: Understanding Gender-Based Discrimination',
+        nameHi: 'मॉड्यूल 2: लैंगिक भेदभाव को समझना',
+        chapters: [
+          'What is Discrimination?',
+          'Gender-Based Discrimination'
+        ]
+      },
+      {
+        name: 'Module 3: Understanding Gender Equality',
+        nameHi: 'मॉड्यूल 3: लैंगिक समानता को समझना',
+        chapters: [
+          'Equality and Gender Equality',
+          'Importance of Gender Equality',
+          'Gender Equality and Career Development'
+        ]
+      },
+      {
+        name: 'Module 4: Diversity in the Workplace',
+        nameHi: 'मॉड्यूल 4: कार्यस्थल में विविधता',
+        chapters: [
+          'Meaning of Diversity in Workplace',
+          'Importance of Diversity in Workplace',
+          'Barriers to Diversity',
+          'Overcoming Barriers'
+        ]
+      },
+      {
+        name: 'Module 5: Inclusion in the Workplace',
+        nameHi: 'मॉड्यूल 5: कार्यस्थल में समावेशन',
+        chapters: [
+          'Meaning of Inclusion in Workplace',
+          'Importance of Inclusive Workplaces',
+          'Creating Inclusive Workplaces'
+        ]
+      },
+      {
+        name: 'Module 6: Sexual Harassment in the Workplace (POSH Act)',
+        nameHi: 'मॉड्यूल 6: कार्यस्थल पर यौन उत्पीड़न (POSH अधिनियम)',
+        chapters: [
+          'Meaning of Sexual Harassment',
+          'Provisions of POSH Act',
+          'Do\'s and Don\'ts under POSH'
+        ]
+      },
+      {
+        name: 'Module 7: Introduction to Money Management',
+        nameHi: 'मॉड्यूल 7: धन प्रबंधन का परिचय',
+        chapters: [
+          'What is Financial Literacy?',
+          'Needs vs Wants vs Luxuries',
+          'Calculating Income and Expenditure'
+        ]
+      },
+      {
+        name: 'Module 8: Basics of Banking',
+        nameHi: 'मॉड्यूल 8: बैंकिंग की बुनियादी बातें',
+        chapters: [
+          'What is Banking?',
+          'Types of Bank Accounts',
+          'Bank Transactions'
+        ]
+      },
+      {
+        name: 'Module 9: Online Banking and Digital Transactions',
+        nameHi: 'मॉड्यूल 9: ऑनलाइन बैंकिंग और डिजिटल लेनदेन',
+        chapters: [
+          'What is Online Banking?',
+          'How to Perform Digital Transactions'
+        ]
+      },
+      {
+        name: 'Module 10: Mobile Banking Apps',
+        nameHi: 'मॉड्यूल 10: मोबाइल बैंकिंग ऐप्स',
+        chapters: [
+          'How to Perform Mobile Banking',
+          'Safe Mobile Banking'
+        ]
+      },
+      {
+        name: 'Module 11: Online Payments',
+        nameHi: 'मॉड्यूल 11: ऑनलाइन भुगतान',
+        chapters: [
+          'Digital Wallets',
+          'BHIM UPI, PayTM, Google Pay',
+          'Benefits of Online Payments'
+        ]
+      },
+      {
+        name: 'Module 12: Salary',
+        nameHi: 'मॉड्यूल 12: वेतन',
+        chapters: [
+          'Gross Salary vs Net Salary',
+          'Components of Salary',
+          'Income Tax'
+        ]
+      },
+      {
+        name: 'Module 13: Savings',
+        nameHi: 'मॉड्यूल 13: बचत',
+        chapters: [
+          'What are Savings?',
+          'Types of Savings Options',
+          'How to Save Effectively'
+        ]
+      },
+      {
+        name: 'Module 14: Loans and Insurance',
+        nameHi: 'मॉड्यूल 14: ऋण और बीमा',
+        chapters: [
+          'What are Loans?',
+          'Types of Loans',
+          'What is Insurance?'
+        ]
+      },
+      {
+        name: 'Module 15: Legal Literacy',
+        nameHi: 'मॉड्यूल 15: कानूनी साक्षरता',
+        chapters: [
+          'Legal Literacy Mission',
+          'RTI and Public Grievances',
+          'Employee Rights and Minimum Wages'
+        ]
+      },
+      {
+        name: 'Module 16: Introduction to Entrepreneurship',
+        nameHi: 'मॉड्यूल 16: उद्यमिता का परिचय',
+        chapters: [
+          'Definition of Entrepreneurship',
+          'Characteristics of an Entrepreneur',
+          'Roles and Responsibilities of an Entrepreneur'
+        ]
+      },
+      {
+        name: 'Module 17: Entrepreneurial Mindset',
+        nameHi: 'मॉड्यूल 17: उद्यमी मानसिकता',
+        chapters: [
+          'What is Entrepreneurial Mindset?',
+          'How to Set Up a Business'
+        ]
+      },
+      {
+        name: 'Module 18: Self-Employment vs Entrepreneurship',
+        nameHi: 'मॉड्यूल 18: स्व-रोज़गार बनाम उद्यमिता',
+        chapters: [
+          'Self-Employment vs Entrepreneurship',
+          'Connection between Self-Employment and Entrepreneurship',
+          'How Self-Employment Can Lead to Entrepreneurship'
+        ]
+      },
+      {
+        name: 'Module 19: Market Scan',
+        nameHi: 'मॉड्यूल 19: बाजार स्कैन',
+        chapters: [
+          'What is Market Scan?',
+          'How to Conduct a Market Scan',
+          'Practice Market Scan'
+        ]
+      },
+      {
+        name: 'Module 20: Understanding Customer Needs',
+        nameHi: 'मॉड्यूल 20: ग्राहक की जरूरतों को समझना',
+        chapters: [
+          'What are Customer Needs?',
+          'Customer Needs Analysis',
+          'How to Identify Customers'
+        ]
+      },
+      {
+        name: 'Module 21: Selecting a Type of Business',
+        nameHi: 'मॉड्यूल 21: व्यवसाय का प्रकार चुनना',
+        chapters: [
+          'Product vs Service',
+          'Things to Consider When Choosing',
+          'How to Choose the Right Business Idea'
+        ]
+      },
+      {
+        name: 'Module 22: My Final Business Idea',
+        nameHi: 'मॉड्यूल 22: मेरा अंतिम व्यवसाय विचार',
+        chapters: [
+          'Importance of a Business Idea',
+          'Process of Creating a Business Idea',
+          'Creating Your Business Idea'
+        ]
+      },
+      {
+        name: 'Module 23: Building Your Business Plan',
+        nameHi: 'मॉड्यूल 23: अपनी व्यवसाय योजना बनाना',
+        chapters: [
+          'What is a Business Plan?',
+          'Importance of a Business Plan',
+          'Process of Building a Business Plan'
+        ]
+      },
+      {
+        name: 'Module 24: Pitching for Your Business',
+        nameHi: 'मॉड्यूल 24: अपने व्यवसाय के लिए पिचिंग',
+        chapters: [
+          'What is a Business Pitch?',
+          'Who Hears Your Pitch?',
+          'How to Present Your Pitch'
+        ]
+      },
+      {
+        name: 'Module 25: Basic Legal Functions for Business',
+        nameHi: 'मॉड्यूल 25: व्यवसाय के लिए बुनियादी कानूनी कार्य',
+        chapters: [
+          'Business Registrations',
+          'How to Register on Udyam',
+          'Rules for Sole Proprietorship'
+        ]
+      },
+      {
+        name: 'Module 26: Marketing in the 21st Century',
+        nameHi: 'मॉड्यूल 26: 21वीं सदी में विपणन',
+        chapters: [
+          'What is Marketing?',
+          'Importance of Marketing',
+          '7Ps of Marketing'
+        ]
+      },
+      {
+        name: 'Module 27: Accounting for Business',
+        nameHi: 'मॉड्यूल 27: व्यवसाय के लिए लेखांकन',
+        chapters: [
+          'Basics of Business Accounting',
+          'Calculating Cost of Goods/Services',
+          'Money Tracking Template'
+        ]
+      },
+      {
+        name: 'Module 28: Funding for Your Business',
+        nameHi: 'मॉड्यूल 28: अपने व्यवसाय के लिए वित्त पोषण',
+        chapters: [
+          'Sources of Funds for Business',
+          'How to Apply for Funds',
+          'Requirements for Loan Application'
+        ]
+      },
+      {
+        name: 'Module 29: Business Stories',
+        nameHi: 'मॉड्यूल 29: व्यवसाय कहानियाँ',
+        chapters: [
+          'Success Stories of Entrepreneurs',
+          'Learning from Failures'
+        ]
+      },
+      {
+        name: 'Module 30: Introduction to the World of Work',
+        nameHi: 'मॉड्यूल 30: काम की दुनिया का परिचय',
+        chapters: [
+          'Job vs Career',
+          'Personal vs Professional Life',
+          'Preparing for the World of Work'
+        ]
+      },
+      {
+        name: 'Module 31: My Interests and Abilities',
+        nameHi: 'मॉड्यूल 31: मेरी रुचियाँ और क्षमताएँ',
+        chapters: [
+          'Interests vs Abilities',
+          'Identifying Your Own Interests and Abilities'
+        ]
+      },
+      {
+        name: 'Module 32: Building Your Career Pathway',
+        nameHi: 'मॉड्यूल 32: अपना करियर पथ बनाना',
+        chapters: [
+          'Importance of Career Pathways',
+          'Exploring Career Pathways in Different Industries'
+        ]
+      },
+      {
+        name: 'Module 33: Job Market Research',
+        nameHi: 'मॉड्यूल 33: नौकरी बाजार अनुसंधान',
+        chapters: [
+          'How to Explore the World of Work',
+          'How to Conduct a Market Scan'
+        ]
+      },
+      {
+        name: 'Module 34: Setting Goals for Your Career',
+        nameHi: 'मॉड्यूल 34: अपने करियर के लिए लक्ष्य निर्धारित करना',
+        chapters: [
+          'Long-Term and Short-Term Goals',
+          'SMART Goals for Career'
+        ]
+      },
+      {
+        name: 'Module 35: Customer Service and Relationship Building',
+        nameHi: 'मॉड्यूल 35: ग्राहक सेवा और संबंध निर्माण',
+        chapters: [
+          'Importance of Customer Service',
+          'Need to Build Customer Relationships',
+          'How to Build Good Relationships with Customers'
+        ]
+      },
+      {
+        name: 'Module 36: Types of Customers',
+        nameHi: 'मॉड्यूल 36: ग्राहकों के प्रकार',
+        chapters: [
+          'Who is a Customer?',
+          'Different Types of Customers',
+          'How to Communicate with Different Customers'
+        ]
+      },
+      {
+        name: 'Module 37: Probing to Identify Customer Needs',
+        nameHi: 'मॉड्यूल 37: ग्राहक की जरूरतों की पहचान के लिए पूछताछ',
+        chapters: [
+          'Importance of Understanding Customer Needs',
+          'How to Identify Customer Needs',
+          'Practice Probing with Customers'
+        ]
+      },
+      {
+        name: 'Module 38: Simple Techniques for Communicating with Customers',
+        nameHi: 'मॉड्यूल 38: ग्राहकों के साथ संवाद करने की सरल तकनीकें',
+        chapters: [
+          'Importance of Selling Techniques',
+          'FAB Technique and Cross Selling',
+          'Selling to Customers'
+        ]
+      },
+      {
+        name: 'Module 39: Closing Sales and Customer Feedback',
+        nameHi: 'मॉड्यूल 39: बिक्री समाप्त करना और ग्राहक प्रतिक्रिया',
+        chapters: [
+          'How to Close a Sale',
+          'Customer Feedback and Satisfaction'
+        ]
+      },
+      {
+        name: 'Module 40: Positive Work Environment',
+        nameHi: 'मॉड्यूल 40: सकारात्मक कार्य वातावरण',
+        chapters: [
+          'Being Part of a Positive Workplace',
+          'Building Healthy Relationships at Work',
+          'Energy Conservation in the Workplace'
+        ]
+      },
+      {
+        name: 'Module 41: Personal Grooming and Hygiene',
+        nameHi: 'मॉड्यूल 41: व्यक्तिगत संवारना और स्वच्छता',
+        chapters: [
+          'Importance of Personal Grooming',
+          'Maintaining Personal Hygiene',
+          'How to Groom Yourself'
+        ]
+      },
+      {
+        name: 'Module 42: Managing Stress in the Workplace',
+        nameHi: 'मॉड्यूल 42: कार्यस्थल पर तनाव प्रबंधन',
+        chapters: [
+          'Meaning of Stress',
+          'Types of Stress',
+          'How to Deal with Stress at Work'
+        ]
+      },
+      {
+        name: 'Module 43: Building My Resume',
+        nameHi: 'मॉड्यूल 43: अपना रेज़्यूमे बनाना',
+        chapters: [
+          'Key Elements of a Resume',
+          'How to Write a Resume',
+          'Checking for Common Mistakes'
+        ]
+      },
+      {
+        name: 'Module 44: Preparing for an Interview',
+        nameHi: 'मॉड्यूल 44: साक्षात्कार की तैयारी',
+        chapters: [
+          'What are Interview Skills?',
+          'How to Prepare for an Interview',
+          'How to Follow Up After Interview'
+        ]
+      },
+      {
+        name: 'Module 45: Decoding Interviews',
+        nameHi: 'मॉड्यूल 45: साक्षात्कार को डिकोड करना',
+        chapters: [
+          'Do\'s and Don\'ts of Facing an Interview',
+          'Common Interview Questions'
+        ]
+      },
+      {
+        name: 'Module 46: Mock Interviews',
+        nameHi: 'मॉड्यूल 46: मॉक साक्षात्कार',
+        chapters: [
+          'What are Mock Interviews?',
+          'Benefits of Mock Interviews',
+          'Practice Mock Interviews'
+        ]
+      },
+      {
+        name: 'Module 47: Professional Networking',
+        nameHi: 'मॉड्यूल 47: पेशेवर नेटवर्किंग',
+        chapters: [
+          'Meaning and Importance of Professional Networking',
+          'How to Build a Professional Network'
+        ]
+      },
+      {
+        name: 'Module 48: Handling Rejection and Failure',
+        nameHi: 'मॉड्यूल 48: अस्वीकृति और असफलता को संभालना',
+        chapters: [
+          'Identifying Failure as Stepping Stone',
+          'Handling Rejection and Failure Positively'
+        ]
+      },
+      {
+        name: 'Module 49: Industry Visit: 1',
+        nameHi: 'मॉड्यूल 49: उद्योग भ्रमण: 1',
+        chapters: [
+          'Preparing Questions for Industry Visit'
+        ]
+      },
+      {
+        name: 'Module 50: Industry Visit: 2',
+        nameHi: 'मॉड्यूल 50: उद्योग भ्रमण: 2',
+        chapters: [
+          'Continuation of Industry Visit Preparation'
+        ]
+      },
+      {
+        name: 'Module 51: Reflection After Industry Visit',
+        nameHi: 'मॉड्यूल 51: उद्योग भ्रमण के बाद चिंतन',
+        chapters: [
+          'Reflecting on Industry Visit Experience'
+        ]
+      },
+      {
+        name: 'Module 52: Guest Lecture by Alumni or HR',
+        nameHi: 'मॉड्यूल 52: पूर्व छात्र या HR द्वारा अतिथि व्याख्यान',
+        chapters: [
+          'Questions to Ask Alumni and HR',
+          'Understanding the Job Market'
+        ]
+      },
+      {
+        name: 'Module 53: Introduction to Platform-Based Jobs',
+        nameHi: 'मॉड्यूल 53: प्लेटफ़ॉर्म-आधारित नौकरियों का परिचय',
+        chapters: [
+          'What are Platform-Based Jobs?',
+          'Exploring Portals',
+          'How to Register on Portals'
+        ]
+      },
+      {
+        name: 'Module 54: Applying for Jobs Through Online Portals',
+        nameHi: 'मॉड्यूल 54: ऑनलाइन पोर्टल्स के माध्यम से नौकरी के लिए आवेदन',
+        chapters: [
+          'What are Job Search Engines?',
+          'How to Find and Apply for Jobs Online',
+          'Finding Technician Job Roles'
+        ]
+      },
+      {
+        name: 'Module 55: Enrolling for Apprenticeships',
+        nameHi: 'मॉड्यूल 55: अप्रेंटिसशिप के लिए पंजीकरण',
+        chapters: [
+          'About the NAPS Portal',
+          'How to Register on NAPS',
+          'How to Apply for Jobs on NAPS'
+        ]
+      }
     ],
     ai: [
-      { id: 'AI-1', name: 'Module 1: Understanding AI', nameHi: 'मॉड्यूल 1: AI को समझना',
-        chapters: [{ en: 'What is AI?', hi: 'AI क्या है?' }, { en: 'Where to Find AI?', hi: 'AI कहाँ मिलता है?' }, { en: 'What is Not AI?', hi: 'AI क्या नहीं है?' }, { en: 'Using Prompts with AI Tools', hi: 'AI टूल्स के साथ प्रॉम्प्ट्स का उपयोग' }] },
-      { id: 'AI-2', name: 'Module 2: How does AI work?', nameHi: 'मॉड्यूल 2: AI कैसे काम करता है?',
-        chapters: [{ en: 'How AI Works', hi: 'AI कैसे काम करता है' }, { en: 'Data and Its Importance', hi: 'डेटा और उसका महत्व' }, { en: 'Machine Learning vs Deep Learning', hi: 'मशीन लर्निंग बनाम डीप लर्निंग' }] },
-      { id: 'AI-3', name: 'Module 3: Types of AI', nameHi: 'मॉड्यूल 3: AI के प्रकार',
-        chapters: [{ en: 'Narrow AI vs General AI', hi: 'नैरो AI बनाम जनरल AI' }, { en: 'History of AI', hi: 'AI का इतिहास' }] },
-      { id: 'AI-4', name: 'Module 4: What can AI do?', nameHi: 'मॉड्यूल 4: AI क्या कर सकता है?',
-        chapters: [{ en: 'What is Generative AI?', hi: 'जनरेटिव AI क्या है?' }, { en: 'How to Talk to AI', hi: 'AI से कैसे बात करें' }, { en: 'Uses of Generative AI', hi: 'जनरेटिव AI के उपयोग' }] },
-      { id: 'AI-5', name: 'Module 5: Impact of AI on Jobs & Industries', nameHi: 'मॉड्यूल 5: AI का नौकरियों और उद्योगों पर प्रभाव',
-        chapters: [{ en: 'How AI is Impacting Jobs', hi: 'AI नौकरियों को कैसे प्रभावित कर रहा है' }, { en: 'Advantages and Disadvantages of AI at Work', hi: 'काम पर AI के फायदे और नुकसान' }] },
-      { id: 'AI-6', name: 'Module 6: Exploring Careers with AI', nameHi: 'मॉड्यूल 6: AI के साथ करियर की खोज',
-        chapters: [{ en: 'Exploring Career Options with AI', hi: 'AI के साथ करियर विकल्पों की खोज' }] },
-      { id: 'AI-7', name: 'Module 7: Learning with AI', nameHi: 'मॉड्यूल 7: AI के साथ सीखना',
-        chapters: [{ en: 'How AI Can Help You Learn Better', hi: 'AI आपको बेहतर सीखने में कैसे मदद कर सकता है' }] },
-      { id: 'AI-8', name: 'Module 8: Using AI Responsibly', nameHi: 'मॉड्यूल 8: AI का जिम्मेदारी से उपयोग',
-        chapters: [{ en: 'What is Ethical AI?', hi: 'नैतिक AI क्या है?' }, { en: 'Ethical Challenges in AI', hi: 'AI में नैतिक चुनौतियाँ' }, { en: 'Responsible Usage of AI', hi: 'AI का जिम्मेदार उपयोग' }] }
+      {
+        name: 'Module 1: Understanding AI',
+        nameHi: 'मॉड्यूल 1: AI को समझना',
+        chapters: [
+          'What is AI?',
+          'Where to Find AI?',
+          'What is Not AI?',
+          'Using Prompts with AI Tools'
+        ]
+      },
+      {
+        name: 'Module 2: How does AI work?',
+        nameHi: 'मॉड्यूल 2: AI कैसे काम करता है?',
+        chapters: [
+          'How AI Works',
+          'Data and Its Importance',
+          'Machine Learning vs Deep Learning'
+        ]
+      },
+      {
+        name: 'Module 3: Types of AI',
+        nameHi: 'मॉड्यूल 3: AI के प्रकार',
+        chapters: [
+          'Narrow AI vs General AI',
+          'History of AI'
+        ]
+      },
+      {
+        name: 'Module 4: What can AI do?',
+        nameHi: 'मॉड्यूल 4: AI क्या कर सकता है?',
+        chapters: [
+          'What is Generative AI?',
+          'How to Talk to AI',
+          'Uses of Generative AI'
+        ]
+      },
+      {
+        name: 'Module 5: Impact of AI on Jobs & Industries',
+        nameHi: 'मॉड्यूल 5: AI का नौकरियों और उद्योगों पर प्रभाव',
+        chapters: [
+          'How AI is Impacting Jobs',
+          'Advantages and Disadvantages of AI at Work'
+        ]
+      },
+      {
+        name: 'Module 6: Exploring Careers with AI',
+        nameHi: 'मॉड्यूल 6: AI के साथ करियर की खोज',
+        chapters: [
+          'Exploring Career Options with AI'
+        ]
+      },
+      {
+        name: 'Module 7: Learning with AI',
+        nameHi: 'मॉड्यूल 7: AI के साथ सीखना',
+        chapters: [
+          'How AI Can Help You Learn Better'
+        ]
+      },
+      {
+        name: 'Module 8: Using AI Responsibly',
+        nameHi: 'मॉड्यूल 8: AI का जिम्मेदारी से उपयोग',
+        chapters: [
+          'What is Ethical AI?',
+          'Ethical Challenges in AI',
+          'Responsible Usage of AI'
+        ]
+      }
     ]
   };
 
   // ============================================================
-  //  RENDER
+  //  RENDER (सिर्फ Headings — बिना नंबर)
   // ============================================================
   function renderModules(containerId, modules, prefix = 'module-') {
     const container = document.getElementById(containerId);
@@ -615,18 +1415,17 @@
         chaptersHtml += `
           <div class="chapter-item">
             <a href="${chLink}">
-              <span class="num">${ci + 1}</span>
-              <span class="en">${ch.en}</span>
-              <span class="hi">— ${ch.hi}</span>
+              <span class="en">${ch}</span>
+              <span class="hi">— ${ch}</span>
               <span class="arrow">➜</span>
             </a>
           </div>
         `;
       });
+      // No code number, only title
       html += `
-        <div class="module-card" data-search="${mod.id} ${mod.name} ${mod.nameHi} ${mod.chapters.map(c => c.en + ' ' + c.hi).join(' ')}">
+        <div class="module-card" data-search="${mod.name} ${mod.nameHi} ${mod.chapters.join(' ')}">
           <div class="module-header" onclick="toggleModule(this)">
-            <span class="code">${mod.id}</span>
             <span class="title">${mod.name} <span class="hi">${mod.nameHi}</span></span>
             <span class="toggle-icon">▼</span>
           </div>
