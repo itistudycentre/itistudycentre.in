@@ -1,1 +1,1961 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>मॉड्यूल 5: संचार कौशल | ITI Study Centre</title>
+    <meta name="description" content="Employability Skills मॉड्यूल 5: संचार कौशल – पूरे नोट्स। हिंदी + अंग्रेजी में चार्ट और उदाहरण सहित।" />
+    <link rel="icon" href="/images/favicon.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.7;
+            user-select: none;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .main-header {
+            background: #003366;
+            padding: 14px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        .main-header nav a.notes-link {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb .current {
+            color: #555;
+            font-weight: 600;
+        }
+        .page-title {
+            padding: 30px 0 20px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.2rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 520px;
+            padding: 13px 18px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+        }
+        .search-section button {
+            padding: 13px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        @media (max-width: 640px) {
+            .search-section {
+                flex-direction: column;
+            }
+            .search-section input {
+                max-width: 100%;
+                width: 100%;
+            }
+            .search-section button {
+                width: 100%;
+            }
+        }
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            margin-bottom: 28px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 18px 26px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: default;
+            user-select: none;
+            flex-wrap: wrap;
+        }
+        .section-header .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .section-header .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body {
+            padding: 24px 28px;
+            background: #fafcff;
+        }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin: 28px 0 16px;
+            border-left: 4px solid #ffcc00;
+            padding-left: 16px;
+        }
+        .section-body h3:first-of-type {
+            margin-top: 0;
+        }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.1rem;
+            margin: 18px 0 10px;
+        }
+        .bilingual {
+            margin: 14px 0;
+        }
+        .bilingual .en {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1a2a3a;
+        }
+        .bilingual .hi {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #3d3d3d;
+            background: #f0f5ff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border-left: 5px solid #003366;
+            margin-top: 12px;
+        }
+        .bilingual ul,
+        .bilingual ol {
+            padding-left: 24px;
+            margin: 8px 0;
+        }
+        .bilingual ul li,
+        .bilingual ol li {
+            margin-bottom: 4px;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+        }
+        .info-card.blue {
+            border-left: 5px solid #003366;
+        }
+        .info-card.green {
+            border-left: 5px solid #28a745;
+        }
+        .info-card.orange {
+            border-left: 5px solid #ff9900;
+        }
+        .info-card.purple {
+            border-left: 5px solid #6f42c1;
+        }
+        .info-card.highlight {
+            border-left: 5px solid #ffc107;
+            background: #fffdf0;
+        }
+        .info-card.danger {
+            border-left: 5px solid #dc3545;
+            background: #fdf0f1;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) {
+            background: #f8f9fc;
+        }
+        .table-wrap tr:hover {
+            background: #eef2f7;
+        }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .chart-container {
+            margin: 20px 0 10px;
+        }
+        .chart-container .chart-title {
+            font-weight: 600;
+            color: #003366;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+        }
+        .chart-bar {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .chart-bar .label {
+            min-width: 120px;
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+        }
+        .chart-bar .bar-track {
+            flex: 1;
+            min-width: 140px;
+            height: 26px;
+            background: #e9edf2;
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+        }
+        .chart-bar .bar-track .fill {
+            height: 100%;
+            border-radius: 14px;
+            background: linear-gradient(90deg, #003366, #4a90d9);
+            transition: width 0.6s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 8px;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .chart-bar .bar-track .fill.green {
+            background: linear-gradient(90deg, #1e7e34, #5ddb6f);
+        }
+        .chart-bar .bar-track .fill.orange {
+            background: linear-gradient(90deg, #cc7a00, #ffb84d);
+        }
+        .chart-bar .bar-track .fill.purple {
+            background: linear-gradient(90deg, #5a2d91, #a37bdb);
+        }
+        .chart-bar .bar-track .fill.teal {
+            background: linear-gradient(90deg, #0f7b8a, #56d4dd);
+        }
+        .chart-bar .value {
+            min-width: 44px;
+            font-weight: 700;
+            color: #1e3a5f;
+            font-size: 0.9rem;
+            text-align: right;
+        }
+        .chart-note {
+            font-size: 0.82rem;
+            color: #888;
+            margin-top: 6px;
+        }
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .example-box strong {
+            color: #003366;
+        }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .important-box ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .short-notes ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .mcq-link {
+            background: #f0f5ff;
+            border: 2px solid #003366;
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            margin: 16px 0;
+        }
+        .mcq-link a {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #003366;
+            background: #fff;
+            padding: 10px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: 0.25s;
+            border: 1px solid #003366;
+        }
+        .mcq-link a:hover {
+            background: #003366;
+            color: #fff;
+            transform: scale(1.02);
+        }
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 20px;
+            padding: 14px 18px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover {
+            transform: scale(1.04);
+            opacity: 0.9;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+        }
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+        .share-btn.link {
+            background: #6c757d;
+        }
+        .share-btn.link.copied {
+            background: #28a745;
+        }
+        .share-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #003366;
+            color: #fff !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        .comments-section textarea,
+        .topic-request textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            resize: vertical;
+            font-family: inherit;
+            user-select: text;
+        }
+        .comments-section input,
+        .topic-request input {
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            width: 48%;
+            margin-right: 2%;
+            margin-bottom: 10px;
+            font-family: inherit;
+            user-select: text;
+        }
+        @media (max-width: 600px) {
+            .comments-section input,
+            .topic-request input {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .comment-item {
+            background: #f1f4f9;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #003366;
+        }
+        .comment-item .meta {
+            color: #888;
+            font-size: 0.8rem;
+        }
+        .comment-item .status-pending {
+            color: #ff9900;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #fff3cd;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        .comment-item .status-approved {
+            color: #28a745;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #d4edda;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 24px 20px;
+            text-align: center;
+            margin-top: 44px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 24px;
+            margin-bottom: 12px;
+        }
+        footer .footer-links a {
+            color: #b0b8c5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        footer .footer-links a:hover {
+            color: #fff;
+        }
+        footer p {
+            margin: 8px 0 0;
+            font-size: 0.85rem;
+            color: #7a8494;
+        }
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.25s;
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover {
+            background: #002244;
+            transform: scale(1.05);
+        }
+        .copy-protect::selection {
+            background: #b3d4fc;
+            color: #000;
+        }
+        .admin-toggle {
+            text-align: center;
+            margin: 20px 0;
+            padding: 12px;
+            background: #f8f9fc;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-toggle:hover {
+            background: #eef2f7;
+            border-color: #003366;
+        }
+        .admin-toggle .key-icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+        .admin-panel {
+            display: none;
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            border: 2px solid #003366;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .admin-panel.open {
+            display: block;
+        }
+        .admin-panel .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .admin-panel .admin-header h3 {
+            color: #003366;
+            margin: 0;
+        }
+        .admin-panel .admin-header .close-btn {
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .admin-panel .admin-header .close-btn:hover {
+            background: #b02a37;
+        }
+        .admin-password-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .admin-password-box input {
+            padding: 10px 14px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-password-box input:focus {
+            border-color: #003366;
+            outline: none;
+        }
+        .admin-password-box button {
+            padding: 10px 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-password-box button:hover {
+            background: #002244;
+        }
+        .admin-password-box .error-msg {
+            color: #dc3545;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .admin-password-box .error-msg.show {
+            display: block;
+        }
+        .comment-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: #f8f9fc;
+            border-radius: 8px;
+        }
+        .comment-stats span {
+            font-size: 0.9rem;
+        }
+        .comment-stats .count {
+            font-weight: 700;
+            color: #003366;
+        }
+        .admin-comment-item {
+            background: #f8f9fc;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .admin-comment-item .comment-info {
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-comment-item .comment-info strong {
+            color: #003366;
+        }
+        .admin-comment-item .comment-info .time {
+            color: #888;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        .admin-comment-item .comment-info .status {
+            font-size: 0.7rem;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .admin-comment-item .comment-info .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .admin-comment-item .comment-info .status.approved {
+            background: #d4edda;
+            color: #1e7e34;
+        }
+        .admin-comment-item .comment-info .status.rejected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .admin-comment-item .comment-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .admin-comment-item .comment-actions button {
+            padding: 4px 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .admin-comment-item .comment-actions .btn-approve {
+            background: #28a745;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-approve:hover {
+            background: #1e7e34;
+        }
+        .admin-comment-item .comment-actions .btn-reject {
+            background: #ffc107;
+            color: #222;
+        }
+        .admin-comment-item .comment-actions .btn-reject:hover {
+            background: #e0a800;
+        }
+        .admin-comment-item .comment-actions .btn-delete {
+            background: #dc3545;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-delete:hover {
+            background: #b02a37;
+        }
+        .no-comments-msg {
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        .comm-type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin: 18px 0;
+        }
+        .comm-type-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px 14px;
+            text-align: center;
+            border: 2px solid #e6eaef;
+            transition: 0.2s;
+        }
+        .comm-type-card:hover {
+            border-color: #003366;
+        }
+        .comm-type-card .ct-icon {
+            font-size: 2.4rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .comm-type-card .ct-name {
+            font-weight: 700;
+            color: #003366;
+            font-size: 1rem;
+        }
+        .comm-type-card .ct-desc {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 4px;
+        }
+        .six-c-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .six-c-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .six-c-card .c-letter {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #003366;
+            display: block;
+        }
+        .six-c-card .c-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #1e3a5f;
+        }
+        .six-c-card .c-desc {
+            font-size: 0.75rem;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .main-header nav {
+                justify-content: center;
+                gap: 6px 12px;
+            }
+            .main-header nav a {
+                font-size: 0.9rem;
+            }
+            .page-title h1 {
+                font-size: 1.6rem;
+            }
+            .section-header {
+                padding: 14px 18px;
+                flex-wrap: wrap;
+            }
+            .section-header .title {
+                font-size: 1.05rem;
+            }
+            .section-body {
+                padding: 16px 18px;
+            }
+            .section-body h3 {
+                font-size: 1.1rem;
+            }
+            .bilingual .en {
+                font-size: 0.95rem;
+            }
+            .bilingual .hi {
+                font-size: 0.9rem;
+                padding: 12px 16px;
+            }
+            .share-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .share-section .share-label {
+                text-align: center;
+            }
+            .share-btn {
+                justify-content: center;
+            }
+            .admin-comment-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .admin-comment-item .comment-actions {
+                justify-content: flex-start;
+            }
+            .admin-password-box {
+                flex-direction: column;
+            }
+            .admin-password-box input {
+                width: 100%;
+            }
+            .chart-bar .label {
+                min-width: 90px;
+                font-size: 0.85rem;
+            }
+            .chart-bar .bar-track {
+                min-width: 100px;
+                height: 22px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            .section-body {
+                padding: 12px 14px;
+            }
+            .section-header .icon {
+                font-size: 1.3rem;
+            }
+            .section-header .title {
+                font-size: 0.95rem;
+            }
+            .chart-bar {
+                gap: 8px;
+            }
+            .chart-bar .label {
+                min-width: 70px;
+                font-size: 0.8rem;
+            }
+            .chart-bar .bar-track {
+                min-width: 70px;
+                height: 20px;
+            }
+            .chart-bar .value {
+                font-size: 0.8rem;
+                min-width: 32px;
+            }
+            .comm-type-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .six-c-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="/">ITI Study Centre</a></div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/iti-result.html">ITI Result</a>
+                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
+                <a href="/engineering-notes.html">Engineering Notes</a>
+                <a href="/questionbank.html">Question Bank</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
+            <a href="/notes/employability-skills/index.html">Employability Skills</a> &nbsp;›&nbsp;
+            <span class="current">मॉड्यूल 5: संचार कौशल</span>
+        </div>
+    </div>
+
+    <!-- ===== PAGE TITLE ===== -->
+    <section class="page-title">
+        <div class="container">
+            <h1>💬 मॉड्यूल 5: संचार कौशल</h1>
+            <p>Communication Skills • NSDC/DGT पाठ्यक्रम पर आधारित • हिंदी + अंग्रेजी में पूरे नोट्स</p>
+        </div>
+    </section>
+
+    <!-- ===== SEARCH ===== -->
+    <section class="search-section container">
+        <input type="text" id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें...">
+        <button onclick="filterSections()">खोजें</button>
+    </section>
+
+    <!-- ===== SHARE BUTTONS ===== -->
+    <div class="container">
+        <div class="share-section" id="shareSection">
+            <span class="share-label">📤 इस पेज को शेयर करें:</span>
+            <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </button>
+            <button class="share-btn facebook" onclick="shareFacebook()">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter()">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Twitter
+            </button>
+            <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+                <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <span id="copyLinkText">Copy Link</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    5.1 संचार का महत्व
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comm-5-1">
+            <div class="section-header">
+                <span class="icon">📢</span>
+                <span class="title">5.1 संचार का महत्व <span class="subtitle">(Importance of Communication)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Communication</strong> is the process of sharing thoughts, feelings, and information with others. It is important for three reasons:</p>
+                        <ul>
+                            <li><strong>It helps us share our thoughts:</strong> Discuss ideas for a new project, plan dinner, or decide how much money to save.</li>
+                            <li><strong>It helps us describe our feelings:</strong> Share happiness, anger, or worry – sharing emotions makes us feel better.</li>
+                            <li><strong>It helps us learn new things:</strong> Asking questions and doubts helps us understand our work and be better at our job.</li>
+                        </ul>
+                        <p><strong>Characteristics of effective communication:</strong></p>
+                        <ul>
+                            <li><strong>Clarity:</strong> Use simple words and be clear about what you want to say.</li>
+                            <li><strong>Completeness:</strong> Share all the information fully so the listener understands correctly.</li>
+                            <li><strong>Listening:</strong> Listening well shows respect and helps you understand others.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>संचार (Communication)</strong> विचारों, भावनाओं और सूचनाओं को दूसरों के साथ साझा करने की प्रक्रिया है। यह तीन कारणों से महत्वपूर्ण है:</p>
+                        <ul>
+                            <li><strong>यह हमें अपने विचार साझा करने में मदद करता है:</strong> नए प्रोजेक्ट के लिए विचारों पर चर्चा करना, रात के खाने की योजना बनाना, या कितना पैसा बचाना है यह तय करना।</li>
+                            <li><strong>यह हमें अपनी भावनाओं का वर्णन करने में मदद करता है:</strong> खुशी, क्रोध या चिंता साझा करना – भावनाओं को साझा करने से हम बेहतर महसूस करते हैं।</li>
+                            <li><strong>यह हमें नई चीजें सीखने में मदद करता है:</strong> प्रश्न और संदेह पूछने से हमें अपने काम को समझने में मदद मिलती है और हम अपनी नौकरी में बेहतर बनते हैं।</li>
+                        </ul>
+                        <p><strong>प्रभावी संचार की विशेषताएँ:</strong></p>
+                        <ul>
+                            <li><strong>स्पष्टता (Clarity):</strong> सरल शब्दों का उपयोग करें और आप जो कहना चाहते हैं उसके बारे में स्पष्ट रहें।</li>
+                            <li><strong>पूर्णता (Completeness):</strong> सभी जानकारी पूरी तरह से साझा करें ताकि श्रोता सही ढंग से समझ सके।</li>
+                            <li><strong>सुनना (Listening):</strong> अच्छी तरह से सुनना सम्मान दिखाता है और दूसरों को समझने में मदद करता है।</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Types of Communication -->
+                <h4 style="margin-top:20px;">संचार के 4 प्रकार / 4 Types of Communication</h4>
+                <div class="comm-type-grid">
+                    <div class="comm-type-card"><span class="ct-icon">🗣️</span><div class="ct-name">Verbal</div><div class="ct-desc">Spoken words, face-to-face, phone</div></div>
+                    <div class="comm-type-card"><span class="ct-icon">✍️</span><div class="ct-name">Written</div><div class="ct-desc">Letters, emails, messages</div></div>
+                    <div class="comm-type-card"><span class="ct-icon">👀</span><div class="ct-name">Non-Verbal</div><div class="ct-desc">Body language, facial expressions</div></div>
+                    <div class="comm-type-card"><span class="ct-icon">🖼️</span><div class="ct-name">Visual</div><div class="ct-desc">Posters, videos, pictures</div></div>
+                </div>
+
+                <div class="short-notes">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 मुख्य बातें / Key Takeaways</h4>
+                    <ul>
+                        <li>संचार विचारों, भावनाओं और जानकारी साझा करने के लिए महत्वपूर्ण है।</li>
+                        <li>प्रभावी संचार स्पष्ट, पूर्ण और अच्छी सुनने की क्षमता पर निर्भर करता है।</li>
+                        <li>संचार के 4 प्रकार: मौखिक, लिखित, गैर-मौखिक और दृश्य।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    5.2 मौखिक संचार: बोलना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comm-5-2">
+            <div class="section-header">
+                <span class="icon">🗣️</span>
+                <span class="title">5.2 मौखिक संचार: बोलना <span class="subtitle">(Verbal Communication: Speaking)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Verbal communication</strong> is the use of words to share information with others. It can be spoken or written, in any language.</p>
+                        <p><strong>Difference between spoken and written communication:</strong></p>
+                        <ul>
+                            <li><strong>Speaking:</strong> Requires a speaker and a listener. You can use tone, pitch, and volume to convey meaning.</li>
+                            <li><strong>Writing:</strong> Requires a writer and a reader. You need to use correct grammar, punctuation, and structure.</li>
+                        </ul>
+                        <p><strong>Tips for simple and clear verbal communication:</strong></p>
+                        <ul>
+                            <li>Use simple words and short sentences.</li>
+                            <li>Speak slowly and clearly.</li>
+                            <li>Check if the listener has understood you.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>मौखिक संचार (Verbal communication)</strong> दूसरों के साथ जानकारी साझा करने के लिए शब्दों का उपयोग है। यह किसी भी भाषा में बोला या लिखा जा सकता है।</p>
+                        <p><strong>बोले गए और लिखित संचार के बीच अंतर:</strong></p>
+                        <ul>
+                            <li><strong>बोलना:</strong> एक वक्ता और एक श्रोता की आवश्यकता होती है। अर्थ व्यक्त करने के लिए आप स्वर, पिच और मात्रा का उपयोग कर सकते हैं।</li>
+                            <li><strong>लिखना:</strong> एक लेखक और एक पाठक की आवश्यकता होती है। आपको सही व्याकरण, विराम चिह्न और संरचना का उपयोग करना होगा।</li>
+                        </ul>
+                        <p><strong>सरल और स्पष्ट मौखिक संचार के टिप्स:</strong></p>
+                        <ul>
+                            <li>सरल शब्दों और छोटे वाक्यों का उपयोग करें।</li>
+                            <li>धीरे और स्पष्ट रूप से बोलें।</li>
+                            <li>जाँच करें कि श्रोता ने आपको समझा है या नहीं।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    5.3 मौखिक संचार: लिखना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comm-5-3">
+            <div class="section-header">
+                <span class="icon">✍️</span>
+                <span class="title">5.3 मौखिक संचार: लिखना <span class="subtitle">(Verbal Communication: Writing)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Writing is a form of verbal communication.</strong> It includes letters, emails, and resumes.</p>
+                        <p><strong>Steps to write a formal letter:</strong></p>
+                        <ol>
+                            <li>Sender's address</li>
+                            <li>Date</li>
+                            <li>Receiver's address</li>
+                            <li>Greeting (e.g., "Dear Sir/Madam")</li>
+                            <li>Subject (e.g., "Reg. Job Application")</li>
+                            <li>Body – the main content</li>
+                            <li>Signature (e.g., "Yours sincerely")</li>
+                        </ol>
+                        <p><strong>Email writing (3 steps):</strong></p>
+                        <ol>
+                            <li><strong>Receiver's email id:</strong> Enter the correct email address.</li>
+                            <li><strong>Subject line:</strong> Keep it short and clear.</li>
+                            <li><strong>Body:</strong> Write the message clearly and sign off.</li>
+                        </ol>
+                        <p><strong>Resume sections:</strong> Name, Contact details, Education, Experience, Skills.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>लिखना मौखिक संचार का एक रूप है।</strong> इसमें पत्र, ईमेल और रिज्यूमे शामिल हैं।</p>
+                        <p><strong>औपचारिक पत्र लिखने के चरण:</strong></p>
+                        <ol>
+                            <li>प्रेषक का पता</li>
+                            <li>तिथि</li>
+                            <li>प्राप्तकर्ता का पता</li>
+                            <li>अभिवादन (जैसे, "प्रिय महोदय/महोदया")</li>
+                            <li>विषय (जैसे, "संबंध: नौकरी आवेदन")</li>
+                            <li>मुख्य भाग – मुख्य सामग्री</li>
+                            <li>हस्ताक्षर (जैसे, "भवदीय")</li>
+                        </ol>
+                        <p><strong>ईमेल लिखना (3 चरण):</strong></p>
+                        <ol>
+                            <li><strong>प्राप्तकर्ता का ईमेल आईडी:</strong> सही ईमेल पता दर्ज करें।</li>
+                            <li><strong>विषय पंक्ति:</strong> संक्षिप्त और स्पष्ट रखें।</li>
+                            <li><strong>मुख्य भाग:</strong> संदेश स्पष्ट रूप से लिखें और हस्ताक्षर करें।</li>
+                        </ol>
+                        <p><strong>रिज्यूमे के भाग:</strong> नाम, संपर्क विवरण, शिक्षा, अनुभव, कौशल।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    5.4 गैर-मौखिक संचार
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comm-5-4">
+            <div class="section-header">
+                <span class="icon">👀</span>
+                <span class="title">5.4 गैर-मौखिक संचार <span class="subtitle">(Non-Verbal Communication)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Non-verbal communication</strong> is the process of sharing messages without words – using facial expressions, hand movements, body language, postures, and gestures.</p>
+                        <p><strong>Spatial distance:</strong></p>
+                        <ul>
+                            <li><strong>Informal:</strong> Close distance (friends, family).</li>
+                            <li><strong>Formal:</strong> Maintain a minimum distance of 4 feet (manager, coworkers).</li>
+                        </ul>
+                        <p><strong>Appearance and body movements:</strong></p>
+                        <ul>
+                            <li>Wear clean clothes, bathe regularly, cut nails, comb hair.</li>
+                            <li>Do not wear too much makeup or perfume.</li>
+                            <li>For men, shave properly.</li>
+                            <li>Sit and stand straight – it shows professionalism.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>गैर-मौखिक संचार (Non-verbal communication)</strong> बिना शब्दों के संदेश साझा करने की प्रक्रिया है – चेहरे के भाव, हाथ की हरकतें, शारीरिक भाषा, मुद्राएँ और इशारों का उपयोग करना।</p>
+                        <p><strong>स्थानिक दूरी (Spatial distance):</strong></p>
+                        <ul>
+                            <li><strong>अनौपचारिक:</strong> निकट दूरी (दोस्त, परिवार)।</li>
+                            <li><strong>औपचारिक:</strong> न्यूनतम 4 फीट की दूरी बनाए रखें (प्रबंधक, सहकर्मी)।</li>
+                        </ul>
+                        <p><strong>उपस्थिति और शारीरिक गतिविधियाँ:</strong></p>
+                        <ul>
+                            <li>साफ कपड़े पहनें, नियमित रूप से स्नान करें, नाखून काटें, बालों में कंघी करें।</li>
+                            <li>बहुत अधिक मेकअप या इत्र न लगाएँ।</li>
+                            <li>पुरुषों के लिए, ठीक से शेव करें।</li>
+                            <li>सीधे बैठें और खड़े हों – यह व्यावसायिकता दिखाता है।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card highlight">
+                    <h4 style="margin:0 0 6px; color:#856404;">💡 याद रखें / Remember</h4>
+                    <p style="font-size:0.95rem;">गैर-मौखिक संचार कभी-कभी शब्दों से अधिक शक्तिशाली होता है। / Non-verbal communication is sometimes more powerful than words.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    5.5 प्रभावी संचार का अभ्यास
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comm-5-5">
+            <div class="section-header">
+                <span class="icon">🎯</span>
+                <span class="title">5.5 प्रभावी संचार का अभ्यास <span class="subtitle">(Practicing Effective Communication)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Formal vs Informal Communication:</strong></p>
+                        <ul>
+                            <li><strong>Formal:</strong> With colleagues, officials, strangers. In a workplace or official setting. Often recorded.</li>
+                            <li><strong>Informal:</strong> With friends and family. At home or private settings. Not recorded.</li>
+                        </ul>
+                        <p><strong>How to introduce yourself effectively:</strong></p>
+                        <ul>
+                            <li><strong>Verbal:</strong> Use the correct greeting. Tell your name and a little about yourself. Speak in a clear, confident voice.</li>
+                            <li><strong>Non-verbal:</strong> Maintain eye contact, stand/sit straight, give a firm handshake, dress appropriately.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>औपचारिक बनाम अनौपचारिक संचार:</strong></p>
+                        <ul>
+                            <li><strong>औपचारिक:</strong> सहकर्मियों, अधिकारियों, अजनबियों के साथ। कार्यस्थल या आधिकारिक सेटिंग में। अक्सर रिकॉर्ड किया जाता है।</li>
+                            <li><strong>अनौपचारिक:</strong> दोस्तों और परिवार के साथ। घर या निजी सेटिंग में। रिकॉर्ड नहीं किया जाता।</li>
+                        </ul>
+                        <p><strong>प्रभावी ढंग से परिचय कैसे दें:</strong></p>
+                        <ul>
+                            <li><strong>मौखिक:</strong> सही अभिवादन का उपयोग करें। अपना नाम और अपने बारे में थोड़ी जानकारी बताएँ। स्पष्ट, आत्मविश्वास भरी आवाज़ में बोलें।</li>
+                            <li><strong>गैर-मौखिक:</strong> आँखों का संपर्क बनाए रखें, सीधे खड़े/बैठे रहें, मजबूत हाथ मिलाएँ, उचित कपड़े पहनें।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    5.6 कार्यस्थल संचार
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comm-5-6">
+            <div class="section-header">
+                <span class="icon">🏢</span>
+                <span class="title">5.6 कार्यस्थल संचार <span class="subtitle">(Workplace Communication)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>The 6 Cs of Communication at the workplace:</strong></p>
+                        <div class="six-c-grid">
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">Clear</span><span class="c-desc">Easy to understand</span></div>
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">Correct</span><span class="c-desc">No errors</span></div>
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">Complete</span><span class="c-desc">All information</span></div>
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">Concise</span><span class="c-desc">Brief and to the point</span></div>
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">Considerate</span><span class="c-desc">Mindful of others</span></div>
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">Courteous</span><span class="c-desc">Polite and kind</span></div>
+                        </div>
+                        <p><strong>Barriers to effective workplace communication:</strong></p>
+                        <ul>
+                            <li><strong>Language differences:</strong> Avoid speaking in a language that excludes others.</li>
+                            <li><strong>Unfamiliar words:</strong> Use simple words; ask for clarification if needed.</li>
+                            <li><strong>Different styles:</strong> Observe the communication style of the company.</li>
+                        </ul>
+                        <p><strong>Text messaging at work:</strong> Use correct spellings, avoid emojis, reply quickly, and do not share confidential information over chat.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>कार्यस्थल पर संचार के 6 C:</strong></p>
+                        <div class="six-c-grid">
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">स्पष्ट</span><span class="c-desc">समझने में आसान</span></div>
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">सही</span><span class="c-desc">कोई त्रुटि नहीं</span></div>
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">पूर्ण</span><span class="c-desc">सभी जानकारी</span></div>
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">संक्षिप्त</span><span class="c-desc">संक्षिप्त और सटीक</span></div>
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">विचारशील</span><span class="c-desc">दूसरों का ध्यान रखना</span></div>
+                            <div class="six-c-card"><span class="c-letter">C</span><span class="c-name">विनम्र</span><span class="c-desc">शिष्ट और दयालु</span></div>
+                        </div>
+                        <p><strong>कार्यस्थल संचार में बाधाएँ:</strong></p>
+                        <ul>
+                            <li><strong>भाषा अंतर:</strong> ऐसी भाषा में बात करने से बचें जो दूसरों को बाहर करती है।</li>
+                            <li><strong>अपरिचित शब्द:</strong> सरल शब्दों का उपयोग करें; यदि आवश्यक हो तो स्पष्टीकरण माँगें।</li>
+                            <li><strong>विभिन्न शैलियाँ:</strong> कंपनी की संचार शैली का निरीक्षण करें।</li>
+                        </ul>
+                        <p><strong>कार्य पर टेक्स्ट संदेश:</strong> सही वर्तनी का उपयोग करें, इमोजी से बचें, जल्दी उत्तर दें, और चैट पर गोपनीय जानकारी साझा न करें।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    5.7 प्रभावी टीम वर्क
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comm-5-7">
+            <div class="section-header">
+                <span class="icon">🤝</span>
+                <span class="title">5.7 प्रभावी टीम वर्क <span class="subtitle">(Effective Team Work)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Teamwork</strong> is when different people work together on the same task. It is important because:</p>
+                        <ul>
+                            <li><strong>Everyone cannot do everything:</strong> Working together gets the job done faster and with higher quality.</li>
+                            <li><strong>Teamwork brings new ideas:</strong> Each person has unique thoughts and opinions.</li>
+                        </ul>
+                        <p><strong>How to work well in a team:</strong></p>
+                        <ul>
+                            <li><strong>Have a shared goal:</strong> Everyone works towards the same objective.</li>
+                            <li><strong>Listen actively:</strong> Ask for teammates' thoughts and listen carefully.</li>
+                            <li><strong>Disagree respectfully:</strong> Communicate clearly but politely.</li>
+                            <li><strong>Share responsibility and credit:</strong> Everyone contributes and gets recognition.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>टीम वर्क (Teamwork)</strong> तब होता है जब विभिन्न लोग एक ही कार्य पर एक साथ काम करते हैं। यह महत्वपूर्ण है क्योंकि:</p>
+                        <ul>
+                            <li><strong>हर कोई सब कुछ नहीं कर सकता:</strong> एक साथ काम करने से काम तेजी से और उच्च गुणवत्ता के साथ होता है।</li>
+                            <li><strong>टीम वर्क नए विचार लाता है:</strong> प्रत्येक व्यक्ति के पास अद्वितीय विचार और राय होती है।</li>
+                        </ul>
+                        <p><strong>टीम में अच्छी तरह से काम कैसे करें:</strong></p>
+                        <ul>
+                            <li><strong>एक साझा लक्ष्य रखें:</strong> हर कोई एक ही उद्देश्य की ओर काम करता है।</li>
+                            <li><strong>सक्रिय रूप से सुनें:</strong> टीम के सदस्यों के विचार पूछें और ध्यान से सुनें।</li>
+                            <li><strong>सम्मानपूर्वक असहमति जताएँ:</strong> स्पष्ट रूप से लेकिन विनम्रता से संवाद करें।</li>
+                            <li><strong>जिम्मेदारी और श्रेय साझा करें:</strong> हर कोई योगदान देता है और पहचान प्राप्त करता है।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    5.8 संघर्ष प्रबंधन
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comm-5-8">
+            <div class="section-header">
+                <span class="icon">⚡</span>
+                <span class="title">5.8 संघर्ष प्रबंधन <span class="subtitle">(Managing Conflicts)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Conflict</strong> is a serious argument or disagreement between two people or groups. It creates negative emotions and can affect work.</p>
+                        <p><strong>Common causes of workplace conflict:</strong></p>
+                        <ul>
+                            <li><strong>Poor communication:</strong> Misunderstandings due to unclear information.</li>
+                            <li><strong>Difference in personality and values:</strong> People have different ways of working.</li>
+                            <li><strong>Stress:</strong> Tired or stressed people react faster and can argue over small issues.</li>
+                        </ul>
+                        <p><strong>How to resolve conflict:</strong></p>
+                        <ul>
+                            <li>Talk directly to the people involved.</li>
+                            <li>Listen to everyone's side.</li>
+                            <li>Focus on the situation, not the person.</li>
+                            <li>Take the first step to offer a solution.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>संघर्ष (Conflict)</strong> दो लोगों या समूहों के बीच एक गंभीर तर्क या असहमति है। यह नकारात्मक भावनाएँ पैदा करता है और काम को प्रभावित कर सकता है।</p>
+                        <p><strong>कार्यस्थल संघर्ष के सामान्य कारण:</strong></p>
+                        <ul>
+                            <li><strong>खराब संचार:</strong> अस्पष्ट जानकारी के कारण गलतफहमी।</li>
+                            <li><strong>व्यक्तित्व और मूल्यों में अंतर:</strong> लोगों के काम करने के अलग-अलग तरीके होते हैं।</li>
+                            <li><strong>तनाव:</strong> थके हुए या तनावग्रस्त लोग तेजी से प्रतिक्रिया करते हैं और छोटी-छोटी बातों पर बहस कर सकते हैं।</li>
+                        </ul>
+                        <p><strong>संघर्ष को कैसे हल करें:</strong></p>
+                        <ul>
+                            <li>सीधे संबंधित लोगों से बात करें।</li>
+                            <li>हर किसी की बात सुनें।</li>
+                            <li>स्थिति पर ध्यान दें, व्यक्ति पर नहीं।</li>
+                            <li>समाधान पेश करने के लिए पहला कदम उठाएँ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    5.9 आलोचना को संभालना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comm-5-9">
+            <div class="section-header">
+                <span class="icon">📝</span>
+                <span class="title">5.9 आलोचना को संभालना <span class="subtitle">(Handling Criticism)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Constructive Criticism:</strong> Helps you improve. Gives suggestions. Focuses on the task, not the person. Given in a calm and respectful tone.</p>
+                        <p><strong>Unfair Criticism:</strong> Does not help you fix the problem. Attacks you personally. Focuses on failures. Given in a rude manner.</p>
+                        <p><strong>How to respond to constructive criticism:</strong></p>
+                        <ul>
+                            <li>Take a few minutes to understand the criticism.</li>
+                            <li>Listen closely to what the person is saying.</li>
+                            <li>Say thank you.</li>
+                            <li>Ask questions to understand how to improve.</li>
+                            <li>Set a personal plan to improve.</li>
+                        </ul>
+                        <p><strong>How to respond to unfair criticism:</strong></p>
+                        <ul>
+                            <li>Remain calm. Do not respond with anger.</li>
+                            <li>Try to find useful advice in the criticism.</li>
+                            <li>Remind yourself of your strengths.</li>
+                            <li>Don't stay in the conversation for too long if it becomes toxic.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>रचनात्मक आलोचना (Constructive Criticism):</strong> आपको सुधारने में मदद करती है। सुझाव देती है। कार्य पर ध्यान केंद्रित करती है, व्यक्ति पर नहीं। शांत और सम्मानजनक स्वर में दी जाती है।</p>
+                        <p><strong>अनुचित आलोचना (Unfair Criticism):</strong> समस्या को ठीक करने में मदद नहीं करती। आप पर व्यक्तिगत रूप से हमला करती है। विफलताओं पर ध्यान केंद्रित करती है। अशिष्ट तरीके से दी जाती है।</p>
+                        <p><strong>रचनात्मक आलोचना का जवाब कैसे दें:</strong></p>
+                        <ul>
+                            <li>आलोचना को समझने के लिए कुछ मिनट लें।</li>
+                            <li>व्यक्ति क्या कह रहा है, ध्यान से सुनें।</li>
+                            <li>धन्यवाद कहें।</li>
+                            <li>सुधार के तरीके समझने के लिए प्रश्न पूछें।</li>
+                            <li>सुधार के लिए एक व्यक्तिगत योजना बनाएँ।</li>
+                        </ul>
+                        <p><strong>अनुचित आलोचना का जवाब कैसे दें:</strong></p>
+                        <ul>
+                            <li>शांत रहें। क्रोध के साथ प्रतिक्रिया न करें।</li>
+                            <li>आलोचना में उपयोगी सलाह खोजने का प्रयास करें।</li>
+                            <li>अपनी ताकतों की याद दिलाएँ।</li>
+                            <li>यदि बातचीत जहरीली हो जाए तो अधिक देर तक न रुकें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card green">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">💡 याद रखें / Remember</h4>
+                    <p style="font-size:0.95rem;">आलोचना आपको बेहतर बनने में मदद कर सकती है – इसे सीखने के अवसर के रूप में देखें। / Criticism can help you become better – see it as an opportunity to learn.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    5.10 संचार क्षमता का आकलन
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comm-5-10">
+            <div class="section-header">
+                <span class="icon">📊</span>
+                <span class="title">5.10 संचार क्षमता का आकलन <span class="subtitle">(Assessing Your Communication Ability)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Identify your strengths:</strong> Think about what you do well in communication – talking to new people, writing emails, introducing yourself, working in a team, handling criticism, etc.</p>
+                        <p><strong>Identify areas for improvement:</strong> Think about what you find difficult – feeling nervous, writing formal letters, using chat professionally, managing conflict, etc.</p>
+                        <p><strong>Set a plan to improve:</strong></p>
+                        <ul>
+                            <li><strong>This month:</strong> Practice one skill (e.g., introducing yourself to one new person every day).</li>
+                            <li><strong>Next 6 months:</strong> Take a short course on communication or join a group discussion.</li>
+                            <li><strong>Next year:</strong> Become confident in all areas of communication.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>अपनी ताकतें पहचानें:</strong> सोचें कि आप संचार में क्या अच्छा करते हैं – नए लोगों से बात करना, ईमेल लिखना, परिचय देना, टीम में काम करना, आलोचना संभालना आदि।</p>
+                        <p><strong>सुधार के क्षेत्रों की पहचान करें:</strong> सोचें कि आपको क्या मुश्किल लगता है – घबराहट महसूस करना, औपचारिक पत्र लिखना, पेशेवर रूप से चैट का उपयोग करना, संघर्ष प्रबंधन आदि।</p>
+                        <p><strong>सुधार की योजना बनाएँ:</strong></p>
+                        <ul>
+                            <li><strong>इस महीने:</strong> एक कौशल का अभ्यास करें (जैसे, हर दिन एक नए व्यक्ति से परिचय करना)।</li>
+                            <li><strong>अगले 6 महीनों में:</strong> संचार पर एक छोटा कोर्स करें या एक समूह चर्चा में शामिल हों।</li>
+                            <li><strong>अगले साल:</strong> संचार के सभी क्षेत्रों में आत्मविश्वासी बनें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card purple">
+                    <h4 style="margin:0 0 6px; color:#5a2d91;">🎯 Plan for Improvement</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li><strong>This month I will:</strong> Practice speaking in English for 10 minutes daily.</li>
+                        <li><strong>In 6 months I will:</strong> Complete a communication skills course.</li>
+                        <li><strong>In 1 year I will:</strong> Be confident in interviews and workplace communication.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    MCQ LINK
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="mcq">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <span class="title">MCQ अभ्यास / बहुविकल्पीय प्रश्न</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="mcq-link">
+                    <p><strong>📌 इस मॉड्यूल के बहुविकल्पीय प्रश्नों का अभ्यास करने के लिए नीचे क्लिक करें।</strong></p>
+                    <a href="/question-bank/employability-skills/module-5.html" target="_blank">📝 प्रश्न बैंक पर जाएँ →</a>
+                    <p style="margin-top:10px; font-size:0.9rem; color:#888;">(नई टैब में खुलेगा)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    RELATED CHAPTERS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="related">
+            <div class="section-header">
+                <span class="icon">🔗</span>
+                <span class="title">संबंधित मॉड्यूल / Related Modules</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div style="display:flex; flex-wrap:wrap; gap:12px;">
+                    <a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 1: एम्प्लॉयबिलिटी स्किल्स का महत्व</a>
+                    <a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 2: संवैधानिक मूल्य – नागरिकता</a>
+                    <a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 3: 21वीं सदी में पेशेवर बनना</a>
+                    <a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 4: बुनियादी अंग्रेजी कौशल</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    COMMENTS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comments">
+            <div class="section-header">
+                <span class="icon">💬</span>
+                <span class="title">टिप्पणियाँ – मॉडरेशन के साथ</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="comments-section">
+                    <p>💬 <strong>इस मॉड्यूल के बारे में अपने विचार या प्रश्न साझा करें।</strong></p>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 सभी टिप्पणियाँ प्रकाशित होने से पहले एडमिन द्वारा समीक्षा की जाती हैं।</p>
+                    <textarea id="comment-text" rows="3" placeholder="अपनी टिप्पणी यहाँ लिखें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
+                    <input type="text" id="comment-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <button onclick="postComment()" class="btn" style="margin-top:6px;">💬 टिप्पणी पोस्ट करें (समीक्षाधीन)</button>
+                    <div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
+                        <div class="comment-item">
+                            <strong>Admin</strong> <span class="meta">(मॉडरेटर)</span> <span class="status-approved">✅ स्वीकृत</span>
+                            <p style="margin:4px 0 0 0; font-size:0.95rem;">मॉड्यूल 5 में आपका स्वागत है! संचार कौशल, टीम वर्क, संघर्ष प्रबंधन और आलोचना संभालने के बारे में प्रश्न पूछने में संकोच न करें।</p>
+                        </div>
+                        <p style="color:#888; font-style:italic; margin-top:8px;">आपकी टिप्पणी एडमिन अनुमोदन के बाद यहाँ दिखाई देगी।</p>
+                    </div>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ टिप्पणियाँ मॉडरेट की जाती हैं। कृपया विनम्र रहें।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    ADMIN PANEL
+    ============================================================ -->
+    <div class="container">
+        <div class="admin-toggle" onclick="toggleAdminPanel()">
+            <span class="key-icon">🔑</span>
+            <strong>Admin Panel</strong> – Comments Management
+            <span style="color:#888; font-weight:400; font-size:0.85rem; display:block; margin-top:4px;">(Click to open/close admin panel)</span>
+        </div>
+        <div class="admin-panel" id="adminPanel">
+            <div class="admin-header">
+                <h3>🔐 Comment Moderation</h3>
+                <button class="close-btn" onclick="toggleAdminPanel()">✕ Close</button>
+            </div>
+            <div class="admin-password-box" id="adminLogin">
+                <input type="password" id="adminPassword" placeholder="Enter admin password..." onkeyup="if(event.key==='Enter') checkAdminPassword()">
+                <button onclick="checkAdminPassword()">🔓 Login</button>
+                <span class="error-msg" id="passwordError">❌ Wrong password! Try again.</span>
+            </div>
+            <div id="adminContent" style="display:none;">
+                <div class="comment-stats" id="commentStats">
+                    <span>📊 Total: <span class="count" id="totalCount">0</span></span>
+                    <span>⏳ Pending: <span class="count" id="pendingCount">0</span></span>
+                    <span>✅ Approved: <span class="count" id="approvedCount">0</span></span>
+                    <span>❌ Rejected: <span class="count" id="rejectedCount">0</span></span>
+                </div>
+                <div id="adminCommentList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    TOPIC REQUEST
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="topicrequest">
+            <div class="section-header">
+                <span class="icon">💭</span>
+                <span class="title">विषय अनुरोध</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="topic-request">
+                    <p>📝 <strong>कोई नया विषय या सुधार सुझाएँ।</strong></p>
+                    <input type="text" id="topic-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <input type="email" id="topic-email" placeholder="आपका ईमेल (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <textarea id="topic-message" rows="4" placeholder="जिस विषय या सुधार को आप देखना चाहते हैं, उसका वर्णन करें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
+                    <button onclick="submitTopicRequest()" class="btn">📤 अनुरोध सबमिट करें</button>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ आपके अनुरोध की समीक्षा एडमिन द्वारा की जाएगी और जल्द ही जोड़ा जाएगा।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    SUGGESTIONS & DISCLAIMER
+    ============================================================ -->
+    <div class="container" style="margin-top:16px;">
+        <div style="background:#fff; border-radius:14px; padding:20px 24px; border:1px solid #e6eaef; margin-bottom:20px;">
+            <h2 style="color:#003366; font-size:1.3rem; margin:0 0 6px;">💬 सुझाव दें</h2>
+            <p style="margin:0 0 12px;">यदि इस मॉड्यूल में कोई सुधार सुझाना है, तो हमें बताएं।</p>
+            <a href="/contact.html" class="btn">💬 यहाँ क्लिक करें →</a>
+        </div>
+        <div style="background:#fff8e1; border-radius:14px; padding:18px 22px; border:1px solid #ffe082; margin-bottom:20px;">
+            <h2 style="color:#856404; font-size:1.2rem; margin:0 0 4px;">⚠ अस्वीकरण</h2>
+            <p style="margin:0; font-size:0.95rem; color:#6c6c6c;">ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="/disclaimer.html">अस्वीकरण</a>
+            <a href="/privacy-policy.html">गोपनीयता नीति</a>
+            <a href="/terms.html">नियम</a>
+            <a href="/contact.html">संपर्क</a>
+        </div>
+        <p>© 2026 ITI Study Centre. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
+    <button id="scrollTop" title="ऊपर जाएँ">⬆</button>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('📚 सामग्री सुरक्षित है। कृपया इस पेज को शेयर करने के लिए शेयर बटन का उपयोग करें।');
+        });
+
+        // Disable Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 सामग्री कॉपी करना प्रतिबंधित है। कृपया शेयर बटन का उपयोग करें।');
+            }
+        });
+
+        // Search
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        // Share functions
+        function getPageUrl() { return window.location.href; }
+
+        function getPageTitle() { return document.querySelector('title').textContent; }
+
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle() + ' - इसे पढ़ें!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareFacebook() {
+            const url = getPageUrl();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareTwitter() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(url), '_blank');
+        }
+
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ कॉपी हो गया!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        span.textContent = 'लिंक कॉपी करें';
+                        btn.classList.remove('copied');
+                    }, 3000);
+                }).catch(() => { fallbackCopy(url); });
+            } else {
+                fallbackCopy(url);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ कॉपी हो गया!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    span.textContent = 'लिंक कॉपी करें';
+                    btn.classList.remove('copied');
+                }, 3000);
+            } catch (err) {
+                alert('कॉपी नहीं हो पाया। कृपया URL को मैन्युअल रूप से कॉपी करें।');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // ============================================================
+        // COMMENT SYSTEM
+        // ============================================================
+        const ADMIN_PASSWORD = 'admin123';
+        const STORAGE_KEY = 'module5_comments';
+
+        function getComments() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch {
+                return [];
+            }
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
+        }
+
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+        }
+
+        function getTimeAgo(timestamp) {
+            const diff = Date.now() - timestamp;
+            const minutes = Math.floor(diff / 60000);
+            if (minutes < 1) return 'Just now';
+            if (minutes < 60) return minutes + 'm ago';
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return hours + 'h ago';
+            const days = Math.floor(hours / 24);
+            return days + 'd ago';
+        }
+
+        function renderPublicComments() {
+            const list = document.getElementById('comment-list');
+            if (!list) return;
+            const comments = getComments();
+            const approved = comments.filter(c => c.status === 'approved');
+
+            const noMsg = list.querySelector('.no-comments-msg');
+            if (noMsg) noMsg.remove();
+
+            const existingItems = list.querySelectorAll('.comment-item');
+            existingItems.forEach(el => {
+                if (!el.querySelector('.status-approved') || !el.querySelector('strong')?.textContent?.includes('Admin')) {
+                    el.remove();
+                }
+            });
+
+            if (approved.length === 0) {
+                let noMsgEl = document.createElement('p');
+                noMsgEl.className = 'no-comments-msg';
+                noMsgEl.textContent = 'No approved comments yet. Be the first to comment!';
+                list.appendChild(noMsgEl);
+                return;
+            }
+
+            approved.forEach(comment => {
+                const div = document.createElement('div');
+                div.className = 'comment-item';
+                div.innerHTML = `
+                    <strong>${comment.name}</strong>
+                    <span class="meta">(${getTimeAgo(comment.timestamp)})</span>
+                    <span class="status-approved">✅ Approved</span>
+                    <p style="margin:4px 0 0 0; font-size:0.95rem;">${comment.text}</p>
+                `;
+                list.prepend(div);
+            });
+        }
+
+        function postComment() {
+            const text = document.getElementById('comment-text').value.trim();
+            const name = document.getElementById('comment-name').value.trim() || 'Anonymous';
+            if (!text) {
+                alert('Please write a comment.');
+                return;
+            }
+            const comments = getComments();
+            comments.push({ id: generateId(), name, text, timestamp: Date.now(), status: 'pending' });
+            saveComments(comments);
+            document.getElementById('comment-text').value = '';
+            document.getElementById('comment-name').value = '';
+            renderPublicComments();
+            renderAdminComments();
+            alert('✅ Your comment has been submitted for review.');
+        }
+
+        function checkAdminPassword() {
+            const input = document.getElementById('adminPassword');
+            const error = document.getElementById('passwordError');
+            if (input.value === ADMIN_PASSWORD) {
+                document.getElementById('adminLogin').style.display = 'none';
+                document.getElementById('adminContent').style.display = 'block';
+                renderAdminComments();
+                error.classList.remove('show');
+            } else {
+                error.classList.add('show');
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        function renderAdminComments() {
+            const container = document.getElementById('adminCommentList');
+            const comments = getComments();
+            document.getElementById('totalCount').textContent = comments.length;
+            document.getElementById('pendingCount').textContent = comments.filter(c => c.status === 'pending').length;
+            document.getElementById('approvedCount').textContent = comments.filter(c => c.status === 'approved').length;
+            document.getElementById('rejectedCount').textContent = comments.filter(c => c.status === 'rejected').length;
+
+            if (comments.length === 0) {
+                container.innerHTML = `<p class="no-comments-msg">No comments yet.</p>`;
+                return;
+            }
+
+            let html = '';
+            comments.forEach(comment => {
+                html += `
+                    <div class="admin-comment-item" data-id="${comment.id}">
+                        <div class="comment-info">
+                            <strong>${comment.name}</strong>
+                            <span class="time">${getTimeAgo(comment.timestamp)}</span>
+                            <span class="status ${comment.status}">${comment.status.charAt(0).toUpperCase() + comment.status.slice(1)}</span>
+                            <p style="margin:4px 0 0 0; font-size:0.9rem;">${comment.text}</p>
+                        </div>
+                        <div class="comment-actions">
+                            ${comment.status !== 'approved' ? `<button class="btn-approve" onclick="approveComment('${comment.id}')">✅ Approve</button>` : ''}
+                            ${comment.status !== 'rejected' ? `<button class="btn-reject" onclick="rejectComment('${comment.id}')">⛔ Reject</button>` : ''}
+                            <button class="btn-delete" onclick="deleteComment('${comment.id}')">🗑️ Delete</button>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function approveComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'approved' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function rejectComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'rejected' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function deleteComment(id) {
+            if (!confirm('Are you sure you want to delete this comment?')) return;
+            let comments = getComments();
+            comments = comments.filter(c => c.id !== id);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('open');
+            if (!panel.classList.contains('open')) {
+                document.getElementById('adminLogin').style.display = 'flex';
+                document.getElementById('adminContent').style.display = 'none';
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('passwordError').classList.remove('show');
+            }
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPublicComments();
+            window.postComment = postComment;
+        });
+
+        // Scroll to top
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
+            ' ITI Study Centre. सर्वाधिकार सुरक्षित।';
+
+        console.log('मॉड्यूल 5 लोड हुआ: संचार कौशल – 10 पाठ, पूरी तरह से खुला, द्विभाषी।');
+        console.log(`🔑 Admin Password: ${ADMIN_PASSWORD}`);
+    </script>
+</body>
+</html>
