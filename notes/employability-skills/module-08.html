@@ -1,1 +1,1980 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>मॉड्यूल 8: वित्तीय और कानूनी साक्षरता | ITI Study Centre</title>
+    <meta name="description" content="Employability Skills मॉड्यूल 8: वित्तीय और कानूनी साक्षरता – पूरे नोट्स। हिंदी + अंग्रेजी में चार्ट और उदाहरण सहित।" />
+    <link rel="icon" href="/images/favicon.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.7;
+            user-select: none;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .main-header {
+            background: #003366;
+            padding: 14px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        .main-header nav a.notes-link {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb .current {
+            color: #555;
+            font-weight: 600;
+        }
+        .page-title {
+            padding: 30px 0 20px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.2rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 520px;
+            padding: 13px 18px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+        }
+        .search-section button {
+            padding: 13px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        @media (max-width: 640px) {
+            .search-section {
+                flex-direction: column;
+            }
+            .search-section input {
+                max-width: 100%;
+                width: 100%;
+            }
+            .search-section button {
+                width: 100%;
+            }
+        }
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            margin-bottom: 28px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 18px 26px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: default;
+            user-select: none;
+            flex-wrap: wrap;
+        }
+        .section-header .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .section-header .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body {
+            padding: 24px 28px;
+            background: #fafcff;
+        }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin: 28px 0 16px;
+            border-left: 4px solid #ffcc00;
+            padding-left: 16px;
+        }
+        .section-body h3:first-of-type {
+            margin-top: 0;
+        }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.1rem;
+            margin: 18px 0 10px;
+        }
+        .bilingual {
+            margin: 14px 0;
+        }
+        .bilingual .en {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1a2a3a;
+        }
+        .bilingual .hi {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #3d3d3d;
+            background: #f0f5ff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border-left: 5px solid #003366;
+            margin-top: 12px;
+        }
+        .bilingual ul,
+        .bilingual ol {
+            padding-left: 24px;
+            margin: 8px 0;
+        }
+        .bilingual ul li,
+        .bilingual ol li {
+            margin-bottom: 4px;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+        }
+        .info-card.blue {
+            border-left: 5px solid #003366;
+        }
+        .info-card.green {
+            border-left: 5px solid #28a745;
+        }
+        .info-card.orange {
+            border-left: 5px solid #ff9900;
+        }
+        .info-card.purple {
+            border-left: 5px solid #6f42c1;
+        }
+        .info-card.highlight {
+            border-left: 5px solid #ffc107;
+            background: #fffdf0;
+        }
+        .info-card.danger {
+            border-left: 5px solid #dc3545;
+            background: #fdf0f1;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) {
+            background: #f8f9fc;
+        }
+        .table-wrap tr:hover {
+            background: #eef2f7;
+        }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .example-box strong {
+            color: #003366;
+        }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .important-box ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .short-notes ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+        }
+        .step-list li {
+            counter-increment: step;
+            padding: 10px 16px 10px 56px;
+            position: relative;
+            background: #f8f9fc;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #e9ecef;
+            font-size: 0.98rem;
+        }
+        .step-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #003366;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .mcq-link {
+            background: #f0f5ff;
+            border: 2px solid #003366;
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            margin: 16px 0;
+        }
+        .mcq-link a {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #003366;
+            background: #fff;
+            padding: 10px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: 0.25s;
+            border: 1px solid #003366;
+        }
+        .mcq-link a:hover {
+            background: #003366;
+            color: #fff;
+            transform: scale(1.02);
+        }
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 20px;
+            padding: 14px 18px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover {
+            transform: scale(1.04);
+            opacity: 0.9;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+        }
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+        .share-btn.link {
+            background: #6c757d;
+        }
+        .share-btn.link.copied {
+            background: #28a745;
+        }
+        .share-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #003366;
+            color: #fff !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        .comments-section textarea,
+        .topic-request textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            resize: vertical;
+            font-family: inherit;
+            user-select: text;
+        }
+        .comments-section input,
+        .topic-request input {
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            width: 48%;
+            margin-right: 2%;
+            margin-bottom: 10px;
+            font-family: inherit;
+            user-select: text;
+        }
+        @media (max-width: 600px) {
+            .comments-section input,
+            .topic-request input {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .comment-item {
+            background: #f1f4f9;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #003366;
+        }
+        .comment-item .meta {
+            color: #888;
+            font-size: 0.8rem;
+        }
+        .comment-item .status-pending {
+            color: #ff9900;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #fff3cd;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        .comment-item .status-approved {
+            color: #28a745;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #d4edda;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 24px 20px;
+            text-align: center;
+            margin-top: 44px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 24px;
+            margin-bottom: 12px;
+        }
+        footer .footer-links a {
+            color: #b0b8c5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        footer .footer-links a:hover {
+            color: #fff;
+        }
+        footer p {
+            margin: 8px 0 0;
+            font-size: 0.85rem;
+            color: #7a8494;
+        }
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.25s;
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover {
+            background: #002244;
+            transform: scale(1.05);
+        }
+        .copy-protect::selection {
+            background: #b3d4fc;
+            color: #000;
+        }
+        .admin-toggle {
+            text-align: center;
+            margin: 20px 0;
+            padding: 12px;
+            background: #f8f9fc;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-toggle:hover {
+            background: #eef2f7;
+            border-color: #003366;
+        }
+        .admin-toggle .key-icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+        .admin-panel {
+            display: none;
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            border: 2px solid #003366;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .admin-panel.open {
+            display: block;
+        }
+        .admin-panel .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .admin-panel .admin-header h3 {
+            color: #003366;
+            margin: 0;
+        }
+        .admin-panel .admin-header .close-btn {
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .admin-panel .admin-header .close-btn:hover {
+            background: #b02a37;
+        }
+        .admin-password-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .admin-password-box input {
+            padding: 10px 14px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-password-box input:focus {
+            border-color: #003366;
+            outline: none;
+        }
+        .admin-password-box button {
+            padding: 10px 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-password-box button:hover {
+            background: #002244;
+        }
+        .admin-password-box .error-msg {
+            color: #dc3545;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .admin-password-box .error-msg.show {
+            display: block;
+        }
+        .comment-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: #f8f9fc;
+            border-radius: 8px;
+        }
+        .comment-stats span {
+            font-size: 0.9rem;
+        }
+        .comment-stats .count {
+            font-weight: 700;
+            color: #003366;
+        }
+        .admin-comment-item {
+            background: #f8f9fc;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .admin-comment-item .comment-info {
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-comment-item .comment-info strong {
+            color: #003366;
+        }
+        .admin-comment-item .comment-info .time {
+            color: #888;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        .admin-comment-item .comment-info .status {
+            font-size: 0.7rem;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .admin-comment-item .comment-info .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .admin-comment-item .comment-info .status.approved {
+            background: #d4edda;
+            color: #1e7e34;
+        }
+        .admin-comment-item .comment-info .status.rejected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .admin-comment-item .comment-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .admin-comment-item .comment-actions button {
+            padding: 4px 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .admin-comment-item .comment-actions .btn-approve {
+            background: #28a745;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-approve:hover {
+            background: #1e7e34;
+        }
+        .admin-comment-item .comment-actions .btn-reject {
+            background: #ffc107;
+            color: #222;
+        }
+        .admin-comment-item .comment-actions .btn-reject:hover {
+            background: #e0a800;
+        }
+        .admin-comment-item .comment-actions .btn-delete {
+            background: #dc3545;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-delete:hover {
+            background: #b02a37;
+        }
+        .no-comments-msg {
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        .bank-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .bank-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .bank-card .b-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .bank-card .b-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+        .bank-card .b-desc {
+            font-size: 0.75rem;
+            color: #555;
+        }
+        .salary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) {
+            .salary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .salary-card {
+            padding: 16px 18px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+            text-align: center;
+        }
+        .salary-card .s-title {
+            font-weight: 700;
+            color: #003366;
+            font-size: 1.1rem;
+        }
+        .salary-card .s-amount {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e7e34;
+            margin: 4px 0;
+        }
+        .salary-card .s-desc {
+            font-size: 0.85rem;
+            color: #555;
+        }
+        .loan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .loan-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .loan-card .l-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .loan-card .l-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+        .loan-card .l-desc {
+            font-size: 0.75rem;
+            color: #555;
+        }
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .portal-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .portal-card .p-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .portal-card .p-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.85rem;
+        }
+        .portal-card .p-desc {
+            font-size: 0.7rem;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .main-header nav {
+                justify-content: center;
+                gap: 6px 12px;
+            }
+            .main-header nav a {
+                font-size: 0.9rem;
+            }
+            .page-title h1 {
+                font-size: 1.6rem;
+            }
+            .section-header {
+                padding: 14px 18px;
+                flex-wrap: wrap;
+            }
+            .section-header .title {
+                font-size: 1.05rem;
+            }
+            .section-body {
+                padding: 16px 18px;
+            }
+            .section-body h3 {
+                font-size: 1.1rem;
+            }
+            .bilingual .en {
+                font-size: 0.95rem;
+            }
+            .bilingual .hi {
+                font-size: 0.9rem;
+                padding: 12px 16px;
+            }
+            .share-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .share-section .share-label {
+                text-align: center;
+            }
+            .share-btn {
+                justify-content: center;
+            }
+            .admin-comment-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .admin-comment-item .comment-actions {
+                justify-content: flex-start;
+            }
+            .admin-password-box {
+                flex-direction: column;
+            }
+            .admin-password-box input {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            .section-body {
+                padding: 12px 14px;
+            }
+            .section-header .icon {
+                font-size: 1.3rem;
+            }
+            .section-header .title {
+                font-size: 0.95rem;
+            }
+            .bank-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .loan-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .portal-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .step-list li {
+                padding: 8px 10px 8px 46px;
+                font-size: 0.9rem;
+            }
+            .step-list li::before {
+                width: 26px;
+                height: 26px;
+                font-size: 0.75rem;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="/">ITI Study Centre</a></div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/iti-result.html">ITI Result</a>
+                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
+                <a href="/engineering-notes.html">Engineering Notes</a>
+                <a href="/questionbank.html">Question Bank</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
+            <a href="/notes/employability-skills/index.html">Employability Skills</a> &nbsp;›&nbsp;
+            <span class="current">मॉड्यूल 8: वित्तीय और कानूनी साक्षरता</span>
+        </div>
+    </div>
+
+    <!-- ===== PAGE TITLE ===== -->
+    <section class="page-title">
+        <div class="container">
+            <h1>💰 मॉड्यूल 8: वित्तीय और कानूनी साक्षरता</h1>
+            <p>Financial and Legal Literacy • NSDC/DGT पाठ्यक्रम पर आधारित • हिंदी + अंग्रेजी में पूरे नोट्स</p>
+        </div>
+    </section>
+
+    <!-- ===== SEARCH ===== -->
+    <section class="search-section container">
+        <input type="text" id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें...">
+        <button onclick="filterSections()">खोजें</button>
+    </section>
+
+    <!-- ===== SHARE BUTTONS ===== -->
+    <div class="container">
+        <div class="share-section" id="shareSection">
+            <span class="share-label">📤 इस पेज को शेयर करें:</span>
+            <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </button>
+            <button class="share-btn facebook" onclick="shareFacebook()">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter()">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Twitter
+            </button>
+            <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+                <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <span id="copyLinkText">Copy Link</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    8.1 धन प्रबंधन का परिचय
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="fin-8-1">
+            <div class="section-header">
+                <span class="icon">💰</span>
+                <span class="title">8.1 धन प्रबंधन का परिचय <span class="subtitle">(Introduction to Money Management)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Financial literacy</strong> is knowing how to manage money well – understanding how money is saved, spent, and invested. It helps us make wise decisions and improve our lives.</p>
+                        <p><strong>Needs, Wants, and Luxuries:</strong></p>
+                        <ul>
+                            <li><strong>Needs:</strong> Things we must have to live – food, water, basic clothing, a safe place to live. (e.g., groceries, rent, electricity bill).</li>
+                            <li><strong>Wants:</strong> Things we would like to have but don't need to survive – they make life more comfortable. (e.g., eating out, movies, branded items).</li>
+                            <li><strong>Luxuries:</strong> Costly things not essential to our survival. (e.g., designer clothes, luxury cars, expensive gadgets).</li>
+                        </ul>
+                        <p><strong>Income and Expenditure:</strong> Income is the money you earn. Expenditure is the money you spend. Savings = Income – Expenditure.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>वित्तीय साक्षरता (Financial literacy)</strong> पैसे को अच्छी तरह से प्रबंधित करने की जानकारी है – यह समझना कि पैसा कैसे बचाया, खर्च और निवेश किया जाता है। यह हमें बुद्धिमान निर्णय लेने और अपने जीवन को बेहतर बनाने में मदद करता है।</p>
+                        <p><strong>ज़रूरतें, इच्छाएँ और विलासिता (Needs, Wants, Luxuries):</strong></p>
+                        <ul>
+                            <li><strong>ज़रूरतें (Needs):</strong> वे चीज़ें जिनके बिना हम नहीं रह सकते – भोजन, पानी, बुनियादी कपड़े, रहने के लिए सुरक्षित जगह। (जैसे, किराना, किराया, बिजली बिल)।</li>
+                            <li><strong>इच्छाएँ (Wants):</strong> वे चीज़ें जो हम चाहते हैं लेकिन जीवित रहने के लिए आवश्यक नहीं – वे जीवन को अधिक आरामदायक बनाती हैं। (जैसे, बाहर खाना, फिल्में, ब्रांडेड सामान)।</li>
+                            <li><strong>विलासिता (Luxuries):</strong> महंगी चीज़ें जो हमारे अस्तित्व के लिए आवश्यक नहीं हैं। (जैसे, डिज़ाइनर कपड़े, लग्जरी कारें, महंगे गैजेट्स)।</li>
+                        </ul>
+                        <p><strong>आय और व्यय (Income and Expenditure):</strong> आय वह पैसा है जो आप कमाते हैं। व्यय वह पैसा है जो आप खर्च करते हैं। बचत = आय – व्यय।</p>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Needs vs Wants vs Luxuries / ज़रूरतें बनाम इच्छाएँ बनाम विलासिता</caption>
+                        <thead><tr><th>Needs</th><th>Wants</th><th>Luxuries</th></tr></thead>
+                        <tbody>
+                            <tr><td>Groceries for food</td><td>Going to movies</td><td>Designer clothes</td></tr>
+                            <tr><td>House to live in</td><td>Eating out</td><td>Luxury cars</td></tr>
+                            <tr><td>Electricity bill</td><td>Shopping for branded items</td><td>Costly phones & gadgets</td></tr>
+                            <tr><td>Drinking water</td><td>Traveling</td><td>Large houses, land</td></tr>
+                            <tr><td>Clothes</td><td>Gym membership</td><td>Diamond bangles</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="example-box">
+                    <p><strong>Example / उदाहरण:</strong> Sunitha's monthly income = Rs. 13,000–14,000. Her monthly expenditure = Rs. 12,000. Her savings = Rs. 1,000–2,000.</p>
+                </div>
+                <div class="short-notes">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 मुख्य बातें / Key Takeaways</h4>
+                    <ul>
+                        <li>वित्तीय साक्षरता = पैसे को सहेजने, खर्च करने और निवेश करने का तरीका समझना।</li>
+                        <li>ज़रूरतें → जीवित रहने के लिए आवश्यक। इच्छाएँ → आराम के लिए। विलासिता → महंगी, अनावश्यक।</li>
+                        <li>बचत = आय – व्यय। / Savings = Income – Expenditure.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    8.2 बैंकिंग की बुनियादी बातें
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="fin-8-2">
+            <div class="section-header">
+                <span class="icon">🏦</span>
+                <span class="title">8.2 बैंकिंग की बुनियादी बातें <span class="subtitle">(Basics of Banking)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>A bank</strong> is an institution licensed by the government to keep our money safe and loan money to us.</p>
+                        <p><strong>Types of bank accounts:</strong></p>
+                        <ul>
+                            <li><strong>Savings Account:</strong> For saving money. Anyone can open this.</li>
+                            <li><strong>Current Account:</strong> For business owners and entrepreneurs.</li>
+                            <li><strong>Salary Account:</strong> Opened by employers to pay salaries.</li>
+                            <li><strong>Fixed Deposit (FD) Account:</strong> Keep money for a fixed period and earn interest.</li>
+                            <li><strong>Recurring Deposit (RD) Account:</strong> Deposit a fixed sum regularly (monthly/quarterly).</li>
+                        </ul>
+                        <p><strong>Steps to open a bank account:</strong></p>
+                        <ul>
+                            <li>Visit the bank branch or apply online.</li>
+                            <li>Fill in personal details (name, address, date of birth).</li>
+                            <li>Submit documents – Aadhaar Card, PAN Card, passport-size photos.</li>
+                            <li>Wait for the bank to assess and approve.</li>
+                            <li>Collect account details, debit card, and internet banking details.</li>
+                        </ul>
+                        <p><strong>Banking tools:</strong> Passbook (records transactions), Cheque (official order to transfer money), Debit Card (takes money from account), Credit Card (borrows money from bank).</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>बैंक (Bank)</strong> एक संस्था है जिसे सरकार द्वारा हमारे पैसे को सुरक्षित रखने और हमें पैसा उधार देने का लाइसेंस मिला है।</p>
+                        <p><strong>बैंक खातों के प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>बचत खाता (Savings Account):</strong> पैसे बचाने के लिए। कोई भी खोल सकता है।</li>
+                            <li><strong>चालू खाता (Current Account):</strong> व्यवसायिक मालिकों और उद्यमियों के लिए।</li>
+                            <li><strong>वेतन खाता (Salary Account):</strong> नियोक्ताओं द्वारा वेतन भुगतान के लिए खोला जाता है।</li>
+                            <li><strong>सावधि जमा (FD) खाता:</strong> एक निश्चित अवधि के लिए पैसे रखें और ब्याज अर्जित करें।</li>
+                            <li><strong>आवर्ती जमा (RD) खाता:</strong> नियमित रूप से (मासिक/तिमाही) एक निश्चित राशि जमा करें।</li>
+                        </ul>
+                        <p><strong>बैंक खाता खोलने के चरण:</strong></p>
+                        <ul>
+                            <li>बैंक शाखा में जाएँ या ऑनलाइन आवेदन करें।</li>
+                            <li>व्यक्तिगत विवरण भरें (नाम, पता, जन्म तिथि)।</li>
+                            <li>दस्तावेज़ जमा करें – आधार कार्ड, पैन कार्ड, पासपोर्ट साइज़ फोटो।</li>
+                            <li>बैंक के मूल्यांकन और अनुमोदन की प्रतीक्षा करें।</li>
+                            <li>खाता विवरण, डेबिट कार्ड और इंटरनेट बैंकिंग विवरण प्राप्त करें।</li>
+                        </ul>
+                        <p><strong>बैंकिंग उपकरण:</strong> पासबुक (लेन-देन रिकॉर्ड), चेक (पैसे ट्रांसफर करने का आधिकारिक आदेश), डेबिट कार्ड (खाते से पैसे लेता है), क्रेडिट कार्ड (बैंक से पैसा उधार लेता है)।</p>
+                    </div>
+                </div>
+                <div class="bank-grid">
+                    <div class="bank-card"><span class="b-icon">🏦</span><div class="b-name">Savings</div><div class="b-desc">Save money</div></div>
+                    <div class="bank-card"><span class="b-icon">💼</span><div class="b-name">Current</div><div class="b-desc">For business</div></div>
+                    <div class="bank-card"><span class="b-icon">💰</span><div class="b-name">Salary</div><div class="b-desc">Employer pays</div></div>
+                    <div class="bank-card"><span class="b-icon">📈</span><div class="b-name">FD</div><div class="b-desc">Fixed deposit</div></div>
+                    <div class="bank-card"><span class="b-icon">🔄</span><div class="b-name">RD</div><div class="b-desc">Recurring deposit</div></div>
+                </div>
+                <div class="info-card highlight">
+                    <h4 style="margin:0 0 6px; color:#856404;">💡 Debit Card Safety Tips</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>Never share your PIN with anyone.</li>
+                        <li>Report lost/stolen cards to the bank immediately.</li>
+                        <li>Check your account balance before using the debit card.</li>
+                        <li>Do not give card details to suspicious websites.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    8.3 ऑनलाइन बैंकिंग और डिजिटल लेन-देन
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="fin-8-3">
+            <div class="section-header">
+                <span class="icon">💻</span>
+                <span class="title">8.3 ऑनलाइन बैंकिंग और डिजिटल लेन-देन <span class="subtitle">(Online Banking and Digital Transactions)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Online banking (net banking)</strong> allows you to do banking activities over the internet – check statements, transfer funds, pay bills, apply for loans, etc.</p>
+                        <p><strong>Digital vs Cash transactions:</strong></p>
+                        <ul>
+                            <li><strong>Cash transactions:</strong> Using physical money.</li>
+                            <li><strong>Digital transactions:</strong> Money transferred electronically – debit cards, credit cards, online banking, digital wallets, UPI payments.</li>
+                        </ul>
+                        <p><strong>Digital India programme:</strong> "Faceless, Paperless, Cashless" – promotes digital transactions.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>ऑनलाइन बैंकिंग (नेट बैंकिंग)</strong> आपको इंटरनेट पर बैंकिंग गतिविधियाँ करने की अनुमति देता है – स्टेटमेंट चेक करना, फंड ट्रांसफर करना, बिल भुगतान करना, ऋण के लिए आवेदन करना आदि।</p>
+                        <p><strong>डिजिटल बनाम नकद लेन-देन:</strong></p>
+                        <ul>
+                            <li><strong>नकद लेन-देन:</strong> भौतिक पैसे का उपयोग करना।</li>
+                            <li><strong>डिजिटल लेन-देन:</strong> पैसा इलेक्ट्रॉनिक रूप से स्थानांतरित किया जाता है – डेबिट कार्ड, क्रेडिट कार्ड, ऑनलाइन बैंकिंग, डिजिटल वॉलेट, UPI भुगतान।</li>
+                        </ul>
+                        <p><strong>डिजिटल इंडिया कार्यक्रम:</strong> "फेसलेस, पेपरलेस, कैशलेस" – डिजिटल लेन-देन को बढ़ावा देता है।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    8.4 मोबाइल बैंकिंग ऐप्स
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="fin-8-4">
+            <div class="section-header">
+                <span class="icon">📱</span>
+                <span class="title">8.4 मोबाइल बैंकिंग ऐप्स <span class="subtitle">(Mobile Banking Apps)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Mobile banking</strong> is done through a bank's mobile app on a smartphone. You need to download the app, log in with your net banking credentials, and set up an MPIN.</p>
+                        <p><strong>Difference between net banking and mobile banking:</strong></p>
+                        <ul>
+                            <li><strong>Net banking:</strong> Done through a web browser (computer or phone).</li>
+                            <li><strong>Mobile banking:</strong> Done through a smartphone app.</li>
+                        </ul>
+                        <p><strong>Safety tips for online banking:</strong></p>
+                        <ul>
+                            <li>Set a strong password – change it every 6 months.</li>
+                            <li>Never share your password, MPIN, or OTP with anyone.</li>
+                            <li>Avoid using public WiFi for banking.</li>
+                            <li>Always log out after using net banking or mobile banking.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>मोबाइल बैंकिंग (Mobile banking)</strong> स्मार्टफोन पर बैंक के मोबाइल ऐप के माध्यम से की जाती है। आपको ऐप डाउनलोड करना होगा, अपने नेट बैंकिंग क्रेडेंशियल्स से लॉगिन करना होगा और एक MPIN सेट करना होगा।</p>
+                        <p><strong>नेट बैंकिंग और मोबाइल बैंकिंग के बीच अंतर:</strong></p>
+                        <ul>
+                            <li><strong>नेट बैंकिंग:</strong> वेब ब्राउज़र के माध्यम से (कंप्यूटर या फोन)।</li>
+                            <li><strong>मोबाइल बैंकिंग:</strong> स्मार्टफोन ऐप के माध्यम से।</li>
+                        </ul>
+                        <p><strong>ऑनलाइन बैंकिंग के लिए सुरक्षा टिप्स:</strong></p>
+                        <ul>
+                            <li>मजबूत पासवर्ड सेट करें – इसे हर 6 महीने में बदलें।</li>
+                            <li>अपना पासवर्ड, MPIN या OTP कभी भी किसी के साथ साझा न करें।</li>
+                            <li>बैंकिंग के लिए सार्वजनिक WiFi का उपयोग करने से बचें।</li>
+                            <li>नेट बैंकिंग या मोबाइल बैंकिंग का उपयोग करने के बाद हमेशा लॉग आउट करें।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    8.5 ऑनलाइन भुगतान
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="fin-8-5">
+            <div class="section-header">
+                <span class="icon">💳</span>
+                <span class="title">8.5 ऑनलाइन भुगतान <span class="subtitle">(Online Payments)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Digital wallets</strong> are online payment apps used on mobile devices. They securely store payment information and passwords – Google Pay, Paytm, BHIM UPI.</p>
+                        <p><strong>How to use digital wallets:</strong></p>
+                        <ul>
+                            <li><strong>Using phone number:</strong> Send money to someone's mobile number.</li>
+                            <li><strong>Using QR code:</strong> Scan the code to make payments.</li>
+                        </ul>
+                        <p><strong>Benefits of digital wallets:</strong></p>
+                        <ul>
+                            <li>Convenient and faster than cash/cards.</li>
+                            <li>Easy to track expenses.</li>
+                            <li>Safer than a physical wallet (can be disabled remotely).</li>
+                            <li>Security features protect your money.</li>
+                        </ul>
+                        <p><strong>Safety:</strong> Set a strong password, do not share it, avoid public WiFi, always close the app after use.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>डिजिटल वॉलेट (Digital wallets)</strong> मोबाइल उपकरणों पर उपयोग किए जाने वाले ऑनलाइन भुगतान ऐप हैं। वे भुगतान जानकारी और पासवर्ड सुरक्षित रूप से संग्रहीत करते हैं – Google Pay, Paytm, BHIM UPI।</p>
+                        <p><strong>डिजिटल वॉलेट का उपयोग कैसे करें:</strong></p>
+                        <ul>
+                            <li><strong>फोन नंबर का उपयोग:</strong> किसी के मोबाइल नंबर पर पैसे भेजें।</li>
+                            <li><strong>QR कोड का उपयोग:</strong> भुगतान करने के लिए कोड स्कैन करें।</li>
+                        </ul>
+                        <p><strong>डिजिटल वॉलेट के लाभ:</strong></p>
+                        <ul>
+                            <li>नकद/कार्ड की तुलना में सुविधाजनक और तेज़।</li>
+                            <li>खर्चों पर नज़र रखना आसान।</li>
+                            <li>भौतिक वॉलेट से सुरक्षित (दूरस्थ रूप से अक्षम किया जा सकता है)।</li>
+                            <li>सुरक्षा सुविधाएँ आपके पैसे की रक्षा करती हैं।</li>
+                        </ul>
+                        <p><strong>सुरक्षा:</strong> मजबूत पासवर्ड सेट करें, इसे साझा न करें, सार्वजनिक WiFi से बचें, उपयोग के बाद हमेशा ऐप बंद करें।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    8.6 वेतन (Salary)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="fin-8-6">
+            <div class="section-header">
+                <span class="icon">💵</span>
+                <span class="title">8.6 वेतन <span class="subtitle">(Salary)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Salary</strong> is the regular payment an employer agrees to pay to their employee.</p>
+                        <p><strong>Gross Salary vs Net Salary:</strong></p>
+                        <ul>
+                            <li><strong>Gross Salary:</strong> Total salary before deductions (e.g., Rs. 50,000/month).</li>
+                            <li><strong>Deductions:</strong> Money removed for tax (TDS), provident fund (PF), etc.</li>
+                            <li><strong>Net Salary (Take-home):</strong> Gross Salary – Deductions (e.g., Rs. 44,500/month).</li>
+                        </ul>
+                        <p><strong>Components of salary:</strong></p>
+                        <ul>
+                            <li><strong>Basic Salary:</strong> Fixed amount based on job designation.</li>
+                            <li><strong>Allowances:</strong> For specific uses – house rent, medical expenses, etc.</li>
+                            <li><strong>Deductions:</strong> Tax (TDS), Provident Fund (PF), professional tax.</li>
+                        </ul>
+                        <p><strong>Income Tax:</strong> A part of salary paid to the government. The amount depends on the salary and conditions set by the government. TDS (Tax Deducted at Source) is paid by the company on your behalf.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>वेतन (Salary)</strong> वह नियमित भुगतान है जो एक नियोक्ता अपने कर्मचारी को भुगतान करने के लिए सहमत होता है।</p>
+                        <p><strong>सकल वेतन बनाम शुद्ध वेतन (Gross vs Net Salary):</strong></p>
+                        <ul>
+                            <li><strong>सकल वेतन (Gross Salary):</strong> कटौती से पहले कुल वेतन (जैसे, Rs. 50,000/माह)।</li>
+                            <li><strong>कटौतियाँ (Deductions):</strong> कर (TDS), भविष्य निधि (PF) आदि के लिए निकाला गया पैसा।</li>
+                            <li><strong>शुद्ध वेतन (Net Salary – Take-home):</strong> सकल वेतन – कटौतियाँ (जैसे, Rs. 44,500/माह)।</li>
+                        </ul>
+                        <p><strong>वेतन के घटक:</strong></p>
+                        <ul>
+                            <li><strong>मूल वेतन (Basic Salary):</strong> नौकरी के पदनाम के आधार पर निश्चित राशि।</li>
+                            <li><strong>भत्ते (Allowances):</strong> विशिष्ट उपयोगों के लिए – घर का किराया, चिकित्सा व्यय आदि।</li>
+                            <li><strong>कटौतियाँ (Deductions):</strong> कर (TDS), भविष्य निधि (PF), पेशेवर कर।</li>
+                        </ul>
+                        <p><strong>आयकर (Income Tax):</strong> सरकार को भुगतान किया जाने वाला वेतन का एक हिस्सा। राशि वेतन और सरकार द्वारा निर्धारित शर्तों पर निर्भर करती है। TDS (स्रोत पर कटौती) कंपनी द्वारा आपकी ओर से भुगतान किया जाता है।</p>
+                    </div>
+                </div>
+                <div class="salary-grid">
+                    <div class="salary-card" style="border-color:#003366;">
+                        <div class="s-title">Gross Salary</div>
+                        <div class="s-amount">₹50,000</div>
+                        <div class="s-desc">Total before deductions</div>
+                    </div>
+                    <div class="salary-card" style="border-color:#28a745;">
+                        <div class="s-title">Net Salary (Take-home)</div>
+                        <div class="s-amount">₹44,500</div>
+                        <div class="s-desc">After deductions (Tax + PF)</div>
+                    </div>
+                </div>
+                <div class="short-notes">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 मुख्य बातें / Key Takeaways</h4>
+                    <ul>
+                        <li>सकल वेतन = कटौती से पहले कुल वेतन।</li>
+                        <li>शुद्ध वेतन = कटौती के बाद की राशि (हाथ में आने वाला पैसा)।</li>
+                        <li>आयकर सरकार को दिया जाता है – TDS कंपनी द्वारा काटा जाता है।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    8.7 बचत (Savings)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="fin-8-7">
+            <div class="section-header">
+                <span class="icon">🏦</span>
+                <span class="title">8.7 बचत <span class="subtitle">(Savings)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Savings</strong> is an amount of money that is put aside without being spent.</p>
+                        <p><strong>Types of savings:</strong></p>
+                        <ul>
+                            <li><strong>Long-term savings:</strong> For big expenses many years from now (retirement, child's education).</li>
+                            <li><strong>Emergency savings:</strong> For unexpected problems (medical emergencies, job loss).</li>
+                            <li><strong>Goal savings:</strong> For specific goals (buying a bike, vacation, expensive items).</li>
+                        </ul>
+                        <p><strong>Tips for saving effectively:</strong></p>
+                        <ul>
+                            <li>Keep track of everything you spend.</li>
+                            <li>Find simple ways to cut spending.</li>
+                            <li>Set a clear goal for your savings.</li>
+                            <li>Put savings money where you can't easily spend it (envelope, box, separate bank account).</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>बचत (Savings)</strong> वह पैसा है जो खर्च किए बिना अलग रखा जाता है।</p>
+                        <p><strong>बचत के प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>दीर्घकालिक बचत:</strong> कई वर्षों बाद बड़े खर्चों के लिए (रिटायरमेंट, बच्चों की शिक्षा)।</li>
+                            <li><strong>आपातकालीन बचत:</strong> अप्रत्याशित समस्याओं के लिए (चिकित्सा आपातकाल, नौकरी छूटना)।</li>
+                            <li><strong>लक्ष्य-आधारित बचत:</strong> विशिष्ट लक्ष्यों के लिए (बाइक खरीदना, छुट्टी, महंगी वस्तुएँ)।</li>
+                        </ul>
+                        <p><strong>प्रभावी बचत के टिप्स:</strong></p>
+                        <ul>
+                            <li>आप जो कुछ भी खर्च करते हैं उसका रिकॉर्ड रखें।</li>
+                            <li>खर्च कम करने के सरल तरीके खोजें।</li>
+                            <li>अपनी बचत के लिए स्पष्ट लक्ष्य निर्धारित करें।</li>
+                            <li>बचत का पैसा ऐसी जगह रखें जहाँ से आप आसानी से खर्च न कर सकें (लिफाफा, बॉक्स, अलग बैंक खाता)।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card green">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">💡 Savings Goals Example</h4>
+                    <p style="font-size:0.95rem;">"I want to save Rs. 500 every month for retirement. I want to save Rs. 80,000 to set up a painting studio. I want to save an emergency fund of Rs. 2 lakhs."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    8.8 ऋण और बीमा (Loans and Insurance)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="fin-8-8">
+            <div class="section-header">
+                <span class="icon">📄</span>
+                <span class="title">8.8 ऋण और बीमा <span class="subtitle">(Loans and Insurance)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>A loan</strong> is money that you borrow from someone or an institution (like a bank). The money must be paid back with interest. Interest is the price you pay for borrowing money (usually a percentage).</p>
+                        <p><strong>Types of loans:</strong></p>
+                        <ul>
+                            <li><strong>Education Loan:</strong> For college fees.</li>
+                            <li><strong>Auto Loan:</strong> For purchasing a vehicle (car/bike).</li>
+                            <li><strong>Personal Loan:</strong> For special personal expenses – higher interest rate.</li>
+                            <li><strong>Home Loan:</strong> For buying or building a home – large amount, long repayment period.</li>
+                        </ul>
+                        <p><strong>Insurance</strong> is a form of managing money that helps people in emergency situations. You pay a certain amount regularly to an insurance company. In case of an emergency, the company covers the cost.</p>
+                        <p><strong>Example:</strong> Medical insurance with a cover of Rs. 5 lakhs. You pay Rs. 6,000 per year. If you have a hospital bill of Rs. 2 lakhs, it is covered by insurance.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>ऋण (Loan)</strong> वह पैसा है जो आप किसी या किसी संस्था (जैसे बैंक) से उधार लेते हैं। पैसा ब्याज के साथ वापस चुकाना होता है। ब्याज वह कीमत है जो आप पैसे उधार लेने के लिए चुकाते हैं (आमतौर पर प्रतिशत)।</p>
+                        <p><strong>ऋण के प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>शिक्षा ऋण:</strong> कॉलेज शुल्क के लिए।</li>
+                            <li><strong>ऑटो ऋण:</strong> वाहन (कार/बाइक) खरीदने के लिए।</li>
+                            <li><strong>व्यक्तिगत ऋण:</strong> विशेष व्यक्तिगत खर्चों के लिए – उच्च ब्याज दर।</li>
+                            <li><strong>गृह ऋण:</strong> घर खरीदने या बनाने के लिए – बड़ी राशि, लंबी अवधि।</li>
+                        </ul>
+                        <p><strong>बीमा (Insurance)</strong> पैसे प्रबंधन का एक रूप है जो आपातकालीन स्थितियों में लोगों की मदद करता है। आप बीमा कंपनी को नियमित रूप से एक निश्चित राशि का भुगतान करते हैं। आपातकालीन स्थिति में, कंपनी लागत को कवर करती है।</p>
+                        <p><strong>उदाहरण:</strong> Rs. 5 लाख के कवर के साथ चिकित्सा बीमा। आप प्रति वर्ष Rs. 6,000 का भुगतान करते हैं। यदि आपका Rs. 2 लाख का अस्पताल बिल है, तो यह बीमा द्वारा कवर किया जाता है।</p>
+                    </div>
+                </div>
+                <div class="loan-grid">
+                    <div class="loan-card"><span class="l-icon">🎓</span><div class="l-name">Education</div><div class="l-desc">College fees</div></div>
+                    <div class="loan-card"><span class="l-icon">🚗</span><div class="l-name">Auto</div><div class="l-desc">Vehicle purchase</div></div>
+                    <div class="loan-card"><span class="l-icon">💳</span><div class="l-name">Personal</div><div class="l-desc">Special expenses</div></div>
+                    <div class="loan-card"><span class="l-icon">🏠</span><div class="l-name">Home</div><div class="l-desc">Buy/build house</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    8.9 कानूनी साक्षरता (Legal Literacy)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="fin-8-9">
+            <div class="section-header">
+                <span class="icon">⚖️</span>
+                <span class="title">8.9 कानूनी साक्षरता <span class="subtitle">(Legal Literacy)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Legal literacy</strong> is being aware of the protection given to citizens by the law. It helps us receive all the benefits that the law gives us.</p>
+                        <p><strong>Important government initiatives:</strong></p>
+                        <ul>
+                            <li><strong>Legal Literacy Mission:</strong> Educates people about the Constitution, especially disadvantaged communities.</li>
+                            <li><strong>Right to Information (RTI) Act:</strong> Any Indian citizen can request information from government departments. The government must provide correct information in 30 days.</li>
+                            <li><strong>Public Grievances Portal:</strong> Online portal to make complaints related to government services.</li>
+                        </ul>
+                        <p><strong>Basic employee rights:</strong></p>
+                        <ul>
+                            <li>Employment letter is a legally binding contract – read carefully before signing.</li>
+                            <li><strong>Wrongful termination</strong> (removing an employee for illegal reasons) is illegal.</li>
+                            <li>Employers must provide leaves and other benefits – female employees are entitled to <strong>26 weeks of paid maternity leave</strong>.</li>
+                            <li>Workplace must be safe and free from sexual harassment – Internal Complaints Committee (ICC) must be set up.</li>
+                        </ul>
+                        <p><strong>Minimum Wages Act, 1948:</strong> Employers must pay at least the minimum wage so that workers can live a dignified life. The minimum wage varies by state and city.</p>
+                        <p><strong>NALSA (National Legal Services Authority):</strong> Provides free legal services to vulnerable sections of society – SC/ST, trafficking victims, women, children, disabled, disaster victims, industrial workmen, and those with annual income below a certain amount.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>कानूनी साक्षरता (Legal literacy)</strong> कानून द्वारा नागरिकों को दी गई सुरक्षा के बारे में जागरूक होना है। यह हमें उन सभी लाभों को प्राप्त करने में मदद करता है जो कानून हमें देता है।</p>
+                        <p><strong>महत्वपूर्ण सरकारी पहल:</strong></p>
+                        <ul>
+                            <li><strong>कानूनी साक्षरता मिशन:</strong> संविधान के बारे में लोगों को शिक्षित करता है, विशेष रूप से वंचित समुदायों को।</li>
+                            <li><strong>सूचना का अधिकार (RTI) अधिनियम:</strong> कोई भी भारतीय नागरिक सरकारी विभागों से जानकारी का अनुरोध कर सकता है। सरकार को 30 दिनों में सही जानकारी प्रदान करनी होगी।</li>
+                            <li><strong>सार्वजनिक शिकायत पोर्टल:</strong> सरकारी सेवाओं से संबंधित शिकायत करने के लिए ऑनलाइन पोर्टल।</li>
+                        </ul>
+                        <p><strong>बुनियादी कर्मचारी अधिकार:</strong></p>
+                        <ul>
+                            <li>नियोजन पत्र एक कानूनी रूप से बाध्यकारी अनुबंध है – हस्ताक्षर करने से पहले ध्यान से पढ़ें।</li>
+                            <li><strong>गलत बर्खास्तगी (Wrongful termination)</strong> अवैध है।</li>
+                            <li>नियोक्ताओं को छुट्टियाँ और अन्य लाभ प्रदान करने चाहिए – महिला कर्मचारी <strong>26 सप्ताह की सवेतन मातृत्व अवकाश</strong> की हकदार हैं।</li>
+                            <li>कार्यस्थल सुरक्षित और यौन उत्पीड़न से मुक्त होना चाहिए – आंतरिक शिकायत समिति (ICC) का गठन होना चाहिए।</li>
+                        </ul>
+                        <p><strong>न्यूनतम मजदूरी अधिनियम, 1948:</strong> नियोक्ताओं को कम से कम न्यूनतम मजदूरी का भुगतान करना चाहिए ताकि श्रमिक एक गरिमापूर्ण जीवन जी सकें। न्यूनतम मजदूरी राज्य और शहर के अनुसार भिन्न होती है।</p>
+                        <p><strong>NALSA (राष्ट्रीय कानूनी सेवा प्राधिकरण):</strong> समाज के कमजोर वर्गों को मुफ्त कानूनी सेवाएँ प्रदान करता है – अनुसूचित जाति/जनजाति, मानव तस्करी के पीड़ित, महिलाएँ, बच्चे, विकलांग, आपदा पीड़ित, औद्योगिक कर्मचारी, और जिनकी वार्षिक आय एक निश्चित राशि से कम है।</p>
+                    </div>
+                </div>
+                <div class="portal-grid">
+                    <div class="portal-card"><span class="p-icon">📜</span><div class="p-name">Legal Literacy Mission</div><div class="p-desc">Constitution awareness</div></div>
+                    <div class="portal-card"><span class="p-icon">📋</span><div class="p-name">RTI Act</div><div class="p-desc">Request information</div></div>
+                    <div class="portal-card"><span class="p-icon">📢</span><div class="p-name">Public Grievances</div><div class="p-desc">Complaints against govt</div></div>
+                    <div class="portal-card"><span class="p-icon">⚖️</span><div class="p-name">NALSA</div><div class="p-desc">Free legal services</div></div>
+                </div>
+                <div class="info-card blue">
+                    <h4 style="margin:0 0 6px; color:#003366;">📌 Who is eligible for free legal services under NALSA?</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>Member of SC/ST</li>
+                        <li>Victim of trafficking</li>
+                        <li>Woman or child (under 18)</li>
+                        <li>Person with disability</li>
+                        <li>Victim of mass disaster, flood, drought, earthquake</li>
+                        <li>Industrial workman</li>
+                        <li>Annual income below a certain amount (varies by state)</li>
+                    </ul>
+                </div>
+                <div class="short-notes">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 मुख्य बातें / Key Takeaways</h4>
+                    <ul>
+                        <li>कानूनी साक्षरता = कानून और संविधान के बारे में जानकारी।</li>
+                        <li>RTI – किसी भी सरकारी विभाग से जानकारी माँगने का अधिकार।</li>
+                        <li>कर्मचारी अधिकार – रोजगार पत्र, सुरक्षित कार्यस्थल, मातृत्व अवकाश, न्यूनतम मजदूरी।</li>
+                        <li>NALSA – कमजोर वर्गों को मुफ्त कानूनी सेवाएँ।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    MCQ LINK
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="mcq">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <span class="title">MCQ अभ्यास / बहुविकल्पीय प्रश्न</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="mcq-link">
+                    <p><strong>📌 इस मॉड्यूल के बहुविकल्पीय प्रश्नों का अभ्यास करने के लिए नीचे क्लिक करें।</strong></p>
+                    <a href="/question-bank/employability-skills/module-8.html" target="_blank">📝 प्रश्न बैंक पर जाएँ →</a>
+                    <p style="margin-top:10px; font-size:0.9rem; color:#888;">(नई टैब में खुलेगा)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    RELATED CHAPTERS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="related">
+            <div class="section-header">
+                <span class="icon">🔗</span>
+                <span class="title">संबंधित मॉड्यूल / Related Modules</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div style="display:flex; flex-wrap:wrap; gap:12px;">
+                    <a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 1: एम्प्लॉयबिलिटी स्किल्स का महत्व</a>
+                    <a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 2: संवैधानिक मूल्य – नागरिकता</a>
+                    <a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 3: 21वीं सदी में पेशेवर बनना</a>
+                    <a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 4: बुनियादी अंग्रेजी कौशल</a>
+                    <a href="module-5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 5: संचार कौशल</a>
+                    <a href="module-6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 6: आवश्यक डिजिटल कौशल</a>
+                    <a href="module-7.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 7: विविधता और समावेशन</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    COMMENTS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comments">
+            <div class="section-header">
+                <span class="icon">💬</span>
+                <span class="title">टिप्पणियाँ – मॉडरेशन के साथ</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="comments-section">
+                    <p>💬 <strong>इस मॉड्यूल के बारे में अपने विचार या प्रश्न साझा करें।</strong></p>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 सभी टिप्पणियाँ प्रकाशित होने से पहले एडमिन द्वारा समीक्षा की जाती हैं।</p>
+                    <textarea id="comment-text" rows="3" placeholder="अपनी टिप्पणी यहाँ लिखें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
+                    <input type="text" id="comment-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <button onclick="postComment()" class="btn" style="margin-top:6px;">💬 टिप्पणी पोस्ट करें (समीक्षाधीन)</button>
+                    <div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
+                        <div class="comment-item">
+                            <strong>Admin</strong> <span class="meta">(मॉडरेटर)</span> <span class="status-approved">✅ स्वीकृत</span>
+                            <p style="margin:4px 0 0 0; font-size:0.95rem;">मॉड्यूल 8 में आपका स्वागत है! वित्तीय प्रबंधन, बैंकिंग, बचत, ऋण, बीमा और कानूनी अधिकारों के बारे में प्रश्न पूछने में संकोच न करें।</p>
+                        </div>
+                        <p style="color:#888; font-style:italic; margin-top:8px;">आपकी टिप्पणी एडमिन अनुमोदन के बाद यहाँ दिखाई देगी।</p>
+                    </div>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ टिप्पणियाँ मॉडरेट की जाती हैं। कृपया विनम्र रहें।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    ADMIN PANEL
+    ============================================================ -->
+    <div class="container">
+        <div class="admin-toggle" onclick="toggleAdminPanel()">
+            <span class="key-icon">🔑</span>
+            <strong>Admin Panel</strong> – Comments Management
+            <span style="color:#888; font-weight:400; font-size:0.85rem; display:block; margin-top:4px;">(Click to open/close admin panel)</span>
+        </div>
+        <div class="admin-panel" id="adminPanel">
+            <div class="admin-header">
+                <h3>🔐 Comment Moderation</h3>
+                <button class="close-btn" onclick="toggleAdminPanel()">✕ Close</button>
+            </div>
+            <div class="admin-password-box" id="adminLogin">
+                <input type="password" id="adminPassword" placeholder="Enter admin password..." onkeyup="if(event.key==='Enter') checkAdminPassword()">
+                <button onclick="checkAdminPassword()">🔓 Login</button>
+                <span class="error-msg" id="passwordError">❌ Wrong password! Try again.</span>
+            </div>
+            <div id="adminContent" style="display:none;">
+                <div class="comment-stats" id="commentStats">
+                    <span>📊 Total: <span class="count" id="totalCount">0</span></span>
+                    <span>⏳ Pending: <span class="count" id="pendingCount">0</span></span>
+                    <span>✅ Approved: <span class="count" id="approvedCount">0</span></span>
+                    <span>❌ Rejected: <span class="count" id="rejectedCount">0</span></span>
+                </div>
+                <div id="adminCommentList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    TOPIC REQUEST
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="topicrequest">
+            <div class="section-header">
+                <span class="icon">💭</span>
+                <span class="title">विषय अनुरोध</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="topic-request">
+                    <p>📝 <strong>कोई नया विषय या सुधार सुझाएँ।</strong></p>
+                    <input type="text" id="topic-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <input type="email" id="topic-email" placeholder="आपका ईमेल (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <textarea id="topic-message" rows="4" placeholder="जिस विषय या सुधार को आप देखना चाहते हैं, उसका वर्णन करें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
+                    <button onclick="submitTopicRequest()" class="btn">📤 अनुरोध सबमिट करें</button>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ आपके अनुरोध की समीक्षा एडमिन द्वारा की जाएगी और जल्द ही जोड़ा जाएगा।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    SUGGESTIONS & DISCLAIMER
+    ============================================================ -->
+    <div class="container" style="margin-top:16px;">
+        <div style="background:#fff; border-radius:14px; padding:20px 24px; border:1px solid #e6eaef; margin-bottom:20px;">
+            <h2 style="color:#003366; font-size:1.3rem; margin:0 0 6px;">💬 सुझाव दें</h2>
+            <p style="margin:0 0 12px;">यदि इस मॉड्यूल में कोई सुधार सुझाना है, तो हमें बताएं।</p>
+            <a href="/contact.html" class="btn">💬 यहाँ क्लिक करें →</a>
+        </div>
+        <div style="background:#fff8e1; border-radius:14px; padding:18px 22px; border:1px solid #ffe082; margin-bottom:20px;">
+            <h2 style="color:#856404; font-size:1.2rem; margin:0 0 4px;">⚠ अस्वीकरण</h2>
+            <p style="margin:0; font-size:0.95rem; color:#6c6c6c;">ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="/disclaimer.html">अस्वीकरण</a>
+            <a href="/privacy-policy.html">गोपनीयता नीति</a>
+            <a href="/terms.html">नियम</a>
+            <a href="/contact.html">संपर्क</a>
+        </div>
+        <p>© 2026 ITI Study Centre. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
+    <button id="scrollTop" title="ऊपर जाएँ">⬆</button>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('📚 सामग्री सुरक्षित है। कृपया इस पेज को शेयर करने के लिए शेयर बटन का उपयोग करें।');
+        });
+
+        // Disable Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 सामग्री कॉपी करना प्रतिबंधित है। कृपया शेयर बटन का उपयोग करें।');
+            }
+        });
+
+        // Search
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        // Share functions
+        function getPageUrl() { return window.location.href; }
+
+        function getPageTitle() { return document.querySelector('title').textContent; }
+
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle() + ' - इसे पढ़ें!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareFacebook() {
+            const url = getPageUrl();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareTwitter() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(url), '_blank');
+        }
+
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ कॉपी हो गया!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        span.textContent = 'लिंक कॉपी करें';
+                        btn.classList.remove('copied');
+                    }, 3000);
+                }).catch(() => { fallbackCopy(url); });
+            } else {
+                fallbackCopy(url);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ कॉपी हो गया!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    span.textContent = 'लिंक कॉपी करें';
+                    btn.classList.remove('copied');
+                }, 3000);
+            } catch (err) {
+                alert('कॉपी नहीं हो पाया। कृपया URL को मैन्युअल रूप से कॉपी करें।');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // ============================================================
+        // COMMENT SYSTEM
+        // ============================================================
+        const ADMIN_PASSWORD = 'admin123';
+        const STORAGE_KEY = 'module8_comments';
+
+        function getComments() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch {
+                return [];
+            }
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
+        }
+
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+        }
+
+        function getTimeAgo(timestamp) {
+            const diff = Date.now() - timestamp;
+            const minutes = Math.floor(diff / 60000);
+            if (minutes < 1) return 'Just now';
+            if (minutes < 60) return minutes + 'm ago';
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return hours + 'h ago';
+            const days = Math.floor(hours / 24);
+            return days + 'd ago';
+        }
+
+        function renderPublicComments() {
+            const list = document.getElementById('comment-list');
+            if (!list) return;
+            const comments = getComments();
+            const approved = comments.filter(c => c.status === 'approved');
+
+            const noMsg = list.querySelector('.no-comments-msg');
+            if (noMsg) noMsg.remove();
+
+            const existingItems = list.querySelectorAll('.comment-item');
+            existingItems.forEach(el => {
+                if (!el.querySelector('.status-approved') || !el.querySelector('strong')?.textContent?.includes('Admin')) {
+                    el.remove();
+                }
+            });
+
+            if (approved.length === 0) {
+                let noMsgEl = document.createElement('p');
+                noMsgEl.className = 'no-comments-msg';
+                noMsgEl.textContent = 'No approved comments yet. Be the first to comment!';
+                list.appendChild(noMsgEl);
+                return;
+            }
+
+            approved.forEach(comment => {
+                const div = document.createElement('div');
+                div.className = 'comment-item';
+                div.innerHTML = `
+                    <strong>${comment.name}</strong>
+                    <span class="meta">(${getTimeAgo(comment.timestamp)})</span>
+                    <span class="status-approved">✅ Approved</span>
+                    <p style="margin:4px 0 0 0; font-size:0.95rem;">${comment.text}</p>
+                `;
+                list.prepend(div);
+            });
+        }
+
+        function postComment() {
+            const text = document.getElementById('comment-text').value.trim();
+            const name = document.getElementById('comment-name').value.trim() || 'Anonymous';
+            if (!text) {
+                alert('Please write a comment.');
+                return;
+            }
+            const comments = getComments();
+            comments.push({ id: generateId(), name, text, timestamp: Date.now(), status: 'pending' });
+            saveComments(comments);
+            document.getElementById('comment-text').value = '';
+            document.getElementById('comment-name').value = '';
+            renderPublicComments();
+            renderAdminComments();
+            alert('✅ Your comment has been submitted for review.');
+        }
+
+        function checkAdminPassword() {
+            const input = document.getElementById('adminPassword');
+            const error = document.getElementById('passwordError');
+            if (input.value === ADMIN_PASSWORD) {
+                document.getElementById('adminLogin').style.display = 'none';
+                document.getElementById('adminContent').style.display = 'block';
+                renderAdminComments();
+                error.classList.remove('show');
+            } else {
+                error.classList.add('show');
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        function renderAdminComments() {
+            const container = document.getElementById('adminCommentList');
+            const comments = getComments();
+            document.getElementById('totalCount').textContent = comments.length;
+            document.getElementById('pendingCount').textContent = comments.filter(c => c.status === 'pending').length;
+            document.getElementById('approvedCount').textContent = comments.filter(c => c.status === 'approved').length;
+            document.getElementById('rejectedCount').textContent = comments.filter(c => c.status === 'rejected').length;
+
+            if (comments.length === 0) {
+                container.innerHTML = `<p class="no-comments-msg">No comments yet.</p>`;
+                return;
+            }
+
+            let html = '';
+            comments.forEach(comment => {
+                html += `
+                    <div class="admin-comment-item" data-id="${comment.id}">
+                        <div class="comment-info">
+                            <strong>${comment.name}</strong>
+                            <span class="time">${getTimeAgo(comment.timestamp)}</span>
+                            <span class="status ${comment.status}">${comment.status.charAt(0).toUpperCase() + comment.status.slice(1)}</span>
+                            <p style="margin:4px 0 0 0; font-size:0.9rem;">${comment.text}</p>
+                        </div>
+                        <div class="comment-actions">
+                            ${comment.status !== 'approved' ? `<button class="btn-approve" onclick="approveComment('${comment.id}')">✅ Approve</button>` : ''}
+                            ${comment.status !== 'rejected' ? `<button class="btn-reject" onclick="rejectComment('${comment.id}')">⛔ Reject</button>` : ''}
+                            <button class="btn-delete" onclick="deleteComment('${comment.id}')">🗑️ Delete</button>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function approveComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'approved' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function rejectComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'rejected' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function deleteComment(id) {
+            if (!confirm('Are you sure you want to delete this comment?')) return;
+            let comments = getComments();
+            comments = comments.filter(c => c.id !== id);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('open');
+            if (!panel.classList.contains('open')) {
+                document.getElementById('adminLogin').style.display = 'flex';
+                document.getElementById('adminContent').style.display = 'none';
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('passwordError').classList.remove('show');
+            }
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPublicComments();
+            window.postComment = postComment;
+        });
+
+        // Scroll to top
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
+            ' ITI Study Centre. सर्वाधिकार सुरक्षित।';
+
+        console.log('मॉड्यूल 8 लोड हुआ: वित्तीय और कानूनी साक्षरता – 9 पाठ, पूरी तरह से खुला, द्विभाषी।');
+        console.log(`🔑 Admin Password: ${ADMIN_PASSWORD}`);
+    </script>
+</body>
+</html>
