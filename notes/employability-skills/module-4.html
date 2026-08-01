@@ -1,1 +1,2298 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>मॉड्यूल 4: बुनियादी अंग्रेजी कौशल | ITI Study Centre</title>
+    <meta name="description" content="Employability Skills मॉड्यूल 4: बुनियादी अंग्रेजी कौशल – पूरे नोट्स। हिंदी + अंग्रेजी में चार्ट और उदाहरण सहित।" />
+    <link rel="icon" href="/images/favicon.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.7;
+            user-select: none;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .main-header {
+            background: #003366;
+            padding: 14px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        .main-header nav a.notes-link {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb .current {
+            color: #555;
+            font-weight: 600;
+        }
+        .page-title {
+            padding: 30px 0 20px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.2rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 520px;
+            padding: 13px 18px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+        }
+        .search-section button {
+            padding: 13px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        @media (max-width: 640px) {
+            .search-section {
+                flex-direction: column;
+            }
+            .search-section input {
+                max-width: 100%;
+                width: 100%;
+            }
+            .search-section button {
+                width: 100%;
+            }
+        }
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            margin-bottom: 28px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 18px 26px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: default;
+            user-select: none;
+            flex-wrap: wrap;
+        }
+        .section-header .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .section-header .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body {
+            padding: 24px 28px;
+            background: #fafcff;
+        }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin: 28px 0 16px;
+            border-left: 4px solid #ffcc00;
+            padding-left: 16px;
+        }
+        .section-body h3:first-of-type {
+            margin-top: 0;
+        }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.1rem;
+            margin: 18px 0 10px;
+        }
+        .bilingual {
+            margin: 14px 0;
+        }
+        .bilingual .en {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1a2a3a;
+        }
+        .bilingual .hi {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #3d3d3d;
+            background: #f0f5ff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border-left: 5px solid #003366;
+            margin-top: 12px;
+        }
+        .bilingual ul,
+        .bilingual ol {
+            padding-left: 24px;
+            margin: 8px 0;
+        }
+        .bilingual ul li,
+        .bilingual ol li {
+            margin-bottom: 4px;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+        }
+        .info-card.blue {
+            border-left: 5px solid #003366;
+        }
+        .info-card.green {
+            border-left: 5px solid #28a745;
+        }
+        .info-card.orange {
+            border-left: 5px solid #ff9900;
+        }
+        .info-card.purple {
+            border-left: 5px solid #6f42c1;
+        }
+        .info-card.highlight {
+            border-left: 5px solid #ffc107;
+            background: #fffdf0;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) {
+            background: #f8f9fc;
+        }
+        .table-wrap tr:hover {
+            background: #eef2f7;
+        }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .example-box strong {
+            color: #003366;
+        }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .important-box ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .short-notes ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .mcq-link {
+            background: #f0f5ff;
+            border: 2px solid #003366;
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            margin: 16px 0;
+        }
+        .mcq-link a {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #003366;
+            background: #fff;
+            padding: 10px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: 0.25s;
+            border: 1px solid #003366;
+        }
+        .mcq-link a:hover {
+            background: #003366;
+            color: #fff;
+            transform: scale(1.02);
+        }
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 20px;
+            padding: 14px 18px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover {
+            transform: scale(1.04);
+            opacity: 0.9;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+        }
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+        .share-btn.link {
+            background: #6c757d;
+        }
+        .share-btn.link.copied {
+            background: #28a745;
+        }
+        .share-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #003366;
+            color: #fff !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        .comments-section textarea,
+        .topic-request textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            resize: vertical;
+            font-family: inherit;
+            user-select: text;
+        }
+        .comments-section input,
+        .topic-request input {
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            width: 48%;
+            margin-right: 2%;
+            margin-bottom: 10px;
+            font-family: inherit;
+            user-select: text;
+        }
+        @media (max-width: 600px) {
+            .comments-section input,
+            .topic-request input {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .comment-item {
+            background: #f1f4f9;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #003366;
+        }
+        .comment-item .meta {
+            color: #888;
+            font-size: 0.8rem;
+        }
+        .comment-item .status-pending {
+            color: #ff9900;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #fff3cd;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        .comment-item .status-approved {
+            color: #28a745;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #d4edda;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 24px 20px;
+            text-align: center;
+            margin-top: 44px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 24px;
+            margin-bottom: 12px;
+        }
+        footer .footer-links a {
+            color: #b0b8c5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        footer .footer-links a:hover {
+            color: #fff;
+        }
+        footer p {
+            margin: 8px 0 0;
+            font-size: 0.85rem;
+            color: #7a8494;
+        }
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.25s;
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover {
+            background: #002244;
+            transform: scale(1.05);
+        }
+        .copy-protect::selection {
+            background: #b3d4fc;
+            color: #000;
+        }
+        .admin-toggle {
+            text-align: center;
+            margin: 20px 0;
+            padding: 12px;
+            background: #f8f9fc;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-toggle:hover {
+            background: #eef2f7;
+            border-color: #003366;
+        }
+        .admin-toggle .key-icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+        .admin-panel {
+            display: none;
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            border: 2px solid #003366;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .admin-panel.open {
+            display: block;
+        }
+        .admin-panel .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .admin-panel .admin-header h3 {
+            color: #003366;
+            margin: 0;
+        }
+        .admin-panel .admin-header .close-btn {
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .admin-panel .admin-header .close-btn:hover {
+            background: #b02a37;
+        }
+        .admin-password-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .admin-password-box input {
+            padding: 10px 14px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-password-box input:focus {
+            border-color: #003366;
+            outline: none;
+        }
+        .admin-password-box button {
+            padding: 10px 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-password-box button:hover {
+            background: #002244;
+        }
+        .admin-password-box .error-msg {
+            color: #dc3545;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .admin-password-box .error-msg.show {
+            display: block;
+        }
+        .comment-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: #f8f9fc;
+            border-radius: 8px;
+        }
+        .comment-stats span {
+            font-size: 0.9rem;
+        }
+        .comment-stats .count {
+            font-weight: 700;
+            color: #003366;
+        }
+        .admin-comment-item {
+            background: #f8f9fc;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .admin-comment-item .comment-info {
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-comment-item .comment-info strong {
+            color: #003366;
+        }
+        .admin-comment-item .comment-info .time {
+            color: #888;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        .admin-comment-item .comment-info .status {
+            font-size: 0.7rem;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .admin-comment-item .comment-info .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .admin-comment-item .comment-info .status.approved {
+            background: #d4edda;
+            color: #1e7e34;
+        }
+        .admin-comment-item .comment-info .status.rejected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .admin-comment-item .comment-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .admin-comment-item .comment-actions button {
+            padding: 4px 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .admin-comment-item .comment-actions .btn-approve {
+            background: #28a745;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-approve:hover {
+            background: #1e7e34;
+        }
+        .admin-comment-item .comment-actions .btn-reject {
+            background: #ffc107;
+            color: #222;
+        }
+        .admin-comment-item .comment-actions .btn-reject:hover {
+            background: #e0a800;
+        }
+        .admin-comment-item .comment-actions .btn-delete {
+            background: #dc3545;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-delete:hover {
+            background: #b02a37;
+        }
+        .no-comments-msg {
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        .sentence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .sentence-card {
+            background: #fff;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .sentence-card .s-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .sentence-card .s-name {
+            font-weight: 700;
+            color: #003366;
+        }
+        .sentence-card .s-desc {
+            font-size: 0.8rem;
+            color: #555;
+            margin-top: 4px;
+        }
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .main-header nav {
+                justify-content: center;
+                gap: 6px 12px;
+            }
+            .main-header nav a {
+                font-size: 0.9rem;
+            }
+            .page-title h1 {
+                font-size: 1.6rem;
+            }
+            .section-header {
+                padding: 14px 18px;
+                flex-wrap: wrap;
+            }
+            .section-header .title {
+                font-size: 1.05rem;
+            }
+            .section-body {
+                padding: 16px 18px;
+            }
+            .section-body h3 {
+                font-size: 1.1rem;
+            }
+            .bilingual .en {
+                font-size: 0.95rem;
+            }
+            .bilingual .hi {
+                font-size: 0.9rem;
+                padding: 12px 16px;
+            }
+            .share-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .share-section .share-label {
+                text-align: center;
+            }
+            .share-btn {
+                justify-content: center;
+            }
+            .admin-comment-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .admin-comment-item .comment-actions {
+                justify-content: flex-start;
+            }
+            .admin-password-box {
+                flex-direction: column;
+            }
+            .admin-password-box input {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            .section-body {
+                padding: 12px 14px;
+            }
+            .section-header .icon {
+                font-size: 1.3rem;
+            }
+            .section-header .title {
+                font-size: 0.95rem;
+            }
+            .sentence-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="/">ITI Study Centre</a></div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/iti-result.html">ITI Result</a>
+                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
+                <a href="/engineering-notes.html">Engineering Notes</a>
+                <a href="/questionbank.html">Question Bank</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
+            <a href="/notes/employability-skills/index.html">Employability Skills</a> &nbsp;›&nbsp;
+            <span class="current">मॉड्यूल 4: बुनियादी अंग्रेजी कौशल</span>
+        </div>
+    </div>
+
+    <!-- ===== PAGE TITLE ===== -->
+    <section class="page-title">
+        <div class="container">
+            <h1>📚 मॉड्यूल 4: बुनियादी अंग्रेजी कौशल</h1>
+            <p>Basic English Skills • NSDC/DGT पाठ्यक्रम पर आधारित • हिंदी + अंग्रेजी में पूरे नोट्स</p>
+        </div>
+    </section>
+
+    <!-- ===== SEARCH ===== -->
+    <section class="search-section container">
+        <input type="text" id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें...">
+        <button onclick="filterSections()">खोजें</button>
+    </section>
+
+    <!-- ===== SHARE BUTTONS ===== -->
+    <div class="container">
+        <div class="share-section" id="shareSection">
+            <span class="share-label">📤 इस पेज को शेयर करें:</span>
+            <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </button>
+            <button class="share-btn facebook" onclick="shareFacebook()">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter()">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Twitter
+            </button>
+            <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+                <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <span id="copyLinkText">Copy Link</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.1 अंग्रेजी सीखने की प्रेरणा
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-1">
+            <div class="section-header">
+                <span class="icon">💪</span>
+                <span class="title">4.1 अंग्रेजी सीखने की प्रेरणा <span class="subtitle">(Motivation to Learn English)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Learning English is important because:</strong></p>
+                        <ul>
+                            <li><strong>English is a global language:</strong> It helps you communicate with people from different parts of the world.</li>
+                            <li><strong>Better job opportunities:</strong> Many companies prefer candidates who can communicate in English.</li>
+                            <li><strong>Internet and social media:</strong> Most content online is in English. Knowing English helps you use the internet effectively.</li>
+                            <li><strong>Entertainment:</strong> You can watch English movies, shows, and videos to enrich your life.</li>
+                        </ul>
+                        <p><strong>Fun ways to learn English:</strong></p>
+                        <ul>
+                            <li>Watch English films, shows, and listen to English songs.</li>
+                            <li>Find a friend to practice speaking English with – set an "English Only" rule.</li>
+                            <li>Read everything you see – magazines, pamphlets, movie subtitles.</li>
+                            <li>Don't be afraid to make mistakes. Use Google to find meanings and pronunciations.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>अंग्रेजी सीखना महत्वपूर्ण है क्योंकि:</strong></p>
+                        <ul>
+                            <li><strong>अंग्रेजी एक वैश्विक भाषा है:</strong> यह आपको दुनिया के विभिन्न हिस्सों के लोगों से संवाद करने में मदद करती है।</li>
+                            <li><strong>बेहतर नौकरी के अवसर:</strong> कई कंपनियाँ उन उम्मीदवारों को पसंद करती हैं जो अंग्रेजी में संवाद कर सकते हैं।</li>
+                            <li><strong>इंटरनेट और सोशल मीडिया:</strong> अधिकांश सामग्री ऑनलाइन अंग्रेजी में है। अंग्रेजी जानने से आप इंटरनेट का प्रभावी ढंग से उपयोग कर सकते हैं।</li>
+                            <li><strong>मनोरंजन:</strong> आप अंग्रेजी फिल्में, शो और वीडियो देख सकते हैं जो आपके जीवन को समृद्ध करेंगे।</li>
+                        </ul>
+                        <p><strong>अंग्रेजी सीखने के मजेदार तरीके:</strong></p>
+                        <ul>
+                            <li>अंग्रेजी फिल्में, शो देखें और अंग्रेजी गाने सुनें।</li>
+                            <li>अंग्रेजी बोलने का अभ्यास करने के लिए एक दोस्त खोजें – "केवल अंग्रेजी" नियम बनाएँ।</li>
+                            <li>जो कुछ भी आप देखते हैं उसे पढ़ें – पत्रिकाएँ, पैम्फलेट, फिल्म सबटाइटल।</li>
+                            <li>गलतियाँ करने से न डरें। अर्थ और उच्चारण के लिए Google का उपयोग करें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="short-notes">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 मुख्य बातें / Key Takeaways</h4>
+                    <ul>
+                        <li>अंग्रेजी वैश्विक संचार की भाषा है।</li>
+                        <li>अंग्रेजी जानने से नौकरी के अवसर बढ़ते हैं।</li>
+                        <li>हर दिन थोड़ा अभ्यास करें – गलतियों से न डरें।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.2 नाम वाले शब्द (Naming Words)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-2">
+            <div class="section-header">
+                <span class="icon">🏷️</span>
+                <span class="title">4.2 नाम वाले शब्द <span class="subtitle">(Naming Words – Common Nouns)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Naming words</strong> are words used to name a person, place, animal, or thing. They are also called <strong>Common Nouns</strong>.</p>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li><strong>Person:</strong> boy, teacher, bus driver</li>
+                            <li><strong>Place:</strong> school, bank, road</li>
+                            <li><strong>Animal/Bird:</strong> cat, crow, dog</li>
+                            <li><strong>Thing:</strong> bus, shirt, clouds</li>
+                        </ul>
+                        <p><strong>Some words have two meanings:</strong></p>
+                        <ul>
+                            <li><strong>Bat:</strong> (1) an animal, (2) a cricket bat.</li>
+                            <li><strong>Letter:</strong> (1) a character in the alphabet, (2) a written message.</li>
+                            <li><strong>Feet:</strong> (1) body parts, (2) a unit of measurement.</li>
+                            <li><strong>Nail:</strong> (1) a metal pin, (2) a part of the finger.</li>
+                            <li><strong>Wave:</strong> (1) a hand movement, (2) a water wave.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>नाम वाले शब्द (Naming words)</strong> वे शब्द हैं जिनका उपयोग किसी व्यक्ति, स्थान, जानवर या वस्तु के नाम के लिए किया जाता है। इन्हें <strong>Common Nouns</strong> भी कहा जाता है।</p>
+                        <p><strong>उदाहरण:</strong></p>
+                        <ul>
+                            <li><strong>व्यक्ति:</strong> लड़का, शिक्षक, बस चालक</li>
+                            <li><strong>स्थान:</strong> स्कूल, बैंक, सड़क</li>
+                            <li><strong>जानवर/पक्षी:</strong> बिल्ली, कौवा, कुत्ता</li>
+                            <li><strong>वस्तु:</strong> बस, शर्ट, बादल</li>
+                        </ul>
+                        <p><strong>कुछ शब्दों के दो अर्थ होते हैं:</strong></p>
+                        <ul>
+                            <li><strong>Bat:</strong> (1) एक जानवर, (2) क्रिकेट बल्ला।</li>
+                            <li><strong>Letter:</strong> (1) वर्णमाला का एक अक्षर, (2) एक पत्र।</li>
+                            <li><strong>Feet:</strong> (1) शरीर के अंग, (2) माप की एक इकाई।</li>
+                            <li><strong>Nail:</strong> (1) एक धातु की कील, (2) उंगली का हिस्सा।</li>
+                            <li><strong>Wave:</strong> (1) हाथ हिलाना, (2) पानी की लहर।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Naming Words – Examples / नाम वाले शब्द – उदाहरण</caption>
+                        <thead><tr><th>Person</th><th>Place</th><th>Animal/Bird</th><th>Thing</th></tr></thead>
+                        <tbody>
+                            <tr><td>Teacher</td><td>School</td><td>Dog</td><td>Book</td></tr>
+                            <tr><td>Driver</td><td>Bank</td><td>Cat</td><td>Bus</td></tr>
+                            <tr><td>Doctor</td><td>Hospital</td><td>Crow</td><td>Shirt</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.3 नाम वाले शब्द – एकवचन और बहुवचन
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-3">
+            <div class="section-header">
+                <span class="icon">🔢</span>
+                <span class="title">4.3 नाम वाले शब्द – एकवचन और बहुवचन <span class="subtitle">(Singular and Plural)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Singular</strong> means one. <strong>Plural</strong> means more than one.</p>
+                        <p><strong>Rules for making plurals:</strong></p>
+                        <ul>
+                            <li>Add <strong>'s'</strong> to most words: bag → bags, computer → computers.</li>
+                            <li>Add <strong>'es'</strong> to words ending in s, x, ch, sh: class → classes, box → boxes.</li>
+                            <li><strong>Irregular plurals:</strong> man → men, woman → women, child → children, tooth → teeth, foot → feet, person → people.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>एकवचन (Singular)</strong> का अर्थ है एक। <strong>बहुवचन (Plural)</strong> का अर्थ है एक से अधिक।</p>
+                        <p><strong>बहुवचन बनाने के नियम:</strong></p>
+                        <ul>
+                            <li>अधिकांश शब्दों में <strong>'s'</strong> जोड़ें: bag → bags, computer → computers.</li>
+                            <li>s, x, ch, sh से समाप्त होने वाले शब्दों में <strong>'es'</strong> जोड़ें: class → classes, box → boxes.</li>
+                            <li><strong>अनियमित बहुवचन:</strong> man → men, woman → women, child → children, tooth → teeth, foot → feet, person → people.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Singular vs Plural / एकवचन बनाम बहुवचन</caption>
+                        <thead><tr><th>Singular (one)</th><th>Plural (many)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Bag</td><td>Bags</td></tr>
+                            <tr><td>Class</td><td>Classes</td></tr>
+                            <tr><td>Box</td><td>Boxes</td></tr>
+                            <tr><td>Man</td><td>Men</td></tr>
+                            <tr><td>Woman</td><td>Women</td></tr>
+                            <tr><td>Child</td><td>Children</td></tr>
+                            <tr><td>Tooth</td><td>Teeth</td></tr>
+                            <tr><td>Foot</td><td>Feet</td></tr>
+                            <tr><td>Person</td><td>People</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.4 सर्वनाम (Pronouns)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-4">
+            <div class="section-header">
+                <span class="icon">🔄</span>
+                <span class="title">4.4 सर्वनाम <span class="subtitle">(Pronouns)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>A pronoun</strong> is a word used in place of a naming word (noun) to avoid repetition.</p>
+                        <p><strong>Examples:</strong> "The dog is brown. <strong>It</strong> has a black tail." (It replaces 'the dog')</p>
+                        <p><strong>Common pronouns:</strong></p>
+                        <ul>
+                            <li><strong>I, You, He, She, It</strong> – singular</li>
+                            <li><strong>We, You, They</strong> – plural</li>
+                            <li><strong>My, Your, His, Her, Its, Our, Their</strong> – possessive</li>
+                        </ul>
+                        <p><strong>Tip:</strong> To use the correct pronoun, ask: (1) Is the naming word singular or plural? (2) What naming word is the pronoun replacing?</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>सर्वनाम (Pronoun)</strong> एक ऐसा शब्द है जिसका उपयोग नाम वाले शब्द (संज्ञा) के स्थान पर पुनरावृत्ति से बचने के लिए किया जाता है।</p>
+                        <p><strong>उदाहरण:</strong> "कुत्ता भूरा है। <strong>यह</strong> एक काली पूंछ रखता है।" (यह 'कुत्ता' की जगह है)</p>
+                        <p><strong>सामान्य सर्वनाम:</strong></p>
+                        <ul>
+                            <li><strong>I, You, He, She, It</strong> – एकवचन</li>
+                            <li><strong>We, You, They</strong> – बहुवचन</li>
+                            <li><strong>My, Your, His, Her, Its, Our, Their</strong> – स्वामित्व</li>
+                        </ul>
+                        <p><strong>टिप:</strong> सही सर्वनाम का उपयोग करने के लिए पूछें: (1) नाम वाला शब्द एकवचन है या बहुवचन? (2) सर्वनाम किस नाम वाले शब्द की जगह ले रहा है?</p>
+                    </div>
+                </div>
+                <div class="example-box">
+                    <p><strong>Example:</strong> Deepika is excited. → <strong>She</strong> is excited. (Deepika → She)</p>
+                    <p><strong>उदाहरण:</strong> दीपिका उत्साहित है। → <strong>वह</strong> उत्साहित है।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.5 क्रिया शब्द (Action Words)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-5">
+            <div class="section-header">
+                <span class="icon">🏃</span>
+                <span class="title">4.5 क्रिया शब्द <span class="subtitle">(Action Words – Verbs)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Action words (Verbs)</strong> show an action connected with a person, animal, or thing.</p>
+                        <p><strong>Examples:</strong> run, jump, eat, talk, read, write, think, cook, drive.</p>
+                        <p><strong>Verbs express:</strong></p>
+                        <ul>
+                            <li><strong>Physical actions:</strong> jump, run, throw.</li>
+                            <li><strong>Mental actions:</strong> think, understand, remember.</li>
+                            <li><strong>States of being:</strong> is, am, are, was, were.</li>
+                        </ul>
+                        <p><strong>Form of verb changes with time (past, present, future):</strong></p>
+                        <ul>
+                            <li>Present: She studies every day.</li>
+                            <li>Past: She studied yesterday.</li>
+                            <li>Future: She will study tomorrow.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>क्रिया शब्द (Action words – Verbs)</strong> किसी व्यक्ति, जानवर या वस्तु से जुड़ी क्रिया को दिखाते हैं।</p>
+                        <p><strong>उदाहरण:</strong> दौड़ना, कूदना, खाना, बोलना, पढ़ना, लिखना, सोचना, पकाना, चलाना।</p>
+                        <p><strong>क्रिया व्यक्त करती है:</strong></p>
+                        <ul>
+                            <li><strong>शारीरिक क्रियाएँ:</strong> कूदना, दौड़ना, फेंकना।</li>
+                            <li><strong>मानसिक क्रियाएँ:</strong> सोचना, समझना, याद रखना।</li>
+                            <li><strong>अस्तित्व की स्थिति:</strong> है, हूँ, हैं, था, थे।</li>
+                        </ul>
+                        <p><strong>क्रिया का रूप समय के साथ बदलता है (भूत, वर्तमान, भविष्य):</strong></p>
+                        <ul>
+                            <li>वर्तमान: वह प्रतिदिन पढ़ती है।</li>
+                            <li>भूत: उसने कल पढ़ा।</li>
+                            <li>भविष्य: वह कल पढ़ेगी।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.6 विशेषण (Describing Words)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-6">
+            <div class="section-header">
+                <span class="icon">🎨</span>
+                <span class="title">4.6 विशेषण <span class="subtitle">(Describing Words – Adjectives)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Describing words (Adjectives)</strong> are used to describe things. They give details about something or someone.</p>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li><strong>Colour:</strong> blue, yellow, red, orange.</li>
+                            <li><strong>Size:</strong> big, small, long, large.</li>
+                            <li><strong>Quality:</strong> happy, beautiful, clean, sharp.</li>
+                        </ul>
+                        <p><strong>Why adjectives are important:</strong></p>
+                        <ul>
+                            <li>They help describe size, shape, colour, and quality.</li>
+                            <li>Using them correctly helps us communicate better.</li>
+                            <li>They make sentences clearer and more interesting.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>विशेषण (Describing words – Adjectives)</strong> का उपयोग चीज़ों का वर्णन करने के लिए किया जाता है। वे किसी चीज़ या व्यक्ति के बारे में विवरण देते हैं।</p>
+                        <p><strong>उदाहरण:</strong></p>
+                        <ul>
+                            <li><strong>रंग:</strong> नीला, पीला, लाल, नारंगी।</li>
+                            <li><strong>आकार:</strong> बड़ा, छोटा, लंबा, विशाल।</li>
+                            <li><strong>गुणवत्ता:</strong> खुश, सुंदर, साफ, तेज।</li>
+                        </ul>
+                        <p><strong>विशेषण क्यों महत्वपूर्ण हैं:</strong></p>
+                        <ul>
+                            <li>वे आकार, रंग, गुणवत्ता का वर्णन करने में मदद करते हैं।</li>
+                            <li>उनका सही उपयोग करने से हम बेहतर संवाद कर सकते हैं।</li>
+                            <li>वे वाक्यों को स्पष्ट और अधिक रोचक बनाते हैं।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Adjectives – Examples / विशेषण – उदाहरण</caption>
+                        <thead><tr><th>Colour</th><th>Size</th><th>Quality</th></tr></thead>
+                        <tbody>
+                            <tr><td>A blue uniform</td><td>A long bridge</td><td>A happy face</td></tr>
+                            <tr><td>An orange balloon</td><td>A large pot</td><td>A sharp tool</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.7 विराम चिह्न (Punctuation)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-7">
+            <div class="section-header">
+                <span class="icon">🔖</span>
+                <span class="title">4.7 विराम चिह्न <span class="subtitle">(Punctuation)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Punctuation marks</strong> are symbols we use while writing to make sentences clear and interesting.</p>
+                        <p><strong>Important punctuation marks:</strong></p>
+                        <ul>
+                            <li><strong>Full stop (.)</strong> – placed at the end of a sentence. Example: I love my cat.</li>
+                            <li><strong>Capital letter</strong> – the first letter of a sentence is always capital. Example: <strong>T</strong>he dog barked.</li>
+                            <li><strong>Comma (,)</strong> – shows a break within a sentence. Used for lists or separating parts. Example: I bought apples, oranges, and bananas.</li>
+                            <li><strong>Question mark (?)</strong> – used at the end of a question. Example: Where are you going?</li>
+                            <li><strong>Exclamation mark (!)</strong> – shows strong emotion like surprise or excitement. Example: Wow! That's amazing!</li>
+                        </ul>
+                        <p><strong>Tip:</strong> Punctuation helps avoid confusion. "I love cooking my family and my pets." vs "I love cooking, my family, and my pets." – the meaning changes!</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>विराम चिह्न (Punctuation marks)</strong> वे प्रतीक हैं जिनका उपयोग हम लिखते समय वाक्यों को स्पष्ट और रोचक बनाने के लिए करते हैं।</p>
+                        <p><strong>महत्वपूर्ण विराम चिह्न:</strong></p>
+                        <ul>
+                            <li><strong>पूर्ण विराम (.)</strong> – वाक्य के अंत में लगाया जाता है। उदाहरण: मुझे मेरी बिल्ली पसंद है।</li>
+                            <li><strong>बड़ा अक्षर (Capital letter)</strong> – वाक्य का पहला अक्षर हमेशा बड़ा होता है। उदाहरण: <strong>क</strong>ुत्ता भौंका।</li>
+                            <li><strong>अल्पविराम (,)</strong> – वाक्य के भीतर एक विराम दिखाता है। सूचियों के लिए या भागों को अलग करने के लिए उपयोग किया जाता है। उदाहरण: मैंने सेब, संतरे और केले खरीदे।</li>
+                            <li><strong>प्रश्नवाचक चिह्न (?)</strong> – प्रश्न के अंत में प्रयुक्त होता है। उदाहरण: आप कहाँ जा रहे हैं?</li>
+                            <li><strong>विस्मयादिबोधक चिह्न (!)</strong> – आश्चर्य या उत्साह जैसी तीव्र भावना दिखाता है। उदाहरण: वाह! यह अद्भुत है!</li>
+                        </ul>
+                        <p><strong>टिप:</strong> विराम चिह्न भ्रम से बचने में मदद करता है। "मुझे खाना बनाना मेरा परिवार और मेरे पालतू जानवर पसंद है।" बनाम "मुझे खाना बनाना, मेरा परिवार, और मेरे पालतू जानवर पसंद है।" – अर्थ बदल जाता है!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.8 वाक्यों के प्रकार (Types of Sentences)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-8">
+            <div class="section-header">
+                <span class="icon">📝</span>
+                <span class="title">4.8 वाक्यों के प्रकार <span class="subtitle">(Types of Sentences)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>There are 4 types of sentences:</strong></p>
+                        <ul>
+                            <li><strong>Declarative (Statement):</strong> Gives information or states a fact. Ends with a full stop. Example: I have a gray dress.</li>
+                            <li><strong>Interrogative (Question):</strong> Asks a question. Ends with a question mark. Example: How do I open this box?</li>
+                            <li><strong>Imperative (Command/Request):</strong> Gives a command or instruction. Example: Please bring me the jar.</li>
+                            <li><strong>Exclamatory (Exclamation):</strong> Expresses strong emotion. Ends with an exclamation mark. Example: What a beautiful day!</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>वाक्यों के 4 प्रकार होते हैं:</strong></p>
+                        <ul>
+                            <li><strong>घोषणात्मक (Declarative):</strong> जानकारी देता है या तथ्य बताता है। पूर्ण विराम के साथ समाप्त होता है। उदाहरण: मेरे पास एक ग्रे पोशाक है।</li>
+                            <li><strong>प्रश्नवाचक (Interrogative):</strong> प्रश्न पूछता है। प्रश्नवाचक चिह्न के साथ समाप्त होता है। उदाहरण: मैं इस बक्से को कैसे खोलूँ?</li>
+                            <li><strong>आज्ञावाचक (Imperative):</strong> आदेश या निर्देश देता है। उदाहरण: कृपया मुझे जार दें।</li>
+                            <li><strong>विस्मयादिबोधक (Exclamatory):</strong> तीव्र भावना व्यक्त करता है। विस्मयादिबोधक चिह्न के साथ समाप्त होता है। उदाहरण: कितना सुंदर दिन है!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sentence-grid">
+                    <div class="sentence-card"><span class="s-icon">📖</span><div class="s-name">Declarative</div><div class="s-desc">Statement / Fact</div></div>
+                    <div class="sentence-card"><span class="s-icon">❓</span><div class="s-name">Interrogative</div><div class="s-desc">Question</div></div>
+                    <div class="sentence-card"><span class="s-icon">👆</span><div class="s-name">Imperative</div><div class="s-desc">Command / Request</div></div>
+                    <div class="sentence-card"><span class="s-icon">❗</span><div class="s-name">Exclamatory</div><div class="s-desc">Strong Emotion</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.9 सरल वाक्य लिखना (Writing Simple Sentences)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-9">
+            <div class="section-header">
+                <span class="icon">✍️</span>
+                <span class="title">4.9 सरल वाक्य लिखना <span class="subtitle">(Writing Simple Sentences)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Every complete sentence has 3 parts:</strong></p>
+                        <ul>
+                            <li><strong>Subject</strong> – what or whom the sentence is about.</li>
+                            <li><strong>Verb (action word)</strong> – what the subject does.</li>
+                            <li><strong>Object</strong> – tells us something about the subject.</li>
+                        </ul>
+                        <p><strong>Word order:</strong> Subject → Verb → Object.</p>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>The little boy <strong>is hiding</strong> under the table.</li>
+                            <li>Brazil <strong>is</strong> popular for football.</li>
+                            <li>The students <strong>listen to</strong> the teacher.</li>
+                        </ul>
+                        <p><strong>Tip:</strong> Always put the subject first in a sentence.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>प्रत्येक पूर्ण वाक्य के 3 भाग होते हैं:</strong></p>
+                        <ul>
+                            <li><strong>उद्देश्य (Subject)</strong> – वाक्य किसके बारे में है।</li>
+                            <li><strong>क्रिया (Verb)</strong> – उद्देश्य क्या करता है।</li>
+                            <li><strong>कर्म (Object)</strong> – उद्देश्य के बारे में कुछ बताता है।</li>
+                        </ul>
+                        <p><strong>शब्द क्रम:</strong> उद्देश्य → क्रिया → कर्म।</p>
+                        <p><strong>उदाहरण:</strong></p>
+                        <ul>
+                            <li>छोटा लड़का मेज के नीचे <strong>छिपा है</strong>।</li>
+                            <li>ब्राजील फुटबॉल के लिए <strong>प्रसिद्ध है</strong>।</li>
+                            <li>छात्र शिक्षक की <strong>बात सुनते हैं</strong>।</li>
+                        </ul>
+                        <p><strong>टिप:</strong> वाक्य में हमेशा उद्देश्य को पहले रखें।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.10 पठन गतिविधि (Reading Activity)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-10">
+            <div class="section-header">
+                <span class="icon">📖</span>
+                <span class="title">4.10 पठन गतिविधि <span class="subtitle">(Reading Activity)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>We read for three reasons:</strong></p>
+                        <ul>
+                            <li><strong>Reading for information:</strong> To gain knowledge and learn new things.</li>
+                            <li><strong>Reading for instructions:</strong> To follow rules, fill forms, and complete tasks.</li>
+                            <li><strong>Reading for entertainment:</strong> To enjoy stories, news, and articles.</li>
+                        </ul>
+                        <p><strong>Understanding posters and signs:</strong></p>
+                        <ul>
+                            <li>Look at the title – it tells you what the poster is about.</li>
+                            <li>Read the highlighted points – they give a summary.</li>
+                            <li>Read the details – they explain everything.</li>
+                        </ul>
+                        <p><strong>Common symbols:</strong></p>
+                        <ul>
+                            <li><strong>Red</strong> – something must not be done.</li>
+                            <li><strong>Yellow</strong> – be careful, pay attention.</li>
+                            <li><strong>Recycle symbol</strong> – indicates recyclable items.</li>
+                            <li><strong>Power symbol</strong> – on/off button.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>हम तीन कारणों से पढ़ते हैं:</strong></p>
+                        <ul>
+                            <li><strong>जानकारी के लिए पढ़ना:</strong> ज्ञान प्राप्त करना और नई चीज़ें सीखना।</li>
+                            <li><strong>निर्देशों के लिए पढ़ना:</strong> नियमों का पालन करना, फॉर्म भरना और कार्य पूरा करना।</li>
+                            <li><strong>मनोरंजन के लिए पढ़ना:</strong> कहानियाँ, समाचार और लेखों का आनंद लेना।</li>
+                        </ul>
+                        <p><strong>पोस्टर और चिह्नों को समझना:</strong></p>
+                        <ul>
+                            <li>शीर्षक देखें – यह बताता है कि पोस्टर किस बारे में है।</li>
+                            <li>हाइलाइट किए गए बिंदुओं को पढ़ें – वे एक सारांश देते हैं।</li>
+                            <li>विवरण पढ़ें – वे सब कुछ समझाते हैं।</li>
+                        </ul>
+                        <p><strong>सामान्य प्रतीक:</strong></p>
+                        <ul>
+                            <li><strong>लाल</strong> – कुछ नहीं किया जाना चाहिए।</li>
+                            <li><strong>पीला</strong> – सावधान रहें, ध्यान दें।</li>
+                            <li><strong>रीसायकल प्रतीक</strong> – पुन: चक्रित वस्तुओं को दर्शाता है।</li>
+                            <li><strong>पावर प्रतीक</strong> – ऑन/ऑफ बटन।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.11 बोलना (Speaking)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-11">
+            <div class="section-header">
+                <span class="icon">🗣️</span>
+                <span class="title">4.11 बोलना <span class="subtitle">(Speaking)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Good communication is more than just the right words.</strong></p>
+                        <ul>
+                            <li><strong>Voice expressions:</strong> Use a happy voice for exciting topics, and a calm voice for serious topics. Speak loudly and slowly in a crowd.</li>
+                            <li><strong>Facial expressions:</strong> Eye contact is very important. It shows you are confident and connected.</li>
+                            <li><strong>Facts vs Opinions:</strong> A fact can be checked (e.g., "Apples contain Vitamin C"). An opinion is personal (e.g., "Apples are better than bananas"). Use phrases like "I feel that..." or "In my opinion..." to share opinions respectfully.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>अच्छा संचार सिर्फ सही शब्दों से अधिक है।</strong></p>
+                        <ul>
+                            <li><strong>आवाज की अभिव्यक्ति:</strong> उत्साहजनक विषयों के लिए खुश आवाज़ का उपयोग करें, और गंभीर विषयों के लिए शांत आवाज़ का। भीड़ में जोर से और धीरे बोलें।</li>
+                            <li><strong>चेहरे की अभिव्यक्ति:</strong> आँखों का संपर्क बहुत महत्वपूर्ण है। यह दिखाता है कि आप आत्मविश्वासी और जुड़े हुए हैं।</li>
+                            <li><strong>तथ्य बनाम राय:</strong> एक तथ्य की जाँच की जा सकती है (जैसे, "सेब में विटामिन C होता है")। एक राय व्यक्तिगत होती है (जैसे, "सेब केले से बेहतर हैं")। विनम्रता से राय साझा करने के लिए "मुझे लगता है कि..." या "मेरी राय में..." जैसे वाक्यांशों का उपयोग करें।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.12 सुनना (Listening)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-12">
+            <div class="section-header">
+                <span class="icon">👂</span>
+                <span class="title">4.12 सुनना <span class="subtitle">(Listening)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Effective communication is being able to both speak well and listen well.</strong></p>
+                        <p><strong>Why listening is important:</strong></p>
+                        <ul>
+                            <li>To get information (e.g., news, announcements).</li>
+                            <li>To follow instructions (e.g., in the classroom or workplace).</li>
+                            <li>To build relationships and for entertainment.</li>
+                        </ul>
+                        <p><strong>How to practice listening:</strong></p>
+                        <ul>
+                            <li>Spend 15 minutes every day listening to news or speeches without distractions.</li>
+                            <li>Summarize what you heard in 2-3 sentences.</li>
+                            <li>While your teacher speaks, try to write down the key words.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>प्रभावी संचार अच्छी तरह से बोलने और अच्छी तरह से सुनने दोनों में सक्षम होना है।</strong></p>
+                        <p><strong>सुनना क्यों महत्वपूर्ण है:</strong></p>
+                        <ul>
+                            <li>जानकारी प्राप्त करने के लिए (जैसे, समाचार, घोषणाएँ)।</li>
+                            <li>निर्देशों का पालन करने के लिए (जैसे, कक्षा या कार्यस्थल में)।</li>
+                            <li>संबंध बनाने और मनोरंजन के लिए।</li>
+                        </ul>
+                        <p><strong>सुनने का अभ्यास कैसे करें:</strong></p>
+                        <ul>
+                            <li>प्रतिदिन 15 मिनट बिना किसी विकर्षण के समाचार या भाषण सुनें।</li>
+                            <li>आपने जो सुना उसे 2-3 वाक्यों में सारांशित करें।</li>
+                            <li>जब आपके शिक्षक बोल रहे हों, तो मुख्य शब्दों को लिखने का प्रयास करें।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.13 पसंद-नापसंद के बारे में बात करना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-13">
+            <div class="section-header">
+                <span class="icon">👍👎</span>
+                <span class="title">4.13 पसंद-नापसंद के बारे में बात करना <span class="subtitle">(Likes and Dislikes)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Phrases to talk about likes:</strong></p>
+                        <ul>
+                            <li>I like… / I love… / I adore… / I enjoy… / I'm crazy about… / I'm fond of…</li>
+                        </ul>
+                        <p><strong>Phrases to talk about dislikes:</strong></p>
+                        <ul>
+                            <li>I don't like… / I hate… / I detest… / I can't bear… / I don't mind… (neutral)</li>
+                        </ul>
+                        <p><strong>Examples:</strong></p>
+                        <ul>
+                            <li>"I like eating ice cream."</li>
+                            <li>"I hate watching the news."</li>
+                            <li>"I don't mind studying physics."</li>
+                        </ul>
+                        <p><strong>To talk about others:</strong> "She is fond of her little sister." / "He is crazy about cricket."</p>
+                        <p><strong>Emphasis:</strong> "She likes her car <strong>a lot</strong>." / "He loves his puppy <strong>very much</strong>."</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>पसंद के बारे में बात करने के वाक्यांश:</strong></p>
+                        <ul>
+                            <li>मुझे पसंद है… / मुझे बहुत पसंद है… / मैं प्यार करता हूँ… / मैं आनंद लेता हूँ… / मैं दीवाना हूँ… / मैं शौकीन हूँ…</li>
+                        </ul>
+                        <p><strong>नापसंद के बारे में बात करने के वाक्यांश:</strong></p>
+                        <ul>
+                            <li>मुझे पसंद नहीं… / मुझे नफरत है… / मुझे घृणा है… / मैं बर्दाश्त नहीं कर सकता… / मुझे कोई आपत्ति नहीं… (तटस्थ)</li>
+                        </ul>
+                        <p><strong>उदाहरण:</strong></p>
+                        <ul>
+                            <li>"मुझे आइसक्रीम खाना पसंद है।"</li>
+                            <li>"मुझे समाचार देखने से नफरत है।"</li>
+                            <li>"मुझे भौतिकी पढ़ने में कोई आपत्ति नहीं।"</li>
+                        </ul>
+                        <p><strong>दूसरों के बारे में बात करना:</strong> "वह अपनी छोटी बहन से प्यार करती है।" / "वह क्रिकेट का दीवाना है।"</p>
+                        <p><strong>जोर देने के लिए:</strong> "उसे अपनी कार <strong>बहुत</strong> पसंद है।" / "वह अपने पिल्ले से <strong>बहुत</strong> प्यार करता है।"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.14 अभिवादन और स्व-परिचय
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-14">
+            <div class="section-header">
+                <span class="icon">🙋</span>
+                <span class="title">4.14 अभिवादन और स्व-परिचय <span class="subtitle">(Greetings and Self-Introduction)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Formal Greetings:</strong> Good morning, Good afternoon, Good evening, Hello, How are you?, It's nice to meet you.</p>
+                        <p><strong>Informal Greetings:</strong> Hi, Hey, What's up?, Long time, no see!</p>
+                        <p><strong>Self-introduction (6 parts):</strong></p>
+                        <ol>
+                            <li>Your name.</li>
+                            <li>What you do (student or work).</li>
+                            <li>Personal/interesting information.</li>
+                            <li>Another activity or interest.</li>
+                            <li>Something you like doing.</li>
+                            <li>A personal strength or positive attribute.</li>
+                        </ol>
+                        <p><strong>Example:</strong> "Hello everyone! My name is Shamini, and I am a student at Ashoka University. I am studying to be a librarian. I chose my course because I enjoy reading. I'm also a basketball player. The happiest part of my day is when I spend time with children. I'm a patient teacher and a good listener."</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>औपचारिक अभिवादन:</strong> सुप्रभात, शुभ अपराह्न, शुभ संध्या, नमस्ते, आप कैसे हैं?, आपसे मिलकर अच्छा लगा।</p>
+                        <p><strong>अनौपचारिक अभिवादन:</strong> नमस्ते, हे, क्या हाल है?, बहुत दिनों बाद!</p>
+                        <p><strong>स्व-परिचय (6 भाग):</strong></p>
+                        <ol>
+                            <li>आपका नाम।</li>
+                            <li>आप क्या करते हैं (छात्र या काम)।</li>
+                            <li>व्यक्तिगत/रोचक जानकारी।</li>
+                            <li>एक और गतिविधि या रुचि।</li>
+                            <li>आपको क्या करना पसंद है।</li>
+                            <li>एक व्यक्तिगत ताकत या सकारात्मक गुण।</li>
+                        </ol>
+                        <p><strong>उदाहरण:</strong> "नमस्ते सभी! मेरा नाम शमिनी है, और मैं अशोका विश्वविद्यालय में छात्रा हूँ। मैं एक लाइब्रेरियन बनने के लिए पढ़ रही हूँ। मैंने यह कोर्स इसलिए चुना क्योंकि मुझे पढ़ना पसंद है। मैं एक बास्केटबॉल खिलाड़ी भी हूँ। मेरे दिन का सबसे सुखद हिस्सा तब होता है जब मैं बच्चों के साथ समय बिताती हूँ। मैं एक धैर्यवान शिक्षिका और अच्छी श्रोता हूँ।"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.15 प्रश्न पूछना और उत्तर देना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-15">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <span class="title">4.15 प्रश्न पूछना और उत्तर देना <span class="subtitle">(Asking and Responding to Questions)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Question words (Wh- questions):</strong> Who, What, When, Where, Why, How.</p>
+                        <p><strong>Yes/No questions:</strong> Do you…? Are you…? Can you…?</p>
+                        <p><strong>Responses:</strong> A question requires an answer. Always respond with a full sentence in formal situations.</p>
+                        <p><strong>Example:</strong> Q: "What time is the meeting?" A: "It's at 4 pm."</p>
+                        <p><strong>If you don't know:</strong> "I'm not sure." / "I don't mind."</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>प्रश्न शब्द (Wh- प्रश्न):</strong> कौन, क्या, कब, कहाँ, क्यों, कैसे।</p>
+                        <p><strong>हाँ/नहीं प्रश्न:</strong> क्या आप…? क्या आप हैं…? क्या आप कर सकते हैं…?</p>
+                        <p><strong>उत्तर:</strong> एक प्रश्न के लिए उत्तर की आवश्यकता होती है। औपचारिक स्थितियों में हमेशा पूर्ण वाक्य में उत्तर दें।</p>
+                        <p><strong>उदाहरण:</strong> प्रश्न: "बैठक कितने बजे है?" उत्तर: "शाम 4 बजे है।"</p>
+                        <p><strong>यदि आप नहीं जानते:</strong> "मुझे यकीन नहीं है।" / "मुझे कोई आपत्ति नहीं।"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.16 समूह चर्चा (Group Discussion)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-16">
+            <div class="section-header">
+                <span class="icon">👥</span>
+                <span class="title">4.16 समूह चर्चा <span class="subtitle">(Group Discussion)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Group discussion</strong> is when many people share their thoughts on a topic. It helps you learn more, solve problems, discuss new ideas, and understand different views.</p>
+                        <p><strong>Tips for group discussion:</strong></p>
+                        <ul>
+                            <li>Understand the purpose and stick to the point.</li>
+                            <li>Be prepared – research the topic and write notes.</li>
+                            <li>Speak confidently – use a clear firm voice.</li>
+                            <li>Maintain eye contact – it grabs attention.</li>
+                            <li>Listen attentively – don't be distracted.</li>
+                            <li>Do not interrupt – raise your hand if you want to speak.</li>
+                        </ul>
+                        <p><strong>Useful expressions:</strong></p>
+                        <ul>
+                            <li><strong>Opinion:</strong> "In my opinion…" / "It seems to me that…"</li>
+                            <li><strong>Facts:</strong> "We must keep in mind that…" / "The fact is that…"</li>
+                            <li><strong>Agreeing:</strong> "I agree with…" / "You are absolutely right."</li>
+                            <li><strong>Disagreeing:</strong> "I don't quite agree…" / "I'm not convinced that…"</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>समूह चर्चा (Group discussion)</strong> तब होती है जब बहुत से लोग किसी विषय पर अपने विचार साझा करते हैं। यह आपको अधिक सीखने, बड़ी समस्याओं को हल करने, नए विचारों पर चर्चा करने और विभिन्न दृष्टिकोणों को समझने में मदद करती है।</p>
+                        <p><strong>समूह चर्चा के टिप्स:</strong></p>
+                        <ul>
+                            <li>उद्देश्य समझें और मुद्दे पर बने रहें।</li>
+                            <li>तैयार रहें – विषय पर शोध करें और नोट्स लिखें।</li>
+                            <li>आत्मविश्वास से बोलें – स्पष्ट और दृढ़ आवाज़ का उपयोग करें।</li>
+                            <li>आँखों का संपर्क बनाए रखें – यह ध्यान आकर्षित करता है।</li>
+                            <li>ध्यान से सुनें – विचलित न हों।</li>
+                            <li>बीच में न बोलें – बोलने के लिए हाथ उठाएँ।</li>
+                        </ul>
+                        <p><strong>उपयोगी अभिव्यक्तियाँ:</strong></p>
+                        <ul>
+                            <li><strong>राय:</strong> "मेरी राय में…" / "मुझे ऐसा लगता है कि…"</li>
+                            <li><strong>तथ्य:</strong> "हमें ध्यान रखना चाहिए कि…" / "तथ्य यह है कि…"</li>
+                            <li><strong>सहमति:</strong> "मैं सहमत हूँ…" / "आप बिल्कुल सही हैं।"</li>
+                            <li><strong>असहमति:</strong> "मैं पूरी तरह सहमत नहीं…" / "मुझे यकीन नहीं है कि…"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.17 टेलीफोन कौशल (Telephone Skills)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-17">
+            <div class="section-header">
+                <span class="icon">📞</span>
+                <span class="title">4.17 टेलीफोन कौशल <span class="subtitle">(Telephone Skills)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>3 phases of a telephone call:</strong></p>
+                        <ul>
+                            <li><strong>Beginning:</strong> Greet the person and introduce yourself.</li>
+                            <li><strong>Middle:</strong> Say why you are calling and discuss what needs to be done.</li>
+                            <li><strong>End:</strong> Thank the person and say goodbye.</li>
+                        </ul>
+                        <p><strong>Professional phrases:</strong></p>
+                        <ul>
+                            <li>"Hi, it's [your name] from [company name]."</li>
+                            <li>"Am I speaking to [person's name]?"</li>
+                            <li>"I'm calling to discuss…"</li>
+                            <li>"Is it a good time for us to talk now?"</li>
+                            <li>"Could you please repeat that?"</li>
+                            <li>"Let me see if I got that right."</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>टेलीफोन कॉल के 3 चरण:</strong></p>
+                        <ul>
+                            <li><strong>शुरुआत:</strong> व्यक्ति का अभिवादन करें और अपना परिचय दें।</li>
+                            <li><strong>मध्य:</strong> बताएं कि आप क्यों कॉल कर रहे हैं और चर्चा करें कि क्या करने की आवश्यकता है।</li>
+                            <li><strong>अंत:</strong> व्यक्ति को धन्यवाद दें और अलविदा कहें।</li>
+                        </ul>
+                        <p><strong>व्यावसायिक वाक्यांश:</strong></p>
+                        <ul>
+                            <li>"नमस्ते, मैं [आपका नाम] हूँ [कंपनी का नाम] से।"</li>
+                            <li>"क्या मैं [व्यक्ति का नाम] से बात कर रहा हूँ?"</li>
+                            <li>"मैं चर्चा करने के लिए कॉल कर रहा हूँ…"</li>
+                            <li>"क्या अब बात करने का सही समय है?"</li>
+                            <li>"क्या आप कृपया इसे दोहरा सकते हैं?"</li>
+                            <li>"मुझे जाँचने दें कि मैंने सही समझा।"</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.18 नौकरी विवरण पढ़ना और समझना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-18">
+            <div class="section-header">
+                <span class="icon">📄</span>
+                <span class="title">4.18 नौकरी विवरण पढ़ना और समझना <span class="subtitle">(Job Descriptions)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>A job description</strong> is a document that has all the details about a job. It helps you understand if the job is a good fit for you.</p>
+                        <p><strong>Parts of a job description:</strong></p>
+                        <ul>
+                            <li><strong>Job Title:</strong> The name of the role.</li>
+                            <li><strong>Summary:</strong> Brief description of the company and job.</li>
+                            <li><strong>Responsibilities and Duties:</strong> What you will do.</li>
+                            <li><strong>Qualifications and Skills:</strong> What you need to have (compulsory and preferred).</li>
+                            <li><strong>Other details:</strong> Location, how to apply, deadline.</li>
+                        </ul>
+                        <p><strong>Tip:</strong> Always read the job description carefully before applying. Check if your skills match the requirements.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>नौकरी विवरण (Job description)</strong> एक दस्तावेज़ है जिसमें नौकरी के बारे में सभी विवरण होते हैं। यह आपको समझने में मदद करता है कि क्या नौकरी आपके लिए उपयुक्त है।</p>
+                        <p><strong>नौकरी विवरण के भाग:</strong></p>
+                        <ul>
+                            <li><strong>नौकरी का शीर्षक:</strong> भूमिका का नाम।</li>
+                            <li><strong>सारांश:</strong> कंपनी और नौकरी का संक्षिप्त विवरण।</li>
+                            <li><strong>जिम्मेदारियाँ और कर्तव्य:</strong> आपको क्या करना होगा।</li>
+                            <li><strong>योग्यताएँ और कौशल:</strong> आपके पास क्या होना चाहिए (अनिवार्य और वांछित)।</li>
+                            <li><strong>अन्य विवरण:</strong> स्थान, आवेदन कैसे करें, अंतिम तिथि।</li>
+                        </ul>
+                        <p><strong>टिप:</strong> आवेदन करने से पहले हमेशा नौकरी विवरण को ध्यान से पढ़ें। जाँच करें कि आपके कौशल आवश्यकताओं से मेल खाते हैं या नहीं।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.19 कार्यस्थल के बारे में बात करना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-19">
+            <div class="section-header">
+                <span class="icon">🏢</span>
+                <span class="title">4.19 कार्यस्थल के बारे में बात करना <span class="subtitle">(Speak about Workplace)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Questions to talk about your job:</strong></p>
+                        <ul>
+                            <li>"What do you do?"</li>
+                            <li>"What do you do for work?"</li>
+                            <li>"What line of work are you in?"</li>
+                        </ul>
+                        <p><strong>Positive words to describe work:</strong> Exciting, Engaging, Rewarding.</p>
+                        <p><strong>Negative words to describe work:</strong> Boring, Stressful, Challenging.</p>
+                        <p><strong>Phrases about coworkers:</strong></p>
+                        <ul>
+                            <li>"I love the team I am working in."</li>
+                            <li>"My colleagues are great."</li>
+                            <li>"I like the job flexibility."</li>
+                        </ul>
+                        <p><strong>Tip:</strong> Be careful about speaking negatively about your workplace. It's not appropriate during office conversations or job interviews.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>अपनी नौकरी के बारे में बात करने के प्रश्न:</strong></p>
+                        <ul>
+                            <li>"आप क्या करते हैं?"</li>
+                            <li>"आप काम के लिए क्या करते हैं?"</li>
+                            <li>"आप किस क्षेत्र में काम करते हैं?"</li>
+                        </ul>
+                        <p><strong>काम का वर्णन करने के लिए सकारात्मक शब्द:</strong> रोमांचक, आकर्षक, फायदेमंद।</p>
+                        <p><strong>काम का वर्णन करने के लिए नकारात्मक शब्द:</strong> उबाऊ, तनावपूर्ण, चुनौतीपूर्ण।</p>
+                        <p><strong>सहकर्मियों के बारे में वाक्यांश:</strong></p>
+                        <ul>
+                            <li>"मुझे वह टीम पसंद है जिसमें मैं काम कर रहा हूँ।"</li>
+                            <li>"मेरे सहकर्मी बहुत अच्छे हैं।"</li>
+                            <li>"मुझे नौकरी का लचीलापन पसंद है।"</li>
+                        </ul>
+                        <p><strong>टिप:</strong> अपने कार्यस्थल के बारे में नकारात्मक बात करने में सावधानी बरतें। कार्यालय की बातचीत या नौकरी के साक्षात्कार के दौरान यह उचित नहीं है।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    4.20 नौकरी आवेदन और कवर लेटर लिखना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="eng-4-20">
+            <div class="section-header">
+                <span class="icon">📧</span>
+                <span class="title">4.20 नौकरी आवेदन और कवर लेटर लिखना <span class="subtitle">(Writing Applications & Cover Letters)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Job application types:</strong></p>
+                        <ul>
+                            <li><strong>In-person:</strong> Interview at a specified date and time.</li>
+                            <li><strong>Paper:</strong> Download, fill, and post the form.</li>
+                            <li><strong>Online:</strong> Fill and submit an online form.</li>
+                        </ul>
+                        <p><strong>Common details in an online application:</strong> Name, contact details, education, work experience, skills.</p>
+                        <p><strong>Email job application (6 steps):</strong></p>
+                        <ol>
+                            <li><strong>Subject line:</strong> Include your name and the job title.</li>
+                            <li><strong>Greeting:</strong> "Dear Sir/Madam" or "Dear [Name]".</li>
+                            <li><strong>First paragraph:</strong> Explain purpose and where you saw the job.</li>
+                            <li><strong>Second paragraph:</strong> Highlight your skills and achievements.</li>
+                            <li><strong>Last paragraph:</strong> Thank them and mention attached resume.</li>
+                            <li><strong>Closing:</strong> "Sincerely" or "Best" with your full name.</li>
+                        </ol>
+                        <p><strong>Cover letter types:</strong></p>
+                        <ul>
+                            <li><strong>Application cover letter:</strong> Sent with the job application.</li>
+                            <li><strong>Referral cover letter:</strong> When someone refers you.</li>
+                            <li><strong>Prospecting cover letter:</strong> Expressing interest in a company.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>नौकरी आवेदन के प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>व्यक्तिगत:</strong> निर्दिष्ट तिथि और समय पर साक्षात्कार।</li>
+                            <li><strong>पेपर:</strong> फॉर्म डाउनलोड करें, भरें और पोस्ट करें।</li>
+                            <li><strong>ऑनलाइन:</strong> ऑनलाइन फॉर्म भरें और सबमिट करें।</li>
+                        </ul>
+                        <p><strong>ऑनलाइन आवेदन में सामान्य विवरण:</strong> नाम, संपर्क विवरण, शिक्षा, कार्य अनुभव, कौशल।</p>
+                        <p><strong>ईमेल नौकरी आवेदन (6 चरण):</strong></p>
+                        <ol>
+                            <li><strong>विषय पंक्ति:</strong> अपना नाम और नौकरी का शीर्षक शामिल करें।</li>
+                            <li><strong>अभिवादन:</strong> "प्रिय महोदय/महोदया" या "प्रिय [नाम]"।</li>
+                            <li><strong>पहला पैराग्राफ:</strong> उद्देश्य बताएँ और नौकरी कहाँ देखी।</li>
+                            <li><strong>दूसरा पैराग्राफ:</strong> अपने कौशल और उपलब्धियों को उजागर करें।</li>
+                            <li><strong>अंतिम पैराग्राफ:</strong> धन्यवाद दें और संलग्न रिज्यूमे का उल्लेख करें।</li>
+                            <li><strong>समापन:</strong> "भवदीय" या "सादर" के साथ पूरा नाम।</li>
+                        </ol>
+                        <p><strong>कवर लेटर के प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>आवेदन कवर लेटर:</strong> नौकरी आवेदन के साथ भेजा जाता है।</li>
+                            <li><strong>रेफरल कवर लेटर:</strong> जब कोई आपको रेफर करता है।</li>
+                            <li><strong>प्रॉस्पेक्टिंग कवर लेटर:</strong> किसी कंपनी में रुचि व्यक्त करना।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    MCQ LINK
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="mcq">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <span class="title">MCQ अभ्यास / बहुविकल्पीय प्रश्न</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="mcq-link">
+                    <p><strong>📌 इस मॉड्यूल के बहुविकल्पीय प्रश्नों का अभ्यास करने के लिए नीचे क्लिक करें।</strong></p>
+                    <a href="/question-bank/employability-skills/module-4.html" target="_blank">📝 प्रश्न बैंक पर जाएँ →</a>
+                    <p style="margin-top:10px; font-size:0.9rem; color:#888;">(नई टैब में खुलेगा)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    RELATED CHAPTERS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="related">
+            <div class="section-header">
+                <span class="icon">🔗</span>
+                <span class="title">संबंधित मॉड्यूल / Related Modules</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div style="display:flex; flex-wrap:wrap; gap:12px;">
+                    <a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 1: एम्प्लॉयबिलिटी स्किल्स का महत्व</a>
+                    <a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 2: संवैधानिक मूल्य – नागरिकता</a>
+                    <a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 3: 21वीं सदी में पेशेवर बनना</a>
+                    <a href="../fitter/index.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">🔧 फिटर ट्रेड नोट्स</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    COMMENTS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comments">
+            <div class="section-header">
+                <span class="icon">💬</span>
+                <span class="title">टिप्पणियाँ – मॉडरेशन के साथ</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="comments-section">
+                    <p>💬 <strong>इस मॉड्यूल के बारे में अपने विचार या प्रश्न साझा करें।</strong></p>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 सभी टिप्पणियाँ प्रकाशित होने से पहले एडमिन द्वारा समीक्षा की जाती हैं।</p>
+                    <textarea id="comment-text" rows="3" placeholder="अपनी टिप्पणी यहाँ लिखें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
+                    <input type="text" id="comment-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <button onclick="postComment()" class="btn" style="margin-top:6px;">💬 टिप्पणी पोस्ट करें (समीक्षाधीन)</button>
+                    <div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
+                        <div class="comment-item">
+                            <strong>Admin</strong> <span class="meta">(मॉडरेटर)</span> <span class="status-approved">✅ स्वीकृत</span>
+                            <p style="margin:4px 0 0 0; font-size:0.95rem;">मॉड्यूल 4 में आपका स्वागत है! अंग्रेजी व्याकरण, वाक्य लेखन और संचार कौशल के बारे में प्रश्न पूछने में संकोच न करें।</p>
+                        </div>
+                        <p style="color:#888; font-style:italic; margin-top:8px;">आपकी टिप्पणी एडमिन अनुमोदन के बाद यहाँ दिखाई देगी।</p>
+                    </div>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ टिप्पणियाँ मॉडरेट की जाती हैं। कृपया विनम्र रहें।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    ADMIN PANEL
+    ============================================================ -->
+    <div class="container">
+        <div class="admin-toggle" onclick="toggleAdminPanel()">
+            <span class="key-icon">🔑</span>
+            <strong>Admin Panel</strong> – Comments Management
+            <span style="color:#888; font-weight:400; font-size:0.85rem; display:block; margin-top:4px;">(Click to open/close admin panel)</span>
+        </div>
+        <div class="admin-panel" id="adminPanel">
+            <div class="admin-header">
+                <h3>🔐 Comment Moderation</h3>
+                <button class="close-btn" onclick="toggleAdminPanel()">✕ Close</button>
+            </div>
+            <div class="admin-password-box" id="adminLogin">
+                <input type="password" id="adminPassword" placeholder="Enter admin password..." onkeyup="if(event.key==='Enter') checkAdminPassword()">
+                <button onclick="checkAdminPassword()">🔓 Login</button>
+                <span class="error-msg" id="passwordError">❌ Wrong password! Try again.</span>
+            </div>
+            <div id="adminContent" style="display:none;">
+                <div class="comment-stats" id="commentStats">
+                    <span>📊 Total: <span class="count" id="totalCount">0</span></span>
+                    <span>⏳ Pending: <span class="count" id="pendingCount">0</span></span>
+                    <span>✅ Approved: <span class="count" id="approvedCount">0</span></span>
+                    <span>❌ Rejected: <span class="count" id="rejectedCount">0</span></span>
+                </div>
+                <div id="adminCommentList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    TOPIC REQUEST
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="topicrequest">
+            <div class="section-header">
+                <span class="icon">💭</span>
+                <span class="title">विषय अनुरोध</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="topic-request">
+                    <p>📝 <strong>कोई नया विषय या सुधार सुझाएँ।</strong></p>
+                    <input type="text" id="topic-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <input type="email" id="topic-email" placeholder="आपका ईमेल (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <textarea id="topic-message" rows="4" placeholder="जिस विषय या सुधार को आप देखना चाहते हैं, उसका वर्णन करें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
+                    <button onclick="submitTopicRequest()" class="btn">📤 अनुरोध सबमिट करें</button>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ आपके अनुरोध की समीक्षा एडमिन द्वारा की जाएगी और जल्द ही जोड़ा जाएगा।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    SUGGESTIONS & DISCLAIMER
+    ============================================================ -->
+    <div class="container" style="margin-top:16px;">
+        <div style="background:#fff; border-radius:14px; padding:20px 24px; border:1px solid #e6eaef; margin-bottom:20px;">
+            <h2 style="color:#003366; font-size:1.3rem; margin:0 0 6px;">💬 सुझाव दें</h2>
+            <p style="margin:0 0 12px;">यदि इस मॉड्यूल में कोई सुधार सुझाना है, तो हमें बताएं।</p>
+            <a href="/contact.html" class="btn">💬 यहाँ क्लिक करें →</a>
+        </div>
+        <div style="background:#fff8e1; border-radius:14px; padding:18px 22px; border:1px solid #ffe082; margin-bottom:20px;">
+            <h2 style="color:#856404; font-size:1.2rem; margin:0 0 4px;">⚠ अस्वीकरण</h2>
+            <p style="margin:0; font-size:0.95rem; color:#6c6c6c;">ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="/disclaimer.html">अस्वीकरण</a>
+            <a href="/privacy-policy.html">गोपनीयता नीति</a>
+            <a href="/terms.html">नियम</a>
+            <a href="/contact.html">संपर्क</a>
+        </div>
+        <p>© 2026 ITI Study Centre. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
+    <button id="scrollTop" title="ऊपर जाएँ">⬆</button>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('📚 सामग्री सुरक्षित है। कृपया इस पेज को शेयर करने के लिए शेयर बटन का उपयोग करें।');
+        });
+
+        // Disable Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 सामग्री कॉपी करना प्रतिबंधित है। कृपया शेयर बटन का उपयोग करें।');
+            }
+        });
+
+        // Search
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        // Share functions
+        function getPageUrl() { return window.location.href; }
+
+        function getPageTitle() { return document.querySelector('title').textContent; }
+
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle() + ' - इसे पढ़ें!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareFacebook() {
+            const url = getPageUrl();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareTwitter() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(url), '_blank');
+        }
+
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ कॉपी हो गया!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        span.textContent = 'लिंक कॉपी करें';
+                        btn.classList.remove('copied');
+                    }, 3000);
+                }).catch(() => { fallbackCopy(url); });
+            } else {
+                fallbackCopy(url);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ कॉपी हो गया!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    span.textContent = 'लिंक कॉपी करें';
+                    btn.classList.remove('copied');
+                }, 3000);
+            } catch (err) {
+                alert('कॉपी नहीं हो पाया। कृपया URL को मैन्युअल रूप से कॉपी करें।');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // ============================================================
+        // COMMENT SYSTEM
+        // ============================================================
+        const ADMIN_PASSWORD = 'admin123';
+        const STORAGE_KEY = 'module4_comments';
+
+        function getComments() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch {
+                return [];
+            }
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
+        }
+
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+        }
+
+        function getTimeAgo(timestamp) {
+            const diff = Date.now() - timestamp;
+            const minutes = Math.floor(diff / 60000);
+            if (minutes < 1) return 'Just now';
+            if (minutes < 60) return minutes + 'm ago';
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return hours + 'h ago';
+            const days = Math.floor(hours / 24);
+            return days + 'd ago';
+        }
+
+        function renderPublicComments() {
+            const list = document.getElementById('comment-list');
+            if (!list) return;
+            const comments = getComments();
+            const approved = comments.filter(c => c.status === 'approved');
+
+            const noMsg = list.querySelector('.no-comments-msg');
+            if (noMsg) noMsg.remove();
+
+            // Remove existing comment items (except the admin sample)
+            const existingItems = list.querySelectorAll('.comment-item');
+            existingItems.forEach(el => {
+                if (!el.querySelector('.status-approved') || !el.querySelector('strong')?.textContent?.includes('Admin')) {
+                    el.remove();
+                }
+            });
+
+            if (approved.length === 0) {
+                let noMsgEl = document.createElement('p');
+                noMsgEl.className = 'no-comments-msg';
+                noMsgEl.textContent = 'No approved comments yet. Be the first to comment!';
+                list.appendChild(noMsgEl);
+                return;
+            }
+
+            approved.forEach(comment => {
+                const div = document.createElement('div');
+                div.className = 'comment-item';
+                div.innerHTML = `
+                    <strong>${comment.name}</strong>
+                    <span class="meta">(${getTimeAgo(comment.timestamp)})</span>
+                    <span class="status-approved">✅ Approved</span>
+                    <p style="margin:4px 0 0 0; font-size:0.95rem;">${comment.text}</p>
+                `;
+                list.prepend(div);
+            });
+        }
+
+        function postComment() {
+            const text = document.getElementById('comment-text').value.trim();
+            const name = document.getElementById('comment-name').value.trim() || 'Anonymous';
+            if (!text) {
+                alert('Please write a comment.');
+                return;
+            }
+            const comments = getComments();
+            comments.push({ id: generateId(), name, text, timestamp: Date.now(), status: 'pending' });
+            saveComments(comments);
+            document.getElementById('comment-text').value = '';
+            document.getElementById('comment-name').value = '';
+            renderPublicComments();
+            renderAdminComments();
+            alert('✅ Your comment has been submitted for review.');
+        }
+
+        function checkAdminPassword() {
+            const input = document.getElementById('adminPassword');
+            const error = document.getElementById('passwordError');
+            if (input.value === ADMIN_PASSWORD) {
+                document.getElementById('adminLogin').style.display = 'none';
+                document.getElementById('adminContent').style.display = 'block';
+                renderAdminComments();
+                error.classList.remove('show');
+            } else {
+                error.classList.add('show');
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        function renderAdminComments() {
+            const container = document.getElementById('adminCommentList');
+            const comments = getComments();
+            document.getElementById('totalCount').textContent = comments.length;
+            document.getElementById('pendingCount').textContent = comments.filter(c => c.status === 'pending').length;
+            document.getElementById('approvedCount').textContent = comments.filter(c => c.status === 'approved').length;
+            document.getElementById('rejectedCount').textContent = comments.filter(c => c.status === 'rejected').length;
+
+            if (comments.length === 0) {
+                container.innerHTML = `<p class="no-comments-msg">No comments yet.</p>`;
+                return;
+            }
+
+            let html = '';
+            comments.forEach(comment => {
+                html += `
+                    <div class="admin-comment-item" data-id="${comment.id}">
+                        <div class="comment-info">
+                            <strong>${comment.name}</strong>
+                            <span class="time">${getTimeAgo(comment.timestamp)}</span>
+                            <span class="status ${comment.status}">${comment.status.charAt(0).toUpperCase() + comment.status.slice(1)}</span>
+                            <p style="margin:4px 0 0 0; font-size:0.9rem;">${comment.text}</p>
+                        </div>
+                        <div class="comment-actions">
+                            ${comment.status !== 'approved' ? `<button class="btn-approve" onclick="approveComment('${comment.id}')">✅ Approve</button>` : ''}
+                            ${comment.status !== 'rejected' ? `<button class="btn-reject" onclick="rejectComment('${comment.id}')">⛔ Reject</button>` : ''}
+                            <button class="btn-delete" onclick="deleteComment('${comment.id}')">🗑️ Delete</button>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function approveComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'approved' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function rejectComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'rejected' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function deleteComment(id) {
+            if (!confirm('Are you sure you want to delete this comment?')) return;
+            let comments = getComments();
+            comments = comments.filter(c => c.id !== id);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('open');
+            if (!panel.classList.contains('open')) {
+                document.getElementById('adminLogin').style.display = 'flex';
+                document.getElementById('adminContent').style.display = 'none';
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('passwordError').classList.remove('show');
+            }
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPublicComments();
+            // Override existing postComment
+            window.postComment = postComment;
+        });
+
+        // Scroll to top
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
+            ' ITI Study Centre. सर्वाधिकार सुरक्षित।';
+
+        console.log('मॉड्यूल 4 लोड हुआ: बुनियादी अंग्रेजी कौशल – 20 पाठ, पूरी तरह से खुला, द्विभाषी।');
+        console.log(`🔑 Admin Password: ${ADMIN_PASSWORD}`);
+    </script>
+</body>
+</html>
