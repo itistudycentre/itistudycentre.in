@@ -1,1 +1,2258 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>मॉड्यूल 9: उद्यमिता | ITI Study Centre</title>
+    <meta name="description" content="Employability Skills मॉड्यूल 9: उद्यमिता – पूरे नोट्स। हिंदी + अंग्रेजी में चार्ट और उदाहरण सहित।" />
+    <link rel="icon" href="/images/favicon.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.7;
+            user-select: none;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .main-header {
+            background: #003366;
+            padding: 14px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        .main-header nav a.notes-link {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb .current {
+            color: #555;
+            font-weight: 600;
+        }
+        .page-title {
+            padding: 30px 0 20px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.2rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 520px;
+            padding: 13px 18px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+        }
+        .search-section button {
+            padding: 13px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        @media (max-width: 640px) {
+            .search-section {
+                flex-direction: column;
+            }
+            .search-section input {
+                max-width: 100%;
+                width: 100%;
+            }
+            .search-section button {
+                width: 100%;
+            }
+        }
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            margin-bottom: 28px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 18px 26px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: default;
+            user-select: none;
+            flex-wrap: wrap;
+        }
+        .section-header .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .section-header .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body {
+            padding: 24px 28px;
+            background: #fafcff;
+        }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin: 28px 0 16px;
+            border-left: 4px solid #ffcc00;
+            padding-left: 16px;
+        }
+        .section-body h3:first-of-type {
+            margin-top: 0;
+        }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.1rem;
+            margin: 18px 0 10px;
+        }
+        .bilingual {
+            margin: 14px 0;
+        }
+        .bilingual .en {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1a2a3a;
+        }
+        .bilingual .hi {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #3d3d3d;
+            background: #f0f5ff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border-left: 5px solid #003366;
+            margin-top: 12px;
+        }
+        .bilingual ul,
+        .bilingual ol {
+            padding-left: 24px;
+            margin: 8px 0;
+        }
+        .bilingual ul li,
+        .bilingual ol li {
+            margin-bottom: 4px;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+        }
+        .info-card.blue {
+            border-left: 5px solid #003366;
+        }
+        .info-card.green {
+            border-left: 5px solid #28a745;
+        }
+        .info-card.orange {
+            border-left: 5px solid #ff9900;
+        }
+        .info-card.purple {
+            border-left: 5px solid #6f42c1;
+        }
+        .info-card.highlight {
+            border-left: 5px solid #ffc107;
+            background: #fffdf0;
+        }
+        .info-card.danger {
+            border-left: 5px solid #dc3545;
+            background: #fdf0f1;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) {
+            background: #f8f9fc;
+        }
+        .table-wrap tr:hover {
+            background: #eef2f7;
+        }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .example-box strong {
+            color: #003366;
+        }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .important-box ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .short-notes ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+        }
+        .step-list li {
+            counter-increment: step;
+            padding: 10px 16px 10px 56px;
+            position: relative;
+            background: #f8f9fc;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #e9ecef;
+            font-size: 0.98rem;
+        }
+        .step-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #003366;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .mcq-link {
+            background: #f0f5ff;
+            border: 2px solid #003366;
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            margin: 16px 0;
+        }
+        .mcq-link a {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #003366;
+            background: #fff;
+            padding: 10px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: 0.25s;
+            border: 1px solid #003366;
+        }
+        .mcq-link a:hover {
+            background: #003366;
+            color: #fff;
+            transform: scale(1.02);
+        }
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 20px;
+            padding: 14px 18px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover {
+            transform: scale(1.04);
+            opacity: 0.9;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+        }
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+        .share-btn.link {
+            background: #6c757d;
+        }
+        .share-btn.link.copied {
+            background: #28a745;
+        }
+        .share-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #003366;
+            color: #fff !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        .comments-section textarea,
+        .topic-request textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            resize: vertical;
+            font-family: inherit;
+            user-select: text;
+        }
+        .comments-section input,
+        .topic-request input {
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            width: 48%;
+            margin-right: 2%;
+            margin-bottom: 10px;
+            font-family: inherit;
+            user-select: text;
+        }
+        @media (max-width: 600px) {
+            .comments-section input,
+            .topic-request input {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .comment-item {
+            background: #f1f4f9;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #003366;
+        }
+        .comment-item .meta {
+            color: #888;
+            font-size: 0.8rem;
+        }
+        .comment-item .status-pending {
+            color: #ff9900;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #fff3cd;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        .comment-item .status-approved {
+            color: #28a745;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #d4edda;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 24px 20px;
+            text-align: center;
+            margin-top: 44px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 24px;
+            margin-bottom: 12px;
+        }
+        footer .footer-links a {
+            color: #b0b8c5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        footer .footer-links a:hover {
+            color: #fff;
+        }
+        footer p {
+            margin: 8px 0 0;
+            font-size: 0.85rem;
+            color: #7a8494;
+        }
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.25s;
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover {
+            background: #002244;
+            transform: scale(1.05);
+        }
+        .copy-protect::selection {
+            background: #b3d4fc;
+            color: #000;
+        }
+        .admin-toggle {
+            text-align: center;
+            margin: 20px 0;
+            padding: 12px;
+            background: #f8f9fc;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-toggle:hover {
+            background: #eef2f7;
+            border-color: #003366;
+        }
+        .admin-toggle .key-icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+        .admin-panel {
+            display: none;
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            border: 2px solid #003366;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .admin-panel.open {
+            display: block;
+        }
+        .admin-panel .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .admin-panel .admin-header h3 {
+            color: #003366;
+            margin: 0;
+        }
+        .admin-panel .admin-header .close-btn {
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .admin-panel .admin-header .close-btn:hover {
+            background: #b02a37;
+        }
+        .admin-password-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .admin-password-box input {
+            padding: 10px 14px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-password-box input:focus {
+            border-color: #003366;
+            outline: none;
+        }
+        .admin-password-box button {
+            padding: 10px 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-password-box button:hover {
+            background: #002244;
+        }
+        .admin-password-box .error-msg {
+            color: #dc3545;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .admin-password-box .error-msg.show {
+            display: block;
+        }
+        .comment-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: #f8f9fc;
+            border-radius: 8px;
+        }
+        .comment-stats span {
+            font-size: 0.9rem;
+        }
+        .comment-stats .count {
+            font-weight: 700;
+            color: #003366;
+        }
+        .admin-comment-item {
+            background: #f8f9fc;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .admin-comment-item .comment-info {
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-comment-item .comment-info strong {
+            color: #003366;
+        }
+        .admin-comment-item .comment-info .time {
+            color: #888;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        .admin-comment-item .comment-info .status {
+            font-size: 0.7rem;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .admin-comment-item .comment-info .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .admin-comment-item .comment-info .status.approved {
+            background: #d4edda;
+            color: #1e7e34;
+        }
+        .admin-comment-item .comment-info .status.rejected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .admin-comment-item .comment-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .admin-comment-item .comment-actions button {
+            padding: 4px 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .admin-comment-item .comment-actions .btn-approve {
+            background: #28a745;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-approve:hover {
+            background: #1e7e34;
+        }
+        .admin-comment-item .comment-actions .btn-reject {
+            background: #ffc107;
+            color: #222;
+        }
+        .admin-comment-item .comment-actions .btn-reject:hover {
+            background: #e0a800;
+        }
+        .admin-comment-item .comment-actions .btn-delete {
+            background: #dc3545;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-delete:hover {
+            background: #b02a37;
+        }
+        .no-comments-msg {
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        .entr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .entr-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .entr-card .e-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .entr-card .e-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+        .entr-card .e-desc {
+            font-size: 0.75rem;
+            color: #555;
+        }
+        .business-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) {
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .business-card {
+            padding: 16px 18px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .business-card .b-title {
+            font-weight: 700;
+            color: #003366;
+            font-size: 1rem;
+        }
+        .business-card .b-desc {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 4px;
+        }
+        .pitch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .pitch-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .pitch-card .p-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .pitch-card .p-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.85rem;
+        }
+        .pitch-card .p-desc {
+            font-size: 0.7rem;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .main-header nav {
+                justify-content: center;
+                gap: 6px 12px;
+            }
+            .main-header nav a {
+                font-size: 0.9rem;
+            }
+            .page-title h1 {
+                font-size: 1.6rem;
+            }
+            .section-header {
+                padding: 14px 18px;
+                flex-wrap: wrap;
+            }
+            .section-header .title {
+                font-size: 1.05rem;
+            }
+            .section-body {
+                padding: 16px 18px;
+            }
+            .section-body h3 {
+                font-size: 1.1rem;
+            }
+            .bilingual .en {
+                font-size: 0.95rem;
+            }
+            .bilingual .hi {
+                font-size: 0.9rem;
+                padding: 12px 16px;
+            }
+            .share-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .share-section .share-label {
+                text-align: center;
+            }
+            .share-btn {
+                justify-content: center;
+            }
+            .admin-comment-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .admin-comment-item .comment-actions {
+                justify-content: flex-start;
+            }
+            .admin-password-box {
+                flex-direction: column;
+            }
+            .admin-password-box input {
+                width: 100%;
+            }
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            .section-body {
+                padding: 12px 14px;
+            }
+            .section-header .icon {
+                font-size: 1.3rem;
+            }
+            .section-header .title {
+                font-size: 0.95rem;
+            }
+            .entr-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .pitch-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .step-list li {
+                padding: 8px 10px 8px 46px;
+                font-size: 0.9rem;
+            }
+            .step-list li::before {
+                width: 26px;
+                height: 26px;
+                font-size: 0.75rem;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="/">ITI Study Centre</a></div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/iti-result.html">ITI Result</a>
+                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
+                <a href="/engineering-notes.html">Engineering Notes</a>
+                <a href="/questionbank.html">Question Bank</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
+            <a href="/notes/employability-skills/index.html">Employability Skills</a> &nbsp;›&nbsp;
+            <span class="current">मॉड्यूल 9: उद्यमिता</span>
+        </div>
+    </div>
+
+    <!-- ===== PAGE TITLE ===== -->
+    <section class="page-title">
+        <div class="container">
+            <h1>🚀 मॉड्यूल 9: उद्यमिता</h1>
+            <p>Entrepreneurship • NSDC/DGT पाठ्यक्रम पर आधारित • हिंदी + अंग्रेजी में पूरे नोट्स</p>
+        </div>
+    </section>
+
+    <!-- ===== SEARCH ===== -->
+    <section class="search-section container">
+        <input type="text" id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें...">
+        <button onclick="filterSections()">खोजें</button>
+    </section>
+
+    <!-- ===== SHARE BUTTONS ===== -->
+    <div class="container">
+        <div class="share-section" id="shareSection">
+            <span class="share-label">📤 इस पेज को शेयर करें:</span>
+            <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </button>
+            <button class="share-btn facebook" onclick="shareFacebook()">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter()">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Twitter
+            </button>
+            <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+                <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <span id="copyLinkText">Copy Link</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.1 उद्यमिता का परिचय
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-1">
+            <div class="section-header">
+                <span class="icon">🚀</span>
+                <span class="title">9.1 उद्यमिता का परिचय <span class="subtitle">(Introduction to Entrepreneurship)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Entrepreneurship</strong> is running your own business to earn profits. An <strong>entrepreneur</strong> is a person who owns a business and runs it – also known as the business owner.</p>
+                        <p><strong>Profits</strong> are the revenue or earnings which remain with the business owner after all costs are paid.</p>
+                        <p><strong>Roles and responsibilities of an entrepreneur:</strong></p>
+                        <ul>
+                            <li><strong>Ideation and planning:</strong> Identifies a great business idea by researching customers and the industry.</li>
+                            <li><strong>Team building:</strong> Creates jobs and hires the best people to run the business.</li>
+                            <li><strong>Financial management:</strong> Manages accounts, registration, taxes, bookkeeping.</li>
+                            <li><strong>General management:</strong> Looks after day-to-day business, ensuring quality work and product.</li>
+                            <li><strong>Growth:</strong> Constantly plans to grow the business through advertising and innovation.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>उद्यमिता (Entrepreneurship)</strong> लाभ कमाने के लिए अपना खुद का व्यवसाय चलाना है। एक <strong>उद्यमी (Entrepreneur)</strong> वह व्यक्ति है जो एक व्यवसाय का मालिक है और उसे चलाता है – जिसे व्यवसाय स्वामी भी कहा जाता है।</p>
+                        <p><strong>लाभ (Profits)</strong> वह राजस्व या आय है जो सभी लागतों का भुगतान करने के बाद व्यवसाय स्वामी के पास रहती है।</p>
+                        <p><strong>उद्यमी की भूमिकाएँ और जिम्मेदारियाँ:</strong></p>
+                        <ul>
+                            <li><strong>विचार और योजना:</strong> ग्राहकों और उद्योग पर शोध करके एक महान व्यवसाय विचार की पहचान करता है।</li>
+                            <li><strong>टीम निर्माण:</strong> नौकरियाँ बनाता है और व्यवसाय चलाने के लिए सर्वश्रेष्ठ लोगों को नियुक्त करता है।</li>
+                            <li><strong>वित्तीय प्रबंधन:</strong> खातों, पंजीकरण, करों, बहीखाता का प्रबंधन करता है।</li>
+                            <li><strong>सामान्य प्रबंधन:</strong> दैनिक व्यवसाय देखता है, गुणवत्ता और उत्पाद सुनिश्चित करता है।</li>
+                            <li><strong>विकास:</strong> विज्ञापन और नवाचार के माध्यम से व्यवसाय बढ़ाने की योजना बनाता है।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="entr-grid">
+                    <div class="entr-card"><span class="e-icon">💡</span><div class="e-name">Ideation</div><div class="e-desc">Great business ideas</div></div>
+                    <div class="entr-card"><span class="e-icon">👥</span><div class="e-name">Team Building</div><div class="e-desc">Hire best people</div></div>
+                    <div class="entr-card"><span class="e-icon">💰</span><div class="e-name">Financial Mgmt</div><div class="e-desc">Accounts & taxes</div></div>
+                    <div class="entr-card"><span class="e-icon">📋</span><div class="e-name">General Mgmt</div><div class="e-desc">Day-to-day operations</div></div>
+                    <div class="entr-card"><span class="e-icon">📈</span><div class="e-name">Growth</div><div class="e-desc">Advertising & innovation</div></div>
+                </div>
+                <div class="short-notes">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 मुख्य बातें / Key Takeaways</h4>
+                    <ul>
+                        <li>उद्यमी = व्यवसाय का मालिक / Entrepreneur = Business owner</li>
+                        <li>उद्यमिता = अपना व्यवसाय शुरू करना और चलाना / Entrepreneurship = Starting and running your own business</li>
+                        <li>उद्यमी की 5 मुख्य जिम्मेदारियाँ – विचार, टीम, वित्त, प्रबंधन, विकास।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.2 उद्यमी मानसिकता
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-2">
+            <div class="section-header">
+                <span class="icon">🧠</span>
+                <span class="title">9.2 उद्यमी मानसिकता <span class="subtitle">(Entrepreneurial Mindset)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Mindset</strong> is the way we set our mind to think. People who love solving problems have a Problem Solving Mindset. People who can think like an entrepreneur have an <strong>Entrepreneurial Mindset</strong>.</p>
+                        <p><strong>Key qualities of an entrepreneurial mindset:</strong></p>
+                        <ul>
+                            <li>Become aware of your own strengths and weaknesses.</li>
+                            <li>Always look for opportunities for growth – knowledge, skills, income, and network.</li>
+                            <li>Learn from failure.</li>
+                            <li>Work with a team of people with different ideas and skills.</li>
+                        </ul>
+                        <p><strong>Setting up a business has two parts:</strong></p>
+                        <ul>
+                            <li><strong>Part 1 – Business idea and plan:</strong> Decide what the business will be about, create a business plan after research.</li>
+                            <li><strong>Part 2 – Starting the business:</strong> Getting money, registering the company, purchasing advertising.</li>
+                        </ul>
+                        <p><strong>Story of Goli Vada Pav:</strong> Venkatesh and Shiv Menon started in 2004 with a simple idea – more varieties of vada pav in hygienic stalls. Today, Goli Vada Pav has 350 outlets and is a Rs. 50 crore business. Secret: Solved a problem, provided variety and better service.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>मानसिकता (Mindset)</strong> वह तरीका है जिससे हम अपने मन को सोचने के लिए सेट करते हैं। जो लोग समस्याओं को हल करना पसंद करते हैं, उनके पास समस्या-समाधान मानसिकता होती है। जो लोग एक उद्यमी की तरह सोच सकते हैं, उनके पास <strong>उद्यमी मानसिकता</strong> होती है।</p>
+                        <p><strong>उद्यमी मानसिकता के प्रमुख गुण:</strong></p>
+                        <ul>
+                            <li>अपनी ताकत और कमजोरियों से अवगत हों।</li>
+                            <li>विकास के अवसरों की तलाश करें – ज्ञान, कौशल, आय और नेटवर्क।</li>
+                            <li>असफलता से सीखें।</li>
+                            <li>अलग-अलग विचारों और कौशल वाले लोगों की टीम के साथ काम करें।</li>
+                        </ul>
+                        <p><strong>व्यवसाय स्थापित करने के दो भाग:</strong></p>
+                        <ul>
+                            <li><strong>भाग 1 – व्यवसाय विचार और योजना:</strong> व्यवसाय किस बारे में होगा, शोध के बाद व्यवसाय योजना बनाएँ।</li>
+                            <li><strong>भाग 2 – व्यवसाय शुरू करना:</strong> पैसा प्राप्त करना, कंपनी पंजीकृत करना, विज्ञापन खरीदना।</li>
+                        </ul>
+                        <p><strong>Goli Vada Pav की कहानी:</strong> Venkatesh और Shiv Menon ने 2004 में एक सरल विचार से शुरुआत की – स्वच्छ स्टॉलों में अधिक किस्मों के वड़ा पाव। आज, Goli Vada Pav के 350 आउटलेट हैं और यह एक Rs. 50 करोड़ का व्यवसाय है। रहस्य: एक समस्या का समाधान किया, विविधता और बेहतर सेवा प्रदान की।</p>
+                    </div>
+                </div>
+                <div class="info-card highlight">
+                    <h4 style="margin:0 0 6px; color:#856404;">💡 उद्यमी मानसिकता के गुण / Entrepreneurial Mindset Qualities</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>✅ समस्या समाधानकर्ता / Problem solver</li>
+                        <li>✅ असफलता से सीखने वाला / Learns from failure</li>
+                        <li>✅ टीम के साथ काम करने वाला / Works with a team</li>
+                        <li>✅ नए अवसरों की तलाश / Seeks new opportunities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.3 स्वरोजगार और उद्यमिता के बीच अंतर
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-3">
+            <div class="section-header">
+                <span class="icon">🔄</span>
+                <span class="title">9.3 स्वरोजगार और उद्यमिता के बीच अंतर <span class="subtitle">(Self-Employment vs Entrepreneurship)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Self-Employment:</strong> Providing your services for a fixed fee. You work for yourself, not for a company. You choose when and how you work. You earn money directly from the work you do.</p>
+                        <p><strong>Entrepreneurship:</strong> Providing service with a unique quality. You work with a team with different skills, deliver quality service to more clients, plan for long-term growth, and provide employment to others.</p>
+                        <p><strong>Similarities:</strong></p>
+                        <ul>
+                            <li>Both are not salaried employees – they earn a different amount every month.</li>
+                            <li>Both work in an area where their personal skills are strong.</li>
+                            <li>Both find their first clients through their local network.</li>
+                            <li>Both partner with other businesses to find more clients.</li>
+                        </ul>
+                        <p><strong>Journey from Self-Employment to Entrepreneurship:</strong></p>
+                        <ul>
+                            <li>Step 1: Decide what kind of business you want to do.</li>
+                            <li>Step 2: Research the market.</li>
+                            <li>Step 3: Come up with a creative business idea.</li>
+                            <li>Step 4: Understand if the idea will work.</li>
+                            <li>Step 5: Improve your idea.</li>
+                            <li>Step 6: Plan and start the business.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>स्वरोजगार (Self-Employment):</strong> एक निश्चित शुल्क पर अपनी सेवाएँ प्रदान करना। आप अपने लिए काम करते हैं, किसी कंपनी के लिए नहीं। आप चुनते हैं कि कब और कैसे काम करना है। आप अपने काम से सीधे पैसे कमाते हैं।</p>
+                        <p><strong>उद्यमिता (Entrepreneurship):</strong> एक अद्वितीय गुणवत्ता के साथ सेवा प्रदान करना। आप अलग-अलग कौशल वाली टीम के साथ काम करते हैं, अधिक ग्राहकों को गुणवत्तापूर्ण सेवा प्रदान करते हैं, दीर्घकालिक विकास की योजना बनाते हैं, और दूसरों को रोजगार प्रदान करते हैं।</p>
+                        <p><strong>समानताएँ:</strong></p>
+                        <ul>
+                            <li>दोनों वेतनभोगी कर्मचारी नहीं हैं – वे हर महीने अलग-अलग राशि कमाते हैं।</li>
+                            <li>दोनों उस क्षेत्र में काम करते हैं जहाँ उनके व्यक्तिगत कौशल मजबूत हैं।</li>
+                            <li>दोनों अपने पहले ग्राहकों को अपने स्थानीय नेटवर्क के माध्यम से खोजते हैं।</li>
+                            <li>दोनों अधिक ग्राहकों को खोजने के लिए अन्य व्यवसायों के साथ साझेदारी करते हैं।</li>
+                        </ul>
+                        <p><strong>स्वरोजगार से उद्यमिता तक की यात्रा:</strong></p>
+                        <ul>
+                            <li>चरण 1: तय करें कि आप किस प्रकार का व्यवसाय करना चाहते हैं।</li>
+                            <li>चरण 2: बाजार पर शोध करें।</li>
+                            <li>चरण 3: एक रचनात्मक व्यवसाय विचार लेकर आएँ।</li>
+                            <li>चरण 4: समझें कि क्या विचार काम करेगा।</li>
+                            <li>चरण 5: अपने विचार को बेहतर बनाएँ।</li>
+                            <li>चरण 6: व्यवसाय की योजना बनाएँ और शुरू करें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="business-grid">
+                    <div class="business-card" style="border-color:#003366;">
+                        <div class="b-title">💼 Self-Employment</div>
+                        <ul style="margin:4px 0 0 0; padding-left:18px; font-size:0.9rem;">
+                            <li>Fixed fee for services</li>
+                            <li>Work alone or small team</li>
+                            <li>Short-term goals</li>
+                            <li>No employment for others</li>
+                        </ul>
+                    </div>
+                    <div class="business-card" style="border-color:#28a745;">
+                        <div class="b-title">🚀 Entrepreneurship</div>
+                        <ul style="margin:4px 0 0 0; padding-left:18px; font-size:0.9rem;">
+                            <li>Unique quality service</li>
+                            <li>Team with different skills</li>
+                            <li>Long-term growth plans</li>
+                            <li>Provides employment to others</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.4 बाजार स्कैन
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-4">
+            <div class="section-header">
+                <span class="icon">🔍</span>
+                <span class="title">9.4 बाजार स्कैन <span class="subtitle">(Market Scan)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Market Scan (Market Research)</strong> is a process by which we explore the different aspects of the market to get information to help your business. It is usually done before setting up a business.</p>
+                        <p><strong>What a market scan covers:</strong></p>
+                        <ul>
+                            <li>Understand the customers and their needs.</li>
+                            <li>Explore how to grow the business to increase profit.</li>
+                            <li>Understand the types of goods and services offered by similar businesses.</li>
+                        </ul>
+                        <p><strong>How to do a market scan:</strong></p>
+                        <ul>
+                            <li>Identify your business idea.</li>
+                            <li>Visit shops, vendors, or do online research.</li>
+                            <li>Collect information about products, prices, customers.</li>
+                            <li>Analyze the competition.</li>
+                            <li>Identify opportunities and challenges.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>बाजार स्कैन (बाजार अनुसंधान)</strong> एक ऐसी प्रक्रिया है जिसके द्वारा हम अपने व्यवसाय के लिए जानकारी प्राप्त करने के लिए बाजार के विभिन्न पहलुओं का अन्वेषण करते हैं। यह आमतौर पर व्यवसाय स्थापित करने से पहले किया जाता है।</p>
+                        <p><strong>बाजार स्कैन क्या कवर करता है:</strong></p>
+                        <ul>
+                            <li>ग्राहकों और उनकी आवश्यकताओं को समझना।</li>
+                            <li>लाभ बढ़ाने के लिए व्यवसाय को कैसे बढ़ाया जाए, इसका पता लगाना।</li>
+                            <li>समान व्यवसायों द्वारा दी जाने वाली वस्तुओं और सेवाओं के प्रकार को समझना।</li>
+                        </ul>
+                        <p><strong>बाजार स्कैन कैसे करें:</strong></p>
+                        <ul>
+                            <li>अपने व्यवसाय विचार की पहचान करें।</li>
+                            <li>दुकानों, विक्रेताओं पर जाएँ या ऑनलाइन शोध करें।</li>
+                            <li>उत्पादों, कीमतों, ग्राहकों के बारे में जानकारी एकत्र करें।</li>
+                            <li>प्रतिस्पर्धा का विश्लेषण करें।</li>
+                            <li>अवसरों और चुनौतियों की पहचान करें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Market Scan Example / बाजार स्कैन उदाहरण</caption>
+                        <thead><tr><th>What is sold?</th><th>Who is buying?</th><th>How do businesses make money?</th></tr></thead>
+                        <tbody>
+                            <tr><td>Chips</td><td>Families</td><td>Selling to wholesale retailer</td></tr>
+                            <tr><td>Pickles</td><td>Students</td><td>Selling to hotels and restaurants</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.5 ग्राहकों की जरूरतों को समझना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-5">
+            <div class="section-header">
+                <span class="icon">👤</span>
+                <span class="title">9.5 ग्राहकों की जरूरतों को समझना <span class="subtitle">(Understanding Customer Needs)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Customer Needs Analysis</strong> helps answer these questions:</p>
+                        <ul>
+                            <li>Do customers pay for the kind of goods/service we want to offer?</li>
+                            <li>What products/services are customers currently using?</li>
+                            <li>What do they like or dislike about their current product/service?</li>
+                            <li>Is there a good demand for our idea among customers in our area?</li>
+                        </ul>
+                        <p><strong>Sample questions to ask customers:</strong></p>
+                        <ul>
+                            <li>What do you value most in this product? (Fragrance, quality, price?)</li>
+                            <li>Which company's product do you prefer?</li>
+                            <li>Do you always buy from the same company?</li>
+                            <li>Have you ever faced any issues with this product?</li>
+                            <li>What do you like and what do you not like?</li>
+                            <li>How often do you buy this product?</li>
+                            <li>How much do you pay for it?</li>
+                            <li>Would you be willing to try a new kind of product?</li>
+                        </ul>
+                        <p><strong>Types of customers:</strong> People (by age, profession, income), Other businesses, Wholesalers.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>ग्राहक आवश्यकता विश्लेषण (Customer Needs Analysis)</strong> इन सवालों के जवाब देने में मदद करता है:</p>
+                        <ul>
+                            <li>क्या ग्राहक उस प्रकार के सामान/सेवा के लिए भुगतान करते हैं जो हम पेश करना चाहते हैं?</li>
+                            <li>ग्राहक वर्तमान में किन उत्पादों/सेवाओं का उपयोग कर रहे हैं?</li>
+                            <li>उन्हें अपने वर्तमान उत्पाद/सेवा के बारे में क्या पसंद और क्या नापसंद है?</li>
+                            <li>क्या हमारे क्षेत्र में ग्राहकों के बीच हमारे विचार की अच्छी माँग है?</li>
+                        </ul>
+                        <p><strong>ग्राहकों से पूछने के लिए नमूना प्रश्न:</strong></p>
+                        <ul>
+                            <li>आप इस उत्पाद में सबसे अधिक क्या महत्व देते हैं? (सुगंध, गुणवत्ता, कीमत?)</li>
+                            <li>आप किस कंपनी के उत्पाद को पसंद करते हैं?</li>
+                            <li>क्या आप हमेशा एक ही कंपनी से खरीदते हैं?</li>
+                            <li>क्या आपको कभी इस उत्पाद के साथ कोई समस्या हुई है?</li>
+                            <li>आपको क्या पसंद है और क्या नापसंद है?</li>
+                            <li>आप यह उत्पाद कितनी बार खरीदते हैं?</li>
+                            <li>आप इसके लिए कितना भुगतान करते हैं?</li>
+                            <li>क्या आप एक नए प्रकार के उत्पाद को आज़माने के लिए तैयार होंगे?</li>
+                        </ul>
+                        <p><strong>ग्राहकों के प्रकार:</strong> लोग (उम्र, पेशा, आय के अनुसार), अन्य व्यवसाय, थोक विक्रेता।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.6 उत्पाद या सेवा – व्यवसाय का प्रकार चुनना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-6">
+            <div class="section-header">
+                <span class="icon">🛒</span>
+                <span class="title">9.6 उत्पाद या सेवा – व्यवसाय का प्रकार चुनना <span class="subtitle">(Product or Service)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Product:</strong> An object that can be seen, touched, and used. (e.g., Masala Dosa, Idli, Vada Pav)</p>
+                        <p><strong>Service:</strong> What we feel, experience, and enjoy as customers. (e.g., Service of a waiter, service of a cook)</p>
+                        <p><strong>Factors to consider when choosing a product/service idea:</strong></p>
+                        <ul>
+                            <li>Is this product/service already available in the market?</li>
+                            <li>How can I make my product/service different from others?</li>
+                            <li>Will I get funding for this product/service?</li>
+                            <li>How strong is the competition?</li>
+                            <li>Do I have the knowledge and skill about this product/service?</li>
+                        </ul>
+                        <p><strong>Choosing the right business idea:</strong></p>
+                        <ul>
+                            <li><strong>Personal Skills + Resources:</strong> Do you have the skills, money, and resources?</li>
+                            <li><strong>Market Demand + Competition:</strong> Is there real demand? What are the competitors doing?</li>
+                            <li><strong>Customer Needs:</strong> What do customers want? What qualities do they desire?</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>उत्पाद (Product):</strong> एक वस्तु जिसे देखा, छुआ और उपयोग किया जा सकता है। (जैसे, मसाला डोसा, इडली, वड़ा पाव)</p>
+                        <p><strong>सेवा (Service):</strong> वह जो हम ग्राहकों के रूप में महसूस करते हैं, अनुभव करते हैं और आनंद लेते हैं। (जैसे, वेटर की सेवा, रसोइए की सेवा)</p>
+                        <p><strong>उत्पाद/सेवा विचार चुनते समय विचार करने योग्य कारक:</strong></p>
+                        <ul>
+                            <li>क्या यह उत्पाद/सेवा बाजार में पहले से उपलब्ध है?</li>
+                            <li>मैं अपने उत्पाद/सेवा को दूसरों से कैसे अलग कर सकता हूँ?</li>
+                            <li>क्या मुझे इस उत्पाद/सेवा के लिए फंडिंग मिलेगी?</li>
+                            <li>प्रतिस्पर्धा कितनी मजबूत है?</li>
+                            <li>क्या मुझे इस उत्पाद/सेवा के बारे में ज्ञान और कौशल है?</li>
+                        </ul>
+                        <p><strong>सही व्यवसाय विचार चुनना:</strong></p>
+                        <ul>
+                            <li><strong>व्यक्तिगत कौशल + संसाधन:</strong> क्या आपके पास कौशल, पैसा और संसाधन हैं?</li>
+                            <li><strong>बाजार की मांग + प्रतिस्पर्धा:</strong> क्या वास्तविक मांग है? प्रतिस्पर्धी क्या कर रहे हैं?</li>
+                            <li><strong>ग्राहकों की जरूरतें:</strong> ग्राहक क्या चाहते हैं? वे किन गुणों की इच्छा रखते हैं?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card blue">
+                    <h4 style="margin:0 0 6px; color:#003366;">💡 Key Questions to Ask</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>Is there a real demand for this product/service?</li>
+                        <li>Do I have the skills to offer this product/service?</li>
+                        <li>Can I compete with existing businesses?</li>
+                        <li>Can I make a profit?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.7 मेरा अंतिम व्यवसाय विचार
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-7">
+            <div class="section-header">
+                <span class="icon">💡</span>
+                <span class="title">9.7 मेरा अंतिम व्यवसाय विचार <span class="subtitle">(My Final Business Idea)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>A good business idea for a young entrepreneur should be:</strong></p>
+                        <ul>
+                            <li><strong>Low on Investment:</strong> Requires a fairly small amount to start (few thousands to a few lakhs).</li>
+                            <li><strong>Quickly actionable:</strong> Should be able to start immediately.</li>
+                        </ul>
+                        <p><strong>Process of creating a business idea:</strong></p>
+                        <ul>
+                            <li>Understand what customers want.</li>
+                            <li>Identify what customers dislike about current products.</li>
+                            <li>Find unique ways to solve customer problems.</li>
+                            <li>Combine all this into one clear business idea.</li>
+                        </ul>
+                        <p><strong>Example:</strong> "A cyber cafe that gives customers unlimited access to computers at a fixed monthly fee."</p>
+                        <p><strong>Tip:</strong> Share your business idea with potential customers and get their feedback. Ask: "What do you like and dislike about this idea?" and "How much would you be willing to pay?"</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>एक अच्छा व्यवसाय विचार एक युवा उद्यमी के लिए होना चाहिए:</strong></p>
+                        <ul>
+                            <li><strong>कम निवेश:</strong> शुरू करने के लिए काफी छोटी राशि की आवश्यकता होती है (कुछ हज़ार से कुछ लाख)।</li>
+                            <li><strong>जल्दी से क्रियाशील:</strong> तुरंत शुरू करने में सक्षम होना चाहिए।</li>
+                        </ul>
+                        <p><strong>व्यवसाय विचार बनाने की प्रक्रिया:</strong></p>
+                        <ul>
+                            <li>समझें कि ग्राहक क्या चाहते हैं।</li>
+                            <li>पहचानें कि ग्राहकों को वर्तमान उत्पादों के बारे में क्या नापसंद है।</li>
+                            <li>ग्राहकों की समस्याओं को हल करने के अनूठे तरीके खोजें।</li>
+                            <li>इन सबको एक स्पष्ट व्यवसाय विचार में संयोजित करें।</li>
+                        </ul>
+                        <p><strong>उदाहरण:</strong> "एक साइबर कैफे जो ग्राहकों को एक निश्चित मासिक शुल्क पर कंप्यूटर तक असीमित पहुँच प्रदान करता है।"</p>
+                        <p><strong>टिप:</strong> अपने व्यवसाय विचार को संभावित ग्राहकों के साथ साझा करें और उनकी प्रतिक्रिया प्राप्त करें। पूछें: "आपको इस विचार के बारे में क्या पसंद और क्या नापसंद है?" और "आप इसके लिए कितना भुगतान करने को तैयार होंगे?"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.8 व्यवसाय योजना बनाना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-8">
+            <div class="section-header">
+                <span class="icon">📋</span>
+                <span class="title">9.8 व्यवसाय योजना बनाना <span class="subtitle">(Building Your Business Plan)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>A business plan</strong> is a document that has the complete strategy for the business. It includes goals and the steps for achieving them. Bank loans are provided on the basis of how clear and strong a business plan is.</p>
+                        <p><strong>Parts of a business plan:</strong></p>
+                        <ul>
+                            <li><strong>Business Idea:</strong> What is your business?</li>
+                            <li><strong>Product/Service Details:</strong> What do you offer?</li>
+                            <li><strong>Costing:</strong> Starting investment, costs to the company, interest on investment.</li>
+                            <li><strong>Earnings:</strong> Price per product/service, profit per product/service.</li>
+                            <li><strong>Customer Analysis:</strong> What do you know about customer needs?</li>
+                            <li><strong>Competitor Analysis:</strong> Who are your competitors?</li>
+                            <li><strong>Business Expansion Plans:</strong> How will you grow in 2-3 years?</li>
+                        </ul>
+                        <p><strong>Key questions to answer in your business plan:</strong></p>
+                        <ul>
+                            <li>How much money will you earn initially?</li>
+                            <li>How will the business grow?</li>
+                            <li>How many people will use your service?</li>
+                            <li>What are the total costs?</li>
+                            <li>How much profit will you make?</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>व्यवसाय योजना (Business plan)</strong> एक ऐसा दस्तावेज़ है जिसमें व्यवसाय के लिए संपूर्ण रणनीति होती है। इसमें लक्ष्य और उन्हें प्राप्त करने के चरण शामिल होते हैं। बैंक ऋण इस आधार पर प्रदान किए जाते हैं कि व्यवसाय योजना कितनी स्पष्ट और मजबूत है।</p>
+                        <p><strong>व्यवसाय योजना के भाग:</strong></p>
+                        <ul>
+                            <li><strong>व्यवसाय विचार:</strong> आपका व्यवसाय क्या है?</li>
+                            <li><strong>उत्पाद/सेवा विवरण:</strong> आप क्या पेश करते हैं?</li>
+                            <li><strong>लागत:</strong> प्रारंभिक निवेश, कंपनी को लागत, निवेश पर ब्याज।</li>
+                            <li><strong>आय:</strong> प्रति उत्पाद/सेवा मूल्य, प्रति उत्पाद/सेवा लाभ।</li>
+                            <li><strong>ग्राहक विश्लेषण:</strong> आप ग्राहकों की जरूरतों के बारे में क्या जानते हैं?</li>
+                            <li><strong>प्रतिस्पर्धी विश्लेषण:</strong> आपके प्रतिस्पर्धी कौन हैं?</li>
+                            <li><strong>व्यवसाय विस्तार योजनाएँ:</strong> आप 2-3 वर्षों में कैसे बढ़ेंगे?</li>
+                        </ul>
+                        <p><strong>व्यवसाय योजना में उत्तर देने योग्य महत्वपूर्ण प्रश्न:</strong></p>
+                        <ul>
+                            <li>शुरुआत में आप कितना पैसा कमाएँगे?</li>
+                            <li>व्यवसाय कैसे बढ़ेगा?</li>
+                            <li>कितने लोग आपकी सेवा का उपयोग करेंगे?</li>
+                            <li>कुल लागत क्या है?</li>
+                            <li>आप कितना लाभ कमाएँगे?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card highlight">
+                    <h4 style="margin:0 0 6px; color:#856404;">💡 Remember</h4>
+                    <p style="font-size:0.95rem;">A business plan needs to be updated once a year or at least once in two years. When the business grows, expands, or when new partners join, the business plan must be revised.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.9 व्यवसाय पिच
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-9">
+            <div class="section-header">
+                <span class="icon">🎤</span>
+                <span class="title">9.9 व्यवसाय पिच <span class="subtitle">(Pitching for Your Business)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>A business pitch</strong> is a short and effective presentation to describe the business. It can last only 2-3 minutes. Within that short time, the entrepreneur needs to convey all the important information about the business.</p>
+                        <p><strong>Who hears your business pitch?</strong></p>
+                        <ul>
+                            <li><strong>Startup Investors:</strong> Companies that support entrepreneurs with money and expert guidance.</li>
+                            <li><strong>Banks:</strong> Provide loans that can be repaid at an interest.</li>
+                            <li><strong>Friends/Family:</strong> Can help with money, space, resources, or team support.</li>
+                        </ul>
+                        <p><strong>How to prepare your business pitch (8 steps):</strong></p>
+                        <ol>
+                            <li>Clearly state the problem you will solve.</li>
+                            <li>Introduce yourself and share why you are here.</li>
+                            <li>Define your solution – what is your unique offering?</li>
+                            <li>Share your market research – who are your customers?</li>
+                            <li>Share your business plan – costing and pricing.</li>
+                            <li>What is your demand estimate?</li>
+                            <li>Resources and money you will put into the business.</li>
+                            <li>Clearly state your demand from the investor and how you will use the money.</li>
+                        </ol>
+                    </div>
+                    <div class="hi">
+                        <p><strong>व्यवसाय पिच (Business pitch)</strong> व्यवसाय का वर्णन करने के लिए एक छोटी और प्रभावी प्रस्तुति है। यह केवल 2-3 मिनट तक चल सकती है। उस छोटे समय के भीतर, उद्यमी को व्यवसाय के बारे में सभी महत्वपूर्ण जानकारी देने की आवश्यकता होती है।</p>
+                        <p><strong>आपकी व्यवसाय पिच कौन सुनता है?</strong></p>
+                        <ul>
+                            <li><strong>स्टार्टअप निवेशक:</strong> कंपनियाँ जो पैसे और विशेषज्ञ मार्गदर्शन के साथ उद्यमियों का समर्थन करती हैं।</li>
+                            <li><strong>बैंक:</strong> ऋण प्रदान करते हैं जो ब्याज पर चुकाया जा सकता है।</li>
+                            <li><strong>मित्र/परिवार:</strong> पैसे, स्थान, संसाधन या टीम समर्थन के साथ मदद कर सकते हैं।</li>
+                        </ul>
+                        <p><strong>व्यवसाय पिच कैसे तैयार करें (8 चरण):</strong></p>
+                        <ol>
+                            <li>आप जिस समस्या का समाधान करेंगे, उसे स्पष्ट रूप से बताएँ।</li>
+                            <li>अपना परिचय दें और बताएँ कि आप यहाँ क्यों हैं।</li>
+                            <li>अपने समाधान को परिभाषित करें – आपका अद्वितीय प्रस्ताव क्या है?</li>
+                            <li>अपना बाजार अनुसंधान साझा करें – आपके ग्राहक कौन हैं?</li>
+                            <li>अपनी व्यवसाय योजना साझा करें – लागत और मूल्य निर्धारण।</li>
+                            <li>आपकी मांग का अनुमान क्या है?</li>
+                            <li>व्यवसाय में आपके द्वारा लगाए गए संसाधन और पैसा।</li>
+                            <li>निवेशक से अपनी मांग और पैसे का उपयोग कैसे करेंगे, स्पष्ट रूप से बताएँ।</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="pitch-grid">
+                    <div class="pitch-card"><span class="p-icon">❓</span><div class="p-name">Problem</div><div class="p-desc">What problem do you solve?</div></div>
+                    <div class="pitch-card"><span class="p-icon">💡</span><div class="p-name">Solution</div><div class="p-desc">Your unique offering</div></div>
+                    <div class="pitch-card"><span class="p-icon">👤</span><div class="p-name">Customers</div><div class="p-desc">Who are they?</div></div>
+                    <div class="pitch-card"><span class="p-icon">💰</span><div class="p-name">Financials</div><div class="p-desc">Cost, price, profit</div></div>
+                    <div class="pitch-card"><span class="p-icon">📈</span><div class="p-name">Growth</div><div class="p-desc">Future plans</div></div>
+                    <div class="pitch-card"><span class="p-icon">🤝</span><div class="p-name">Ask</div><div class="p-desc">What do you need?</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.10 व्यवसाय के लिए बुनियादी कानूनी कार्य
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-10">
+            <div class="section-header">
+                <span class="icon">⚖️</span>
+                <span class="title">9.10 व्यवसाय के लिए बुनियादी कानूनी कार्य <span class="subtitle">(Basic Legal Functions for Business)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Types of business enterprises:</strong></p>
+                        <ul>
+                            <li><strong>Sole Proprietorship:</strong> Owned by a single person. Registration is not compulsory, but registering on the Udyam portal makes you eligible for government schemes.</li>
+                            <li><strong>Partnership:</strong> Owned by more than one person. A partnership deed on stamp paper is required.</li>
+                            <li><strong>Private Limited Company:</strong> For large-scale operations. Requires Digital Signature Certificate (DSC), Director Identification Number (DIN), company name reservation, and PAN/TAN registration.</li>
+                        </ul>
+                        <p><strong>Udyam Registration (MSME):</strong></p>
+                        <ul>
+                            <li><strong>Micro:</strong> Investment &lt; Rs. 1 crore, Turnover &lt; Rs. 5 crore.</li>
+                            <li><strong>Small:</strong> Investment &lt; Rs. 10 crore, Turnover &lt; Rs. 50 crore.</li>
+                            <li><strong>Medium:</strong> Investment &lt; Rs. 50 crore, Turnover &lt; Rs. 250 crore.</li>
+                        </ul>
+                        <p><strong>Documents needed for Udyam registration:</strong> Aadhaar, PAN, ITR, Bank IFSC code.</p>
+                        <p><strong>For Sole Proprietorship:</strong> Personal PAN card is sufficient. Annual income tax filing required. GST filing required if annual turnover exceeds Rs. 20 lakh (varies by state).</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>व्यवसाय उद्यमों के प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>एकल स्वामित्व (Sole Proprietorship):</strong> एक व्यक्ति द्वारा स्वामित्व। पंजीकरण अनिवार्य नहीं है, लेकिन उद्यम पोर्टल पर पंजीकरण आपको सरकारी योजनाओं के लिए पात्र बनाता है।</li>
+                            <li><strong>साझेदारी (Partnership):</strong> एक से अधिक व्यक्तियों द्वारा स्वामित्व। स्टाम्प पेपर पर साझेदारी विलेय की आवश्यकता होती है।</li>
+                            <li><strong>प्राइवेट लिमिटेड कंपनी:</strong> बड़े पैमाने के संचालन के लिए। डिजिटल हस्ताक्षर प्रमाणपत्र (DSC), निदेशक पहचान संख्या (DIN), कंपनी नाम आरक्षण और PAN/TAN पंजीकरण की आवश्यकता होती है।</li>
+                        </ul>
+                        <p><strong>उद्यम पंजीकरण (MSME):</strong></p>
+                        <ul>
+                            <li><strong>सूक्ष्म:</strong> निवेश &lt; Rs. 1 करोड़, कारोबार &lt; Rs. 5 करोड़।</li>
+                            <li><strong>लघु:</strong> निवेश &lt; Rs. 10 करोड़, कारोबार &lt; Rs. 50 करोड़।</li>
+                            <li><strong>मध्यम:</strong> निवेश &lt; Rs. 50 करोड़, कारोबार &lt; Rs. 250 करोड़।</li>
+                        </ul>
+                        <p><strong>उद्यम पंजीकरण के लिए आवश्यक दस्तावेज़:</strong> आधार, PAN, ITR, बैंक IFSC कोड।</p>
+                        <p><strong>एकल स्वामित्व के लिए:</strong> व्यक्तिगत PAN कार्ड पर्याप्त है। वार्षिक आयकर दाखिला आवश्यक है। यदि वार्षिक कारोबार Rs. 20 लाख (राज्य के अनुसार भिन्न) से अधिक है तो GST दाखिला आवश्यक है।</p>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Business Types / व्यवसाय के प्रकार</caption>
+                        <thead><tr><th>Type</th><th>Owner</th><th>Registration</th></tr></thead>
+                        <tbody>
+                            <tr><td>Sole Proprietorship</td><td>Single person</td><td>Not compulsory (Udyam recommended)</td></tr>
+                            <tr><td>Partnership</td><td>Two or more</td><td>Partnership deed required</td></tr>
+                            <tr><td>Private Limited</td><td>Multiple shareholders</td><td>DSC, DIN, PAN, TAN required</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.11 21वीं सदी में विपणन
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-11">
+            <div class="section-header">
+                <span class="icon">📢</span>
+                <span class="title">9.11 21वीं सदी में विपणन <span class="subtitle">(Marketing in the 21st Century)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Marketing</strong> is the process of advertising our products in a smart way. It helps customers learn about your unique product/service, compare options, find where to buy, and know important information like price and discounts.</p>
+                        <p><strong>The 7 Ps of Marketing:</strong></p>
+                        <ul>
+                            <li><strong>Product:</strong> What are you selling? Describe its features.</li>
+                            <li><strong>Price:</strong> How much does it cost?</li>
+                            <li><strong>Place:</strong> Where will you sell it?</li>
+                            <li><strong>Promotion:</strong> How will you inform customers? (Radio, TV, Newspaper, Social media, Flyers, Discounts, Free samples)</li>
+                            <li><strong>People:</strong> Who will sell the product? Training, uniforms.</li>
+                            <li><strong>Packaging:</strong> How do you present your product? Use colors, unique materials.</li>
+                            <li><strong>Physical Evidence:</strong> Show the product/service so customers can touch, feel, or use it.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>विपणन (Marketing)</strong> अपने उत्पादों को स्मार्ट तरीके से विज्ञापित करने की प्रक्रिया है। यह ग्राहकों को आपके अद्वितीय उत्पाद/सेवा के बारे में जानने, विकल्पों की तुलना करने, खरीदने का स्थान खोजने और मूल्य और छूट जैसी महत्वपूर्ण जानकारी जानने में मदद करता है।</p>
+                        <p><strong>विपणन के 7 Ps:</strong></p>
+                        <ul>
+                            <li><strong>Product:</strong> आप क्या बेच रहे हैं? इसकी विशेषताओं का वर्णन करें।</li>
+                            <li><strong>Price:</strong> इसकी कीमत क्या है?</li>
+                            <li><strong>Place:</strong> आप इसे कहाँ बेचेंगे?</li>
+                            <li><strong>Promotion:</strong> आप ग्राहकों को कैसे सूचित करेंगे? (रेडियो, TV, समाचार पत्र, सोशल मीडिया, पर्चे, छूट, नि:शुल्क नमूने)</li>
+                            <li><strong>People:</strong> उत्पाद कौन बेचेगा? प्रशिक्षण, वर्दी।</li>
+                            <li><strong>Packaging:</strong> आप अपने उत्पाद को कैसे प्रस्तुत करते हैं? रंगों, अद्वितीय सामग्रियों का उपयोग करें।</li>
+                            <li><strong>Physical Evidence:</strong> उत्पाद/सेवा दिखाएँ ताकि ग्राहक उसे छू सकें, महसूस कर सकें या उपयोग कर सकें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="entr-grid">
+                    <div class="entr-card"><span class="e-icon">🛒</span><div class="e-name">Product</div><div class="e-desc">What you sell</div></div>
+                    <div class="entr-card"><span class="e-icon">💰</span><div class="e-name">Price</div><div class="e-desc">Cost to customer</div></div>
+                    <div class="entr-card"><span class="e-icon">📍</span><div class="e-name">Place</div><div class="e-desc">Where to buy</div></div>
+                    <div class="entr-card"><span class="e-icon">📢</span><div class="e-name">Promotion</div><div class="e-desc">How to inform</div></div>
+                    <div class="entr-card"><span class="e-icon">👥</span><div class="e-name">People</div><div class="e-desc">Who sells</div></div>
+                    <div class="entr-card"><span class="e-icon">📦</span><div class="e-name">Packaging</div><div class="e-desc">How it looks</div></div>
+                    <div class="entr-card"><span class="e-icon">🖼️</span><div class="e-name">Physical Evidence</div><div class="e-desc">Touch & feel</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.12 व्यवसाय के लिए लेखांकन
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-12">
+            <div class="section-header">
+                <span class="icon">📊</span>
+                <span class="title">9.12 व्यवसाय के लिए लेखांकन <span class="subtitle">(Accounting for Business)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Accounting</strong> is managing all money-related matters in a business – total earning, total spending, employee salary, loans, advertising cost, product/service costs.</p>
+                        <p><strong>Types of business costs:</strong></p>
+                        <ul>
+                            <li><strong>Fixed Cost:</strong> Does not change with the amount of product/service produced. (e.g., rent, machinery, insurance).</li>
+                            <li><strong>Variable Cost:</strong> Changes with the amount of product/service produced. (e.g., raw materials, packaging, delivery).</li>
+                        </ul>
+                        <p><strong>Break-Even Point:</strong> The point where total revenue equals total costs. Beyond this point, you start making a profit.</p>
+                        <p><strong>Formula:</strong> Break-Even Point = Fixed Cost ÷ (Selling Price – Variable Cost per unit)</p>
+                        <p><strong>Example:</strong> Fixed Cost = Rs. 1000, Variable Cost = Rs. 10, Selling Price = Rs. 30. Break-Even = 1000 ÷ (30-10) = 50 units. You need to sell more than 50 units to make a profit.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>लेखांकन (Accounting)</strong> व्यवसाय में सभी पैसे-संबंधी मामलों का प्रबंधन है – कुल आय, कुल खर्च, कर्मचारी वेतन, ऋण, विज्ञापन लागत, उत्पाद/सेवा लागत।</p>
+                        <p><strong>व्यवसाय लागत के प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>निश्चित लागत (Fixed Cost):</strong> उत्पाद/सेवा की मात्रा के साथ नहीं बदलती। (जैसे, किराया, मशीनरी, बीमा)।</li>
+                            <li><strong>परिवर्तनीय लागत (Variable Cost):</strong> उत्पाद/सेवा की मात्रा के साथ बदलती है। (जैसे, कच्चा माल, पैकेजिंग, डिलीवरी)।</li>
+                        </ul>
+                        <p><strong>लाभ-अलाभ बिंदु (Break-Even Point):</strong> वह बिंदु जहाँ कुल राजस्व कुल लागत के बराबर होता है। इस बिंदु से परे, आप लाभ कमाना शुरू करते हैं।</p>
+                        <p><strong>सूत्र:</strong> लाभ-अलाभ बिंदु = निश्चित लागत ÷ (विक्रय मूल्य – प्रति इकाई परिवर्तनीय लागत)</p>
+                        <p><strong>उदाहरण:</strong> निश्चित लागत = Rs. 1000, परिवर्तनीय लागत = Rs. 10, विक्रय मूल्य = Rs. 30। लाभ-अलाभ = 1000 ÷ (30-10) = 50 इकाइयाँ। लाभ कमाने के लिए आपको 50 से अधिक इकाइयाँ बेचनी होंगी।</p>
+                    </div>
+                </div>
+                <div class="info-card green">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 Business Expense Tracking</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li><strong>Fixed Cost:</strong> Rent, salaries, insurance, machinery.</li>
+                        <li><strong>Variable Cost:</strong> Raw materials, packaging, delivery, utilities.</li>
+                        <li><strong>Profit = Revenue – Total Cost</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.13 व्यवसाय के लिए फंडिंग
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-13">
+            <div class="section-header">
+                <span class="icon">🏦</span>
+                <span class="title">9.13 व्यवसाय के लिए फंडिंग <span class="subtitle">(Funding for Your Business)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Sources of funds for startups:</strong></p>
+                        <ul>
+                            <li><strong>Loans and Credit:</strong> PMMY Mudra Loan (Shishu: up to Rs. 50,000; Kishor: Rs. 50,000–5 lakh; Tarun: Rs. 5–10 lakh). No collateral required.</li>
+                            <li><strong>Incubation/Funding:</strong> Atal Incubation Centres (AICs) – support through financing, training, and networking.</li>
+                            <li><strong>Venture Capital:</strong> Big companies that invest in startups with high potential.</li>
+                            <li><strong>Angel Investors:</strong> Individuals who invest their own money in businesses.</li>
+                        </ul>
+                        <p><strong>Documents required for a Mudra Loan:</strong></p>
+                        <ul>
+                            <li>Application form with passport-size photos.</li>
+                            <li>KYC documents (Aadhaar, PAN, Voter ID, Driving License).</li>
+                            <li>Caste certificate (if applicable).</li>
+                            <li>Proof of business income.</li>
+                            <li>Business address proof.</li>
+                            <li>Bank statements for 12 months.</li>
+                            <li>ITR for past 2 years (if applicable).</li>
+                            <li>Business plan.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>स्टार्टअप्स के लिए फंड के स्रोत:</strong></p>
+                        <ul>
+                            <li><strong>ऋण और क्रेडिट:</strong> PMMY मुद्रा ऋण (शिशु: Rs. 50,000 तक; किशोर: Rs. 50,000–5 लाख; तरुण: Rs. 5–10 लाख)। कोई संपार्श्विक आवश्यक नहीं।</li>
+                            <li><strong>इन्क्यूबेशन/फंडिंग:</strong> अटल इन्क्यूबेशन सेंटर (AICs) – वित्तपोषण, प्रशिक्षण और नेटवर्किंग के माध्यम से समर्थन।</li>
+                            <li><strong>वेंचर कैपिटल:</strong> बड़ी कंपनियाँ जो उच्च क्षमता वाले स्टार्टअप में निवेश करती हैं।</li>
+                            <li><strong>एंजेल निवेशक:</strong> व्यक्ति जो अपना पैसा व्यवसायों में निवेश करते हैं।</li>
+                        </ul>
+                        <p><strong>मुद्रा ऋण के लिए आवश्यक दस्तावेज़:</strong></p>
+                        <ul>
+                            <li>पासपोर्ट साइज़ फोटो के साथ आवेदन पत्र।</li>
+                            <li>KYC दस्तावेज़ (आधार, PAN, वोटर ID, ड्राइविंग लाइसेंस)।</li>
+                            <li>जाति प्रमाण पत्र (यदि लागू हो)।</li>
+                            <li>व्यवसाय आय का प्रमाण।</li>
+                            <li>व्यवसाय पते का प्रमाण।</li>
+                            <li>12 महीने के बैंक स्टेटमेंट।</li>
+                            <li>पिछले 2 वर्षों के ITR (यदि लागू हो)।</li>
+                            <li>व्यवसाय योजना।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <caption>Mudra Loan Schemes / मुद्रा ऋण योजनाएँ</caption>
+                        <thead><tr><th>Scheme</th><th>Loan Amount</th><th>Purpose</th></tr></thead>
+                        <tbody>
+                            <tr><td>Shishu</td><td>Up to Rs. 50,000</td><td>Start-ups, first-time entrepreneurs</td></tr>
+                            <tr><td>Kishor</td><td>Rs. 50,000 – 5 lakh</td><td>Existing businesses</td></tr>
+                            <tr><td>Tarun</td><td>Rs. 5 – 10 lakh</td><td>Business expansion</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    9.14 व्यवसाय की सफलता और असफलता की कहानियाँ
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="ent-9-14">
+            <div class="section-header">
+                <span class="icon">📖</span>
+                <span class="title">9.14 व्यवसाय की सफलता और असफलता की कहानियाँ <span class="subtitle">(Business Stories – Success and Failure)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Story 1: Nandita Bijur – Uma Food Products</strong></p>
+                        <p>Nandita started "Yummy Ice Cream" with her husband. She took a bank loan of Rs. 70,000 and pledged jewellery for Rs. 40,000. The first year was tough. She launched new products like Gulabjamun and Basundi mix. She invested Rs. 6 lakhs in advertising. However, the name "Yummy Ice Cream" was already trademarked by someone in Goa. She was forced to change the name to "Uma Food Products" and products to "Et-mi". She had to take another loan at 24% interest. She worked hard and paid off all loans. Now she runs a successful business for over 10 years.</p>
+                        <p><strong>Lesson:</strong> Always check if your business name is trademarked. Hard work and perseverance pay off.</p>
+                        <p><strong>Story 2: PC Musthafa – ID Fresh</strong></p>
+                        <p>PC Musthafa dropped out of school in Class 5. With his teacher's encouragement, he returned to school, became an engineer, and then worked abroad. He returned to India with three goals: create employment, spend time with parents, and pursue higher education. He teamed up with his cousins and started an idli-dosa batter business from a 50 sq ft kitchen in Bangalore. Today, ID Fresh is a Rs. 185 crore business, selling batter in India and abroad. He used his engineering knowledge to create unique machines for large-scale production.</p>
+                        <p><strong>Lesson:</strong> Past experiences and skills can help build a successful business. Don't give up on your dreams.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>कहानी 1: नंदिता बिजूर – Uma Food Products</strong></p>
+                        <p>नंदिता ने अपने पति के साथ "Yummy Ice Cream" शुरू किया। उन्होंने Rs. 70,000 का बैंक ऋण लिया और Rs. 40,000 के लिए अपने आभूषण गिरवी रखे। पहला साल कठिन था। उन्होंने गुलाब जामुन और बसंदी मिक्स जैसे नए उत्पाद लॉन्च किए। उन्होंने विज्ञापन में Rs. 6 लाख का निवेश किया। हालाँकि, "Yummy Ice Cream" नाम पहले से ही गोवा में किसी के द्वारा ट्रेडमार्क किया गया था। उन्हें नाम बदलकर "Uma Food Products" और उत्पादों को "Et-mi" करना पड़ा। उन्हें 24% ब्याज पर एक और ऋण लेना पड़ा। उन्होंने कड़ी मेहनत की और सभी ऋण चुकाए। अब वह 10 वर्षों से अधिक समय से एक सफल व्यवसाय चला रही हैं।</p>
+                        <p><strong>सबक:</strong> हमेशा जाँच करें कि आपका व्यवसाय नाम ट्रेडमार्क है या नहीं। कड़ी मेहनत और दृढ़ता का फल मिलता है।</p>
+                        <p><strong>कहानी 2: पी.सी. मुस्तफा – ID Fresh</strong></p>
+                        <p>पी.सी. मुस्तफा ने कक्षा 5 में स्कूल छोड़ दिया। अपने शिक्षक के प्रोत्साहन से, वह स्कूल लौटे, इंजीनियर बने, और फिर विदेश में काम किया। वह तीन लक्ष्यों के साथ भारत लौटे: रोजगार सृजन, माता-पिता के साथ समय बिताना, और उच्च शिक्षा प्राप्त करना। उन्होंने अपने चचेरे भाइयों के साथ टीम बनाई और बैंगलोर में 50 वर्ग फुट की रसोई से इडली-डोसा बैटर व्यवसाय शुरू किया। आज, ID Fresh Rs. 185 करोड़ का व्यवसाय है, जो भारत और विदेशों में बैटर बेचता है। उन्होंने बड़े पैमाने पर उत्पादन के लिए अद्वितीय मशीनें बनाने के लिए अपने इंजीनियरिंग ज्ञान का उपयोग किया।</p>
+                        <p><strong>सबक:</strong> पिछले अनुभव और कौशल एक सफल व्यवसाय बनाने में मदद कर सकते हैं। अपने सपनों को मत छोड़ो।</p>
+                    </div>
+                </div>
+                <div class="info-card purple">
+                    <h4 style="margin:0 0 6px; color:#5a2d91;">📌 Key Lessons from Business Stories</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>Always check trademark/name registration.</li>
+                        <li>Hard work and perseverance are key to success.</li>
+                        <li>Past experiences and skills are valuable for building a business.</li>
+                        <li>Don't give up on your dreams.</li>
+                        <li>Learn from failures and keep moving forward.</li>
+                    </ul>
+                </div>
+                <div class="short-notes">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 मुख्य बातें / Key Takeaways</h4>
+                    <ul>
+                        <li>व्यवसाय स्वामी अपने अनुभवों और कौशलों का उपयोग सफल व्यवसाय बनाने के लिए करते हैं।</li>
+                        <li>सफलता आसान या गारंटीड नहीं है – कड़ी मेहनत और दृढ़ता आवश्यक है।</li>
+                        <li>व्यवसाय बढ़ाने का रहस्य सही टीम का चुनाव करना है।</li>
+                        <li>व्यवसाय स्वामी महत्वाकांक्षी होते हैं और असफलता के सामने हार नहीं मानते।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    MCQ LINK
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="mcq">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <span class="title">MCQ अभ्यास / बहुविकल्पीय प्रश्न</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="mcq-link">
+                    <p><strong>📌 इस मॉड्यूल के बहुविकल्पीय प्रश्नों का अभ्यास करने के लिए नीचे क्लिक करें।</strong></p>
+                    <a href="/question-bank/employability-skills/module-9.html" target="_blank">📝 प्रश्न बैंक पर जाएँ →</a>
+                    <p style="margin-top:10px; font-size:0.9rem; color:#888;">(नई टैब में खुलेगा)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    RELATED CHAPTERS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="related">
+            <div class="section-header">
+                <span class="icon">🔗</span>
+                <span class="title">संबंधित मॉड्यूल / Related Modules</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div style="display:flex; flex-wrap:wrap; gap:12px;">
+                    <a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 1: एम्प्लॉयबिलिटी स्किल्स का महत्व</a>
+                    <a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 2: संवैधानिक मूल्य – नागरिकता</a>
+                    <a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 3: 21वीं सदी में पेशेवर बनना</a>
+                    <a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 4: बुनियादी अंग्रेजी कौशल</a>
+                    <a href="module-5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 5: संचार कौशल</a>
+                    <a href="module-6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 6: आवश्यक डिजिटल कौशल</a>
+                    <a href="module-7.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 7: विविधता और समावेशन</a>
+                    <a href="module-8.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 8: वित्तीय और कानूनी साक्षरता</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    COMMENTS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comments">
+            <div class="section-header">
+                <span class="icon">💬</span>
+                <span class="title">टिप्पणियाँ – मॉडरेशन के साथ</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="comments-section">
+                    <p>💬 <strong>इस मॉड्यूल के बारे में अपने विचार या प्रश्न साझा करें।</strong></p>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 सभी टिप्पणियाँ प्रकाशित होने से पहले एडमिन द्वारा समीक्षा की जाती हैं।</p>
+                    <textarea id="comment-text" rows="3" placeholder="अपनी टिप्पणी यहाँ लिखें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
+                    <input type="text" id="comment-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <button onclick="postComment()" class="btn" style="margin-top:6px;">💬 टिप्पणी पोस्ट करें (समीक्षाधीन)</button>
+                    <div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
+                        <div class="comment-item">
+                            <strong>Admin</strong> <span class="meta">(मॉडरेटर)</span> <span class="status-approved">✅ स्वीकृत</span>
+                            <p style="margin:4px 0 0 0; font-size:0.95rem;">मॉड्यूल 9 में आपका स्वागत है! उद्यमिता, व्यवसाय योजना, मार्केटिंग, फंडिंग और सफलता की कहानियों के बारे में प्रश्न पूछने में संकोच न करें।</p>
+                        </div>
+                        <p style="color:#888; font-style:italic; margin-top:8px;">आपकी टिप्पणी एडमिन अनुमोदन के बाद यहाँ दिखाई देगी।</p>
+                    </div>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ टिप्पणियाँ मॉडरेट की जाती हैं। कृपया विनम्र रहें।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    ADMIN PANEL
+    ============================================================ -->
+    <div class="container">
+        <div class="admin-toggle" onclick="toggleAdminPanel()">
+            <span class="key-icon">🔑</span>
+            <strong>Admin Panel</strong> – Comments Management
+            <span style="color:#888; font-weight:400; font-size:0.85rem; display:block; margin-top:4px;">(Click to open/close admin panel)</span>
+        </div>
+        <div class="admin-panel" id="adminPanel">
+            <div class="admin-header">
+                <h3>🔐 Comment Moderation</h3>
+                <button class="close-btn" onclick="toggleAdminPanel()">✕ Close</button>
+            </div>
+            <div class="admin-password-box" id="adminLogin">
+                <input type="password" id="adminPassword" placeholder="Enter admin password..." onkeyup="if(event.key==='Enter') checkAdminPassword()">
+                <button onclick="checkAdminPassword()">🔓 Login</button>
+                <span class="error-msg" id="passwordError">❌ Wrong password! Try again.</span>
+            </div>
+            <div id="adminContent" style="display:none;">
+                <div class="comment-stats" id="commentStats">
+                    <span>📊 Total: <span class="count" id="totalCount">0</span></span>
+                    <span>⏳ Pending: <span class="count" id="pendingCount">0</span></span>
+                    <span>✅ Approved: <span class="count" id="approvedCount">0</span></span>
+                    <span>❌ Rejected: <span class="count" id="rejectedCount">0</span></span>
+                </div>
+                <div id="adminCommentList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    TOPIC REQUEST
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="topicrequest">
+            <div class="section-header">
+                <span class="icon">💭</span>
+                <span class="title">विषय अनुरोध</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="topic-request">
+                    <p>📝 <strong>कोई नया विषय या सुधार सुझाएँ।</strong></p>
+                    <input type="text" id="topic-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <input type="email" id="topic-email" placeholder="आपका ईमेल (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <textarea id="topic-message" rows="4" placeholder="जिस विषय या सुधार को आप देखना चाहते हैं, उसका वर्णन करें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
+                    <button onclick="submitTopicRequest()" class="btn">📤 अनुरोध सबमिट करें</button>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ आपके अनुरोध की समीक्षा एडमिन द्वारा की जाएगी और जल्द ही जोड़ा जाएगा।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    SUGGESTIONS & DISCLAIMER
+    ============================================================ -->
+    <div class="container" style="margin-top:16px;">
+        <div style="background:#fff; border-radius:14px; padding:20px 24px; border:1px solid #e6eaef; margin-bottom:20px;">
+            <h2 style="color:#003366; font-size:1.3rem; margin:0 0 6px;">💬 सुझाव दें</h2>
+            <p style="margin:0 0 12px;">यदि इस मॉड्यूल में कोई सुधार सुझाना है, तो हमें बताएं।</p>
+            <a href="/contact.html" class="btn">💬 यहाँ क्लिक करें →</a>
+        </div>
+        <div style="background:#fff8e1; border-radius:14px; padding:18px 22px; border:1px solid #ffe082; margin-bottom:20px;">
+            <h2 style="color:#856404; font-size:1.2rem; margin:0 0 4px;">⚠ अस्वीकरण</h2>
+            <p style="margin:0; font-size:0.95rem; color:#6c6c6c;">ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="/disclaimer.html">अस्वीकरण</a>
+            <a href="/privacy-policy.html">गोपनीयता नीति</a>
+            <a href="/terms.html">नियम</a>
+            <a href="/contact.html">संपर्क</a>
+        </div>
+        <p>© 2026 ITI Study Centre. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
+    <button id="scrollTop" title="ऊपर जाएँ">⬆</button>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('📚 सामग्री सुरक्षित है। कृपया इस पेज को शेयर करने के लिए शेयर बटन का उपयोग करें।');
+        });
+
+        // Disable Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 सामग्री कॉपी करना प्रतिबंधित है। कृपया शेयर बटन का उपयोग करें।');
+            }
+        });
+
+        // Search
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        // Share functions
+        function getPageUrl() { return window.location.href; }
+
+        function getPageTitle() { return document.querySelector('title').textContent; }
+
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle() + ' - इसे पढ़ें!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareFacebook() {
+            const url = getPageUrl();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareTwitter() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(url), '_blank');
+        }
+
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ कॉपी हो गया!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        span.textContent = 'लिंक कॉपी करें';
+                        btn.classList.remove('copied');
+                    }, 3000);
+                }).catch(() => { fallbackCopy(url); });
+            } else {
+                fallbackCopy(url);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ कॉपी हो गया!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    span.textContent = 'लिंक कॉपी करें';
+                    btn.classList.remove('copied');
+                }, 3000);
+            } catch (err) {
+                alert('कॉपी नहीं हो पाया। कृपया URL को मैन्युअल रूप से कॉपी करें।');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // ============================================================
+        // COMMENT SYSTEM
+        // ============================================================
+        const ADMIN_PASSWORD = 'admin123';
+        const STORAGE_KEY = 'module9_comments';
+
+        function getComments() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch {
+                return [];
+            }
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
+        }
+
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+        }
+
+        function getTimeAgo(timestamp) {
+            const diff = Date.now() - timestamp;
+            const minutes = Math.floor(diff / 60000);
+            if (minutes < 1) return 'Just now';
+            if (minutes < 60) return minutes + 'm ago';
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return hours + 'h ago';
+            const days = Math.floor(hours / 24);
+            return days + 'd ago';
+        }
+
+        function renderPublicComments() {
+            const list = document.getElementById('comment-list');
+            if (!list) return;
+            const comments = getComments();
+            const approved = comments.filter(c => c.status === 'approved');
+
+            const noMsg = list.querySelector('.no-comments-msg');
+            if (noMsg) noMsg.remove();
+
+            const existingItems = list.querySelectorAll('.comment-item');
+            existingItems.forEach(el => {
+                if (!el.querySelector('.status-approved') || !el.querySelector('strong')?.textContent?.includes('Admin')) {
+                    el.remove();
+                }
+            });
+
+            if (approved.length === 0) {
+                let noMsgEl = document.createElement('p');
+                noMsgEl.className = 'no-comments-msg';
+                noMsgEl.textContent = 'No approved comments yet. Be the first to comment!';
+                list.appendChild(noMsgEl);
+                return;
+            }
+
+            approved.forEach(comment => {
+                const div = document.createElement('div');
+                div.className = 'comment-item';
+                div.innerHTML = `
+                    <strong>${comment.name}</strong>
+                    <span class="meta">(${getTimeAgo(comment.timestamp)})</span>
+                    <span class="status-approved">✅ Approved</span>
+                    <p style="margin:4px 0 0 0; font-size:0.95rem;">${comment.text}</p>
+                `;
+                list.prepend(div);
+            });
+        }
+
+        function postComment() {
+            const text = document.getElementById('comment-text').value.trim();
+            const name = document.getElementById('comment-name').value.trim() || 'Anonymous';
+            if (!text) {
+                alert('Please write a comment.');
+                return;
+            }
+            const comments = getComments();
+            comments.push({ id: generateId(), name, text, timestamp: Date.now(), status: 'pending' });
+            saveComments(comments);
+            document.getElementById('comment-text').value = '';
+            document.getElementById('comment-name').value = '';
+            renderPublicComments();
+            renderAdminComments();
+            alert('✅ Your comment has been submitted for review.');
+        }
+
+        function checkAdminPassword() {
+            const input = document.getElementById('adminPassword');
+            const error = document.getElementById('passwordError');
+            if (input.value === ADMIN_PASSWORD) {
+                document.getElementById('adminLogin').style.display = 'none';
+                document.getElementById('adminContent').style.display = 'block';
+                renderAdminComments();
+                error.classList.remove('show');
+            } else {
+                error.classList.add('show');
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        function renderAdminComments() {
+            const container = document.getElementById('adminCommentList');
+            const comments = getComments();
+            document.getElementById('totalCount').textContent = comments.length;
+            document.getElementById('pendingCount').textContent = comments.filter(c => c.status === 'pending').length;
+            document.getElementById('approvedCount').textContent = comments.filter(c => c.status === 'approved').length;
+            document.getElementById('rejectedCount').textContent = comments.filter(c => c.status === 'rejected').length;
+
+            if (comments.length === 0) {
+                container.innerHTML = `<p class="no-comments-msg">No comments yet.</p>`;
+                return;
+            }
+
+            let html = '';
+            comments.forEach(comment => {
+                html += `
+                    <div class="admin-comment-item" data-id="${comment.id}">
+                        <div class="comment-info">
+                            <strong>${comment.name}</strong>
+                            <span class="time">${getTimeAgo(comment.timestamp)}</span>
+                            <span class="status ${comment.status}">${comment.status.charAt(0).toUpperCase() + comment.status.slice(1)}</span>
+                            <p style="margin:4px 0 0 0; font-size:0.9rem;">${comment.text}</p>
+                        </div>
+                        <div class="comment-actions">
+                            ${comment.status !== 'approved' ? `<button class="btn-approve" onclick="approveComment('${comment.id}')">✅ Approve</button>` : ''}
+                            ${comment.status !== 'rejected' ? `<button class="btn-reject" onclick="rejectComment('${comment.id}')">⛔ Reject</button>` : ''}
+                            <button class="btn-delete" onclick="deleteComment('${comment.id}')">🗑️ Delete</button>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function approveComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'approved' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function rejectComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'rejected' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function deleteComment(id) {
+            if (!confirm('Are you sure you want to delete this comment?')) return;
+            let comments = getComments();
+            comments = comments.filter(c => c.id !== id);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('open');
+            if (!panel.classList.contains('open')) {
+                document.getElementById('adminLogin').style.display = 'flex';
+                document.getElementById('adminContent').style.display = 'none';
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('passwordError').classList.remove('show');
+            }
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPublicComments();
+            window.postComment = postComment;
+        });
+
+        // Scroll to top
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
+            ' ITI Study Centre. सर्वाधिकार सुरक्षित।';
+
+        console.log('मॉड्यूल 9 लोड हुआ: उद्यमिता – 14 पाठ, पूरी तरह से खुला, द्विभाषी।');
+        console.log(`🔑 Admin Password: ${ADMIN_PASSWORD}`);
+    </script>
+</body>
+</html>
