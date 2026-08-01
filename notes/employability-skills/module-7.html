@@ -1,1 +1,1804 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>मॉड्यूल 7: विविधता और समावेशन | ITI Study Centre</title>
+    <meta name="description" content="Employability Skills मॉड्यूल 7: विविधता और समावेशन – पूरे नोट्स। हिंदी + अंग्रेजी में चार्ट और उदाहरण सहित।" />
+    <link rel="icon" href="/images/favicon.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.7;
+            user-select: none;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .main-header {
+            background: #003366;
+            padding: 14px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        .main-header nav a.notes-link {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb .current {
+            color: #555;
+            font-weight: 600;
+        }
+        .page-title {
+            padding: 30px 0 20px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.2rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 520px;
+            padding: 13px 18px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+        }
+        .search-section button {
+            padding: 13px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        @media (max-width: 640px) {
+            .search-section {
+                flex-direction: column;
+            }
+            .search-section input {
+                max-width: 100%;
+                width: 100%;
+            }
+            .search-section button {
+                width: 100%;
+            }
+        }
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            margin-bottom: 28px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 18px 26px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: default;
+            user-select: none;
+            flex-wrap: wrap;
+        }
+        .section-header .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .section-header .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body {
+            padding: 24px 28px;
+            background: #fafcff;
+        }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin: 28px 0 16px;
+            border-left: 4px solid #ffcc00;
+            padding-left: 16px;
+        }
+        .section-body h3:first-of-type {
+            margin-top: 0;
+        }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.1rem;
+            margin: 18px 0 10px;
+        }
+        .bilingual {
+            margin: 14px 0;
+        }
+        .bilingual .en {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1a2a3a;
+        }
+        .bilingual .hi {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #3d3d3d;
+            background: #f0f5ff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border-left: 5px solid #003366;
+            margin-top: 12px;
+        }
+        .bilingual ul,
+        .bilingual ol {
+            padding-left: 24px;
+            margin: 8px 0;
+        }
+        .bilingual ul li,
+        .bilingual ol li {
+            margin-bottom: 4px;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+        }
+        .info-card.blue {
+            border-left: 5px solid #003366;
+        }
+        .info-card.green {
+            border-left: 5px solid #28a745;
+        }
+        .info-card.orange {
+            border-left: 5px solid #ff9900;
+        }
+        .info-card.purple {
+            border-left: 5px solid #6f42c1;
+        }
+        .info-card.highlight {
+            border-left: 5px solid #ffc107;
+            background: #fffdf0;
+        }
+        .info-card.danger {
+            border-left: 5px solid #dc3545;
+            background: #fdf0f1;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) {
+            background: #f8f9fc;
+        }
+        .table-wrap tr:hover {
+            background: #eef2f7;
+        }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .example-box strong {
+            color: #003366;
+        }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .important-box ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .short-notes ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .mcq-link {
+            background: #f0f5ff;
+            border: 2px solid #003366;
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            margin: 16px 0;
+        }
+        .mcq-link a {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #003366;
+            background: #fff;
+            padding: 10px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: 0.25s;
+            border: 1px solid #003366;
+        }
+        .mcq-link a:hover {
+            background: #003366;
+            color: #fff;
+            transform: scale(1.02);
+        }
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 20px;
+            padding: 14px 18px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover {
+            transform: scale(1.04);
+            opacity: 0.9;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+        }
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+        .share-btn.link {
+            background: #6c757d;
+        }
+        .share-btn.link.copied {
+            background: #28a745;
+        }
+        .share-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #003366;
+            color: #fff !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        .comments-section textarea,
+        .topic-request textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            resize: vertical;
+            font-family: inherit;
+            user-select: text;
+        }
+        .comments-section input,
+        .topic-request input {
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            width: 48%;
+            margin-right: 2%;
+            margin-bottom: 10px;
+            font-family: inherit;
+            user-select: text;
+        }
+        @media (max-width: 600px) {
+            .comments-section input,
+            .topic-request input {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .comment-item {
+            background: #f1f4f9;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #003366;
+        }
+        .comment-item .meta {
+            color: #888;
+            font-size: 0.8rem;
+        }
+        .comment-item .status-pending {
+            color: #ff9900;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #fff3cd;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        .comment-item .status-approved {
+            color: #28a745;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #d4edda;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 24px 20px;
+            text-align: center;
+            margin-top: 44px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 24px;
+            margin-bottom: 12px;
+        }
+        footer .footer-links a {
+            color: #b0b8c5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        footer .footer-links a:hover {
+            color: #fff;
+        }
+        footer p {
+            margin: 8px 0 0;
+            font-size: 0.85rem;
+            color: #7a8494;
+        }
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.25s;
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover {
+            background: #002244;
+            transform: scale(1.05);
+        }
+        .copy-protect::selection {
+            background: #b3d4fc;
+            color: #000;
+        }
+        .admin-toggle {
+            text-align: center;
+            margin: 20px 0;
+            padding: 12px;
+            background: #f8f9fc;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-toggle:hover {
+            background: #eef2f7;
+            border-color: #003366;
+        }
+        .admin-toggle .key-icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+        .admin-panel {
+            display: none;
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            border: 2px solid #003366;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .admin-panel.open {
+            display: block;
+        }
+        .admin-panel .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .admin-panel .admin-header h3 {
+            color: #003366;
+            margin: 0;
+        }
+        .admin-panel .admin-header .close-btn {
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .admin-panel .admin-header .close-btn:hover {
+            background: #b02a37;
+        }
+        .admin-password-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .admin-password-box input {
+            padding: 10px 14px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-password-box input:focus {
+            border-color: #003366;
+            outline: none;
+        }
+        .admin-password-box button {
+            padding: 10px 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-password-box button:hover {
+            background: #002244;
+        }
+        .admin-password-box .error-msg {
+            color: #dc3545;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .admin-password-box .error-msg.show {
+            display: block;
+        }
+        .comment-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: #f8f9fc;
+            border-radius: 8px;
+        }
+        .comment-stats span {
+            font-size: 0.9rem;
+        }
+        .comment-stats .count {
+            font-weight: 700;
+            color: #003366;
+        }
+        .admin-comment-item {
+            background: #f8f9fc;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .admin-comment-item .comment-info {
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-comment-item .comment-info strong {
+            color: #003366;
+        }
+        .admin-comment-item .comment-info .time {
+            color: #888;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        .admin-comment-item .comment-info .status {
+            font-size: 0.7rem;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .admin-comment-item .comment-info .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .admin-comment-item .comment-info .status.approved {
+            background: #d4edda;
+            color: #1e7e34;
+        }
+        .admin-comment-item .comment-info .status.rejected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .admin-comment-item .comment-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .admin-comment-item .comment-actions button {
+            padding: 4px 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .admin-comment-item .comment-actions .btn-approve {
+            background: #28a745;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-approve:hover {
+            background: #1e7e34;
+        }
+        .admin-comment-item .comment-actions .btn-reject {
+            background: #ffc107;
+            color: #222;
+        }
+        .admin-comment-item .comment-actions .btn-reject:hover {
+            background: #e0a800;
+        }
+        .admin-comment-item .comment-actions .btn-delete {
+            background: #dc3545;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-delete:hover {
+            background: #b02a37;
+        }
+        .no-comments-msg {
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        .diversity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .diversity-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .diversity-card .d-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .diversity-card .d-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+        .diversity-card .d-desc {
+            font-size: 0.75rem;
+            color: #555;
+        }
+        .barrier-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) {
+            .barrier-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .barrier-card {
+            padding: 16px 18px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .barrier-card .b-title {
+            font-weight: 700;
+            color: #003366;
+            font-size: 1rem;
+        }
+        .barrier-card .b-desc {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 4px;
+        }
+        .inclusion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .inclusion-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .inclusion-card .i-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .inclusion-card .i-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+        .inclusion-card .i-desc {
+            font-size: 0.75rem;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .main-header nav {
+                justify-content: center;
+                gap: 6px 12px;
+            }
+            .main-header nav a {
+                font-size: 0.9rem;
+            }
+            .page-title h1 {
+                font-size: 1.6rem;
+            }
+            .section-header {
+                padding: 14px 18px;
+                flex-wrap: wrap;
+            }
+            .section-header .title {
+                font-size: 1.05rem;
+            }
+            .section-body {
+                padding: 16px 18px;
+            }
+            .section-body h3 {
+                font-size: 1.1rem;
+            }
+            .bilingual .en {
+                font-size: 0.95rem;
+            }
+            .bilingual .hi {
+                font-size: 0.9rem;
+                padding: 12px 16px;
+            }
+            .share-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .share-section .share-label {
+                text-align: center;
+            }
+            .share-btn {
+                justify-content: center;
+            }
+            .admin-comment-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .admin-comment-item .comment-actions {
+                justify-content: flex-start;
+            }
+            .admin-password-box {
+                flex-direction: column;
+            }
+            .admin-password-box input {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            .section-body {
+                padding: 12px 14px;
+            }
+            .section-header .icon {
+                font-size: 1.3rem;
+            }
+            .section-header .title {
+                font-size: 0.95rem;
+            }
+            .diversity-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .inclusion-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="/">ITI Study Centre</a></div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/iti-result.html">ITI Result</a>
+                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
+                <a href="/engineering-notes.html">Engineering Notes</a>
+                <a href="/questionbank.html">Question Bank</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
+            <a href="/notes/employability-skills/index.html">Employability Skills</a> &nbsp;›&nbsp;
+            <span class="current">मॉड्यूल 7: विविधता और समावेशन</span>
+        </div>
+    </div>
+
+    <!-- ===== PAGE TITLE ===== -->
+    <section class="page-title">
+        <div class="container">
+            <h1>🌈 मॉड्यूल 7: विविधता और समावेशन</h1>
+            <p>Diversity and Inclusion • NSDC/DGT पाठ्यक्रम पर आधारित • हिंदी + अंग्रेजी में पूरे नोट्स</p>
+        </div>
+    </section>
+
+    <!-- ===== SEARCH ===== -->
+    <section class="search-section container">
+        <input type="text" id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें...">
+        <button onclick="filterSections()">खोजें</button>
+    </section>
+
+    <!-- ===== SHARE BUTTONS ===== -->
+    <div class="container">
+        <div class="share-section" id="shareSection">
+            <span class="share-label">📤 इस पेज को शेयर करें:</span>
+            <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </button>
+            <button class="share-btn facebook" onclick="shareFacebook()">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter()">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Twitter
+            </button>
+            <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+                <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <span id="copyLinkText">Copy Link</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    7.1 लैंगिक रूढ़ियाँ (Gender Stereotypes)
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="div-7-1">
+            <div class="section-header">
+                <span class="icon">⚧️</span>
+                <span class="title">7.1 लैंगिक रूढ़ियाँ <span class="subtitle">(Gender Stereotypes)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Sex vs Gender:</strong></p>
+                        <ul>
+                            <li><strong>Sex:</strong> Refers to our physical body and the sexual organs we are born with (male/female/other).</li>
+                            <li><strong>Gender:</strong> Refers to the expectations that society has from people based on their sex.</li>
+                        </ul>
+                        <p><strong>Gender Stereotype:</strong> Fixed ideas or thoughts that society or people have about someone based on their sex.</p>
+                        <p><strong>Common gender stereotypes:</strong></p>
+                        <ul>
+                            <li>Girls are good at language and biology; boys are good at math and science.</li>
+                            <li>Boys are not good at arts and crafts; girls are not good at sports.</li>
+                            <li>Women are better at taking care of children than men.</li>
+                            <li>Men are better leaders than women.</li>
+                            <li>Women are expected to be slim and fair; men are expected to be tall and muscular.</li>
+                        </ul>
+                        <p><strong>Impact of gender stereotypes:</strong></p>
+                        <ul>
+                            <li>Women may face emotional and physical abuse because they are not expected to raise their voices.</li>
+                            <li>Boys are discouraged from expressing their emotions, leading to emotional health issues.</li>
+                            <li>Women are often not educated well and discouraged from working.</li>
+                            <li>Men who are soft-spoken are harassed or insulted.</li>
+                            <li>Transpersons feel harassed and unsafe.</li>
+                        </ul>
+                        <p><strong>How to address gender stereotypes:</strong> Talk about it, lead by example, and act to support those suffering.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>सेक्स (Sex) बनाम जेंडर (Gender):</strong></p>
+                        <ul>
+                            <li><strong>सेक्स (Sex):</strong> हमारे शारीरिक शरीर और यौन अंगों को संदर्भित करता है जिनके साथ हम पैदा होते हैं (पुरुष/महिला/अन्य)।</li>
+                            <li><strong>जेंडर (Gender):</strong> उन अपेक्षाओं को संदर्भित करता है जो समाज लोगों से उनके सेक्स के आधार पर रखता है।</li>
+                        </ul>
+                        <p><strong>लैंगिक रूढ़िवादिता (Gender Stereotype):</strong> समाज या लोगों के किसी व्यक्ति के बारे में उनके सेक्स के आधार पर निश्चित विचार या धारणाएँ।</p>
+                        <p><strong>सामान्य लैंगिक रूढ़ियाँ:</strong></p>
+                        <ul>
+                            <li>लड़कियाँ भाषा और जीवविज्ञान में अच्छी होती हैं; लड़के गणित और विज्ञान में अच्छे होते हैं।</li>
+                            <li>लड़के कला और शिल्प में अच्छे नहीं होते; लड़कियाँ खेलों में अच्छी नहीं होतीं।</li>
+                            <li>महिलाएँ पुरुषों की तुलना में बच्चों की देखभाल में बेहतर होती हैं।</li>
+                            <li>पुरुष महिलाओं की तुलना में बेहतर नेता होते हैं।</li>
+                            <li>महिलाओं से पतली और गोरी होने की अपेक्षा की जाती है; पुरुषों से लंबे और मांसल होने की अपेक्षा की जाती है।</li>
+                        </ul>
+                        <p><strong>लैंगिक रूढ़ियों का प्रभाव:</strong></p>
+                        <ul>
+                            <li>महिलाओं को भावनात्मक और शारीरिक शोषण का सामना करना पड़ सकता है क्योंकि उनसे आवाज उठाने की उम्मीद नहीं की जाती।</li>
+                            <li>लड़कों को अपनी भावनाओं को व्यक्त करने से हतोत्साहित किया जाता है, जिससे भावनात्मक स्वास्थ्य समस्याएँ होती हैं।</li>
+                            <li>महिलाओं को अक्सर अच्छी शिक्षा नहीं दी जाती और काम करने से हतोत्साहित किया जाता है।</li>
+                            <li>मुलायम स्वभाव वाले पुरुषों को परेशान या अपमानित किया जाता है।</li>
+                            <li>ट्रांसजेंडर लोग परेशान और असुरक्षित महसूस करते हैं।</li>
+                        </ul>
+                        <p><strong>लैंगिक रूढ़ियों को कैसे दूर करें:</strong> इसके बारे में बात करें, उदाहरण पेश करें, और पीड़ित लोगों का समर्थन करें।</p>
+                    </div>
+                </div>
+                <div class="info-card orange">
+                    <h4 style="margin:0 0 6px; color:#cc7a00;">💡 याद रखें / Remember</h4>
+                    <p style="font-size:0.95rem;">लैंगिक रूढ़ियाँ लोगों को एक निश्चित तरीके से व्यवहार करने के लिए मजबूर करती हैं, भले ही यह उनके लिए हानिकारक हो। / Gender stereotypes force people to behave in a certain way even when it's harmful.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    7.2 लैंगिक भेदभाव को समझना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="div-7-2">
+            <div class="section-header">
+                <span class="icon">🚫</span>
+                <span class="title">7.2 लैंगिक भेदभाव को समझना <span class="subtitle">(Understanding Gender-Based Discrimination)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Discrimination:</strong> When someone is treated differently due to their sex, gender, caste, religion, skin colour, income level, abilities, etc.</p>
+                        <p><strong>Gender-based discrimination:</strong> Discrimination on the basis of gender.</p>
+                        <p><strong>Examples of gender-based discrimination:</strong></p>
+                        <ul>
+                            <li><strong>In Education:</strong> More boys get education than girls. Many Indian families think educating a girl child is a waste of money.</li>
+                            <li><strong>In Nutrition:</strong> More girls under 5 are malnourished than boys. Families prioritize the health of boys over girls.</li>
+                            <li><strong>In Employment:</strong> Men are often preferred for engineering jobs; women are preferred for nursing jobs – based on gender stereotypes.</li>
+                        </ul>
+                        <p><strong>Reasons for gender-based discrimination:</strong></p>
+                        <ul>
+                            <li><strong>Social Norms:</strong> Old traditions are still followed.</li>
+                            <li><strong>Education:</strong> Many adults are not educated, leading to old ways of thinking.</li>
+                            <li><strong>Poverty:</strong> Women often have no income or control over finances.</li>
+                            <li><strong>Lack of awareness:</strong> People are often unaware of their rights.</li>
+                        </ul>
+                        <p><strong>Constitutional protection:</strong> Article 15 and 16 of the Indian Constitution protect citizens against discrimination.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>भेदभाव (Discrimination):</strong> जब किसी के साथ उसके सेक्स, जेंडर, जाति, धर्म, त्वचा का रंग, आय स्तर, क्षमताओं आदि के कारण अलग व्यवहार किया जाता है।</p>
+                        <p><strong>लैंगिक भेदभाव (Gender-based discrimination):</strong> जेंडर के आधार पर भेदभाव।</p>
+                        <p><strong>लैंगिक भेदभाव के उदाहरण:</strong></p>
+                        <ul>
+                            <li><strong>शिक्षा में:</strong> लड़कियों की तुलना में अधिक लड़कों को शिक्षा मिलती है। कई भारतीय परिवार सोचते हैं कि लड़की की शिक्षा पैसे की बर्बादी है।</li>
+                            <li><strong>पोषण में:</strong> 5 वर्ष से कम उम्र की अधिक लड़कियाँ लड़कों की तुलना में कुपोषित हैं। परिवार लड़कों के स्वास्थ्य को लड़कियों पर प्राथमिकता देते हैं।</li>
+                            <li><strong>रोजगार में:</strong> पुरुषों को अक्सर इंजीनियरिंग नौकरियों के लिए प्राथमिकता दी जाती है; महिलाओं को नर्सिंग नौकरियों के लिए – लैंगिक रूढ़ियों के आधार पर।</li>
+                        </ul>
+                        <p><strong>लैंगिक भेदभाव के कारण:</strong></p>
+                        <ul>
+                            <li><strong>सामाजिक मानदंड:</strong> पुरानी परंपराओं का पालन किया जाता है।</li>
+                            <li><strong>शिक्षा:</strong> कई वयस्क शिक्षित नहीं हैं, जिससे सोचने के पुराने तरीके बने रहते हैं।</li>
+                            <li><strong>गरीबी:</strong> महिलाओं की अक्सर कोई आय नहीं होती या वित्त पर उनका कोई नियंत्रण नहीं होता।</li>
+                            <li><strong>जागरूकता की कमी:</strong> लोग अक्सर अपने अधिकारों से अनजान होते हैं।</li>
+                        </ul>
+                        <p><strong>संवैधानिक सुरक्षा:</strong> भारतीय संविधान का अनुच्छेद 15 और 16 नागरिकों को भेदभाव से बचाता है।</p>
+                    </div>
+                </div>
+                <div class="info-card blue">
+                    <h4 style="margin:0 0 6px; color:#003366;">📜 संवैधानिक सुरक्षा / Constitutional Protection</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li><strong>अनुच्छेद 15 (Article 15):</strong> राज्य किसी भी नागरिक के साथ केवल जाति, धर्म, लिंग या जन्म स्थान के आधार पर भेदभाव नहीं करेगा।</li>
+                        <li><strong>अनुच्छेद 16 (Article 16):</strong> सभी नागरिकों को राज्य के अधीन रोजगार के समान अवसर मिलेंगे।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    7.3 लैंगिक समानता को समझना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="div-7-3">
+            <div class="section-header">
+                <span class="icon">⚖️</span>
+                <span class="title">7.3 लैंगिक समानता को समझना <span class="subtitle">(Understanding Gender Equality)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Equality:</strong> In the same situation, people should be treated in the same way. They have the same rights, status, and opportunities.</p>
+                        <p><strong>Gender Equality:</strong> No matter what their gender is, all people have the same rights, access to resources, and opportunities.</p>
+                        <p><strong>Why gender equality is important:</strong></p>
+                        <ul>
+                            <li>It is a basic human right, protected by our Constitution.</li>
+                            <li>It saves lives – equal access to healthcare and nutrition ensures good health.</li>
+                            <li>It reduces poverty – when both genders have the right to work and equal pay, family income rises.</li>
+                        </ul>
+                        <p><strong>Gender Equality and Career Development:</strong></p>
+                        <ul>
+                            <li>Boys are encouraged to study science and maths; girls are expected to study arts and social sciences.</li>
+                            <li>Girls are encouraged to take jobs like teaching, nursing, administration.</li>
+                            <li>Women often have to leave jobs after marriage, causing career breaks.</li>
+                            <li>Women and men are often not paid the same salary for the same job – this is called the <strong>wage gap</strong>.</li>
+                        </ul>
+                        <p><strong>Article 16</strong> of the Indian Constitution protects people from gender discrimination in employment.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>समानता (Equality):</strong> एक ही स्थिति में, लोगों के साथ एक ही तरह से व्यवहार किया जाना चाहिए। उनके समान अधिकार, स्थिति और अवसर हैं।</p>
+                        <p><strong>लैंगिक समानता (Gender Equality):</strong> उनके जेंडर की परवाह किए बिना, सभी लोगों के समान अधिकार, संसाधनों तक पहुँच और अवसर हैं।</p>
+                        <p><strong>लैंगिक समानता क्यों महत्वपूर्ण है:</strong></p>
+                        <ul>
+                            <li>यह एक बुनियादी मानव अधिकार है, जो हमारे संविधान द्वारा संरक्षित है।</li>
+                            <li>यह जीवन बचाता है – स्वास्थ्य सेवा और पोषण तक समान पहुँच अच्छे स्वास्थ्य को सुनिश्चित करती है।</li>
+                            <li>यह गरीबी कम करता है – जब दोनों लिंगों को काम करने और समान वेतन का अधिकार होता है, तो परिवार की आय बढ़ती है।</li>
+                        </ul>
+                        <p><strong>लैंगिक समानता और करियर विकास:</strong></p>
+                        <ul>
+                            <li>लड़कों को विज्ञान और गणित पढ़ने के लिए प्रोत्साहित किया जाता है; लड़कियों से कला और सामाजिक विज्ञान पढ़ने की अपेक्षा की जाती है।</li>
+                            <li>लड़कियों को शिक्षण, नर्सिंग, प्रशासन जैसी नौकरियाँ लेने के लिए प्रोत्साहित किया जाता है।</li>
+                            <li>महिलाओं को अक्सर शादी के बाद नौकरी छोड़नी पड़ती है, जिससे करियर में ब्रेक आते हैं।</li>
+                            <li>महिलाओं और पुरुषों को अक्सर एक ही नौकरी के लिए समान वेतन नहीं दिया जाता – इसे <strong>वेतन अंतर (wage gap)</strong> कहा जाता है।</li>
+                        </ul>
+                        <p><strong>अनुच्छेद 16</strong> भारतीय संविधान लोगों को रोजगार में लैंगिक भेदभाव से बचाता है।</p>
+                    </div>
+                </div>
+                <div class="info-card green">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">💡 याद रखें / Remember</h4>
+                    <p style="font-size:0.95rem;">जब महिलाएँ शिक्षित और कामकाजी होती हैं, तो पूरे परिवार का स्वास्थ्य, पोषण और शिक्षा स्तर बेहतर होता है। / When women are educated and work, the healthcare, nutrition and education level of the whole family improves.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    7.4 कार्यस्थल में विविधता
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="div-7-4">
+            <div class="section-header">
+                <span class="icon">🌍</span>
+                <span class="title">7.4 कार्यस्थल में विविधता <span class="subtitle">(Diversity in the Workplace)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Diversity in the workplace</strong> refers to an organization where people of different sex, gender, caste, class, age, physical appearance, education, abilities, and more work together.</p>
+                        <p><strong>Importance of diversity:</strong></p>
+                        <ul>
+                            <li><strong>Different perspectives:</strong> Brings together people with different views, increasing creativity and innovation.</li>
+                            <li><strong>Better customer satisfaction:</strong> A diverse team can connect with a wider range of customers.</li>
+                            <li><strong>Increased productivity:</strong> Ensures the right person gets the right task.</li>
+                        </ul>
+                        <p><strong>Barriers to diversity:</strong></p>
+                        <ul>
+                            <li><strong>Prejudice:</strong> People often discriminate against those who are different.</li>
+                            <li><strong>Cultural differences:</strong> Different ways of working and communicating.</li>
+                            <li><strong>Additional facilities:</strong> Hiring people with disabilities may require extra infrastructure.</li>
+                            <li><strong>Communication/Language:</strong> When the company only respects one language, others feel excluded.</li>
+                            <li><strong>Generation gap:</strong> Different generations think and work differently.</li>
+                        </ul>
+                        <p><strong>How to overcome barriers:</strong></p>
+                        <ul>
+                            <li>Make diversity an organizational policy.</li>
+                            <li>Provide training on diversity.</li>
+                            <li>Be vocal about being a diverse workplace.</li>
+                            <li>Lead from the top – leadership positions must be diverse.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>कार्यस्थल में विविधता (Diversity in the workplace)</strong> एक ऐसे संगठन को संदर्भित करती है जहाँ अलग-अलग सेक्स, जेंडर, जाति, वर्ग, आयु, शारीरिक उपस्थिति, शिक्षा, क्षमताओं आदि के लोग एक साथ काम करते हैं।</p>
+                        <p><strong>विविधता का महत्व:</strong></p>
+                        <ul>
+                            <li><strong>अलग-अलग दृष्टिकोण:</strong> अलग-अलग विचारों वाले लोगों को एक साथ लाता है, रचनात्मकता और नवाचार बढ़ाता है।</li>
+                            <li><strong>बेहतर ग्राहक संतुष्टि:</strong> एक विविध टीम ग्राहकों की व्यापक श्रेणी से जुड़ सकती है।</li>
+                            <li><strong>बढ़ी हुई उत्पादकता:</strong> सुनिश्चित करता है कि सही व्यक्ति को सही कार्य मिले।</li>
+                        </ul>
+                        <p><strong>विविधता में बाधाएँ:</strong></p>
+                        <ul>
+                            <li><strong>पूर्वाग्रह (Prejudice):</strong> लोग अक्सर उन लोगों के साथ भेदभाव करते हैं जो उनसे भिन्न हैं।</li>
+                            <li><strong>सांस्कृतिक अंतर:</strong> काम करने और संवाद करने के अलग-अलग तरीके।</li>
+                            <li><strong>अतिरिक्त सुविधाएँ:</strong> विकलांग लोगों को काम पर रखने के लिए अतिरिक्त बुनियादी ढाँचे की आवश्यकता हो सकती है।</li>
+                            <li><strong>संचार/भाषा:</strong> जब कंपनी केवल एक भाषा का सम्मान करती है, तो अन्य बहिष्कृत महसूस करते हैं।</li>
+                            <li><strong>पीढ़ीगत अंतर:</strong> अलग-अलग पीढ़ियाँ अलग-अलग सोचती और काम करती हैं।</li>
+                        </ul>
+                        <p><strong>बाधाओं को कैसे दूर करें:</strong></p>
+                        <ul>
+                            <li>विविधता को एक संगठनात्मक नीति बनाएँ।</li>
+                            <li>विविधता पर प्रशिक्षण प्रदान करें।</li>
+                            <li>विविध कार्यस्थल होने के बारे में मुखर रहें।</li>
+                            <li>ऊपर से नेतृत्व करें – नेतृत्व के पद भी विविध होने चाहिए।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="diversity-grid">
+                    <div class="diversity-card"><span class="d-icon">👥</span><div class="d-name">Different Perspectives</div><div class="d-desc">Creativity & innovation</div></div>
+                    <div class="diversity-card"><span class="d-icon">🤝</span><div class="d-name">Customer Satisfaction</div><div class="d-desc">Wider connection</div></div>
+                    <div class="diversity-card"><span class="d-icon">📈</span><div class="d-name">Productivity</div><div class="d-desc">Right person, right task</div></div>
+                    <div class="diversity-card"><span class="d-icon">💡</span><div class="d-name">Innovation</div><div class="d-desc">New ideas & solutions</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    7.5 कार्यस्थल में समावेशन
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="div-7-5">
+            <div class="section-header">
+                <span class="icon">🤗</span>
+                <span class="title">7.5 कार्यस्थल में समावेशन <span class="subtitle">(Inclusion in the Workplace)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Inclusion</strong> means the act of including. In the workplace, inclusion happens when every member of the company gets the same chances to grow in their careers.</p>
+                        <p><strong>Diversity vs Inclusion:</strong> Diversity is being invited to the party. Inclusion is being asked to dance. A company can be diverse but not inclusive.</p>
+                        <p><strong>Examples of inclusion:</strong></p>
+                        <ul>
+                            <li>A children's day care facility for working parents.</li>
+                            <li>Special facilities for transportation for people with physical disabilities.</li>
+                            <li>Special bathrooms for transgender persons.</li>
+                            <li>Using inclusive language – "Chairperson" instead of "Chairman" or "Chairwoman".</li>
+                        </ul>
+                        <p><strong>Why inclusion is important:</strong></p>
+                        <ul>
+                            <li>Creates an atmosphere of respect.</li>
+                            <li>Encourages employees to share their ideas.</li>
+                            <li>Essential for happiness and growth at work.</li>
+                        </ul>
+                        <p><strong>How to create inclusive workplaces:</strong></p>
+                        <ul>
+                            <li><strong>Inclusive leadership:</strong> Leaders must be diverse and inclusive.</li>
+                            <li><strong>Policies aimed at inclusion:</strong> Hiring, promotions, equal pay, culture-specific holidays.</li>
+                            <li><strong>Celebrate diversity:</strong> Celebrate different festivals and share food.</li>
+                            <li><strong>Training:</strong> All employees should receive training on inclusion.</li>
+                            <li><strong>Design:</strong> Physical workplace should be sensitive to people's needs – ramps, large signboards, multi-sensory alarms.</li>
+                            <li><strong>Constantly evaluate:</strong> Check if the organization is truly inclusive.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>समावेशन (Inclusion)</strong> का अर्थ है शामिल करने की क्रिया। कार्यस्थल में, समावेशन तब होता है जब कंपनी के प्रत्येक सदस्य को अपने करियर में बढ़ने के समान अवसर मिलते हैं।</p>
+                        <p><strong>विविधता बनाम समावेशन:</strong> विविधता पार्टी में आमंत्रित होना है। समावेशन नाचने के लिए कहा जाना है। एक कंपनी विविध हो सकती है लेकिन समावेशी नहीं।</p>
+                        <p><strong>समावेशन के उदाहरण:</strong></p>
+                        <ul>
+                            <li>कामकाजी माता-पिता के लिए बच्चों की डे-केयर सुविधा।</li>
+                            <li>शारीरिक विकलांग लोगों के लिए परिवहन की विशेष सुविधाएँ।</li>
+                            <li>ट्रांसजेंडर व्यक्तियों के लिए विशेष शौचालय।</li>
+                            <li>समावेशी भाषा का उपयोग – "Chairman" या "Chairwoman" के बजाय "Chairperson"</li>
+                        </ul>
+                        <p><strong>समावेशन क्यों महत्वपूर्ण है:</strong></p>
+                        <ul>
+                            <li>सम्मान का माहौल बनाता है।</li>
+                            <li>कर्मचारियों को अपने विचार साझा करने के लिए प्रोत्साहित करता है।</li>
+                            <li>काम पर खुशी और विकास के लिए आवश्यक है।</li>
+                        </ul>
+                        <p><strong>समावेशी कार्यस्थल कैसे बनाएँ:</strong></p>
+                        <ul>
+                            <li><strong>समावेशी नेतृत्व:</strong> नेताओं को विविध और समावेशी होना चाहिए।</li>
+                            <li><strong>समावेशन के उद्देश्य से नीतियाँ:</strong> भर्ती, पदोन्नति, समान वेतन, संस्कृति-विशिष्ट छुट्टियाँ।</li>
+                            <li><strong>विविधता का जश्न मनाएँ:</strong> विभिन्न त्योहार मनाएँ और भोजन साझा करें।</li>
+                            <li><strong>प्रशिक्षण:</strong> सभी कर्मचारियों को समावेशन पर प्रशिक्षण मिलना चाहिए।</li>
+                            <li><strong>डिजाइन:</strong> भौतिक कार्यस्थल लोगों की जरूरतों के प्रति संवेदनशील होना चाहिए – रैंप, बड़े साइनबोर्ड, बहु-संवेदी अलार्म।</li>
+                            <li><strong>निरंतर मूल्यांकन:</strong> जाँच करें कि क्या संगठन वास्तव में समावेशी है।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="inclusion-grid">
+                    <div class="inclusion-card"><span class="i-icon">👶</span><div class="i-name">Day Care</div><div class="i-desc">For working parents</div></div>
+                    <div class="inclusion-card"><span class="i-icon">♿</span><div class="i-name">Accessibility</div><div class="i-desc">For people with disabilities</div></div>
+                    <div class="inclusion-card"><span class="i-icon">🚻</span><div class="i-name">Transgender Facilities</div><div class="i-desc">Special bathrooms</div></div>
+                    <div class="inclusion-card"><span class="i-icon">🗣️</span><div class="i-name">Inclusive Language</div><div class="i-desc">"Chairperson"</div></div>
+                </div>
+                <div class="info-card highlight">
+                    <h4 style="margin:0 0 6px; color:#856404;">💡 याद रखें / Remember</h4>
+                    <p style="font-size:0.95rem;">विविधता एक बल्ब है, समावेशन बिजली है जो बल्ब को चमकने के लिए आवश्यक है। / Diversity is a bulb; inclusion is the electricity necessary to make the bulb glow.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    7.6 कार्यस्थल पर यौन उत्पीड़न: POSH अधिनियम
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="div-7-6">
+            <div class="section-header">
+                <span class="icon">🛡️</span>
+                <span class="title">7.6 कार्यस्थल पर यौन उत्पीड़न: POSH अधिनियम <span class="subtitle">(Sexual Harassment in the Workplace – POSH Act)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>POSH Act (Prevention of Sexual Harassment Act, 2013)</strong> – The Indian government passed the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act in 2013.</p>
+                        <p><strong>What is sexual harassment?</strong> Any unwelcome acts or behaviours committed directly or indirectly against a woman in the workplace:</p>
+                        <ul>
+                            <li>Physical advances and contacts.</li>
+                            <li>Demands or requests for sexual favours.</li>
+                            <li>Showing pornography.</li>
+                            <li>Passing sexually coloured remarks.</li>
+                            <li>Directly or indirectly offering preferential treatment or threatening unfavourable treatment in employment.</li>
+                            <li>Creating a hostile work environment.</li>
+                            <li>Humiliating treatment affecting health and safety.</li>
+                        </ul>
+                        <p><strong>Key provisions of the POSH Act:</strong></p>
+                        <ul>
+                            <li>Every organization must have a POSH Policy with definition of sexual harassment, complaint resolution process, rights of employees, and IC members.</li>
+                            <li>Any workplace with 10 or more employees must constitute an <strong>Internal Committee (IC)</strong> with at least 4 members (half women), a senior female employee as Presiding Officer, and one external member.</li>
+                            <li>Every organization must submit an annual report on POSH cases.</li>
+                            <li>Organizations with less than 10 employees can approach the Local Complaints Committee.</li>
+                        </ul>
+                        <p><strong>How to seek protection:</strong> File complaint to IC within 3 months. IC conducts inquiry within 90 days and submits report. Organization acts within 60 days. If unhappy, complainant can approach the judiciary.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>POSH अधिनियम (2013)</strong> – भारत सरकार ने 2013 में कार्यस्थल पर महिलाओं का यौन उत्पीड़न (रोकथाम, निषेध और निवारण) अधिनियम पारित किया।</p>
+                        <p><strong>यौन उत्पीड़न क्या है?</strong> कार्यस्थल पर किसी महिला के खिलाफ प्रत्यक्ष या अप्रत्यक्ष रूप से किए गए कोई भी अवांछित कार्य या व्यवहार:</p>
+                        <ul>
+                            <li>शारीरिक प्रगति और संपर्क।</li>
+                            <li>यौन अनुग्रह की माँग या अनुरोध।</li>
+                            <li>अश्लील सामग्री दिखाना।</li>
+                            <li>यौन रंगीन टिप्पणियाँ पास करना।</li>
+                            <li>प्रत्यक्ष या अप्रत्यक्ष रूप से रोजगार में तरजीही उपचार की पेशकश करना या प्रतिकूल उपचार की धमकी देना।</li>
+                            <li>शत्रुतापूर्ण कार्य वातावरण बनाना।</li>
+                            <li>स्वास्थ्य और सुरक्षा को प्रभावित करने वाला अपमानजनक व्यवहार।</li>
+                        </ul>
+                        <p><strong>POSH अधिनियम के प्रमुख प्रावधान:</strong></p>
+                        <ul>
+                            <li>प्रत्येक संगठन के पास एक POSH नीति होनी चाहिए जिसमें यौन उत्पीड़न की परिभाषा, शिकायत समाधान प्रक्रिया, कर्मचारियों के अधिकार और IC सदस्य शामिल हों।</li>
+                            <li>10 या अधिक कर्मचारियों वाले किसी भी कार्यस्थल को एक <strong>आंतरिक समिति (IC)</strong> का गठन करना होगा जिसमें कम से कम 4 सदस्य (आधी महिलाएँ), एक वरिष्ठ महिला कर्मचारी अध्यक्ष, और एक बाहरी सदस्य हों।</li>
+                            <li>प्रत्येक संगठन को POSH मामलों पर वार्षिक रिपोर्ट प्रस्तुत करनी होगी।</li>
+                            <li>10 से कम कर्मचारियों वाले संगठन स्थानीय शिकायत समिति से संपर्क कर सकते हैं।</li>
+                        </ul>
+                        <p><strong>सुरक्षा कैसे प्राप्त करें:</strong> 3 महीने के भीतर IC को शिकायत दर्ज कराएँ। IC 90 दिनों के भीतर जाँच करता है और रिपोर्ट प्रस्तुत करता है। संगठन 60 दिनों के भीतर कार्रवाई करता है। यदि असंतुष्ट हैं, तो न्यायपालिका से संपर्क कर सकते हैं।</p>
+                    </div>
+                </div>
+                <div class="info-card danger">
+                    <h4 style="margin:0 0 6px; color:#b02a37;">⚠️ महत्वपूर्ण / Important</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li><strong>IC:</strong> Internal Committee – हर 10+ कर्मचारी वाले संगठन में अनिवार्य।</li>
+                        <li><strong>समय सीमा:</strong> 3 महीने के भीतर शिकायत, 90 दिनों में जाँच, 60 दिनों में कार्रवाई।</li>
+                        <li><strong>दंड:</strong> यदि संगठन कार्रवाई नहीं करता है, तो जुर्माना या व्यवसाय लाइसेंस रद्द किया जा सकता है।</li>
+                    </ul>
+                </div>
+                <div class="short-notes">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 मुख्य बातें / Key Takeaways</h4>
+                    <ul>
+                        <li>POSH अधिनियम कार्यस्थल पर महिलाओं की सुरक्षा के लिए बनाया गया था।</li>
+                        <li>यौन उत्पीड़न में शारीरिक, मौखिक और मनोवैज्ञानिक शोषण शामिल है।</li>
+                        <li>कार्यस्थल में कार्यालय स्थान + कार्य के लिए जाए गए सभी स्थान + नियोक्ता द्वारा प्रदान किया गया परिवहन शामिल है।</li>
+                        <li>हर संगठन की POSH नीति होनी चाहिए।</li>
+                        <li>10+ कर्मचारियों वाले किसी भी कार्यस्थल को आंतरिक समिति (IC) बनानी होगी।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    MCQ LINK
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="mcq">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <span class="title">MCQ अभ्यास / बहुविकल्पीय प्रश्न</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="mcq-link">
+                    <p><strong>📌 इस मॉड्यूल के बहुविकल्पीय प्रश्नों का अभ्यास करने के लिए नीचे क्लिक करें।</strong></p>
+                    <a href="/question-bank/employability-skills/module-7.html" target="_blank">📝 प्रश्न बैंक पर जाएँ →</a>
+                    <p style="margin-top:10px; font-size:0.9rem; color:#888;">(नई टैब में खुलेगा)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    RELATED CHAPTERS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="related">
+            <div class="section-header">
+                <span class="icon">🔗</span>
+                <span class="title">संबंधित मॉड्यूल / Related Modules</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div style="display:flex; flex-wrap:wrap; gap:12px;">
+                    <a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 1: एम्प्लॉयबिलिटी स्किल्स का महत्व</a>
+                    <a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 2: संवैधानिक मूल्य – नागरिकता</a>
+                    <a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 3: 21वीं सदी में पेशेवर बनना</a>
+                    <a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 4: बुनियादी अंग्रेजी कौशल</a>
+                    <a href="module-5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 5: संचार कौशल</a>
+                    <a href="module-6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 6: आवश्यक डिजिटल कौशल</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    COMMENTS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comments">
+            <div class="section-header">
+                <span class="icon">💬</span>
+                <span class="title">टिप्पणियाँ – मॉडरेशन के साथ</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="comments-section">
+                    <p>💬 <strong>इस मॉड्यूल के बारे में अपने विचार या प्रश्न साझा करें।</strong></p>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 सभी टिप्पणियाँ प्रकाशित होने से पहले एडमिन द्वारा समीक्षा की जाती हैं।</p>
+                    <textarea id="comment-text" rows="3" placeholder="अपनी टिप्पणी यहाँ लिखें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
+                    <input type="text" id="comment-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <button onclick="postComment()" class="btn" style="margin-top:6px;">💬 टिप्पणी पोस्ट करें (समीक्षाधीन)</button>
+                    <div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
+                        <div class="comment-item">
+                            <strong>Admin</strong> <span class="meta">(मॉडरेटर)</span> <span class="status-approved">✅ स्वीकृत</span>
+                            <p style="margin:4px 0 0 0; font-size:0.95rem;">मॉड्यूल 7 में आपका स्वागत है! लैंगिक समानता, विविधता, समावेशन और POSH अधिनियम के बारे में प्रश्न पूछने में संकोच न करें।</p>
+                        </div>
+                        <p style="color:#888; font-style:italic; margin-top:8px;">आपकी टिप्पणी एडमिन अनुमोदन के बाद यहाँ दिखाई देगी।</p>
+                    </div>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ टिप्पणियाँ मॉडरेट की जाती हैं। कृपया विनम्र रहें।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    ADMIN PANEL
+    ============================================================ -->
+    <div class="container">
+        <div class="admin-toggle" onclick="toggleAdminPanel()">
+            <span class="key-icon">🔑</span>
+            <strong>Admin Panel</strong> – Comments Management
+            <span style="color:#888; font-weight:400; font-size:0.85rem; display:block; margin-top:4px;">(Click to open/close admin panel)</span>
+        </div>
+        <div class="admin-panel" id="adminPanel">
+            <div class="admin-header">
+                <h3>🔐 Comment Moderation</h3>
+                <button class="close-btn" onclick="toggleAdminPanel()">✕ Close</button>
+            </div>
+            <div class="admin-password-box" id="adminLogin">
+                <input type="password" id="adminPassword" placeholder="Enter admin password..." onkeyup="if(event.key==='Enter') checkAdminPassword()">
+                <button onclick="checkAdminPassword()">🔓 Login</button>
+                <span class="error-msg" id="passwordError">❌ Wrong password! Try again.</span>
+            </div>
+            <div id="adminContent" style="display:none;">
+                <div class="comment-stats" id="commentStats">
+                    <span>📊 Total: <span class="count" id="totalCount">0</span></span>
+                    <span>⏳ Pending: <span class="count" id="pendingCount">0</span></span>
+                    <span>✅ Approved: <span class="count" id="approvedCount">0</span></span>
+                    <span>❌ Rejected: <span class="count" id="rejectedCount">0</span></span>
+                </div>
+                <div id="adminCommentList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    TOPIC REQUEST
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="topicrequest">
+            <div class="section-header">
+                <span class="icon">💭</span>
+                <span class="title">विषय अनुरोध</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="topic-request">
+                    <p>📝 <strong>कोई नया विषय या सुधार सुझाएँ।</strong></p>
+                    <input type="text" id="topic-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <input type="email" id="topic-email" placeholder="आपका ईमेल (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <textarea id="topic-message" rows="4" placeholder="जिस विषय या सुधार को आप देखना चाहते हैं, उसका वर्णन करें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
+                    <button onclick="submitTopicRequest()" class="btn">📤 अनुरोध सबमिट करें</button>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ आपके अनुरोध की समीक्षा एडमिन द्वारा की जाएगी और जल्द ही जोड़ा जाएगा।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    SUGGESTIONS & DISCLAIMER
+    ============================================================ -->
+    <div class="container" style="margin-top:16px;">
+        <div style="background:#fff; border-radius:14px; padding:20px 24px; border:1px solid #e6eaef; margin-bottom:20px;">
+            <h2 style="color:#003366; font-size:1.3rem; margin:0 0 6px;">💬 सुझाव दें</h2>
+            <p style="margin:0 0 12px;">यदि इस मॉड्यूल में कोई सुधार सुझाना है, तो हमें बताएं।</p>
+            <a href="/contact.html" class="btn">💬 यहाँ क्लिक करें →</a>
+        </div>
+        <div style="background:#fff8e1; border-radius:14px; padding:18px 22px; border:1px solid #ffe082; margin-bottom:20px;">
+            <h2 style="color:#856404; font-size:1.2rem; margin:0 0 4px;">⚠ अस्वीकरण</h2>
+            <p style="margin:0; font-size:0.95rem; color:#6c6c6c;">ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="/disclaimer.html">अस्वीकरण</a>
+            <a href="/privacy-policy.html">गोपनीयता नीति</a>
+            <a href="/terms.html">नियम</a>
+            <a href="/contact.html">संपर्क</a>
+        </div>
+        <p>© 2026 ITI Study Centre. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
+    <button id="scrollTop" title="ऊपर जाएँ">⬆</button>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('📚 सामग्री सुरक्षित है। कृपया इस पेज को शेयर करने के लिए शेयर बटन का उपयोग करें।');
+        });
+
+        // Disable Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 सामग्री कॉपी करना प्रतिबंधित है। कृपया शेयर बटन का उपयोग करें।');
+            }
+        });
+
+        // Search
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        // Share functions
+        function getPageUrl() { return window.location.href; }
+
+        function getPageTitle() { return document.querySelector('title').textContent; }
+
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle() + ' - इसे पढ़ें!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareFacebook() {
+            const url = getPageUrl();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareTwitter() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(url), '_blank');
+        }
+
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ कॉपी हो गया!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        span.textContent = 'लिंक कॉपी करें';
+                        btn.classList.remove('copied');
+                    }, 3000);
+                }).catch(() => { fallbackCopy(url); });
+            } else {
+                fallbackCopy(url);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ कॉपी हो गया!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    span.textContent = 'लिंक कॉपी करें';
+                    btn.classList.remove('copied');
+                }, 3000);
+            } catch (err) {
+                alert('कॉपी नहीं हो पाया। कृपया URL को मैन्युअल रूप से कॉपी करें।');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // ============================================================
+        // COMMENT SYSTEM
+        // ============================================================
+        const ADMIN_PASSWORD = 'admin123';
+        const STORAGE_KEY = 'module7_comments';
+
+        function getComments() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch {
+                return [];
+            }
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
+        }
+
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+        }
+
+        function getTimeAgo(timestamp) {
+            const diff = Date.now() - timestamp;
+            const minutes = Math.floor(diff / 60000);
+            if (minutes < 1) return 'Just now';
+            if (minutes < 60) return minutes + 'm ago';
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return hours + 'h ago';
+            const days = Math.floor(hours / 24);
+            return days + 'd ago';
+        }
+
+        function renderPublicComments() {
+            const list = document.getElementById('comment-list');
+            if (!list) return;
+            const comments = getComments();
+            const approved = comments.filter(c => c.status === 'approved');
+
+            const noMsg = list.querySelector('.no-comments-msg');
+            if (noMsg) noMsg.remove();
+
+            const existingItems = list.querySelectorAll('.comment-item');
+            existingItems.forEach(el => {
+                if (!el.querySelector('.status-approved') || !el.querySelector('strong')?.textContent?.includes('Admin')) {
+                    el.remove();
+                }
+            });
+
+            if (approved.length === 0) {
+                let noMsgEl = document.createElement('p');
+                noMsgEl.className = 'no-comments-msg';
+                noMsgEl.textContent = 'No approved comments yet. Be the first to comment!';
+                list.appendChild(noMsgEl);
+                return;
+            }
+
+            approved.forEach(comment => {
+                const div = document.createElement('div');
+                div.className = 'comment-item';
+                div.innerHTML = `
+                    <strong>${comment.name}</strong>
+                    <span class="meta">(${getTimeAgo(comment.timestamp)})</span>
+                    <span class="status-approved">✅ Approved</span>
+                    <p style="margin:4px 0 0 0; font-size:0.95rem;">${comment.text}</p>
+                `;
+                list.prepend(div);
+            });
+        }
+
+        function postComment() {
+            const text = document.getElementById('comment-text').value.trim();
+            const name = document.getElementById('comment-name').value.trim() || 'Anonymous';
+            if (!text) {
+                alert('Please write a comment.');
+                return;
+            }
+            const comments = getComments();
+            comments.push({ id: generateId(), name, text, timestamp: Date.now(), status: 'pending' });
+            saveComments(comments);
+            document.getElementById('comment-text').value = '';
+            document.getElementById('comment-name').value = '';
+            renderPublicComments();
+            renderAdminComments();
+            alert('✅ Your comment has been submitted for review.');
+        }
+
+        function checkAdminPassword() {
+            const input = document.getElementById('adminPassword');
+            const error = document.getElementById('passwordError');
+            if (input.value === ADMIN_PASSWORD) {
+                document.getElementById('adminLogin').style.display = 'none';
+                document.getElementById('adminContent').style.display = 'block';
+                renderAdminComments();
+                error.classList.remove('show');
+            } else {
+                error.classList.add('show');
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        function renderAdminComments() {
+            const container = document.getElementById('adminCommentList');
+            const comments = getComments();
+            document.getElementById('totalCount').textContent = comments.length;
+            document.getElementById('pendingCount').textContent = comments.filter(c => c.status === 'pending').length;
+            document.getElementById('approvedCount').textContent = comments.filter(c => c.status === 'approved').length;
+            document.getElementById('rejectedCount').textContent = comments.filter(c => c.status === 'rejected').length;
+
+            if (comments.length === 0) {
+                container.innerHTML = `<p class="no-comments-msg">No comments yet.</p>`;
+                return;
+            }
+
+            let html = '';
+            comments.forEach(comment => {
+                html += `
+                    <div class="admin-comment-item" data-id="${comment.id}">
+                        <div class="comment-info">
+                            <strong>${comment.name}</strong>
+                            <span class="time">${getTimeAgo(comment.timestamp)}</span>
+                            <span class="status ${comment.status}">${comment.status.charAt(0).toUpperCase() + comment.status.slice(1)}</span>
+                            <p style="margin:4px 0 0 0; font-size:0.9rem;">${comment.text}</p>
+                        </div>
+                        <div class="comment-actions">
+                            ${comment.status !== 'approved' ? `<button class="btn-approve" onclick="approveComment('${comment.id}')">✅ Approve</button>` : ''}
+                            ${comment.status !== 'rejected' ? `<button class="btn-reject" onclick="rejectComment('${comment.id}')">⛔ Reject</button>` : ''}
+                            <button class="btn-delete" onclick="deleteComment('${comment.id}')">🗑️ Delete</button>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function approveComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'approved' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function rejectComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'rejected' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function deleteComment(id) {
+            if (!confirm('Are you sure you want to delete this comment?')) return;
+            let comments = getComments();
+            comments = comments.filter(c => c.id !== id);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('open');
+            if (!panel.classList.contains('open')) {
+                document.getElementById('adminLogin').style.display = 'flex';
+                document.getElementById('adminContent').style.display = 'none';
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('passwordError').classList.remove('show');
+            }
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPublicComments();
+            window.postComment = postComment;
+        });
+
+        // Scroll to top
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
+            ' ITI Study Centre. सर्वाधिकार सुरक्षित।';
+
+        console.log('मॉड्यूल 7 लोड हुआ: विविधता और समावेशन – 6 पाठ, पूरी तरह से खुला, द्विभाषी।');
+        console.log(`🔑 Admin Password: ${ADMIN_PASSWORD}`);
+    </script>
+</body>
+</html>
