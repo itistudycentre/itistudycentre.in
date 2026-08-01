@@ -583,13 +583,19 @@
 
         // ============================================================
         //  RENDER – सिर्फ Module Cards (बिना Chapters)
+        //  FIX: 8 और 9 के लिए leading zero जोड़ें (module-08.html, module-09.html)
         // ============================================================
         function renderModules(containerId, modules, prefix = 'module-', isAi = false) {
             const container = document.getElementById(containerId);
             if (!container) return;
             let html = '';
             modules.forEach(mod => {
-                const link = `${prefix}${mod.num}.html`;
+                // 8 और 9 के लिए zero-padding
+                let numStr = mod.num.toString();
+                if (mod.num === 8 || mod.num === 9) {
+                    numStr = '0' + numStr;
+                }
+                const link = `${prefix}${numStr}.html`;
                 const searchText = `${mod.num} ${mod.name} ${mod.nameHi}`.toLowerCase();
                 const aiClass = isAi ? 'ai-card' : '';
                 html += `
@@ -659,7 +665,7 @@
         document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
             ' ITI Study Centre. All Rights Reserved.';
 
-        console.log('Employability Skills Index updated – AI Module: only 1 entry.');
+        console.log('Employability Skills Index updated – 8 & 9 use leading zero, 12 needs file.');
     </script>
 </body>
 </html>
