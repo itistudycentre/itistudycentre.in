@@ -1,1 +1,2317 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>मॉड्यूल 12: प्रशिक्षुता और नौकरियों के लिए तैयार होना | ITI Study Centre</title>
+    <meta name="description" content="Employability Skills मॉड्यूल 12: प्रशिक्षुता और नौकरियों के लिए तैयार होना – पूरे नोट्स। हिंदी + अंग्रेजी में चार्ट और उदाहरण सहित।" />
+    <link rel="icon" href="/images/favicon.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.7;
+            user-select: none;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .main-header {
+            background: #003366;
+            padding: 14px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        .main-header nav a.notes-link {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb .current {
+            color: #555;
+            font-weight: 600;
+        }
+        .page-title {
+            padding: 30px 0 20px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.2rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 520px;
+            padding: 13px 18px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+        }
+        .search-section button {
+            padding: 13px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        @media (max-width: 640px) {
+            .search-section {
+                flex-direction: column;
+            }
+            .search-section input {
+                max-width: 100%;
+                width: 100%;
+            }
+            .search-section button {
+                width: 100%;
+            }
+        }
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            margin-bottom: 28px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 18px 26px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: default;
+            user-select: none;
+            flex-wrap: wrap;
+        }
+        .section-header .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .section-header .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body {
+            padding: 24px 28px;
+            background: #fafcff;
+        }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin: 28px 0 16px;
+            border-left: 4px solid #ffcc00;
+            padding-left: 16px;
+        }
+        .section-body h3:first-of-type {
+            margin-top: 0;
+        }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.1rem;
+            margin: 18px 0 10px;
+        }
+        .bilingual {
+            margin: 14px 0;
+        }
+        .bilingual .en {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1a2a3a;
+        }
+        .bilingual .hi {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #3d3d3d;
+            background: #f0f5ff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border-left: 5px solid #003366;
+            margin-top: 12px;
+        }
+        .bilingual ul,
+        .bilingual ol {
+            padding-left: 24px;
+            margin: 8px 0;
+        }
+        .bilingual ul li,
+        .bilingual ol li {
+            margin-bottom: 4px;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+        }
+        .info-card.blue {
+            border-left: 5px solid #003366;
+        }
+        .info-card.green {
+            border-left: 5px solid #28a745;
+        }
+        .info-card.orange {
+            border-left: 5px solid #ff9900;
+        }
+        .info-card.purple {
+            border-left: 5px solid #6f42c1;
+        }
+        .info-card.highlight {
+            border-left: 5px solid #ffc107;
+            background: #fffdf0;
+        }
+        .info-card.danger {
+            border-left: 5px solid #dc3545;
+            background: #fdf0f1;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) {
+            background: #f8f9fc;
+        }
+        .table-wrap tr:hover {
+            background: #eef2f7;
+        }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .example-box strong {
+            color: #003366;
+        }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .important-box ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .short-notes ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+        }
+        .step-list li {
+            counter-increment: step;
+            padding: 10px 16px 10px 56px;
+            position: relative;
+            background: #f8f9fc;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #e9ecef;
+            font-size: 0.98rem;
+        }
+        .step-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #003366;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .mcq-link {
+            background: #f0f5ff;
+            border: 2px solid #003366;
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            margin: 16px 0;
+        }
+        .mcq-link a {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #003366;
+            background: #fff;
+            padding: 10px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: 0.25s;
+            border: 1px solid #003366;
+        }
+        .mcq-link a:hover {
+            background: #003366;
+            color: #fff;
+            transform: scale(1.02);
+        }
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 20px;
+            padding: 14px 18px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover {
+            transform: scale(1.04);
+            opacity: 0.9;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+        }
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+        .share-btn.link {
+            background: #6c757d;
+        }
+        .share-btn.link.copied {
+            background: #28a745;
+        }
+        .share-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #003366;
+            color: #fff !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        .comments-section textarea,
+        .topic-request textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            resize: vertical;
+            font-family: inherit;
+            user-select: text;
+        }
+        .comments-section input,
+        .topic-request input {
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            width: 48%;
+            margin-right: 2%;
+            margin-bottom: 10px;
+            font-family: inherit;
+            user-select: text;
+        }
+        @media (max-width: 600px) {
+            .comments-section input,
+            .topic-request input {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .comment-item {
+            background: #f1f4f9;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #003366;
+        }
+        .comment-item .meta {
+            color: #888;
+            font-size: 0.8rem;
+        }
+        .comment-item .status-pending {
+            color: #ff9900;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #fff3cd;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        .comment-item .status-approved {
+            color: #28a745;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #d4edda;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 24px 20px;
+            text-align: center;
+            margin-top: 44px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 24px;
+            margin-bottom: 12px;
+        }
+        footer .footer-links a {
+            color: #b0b8c5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        footer .footer-links a:hover {
+            color: #fff;
+        }
+        footer p {
+            margin: 8px 0 0;
+            font-size: 0.85rem;
+            color: #7a8494;
+        }
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.25s;
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover {
+            background: #002244;
+            transform: scale(1.05);
+        }
+        .copy-protect::selection {
+            background: #b3d4fc;
+            color: #000;
+        }
+        .admin-toggle {
+            text-align: center;
+            margin: 20px 0;
+            padding: 12px;
+            background: #f8f9fc;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-toggle:hover {
+            background: #eef2f7;
+            border-color: #003366;
+        }
+        .admin-toggle .key-icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+        .admin-panel {
+            display: none;
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            border: 2px solid #003366;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .admin-panel.open {
+            display: block;
+        }
+        .admin-panel .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .admin-panel .admin-header h3 {
+            color: #003366;
+            margin: 0;
+        }
+        .admin-panel .admin-header .close-btn {
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .admin-panel .admin-header .close-btn:hover {
+            background: #b02a37;
+        }
+        .admin-password-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .admin-password-box input {
+            padding: 10px 14px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-password-box input:focus {
+            border-color: #003366;
+            outline: none;
+        }
+        .admin-password-box button {
+            padding: 10px 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-password-box button:hover {
+            background: #002244;
+        }
+        .admin-password-box .error-msg {
+            color: #dc3545;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .admin-password-box .error-msg.show {
+            display: block;
+        }
+        .comment-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: #f8f9fc;
+            border-radius: 8px;
+        }
+        .comment-stats span {
+            font-size: 0.9rem;
+        }
+        .comment-stats .count {
+            font-weight: 700;
+            color: #003366;
+        }
+        .admin-comment-item {
+            background: #f8f9fc;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .admin-comment-item .comment-info {
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-comment-item .comment-info strong {
+            color: #003366;
+        }
+        .admin-comment-item .comment-info .time {
+            color: #888;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        .admin-comment-item .comment-info .status {
+            font-size: 0.7rem;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .admin-comment-item .comment-info .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .admin-comment-item .comment-info .status.approved {
+            background: #d4edda;
+            color: #1e7e34;
+        }
+        .admin-comment-item .comment-info .status.rejected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .admin-comment-item .comment-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .admin-comment-item .comment-actions button {
+            padding: 4px 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .admin-comment-item .comment-actions .btn-approve {
+            background: #28a745;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-approve:hover {
+            background: #1e7e34;
+        }
+        .admin-comment-item .comment-actions .btn-reject {
+            background: #ffc107;
+            color: #222;
+        }
+        .admin-comment-item .comment-actions .btn-reject:hover {
+            background: #e0a800;
+        }
+        .admin-comment-item .comment-actions .btn-delete {
+            background: #dc3545;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-delete:hover {
+            background: #b02a37;
+        }
+        .no-comments-msg {
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        .job-prep-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .job-prep-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .job-prep-card .jp-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .job-prep-card .jp-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+        .job-prep-card .jp-desc {
+            font-size: 0.75rem;
+            color: #555;
+        }
+        .interview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) {
+            .interview-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .interview-card {
+            padding: 16px 18px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+            text-align: center;
+        }
+        .interview-card .i-title {
+            font-weight: 700;
+            color: #003366;
+            font-size: 1rem;
+        }
+        .interview-card .i-desc {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 4px;
+        }
+        .grooming-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) {
+            .grooming-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .grooming-card {
+            padding: 16px 18px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .grooming-card .g-title {
+            font-weight: 700;
+            color: #003366;
+            font-size: 1rem;
+        }
+        .grooming-card .g-desc {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 4px;
+        }
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .portal-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .portal-card .p-icon {
+            font-size: 1.8rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .portal-card .p-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.85rem;
+        }
+        .portal-card .p-desc {
+            font-size: 0.7rem;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .main-header nav {
+                justify-content: center;
+                gap: 6px 12px;
+            }
+            .main-header nav a {
+                font-size: 0.9rem;
+            }
+            .page-title h1 {
+                font-size: 1.6rem;
+            }
+            .section-header {
+                padding: 14px 18px;
+                flex-wrap: wrap;
+            }
+            .section-header .title {
+                font-size: 1.05rem;
+            }
+            .section-body {
+                padding: 16px 18px;
+            }
+            .section-body h3 {
+                font-size: 1.1rem;
+            }
+            .bilingual .en {
+                font-size: 0.95rem;
+            }
+            .bilingual .hi {
+                font-size: 0.9rem;
+                padding: 12px 16px;
+            }
+            .share-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .share-section .share-label {
+                text-align: center;
+            }
+            .share-btn {
+                justify-content: center;
+            }
+            .admin-comment-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .admin-comment-item .comment-actions {
+                justify-content: flex-start;
+            }
+            .admin-password-box {
+                flex-direction: column;
+            }
+            .admin-password-box input {
+                width: 100%;
+            }
+            .interview-grid {
+                grid-template-columns: 1fr;
+            }
+            .grooming-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            .section-body {
+                padding: 12px 14px;
+            }
+            .section-header .icon {
+                font-size: 1.3rem;
+            }
+            .section-header .title {
+                font-size: 0.95rem;
+            }
+            .job-prep-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .portal-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .step-list li {
+                padding: 8px 10px 8px 46px;
+                font-size: 0.9rem;
+            }
+            .step-list li::before {
+                width: 26px;
+                height: 26px;
+                font-size: 0.75rem;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="/">ITI Study Centre</a></div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/iti-result.html">ITI Result</a>
+                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
+                <a href="/engineering-notes.html">Engineering Notes</a>
+                <a href="/questionbank.html">Question Bank</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
+            <a href="/notes/employability-skills/index.html">Employability Skills</a> &nbsp;›&nbsp;
+            <span class="current">मॉड्यूल 12: प्रशिक्षुता और नौकरियों के लिए तैयार होना</span>
+        </div>
+    </div>
+
+    <!-- ===== PAGE TITLE ===== -->
+    <section class="page-title">
+        <div class="container">
+            <h1>🚀 मॉड्यूल 12: प्रशिक्षुता और नौकरियों के लिए तैयार होना</h1>
+            <p>Getting Ready for Apprenticeships and Jobs • NSDC/DGT पाठ्यक्रम पर आधारित • हिंदी + अंग्रेजी में पूरे नोट्स</p>
+        </div>
+    </section>
+
+    <!-- ===== SEARCH ===== -->
+    <section class="search-section container">
+        <input type="text" id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें...">
+        <button onclick="filterSections()">खोजें</button>
+    </section>
+
+    <!-- ===== SHARE BUTTONS ===== -->
+    <div class="container">
+        <div class="share-section" id="shareSection">
+            <span class="share-label">📤 इस पेज को शेयर करें:</span>
+            <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </button>
+            <button class="share-btn facebook" onclick="shareFacebook()">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter()">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Twitter
+            </button>
+            <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+                <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <span id="copyLinkText">Copy Link</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.1 सकारात्मक कार्य वातावरण
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-1">
+            <div class="section-header">
+                <span class="icon">🌟</span>
+                <span class="title">12.1 सकारात्मक कार्य वातावरण <span class="subtitle">(Positive Work Environment)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>A positive work environment</strong> makes you feel good about coming to work and provides motivation. Workplaces with trust, cooperation, safety, and support create positive experiences for both employees and employers.</p>
+                        <p><strong>What makes a workplace positive?</strong></p>
+                        <ul>
+                            <li>Supportive supervisors and coworkers.</li>
+                            <li>Clear communication and transparency.</li>
+                            <li>Recognition and appreciation for work.</li>
+                            <li>Opportunities for growth and learning.</li>
+                            <li>Safe and comfortable physical environment.</li>
+                        </ul>
+                        <p><strong>Tips for building healthy relationships at work:</strong></p>
+                        <ul>
+                            <li>Greet your coworkers every day.</li>
+                            <li>Make a plan for your day and inform coworkers in advance if you need their support.</li>
+                            <li>Reach out politely if you have questions or need help.</li>
+                            <li>Express gratitude and thank people when they help you.</li>
+                            <li>Be a good listener.</li>
+                            <li>Support your coworkers when they ask you for help.</li>
+                        </ul>
+                        <p><strong>Energy conservation at workplace:</strong></p>
+                        <ul>
+                            <li>Switch off lights when not in use.</li>
+                            <li>Upgrade outdated equipment to energy-efficient options.</li>
+                            <li>Switch off equipment when not in use.</li>
+                            <li>Print only when needed.</li>
+                            <li>Use renewable energy like solar energy.</li>
+                            <li>Save water by using less water.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>सकारात्मक कार्य वातावरण (Positive work environment)</strong> आपको काम पर आने के बारे में अच्छा महसूस कराता है और प्रेरणा प्रदान करता है। जहाँ विश्वास, सहयोग, सुरक्षा और समर्थन हो, वहाँ कर्मचारियों और नियोक्ताओं दोनों के लिए सकारात्मक अनुभव बनते हैं।</p>
+                        <p><strong>कार्यस्थल को सकारात्मक क्या बनाता है?</strong></p>
+                        <ul>
+                            <li>सहायक पर्यवेक्षक और सहकर्मी।</li>
+                            <li>स्पष्ट संचार और पारदर्शिता।</li>
+                            <li>काम के लिए मान्यता और प्रशंसा।</li>
+                            <li>विकास और सीखने के अवसर।</li>
+                            <li>सुरक्षित और आरामदायक भौतिक वातावरण।</li>
+                        </ul>
+                        <p><strong>कार्यस्थल पर स्वस्थ संबंध बनाने के टिप्स:</strong></p>
+                        <ul>
+                            <li>अपने सहकर्मियों को हर दिन अभिवादन करें।</li>
+                            <li>अपने दिन की योजना बनाएँ और यदि आपको उनके समर्थन की आवश्यकता हो तो सहकर्मियों को पहले से सूचित करें।</li>
+                            <li>यदि आपके पास प्रश्न हैं या सहायता की आवश्यकता है तो विनम्रता से संपर्क करें।</li>
+                            <li>जब लोग आपकी मदद करें तो आभार व्यक्त करें और उन्हें धन्यवाद दें।</li>
+                            <li>एक अच्छे श्रोता बनें।</li>
+                            <li>जब आपके सहकर्मी आपसे मदद माँगें तो उनका समर्थन करें।</li>
+                        </ul>
+                        <p><strong>कार्यस्थल पर ऊर्जा संरक्षण:</strong></p>
+                        <ul>
+                            <li>उपयोग में न होने पर लाइटें बंद करें।</li>
+                            <li>पुराने उपकरणों को ऊर्जा-कुशल विकल्पों में अपग्रेड करें।</li>
+                            <li>उपयोग में न होने पर उपकरण बंद करें।</li>
+                            <li>केवल आवश्यकता होने पर ही प्रिंट करें।</li>
+                            <li>सौर ऊर्जा जैसी नवीकरणीय ऊर्जा का उपयोग करें।</li>
+                            <li>कम पानी का उपयोग करके पानी बचाएँ।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job-prep-grid">
+                    <div class="job-prep-card"><span class="jp-icon">🤝</span><div class="jp-name">Supportive Team</div><div class="jp-desc">Help each other grow</div></div>
+                    <div class="job-prep-card"><span class="jp-icon">💡</span><div class="jp-name">Clear Communication</div><div class="jp-desc">Transparency & trust</div></div>
+                    <div class="job-prep-card"><span class="jp-icon">🏆</span><div class="jp-name">Recognition</div><div class="jp-desc">Appreciate good work</div></div>
+                    <div class="job-prep-card"><span class="jp-icon">📈</span><div class="jp-name">Growth Opportunities</div><div class="jp-desc">Learn and advance</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.2 व्यक्तिगत ग्रूमिंग और स्वच्छता
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-2">
+            <div class="section-header">
+                <span class="icon">🧼</span>
+                <span class="title">12.2 व्यक्तिगत ग्रूमिंग और स्वच्छता <span class="subtitle">(Personal Grooming and Hygiene)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Grooming</strong> is the process of taking steps to look neat and presentable. It influences how you feel about yourself and how other people see you.</p>
+                        <p><strong>Why grooming is important:</strong></p>
+                        <ul>
+                            <li>Creates a positive first impression.</li>
+                            <li>Helps you feel confident.</li>
+                            <li>Indicates that you are a professional.</li>
+                            <li>Shows self-discipline.</li>
+                            <li>Improves people's opinion of you.</li>
+                        </ul>
+                        <p><strong>Good hygiene practices:</strong></p>
+                        <ul>
+                            <li>Wash your hands regularly with soap and water.</li>
+                            <li>Brush your teeth twice a day.</li>
+                            <li>Shower every day and wash your hair at least once a week.</li>
+                            <li>Do not share personal products like earphones, toothbrushes.</li>
+                            <li>Keep your nails clean at all times.</li>
+                            <li>Maintain good menstrual hygiene.</li>
+                            <li>Keep your surroundings clean and organized.</li>
+                        </ul>
+                        <p><strong>For men:</strong> Wear a shirt and pants with formal shoes. White or light colored shirts are best. Make sure clothes are ironed. Shave and get a haircut. Avoid strong perfume.</p>
+                        <p><strong>For women:</strong> Wear a shirt and pants, or a kurti and salwar. Keep makeup light and natural. Hair should be neatly styled or tied back. Avoid strong perfume.</p>
+                        <p><strong>Always carry:</strong> Resume and documents in a folder or bag.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>ग्रूमिंग (Grooming)</strong> साफ-सुथरा और प्रस्तुत करने योग्य दिखने के लिए कदम उठाने की प्रक्रिया है। यह इस बात को प्रभावित करता है कि आप अपने बारे में कैसा महसूस करते हैं और दूसरे लोग आपको कैसे देखते हैं।</p>
+                        <p><strong>ग्रूमिंग क्यों महत्वपूर्ण है:</strong></p>
+                        <ul>
+                            <li>सकारात्मक पहली छाप बनाता है।</li>
+                            <li>आपको आत्मविश्वासी महसूस कराता है।</li>
+                            <li>इंगित करता है कि आप एक पेशेवर हैं।</li>
+                            <li>आत्म-अनुशासन दिखाता है।</li>
+                            <li>लोगों की आपके बारे में राय में सुधार करता है।</li>
+                        </ul>
+                        <p><strong>अच्छी स्वच्छता की आदतें:</strong></p>
+                        <ul>
+                            <li>साबुन और पानी से नियमित रूप से हाथ धोएँ।</li>
+                            <li>दिन में दो बार दाँत ब्रश करें।</li>
+                            <li>हर दिन स्नान करें और सप्ताह में कम से कम एक बार बाल धोएँ।</li>
+                            <li>ईयरफोन, टूथब्रश जैसी व्यक्तिगत वस्तुएँ साझा न करें।</li>
+                            <li>अपने नाखूनों को हमेशा साफ रखें।</li>
+                            <li>अच्छी मासिक धर्म स्वच्छता बनाए रखें।</li>
+                            <li>अपने आसपास को साफ और व्यवस्थित रखें।</li>
+                        </ul>
+                        <p><strong>पुरुषों के लिए:</strong> फॉर्मल शूज़ के साथ शर्ट और पैंट पहनें। सफेद या हल्के रंग की शर्ट सबसे अच्छी होती है। कपड़े इस्त्री किए हों। शेव करें और बाल कटवाएँ। तेज़ इत्र से बचें।</p>
+                        <p><strong>महिलाओं के लिए:</strong> शर्ट और पैंट, या कुर्ती और सलवार पहनें। मेकअप हल्का और प्राकृतिक रखें। बालों को स्टाइल करें या बाँध लें। तेज़ इत्र से बचें।</p>
+                        <p><strong>हमेशा साथ ले जाएँ:</strong> रिज्यूमे और दस्तावेज़ एक फ़ोल्डर या बैग में।</p>
+                    </div>
+                </div>
+                <div class="grooming-grid">
+                    <div class="grooming-card" style="border-color:#003366;">
+                        <div class="g-title">👔 For Men</div>
+                        <ul style="margin:4px 0 0 0; padding-left:18px; font-size:0.9rem;">
+                            <li>Shirt & pants with formal shoes</li>
+                            <li>White or light colored shirts</li>
+                            <li>Ironed clothes</li>
+                            <li>Shave & haircut</li>
+                            <li>Avoid strong perfume</li>
+                        </ul>
+                    </div>
+                    <div class="grooming-card" style="border-color:#6f42c1;">
+                        <div class="g-title">👗 For Women</div>
+                        <ul style="margin:4px 0 0 0; padding-left:18px; font-size:0.9rem;">
+                            <li>Shirt & pants or kurti & salwar</li>
+                            <li>Light & natural makeup</li>
+                            <li>Neatly styled or tied back hair</li>
+                            <li>Avoid strong perfume</li>
+                            <li>Carry resume in a folder</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.3 कार्यस्थल पर तनाव प्रबंधन
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-3">
+            <div class="section-header">
+                <span class="icon">🧘</span>
+                <span class="title">12.3 कार्यस्थल पर तनाव प्रबंधन <span class="subtitle">(Managing Stress in the Workplace)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Stress</strong> is what we feel when we are worried or uncomfortable about something. It can be a physical, mental, or emotional reaction.</p>
+                        <p><strong>Good Stress vs Bad Stress:</strong></p>
+                        <ul>
+                            <li><strong>Good stress:</strong> Short term, makes you feel excited and motivated, increases focus and performance (e.g., riding a roller coaster, job interview).</li>
+                            <li><strong>Bad stress:</strong> Can be short or long term, makes you feel fearful and hopeless, leads to poor concentration and performance (e.g., loss of loved one, illness, bullying).</li>
+                        </ul>
+                        <p><strong>Healthy ways to deal with stress:</strong></p>
+                        <ul>
+                            <li>Identify the reason for stress.</li>
+                            <li>Try to sort out the problem as soon as possible by talking to HR or your supervisor.</li>
+                            <li>Communication and honesty is the best way to deal with workplace stress.</li>
+                            <li>Focus only on your work – do not get involved with workplace politics.</li>
+                            <li>Eat healthy, well-balanced meals.</li>
+                            <li>Make a list of all the tasks you need to complete and prioritize them.</li>
+                            <li>Practice relaxation techniques like deep breathing exercises and meditation.</li>
+                            <li>Try to get some restful sleep.</li>
+                            <li>Take time off to relax.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>तनाव (Stress)</strong> वह है जो हम महसूस करते हैं जब हम किसी चीज़ के बारे में चिंतित या असहज होते हैं। यह एक शारीरिक, मानसिक या भावनात्मक प्रतिक्रिया हो सकती है।</p>
+                        <p><strong>अच्छा तनाव बनाम बुरा तनाव:</strong></p>
+                        <ul>
+                            <li><strong>अच्छा तनाव (Good stress):</strong> अल्पकालिक, आपको उत्साहित और प्रेरित महसूस कराता है, फोकस और प्रदर्शन बढ़ाता है (जैसे, रोलर कोस्टर, नौकरी साक्षात्कार)।</li>
+                            <li><strong>बुरा तनाव (Bad stress):</strong> अल्पकालिक या दीर्घकालिक हो सकता है, आपको भयभीत और निराश महसूस कराता है, खराब एकाग्रता और प्रदर्शन की ओर ले जाता है (जैसे, किसी प्रियजन की हानि, बीमारी, बदमाशी)।</li>
+                        </ul>
+                        <p><strong>तनाव से निपटने के स्वस्थ तरीके:</strong></p>
+                        <ul>
+                            <li>तनाव का कारण पहचानें।</li>
+                            <li>HR या अपने पर्यवेक्षक से बात करके समस्या को जल्द से जल्द सुलझाने का प्रयास करें।</li>
+                            <li>संचार और ईमानदारी कार्यस्थल के तनाव से निपटने का सबसे अच्छा तरीका है।</li>
+                            <li>केवल अपने काम पर ध्यान दें – कार्यस्थल की राजनीति में शामिल न हों।</li>
+                            <li>स्वस्थ, संतुलित भोजन करें।</li>
+                            <li>सभी कार्यों की सूची बनाएँ और उन्हें प्राथमिकता दें।</li>
+                            <li>गहरी साँस लेने के व्यायाम और ध्यान जैसी विश्राम तकनीकों का अभ्यास करें।</li>
+                            <li>आरामदायक नींद लेने का प्रयास करें।</li>
+                            <li>आराम करने के लिए समय निकालें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card highlight">
+                    <h4 style="margin:0 0 6px; color:#856404;">💡 याद रखें / Remember</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>तनाव हमेशा बुरा नहीं होता – कुछ तनाव प्रदर्शन बढ़ाने में मदद करता है।</li>
+                        <li>दीर्घकालिक तनाव शारीरिक और मानसिक स्वास्थ्य को प्रभावित कर सकता है।</li>
+                        <li>स्वस्थ तनाव प्रबंधन तकनीकें कार्य-जीवन संतुलन प्राप्त करने में मदद करती हैं।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.4 मेरा रिज्यूमे बनाना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-4">
+            <div class="section-header">
+                <span class="icon">📄</span>
+                <span class="title">12.4 मेरा रिज्यूमे बनाना <span class="subtitle">(Building My Resume)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>A resume</strong> is your first mode of introduction to a potential employer. It is the first document an employer will look at when reviewing your job application.</p>
+                        <p><strong>Key elements of a resume:</strong></p>
+                        <ul>
+                            <li><strong>Personal information:</strong> Name, phone number, email address, address.</li>
+                            <li><strong>Career objective:</strong> A brief statement about your career goals.</li>
+                            <li><strong>Education qualification:</strong> List your qualifications (starting from the most recent).</li>
+                            <li><strong>Work/Internship experience:</strong> Include full-time, part-time, or volunteer work.</li>
+                            <li><strong>Achievements/Extra-curricular activities:</strong> Any accomplishments or activities outside academics.</li>
+                            <li><strong>Hobbies:</strong> Personal interests.</li>
+                            <li><strong>Skills:</strong> Languages, software, and other technical skills.</li>
+                        </ul>
+                        <p><strong>Resume Do's:</strong></p>
+                        <ul>
+                            <li>Keep it to 1 or 2 pages.</li>
+                            <li>Make it error-free – get someone to proofread it.</li>
+                            <li>Use a simple, easy-to-read font style (10-14 points).</li>
+                            <li>Keep it in a neat folder.</li>
+                            <li>Choose a simple format that suits you.</li>
+                            <li>Mention all trade-related and technical skills in detail.</li>
+                            <li>Provide information about your past work experience and your role.</li>
+                        </ul>
+                        <p><strong>Resume Don'ts:</strong></p>
+                        <ul>
+                            <li>Put an incorrect phone number or email ID.</li>
+                            <li>Lie on your resume about any information.</li>
+                            <li>Use an unprofessional email address.</li>
+                            <li>Write anything negative on your resume.</li>
+                            <li>Mention salary expectations on your resume.</li>
+                        </ul>
+                        <p><strong>Tip:</strong> Always save and send your resume as a PDF file for digital applications.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>रिज्यूमे (Resume)</strong> एक संभावित नियोक्ता के लिए आपके परिचय का पहला माध्यम है। यह पहला दस्तावेज़ है जिसे नियोक्ता आपके नौकरी आवेदन की समीक्षा करते समय देखेगा।</p>
+                        <p><strong>रिज्यूमे के मुख्य तत्व:</strong></p>
+                        <ul>
+                            <li><strong>व्यक्तिगत जानकारी:</strong> नाम, फोन नंबर, ईमेल पता, पता।</li>
+                            <li><strong>करियर उद्देश्य:</strong> आपके करियर लक्ष्यों के बारे में एक संक्षिप्त कथन।</li>
+                            <li><strong>शैक्षिक योग्यता:</strong> अपनी योग्यताएँ सूचीबद्ध करें (सबसे हालिया से शुरू करके)।</li>
+                            <li><strong>कार्य/इंटर्नशिप अनुभव:</strong> पूर्णकालिक, अंशकालिक या स्वयंसेवी कार्य शामिल करें।</li>
+                            <li><strong>उपलब्धियाँ/पाठ्येतर गतिविधियाँ:</strong> कोई भी उपलब्धि या शिक्षा के बाहर की गतिविधियाँ।</li>
+                            <li><strong>शौक:</strong> व्यक्तिगत रुचियाँ।</li>
+                            <li><strong>कौशल:</strong> भाषाएँ, सॉफ्टवेयर और अन्य तकनीकी कौशल।</li>
+                        </ul>
+                        <p><strong>रिज्यूमे के Do's:</strong></p>
+                        <ul>
+                            <li>इसे 1 या 2 पेज तक रखें।</li>
+                            <li>इसे त्रुटि-मुक्त बनाएँ – किसी से प्रूफरीड करवाएँ।</li>
+                            <li>एक सरल, आसानी से पढ़ी जाने वाली फ़ॉन्ट शैली (10-14 पॉइंट) का उपयोग करें।</li>
+                            <li>इसे एक साफ फ़ोल्डर में रखें।</li>
+                            <li>एक सरल प्रारूप चुनें जो आपको सूट करे।</li>
+                            <li>सभी ट्रेड-संबंधित और तकनीकी कौशलों का विवरण दें।</li>
+                            <li>अपने पिछले कार्य अनुभव और अपनी भूमिका के बारे में जानकारी प्रदान करें।</li>
+                        </ul>
+                        <p><strong>रिज्यूमे के Don'ts:</strong></p>
+                        <ul>
+                            <li>गलत फोन नंबर या ईमेल आईडी डालें।</li>
+                            <li>रिज्यूमे पर किसी भी जानकारी के बारे में झूठ बोलें।</li>
+                            <li>अपेशेवर ईमेल पते का उपयोग करें।</li>
+                            <li>अपने रिज्यूमे पर कुछ भी नकारात्मक लिखें।</li>
+                            <li>अपने रिज्यूमे पर वेतन अपेक्षाओं का उल्लेख करें।</li>
+                        </ul>
+                        <p><strong>टिप:</strong> डिजिटल आवेदनों के लिए हमेशा अपने रिज्यूमे को PDF के रूप में सहेजें और भेजें।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.5 साक्षात्कार की तैयारी
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-5">
+            <div class="section-header">
+                <span class="icon">🎤</span>
+                <span class="title">12.5 साक्षात्कार की तैयारी <span class="subtitle">(Preparing for an Interview)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Interview skills</strong> is your ability to convince the interviewer that you are suitable for the job role.</p>
+                        <p><strong>3 stages of the interview process:</strong></p>
+                        <ul>
+                            <li><strong>Before:</strong> Prepare on questions related to the resume, eat and rest well, reach the interview location on time, read the job description clearly.</li>
+                            <li><strong>During:</strong> Speak slowly and clearly, maintain eye contact, listen to the interviewer, answer questions clearly, don't get into unnecessary debates, ask questions to the interviewer, thank the interviewer.</li>
+                            <li><strong>After:</strong> Take the interviewer's email ID and phone number, be patient to hear back, call back after a week to follow up, ask the interviewer for feedback on how you can do better.</li>
+                        </ul>
+                        <p><strong>What to take to the interview:</strong></p>
+                        <ul>
+                            <li>Multiple copies of the resume.</li>
+                            <li>Original & photocopies of educational qualification certificates.</li>
+                            <li>Photographs.</li>
+                            <li>ID proofs.</li>
+                            <li>Experience certificates (if any).</li>
+                        </ul>
+                        <p><strong>What to wear:</strong> Neatly ironed formal clothes, be tidy, maintain personal hygiene, comb hair well. Men: Shirt & trouser with well-polished shoes. Women: Salwar kameez, saree, or shirt & trouser.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>साक्षात्कार कौशल (Interview skills)</strong> साक्षात्कारकर्ता को यह विश्वास दिलाने की आपकी क्षमता है कि आप नौकरी की भूमिका के लिए उपयुक्त हैं।</p>
+                        <p><strong>साक्षात्कार प्रक्रिया के 3 चरण:</strong></p>
+                        <ul>
+                            <li><strong>पहले (Before):</strong> रिज्यूमे से संबंधित प्रश्नों पर तैयारी करें, अच्छा खाएँ और आराम करें, साक्षात्कार स्थल पर समय पर पहुँचें, नौकरी विवरण ध्यान से पढ़ें।</li>
+                            <li><strong>दौरान (During):</strong> धीरे और स्पष्ट बोलें, आँखों का संपर्क बनाए रखें, साक्षात्कारकर्ता की बात सुनें, प्रश्नों का स्पष्ट उत्तर दें, अनावश्यक बहस में न पड़ें, साक्षात्कारकर्ता से प्रश्न पूछें, साक्षात्कारकर्ता को धन्यवाद दें।</li>
+                            <li><strong>बाद में (After):</strong> साक्षात्कारकर्ता का ईमेल आईडी और फोन नंबर लें, वापस सुनने के लिए धैर्य रखें, एक सप्ताह बाद कॉल करके फॉलो-अप करें, साक्षात्कारकर्ता से बेहतर करने के तरीके के बारे में फीडबैक माँगें।</li>
+                        </ul>
+                        <p><strong>साक्षात्कार में क्या ले जाएँ:</strong></p>
+                        <ul>
+                            <li>रिज्यूमे की कई प्रतियाँ।</li>
+                            <li>शैक्षिक योग्यता प्रमाणपत्रों की मूल और फोटोकॉपी।</li>
+                            <li>फोटोग्राफ।</li>
+                            <li>आईडी प्रूफ।</li>
+                            <li>अनुभव प्रमाणपत्र (यदि कोई हों)।</li>
+                        </ul>
+                        <p><strong>क्या पहनें:</strong> बिना झुर्रियों वाले फॉर्मल कपड़े, साफ-सुथरे रहें, व्यक्तिगत स्वच्छता बनाए रखें, बालों को अच्छी तरह से कंघी करें। पुरुष: अच्छी तरह से पॉलिश किए गए जूतों के साथ शर्ट और ट्राउजर। महिलाएँ: सलवार कमीज़, साड़ी, या शर्ट और ट्राउजर।</p>
+                    </div>
+                </div>
+                <div class="interview-grid">
+                    <div class="interview-card" style="border-color:#003366;"><div class="i-title">📋 Before</div><div class="i-desc">Prepare, research, reach on time</div></div>
+                    <div class="interview-card" style="border-color:#28a745;"><div class="i-title">🎯 During</div><div class="i-desc">Speak clearly, maintain eye contact, answer confidently</div></div>
+                    <div class="interview-card" style="border-color:#ff9900;"><div class="i-title">📞 After</div><div class="i-desc">Follow up, ask for feedback</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.6 साक्षात्कार को समझना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-6">
+            <div class="section-header">
+                <span class="icon">🔍</span>
+                <span class="title">12.6 साक्षात्कार को समझना <span class="subtitle">(Decoding Interviews)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Do's of facing an interview:</strong></p>
+                        <ul>
+                            <li>Prepare well – research about the company.</li>
+                            <li>Make a good impression – arrive on time, dress neatly.</li>
+                            <li>Bring a copy of your resume.</li>
+                            <li>Listen and respond carefully.</li>
+                            <li>Talk about your skills and strengths.</li>
+                            <li>Prepare questions to ask the interviewer.</li>
+                        </ul>
+                        <p><strong>Don'ts in facing an interview:</strong></p>
+                        <ul>
+                            <li>Do not give false information.</li>
+                            <li>Do not interrupt the interviewer.</li>
+                            <li>Do not speak negatively about your previous company.</li>
+                            <li>Do not leave the interview without asking for next steps.</li>
+                            <li>Do not give one-word answers like "Yes" or "No" (unless required).</li>
+                            <li>Do not use your mobile during the interview – keep it in silent mode.</li>
+                        </ul>
+                        <p><strong>Common questions asked in an interview:</strong></p>
+                        <ul>
+                            <li>Tell me something about yourself.</li>
+                            <li>What are your strengths?</li>
+                            <li>What would you call your biggest weakness?</li>
+                            <li>Why do you want to work for this company?</li>
+                            <li>What do you know about this company?</li>
+                            <li>Why should we hire you for this job?</li>
+                            <li>Are you willing to relocate or travel?</li>
+                            <li>What are your salary expectations?</li>
+                            <li>Where do you see yourself five years from now?</li>
+                            <li>Do you have any questions for me?</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>साक्षात्कार के Do's:</strong></p>
+                        <ul>
+                            <li>अच्छी तरह से तैयारी करें – कंपनी के बारे में शोध करें।</li>
+                            <li>अच्छा प्रभाव बनाएँ – समय पर पहुँचें, साफ-सुथरे कपड़े पहनें।</li>
+                            <li>अपने रिज्यूमे की एक प्रति ले जाएँ।</li>
+                            <li>ध्यान से सुनें और उत्तर दें।</li>
+                            <li>अपने कौशल और ताकत के बारे में बात करें।</li>
+                            <li>साक्षात्कारकर्ता से पूछने के लिए प्रश्न तैयार करें।</li>
+                        </ul>
+                        <p><strong>साक्षात्कार के Don'ts:</strong></p>
+                        <ul>
+                            <li>गलत जानकारी न दें।</li>
+                            <li>साक्षात्कारकर्ता को बीच में न रोकें।</li>
+                            <li>अपनी पिछली कंपनी के बारे में नकारात्मक बात न करें।</li>
+                            <li>साक्षात्कार को अगले चरणों के बारे में पूछे बिना न छोड़ें।</li>
+                            <li>एक शब्द में उत्तर न दें जैसे "हाँ" या "नहीं" (जब तक आवश्यक न हो)।</li>
+                            <li>साक्षात्कार के दौरान अपने मोबाइल का उपयोग न करें – इसे साइलेंट मोड पर रखें।</li>
+                        </ul>
+                        <p><strong>साक्षात्कार में पूछे जाने वाले सामान्य प्रश्न:</strong></p>
+                        <ul>
+                            <li>अपने बारे में कुछ बताएं।</li>
+                            <li>आपकी ताकत क्या है?</li>
+                            <li>आप अपनी सबसे बड़ी कमजोरी किसे कहेंगे?</li>
+                            <li>आप इस कंपनी के लिए क्यों काम करना चाहते हैं?</li>
+                            <li>आप इस कंपनी के बारे में क्या जानते हैं?</li>
+                            <li>हमें इस नौकरी के लिए आपको क्यों नियुक्त करना चाहिए?</li>
+                            <li>क्या आप स्थानांतरित होने या यात्रा करने को तैयार हैं?</li>
+                            <li>आपकी वेतन अपेक्षाएँ क्या हैं?</li>
+                            <li>आप खुद को पाँच साल बाद कहाँ देखते हैं?</li>
+                            <li>क्या आपके पास मेरे लिए कोई प्रश्न हैं?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.7 मॉक साक्षात्कार
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-7">
+            <div class="section-header">
+                <span class="icon">🎭</span>
+                <span class="title">12.7 मॉक साक्षात्कार <span class="subtitle">(Mock Interviews)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Mock interview</strong> means the practice you do before the real interview. It is a practice interview to feel comfortable.</p>
+                        <p><strong>Benefits of mock interviews:</strong></p>
+                        <ul>
+                            <li>Learn how to speak in the interview.</li>
+                            <li>Learn how to dress, use proper body language.</li>
+                            <li>Overcome your fears.</li>
+                            <li>Get feedback on what you did well and how you can improve.</li>
+                            <li>Increase your confidence as you do more mock interviews.</li>
+                        </ul>
+                        <p><strong>Tips for conducting a good mock interview:</strong></p>
+                        <ul>
+                            <li>Prepare yourself as if you are attending a real interview.</li>
+                            <li>Choose the right mock interviewer who will give you good feedback (senior, teacher, or family member who has attended interviews).</li>
+                            <li>Choose a proper setting – not at home, while traveling, or non-professional environments.</li>
+                            <li>Dress well – wear formal clothes and be neat.</li>
+                            <li>Keep your documents ready, just as for a real interview.</li>
+                            <li>Prepare your answers to common interview questions.</li>
+                            <li>Record your mock interview.</li>
+                            <li>Most importantly, be calm and confident.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>मॉक साक्षात्कार (Mock interview)</strong> का अर्थ है वास्तविक साक्षात्कार से पहले आप जो अभ्यास करते हैं। यह आरामदायक महसूस करने के लिए एक अभ्यास साक्षात्कार है।</p>
+                        <p><strong>मॉक साक्षात्कार के लाभ:</strong></p>
+                        <ul>
+                            <li>साक्षात्कार में बोलने का तरीका सीखें।</li>
+                            <li>कपड़े पहनने, उचित शारीरिक भाषा का उपयोग करने का तरीका सीखें।</li>
+                            <li>अपने डर पर काबू पाएँ।</li>
+                            <li>आपने क्या अच्छा किया और आप कैसे सुधार कर सकते हैं, इस पर फीडबैक प्राप्त करें।</li>
+                            <li>जितने अधिक मॉक साक्षात्कार करेंगे, आपका आत्मविश्वास उतना ही बढ़ेगा।</li>
+                        </ul>
+                        <p><strong>एक अच्छा मॉक साक्षात्कार आयोजित करने के टिप्स:</strong></p>
+                        <ul>
+                            <li>अपने आप को ऐसे तैयार करें जैसे आप वास्तविक साक्षात्कार में भाग ले रहे हों।</li>
+                            <li>सही मॉक साक्षात्कारकर्ता चुनें जो आपको अच्छा फीडबैक देगा (वरिष्ठ, शिक्षक, या परिवार का सदस्य जिसने साक्षात्कार में भाग लिया हो)।</li>
+                            <li>एक उचित सेटिंग चुनें – घर, यात्रा के दौरान या गैर-पेशेवर वातावरण में नहीं।</li>
+                            <li>अच्छे कपड़े पहनें – फॉर्मल कपड़े पहनें और साफ-सुथरे रहें।</li>
+                            <li>अपने दस्तावेज़ तैयार रखें, वैसे ही जैसे वास्तविक साक्षात्कार के लिए।</li>
+                            <li>सामान्य साक्षात्कार प्रश्नों के अपने उत्तर तैयार करें।</li>
+                            <li>अपने मॉक साक्षात्कार को रिकॉर्ड करें।</li>
+                            <li>सबसे महत्वपूर्ण, शांत और आत्मविश्वासी रहें।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.8 व्यावसायिक नेटवर्किंग
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-8">
+            <div class="section-header">
+                <span class="icon">🤝</span>
+                <span class="title">12.8 व्यावसायिक नेटवर्किंग <span class="subtitle">(Professional Networking)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Professional network</strong> is your circle of friends or acquaintances who are in your field of work.</p>
+                        <p><strong>Benefits of professional networking:</strong></p>
+                        <ul>
+                            <li>Sharing knowledge.</li>
+                            <li>Learning about a job opening.</li>
+                            <li>Getting professional guidance.</li>
+                            <li>Finding new clients.</li>
+                            <li>Getting tips and updates about your field.</li>
+                            <li>Build your self-confidence.</li>
+                        </ul>
+                        <p><strong>Who can be in your professional network?</strong></p>
+                        <ul>
+                            <li>College professors.</li>
+                            <li>Previous classmates.</li>
+                            <li>Friends and family.</li>
+                            <li>Co-workers.</li>
+                            <li>Members of professional clubs or associations.</li>
+                        </ul>
+                        <p><strong>Tips for professional networking:</strong></p>
+                        <ul>
+                            <li>Connect with the right professionals.</li>
+                            <li>Stay in regular touch.</li>
+                            <li>Be available for your contact when they need you.</li>
+                            <li>Show gratitude and appreciation.</li>
+                            <li>Establish a professional attitude.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>व्यावसायिक नेटवर्क (Professional network)</strong> आपके दोस्तों या परिचितों का समूह है जो आपके कार्य क्षेत्र में हैं।</p>
+                        <p><strong>व्यावसायिक नेटवर्किंग के लाभ:</strong></p>
+                        <ul>
+                            <li>ज्ञान साझा करना।</li>
+                            <li>नौकरी के अवसर के बारे में जानना।</li>
+                            <li>पेशेवर मार्गदर्शन प्राप्त करना।</li>
+                            <li>नए ग्राहक ढूँढना।</li>
+                            <li>अपने क्षेत्र के बारे में सुझाव और अपडेट प्राप्त करना।</li>
+                            <li>अपना आत्मविश्वास बढ़ाना।</li>
+                        </ul>
+                        <p><strong>आपके व्यावसायिक नेटवर्क में कौन हो सकता है?</strong></p>
+                        <ul>
+                            <li>कॉलेज के प्रोफेसर।</li>
+                            <li>पिछले सहपाठी।</li>
+                            <li>मित्र और परिवार।</li>
+                            <li>सहकर्मी।</li>
+                            <li>पेशेवर क्लबों या संघों के सदस्य।</li>
+                        </ul>
+                        <p><strong>व्यावसायिक नेटवर्किंग के टिप्स:</strong></p>
+                        <ul>
+                            <li>सही पेशेवरों से जुड़ें।</li>
+                            <li>नियमित संपर्क में रहें।</li>
+                            <li>जब आपके संपर्क को आपकी आवश्यकता हो तो उपलब्ध रहें।</li>
+                            <li>आभार और प्रशंसा दिखाएँ।</li>
+                            <li>एक पेशेवर दृष्टिकोण स्थापित करें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="job-prep-grid">
+                    <div class="job-prep-card"><span class="jp-icon">💼</span><div class="jp-name">Co-workers</div><div class="jp-desc">Colleagues & seniors</div></div>
+                    <div class="job-prep-card"><span class="jp-icon">🎓</span><div class="jp-name">Professors</div><div class="jp-desc">Teachers & mentors</div></div>
+                    <div class="job-prep-card"><span class="jp-icon">👥</span><div class="jp-name">Classmates</div><div class="jp-desc">Alumni network</div></div>
+                    <div class="job-prep-card"><span class="jp-icon">🌟</span><div class="jp-name">Friends & Family</div><div class="jp-desc">Support system</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.9 असफलता और अस्वीकृति को संभालना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-9">
+            <div class="section-header">
+                <span class="icon">💪</span>
+                <span class="title">12.9 असफलता और अस्वीकृति को संभालना <span class="subtitle">(Handling Rejection and Failure)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Failure</strong> means lack of success in a goal or a task. <strong>Rejection</strong> is when something is not accepted by someone.</p>
+                        <p><strong>Stories of learning from failure:</strong></p>
+                        <ul>
+                            <li><strong>Thomas Edison:</strong> Failed 10,000 times before inventing the electric bulb. He said, "I have not failed. I have just found 10,000 ways that do not work."</li>
+                            <li><strong>Dr. APJ Abdul Kalam:</strong> The first attempt of India's Satellite Launch Vehicle failed. Exactly one year later, the launch was successful.</li>
+                        </ul>
+                        <p><strong>How to handle failure and rejection positively:</strong></p>
+                        <ul>
+                            <li><strong>Think about it:</strong> Note down all the steps you took. Find out what you could have done differently.</li>
+                            <li><strong>Stay focused:</strong> Do not lose focus from your goals.</li>
+                            <li><strong>Take a break:</strong> Take a small break to think about your next steps.</li>
+                            <li><strong>Don't give up:</strong> Do not stop even if you don't succeed at first.</li>
+                            <li><strong>Take support:</strong> Take inspiration and support from people around you.</li>
+                            <li><strong>Believe in yourself:</strong> Even if things do not work out, believe in your abilities.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>असफलता (Failure)</strong> का अर्थ है किसी लक्ष्य या कार्य में सफलता की कमी। <strong>अस्वीकृति (Rejection)</strong> तब होती है जब किसी को कुछ स्वीकार नहीं किया जाता है।</p>
+                        <p><strong>असफलता से सीखने की कहानियाँ:</strong></p>
+                        <ul>
+                            <li><strong>थॉमस एडिसन:</strong> बिजली के बल्ब का आविष्कार करने से पहले 10,000 बार असफल हुए। उन्होंने कहा, "मैं असफल नहीं हुआ हूँ। मैंने अभी 10,000 तरीके खोजे हैं जो काम नहीं करते।"</li>
+                            <li><strong>डॉ. एपीजे अब्दुल कलाम:</strong> भारत के सैटेलाइट लॉन्च व्हीकल का पहला प्रयास असफल रहा। ठीक एक साल बाद, लॉन्च सफल रहा।</li>
+                        </ul>
+                        <p><strong>असफलता और अस्वीकृति को सकारात्मक रूप से कैसे संभालें:</strong></p>
+                        <ul>
+                            <li><strong>इसके बारे में सोचें:</strong> आपके द्वारा उठाए गए सभी कदमों को नोट करें। पता करें कि आप क्या अलग कर सकते थे।</li>
+                            <li><strong>केंद्रित रहें:</strong> अपने लक्ष्यों से फोकस न खोएँ।</li>
+                            <li><strong>ब्रेक लें:</strong> अपने अगले कदमों के बारे में सोचने के लिए एक छोटा ब्रेक लें।</li>
+                            <li><strong>हार न मानें:</strong> पहली बार में सफल न होने पर भी न रुकें।</li>
+                            <li><strong>समर्थन लें:</strong> अपने आसपास के लोगों से प्रेरणा और समर्थन लें।</li>
+                            <li><strong>खुद पर विश्वास रखें:</strong> भले ही चीजें काम न करें, अपनी क्षमताओं पर विश्वास रखें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card blue">
+                    <h4 style="margin:0 0 6px; color:#003366;">💡 याद रखें / Remember</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>असफलता सफलता की सीढ़ी है। / Failure is the stepping stone to success.</li>
+                        <li>असफलता से सीखें और आगे बढ़ें। / Learn from failure and move forward.</li>
+                        <li>हार मत मानो – कोशिश करते रहो। / Don't give up – keep trying.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.10 उद्योग यात्रा 1 & 2
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-10">
+            <div class="section-header">
+                <span class="icon">🏭</span>
+                <span class="title">12.10-12.12 उद्योग यात्रा और उसके बाद <span class="subtitle">(Industry Visit 1, 2 & Reflection)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Industry visit (Exposure visit)</strong> helps you experience the real world of work and gives you a chance to talk to experts.</p>
+                        <p><strong>Before the visit – prepare questions:</strong></p>
+                        <ul>
+                            <li>What skills are most important for success in this industry?</li>
+                            <li>What are the career growth opportunities?</li>
+                            <li>What does a typical day look like in this job?</li>
+                            <li>What are the challenges faced in this field?</li>
+                            <li>What qualifications or certifications are valuable?</li>
+                        </ul>
+                        <p><strong>During the visit – observe and learn:</strong></p>
+                        <ul>
+                            <li>How a workplace functions.</li>
+                            <li>How professionals interact with each other.</li>
+                            <li>What tools and technologies are used.</li>
+                            <li>What is the work culture like.</li>
+                        </ul>
+                        <p><strong>After the visit – reflect:</strong></p>
+                        <ul>
+                            <li>What did I learn about the workplace?</li>
+                            <li>Did the visit help me make decisions about my career?</li>
+                            <li>What skills do I need to develop further?</li>
+                            <li>Are there any internship or job opportunities?</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>उद्योग यात्रा (Industry visit / Exposure visit)</strong> आपको कार्य की वास्तविक दुनिया का अनुभव करने में मदद करती है और आपको विशेषज्ञों से बात करने का अवसर देती है।</p>
+                        <p><strong>यात्रा से पहले – प्रश्न तैयार करें:</strong></p>
+                        <ul>
+                            <li>इस उद्योग में सफलता के लिए कौन से कौशल सबसे महत्वपूर्ण हैं?</li>
+                            <li>करियर विकास के अवसर क्या हैं?</li>
+                            <li>इस नौकरी में एक सामान्य दिन कैसा दिखता है?</li>
+                            <li>इस क्षेत्र में क्या चुनौतियाँ हैं?</li>
+                            <li>कौन सी योग्यताएँ या प्रमाणपत्र मूल्यवान हैं?</li>
+                        </ul>
+                        <p><strong>यात्रा के दौरान – निरीक्षण करें और सीखें:</strong></p>
+                        <ul>
+                            <li>कार्यस्थल कैसे कार्य करता है।</li>
+                            <li>पेशेवर एक-दूसरे के साथ कैसे बातचीत करते हैं।</li>
+                            <li>कौन से औज़ार और तकनीकों का उपयोग किया जाता है।</li>
+                            <li>कार्य संस्कृति कैसी है।</li>
+                        </ul>
+                        <p><strong>यात्रा के बाद – चिंतन करें:</strong></p>
+                        <ul>
+                            <li>मैंने कार्यस्थल के बारे में क्या सीखा?</li>
+                            <li>क्या यात्रा ने मुझे मेरे करियर के बारे में निर्णय लेने में मदद की?</li>
+                            <li>मुझे कौन से कौशल और विकसित करने की आवश्यकता है?</li>
+                            <li>क्या कोई इंटर्नशिप या नौकरी के अवसर हैं?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.13 पूर्व छात्र या HR द्वारा अतिथि व्याख्यान
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-13">
+            <div class="section-header">
+                <span class="icon">🎤</span>
+                <span class="title">12.13 पूर्व छात्र या HR द्वारा अतिथि व्याख्यान <span class="subtitle">(Guest Lecture by Alumni or HR)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>A Guest Lecture</strong> is a formal interaction between students and a guest speaker. The guest speaker can be an alumni or a Human Resource (HR) professional.</p>
+                        <p><strong>Questions to ask alumni:</strong></p>
+                        <ul>
+                            <li>What are the most important skills you need to get a job?</li>
+                            <li>What skills help us grow in our career?</li>
+                            <li>How did you make the decision about your job?</li>
+                            <li>How did you negotiate your salary?</li>
+                            <li>How do communication skills help in your workplace?</li>
+                        </ul>
+                        <p><strong>Questions to ask HR:</strong></p>
+                        <ul>
+                            <li>What are some tips for a good resume?</li>
+                            <li>What are some do's and don'ts during an interview?</li>
+                            <li>How to apply for a job in your company?</li>
+                            <li>What should I expect at an entry-level position?</li>
+                            <li>What is the career growth path in this sector?</li>
+                            <li>Are digital skills necessary for the job market?</li>
+                            <li>Where can I find out about job vacancies in this sector?</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>अतिथि व्याख्यान (Guest Lecture)</strong> छात्रों और एक अतिथि वक्ता के बीच एक औपचारिक बातचीत है। अतिथि वक्ता एक पूर्व छात्र या एक मानव संसाधन (HR) पेशेवर हो सकता है।</p>
+                        <p><strong>पूर्व छात्रों से पूछने के लिए प्रश्न:</strong></p>
+                        <ul>
+                            <li>नौकरी पाने के लिए सबसे महत्वपूर्ण कौशल क्या हैं?</li>
+                            <li>कौन से कौशल हमें हमारे करियर में बढ़ने में मदद करते हैं?</li>
+                            <li>आपने अपनी नौकरी के बारे में निर्णय कैसे लिया?</li>
+                            <li>आपने अपने वेतन पर बातचीत कैसे की?</li>
+                            <li>संचार कौशल आपके कार्यस्थल में कैसे मदद करते हैं?</li>
+                        </ul>
+                        <p><strong>HR से पूछने के लिए प्रश्न:</strong></p>
+                        <ul>
+                            <li>एक अच्छे रिज्यूमे के लिए कुछ टिप्स क्या हैं?</li>
+                            <li>साक्षात्कार के दौरान कुछ do's और don'ts क्या हैं?</li>
+                            <li>आपकी कंपनी में नौकरी के लिए आवेदन कैसे करें?</li>
+                            <li>मुझे एंट्री-लेवल पद पर क्या उम्मीद करनी चाहिए?</li>
+                            <li>इस क्षेत्र में करियर विकास पथ क्या है?</li>
+                            <li>क्या डिजिटल कौशल नौकरी बाजार के लिए आवश्यक हैं?</li>
+                            <li>मुझे इस क्षेत्र में नौकरी के रिक्तियों के बारे में कहाँ पता चल सकता है?</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.14 प्लेटफॉर्म-आधारित नौकरियाँ
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-14">
+            <div class="section-header">
+                <span class="icon">📱</span>
+                <span class="title">12.14 प्लेटफॉर्म-आधारित नौकरियाँ <span class="subtitle">(Platform-Based Jobs)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Platform-based jobs</strong> are jobs you find by being part of a particular online platform or an app. They connect workers in two main ways:</p>
+                        <ul>
+                            <li><strong>Worker to Customer:</strong> Jobs for plumbers, electricians, delivery people found through apps like Urban Company, Helpr, Dunzo, Swiggy.</li>
+                            <li><strong>Worker to Company:</strong> Some apps help you find work directly with companies – writing, editing, designing, etc.</li>
+                        </ul>
+                        <p><strong>Popular platforms:</strong></p>
+                        <ul>
+                            <li><strong>Urban Company:</strong> Electricians, plumbers, beauticians, and other services.</li>
+                            <li><strong>Helpr:</strong> Household work – pest control, cleaning, electrical, plumbing, relocation.</li>
+                        </ul>
+                        <p><strong>How to register on portals:</strong></p>
+                        <ul>
+                            <li>Find the 'Sign Up' or 'Register With Us' option.</li>
+                            <li>Share basic details – name, phone number, email address.</li>
+                            <li>Share required documentation – driver's license, Aadhaar, ITI certificate.</li>
+                            <li>Read terms and conditions carefully before accepting the contract.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>प्लेटफॉर्म-आधारित नौकरियाँ (Platform-based jobs)</strong> वे नौकरियाँ हैं जो आप किसी विशेष ऑनलाइन प्लेटफॉर्म या ऐप का हिस्सा बनकर पाते हैं। वे श्रमिकों को दो मुख्य तरीकों से जोड़ते हैं:</p>
+                        <ul>
+                            <li><strong>श्रमिक से ग्राहक:</strong> प्लंबर, इलेक्ट्रीशियन, डिलीवरी लोगों के लिए नौकरियाँ Urban Company, Helpr, Dunzo, Swiggy जैसे ऐप्स के माध्यम से मिलती हैं।</li>
+                            <li><strong>श्रमिक से कंपनी:</strong> कुछ ऐप्स आपको सीधे कंपनियों के साथ काम खोजने में मदद करते हैं – लेखन, संपादन, डिजाइन आदि।</li>
+                        </ul>
+                        <p><strong>लोकप्रिय प्लेटफॉर्म:</strong></p>
+                        <ul>
+                            <li><strong>Urban Company:</strong> इलेक्ट्रीशियन, प्लंबर, ब्यूटीशियन और अन्य सेवाएँ।</li>
+                            <li><strong>Helpr:</strong> घरेलू काम – कीट नियंत्रण, सफाई, विद्युत, प्लंबिंग, स्थानांतरण।</li>
+                        </ul>
+                        <p><strong>पोर्टल्स पर पंजीकरण कैसे करें:</strong></p>
+                        <ul>
+                            <li>'Sign Up' या 'Register With Us' विकल्प खोजें।</li>
+                            <li>बुनियादी विवरण साझा करें – नाम, फोन नंबर, ईमेल पता।</li>
+                            <li>आवश्यक दस्तावेज़ साझा करें – ड्राइविंग लाइसेंस, आधार, ITI प्रमाणपत्र।</li>
+                            <li>अनुबंध स्वीकार करने से पहले नियम और शर्तों को ध्यान से पढ़ें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="portal-grid">
+                    <div class="portal-card"><span class="p-icon">🔧</span><div class="p-name">Urban Company</div><div class="p-desc">Electricians, plumbers, beauticians</div></div>
+                    <div class="portal-card"><span class="p-icon">🧹</span><div class="p-name">Helpr</div><div class="p-desc">Cleaning, pest control, relocation</div></div>
+                    <div class="portal-card"><span class="p-icon">🛵</span><div class="p-name">Swiggy/Dunzo</div><div class="p-desc">Delivery jobs</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.15 ऑनलाइन पोर्टल्स के माध्यम से नौकरी आवेदन
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-15">
+            <div class="section-header">
+                <span class="icon">💻</span>
+                <span class="title">12.15 ऑनलाइन पोर्टल्स के माध्यम से नौकरी आवेदन <span class="subtitle">(Applying for Jobs Through Online Portals)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Job search engines (job portals)</strong> are websites where companies share details of available jobs. You can search for jobs as per your skills and interest.</p>
+                        <p><strong>Popular job portals in India:</strong> Naukri.com, Freshersworld.com, Indeed.co.in, TimesJobs.com, LinkedIn.com, Shine.com, Apna.co.</p>
+                        <p><strong>How to apply for jobs online:</strong></p>
+                        <ul>
+                            <li><strong>Step 1 – Profile Creation:</strong> Share your basic details, education, and work experience.</li>
+                            <li><strong>Step 2 – Resume Upload:</strong> Upload a full, updated PDF of your resume.</li>
+                            <li><strong>Step 3 – Job Search:</strong> Use specific keywords and filters (location, experience, skills).</li>
+                            <li><strong>Step 4 – Apply for Jobs:</strong> Read the job description carefully and click apply.</li>
+                            <li><strong>Step 5 – Application Status:</strong> Check the portal regularly for new postings and updates.</li>
+                        </ul>
+                        <p><strong>How to identify fake jobs:</strong></p>
+                        <ul>
+                            <li>Companies do not usually ask for money to apply.</li>
+                            <li>Do not share personal financial information – bank account, debit card, PIN.</li>
+                            <li>If they offer a lot of money for very little work, it's suspicious.</li>
+                            <li>If they offer you the job without checking your skills or doing an interview.</li>
+                            <li>Check company reviews online (Glassdoor, etc.).</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>जॉब सर्च इंजन (नौकरी पोर्टल)</strong> वेबसाइटें हैं जहाँ कंपनियाँ उपलब्ध नौकरियों के विवरण साझा करती हैं। आप अपने कौशल और रुचि के अनुसार नौकरियाँ खोज सकते हैं।</p>
+                        <p><strong>भारत में लोकप्रिय नौकरी पोर्टल:</strong> Naukri.com, Freshersworld.com, Indeed.co.in, TimesJobs.com, LinkedIn.com, Shine.com, Apna.co.</p>
+                        <p><strong>ऑनलाइन नौकरी आवेदन कैसे करें:</strong></p>
+                        <ul>
+                            <li><strong>चरण 1 – प्रोफ़ाइल निर्माण:</strong> अपना बुनियादी विवरण, शिक्षा और कार्य अनुभव साझा करें।</li>
+                            <li><strong>चरण 2 – रिज्यूमे अपलोड करें:</strong> अपने रिज्यूमे का पूरा, अद्यतन PDF अपलोड करें।</li>
+                            <li><strong>चरण 3 – नौकरी खोज:</strong> विशिष्ट कीवर्ड और फ़िल्टर (स्थान, अनुभव, कौशल) का उपयोग करें।</li>
+                            <li><strong>चरण 4 – नौकरी के लिए आवेदन करें:</strong> नौकरी विवरण ध्यान से पढ़ें और आवेदन पर क्लिक करें।</li>
+                            <li><strong>चरण 5 – आवेदन स्थिति:</strong> नई पोस्टिंग और अपडेट के लिए पोर्टल की नियमित जाँच करें।</li>
+                        </ul>
+                        <p><strong>फेक नौकरियों की पहचान कैसे करें:</strong></p>
+                        <ul>
+                            <li>कंपनियाँ आमतौर पर आवेदन करने के लिए पैसे नहीं माँगती हैं।</li>
+                            <li>व्यक्तिगत वित्तीय जानकारी साझा न करें – बैंक खाता, डेबिट कार्ड, PIN।</li>
+                            <li>यदि वे बहुत कम काम के लिए बहुत सारा पैसा देते हैं, तो यह संदिग्ध है।</li>
+                            <li>यदि वे आपके कौशल की जाँच किए बिना या साक्षात्कार किए बिना नौकरी की पेशकश करते हैं।</li>
+                            <li>कंपनी की समीक्षा ऑनलाइन जाँचें (Glassdoor, आदि)।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="step-list">
+                    <li>Profile Creation – Share basic details</li>
+                    <li>Resume Upload – Upload PDF resume</li>
+                    <li>Job Search – Use keywords & filters</li>
+                    <li>Apply for Jobs – Read & click apply</li>
+                    <li>Application Status – Check regularly</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    12.16 प्रशिक्षुता के लिए पंजीकरण
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="jp-12-16">
+            <div class="section-header">
+                <span class="icon">📋</span>
+                <span class="title">12.16 प्रशिक्षुता के लिए पंजीकरण <span class="subtitle">(Enrolling for Apprenticeships)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>National Apprenticeship Promotion Scheme (NAPS)</strong> is a scheme by the Government of India to provide apprenticeship training through employers.</p>
+                        <p><strong>Benefits of apprenticeship training:</strong></p>
+                        <ul>
+                            <li>On-the-job training.</li>
+                            <li>Earn while studying.</li>
+                            <li>Operate advanced machinery.</li>
+                            <li>Learn industry best practices.</li>
+                            <li>Certificate on completion.</li>
+                        </ul>
+                        <p><strong>Requirements for NAPS registration:</strong></p>
+                        <ul>
+                            <li>Any ITI certificate (original).</li>
+                            <li>Age 14 to 60.</li>
+                            <li>Valid mobile number and email ID.</li>
+                            <li>Aadhaar card, photo, digital signature & ITI certificate (JPEG or PNG).</li>
+                        </ul>
+                        <p><strong>Steps to register on NAPS portal (www.apprenticeshipindia.gov.in):</strong></p>
+                        <ul>
+                            <li>Click 'Register' > 'Candidate'.</li>
+                            <li>Fill in personal details (name as per Aadhaar).</li>
+                            <li>Note your registration number.</li>
+                            <li>Verify email and activate account.</li>
+                            <li>Complete your profile (About Me, Education, Preferences).</li>
+                            <li>Enter Aadhaar verification.</li>
+                            <li>Search for apprenticeship opportunities and apply.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>राष्ट्रीय प्रशिक्षुता संवर्धन योजना (NAPS)</strong> भारत सरकार की एक योजना है जो नियोक्ताओं के माध्यम से प्रशिक्षुता प्रशिक्षण प्रदान करती है।</p>
+                        <p><strong>प्रशिक्षुता प्रशिक्षण के लाभ:</strong></p>
+                        <ul>
+                            <li>ऑन-द-जॉब प्रशिक्षण।</li>
+                            <li>पढ़ाई के दौरान कमाएँ।</li>
+                            <li>उन्नत मशीनरी चलाएँ।</li>
+                            <li>उद्योग की सर्वोत्तम प्रथाएँ सीखें।</li>
+                            <li>पूरा होने पर प्रमाणपत्र।</li>
+                        </ul>
+                        <p><strong>NAPS पंजीकरण के लिए आवश्यकताएँ:</strong></p>
+                        <ul>
+                            <li>कोई ITI प्रमाणपत्र (मूल)।</li>
+                            <li>आयु 14 से 60 वर्ष।</li>
+                            <li>मान्य मोबाइल नंबर और ईमेल आईडी।</li>
+                            <li>आधार कार्ड, फोटो, डिजिटल हस्ताक्षर और ITI प्रमाणपत्र (JPEG या PNG)।</li>
+                        </ul>
+                        <p><strong>NAPS पोर्टल (www.apprenticeshipindia.gov.in) पर पंजीकरण के चरण:</strong></p>
+                        <ul>
+                            <li>'Register' > 'Candidate' पर क्लिक करें।</li>
+                            <li>व्यक्तिगत विवरण भरें (आधार के अनुसार नाम)।</li>
+                            <li>अपना पंजीकरण संख्या नोट करें।</li>
+                            <li>ईमेल सत्यापित करें और खाता सक्रिय करें।</li>
+                            <li>अपनी प्रोफ़ाइल पूरी करें (About Me, Education, Preferences)।</li>
+                            <li>आधार सत्यापन दर्ज करें।</li>
+                            <li>प्रशिक्षुता के अवसर खोजें और आवेदन करें।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card blue">
+                    <h4 style="margin:0 0 6px; color:#003366;">📌 NAPS Portal Key Features</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li><strong>Contracts:</strong> Shows contracts you have signed (only one at a time).</li>
+                        <li><strong>Applications:</strong> Shows all applications you have completed.</li>
+                        <li><strong>Invitations Received:</strong> Companies can invite you to apply.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    MCQ LINK
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="mcq">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <span class="title">MCQ अभ्यास / बहुविकल्पीय प्रश्न</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="mcq-link">
+                    <p><strong>📌 इस मॉड्यूल के बहुविकल्पीय प्रश्नों का अभ्यास करने के लिए नीचे क्लिक करें।</strong></p>
+                    <a href="/question-bank/employability-skills/module-12.html" target="_blank">📝 प्रश्न बैंक पर जाएँ →</a>
+                    <p style="margin-top:10px; font-size:0.9rem; color:#888;">(नई टैब में खुलेगा)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    RELATED CHAPTERS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="related">
+            <div class="section-header">
+                <span class="icon">🔗</span>
+                <span class="title">संबंधित मॉड्यूल / Related Modules</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div style="display:flex; flex-wrap:wrap; gap:12px;">
+                    <a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 1: एम्प्लॉयबिलिटी स्किल्स का महत्व</a>
+                    <a href="module-5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 5: संचार कौशल</a>
+                    <a href="module-10.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 10: करियर विकास</a>
+                    <a href="module-11.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 11: ग्राहक सेवा</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    COMMENTS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comments">
+            <div class="section-header">
+                <span class="icon">💬</span>
+                <span class="title">टिप्पणियाँ – मॉडरेशन के साथ</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="comments-section">
+                    <p>💬 <strong>इस मॉड्यूल के बारे में अपने विचार या प्रश्न साझा करें।</strong></p>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 सभी टिप्पणियाँ प्रकाशित होने से पहले एडमिन द्वारा समीक्षा की जाती हैं।</p>
+                    <textarea id="comment-text" rows="3" placeholder="अपनी टिप्पणी यहाँ लिखें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
+                    <input type="text" id="comment-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <button onclick="postComment()" class="btn" style="margin-top:6px;">💬 टिप्पणी पोस्ट करें (समीक्षाधीन)</button>
+                    <div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
+                        <div class="comment-item">
+                            <strong>Admin</strong> <span class="meta">(मॉडरेटर)</span> <span class="status-approved">✅ स्वीकृत</span>
+                            <p style="margin:4px 0 0 0; font-size:0.95rem;">मॉड्यूल 12 में आपका स्वागत है! नौकरी की तैयारी, साक्षात्कार, रिज्यूमे, प्रशिक्षुता और नेटवर्किंग के बारे में प्रश्न पूछने में संकोच न करें।</p>
+                        </div>
+                        <p style="color:#888; font-style:italic; margin-top:8px;">आपकी टिप्पणी एडमिन अनुमोदन के बाद यहाँ दिखाई देगी।</p>
+                    </div>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ टिप्पणियाँ मॉडरेट की जाती हैं। कृपया विनम्र रहें।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    ADMIN PANEL
+    ============================================================ -->
+    <div class="container">
+        <div class="admin-toggle" onclick="toggleAdminPanel()">
+            <span class="key-icon">🔑</span>
+            <strong>Admin Panel</strong> – Comments Management
+            <span style="color:#888; font-weight:400; font-size:0.85rem; display:block; margin-top:4px;">(Click to open/close admin panel)</span>
+        </div>
+        <div class="admin-panel" id="adminPanel">
+            <div class="admin-header">
+                <h3>🔐 Comment Moderation</h3>
+                <button class="close-btn" onclick="toggleAdminPanel()">✕ Close</button>
+            </div>
+            <div class="admin-password-box" id="adminLogin">
+                <input type="password" id="adminPassword" placeholder="Enter admin password..." onkeyup="if(event.key==='Enter') checkAdminPassword()">
+                <button onclick="checkAdminPassword()">🔓 Login</button>
+                <span class="error-msg" id="passwordError">❌ Wrong password! Try again.</span>
+            </div>
+            <div id="adminContent" style="display:none;">
+                <div class="comment-stats" id="commentStats">
+                    <span>📊 Total: <span class="count" id="totalCount">0</span></span>
+                    <span>⏳ Pending: <span class="count" id="pendingCount">0</span></span>
+                    <span>✅ Approved: <span class="count" id="approvedCount">0</span></span>
+                    <span>❌ Rejected: <span class="count" id="rejectedCount">0</span></span>
+                </div>
+                <div id="adminCommentList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    TOPIC REQUEST
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="topicrequest">
+            <div class="section-header">
+                <span class="icon">💭</span>
+                <span class="title">विषय अनुरोध</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="topic-request">
+                    <p>📝 <strong>कोई नया विषय या सुधार सुझाएँ।</strong></p>
+                    <input type="text" id="topic-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <input type="email" id="topic-email" placeholder="आपका ईमेल (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <textarea id="topic-message" rows="4" placeholder="जिस विषय या सुधार को आप देखना चाहते हैं, उसका वर्णन करें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
+                    <button onclick="submitTopicRequest()" class="btn">📤 अनुरोध सबमिट करें</button>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ आपके अनुरोध की समीक्षा एडमिन द्वारा की जाएगी और जल्द ही जोड़ा जाएगा।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    SUGGESTIONS & DISCLAIMER
+    ============================================================ -->
+    <div class="container" style="margin-top:16px;">
+        <div style="background:#fff; border-radius:14px; padding:20px 24px; border:1px solid #e6eaef; margin-bottom:20px;">
+            <h2 style="color:#003366; font-size:1.3rem; margin:0 0 6px;">💬 सुझाव दें</h2>
+            <p style="margin:0 0 12px;">यदि इस मॉड्यूल में कोई सुधार सुझाना है, तो हमें बताएं।</p>
+            <a href="/contact.html" class="btn">💬 यहाँ क्लिक करें →</a>
+        </div>
+        <div style="background:#fff8e1; border-radius:14px; padding:18px 22px; border:1px solid #ffe082; margin-bottom:20px;">
+            <h2 style="color:#856404; font-size:1.2rem; margin:0 0 4px;">⚠ अस्वीकरण</h2>
+            <p style="margin:0; font-size:0.95rem; color:#6c6c6c;">ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="/disclaimer.html">अस्वीकरण</a>
+            <a href="/privacy-policy.html">गोपनीयता नीति</a>
+            <a href="/terms.html">नियम</a>
+            <a href="/contact.html">संपर्क</a>
+        </div>
+        <p>© 2026 ITI Study Centre. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
+    <button id="scrollTop" title="ऊपर जाएँ">⬆</button>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('📚 सामग्री सुरक्षित है। कृपया इस पेज को शेयर करने के लिए शेयर बटन का उपयोग करें।');
+        });
+
+        // Disable Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 सामग्री कॉपी करना प्रतिबंधित है। कृपया शेयर बटन का उपयोग करें।');
+            }
+        });
+
+        // Search
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        // Share functions
+        function getPageUrl() { return window.location.href; }
+
+        function getPageTitle() { return document.querySelector('title').textContent; }
+
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle() + ' - इसे पढ़ें!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareFacebook() {
+            const url = getPageUrl();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareTwitter() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(url), '_blank');
+        }
+
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ कॉपी हो गया!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        span.textContent = 'लिंक कॉपी करें';
+                        btn.classList.remove('copied');
+                    }, 3000);
+                }).catch(() => { fallbackCopy(url); });
+            } else {
+                fallbackCopy(url);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ कॉपी हो गया!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    span.textContent = 'लिंक कॉपी करें';
+                    btn.classList.remove('copied');
+                }, 3000);
+            } catch (err) {
+                alert('कॉपी नहीं हो पाया। कृपया URL को मैन्युअल रूप से कॉपी करें।');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // ============================================================
+        // COMMENT SYSTEM
+        // ============================================================
+        const ADMIN_PASSWORD = 'admin123';
+        const STORAGE_KEY = 'module12_comments';
+
+        function getComments() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch {
+                return [];
+            }
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
+        }
+
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+        }
+
+        function getTimeAgo(timestamp) {
+            const diff = Date.now() - timestamp;
+            const minutes = Math.floor(diff / 60000);
+            if (minutes < 1) return 'Just now';
+            if (minutes < 60) return minutes + 'm ago';
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return hours + 'h ago';
+            const days = Math.floor(hours / 24);
+            return days + 'd ago';
+        }
+
+        function renderPublicComments() {
+            const list = document.getElementById('comment-list');
+            if (!list) return;
+            const comments = getComments();
+            const approved = comments.filter(c => c.status === 'approved');
+
+            const noMsg = list.querySelector('.no-comments-msg');
+            if (noMsg) noMsg.remove();
+
+            const existingItems = list.querySelectorAll('.comment-item');
+            existingItems.forEach(el => {
+                if (!el.querySelector('.status-approved') || !el.querySelector('strong')?.textContent?.includes('Admin')) {
+                    el.remove();
+                }
+            });
+
+            if (approved.length === 0) {
+                let noMsgEl = document.createElement('p');
+                noMsgEl.className = 'no-comments-msg';
+                noMsgEl.textContent = 'No approved comments yet. Be the first to comment!';
+                list.appendChild(noMsgEl);
+                return;
+            }
+
+            approved.forEach(comment => {
+                const div = document.createElement('div');
+                div.className = 'comment-item';
+                div.innerHTML = `
+                    <strong>${comment.name}</strong>
+                    <span class="meta">(${getTimeAgo(comment.timestamp)})</span>
+                    <span class="status-approved">✅ Approved</span>
+                    <p style="margin:4px 0 0 0; font-size:0.95rem;">${comment.text}</p>
+                `;
+                list.prepend(div);
+            });
+        }
+
+        function
