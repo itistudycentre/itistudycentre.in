@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2nd Year – मॉड्यूल 3: इंटरनेट कौशल | ITI Study Centre</title>
+    <meta name="description" content="Employability Skills 2nd Year मॉड्यूल 3: इंटरनेट कौशल – पूरे नोट्स। हिंदी + अंग्रेजी में चार्ट और उदाहरण सहित।" />
+    <link rel="icon" href="/images/favicon.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.7;
+            user-select: none;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .main-header {
+            background: #003366;
+            padding: 14px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        .main-header nav a.notes-link {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb .current {
+            color: #555;
+            font-weight: 600;
+        }
+        .page-title {
+            padding: 30px 0 20px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.2rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 520px;
+            padding: 13px 18px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+        }
+        .search-section button {
+            padding: 13px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        @media (max-width: 640px) {
+            .search-section {
+                flex-direction: column;
+            }
+            .search-section input {
+                max-width: 100%;
+                width: 100%;
+            }
+            .search-section button {
+                width: 100%;
+            }
+        }
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            margin-bottom: 28px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 18px 26px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: default;
+            user-select: none;
+            flex-wrap: wrap;
+        }
+        .section-header .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+        .section-header .title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body {
+            padding: 24px 28px;
+            background: #fafcff;
+        }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin: 28px 0 16px;
+            border-left: 4px solid #ffcc00;
+            padding-left: 16px;
+        }
+        .section-body h3:first-of-type {
+            margin-top: 0;
+        }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.1rem;
+            margin: 18px 0 10px;
+        }
+        .bilingual {
+            margin: 14px 0;
+        }
+        .bilingual .en {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #1a2a3a;
+        }
+        .bilingual .hi {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #3d3d3d;
+            background: #f0f5ff;
+            padding: 14px 20px;
+            border-radius: 10px;
+            border-left: 5px solid #003366;
+            margin-top: 12px;
+        }
+        .bilingual ul,
+        .bilingual ol {
+            padding-left: 24px;
+            margin: 8px 0;
+        }
+        .bilingual ul li,
+        .bilingual ol li {
+            margin-bottom: 4px;
+        }
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+        }
+        .info-card.blue {
+            border-left: 5px solid #003366;
+        }
+        .info-card.green {
+            border-left: 5px solid #28a745;
+        }
+        .info-card.orange {
+            border-left: 5px solid #ff9900;
+        }
+        .info-card.purple {
+            border-left: 5px solid #6f42c1;
+        }
+        .info-card.highlight {
+            border-left: 5px solid #ffc107;
+            background: #fffdf0;
+        }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) {
+            background: #f8f9fc;
+        }
+        .table-wrap tr:hover {
+            background: #eef2f7;
+        }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .example-box strong {
+            color: #003366;
+        }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .important-box ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .short-notes ul {
+            padding-left: 22px;
+            margin-bottom: 0;
+        }
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+            margin: 16px 0;
+        }
+        .step-list li {
+            counter-increment: step;
+            padding: 10px 16px 10px 56px;
+            position: relative;
+            background: #f8f9fc;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #e9ecef;
+            font-size: 0.98rem;
+        }
+        .step-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #003366;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .mcq-link {
+            background: #f0f5ff;
+            border: 2px solid #003366;
+            border-radius: 12px;
+            padding: 20px 24px;
+            text-align: center;
+            margin: 16px 0;
+        }
+        .mcq-link a {
+            display: inline-block;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #003366;
+            background: #fff;
+            padding: 10px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: 0.25s;
+            border: 1px solid #003366;
+        }
+        .mcq-link a:hover {
+            background: #003366;
+            color: #fff;
+            transform: scale(1.02);
+        }
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 20px;
+            padding: 14px 18px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover {
+            transform: scale(1.04);
+            opacity: 0.9;
+        }
+        .share-btn.whatsapp {
+            background: #25d366;
+        }
+        .share-btn.facebook {
+            background: #1877f2;
+        }
+        .share-btn.twitter {
+            background: #1da1f2;
+        }
+        .share-btn.link {
+            background: #6c757d;
+        }
+        .share-btn.link.copied {
+            background: #28a745;
+        }
+        .share-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #003366;
+            color: #fff !important;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: 0.25s;
+            font-size: 1rem;
+        }
+        .btn:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        .comments-section textarea,
+        .topic-request textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            resize: vertical;
+            font-family: inherit;
+            user-select: text;
+        }
+        .comments-section input,
+        .topic-request input {
+            padding: 10px 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            width: 48%;
+            margin-right: 2%;
+            margin-bottom: 10px;
+            font-family: inherit;
+            user-select: text;
+        }
+        @media (max-width: 600px) {
+            .comments-section input,
+            .topic-request input {
+                width: 100%;
+                margin-right: 0;
+            }
+        }
+        .comment-item {
+            background: #f1f4f9;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #003366;
+        }
+        .comment-item .meta {
+            color: #888;
+            font-size: 0.8rem;
+        }
+        .comment-item .status-pending {
+            color: #ff9900;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #fff3cd;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        .comment-item .status-approved {
+            color: #28a745;
+            font-weight: 600;
+            font-size: 0.75rem;
+            background: #d4edda;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 24px 20px;
+            text-align: center;
+            margin-top: 44px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 24px;
+            margin-bottom: 12px;
+        }
+        footer .footer-links a {
+            color: #b0b8c5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        footer .footer-links a:hover {
+            color: #fff;
+        }
+        footer p {
+            margin: 8px 0 0;
+            font-size: 0.85rem;
+            color: #7a8494;
+        }
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.25s;
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover {
+            background: #002244;
+            transform: scale(1.05);
+        }
+        .copy-protect::selection {
+            background: #b3d4fc;
+            color: #000;
+        }
+        .admin-toggle {
+            text-align: center;
+            margin: 20px 0;
+            padding: 12px;
+            background: #f8f9fc;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-toggle:hover {
+            background: #eef2f7;
+            border-color: #003366;
+        }
+        .admin-toggle .key-icon {
+            font-size: 1.2rem;
+            margin-right: 8px;
+        }
+        .admin-panel {
+            display: none;
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            border: 2px solid #003366;
+            margin: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .admin-panel.open {
+            display: block;
+        }
+        .admin-panel .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .admin-panel .admin-header h3 {
+            color: #003366;
+            margin: 0;
+        }
+        .admin-panel .admin-header .close-btn {
+            background: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .admin-panel .admin-header .close-btn:hover {
+            background: #b02a37;
+        }
+        .admin-password-box {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .admin-password-box input {
+            padding: 10px 14px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-password-box input:focus {
+            border-color: #003366;
+            outline: none;
+        }
+        .admin-password-box button {
+            padding: 10px 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .admin-password-box button:hover {
+            background: #002244;
+        }
+        .admin-password-box .error-msg {
+            color: #dc3545;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .admin-password-box .error-msg.show {
+            display: block;
+        }
+        .comment-stats {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            padding: 12px 16px;
+            background: #f8f9fc;
+            border-radius: 8px;
+        }
+        .comment-stats span {
+            font-size: 0.9rem;
+        }
+        .comment-stats .count {
+            font-weight: 700;
+            color: #003366;
+        }
+        .admin-comment-item {
+            background: #f8f9fc;
+            padding: 14px 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 4px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+        .admin-comment-item .comment-info {
+            flex: 1;
+            min-width: 200px;
+        }
+        .admin-comment-item .comment-info strong {
+            color: #003366;
+        }
+        .admin-comment-item .comment-info .time {
+            color: #888;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        .admin-comment-item .comment-info .status {
+            font-size: 0.7rem;
+            padding: 2px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+        .admin-comment-item .comment-info .status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .admin-comment-item .comment-info .status.approved {
+            background: #d4edda;
+            color: #1e7e34;
+        }
+        .admin-comment-item .comment-info .status.rejected {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .admin-comment-item .comment-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .admin-comment-item .comment-actions button {
+            padding: 4px 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .admin-comment-item .comment-actions .btn-approve {
+            background: #28a745;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-approve:hover {
+            background: #1e7e34;
+        }
+        .admin-comment-item .comment-actions .btn-reject {
+            background: #ffc107;
+            color: #222;
+        }
+        .admin-comment-item .comment-actions .btn-reject:hover {
+            background: #e0a800;
+        }
+        .admin-comment-item .comment-actions .btn-delete {
+            background: #dc3545;
+            color: #fff;
+        }
+        .admin-comment-item .comment-actions .btn-delete:hover {
+            background: #b02a37;
+        }
+        .no-comments-msg {
+            color: #888;
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+        .internet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .internet-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .internet-card .i-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .internet-card .i-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+        .internet-card .i-desc {
+            font-size: 0.75rem;
+            color: #555;
+        }
+        .jobportal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .jobportal-card {
+            background: #fff;
+            padding: 12px 10px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .jobportal-card .j-icon {
+            font-size: 1.6rem;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .jobportal-card .j-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.8rem;
+        }
+        .socialmedia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .socialmedia-card {
+            background: #fff;
+            padding: 14px 12px;
+            border-radius: 10px;
+            border: 2px solid #e6eaef;
+            text-align: center;
+        }
+        .socialmedia-card .s-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .socialmedia-card .s-name {
+            font-weight: 600;
+            color: #003366;
+            font-size: 0.9rem;
+        }
+        .socialmedia-card .s-desc {
+            font-size: 0.75rem;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .main-header nav {
+                justify-content: center;
+                gap: 6px 12px;
+            }
+            .main-header nav a {
+                font-size: 0.9rem;
+            }
+            .page-title h1 {
+                font-size: 1.6rem;
+            }
+            .section-header {
+                padding: 14px 18px;
+                flex-wrap: wrap;
+            }
+            .section-header .title {
+                font-size: 1.05rem;
+            }
+            .section-body {
+                padding: 16px 18px;
+            }
+            .section-body h3 {
+                font-size: 1.1rem;
+            }
+            .bilingual .en {
+                font-size: 0.95rem;
+            }
+            .bilingual .hi {
+                font-size: 0.9rem;
+                padding: 12px 16px;
+            }
+            .share-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .share-section .share-label {
+                text-align: center;
+            }
+            .share-btn {
+                justify-content: center;
+            }
+            .admin-comment-item {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .admin-comment-item .comment-actions {
+                justify-content: flex-start;
+            }
+            .admin-password-box {
+                flex-direction: column;
+            }
+            .admin-password-box input {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            .section-body {
+                padding: 12px 14px;
+            }
+            .section-header .icon {
+                font-size: 1.3rem;
+            }
+            .section-header .title {
+                font-size: 0.95rem;
+            }
+            .internet-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .jobportal-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .socialmedia-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .step-list li {
+                padding: 8px 10px 8px 46px;
+                font-size: 0.9rem;
+            }
+            .step-list li::before {
+                width: 26px;
+                height: 26px;
+                font-size: 0.75rem;
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo"><a href="/">ITI Study Centre</a></div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/iti-result.html">ITI Result</a>
+                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
+                <a href="/engineering-notes.html">Engineering Notes</a>
+                <a href="/questionbank.html">Question Bank</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== BREADCRUMB ===== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
+            <a href="/notes/employability-skills/index.html">Employability Skills</a> &nbsp;›&nbsp;
+            <span class="current">2nd Year – मॉड्यूल 3: इंटरनेट कौशल</span>
+        </div>
+    </div>
+
+    <!-- ===== PAGE TITLE ===== -->
+    <section class="page-title">
+        <div class="container">
+            <h1>🌐 2nd Year – मॉड्यूल 3: इंटरनेट कौशल</h1>
+            <p>Internet Skills • NSDC/DGT पाठ्यक्रम पर आधारित • हिंदी + अंग्रेजी में पूरे नोट्स</p>
+        </div>
+    </section>
+
+    <!-- ===== SEARCH ===== -->
+    <section class="search-section container">
+        <input type="text" id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें...">
+        <button onclick="filterSections()">खोजें</button>
+    </section>
+
+    <!-- ===== SHARE BUTTONS ===== -->
+    <div class="container">
+        <div class="share-section" id="shareSection">
+            <span class="share-label">📤 इस पेज को शेयर करें:</span>
+            <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+            </button>
+            <button class="share-btn facebook" onclick="shareFacebook()">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </button>
+            <button class="share-btn twitter" onclick="shareTwitter()">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Twitter
+            </button>
+            <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+                <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+                <span id="copyLinkText">Copy Link</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    3.1 स्वयं के लिए इंटरनेट का उपयोग
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="is-3-1">
+            <div class="section-header">
+                <span class="icon">🔍</span>
+                <span class="title">3.1 स्वयं के लिए इंटरनेट का उपयोग <span class="subtitle">(Using Internet for Self)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Using Google to find information:</strong></p>
+                        <ul>
+                            <li>Think of Google as an internet book. Type words to find answers.</li>
+                            <li>Not all websites have correct information – a blog might have personal opinions while a bike shop's website might have expert advice.</li>
+                        </ul>
+                        <p><strong>Sorting information:</strong></p>
+                        <ul>
+                            <li>Read carefully and go through the information.</li>
+                            <li>Highlight or note important parts.</li>
+                            <li>Group similar ideas together.</li>
+                        </ul>
+                        <p><strong>Presenting information:</strong></p>
+                        <ul>
+                            <li>Start simple – begin with a main idea or summary.</li>
+                            <li>Use examples – real-life examples help.</li>
+                            <li>Be clear – use simple words and pictures.</li>
+                            <li>Practice – before telling others, go over the information.</li>
+                        </ul>
+                        <p><strong>Reflection:</strong> Keep a Learning Book to write what you learn and what you want to get better at.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>जानकारी खोजने के लिए Google का उपयोग:</strong></p>
+                        <ul>
+                            <li>Google को इंटरनेट की किताब के रूप में सोचें। उत्तर खोजने के लिए शब्द टाइप करें।</li>
+                            <li>सभी वेबसाइटों पर सही जानकारी नहीं होती – एक ब्लॉग में व्यक्तिगत राय हो सकती है जबकि एक बाइक शॉप की वेबसाइट पर विशेषज्ञ सलाह हो सकती है।</li>
+                        </ul>
+                        <p><strong>जानकारी को क्रमबद्ध करना:</strong></p>
+                        <ul>
+                            <li>ध्यान से पढ़ें और जानकारी को समझें।</li>
+                            <li>महत्वपूर्ण भागों को हाइलाइट करें या नोट करें।</li>
+                            <li>समान विचारों को एक साथ समूहित करें।</li>
+                        </ul>
+                        <p><strong>जानकारी प्रस्तुत करना:</strong></p>
+                        <ul>
+                            <li>सरल शुरू करें – एक मुख्य विचार या सारांश के साथ शुरू करें।</li>
+                            <li>उदाहरणों का उपयोग करें – वास्तविक जीवन के उदाहरण मदद करते हैं।</li>
+                            <li>स्पष्ट रहें – सरल शब्दों और चित्रों का उपयोग करें।</li>
+                            <li>अभ्यास करें – दूसरों को बताने से पहले, जानकारी को समझें।</li>
+                        </ul>
+                        <p><strong>चिंतन:</strong> एक लर्निंग बुक रखें जिसमें आप जो सीखते हैं और जिसमें आप बेहतर बनना चाहते हैं, उसे लिखें।</p>
+                    </div>
+                </div>
+                <div class="internet-grid">
+                    <div class="internet-card"><span class="i-icon">🔍</span><div class="i-name">Search</div><div class="i-desc">Find information on Google</div></div>
+                    <div class="internet-card"><span class="i-icon">📋</span><div class="i-name">Sort</div><div class="i-desc">Organise information</div></div>
+                    <div class="internet-card"><span class="i-icon">📖</span><div class="i-name">Present</div><div class="i-desc">Share clearly</div></div>
+                    <div class="internet-card"><span class="i-icon">📝</span><div class="i-name">Reflect</div><div class="i-desc">Learning Book</div></div>
+                </div>
+                <div class="short-notes">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 मुख्य बातें / Key Takeaways</h4>
+                    <ul>
+                        <li>Google से सही जानकारी खोजने के लिए सही कीवर्ड का उपयोग करें।</li>
+                        <li>जानकारी को छाँटें, समूहित करें और स्पष्ट रूप से प्रस्तुत करें।</li>
+                        <li>लर्निंग बुक में अपनी सीख को रिकॉर्ड करें।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    3.2 नौकरी खोजने के लिए इंटरनेट का उपयोग
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="is-3-2">
+            <div class="section-header">
+                <span class="icon">💼</span>
+                <span class="title">3.2 नौकरी खोजने के लिए इंटरनेट का उपयोग <span class="subtitle">(Using Internet for Job Search)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Job portals</strong> are websites where companies post jobs, and people can search and apply for these jobs.</p>
+                        <p><strong>Popular job portals in India:</strong></p>
+                        <ul>
+                            <li>Naukri.com</li>
+                            <li>Freshersworld.com</li>
+                            <li>Indeed.co.in</li>
+                            <li>TimesJobs.com</li>
+                            <li>LinkedIn.com</li>
+                            <li>Shine.com</li>
+                            <li>Apna.co</li>
+                        </ul>
+                        <p><strong>How to search on job portals:</strong></p>
+                        <ul>
+                            <li>Type in the job you're looking for in the 'search' box. (e.g., "Plumber jobs" or "Plumbing positions")</li>
+                            <li>Add the city or area you want to work in. (e.g., "Plumber jobs in Mumbai")</li>
+                            <li>Check if you have the skills they want.</li>
+                        </ul>
+                        <p><strong>Creating a profile and applying:</strong></p>
+                        <ul>
+                            <li><strong>Creating a profile:</strong> Sign up and fill in your name, phone number, and qualifications. Always be truthful.</li>
+                            <li><strong>Applying for a job:</strong> Click 'Apply Now' on job posts. You may also need to send a cover letter.</li>
+                        </ul>
+                        <p><strong>Tip:</strong> 77% of recruiters depend on LinkedIn to find potential employees.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>नौकरी पोर्टल</strong> वेबसाइटें हैं जहाँ कंपनियाँ नौकरियाँ पोस्ट करती हैं, और लोग इन नौकरियों को खोज और आवेदन कर सकते हैं।</p>
+                        <p><strong>भारत में लोकप्रिय नौकरी पोर्टल:</strong></p>
+                        <ul>
+                            <li>Naukri.com</li>
+                            <li>Freshersworld.com</li>
+                            <li>Indeed.co.in</li>
+                            <li>TimesJobs.com</li>
+                            <li>LinkedIn.com</li>
+                            <li>Shine.com</li>
+                            <li>Apna.co</li>
+                        </ul>
+                        <p><strong>नौकरी पोर्टल पर खोज कैसे करें:</strong></p>
+                        <ul>
+                            <li>'सर्च' बॉक्स में आप जो नौकरी ढूंढ रहे हैं, उसे टाइप करें। (जैसे, "Plumber jobs" या "Plumbing positions")</li>
+                            <li>उस शहर या क्षेत्र को जोड़ें जहाँ आप काम करना चाहते हैं। (जैसे, "Plumber jobs in Mumbai")</li>
+                            <li>जाँच करें कि आपके पास वे कौशल हैं या नहीं जो वे चाहते हैं।</li>
+                        </ul>
+                        <p><strong>प्रोफ़ाइल बनाना और आवेदन करना:</strong></p>
+                        <ul>
+                            <li><strong>प्रोफ़ाइल बनाना:</strong> साइन अप करें और अपना नाम, फोन नंबर और योग्यताएँ भरें। हमेशा सच बोलें।</li>
+                            <li><strong>नौकरी के लिए आवेदन करना:</strong> नौकरी पोस्ट पर 'Apply Now' पर क्लिक करें। आपको कवर लेटर भी भेजना पड़ सकता है।</li>
+                        </ul>
+                        <p><strong>टिप:</strong> 77% रिक्रूटर संभावित कर्मचारियों को खोजने के लिए LinkedIn पर निर्भर करते हैं।</p>
+                    </div>
+                </div>
+                <div class="jobportal-grid">
+                    <div class="jobportal-card"><span class="j-icon">🔵</span><div class="j-name">Naukri.com</div></div>
+                    <div class="jobportal-card"><span class="j-icon">🟢</span><div class="j-name">Freshersworld</div></div>
+                    <div class="jobportal-card"><span class="j-icon">🔴</span><div class="j-name">Indeed</div></div>
+                    <div class="jobportal-card"><span class="j-icon">🟠</span><div class="j-name">TimesJobs</div></div>
+                    <div class="jobportal-card"><span class="j-icon">🔷</span><div class="j-name">LinkedIn</div></div>
+                    <div class="jobportal-card"><span class="j-icon">🟣</span><div class="j-name">Shine.com</div></div>
+                    <div class="jobportal-card"><span class="j-icon">🟡</span><div class="j-name">Apna.co</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    3.3 अटैचमेंट के साथ ईमेल भेजना
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="is-3-3">
+            <div class="section-header">
+                <span class="icon">📧</span>
+                <span class="title">3.3 अटैचमेंट के साथ ईमेल भेजना <span class="subtitle">(Sending Email with Attachments)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Documents needed for job applications:</strong></p>
+                        <ul>
+                            <li><strong>Resume:</strong> A paper that tells about your skills, training, and past jobs.</li>
+                            <li><strong>Certificates:</strong> Papers that show your training or any courses you did.</li>
+                            <li><strong>ID Proof:</strong> Like Aadhaar card or Voter ID.</li>
+                        </ul>
+                        <p><strong>Making documents ready:</strong></p>
+                        <ul>
+                            <li>Scan your paper documents to make digital copies.</li>
+                            <li>Save them in a place on your computer or phone where you can find them easily.</li>
+                            <li>Save documents as PDFs – most companies can open and read them easily.</li>
+                        </ul>
+                        <p><strong>Writing a professional email:</strong></p>
+                        <ul>
+                            <li><strong>Subject:</strong> Always have a clear subject. (e.g., "Application for Electrician Position – Rahul Sharma")</li>
+                            <li><strong>Greeting:</strong> Start with "Hello" or "Dear [Company Name/Person's Name]".</li>
+                            <li><strong>Body:</strong> Introduce yourself, say what job you're applying for, tell them you have attached your documents.</li>
+                            <li><strong>Closing:</strong> End with "Thank you" or "Regards" and then your name.</li>
+                        </ul>
+                        <p><strong>Attaching documents:</strong> On most email apps, there's a clip or paper icon. Click it to attach documents.</p>
+                        <p><strong>Tip:</strong> The first email was sent in 1971. You can unsend an email within 30 seconds of sending it.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>नौकरी आवेदन के लिए आवश्यक दस्तावेज़:</strong></p>
+                        <ul>
+                            <li><strong>रिज्यूमे:</strong> एक पेपर जो आपके कौशल, प्रशिक्षण और पिछली नौकरियों के बारे में बताता है।</li>
+                            <li><strong>प्रमाणपत्र:</strong> पेपर जो आपके प्रशिक्षण या आपके द्वारा किए गए किसी भी पाठ्यक्रम को दिखाते हैं।</li>
+                            <li><strong>ID प्रूफ:</strong> जैसे आधार कार्ड या वोटर ID।</li>
+                        </ul>
+                        <p><strong>दस्तावेज़ तैयार करना:</strong></p>
+                        <ul>
+                            <li>डिजिटल कॉपी बनाने के लिए अपने पेपर दस्तावेज़ों को स्कैन करें।</li>
+                            <li>उन्हें अपने कंप्यूटर या फोन पर ऐसी जगह सहेजें जहाँ आप उन्हें आसानी से पा सकें।</li>
+                            <li>दस्तावेज़ों को PDF के रूप में सहेजें – अधिकांश कंपनियाँ उन्हें आसानी से खोल और पढ़ सकती हैं।</li>
+                        </ul>
+                        <p><strong>व्यावसायिक ईमेल लिखना:</strong></p>
+                        <ul>
+                            <li><strong>Subject:</strong> हमेशा एक स्पष्ट विषय रखें। (जैसे, "Application for Electrician Position – Rahul Sharma")</li>
+                            <li><strong>Greeting:</strong> "Hello" या "Dear [Company Name/Person's Name]" से शुरू करें।</li>
+                            <li><strong>Body:</strong> अपना परिचय दें, बताएं कि आप किस नौकरी के लिए आवेदन कर रहे हैं, बताएं कि आपने अपने दस्तावेज़ संलग्न किए हैं।</li>
+                            <li><strong>Closing:</strong> "Thank you" या "Regards" और फिर अपना नाम डालकर समाप्त करें।</li>
+                        </ul>
+                        <p><strong>दस्तावेज़ संलग्न करना:</strong> अधिकांश ईमेल ऐप्स में, एक क्लिप या पेपर आइकन होता है। दस्तावेज़ संलग्न करने के लिए उस पर क्लिक करें।</p>
+                        <p><strong>टिप:</strong> पहला ईमेल 1971 में भेजा गया था। आप ईमेल भेजने के 30 सेकंड के भीतर उसे वापस ले सकते हैं।</p>
+                    </div>
+                </div>
+                <div class="step-list">
+                    <li>Scan documents to make digital copies</li>
+                    <li>Save as PDF files</li>
+                    <li>Write a professional email with clear subject</li>
+                    <li>Attach documents using the clip icon</li>
+                    <li>Review and send</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    3.4 वैकल्पिक करियर के लिए डिजिटल कौशल
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="is-3-4">
+            <div class="section-header">
+                <span class="icon">📱</span>
+                <span class="title">3.4 वैकल्पिक करियर के लिए डिजिटल कौशल <span class="subtitle">(Digital Skills for Alternate Career)</span></span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Using social media for career growth:</strong></p>
+                        <ul>
+                            <li><strong>Show your skills:</strong> Post photos/videos of your work on Instagram and YouTube – people see your talent.</li>
+                            <li><strong>Network:</strong> Connect with professionals on LinkedIn – they might offer jobs or connect you with others.</li>
+                            <li><strong>Customer queries:</strong> Use WhatsApp for Business to talk to customers – direct, fast communication builds trust.</li>
+                        </ul>
+                        <p><strong>Tips to stand out:</strong></p>
+                        <ul>
+                            <li><strong>YouTube:</strong> Use clear videos, show your work step-by-step, reply to comments.</li>
+                            <li><strong>Instagram:</strong> Use good photos with bright light, show details, use stories for daily updates.</li>
+                            <li><strong>WhatsApp for Business:</strong> Set up quick replies for common questions, use a professional photo.</li>
+                        </ul>
+                        <p><strong>Key point:</strong> Social media platforms are not just for fun – they can help you build a career!</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>करियर विकास के लिए सोशल मीडिया का उपयोग:</strong></p>
+                        <ul>
+                            <li><strong>अपने कौशल दिखाएँ:</strong> Instagram और YouTube पर अपने काम की फोटो/वीडियो पोस्ट करें – लोग आपकी प्रतिभा देखेंगे।</li>
+                            <li><strong>नेटवर्क बनाएँ:</strong> LinkedIn पर पेशेवरों से जुड़ें – वे नौकरी की पेशकश कर सकते हैं या आपको दूसरों से जोड़ सकते हैं।</li>
+                            <li><strong>ग्राहक प्रश्न:</strong> ग्राहकों से बात करने के लिए WhatsApp for Business का उपयोग करें – प्रत्यक्ष, तेज़ संचार विश्वास बनाता है।</li>
+                        </ul>
+                        <p><strong>अलग दिखने के टिप्स:</strong></p>
+                        <ul>
+                            <li><strong>YouTube:</strong> स्पष्ट वीडियो का उपयोग करें, अपने काम को चरण-दर-चरण दिखाएँ, टिप्पणियों का उत्तर दें।</li>
+                            <li><strong>Instagram:</strong> अच्छी रोशनी वाली फोटो का उपयोग करें, विवरण दिखाएँ, दैनिक अपडेट के लिए स्टोरीज़ का उपयोग करें।</li>
+                            <li><strong>WhatsApp for Business:</strong> सामान्य प्रश्नों के लिए त्वरित उत्तर सेट करें, एक पेशेवर फोटो का उपयोग करें।</li>
+                        </ul>
+                        <p><strong>मुख्य बिंदु:</strong> सोशल मीडिया प्लेटफॉर्म सिर्फ मनोरंजन के लिए नहीं हैं – वे आपको करियर बनाने में मदद कर सकते हैं!</p>
+                    </div>
+                </div>
+                <div class="socialmedia-grid">
+                    <div class="socialmedia-card"><span class="s-icon">📸</span><div class="s-name">Instagram</div><div class="s-desc">Show your work</div></div>
+                    <div class="socialmedia-card"><span class="s-icon">▶️</span><div class="s-name">YouTube</div><div class="s-desc">Step-by-step videos</div></div>
+                    <div class="socialmedia-card"><span class="s-icon">💬</span><div class="s-name">WhatsApp</div><div class="s-desc">Quick replies & customers</div></div>
+                    <div class="socialmedia-card"><span class="s-icon">💼</span><div class="s-name">LinkedIn</div><div class="s-desc">Professional networking</div></div>
+                </div>
+                <div class="info-card highlight">
+                    <h4 style="margin:0 0 6px; color:#856404;">💡 याद रखें / Remember</h4>
+                    <ul style="margin:0; padding-left:20px;">
+                        <li>सोशल मीडिया पर अपने काम को प्रोफेशनल तरीके से दिखाएँ।</li>
+                        <li>ग्राहकों के साथ त्वरित और पेशेवर संचार बनाए रखें।</li>
+                        <li>नेटवर्किंग से नए अवसर मिलते हैं।</li>
+                    </ul>
+                </div>
+                <div class="short-notes">
+                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 मुख्य बातें / Key Takeaways</h4>
+                    <ul>
+                        <li>सोशल मीडिया का उपयोग करियर विकास के लिए किया जा सकता है।</li>
+                        <li>YouTube, Instagram, WhatsApp for Business और LinkedIn – सभी महत्वपूर्ण हैं।</li>
+                        <li>अच्छी फोटो, वीडियो और त्वरित उत्तर – अलग दिखने के लिए।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    MCQ LINK
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="mcq">
+            <div class="section-header">
+                <span class="icon">❓</span>
+                <span class="title">MCQ अभ्यास / बहुविकल्पीय प्रश्न</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="mcq-link">
+                    <p><strong>📌 इस मॉड्यूल के बहुविकल्पीय प्रश्नों का अभ्यास करने के लिए नीचे क्लिक करें।</strong></p>
+                    <a href="/question-bank/employability-skills/module-2-3.html" target="_blank">📝 प्रश्न बैंक पर जाएँ →</a>
+                    <p style="margin-top:10px; font-size:0.9rem; color:#888;">(नई टैब में खुलेगा)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    RELATED CHAPTERS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="related">
+            <div class="section-header">
+                <span class="icon">🔗</span>
+                <span class="title">संबंधित मॉड्यूल / Related Modules</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div style="display:flex; flex-wrap:wrap; gap:12px;">
+                    <a href="module-2-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 2nd Year – मॉड्यूल 1: बुनियादी करियर कौशल</a>
+                    <a href="module-2-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 2nd Year – मॉड्यूल 2: भविष्य के कार्य कौशल</a>
+                    <a href="module-2-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 2nd Year – मॉड्यूल 4: व्यावसायिक कौशल</a>
+                    <a href="module-6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 मॉड्यूल 6: आवश्यक डिजिटल कौशल</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    COMMENTS
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="comments">
+            <div class="section-header">
+                <span class="icon">💬</span>
+                <span class="title">टिप्पणियाँ – मॉडरेशन के साथ</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="comments-section">
+                    <p>💬 <strong>इस मॉड्यूल के बारे में अपने विचार या प्रश्न साझा करें।</strong></p>
+                    <p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 सभी टिप्पणियाँ प्रकाशित होने से पहले एडमिन द्वारा समीक्षा की जाती हैं।</p>
+                    <textarea id="comment-text" rows="3" placeholder="अपनी टिप्पणी यहाँ लिखें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
+                    <input type="text" id="comment-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <button onclick="postComment()" class="btn" style="margin-top:6px;">💬 टिप्पणी पोस्ट करें (समीक्षाधीन)</button>
+                    <div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
+                        <div class="comment-item">
+                            <strong>Admin</strong> <span class="meta">(मॉडरेटर)</span> <span class="status-approved">✅ स्वीकृत</span>
+                            <p style="margin:4px 0 0 0; font-size:0.95rem;">2nd Year – मॉड्यूल 3 में आपका स्वागत है! इंटरनेट कौशल, नौकरी खोज, ईमेल और सोशल मीडिया के बारे में प्रश्न पूछने में संकोच न करें।</p>
+                        </div>
+                        <p style="color:#888; font-style:italic; margin-top:8px;">आपकी टिप्पणी एडमिन अनुमोदन के बाद यहाँ दिखाई देगी।</p>
+                    </div>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ टिप्पणियाँ मॉडरेट की जाती हैं। कृपया विनम्र रहें।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    ADMIN PANEL
+    ============================================================ -->
+    <div class="container">
+        <div class="admin-toggle" onclick="toggleAdminPanel()">
+            <span class="key-icon">🔑</span>
+            <strong>Admin Panel</strong> – Comments Management
+            <span style="color:#888; font-weight:400; font-size:0.85rem; display:block; margin-top:4px;">(Click to open/close admin panel)</span>
+        </div>
+        <div class="admin-panel" id="adminPanel">
+            <div class="admin-header">
+                <h3>🔐 Comment Moderation</h3>
+                <button class="close-btn" onclick="toggleAdminPanel()">✕ Close</button>
+            </div>
+            <div class="admin-password-box" id="adminLogin">
+                <input type="password" id="adminPassword" placeholder="Enter admin password..." onkeyup="if(event.key==='Enter') checkAdminPassword()">
+                <button onclick="checkAdminPassword()">🔓 Login</button>
+                <span class="error-msg" id="passwordError">❌ Wrong password! Try again.</span>
+            </div>
+            <div id="adminContent" style="display:none;">
+                <div class="comment-stats" id="commentStats">
+                    <span>📊 Total: <span class="count" id="totalCount">0</span></span>
+                    <span>⏳ Pending: <span class="count" id="pendingCount">0</span></span>
+                    <span>✅ Approved: <span class="count" id="approvedCount">0</span></span>
+                    <span>❌ Rejected: <span class="count" id="rejectedCount">0</span></span>
+                </div>
+                <div id="adminCommentList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    TOPIC REQUEST
+    ============================================================ -->
+    <div class="container">
+        <div class="content-section" data-content="topicrequest">
+            <div class="section-header">
+                <span class="icon">💭</span>
+                <span class="title">विषय अनुरोध</span>
+            </div>
+            <div class="section-body copy-protect">
+                <div class="topic-request">
+                    <p>📝 <strong>कोई नया विषय या सुधार सुझाएँ।</strong></p>
+                    <input type="text" id="topic-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <input type="email" id="topic-email" placeholder="आपका ईमेल (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;">
+                    <textarea id="topic-message" rows="4" placeholder="जिस विषय या सुधार को आप देखना चाहते हैं, उसका वर्णन करें..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
+                    <button onclick="submitTopicRequest()" class="btn">📤 अनुरोध सबमिट करें</button>
+                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ आपके अनुरोध की समीक्षा एडमिन द्वारा की जाएगी और जल्द ही जोड़ा जाएगा।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    SUGGESTIONS & DISCLAIMER
+    ============================================================ -->
+    <div class="container" style="margin-top:16px;">
+        <div style="background:#fff; border-radius:14px; padding:20px 24px; border:1px solid #e6eaef; margin-bottom:20px;">
+            <h2 style="color:#003366; font-size:1.3rem; margin:0 0 6px;">💬 सुझाव दें</h2>
+            <p style="margin:0 0 12px;">यदि इस मॉड्यूल में कोई सुधार सुझाना है, तो हमें बताएं।</p>
+            <a href="/contact.html" class="btn">💬 यहाँ क्लिक करें →</a>
+        </div>
+        <div style="background:#fff8e1; border-radius:14px; padding:18px 22px; border:1px solid #ffe082; margin-bottom:20px;">
+            <h2 style="color:#856404; font-size:1.2rem; margin:0 0 4px;">⚠ अस्वीकरण</h2>
+            <p style="margin:0; font-size:0.95rem; color:#6c6c6c;">ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-links">
+            <a href="/disclaimer.html">अस्वीकरण</a>
+            <a href="/privacy-policy.html">गोपनीयता नीति</a>
+            <a href="/terms.html">नियम</a>
+            <a href="/contact.html">संपर्क</a>
+        </div>
+        <p>© 2026 ITI Study Centre. सर्वाधिकार सुरक्षित।</p>
+    </footer>
+
+    <button id="scrollTop" title="ऊपर जाएँ">⬆</button>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('📚 सामग्री सुरक्षित है। कृपया इस पेज को शेयर करने के लिए शेयर बटन का उपयोग करें।');
+        });
+
+        // Disable Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 सामग्री कॉपी करना प्रतिबंधित है। कृपया शेयर बटन का उपयोग करें।');
+            }
+        });
+
+        // Search
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        // Share functions
+        function getPageUrl() { return window.location.href; }
+
+        function getPageTitle() { return document.querySelector('title').textContent; }
+
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle() + ' - इसे पढ़ें!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareFacebook() {
+            const url = getPageUrl();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
+        }
+
+        function shareTwitter() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('📘 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(url), '_blank');
+        }
+
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ कॉपी हो गया!';
+                    btn.classList.add('copied');
+                    setTimeout(() => {
+                        span.textContent = 'लिंक कॉपी करें';
+                        btn.classList.remove('copied');
+                    }, 3000);
+                }).catch(() => { fallbackCopy(url); });
+            } else {
+                fallbackCopy(url);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ कॉपी हो गया!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    span.textContent = 'लिंक कॉपी करें';
+                    btn.classList.remove('copied');
+                }, 3000);
+            } catch (err) {
+                alert('कॉपी नहीं हो पाया। कृपया URL को मैन्युअल रूप से कॉपी करें।');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // ============================================================
+        // COMMENT SYSTEM
+        // ============================================================
+        const ADMIN_PASSWORD = 'admin123';
+        const STORAGE_KEY = 'module2_3_comments';
+
+        function getComments() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : [];
+            } catch {
+                return [];
+            }
+        }
+
+        function saveComments(comments) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
+        }
+
+        function generateId() {
+            return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+        }
+
+        function getTimeAgo(timestamp) {
+            const diff = Date.now() - timestamp;
+            const minutes = Math.floor(diff / 60000);
+            if (minutes < 1) return 'Just now';
+            if (minutes < 60) return minutes + 'm ago';
+            const hours = Math.floor(minutes / 60);
+            if (hours < 24) return hours + 'h ago';
+            const days = Math.floor(hours / 24);
+            return days + 'd ago';
+        }
+
+        function renderPublicComments() {
+            const list = document.getElementById('comment-list');
+            if (!list) return;
+            const comments = getComments();
+            const approved = comments.filter(c => c.status === 'approved');
+
+            const noMsg = list.querySelector('.no-comments-msg');
+            if (noMsg) noMsg.remove();
+
+            const existingItems = list.querySelectorAll('.comment-item');
+            existingItems.forEach(el => {
+                if (!el.querySelector('.status-approved') || !el.querySelector('strong')?.textContent?.includes('Admin')) {
+                    el.remove();
+                }
+            });
+
+            if (approved.length === 0) {
+                let noMsgEl = document.createElement('p');
+                noMsgEl.className = 'no-comments-msg';
+                noMsgEl.textContent = 'No approved comments yet. Be the first to comment!';
+                list.appendChild(noMsgEl);
+                return;
+            }
+
+            approved.forEach(comment => {
+                const div = document.createElement('div');
+                div.className = 'comment-item';
+                div.innerHTML = `
+                    <strong>${comment.name}</strong>
+                    <span class="meta">(${getTimeAgo(comment.timestamp)})</span>
+                    <span class="status-approved">✅ Approved</span>
+                    <p style="margin:4px 0 0 0; font-size:0.95rem;">${comment.text}</p>
+                `;
+                list.prepend(div);
+            });
+        }
+
+        function postComment() {
+            const text = document.getElementById('comment-text').value.trim();
+            const name = document.getElementById('comment-name').value.trim() || 'Anonymous';
+            if (!text) {
+                alert('Please write a comment.');
+                return;
+            }
+            const comments = getComments();
+            comments.push({ id: generateId(), name, text, timestamp: Date.now(), status: 'pending' });
+            saveComments(comments);
+            document.getElementById('comment-text').value = '';
+            document.getElementById('comment-name').value = '';
+            renderPublicComments();
+            renderAdminComments();
+            alert('✅ Your comment has been submitted for review.');
+        }
+
+        function checkAdminPassword() {
+            const input = document.getElementById('adminPassword');
+            const error = document.getElementById('passwordError');
+            if (input.value === ADMIN_PASSWORD) {
+                document.getElementById('adminLogin').style.display = 'none';
+                document.getElementById('adminContent').style.display = 'block';
+                renderAdminComments();
+                error.classList.remove('show');
+            } else {
+                error.classList.add('show');
+                input.value = '';
+                input.focus();
+            }
+        }
+
+        function renderAdminComments() {
+            const container = document.getElementById('adminCommentList');
+            const comments = getComments();
+            document.getElementById('totalCount').textContent = comments.length;
+            document.getElementById('pendingCount').textContent = comments.filter(c => c.status === 'pending').length;
+            document.getElementById('approvedCount').textContent = comments.filter(c => c.status === 'approved').length;
+            document.getElementById('rejectedCount').textContent = comments.filter(c => c.status === 'rejected').length;
+
+            if (comments.length === 0) {
+                container.innerHTML = `<p class="no-comments-msg">No comments yet.</p>`;
+                return;
+            }
+
+            let html = '';
+            comments.forEach(comment => {
+                html += `
+                    <div class="admin-comment-item" data-id="${comment.id}">
+                        <div class="comment-info">
+                            <strong>${comment.name}</strong>
+                            <span class="time">${getTimeAgo(comment.timestamp)}</span>
+                            <span class="status ${comment.status}">${comment.status.charAt(0).toUpperCase() + comment.status.slice(1)}</span>
+                            <p style="margin:4px 0 0 0; font-size:0.9rem;">${comment.text}</p>
+                        </div>
+                        <div class="comment-actions">
+                            ${comment.status !== 'approved' ? `<button class="btn-approve" onclick="approveComment('${comment.id}')">✅ Approve</button>` : ''}
+                            ${comment.status !== 'rejected' ? `<button class="btn-reject" onclick="rejectComment('${comment.id}')">⛔ Reject</button>` : ''}
+                            <button class="btn-delete" onclick="deleteComment('${comment.id}')">🗑️ Delete</button>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function approveComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'approved' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function rejectComment(id) {
+            let comments = getComments();
+            comments = comments.map(c => c.id === id ? { ...c, status: 'rejected' } : c);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function deleteComment(id) {
+            if (!confirm('Are you sure you want to delete this comment?')) return;
+            let comments = getComments();
+            comments = comments.filter(c => c.id !== id);
+            saveComments(comments);
+            renderAdminComments();
+            renderPublicComments();
+        }
+
+        function toggleAdminPanel() {
+            const panel = document.getElementById('adminPanel');
+            panel.classList.toggle('open');
+            if (!panel.classList.contains('open')) {
+                document.getElementById('adminLogin').style.display = 'flex';
+                document.getElementById('adminContent').style.display = 'none';
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('passwordError').classList.remove('show');
+            }
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', function() {
+            renderPublicComments();
+            window.postComment = postComment;
+        });
+
+        // Scroll to top
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
+            ' ITI Study Centre. सर्वाधिकार सुरक्षित।';
+
+        console.log('2nd Year – मॉड्यूल 3 लोड हुआ: इंटरनेट कौशल – 4 पाठ, पूरी तरह से खुला, द्विभाषी।');
+        console.log(`🔑 Admin Password: ${ADMIN_PASSWORD}`);
+    </script>
+</body>
+  </html>
