@@ -101,6 +101,30 @@
             margin-top: 6px;
         }
 
+        /* Loader */
+        .loader {
+            text-align: center;
+            padding: 40px 20px;
+            color: #555;
+        }
+        .loader .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #003366;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         /* ===== TEST UI ===== */
         .test-container {
             background: #fff;
@@ -592,10 +616,16 @@
     <div class="container">
         <div class="test-container" id="testApp">
 
+            <!-- LOADER -->
+            <div id="loaderScreen" class="loader">
+                <div class="spinner"></div>
+                <p>⏳ Loading question bank...</p>
+            </div>
+
             <!-- ==========================================================
             SCREEN 1: MAIN OPTIONS
             ========================================================== -->
-            <div id="screenMain" class="selection-screen active">
+            <div id="screenMain" class="selection-screen">
                 <h3 style="color:#003366; text-align:center; margin-bottom:16px;">Choose Test Type</h3>
                 <div class="option-grid">
                     <div class="option-card employability" onclick="selectTestType('employability')">
@@ -620,8 +650,7 @@
                 <button class="back-btn" onclick="goBackMain()">← Back</button>
                 <h3 style="color:#003366; text-align:center; margin:16px 0;">Select Year</h3>
                 <div class="selection-grid" id="yearGrid">
-                    <button class="selection-btn" onclick="selectYear('1st Year')">🎓 1st Year</button>
-                    <button class="selection-btn" onclick="selectYear('2nd Year')">🎓 2nd Year</button>
+                    <!-- Dynamically generated from question-bank.js -->
                 </div>
             </div>
 
@@ -692,187 +721,29 @@
     ============================================================ -->
     <script>
         // ============================================================
-        // QUESTION BANK – Sample Questions (अभी Demo के लिए)
+        // LOAD QUESTION BANK FROM EXTERNAL FILE
         // ============================================================
+        let QUESTION_BANK = null;
+        let isLoaded = false;
 
-        // Employability Skills Questions
-        const employabilityBank = {
-            '1st Year': {
-                'Module 1': [
-                    { q: 'What are employability skills?', options: ['Hard skills', 'Soft skills', 'Technical skills', 'Coding skills'], correct: 1 },
-                    { q: 'Which is NOT an employability skill?', options: ['Communication', 'Teamwork', 'Welding', 'Problem Solving'], correct: 2 },
-                    { q: 'Growth mindset means:', options: ['You believe abilities are fixed', 'You believe you can improve', 'You avoid challenges', 'You give up easily'], correct: 1 },
-                    { q: 'What is a technical skill?', options: ['Communication', 'Stitching', 'Teamwork', 'Time Management'], correct: 1 },
-                    { q: 'Self-learning means:', options: ['Learning with a teacher', 'Learning on your own', 'Learning in a group', 'Learning online only'], correct: 1 },
-                    { q: 'Fixed mindset means:', options: ['You believe you can improve', 'You embrace challenges', 'You believe abilities are fixed', 'You learn from mistakes'], correct: 2 },
-                    { q: 'Which skill helps manage money?', options: ['Financial literacy', 'Digital literacy', 'Communication', 'Teamwork'], correct: 0 },
-                    { q: 'Employers value:', options: ['Only technical skills', 'Only soft skills', 'Both technical and soft skills', 'Neither'], correct: 2 },
-                    { q: 'A person who owns a business is called:', options: ['Employee', 'Entrepreneur', 'Manager', 'Worker'], correct: 1 },
-                    { q: 'What does "employ" mean?', options: ['To be given a job', 'To study', 'To travel', 'To cook'], correct: 0 },
-                    { q: 'Digital literacy means:', options: ['Using computers comfortably', 'Speaking English', 'Cooking food', 'Driving a car'], correct: 0 },
-                    { q: 'Teamwork is important because:', options: ['Everyone can do everything', 'Work gets done faster', 'One person is always right', 'It creates more work'], correct: 1 },
-                    { q: 'Time management helps you:', options: ['Waste time', 'Work smarter', 'Be late', 'Avoid work'], correct: 1 },
-                    { q: 'Problem solving means:', options: ['Finding a solution', 'Ignoring problems', 'Creating problems', 'Running away'], correct: 0 },
-                    { q: 'Critical thinking helps you:', options: ['Believe everything', 'Question information', 'Avoid problems', 'Ignore facts'], correct: 1 },
-                    { q: 'Decision making is:', options: ['Choosing between options', 'Avoiding choices', 'Following orders', 'Random selection'], correct: 0 },
-                    { q: 'Positive attitude means:', options: ['Being negative', 'Being hopeful', 'Being angry', 'Being lazy'], correct: 1 },
-                    { q: 'Self-improvement means:', options: ['Staying the same', 'Getting better', 'Getting worse', 'Giving up'], correct: 1 },
-                    { q: 'Behavioural skills include:', options: ['Communication', 'Cooking', 'Driving', 'Painting'], correct: 0 },
-                    { q: 'Motivation helps you:', options: ['Achieve goals', 'Give up', 'Stay lazy', 'Avoid work'], correct: 0 },
-                    { q: 'Ethics means:', options: ['Deciding right and wrong', 'Making money', 'Working hard', 'Learning new things'], correct: 0 },
-                    { q: 'Values are:', options: ['Beliefs that guide actions', 'Physical objects', 'Money', 'Jobs'], correct: 0 },
-                    { q: 'The Constitution of India is:', options: ['A rule book', 'A story book', 'A cook book', 'A picture book'], correct: 0 },
-                    { q: 'Pollution is:', options: ['Harmful substances in environment', 'Clean air', 'Fresh water', 'Green trees'], correct: 0 },
-                    { q: 'Green jobs help:', options: ['Reduce pollution', 'Increase pollution', 'Create more waste', 'Use more plastic'], correct: 0 }
-                ],
-                'Module 2': [
-                    { q: 'The Constitution of India is also called:', options: ['Bhartiya Samvidhan', 'Indian Law Book', 'Rule Book', 'Government Code'], correct: 0 },
-                    { q: 'Who was the chairperson of the drafting committee?', options: ['Mahatma Gandhi', 'Jawaharlal Nehru', 'Dr. BR Ambedkar', 'Sardar Patel'], correct: 2 },
-                    { q: 'India is a _______ country.', options: ['Sovereign', 'Colony', 'Kingdom', 'Empire'], correct: 0 },
-                    { q: 'What does "Secular" mean?', options: ['One religion is superior', 'All religions are treated equally', 'No religion allowed', 'Only Hinduism'], correct: 1 },
-                    { q: 'Which is NOT a Fundamental Right?', options: ['Right to Equality', 'Right to Freedom', 'Right to Property', 'Right to Religion'], correct: 2 },
-                    { q: 'What is the Preamble?', options: ['A summary of the Constitution', 'A law book', 'A court judgment', 'A government order'], correct: 0 },
-                    { q: 'Article 15 protects against:', options: ['Discrimination', 'Theft', 'Accidents', 'Pollution'], correct: 0 },
-                    { q: 'What is a duty of a citizen?', options: ['Voting', 'Ignoring laws', 'Breaking rules', 'Avoiding taxes'], correct: 0 },
-                    { q: 'The Indian Constitution is the ________ in the world.', options: ['Shortest', 'Longest', 'Oldest', 'Newest'], correct: 1 },
-                    { q: 'Republic means:', options: ['King rules', 'Citizens elect leaders', 'Military rules', 'No government'], correct: 1 },
-                    { q: 'Right to Equality means:', options: ['Everyone is equal before law', 'Some people are superior', 'Only rich have rights', 'Only men have rights'], correct: 0 },
-                    { q: 'Right to Freedom includes:', options: ['Freedom of speech', 'Freedom to steal', 'Freedom to cheat', 'Freedom to hurt others'], correct: 0 },
-                    { q: 'Right against Exploitation prohibits:', options: ['Child labour', 'Adult labour', 'Skilled labour', 'Unskilled labour'], correct: 0 },
-                    { q: 'Right to Religion means:', options: ['Practice any religion', 'Only one religion', 'No religion', 'Force others to convert'], correct: 0 },
-                    { q: 'Cultural and Educational Rights protect:', options: ['Language and culture', 'Money and property', 'Jobs and salary', 'Houses and land'], correct: 0 },
-                    { q: 'Right to Constitutional Remedies allows:', options: ['Move to Supreme Court', 'Move to High Court only', 'No court access', 'Only police complaint'], correct: 0 },
-                    { q: 'The Constitution was adopted on:', options: ['26 Jan 1950', '15 Aug 1947', '26 Nov 1949', '2 Oct 1869'], correct: 0 },
-                    { q: 'Dr. BR Ambedkar is known as:', options: ['Father of Constitution', 'Father of Nation', 'Father of Economics', 'Father of Science'], correct: 0 },
-                    { q: 'Socialist means:', options: ['Equal opportunities for all', 'Only rich benefit', 'Only poor benefit', 'No one benefits'], correct: 0 },
-                    { q: 'Democratic means:', options: ['People elect leaders', 'King rules', 'Military rules', 'No elections'], correct: 0 },
-                    { q: 'Fundamental Rights are:', options: ['Basic rights of citizens', 'Only for rich', 'Only for men', 'Only for government'], correct: 0 },
-                    { q: 'Duties of citizens include:', options: ['Respecting national flag', 'Ignoring laws', 'Breaking rules', 'Avoiding voting'], correct: 0 },
-                    { q: 'The Constitution has:', options: ['Laws and rules', 'Only stories', 'Only pictures', 'Only songs'], correct: 0 },
-                    { q: 'Who wrote the Constitution?', options: ['Drafting committee', 'British government', 'King of India', 'UNO'], correct: 0 },
-                    { q: 'Republic means:', options: ['Citizens elect leaders', 'King is supreme', 'Army rules', 'No government'], correct: 0 }
-                ]
-            },
-            '2nd Year': {
-                'Module 1': [
-                    { q: 'What is a resume?', options: ['A list of qualifications and skills', 'A cooking recipe', 'A story book', 'A travel guide'], correct: 0 },
-                    { q: 'What should a resume include?', options: ['Personal information', 'Favourite food', 'Movie list', 'Travel plans'], correct: 0 },
-                    { q: 'A cover letter is sent with:', options: ['Resume', 'Certificate', 'Photo', 'Money'], correct: 0 },
-                    { q: 'Formal communication is:', options: ['Official communication', 'Casual talk', 'Gossip', 'Friendly chat'], correct: 0 },
-                    { q: 'Informal communication is:', options: ['Casual talk', 'Official email', 'Business meeting', 'Job interview'], correct: 0 },
-                    { q: 'Workplace etiquette means:', options: ['Proper behaviour at work', 'Cooking food', 'Driving car', 'Painting house'], correct: 0 },
-                    { q: 'Teamwork means:', options: ['Working together', 'Working alone', 'Competing with others', 'Ignoring others'], correct: 0 },
-                    { q: 'Punctuality means:', options: ['Being on time', 'Being late', 'Being rude', 'Being lazy'], correct: 0 },
-                    { q: 'A good team player:', options: ['Listens to others', 'Only talks', 'Ignores team', 'Works alone'], correct: 0 },
-                    { q: 'Resume should be:', options: ['Error-free', 'Full of mistakes', 'Very long', 'With only pictures'], correct: 0 },
-                    { q: 'What is a career objective?', options: ['Career goal statement', 'Hobby list', 'Travel plan', 'Food preference'], correct: 0 },
-                    { q: 'Skills in resume include:', options: ['Communication', 'Cooking only', 'Dancing only', 'Singing only'], correct: 0 },
-                    { q: 'Formal writing uses:', options: ['Full sentences', 'Short forms', 'Emojis', 'Slang'], correct: 0 },
-                    { q: 'Informal writing uses:', options: ['Casual language', 'Official language', 'Legal terms', 'Technical words'], correct: 0 },
-                    { q: 'Dress code at work:', options: ['Formal clothes', 'Casual clothes', 'Sports clothes', 'Fancy clothes'], correct: 0 },
-                    { q: 'Active listening means:', options: ['Paying attention', 'Not listening', 'Only talking', 'Daydreaming'], correct: 0 },
-                    { q: 'Feedback helps you:', options: ['Improve', 'Stay same', 'Get worse', 'Give up'], correct: 0 },
-                    { q: 'A good team leader:', options: ['Guides the team', 'Bosses others', 'Does all work', 'Ignores team'], correct: 0 },
-                    { q: 'Collaboration means:', options: ['Working together', 'Competing', 'Fighting', 'Ignoring'], correct: 0 },
-                    { q: 'Professionalism means:', options: ['Professional behaviour', 'Casual behaviour', 'Rude behaviour', 'Lazy behaviour'], correct: 0 },
-                    { q: 'Resume format should be:', options: ['Simple and clean', 'Colourful and flashy', 'Handwritten', 'Very long'], correct: 0 },
-                    { q: 'Cover letter should be:', options: ['Professional', 'Casual', 'Humorous', 'Very short'], correct: 0 },
-                    { q: 'Interview preparation includes:', options: ['Research company', 'Sleep late', 'Wear casual', 'Bring friends'], correct: 0 },
-                    { q: 'Thank you note after interview:', options: ['Good practice', 'Not needed', 'Rude', 'Waste of time'], correct: 0 },
-                    { q: 'Networking helps:', options: ['Build connections', 'Lose friends', 'Waste time', 'Create problems'], correct: 0 }
-                ]
-            }
-        };
-
-        // Trade Questions
-        const tradeBank = {
-            '1st Year': {
-                'Fitter': [
-                    { q: 'What does a fitter do?', options: ['Assembles metal parts', 'Cooks food', 'Drives car', 'Teaches students'], correct: 0 },
-                    { q: 'Which tool is used by a fitter?', options: ['Spanner', 'Spoon', 'Broom', 'Paintbrush'], correct: 0 },
-                    { q: 'Fitting involves:', options: ['Metal work', 'Wood work', 'Plastic work', 'Glass work'], correct: 0 },
-                    { q: 'A fitter needs:', options: ['Technical skills', 'Cooking skills', 'Singing skills', 'Dancing skills'], correct: 0 },
-                    { q: 'Marking tools are used for:', options: ['Measuring and marking', 'Cutting only', 'Welding only', 'Painting only'], correct: 0 },
-                    { q: 'Cutting tools for fitter:', options: ['Hacksaw', 'Knife', 'Scissors', 'Chisel wood'], correct: 0 },
-                    { q: 'Fitting is part of:', options: ['Mechanical engineering', 'Civil engineering', 'Electrical engineering', 'Software engineering'], correct: 0 },
-                    { q: 'A fitter works with:', options: ['Metal parts', 'Wood parts', 'Plastic parts', 'Glass parts'], correct: 0 },
-                    { q: 'Which is a fitting tool?', options: ['File', 'Spoon', 'Broom', 'Paintbrush'], correct: 0 },
-                    { q: 'Fitter job involves:', options: ['Assembling', 'Cooking', 'Teaching', 'Dancing'], correct: 0 },
-                    { q: 'Safety in fitting includes:', options: ['Wearing gloves', 'No safety', 'Wearing sandals', 'Working alone'], correct: 0 },
-                    { q: 'Measuring tool for fitter:', options: ['Steel rule', 'Measuring cup', 'Scale', 'Ruler plastic'], correct: 0 },
-                    { q: 'Fitter works in:', options: ['Manufacturing industry', 'Hotel', 'School', 'Bank'], correct: 0 },
-                    { q: 'Drilling is done with:', options: ['Drill machine', 'Spoon', 'Broom', 'Paintbrush'], correct: 0 },
-                    { q: 'Threading is:', options: ['Making threads on metal', 'Cooking', 'Driving', 'Singing'], correct: 0 },
-                    { q: 'Fitter uses', options: ['Hand tools', 'Only machines', 'Only computers', 'Only pens'], correct: 0 },
-                    { q: 'Safety glasses are for:', options: ['Eye protection', 'Head protection', 'Foot protection', 'Hand protection'], correct: 0 },
-                    { q: 'A fitter needs:', options: ['Precision skills', 'Cooking skills', 'Dancing skills', 'Singing skills'], correct: 0 },
-                    { q: 'Fitting is a:', options: ['Trade', 'Subject', 'Hobby', 'Game'], correct: 0 },
-                    { q: 'Fitter works with:', options: ['Metals', 'Wood', 'Plastic', 'Glass'], correct: 0 },
-                    { q: 'Which is not a fitting tool?', options: ['Spoon', 'Spanner', 'Hammer', 'Pliers'], correct: 0 },
-                    { q: 'Fitting requires:', options: ['Accuracy', 'Speed only', 'Strength only', 'Luck'], correct: 0 },
-                    { q: 'Welding is:', options: ['Joining metals', 'Cutting metals', 'Painting metals', 'Bending metals'], correct: 0 },
-                    { q: 'Fitter works in:', options: ['Workshops', 'Kitchens', 'Classrooms', 'Offices'], correct: 0 },
-                    { q: 'Fitting is important for:', options: ['Mechanical work', 'Electrical work', 'Civil work', 'Software work'], correct: 0 },
-                    { q: 'Safety helmet is for:', options: ['Head protection', 'Hand protection', 'Foot protection', 'Eye protection'], correct: 0 },
-                    { q: 'Fitter uses:', options: ['Measuring tools', 'Cooking tools', 'Cleaning tools', 'Gardening tools'], correct: 0 },
-                    { q: 'Chisel is used for:', options: ['Cutting metal', 'Cooking', 'Cleaning', 'Gardening'], correct: 0 },
-                    { q: 'Fitter works on:', options: ['Machines', 'Cars only', 'Bikes only', 'Ships only'], correct: 0 },
-                    { q: 'Fitting is a:', options: ['Skilled trade', 'Unskilled work', 'Casual work', 'Volunteer work'], correct: 0 },
-                    { q: 'Fitter repairs:', options: ['Mechanical parts', 'Electrical parts', 'Civil structures', 'Software code'], correct: 0 },
-                    { q: 'Which is a fitting tool?', options: ['Hammer', 'Spoon', 'Broom', 'Paintbrush'], correct: 0 },
-                    { q: 'Fitter needs:', options: ['Patience', 'Speed only', 'Strength only', 'Luck'], correct: 0 },
-                    { q: 'Fitting is used in:', options: ['Industries', 'Hospitals', 'Schools', 'Banks'], correct: 0 },
-                    { q: 'Fitter assembles:', options: ['Metal parts', 'Wood parts', 'Plastic parts', 'Glass parts'], correct: 0 },
-                    { q: 'Safety boots are for:', options: ['Foot protection', 'Head protection', 'Hand protection', 'Eye protection'], correct: 0 },
-                    { q: 'Fitter uses:', options: ['Hand tools', 'Power tools', 'Both', 'Only computers'], correct: 2 },
-                    { q: 'Fitting is done on:', options: ['Metal surfaces', 'Wood surfaces', 'Plastic surfaces', 'Glass surfaces'], correct: 0 },
-                    { q: 'Fitter works with:', options: ['Metal sheets', 'Wood sheets', 'Plastic sheets', 'Glass sheets'], correct: 0 },
-                    { q: 'Fitting is:', options: ['A mechanical trade', 'An electrical trade', 'A civil trade', 'A software trade'], correct: 0 },
-                    { q: 'Fitter uses:', options: ['Precision tools', 'Cooking tools', 'Cleaning tools', 'Gardening tools'], correct: 0 },
-                    { q: 'Safety is:', options: ['Important', 'Not important', 'Optional', 'Irrelevant'], correct: 0 },
-                    { q: 'Fitter repairs:', options: ['Mechanical equipment', 'Electrical equipment', 'Software', 'Books'], correct: 0 },
-                    { q: 'Fitting requires:', options: ['Technical knowledge', 'Cooking knowledge', 'Dancing knowledge', 'Singing knowledge'], correct: 0 },
-                    { q: 'Fitter works on:', options: ['Assembly lines', 'Kitchens', 'Classrooms', 'Offices'], correct: 0 },
-                    { q: 'Fitting is:', options: ['A skilled job', 'An unskilled job', 'A casual job', 'A volunteer job'], correct: 0 },
-                    { q: 'Fitter needs:', options: ['Teamwork', 'Working alone only', 'No help needed', 'Only machines'], correct: 0 },
-                    { q: 'Fitting tools are:', options: ['Specialized', 'Common', 'Basic', 'Simple'], correct: 0 },
-                    { q: 'Fitter works with:', options: ['Metals and alloys', 'Wood only', 'Plastic only', 'Glass only'], correct: 0 },
-                    { q: 'Fitting is:', options: ['A career option', 'A hobby', 'A sport', 'A game'], correct: 0 }
-                ],
-                'Plumber': [
-                    { q: 'What does a plumber do?', options: ['Fixes water pipes', 'Cooks food', 'Drives car', 'Teaches students'], correct: 0 },
-                    { q: 'Which tool is used by a plumber?', options: ['Pipe wrench', 'Spoon', 'Broom', 'Paintbrush'], correct: 0 },
-                    { q: 'Plumbing involves:', options: ['Water systems', 'Electrical systems', 'Computer systems', 'Teaching systems'], correct: 0 },
-                    { q: 'A plumber needs:', options: ['Technical skills', 'Cooking skills', 'Singing skills', 'Dancing skills'], correct: 0 },
-                    { q: 'Plumbing tools include:', options: ['Pipe cutter', 'Knife', 'Scissors', 'Chisel wood'], correct: 0 },
-                    { q: 'Plumbing is:', options: ['A trade', 'A subject', 'A hobby', 'A game'], correct: 0 },
-                    { q: 'A plumber works with:', options: ['Pipes', 'Wood', 'Plastic', 'Glass'], correct: 0 },
-                    { q: 'Which is a plumbing tool?', options: ['Wrench', 'Spoon', 'Broom', 'Paintbrush'], correct: 0 },
-                    { q: 'Plumber job involves:', options: ['Installing pipes', 'Cooking', 'Teaching', 'Dancing'], correct: 0 },
-                    { q: 'Safety in plumbing includes:', options: ['Gloves', 'No safety', 'Sandals', 'Working alone'], correct: 0 },
-                    { q: 'Measuring tool for plumber:', options: ['Tape measure', 'Measuring cup', 'Scale', 'Ruler plastic'], correct: 0 },
-                    { q: 'Plumber works in:', options: ['Construction', 'Hotel', 'School', 'Bank'], correct: 0 },
-                    { q: 'Plumbing is:', options: ['A skilled trade', 'Unskilled work', 'Casual work', 'Volunteer work'], correct: 0 },
-                    { q: 'Plumber fixes:', options: ['Leaks', 'Cars', 'Computers', 'Books'], correct: 0 },
-                    { q: 'Plumbing tools are:', options: ['Specialized', 'Common', 'Basic', 'Simple'], correct: 0 },
-                    { q: 'Plumber needs:', options: ['Precision', 'Speed only', 'Strength only', 'Luck'], correct: 0 },
-                    { q: 'Plumbing is important for:', options: ['Homes and buildings', 'Schools only', 'Offices only', 'Factories only'], correct: 0 },
-                    { q: 'Plumber uses:', options: ['Hand tools', 'Power tools', 'Both', 'Only computers'], correct: 2 },
-                    { q: 'Plumbing involves:', options: ['Water supply', 'Electricity', 'Computers', 'Teaching'], correct: 0 },
-                    { q: 'Plumber works on:', options: ['Pipes and fittings', 'Cars only', 'Bikes only', 'Ships only'], correct: 0 },
-                    { q: 'Plumbing is:', options: ['A mechanical trade', 'An electrical trade', 'A civil trade', 'A software trade'], correct: 0 },
-                    { q: 'Plumber uses:', options: ['Specialized tools', 'Common tools', 'Basic tools', 'Simple tools'], correct: 0 },
-                    { q: 'Safety is:', options: ['Important', 'Not important', 'Optional', 'Irrelevant'], correct: 0 },
-                    { q: 'Plumber repairs:', options: ['Water systems', 'Electrical systems', 'Software', 'Books'], correct: 0 },
-                    { q: 'Plumbing requires:', options: ['Technical knowledge', 'Cooking knowledge', 'Dancing knowledge', 'Singing knowledge'], correct: 0 },
-                    { q: 'Plumber works on:', options: ['Construction sites', 'Kitchens', 'Classrooms', 'Offices'], correct: 0 },
-                    { q: 'Plumbing is:', options: ['A career option', 'A hobby', 'A sport', 'A game'], correct: 0 },
-                    { q: 'Plumber needs:', options: ['Teamwork', 'Working alone only', 'No help needed', 'Only machines'], correct: 0 },
-                    { q: 'Plumbing tools include:', options: ['Pipe wrench', 'Spoon', 'Broom', 'Paintbrush'], correct: 0 },
-                    { q: 'Plumber works with:', options: ['Copper pipes', 'Wood only', 'Plastic only', 'Glass only'], correct: 0 }
-                ]
-            }
-        };
+        function loadQuestionBank() {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = 'js/question-bank.js?v=' + Date.now();
+                script.onload = function() {
+                    if (typeof QUESTION_BANK !== 'undefined') {
+                        isLoaded = true;
+                        resolve();
+                    } else {
+                        reject('QUESTION_BANK not found in loaded script');
+                    }
+                };
+                script.onerror = function() {
+                    reject('Failed to load question-bank.js');
+                };
+                document.head.appendChild(script);
+            });
+        }
 
         // ============================================================
         // APP STATE
@@ -887,6 +758,8 @@
         let testSubmitted = false;
         let totalQuestions = 25;
         let timeLimit = 15; // minutes
+        let availableYears = [];
+        let availableModules = {};
 
         // ============================================================
         // NAVIGATION FUNCTIONS
@@ -897,7 +770,12 @@
         }
 
         function selectTestType(type) {
+            if (!isLoaded) {
+                alert('Question bank is still loading. Please wait...');
+                return;
+            }
             testType = type;
+            loadYears();
             showScreen('screenYear');
         }
 
@@ -908,8 +786,8 @@
 
         function selectYear(year) {
             selectedYear = year;
-            showScreen('screenModule');
             loadModules();
+            showScreen('screenModule');
         }
 
         function goBackYear() {
@@ -924,6 +802,51 @@
         }
 
         // ============================================================
+        // LOAD YEARS FROM QUESTION BANK
+        // ============================================================
+        function loadYears() {
+            const grid = document.getElementById('yearGrid');
+            grid.innerHTML = '';
+            const years = new Set();
+
+            if (testType === 'employability') {
+                // Employability Skills
+                if (QUESTION_BANK.employability) {
+                    for (let year in QUESTION_BANK.employability) {
+                        if (year !== 'name' && year !== 'type') {
+                            years.add(year);
+                        }
+                    }
+                }
+            } else {
+                // Trade Tests - get from all trades
+                for (let trade in QUESTION_BANK) {
+                    if (trade === 'employability' || trade === 'name' || trade === 'type') continue;
+                    for (let year in QUESTION_BANK[trade]) {
+                        if (year !== 'name' && year !== 'type' && year !== 'questions') {
+                            years.add(year);
+                        }
+                    }
+                }
+            }
+
+            availableYears = Array.from(years).sort();
+
+            if (availableYears.length === 0) {
+                grid.innerHTML = '<p style="text-align:center;color:#888;">No years available.</p>';
+                return;
+            }
+
+            availableYears.forEach(year => {
+                const btn = document.createElement('button');
+                btn.className = 'selection-btn';
+                btn.textContent = '🎓 ' + year;
+                btn.onclick = () => selectYear(year);
+                grid.appendChild(btn);
+            });
+        }
+
+        // ============================================================
         // LOAD MODULES / TRADES
         // ============================================================
         function loadModules() {
@@ -932,14 +855,26 @@
             grid.innerHTML = '';
 
             let items = [];
+
             if (testType === 'employability') {
                 title.textContent = 'Select Module';
-                const bank = employabilityBank[selectedYear] || {};
-                items = Object.keys(bank);
+                if (QUESTION_BANK.employability && QUESTION_BANK.employability[selectedYear]) {
+                    items = Object.keys(QUESTION_BANK.employability[selectedYear]);
+                }
             } else {
                 title.textContent = 'Select Trade';
-                const bank = tradeBank[selectedYear] || {};
-                items = Object.keys(bank);
+                // Collect all trades that have this year
+                for (let trade in QUESTION_BANK) {
+                    if (trade === 'employability' || trade === 'name' || trade === 'type') continue;
+                    if (QUESTION_BANK[trade] && QUESTION_BANK[trade][selectedYear]) {
+                        // Check if trade has any questions
+                        const modules = Object.keys(QUESTION_BANK[trade][selectedYear]);
+                        if (modules.length > 0) {
+                            items.push(trade);
+                        }
+                    }
+                }
+                items.sort();
             }
 
             if (items.length === 0) {
@@ -957,14 +892,44 @@
         }
 
         // ============================================================
+        // GET QUESTIONS FOR A SPECIFIC TRADE/MODULE
+        // ============================================================
+        function getQuestionsFor(tradeOrModule) {
+            let questions = [];
+
+            if (testType === 'employability') {
+                // Employability Skills
+                if (QUESTION_BANK.employability &&
+                    QUESTION_BANK.employability[selectedYear] &&
+                    QUESTION_BANK.employability[selectedYear][tradeOrModule]) {
+                    questions = QUESTION_BANK.employability[selectedYear][tradeOrModule];
+                }
+            } else {
+                // Trade Test
+                if (QUESTION_BANK[tradeOrModule] &&
+                    QUESTION_BANK[tradeOrModule][selectedYear]) {
+                    // Get all modules for this trade/year
+                    const modules = QUESTION_BANK[tradeOrModule][selectedYear];
+                    for (let moduleName in modules) {
+                        if (Array.isArray(modules[moduleName])) {
+                            questions = questions.concat(modules[moduleName]);
+                        }
+                    }
+                }
+            }
+
+            return questions;
+        }
+
+        // ============================================================
         // START TEST
         // ============================================================
         function startTest(moduleName) {
             selectedModule = moduleName;
-            let bank = testType === 'employability' ? employabilityBank : tradeBank;
-            const questions = bank[selectedYear]?.[moduleName] || [];
-            if (questions.length === 0) {
-                alert('No questions available for this module/trade.');
+            const questions = getQuestionsFor(moduleName);
+
+            if (!questions || questions.length === 0) {
+                alert('No questions available for this selection.');
                 return;
             }
 
@@ -973,13 +938,14 @@
 
             // Shuffle and pick random questions
             const shuffled = shuffleArray([...questions]);
-            currentQuestions = shuffled.slice(0, totalQuestions);
+            currentQuestions = shuffled.slice(0, Math.min(totalQuestions, shuffled.length));
             userAnswers = new Array(currentQuestions.length).fill(null);
             testSubmitted = false;
             seconds = 0;
 
             showScreen('screenTest');
-            document.getElementById('testSubject').textContent = `${selectedYear} – ${selectedModule}`;
+            document.getElementById('testSubject').textContent =
+                `${selectedYear} – ${selectedModule} (${currentQuestions.length} questions)`;
             document.getElementById('testTotalQ').textContent = currentQuestions.length;
             document.getElementById('resultBox').classList.add('hidden');
             document.getElementById('submitBtn').disabled = false;
@@ -1247,7 +1213,29 @@
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
                 ' ITI Study Centre. All Rights Reserved.';
-            console.log('Online Test System loaded successfully!');
+
+            // Load question bank
+            const loader = document.getElementById('loaderScreen');
+            const mainScreen = document.getElementById('screenMain');
+
+            loadQuestionBank()
+                .then(() => {
+                    loader.style.display = 'none';
+                    mainScreen.classList.add('active');
+                    console.log('✅ Question Bank loaded successfully!');
+                    console.log('📊 Total Trades:', Object.keys(QUESTION_BANK).filter(t =>
+                        t !== 'employability' && t !== 'name' && t !== 'type'
+                    ).length);
+                })
+                .catch((err) => {
+                    loader.innerHTML = `
+                        <p style="color:#dc3545; font-size:1.2rem;">❌ Failed to load question bank</p>
+                        <p style="color:#888; font-size:0.9rem;">Make sure <strong>js/question-bank.js</strong> exists.</p>
+                        <p style="color:#888; font-size:0.85rem;">Error: ${err}</p>
+                        <button onclick="location.reload()" style="margin-top:16px; padding:10px 24px; background:#003366; color:#fff; border:none; border-radius:6px; cursor:pointer;">🔄 Retry</button>
+                    `;
+                    console.error('❌ Error loading question bank:', err);
+                });
         });
     </script>
 </body>
