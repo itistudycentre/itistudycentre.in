@@ -602,6 +602,15 @@ const EMPLOYABILITY_BANK = {
     { qE: "What is a VPN?", qH: "VPN क्या है?", oE: ["Virtual Private Network for secure connection", "A type of computer", "A type of network", "A type of software"], oH: ["सुरक्षित कनेक्शन के लिए वर्चुअल प्राइवेट नेटवर्क", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क", "एक प्रकार का सॉफ्टवेयर"], c: 0 }
   ]
 },
+// ================================================================
+// ONLINE-TEST.HTML और QUESTIONBANK.HTML के लिए EXPORT
+// ================================================================
+window.QUESTION_BANK = {
+  employability: EMPLOYABILITY_BANK   // ← यहाँ आपका EMPLOYABILITY_BANK है
+};
+
+console.log("✅ Question Bank Loaded Successfully!");
+console.log("📊 Available Trades:", Object.keys(window.QUESTION_BANK));
 
 // ---- Extra Topics – Communication & Soft Skills (100 Questions) ----
 "Module 12: Communication & Soft Skills": {
@@ -777,12 +786,3 @@ const EMPLOYABILITY_BANK = {
 
 </body>
 </html>
-// ================================================================
-// ONLINE-TEST.HTML और QUESTIONBANK.HTML के लिए EXPORT
-// ================================================================
-window.QUESTION_BANK = {
-  employability: EMPLOYABILITY_BANK   // ← यहाँ आपका EMPLOYABILITY_BANK है
-};
-
-console.log("✅ Question Bank Loaded Successfully!");
-console.log("📊 Available Trades:", Object.keys(window.QUESTION_BANK));
