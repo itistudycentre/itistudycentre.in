@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Employability Skills – All Modules | ITI Study Centre</title>
-  <link rel="icon" href="/images/favicon.png">
+  <link rel="icon" href="/images/favicon.png" />
   <style>
+    /* ===== RESET & BASE ===== */
     * {
       margin: 0;
       padding: 0;
@@ -23,6 +24,7 @@
       padding: 0 20px;
     }
 
+    /* ===== HEADER ===== */
     .main-header {
       background: #003366;
       padding: 12px 0;
@@ -51,6 +53,7 @@
       font-size: 1rem;
       padding: 4px 0;
       border-bottom: 2px solid transparent;
+      transition: 0.2s;
     }
     .main-header nav a:hover,
     .main-header nav a.active {
@@ -62,6 +65,7 @@
       font-weight: 700;
     }
 
+    /* ===== BREADCRUMB ===== */
     .breadcrumb {
       background: #eef1f5;
       padding: 10px 20px;
@@ -72,11 +76,15 @@
       color: #003366;
       text-decoration: none;
     }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
     .breadcrumb .current {
       color: #555;
       font-weight: 600;
     }
 
+    /* ===== PAGE TITLE ===== */
     .page-title {
       padding: 30px 0 16px;
       text-align: center;
@@ -104,6 +112,7 @@
       font-weight: 600;
     }
 
+    /* ===== SEARCH ===== */
     .search-section {
       background: #fff;
       border-radius: 12px;
@@ -123,6 +132,7 @@
       border: 2px solid #dde1e7;
       font-size: 0.95rem;
       background: #fafcff;
+      transition: 0.2s;
     }
     .search-section input:focus {
       border-color: #003366;
@@ -142,6 +152,7 @@
       background: #002244;
     }
 
+    /* ===== YEAR TABS ===== */
     .year-tabs {
       display: flex;
       flex-wrap: wrap;
@@ -168,6 +179,7 @@
       border-color: #003366;
     }
 
+    /* ===== MODULE GRID ===== */
     .module-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -225,13 +237,13 @@
       cursor: pointer;
       transition: 0.3s;
       font-size: 0.9rem;
-      text-decoration: none;
     }
     .module-card .open-btn:hover {
       background: #002244;
       transform: scale(1.02);
     }
 
+    /* ===== EXPANDED QUESTIONS ===== */
     .module-questions {
       margin-top: 16px;
       border-top: 1px solid #e6eaef;
@@ -273,6 +285,7 @@
       font-weight: 600;
     }
 
+    /* ===== LOADER ===== */
     .loader {
       text-align: center;
       padding: 60px 20px;
@@ -288,14 +301,11 @@
       margin: 0 auto 16px;
     }
     @keyframes spin {
-      0% {
-        transform: rotate(0);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
+      0% { transform: rotate(0); }
+      100% { transform: rotate(360deg); }
     }
 
+    /* ===== NO RESULTS ===== */
     .no-results {
       text-align: center;
       padding: 40px 20px;
@@ -303,6 +313,7 @@
       grid-column: 1 / -1;
     }
 
+    /* ===== FOOTER ===== */
     footer {
       background: #1a2634;
       color: #b0b8c5;
@@ -322,6 +333,7 @@
       color: #b0b8c5;
       text-decoration: none;
       font-size: 0.9rem;
+      transition: 0.2s;
     }
     footer .footer-links a:hover {
       color: #fff;
@@ -332,6 +344,7 @@
       color: #7a8494;
     }
 
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .main-header .container {
         flex-direction: column;
@@ -389,7 +402,7 @@
         <a href="/iti-result.html">ITI Result</a>
         <a href="/iti-study-centre-notes.html">ITI Notes</a>
         <a href="/engineering-notes.html">Engineering Notes</a>
-        <a href="/questionbank.html" class="active">📚 Question Bank</a>
+        <a href="/questionbank.html">📚 Question Bank</a>
         <a href="/online-test.html" class="test-link">📝 Online Test</a>
         <a href="/about.html">About</a>
       </nav>
@@ -416,7 +429,7 @@
     </div>
   </section>
 
-  <!-- ===== MAIN ===== -->
+  <!-- ===== MAIN CONTENT ===== -->
   <div class="container">
 
     <!-- LOADER -->
@@ -427,7 +440,7 @@
 
     <!-- SEARCH -->
     <div class="search-section" id="searchSection" style="display:none;">
-      <input type="text" id="searchInput" placeholder="Search module by name or number..." oninput="filterModules()">
+      <input type="text" id="searchInput" placeholder="Search module by name or number..." oninput="filterModules()" />
       <button class="search-btn" onclick="filterModules()">🔍 Search</button>
     </div>
 
@@ -460,7 +473,7 @@
   ============================================================ -->
   <script>
     // ============================================================
-    // 1. LOAD QUESTION BANK
+    // 1. LOAD QUESTION BANK FROM /js/question-bank.js
     // ============================================================
     let QUESTION_BANK = null;
     let isLoaded = false;
@@ -470,13 +483,21 @@
 
     function loadQuestionBank() {
       return new Promise((resolve, reject) => {
+        // Use absolute path from root
         const script = document.createElement('script');
         script.src = '/js/question-bank.js?v=' + Date.now();
         script.onload = function() {
+          // Check both possible global names
           if (typeof window.QUESTION_BANK !== 'undefined') {
             QUESTION_BANK = window.QUESTION_BANK;
             isLoaded = true;
             console.log('✅ QUESTION_BANK loaded:', Object.keys(QUESTION_BANK));
+            resolve();
+          } else if (typeof window.EMPLOYABILITY_BANK !== 'undefined') {
+            // If EMPLOYABILITY_BANK is exported directly
+            QUESTION_BANK = { employability: window.EMPLOYABILITY_BANK };
+            isLoaded = true;
+            console.log('✅ EMPLOYABILITY_BANK loaded');
             resolve();
           } else {
             reject('QUESTION_BANK not found in loaded script');
@@ -597,21 +618,17 @@
         return;
       }
 
-      let allModulesData = [];
-      let totalQ = 0;
-
-      // Check both patterns: QUESTION_BANK.employability OR QUESTION_BANK directly
+      // Determine data source
       let dataSource = QUESTION_BANK;
       if (QUESTION_BANK.employability) {
         dataSource = QUESTION_BANK.employability;
       }
 
-      // Process each year
-      const years = ['1st Year', '2nd Year'];
-      // Also check for AI Module
-      const aiYears = ['AI Module', 'AI'];
+      let allModulesData = [];
+      let totalQ = 0;
 
-      // Process 1st & 2nd Year
+      // Process 1st Year & 2nd Year
+      const years = ['1st Year', '2nd Year'];
       years.forEach(year => {
         if (dataSource[year]) {
           const yearData = dataSource[year];
@@ -633,9 +650,10 @@
         }
       });
 
-      // Process AI Module
-      aiYears.forEach(aiYear => {
-        let aiData = dataSource[aiYear] || QUESTION_BANK[aiYear] || null;
+      // Process AI Module – check multiple possible locations
+      const aiSources = ['AI Module', 'AI', 'ai-module'];
+      aiSources.forEach(aiKey => {
+        let aiData = dataSource[aiKey] || QUESTION_BANK[aiKey] || null;
         if (!aiData) return;
         if (aiData.modules) {
           Object.keys(aiData.modules).forEach(key => {
@@ -652,7 +670,7 @@
             });
           });
         } else if (Array.isArray(aiData)) {
-          // If AI Module is directly an array
+          // If AI Module is directly an array of questions
           totalQ += aiData.length;
           allModulesData.push({
             year: 'AI Module',
@@ -669,11 +687,12 @@
       document.getElementById('totalQCount').textContent = totalQ;
       document.getElementById('totalModules').textContent = allModulesData.length;
 
+      // Apply current filters
       filterModules();
     }
 
     // ============================================================
-    // 4. FILTER MODULES
+    // 4. FILTER MODULES (by year & search)
     // ============================================================
     function filterModules() {
       const search = document.getElementById('searchInput').value.toLowerCase().trim();
@@ -703,14 +722,16 @@
         const display = mod.display;
         const qCount = mod.count;
         const yearLabel = mod.year;
+        // Use a safe ID for the toggle container
+        const containerId = 'qs-' + idx + '-' + Date.now();
         html += `
           <div class="module-card" data-year="${mod.year}" data-key="${mod.key}">
             <div class="mod-number">${mod.key.replace('Module ', 'Module ')}</div>
             <h3>${display.en}</h3>
             <div class="mod-hi">${display.hi}</div>
             <div class="mod-count"><strong>${qCount}</strong> Questions · ${yearLabel}</div>
-            <button class="open-btn" onclick="toggleQuestions(this, '${mod.key}', '${mod.year}')">📖 Open Module →</button>
-            <div class="module-questions" id="qs-${idx}"></div>
+            <button class="open-btn" onclick="toggleQuestions(this, '${mod.key}', '${mod.year}', '${containerId}')">📖 Open Module →</button>
+            <div class="module-questions" id="${containerId}"></div>
           </div>
         `;
       });
@@ -718,35 +739,43 @@
     }
 
     // ============================================================
-    // 5. TOGGLE QUESTIONS
+    // 5. TOGGLE QUESTIONS (expand/collapse)
     // ============================================================
-    function toggleQuestions(btn, moduleKey, year) {
-      const card = btn.closest('.module-card');
-      const container = card.querySelector('.module-questions');
+    function toggleQuestions(btn, moduleKey, year, containerId) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+
       if (container.classList.contains('open')) {
         container.classList.remove('open');
         btn.textContent = '📖 Open Module →';
         return;
       }
 
+      // Find the module data
       const modData = allModules.find(m => m.key === moduleKey && m.year === year);
-      if (!modData) return;
+      if (!modData) {
+        container.innerHTML = '<p style="color:#888;">Module data not found.</p>';
+        return;
+      }
 
+      // Render questions
       let html = '';
       const qs = modData.questions;
       if (qs.length === 0) {
         html = '<p style="color:#888;">No questions in this module.</p>';
       } else {
         qs.forEach((q, i) => {
-          const qEn = q.qE || q.q || '';
+          const qEn = q.qE || q.q || q.question || '';
           const qHi = q.qH || '';
           const optsEn = q.oE || q.options || [];
           const optsHi = q.oH || [];
           const correct = q.correct !== undefined ? q.correct : (q.c || 0);
+
           let qText = qEn;
           if (qHi) {
             qText = qEn + ' <span class="lang-hi">🇮🇳 ' + qHi + '</span>';
           }
+
           let optsHtml = '';
           const maxOpt = Math.max(optsEn.length, optsHi.length);
           for (let oi = 0; oi < maxOpt; oi++) {
@@ -756,13 +785,14 @@
             if (optHi) {
               optDisplay = optEn + ' <span style="font-size:0.8rem;color:#888;">(🇮🇳 ' + optHi + ')</span>';
             }
-            const isCorrect = oi === correct;
+            const isCorrect = (oi === correct);
             optsHtml += `
               <span class="${isCorrect ? 'opt-correct' : ''}" style="margin-right:10px;">
                 ${String.fromCharCode(65 + oi)}. ${optDisplay}
               </span>
             `;
           }
+
           html += `
             <div class="q-item">
               <div class="q-text">${qText}</div>
@@ -771,13 +801,14 @@
           `;
         });
       }
+
       container.innerHTML = html;
       container.classList.add('open');
       btn.textContent = '📕 Close Module';
     }
 
     // ============================================================
-    // 6. YEAR TAB
+    // 6. YEAR TAB SWITCH
     // ============================================================
     function setYear(year) {
       currentYear = year;
@@ -791,7 +822,11 @@
     // 7. INIT
     // ============================================================
     document.addEventListener('DOMContentLoaded', function() {
-      document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+      // Update footer year
+      const footerP = document.querySelector('footer p');
+      if (footerP) {
+        footerP.textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+      }
 
       loadQuestionBank()
         .then(() => {
@@ -804,11 +839,11 @@
         .catch((err) => {
           document.getElementById('loaderScreen').innerHTML = `
             <p style="color:#dc3545; font-size:1.2rem;">❌ Failed to load question bank</p>
-            <p style="color:#888; font-size:0.9rem;">Make sure <strong>/js/question-bank.js</strong> exists.</p>
+            <p style="color:#888; font-size:0.9rem;">Make sure <strong>/js/question-bank.js</strong> exists and exports <strong>QUESTION_BANK</strong>.</p>
             <p style="color:#888; font-size:0.85rem;">Error: ${err}</p>
             <button onclick="location.reload()" style="margin-top:16px; padding:10px 24px; background:#003366; color:#fff; border:none; border-radius:6px; cursor:pointer;">🔄 Retry</button>
           `;
-          console.error('❌ Error:', err);
+          console.error('❌ Error loading question bank:', err);
         });
     });
   </script>
