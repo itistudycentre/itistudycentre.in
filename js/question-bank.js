@@ -786,3 +786,12 @@ console.log("📊 Available Trades:", Object.keys(window.QUESTION_BANK));
 
 </body>
 </html>
+// ================================================================
+// ✅ यह LINE बिल्कुल अंत में जोड़ें – MISS न करें
+// ================================================================
+window.QUESTION_BANK = {
+  employability: EMPLOYABILITY_BANK
+};
+
+console.log("✅ QUESTION_BANK exported successfully!");
+console.log("📊 Available Trades:", Object.keys(window.QUESTION_BANK));
