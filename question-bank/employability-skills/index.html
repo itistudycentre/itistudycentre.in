@@ -1,146 +1,129 @@
 <!DOCTYPE html>
 <html lang="hi">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employability Skills Question Bank | ITI Study Centre</title>
-  <meta name="description" content="Employability Skills Question Bank - All 11 Modules, MCQ, Practice Questions, Previous Year Questions.">
-  <link rel="icon" href="/images/favicon.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="canonical" href="https://www.itistudycentre.in/question-bank/employability-skills/index.html">
+  <title>Employability Skills – Question Bank | ITI Study Centre</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI', Roboto, Arial, sans-serif; background:#f4f7fc; color:#1e2a3a; line-height:1.7; }
+    .container { max-width:1100px; margin:0 auto; padding:20px; background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
+    h1 { color:#003366; border-bottom:3px solid #ffcc00; padding-bottom:10px; }
+    .lang-btn { background:#003366; color:#fff; border:none; padding:8px 20px; border-radius:6px; cursor:pointer; float:right; margin-top:-40px; }
+    .module-box { border:1px solid #ddd; margin-bottom:20px; border-radius:8px; overflow:hidden; }
+    .module-title { background:#003366; color:#fff; padding:12px 20px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between; }
+    .module-title:hover { background:#002244; }
+    .module-body { padding:15px; display:block; }
+    .q-item { border-bottom:1px solid #eee; padding:12px 0; }
+    .q-item:last-child { border-bottom:none; }
+    .opt-correct { background:#d4edda; padding:2px 8px; border-radius:4px; }
+    .opt-wrong { background:#f8d7da; padding:2px 8px; border-radius:4px; }
+    .loader { text-align:center; padding:40px; color:#555; }
+    .loader .spinner { border:4px solid #f3f3f3; border-top:4px solid #003366; border-radius:50%; width:40px; height:40px; animation:spin 1s linear infinite; margin:0 auto 16px; }
+    @keyframes spin { 0%{transform:rotate(0);} 100%{transform:rotate(360deg);} }
+    .error { color:#dc3545; text-align:center; padding:40px; }
+    footer { text-align:center; margin-top:30px; color:#888; font-size:0.9rem; }
+    @media (max-width:600px){ .lang-btn { float:none; margin-top:10px; display:block; width:100%; } }
+  </style>
 </head>
-
 <body>
-
-<!-- =========================================
-    HEADER
-========================================= -->
-<div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
-  <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-    <div class="logo" style="font-size:1.4rem; font-weight:bold;">
-      <a href="/index.html" style="color:white; text-decoration:none;">ITI Study Centre</a>
-    </div>
-    <nav style="display:flex; flex-wrap:wrap; gap:5px 15px;">
-      <a href="/index.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Home</a>
-      <a href="/iti-result.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Result</a>
-      <a href="/iti-study-centre-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Notes</a>
-      <a href="/engineering-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Engineering Notes</a>
-      <a href="/questionbank.html" style="color:#ffcc00; text-decoration:underline; font-weight:bold; padding:5px 0; font-size:1rem;">Question Bank</a>
-      <a href="/about.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">About</a>
-    </nav>
-  </div>
+<div class="container">
+  <h1>📘 Employability Skills – Question Bank</h1>
+  <button class="lang-btn" onclick="toggleLang()">🇮🇳 हिंदी / 🇬🇧 English</button>
+  <div id="loader" class="loader"><div class="spinner"></div><p>⏳ Loading question bank...</p></div>
+  <div id="content"></div>
+  <footer>© 2026 ITI Study Centre</footer>
 </div>
 
-<!-- =========================================
-    BREADCRUMB
-========================================= -->
-<div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
-  <a href="/" style="text-decoration:none; color:#003366;">🏠 Home</a> &nbsp;›&nbsp; <a href="/questionbank.html" style="text-decoration:none; color:#003366;">Question Bank</a> &nbsp;›&nbsp; <span style="color:#555; font-weight:bold;">Employability Skills</span>
-</div>
-
-<!-- =========================================
-    PAGE TITLE
-========================================= -->
-<section class="page-title">
-  <div class="container">
-    <h1>💼 Employability Skills Question Bank</h1>
-    <p>Module Wise Question Bank, MCQ, Practice Sets & Previous Year Questions</p>
-  </div>
-</section>
-
-<!-- =========================================
-    SEARCH BOX
-========================================= -->
-<section class="search-section container">
-  <input type="text" placeholder="Search Modules, Topics, or Keywords...">
-  <button>🔍 Search</button>
-</section>
-
-<!-- =========================================
-    MODULES LIST
-========================================= -->
-<section class="container">
-  <div class="card">
-    <h2>📚 सभी Modules</h2>
-    <ul style="list-style:none; padding:0;">
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-1.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 1: Introduction to Employability Skills</a>
-      </li>
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-2.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 2: Self Management Skills</a>
-      </li>
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-3.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 3: Basic ICT Skills</a>
-      </li>
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-4.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 4: Entrepreneurship</a>
-      </li>
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-5.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 5: Green Skills</a>
-      </li>
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-6.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 6: Financial Literacy</a>
-      </li>
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-7.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 7: Digital Literacy</a>
-      </li>
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-8.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 8: Customer Service</a>
-      </li>
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-9.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 9: Workplace Safety</a>
-      </li>
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-10.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 10: Professional Ethics</a>
-      </li>
-      <li style="padding:10px 0; border-bottom:1px solid #eee;">
-        <a href="module-11.html" style="color:#003366; font-weight:bold; text-decoration:none;">📘 Module 11: Revision & Practice</a>
-      </li>
-    </ul>
-    <div class="notice-box" style="background:#fff3cd; padding:15px; border-left:6px solid #ffc107; border-radius:6px; margin:20px 0;">
-      <h3 style="margin-top:0; color:#856404;">📢 वर्तमान स्थिति</h3>
-      <p>सभी Modules के Question Bank, MCQ और Practice Sets जल्द ही उपलब्ध कराए जाएंगे। कृपया नियमित रूप से इस पेज पर आते रहें।</p>
-    </div>
-    <a href="/questionbank.html" class="news-btn">⬅ वापस Question Bank पर जाएं</a>
-  </div>
-</section>
-
-<!-- =========================================
-    SUGGESTIONS
-========================================= -->
-<section class="container">
-  <div class="card">
-    <h2>💬 सुझाव दें</h2>
-    <p>यदि आप किसी Module, Topic या Practice Set के बारे में सुझाव देना चाहते हैं, तो हमें अवश्य बताएं।</p>
-    <br>
-    <a href="/contact.html" class="news-btn">💬 Click Here →</a>
-  </div>
-</section>
-
-<!-- =========================================
-    FOOTER
-========================================= -->
-<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
-    <a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">Disclaimer</a>
-    <a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a>
-    <a href="/terms.html" style="color:#aaa; text-decoration:none;">Terms</a>
-    <a href="/contact.html" style="color:#aaa; text-decoration:none;">Contact</a>
-  </div>
-  <p style="margin:10px 0 0 0; color:#888;">© 2026 ITI Study Centre. All Rights Reserved.</p>
-</footer>
-
-<button id="scrollTop" title="Go to Top" style="position:fixed; bottom:20px; right:20px; background:#003366; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;">⬆</button>
-<script src="/js/main.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const year = document.querySelector('footer p');
-    if (year) {
-      year.textContent = "© " + new Date().getFullYear() + " ITI Study Centre. All Rights Reserved.";
-    }
-  });
-</script>
+// ============================================================
+// LOAD QUESTION BANK
+// ============================================================
+let data = null;
+let lang = 'en';
 
+function loadData() {
+  const script = document.createElement('script');
+  script.src = '/js/question-bank.js?v=' + Date.now();
+  script.onload = function() {
+    if (window.QUESTION_BANK && window.QUESTION_BANK.employability) {
+      data = window.QUESTION_BANK.employability;
+      document.getElementById('loader').style.display = 'none';
+      render();
+    } else {
+      document.getElementById('loader').innerHTML = '<p class="error">❌ Data not found. Make sure /js/question-bank.js exists and exports QUESTION_BANK.</p>';
+    }
+  };
+  script.onerror = function() {
+    document.getElementById('loader').innerHTML = '<p class="error">❌ Failed to load /js/question-bank.js</p>';
+  };
+  document.head.appendChild(script);
+}
+
+function render() {
+  if (!data) return;
+  let html = '';
+  const years = Object.keys(data);
+  years.sort();
+  for (let year of years) {
+    if (year === 'name' || year === 'type') continue;
+    html += `<h2 style="color:#003366; margin:20px 0 10px;">📅 ${year}</h2>`;
+    const yearData = data[year];
+    // Check if yearData has modules or direct array
+    let modules = {};
+    if (yearData.modules) {
+      modules = yearData.modules;
+    } else if (typeof yearData === 'object' && !Array.isArray(yearData)) {
+      modules = yearData;
+    } else {
+      continue;
+    }
+    const moduleNames = Object.keys(modules);
+    moduleNames.sort();
+    for (let mod of moduleNames) {
+      const modData = modules[mod];
+      let questions = [];
+      if (modData.questions) {
+        questions = modData.questions;
+      } else if (Array.isArray(modData)) {
+        questions = modData;
+      }
+      if (!questions || questions.length === 0) continue;
+      html += `<div class="module-box">
+        <div class="module-title" onclick="toggleModule(this)">📘 ${mod} <span style="font-weight:normal;font-size:0.9rem;">(${questions.length} Qs)</span></div>
+        <div class="module-body">`;
+      questions.forEach((q, i) => {
+        const qText = lang === 'en' ? q.qE : q.qH;
+        const opts = lang === 'en' ? q.oE : q.oH;
+        const correct = q.correct !== undefined ? q.correct : q.c;
+        html += `<div class="q-item">
+          <b>Q${i+1}:</b> ${qText}<br>
+          ${opts.map((o, oi) => {
+            let cls = '';
+            if (oi === correct) cls = 'opt-correct';
+            return `<span class="${cls}" style="margin-right:12px;">${String.fromCharCode(65+oi)}. ${o}</span>`;
+          }).join('')}
+          <span style="color:#28a745;font-size:0.85rem;"> ✅ ${opts[correct]}</span>
+        </div>`;
+      });
+      html += `</div></div>`;
+    }
+  }
+  document.getElementById('content').innerHTML = html || '<p>No modules found.</p>';
+}
+
+function toggleModule(el) {
+  const body = el.nextElementSibling;
+  body.style.display = body.style.display === 'none' ? 'block' : 'none';
+}
+
+function toggleLang() {
+  lang = (lang === 'en') ? 'hi' : 'en';
+  render();
+  document.querySelector('.lang-btn').textContent = lang === 'en' ? '🇮🇳 हिंदी / 🇬🇧 English' : '🇬🇧 English / 🇮🇳 हिंदी';
+}
+
+loadData();
+</script>
 </body>
-            </html>
+</html>
