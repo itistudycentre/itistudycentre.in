@@ -3,127 +3,815 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employability Skills – Question Bank | ITI Study Centre</title>
+  <title>Employability Skills – All Modules | ITI Study Centre</title>
+  <link rel="icon" href="/images/favicon.png">
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'Segoe UI', Roboto, Arial, sans-serif; background:#f4f7fc; color:#1e2a3a; line-height:1.7; }
-    .container { max-width:1100px; margin:0 auto; padding:20px; background:#fff; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
-    h1 { color:#003366; border-bottom:3px solid #ffcc00; padding-bottom:10px; }
-    .lang-btn { background:#003366; color:#fff; border:none; padding:8px 20px; border-radius:6px; cursor:pointer; float:right; margin-top:-40px; }
-    .module-box { border:1px solid #ddd; margin-bottom:20px; border-radius:8px; overflow:hidden; }
-    .module-title { background:#003366; color:#fff; padding:12px 20px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between; }
-    .module-title:hover { background:#002244; }
-    .module-body { padding:15px; display:block; }
-    .q-item { border-bottom:1px solid #eee; padding:12px 0; }
-    .q-item:last-child { border-bottom:none; }
-    .opt-correct { background:#d4edda; padding:2px 8px; border-radius:4px; }
-    .opt-wrong { background:#f8d7da; padding:2px 8px; border-radius:4px; }
-    .loader { text-align:center; padding:40px; color:#555; }
-    .loader .spinner { border:4px solid #f3f3f3; border-top:4px solid #003366; border-radius:50%; width:40px; height:40px; animation:spin 1s linear infinite; margin:0 auto 16px; }
-    @keyframes spin { 0%{transform:rotate(0);} 100%{transform:rotate(360deg);} }
-    .error { color:#dc3545; text-align:center; padding:40px; }
-    footer { text-align:center; margin-top:30px; color:#888; font-size:0.9rem; }
-    @media (max-width:600px){ .lang-btn { float:none; margin-top:10px; display:block; width:100%; } }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1e2a3a;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .main-header {
+      background: #003366;
+      padding: 12px 0;
+      border-bottom: 4px solid #ffcc00;
+    }
+    .main-header .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .main-header .logo a {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .main-header nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 15px;
+    }
+    .main-header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+    .main-header nav a:hover,
+    .main-header nav a.active {
+      border-bottom-color: #ffcc00;
+      color: #ffcc00;
+    }
+    .main-header nav a.test-link {
+      color: #ff9900;
+      font-weight: 700;
+    }
+
+    .breadcrumb {
+      background: #eef1f5;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #dde1e7;
+    }
+    .breadcrumb a {
+      color: #003366;
+      text-decoration: none;
+    }
+    .breadcrumb .current {
+      color: #555;
+      font-weight: 600;
+    }
+
+    .page-title {
+      padding: 30px 0 16px;
+      text-align: center;
+    }
+    .page-title h1 {
+      font-size: 2rem;
+      color: #003366;
+    }
+    .page-title p {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 4px;
+    }
+    .page-title .stats {
+      margin-top: 8px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .page-title .stats span {
+      background: #003366;
+      color: #fff;
+      padding: 2px 14px;
+      border-radius: 20px;
+      margin: 0 4px;
+      font-weight: 600;
+    }
+
+    .search-section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0 24px;
+      border: 1px solid #e6eaef;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .search-section input {
+      flex: 1;
+      min-width: 180px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 2px solid #dde1e7;
+      font-size: 0.95rem;
+      background: #fafcff;
+    }
+    .search-section input:focus {
+      border-color: #003366;
+      outline: none;
+    }
+    .search-section .search-btn {
+      padding: 10px 28px;
+      background: #003366;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .search-section .search-btn:hover {
+      background: #002244;
+    }
+
+    .year-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .year-tab {
+      padding: 10px 28px;
+      background: #e9ecef;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      color: #555;
+    }
+    .year-tab:hover {
+      background: #d0d5db;
+    }
+    .year-tab.active {
+      background: #003366;
+      color: #fff;
+      border-color: #003366;
+    }
+
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .module-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e6eaef;
+      padding: 20px 24px;
+      transition: 0.3s;
+    }
+    .module-card:hover {
+      border-color: #003366;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      transform: translateY(-2px);
+    }
+    .module-card .mod-number {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #003366;
+      background: #e8f0fe;
+      padding: 2px 12px;
+      border-radius: 12px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .module-card h3 {
+      font-size: 1.1rem;
+      color: #003366;
+      margin-bottom: 4px;
+    }
+    .module-card .mod-hi {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
+    .module-card .mod-count {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    .module-card .mod-count strong {
+      color: #003366;
+    }
+    .module-card .open-btn {
+      display: inline-block;
+      padding: 8px 24px;
+      background: #003366;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .module-card .open-btn:hover {
+      background: #002244;
+      transform: scale(1.02);
+    }
+
+    .module-questions {
+      margin-top: 16px;
+      border-top: 1px solid #e6eaef;
+      padding-top: 16px;
+      display: none;
+    }
+    .module-questions.open {
+      display: block;
+    }
+    .module-questions .q-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f2f5;
+      font-size: 0.92rem;
+    }
+    .module-questions .q-item:last-child {
+      border-bottom: none;
+    }
+    .module-questions .q-item .q-text {
+      font-weight: 500;
+    }
+    .module-questions .q-item .q-text .lang-hi {
+      color: #555;
+      font-weight: 400;
+      font-size: 0.85rem;
+      display: block;
+    }
+    .module-questions .q-item .options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      font-size: 0.85rem;
+      color: #444;
+      margin-top: 4px;
+    }
+    .module-questions .q-item .options .opt-correct {
+      background: #d4edda;
+      padding: 0 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .loader {
+      text-align: center;
+      padding: 60px 20px;
+      color: #555;
+    }
+    .loader .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #003366;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      grid-column: 1 / -1;
+    }
+
+    footer {
+      background: #1a2634;
+      color: #b0b8c5;
+      padding: 24px 20px;
+      text-align: center;
+      margin-top: 44px;
+      border-top: 4px solid #003366;
+    }
+    footer .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 24px;
+      margin-bottom: 12px;
+    }
+    footer .footer-links a {
+      color: #b0b8c5;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    footer .footer-links a:hover {
+      color: #fff;
+    }
+    footer p {
+      margin: 8px 0 0;
+      font-size: 0.85rem;
+      color: #7a8494;
+    }
+
+    @media (max-width: 768px) {
+      .main-header .container {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .main-header nav {
+        justify-content: center;
+        gap: 6px 12px;
+      }
+      .page-title h1 {
+        font-size: 1.6rem;
+      }
+      .module-grid {
+        grid-template-columns: 1fr;
+      }
+      .search-section {
+        flex-direction: column;
+      }
+      .search-section input {
+        min-width: auto;
+        width: 100%;
+      }
+      .search-section .search-btn {
+        width: 100%;
+      }
+      .year-tabs {
+        justify-content: center;
+      }
+      .year-tab {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 12px;
+      }
+      .module-card {
+        padding: 16px 18px;
+      }
+      .module-card h3 {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-<div class="container">
-  <h1>📘 Employability Skills – Question Bank</h1>
-  <button class="lang-btn" onclick="toggleLang()">🇮🇳 हिंदी / 🇬🇧 English</button>
-  <div id="loader" class="loader"><div class="spinner"></div><p>⏳ Loading question bank...</p></div>
-  <div id="content"></div>
-  <footer>© 2026 ITI Study Centre</footer>
-</div>
 
-<script>
-// ============================================================
-// LOAD QUESTION BANK
-// ============================================================
-let data = null;
-let lang = 'en';
+  <!-- ===== HEADER ===== -->
+  <header class="main-header">
+    <div class="container">
+      <div class="logo"><a href="/">ITI Study Centre</a></div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/iti-result.html">ITI Result</a>
+        <a href="/iti-study-centre-notes.html">ITI Notes</a>
+        <a href="/engineering-notes.html">Engineering Notes</a>
+        <a href="/questionbank.html" class="active">📚 Question Bank</a>
+        <a href="/online-test.html" class="test-link">📝 Online Test</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
 
-function loadData() {
-  const script = document.createElement('script');
-  script.src = '/js/question-bank.js?v=' + Date.now();
-  script.onload = function() {
-    if (window.QUESTION_BANK && window.QUESTION_BANK.employability) {
-      data = window.QUESTION_BANK.employability;
-      document.getElementById('loader').style.display = 'none';
-      render();
-    } else {
-      document.getElementById('loader').innerHTML = '<p class="error">❌ Data not found. Make sure /js/question-bank.js exists and exports QUESTION_BANK.</p>';
-    }
-  };
-  script.onerror = function() {
-    document.getElementById('loader').innerHTML = '<p class="error">❌ Failed to load /js/question-bank.js</p>';
-  };
-  document.head.appendChild(script);
-}
+  <!-- ===== BREADCRUMB ===== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+      <a href="/questionbank.html">📚 Question Bank</a> &nbsp;›&nbsp;
+      <span class="current">📘 Employability Skills</span>
+    </div>
+  </div>
 
-function render() {
-  if (!data) return;
-  let html = '';
-  const years = Object.keys(data);
-  years.sort();
-  for (let year of years) {
-    if (year === 'name' || year === 'type') continue;
-    html += `<h2 style="color:#003366; margin:20px 0 10px;">📅 ${year}</h2>`;
-    const yearData = data[year];
-    // Check if yearData has modules or direct array
-    let modules = {};
-    if (yearData.modules) {
-      modules = yearData.modules;
-    } else if (typeof yearData === 'object' && !Array.isArray(yearData)) {
-      modules = yearData;
-    } else {
-      continue;
-    }
-    const moduleNames = Object.keys(modules);
-    moduleNames.sort();
-    for (let mod of moduleNames) {
-      const modData = modules[mod];
-      let questions = [];
-      if (modData.questions) {
-        questions = modData.questions;
-      } else if (Array.isArray(modData)) {
-        questions = modData;
-      }
-      if (!questions || questions.length === 0) continue;
-      html += `<div class="module-box">
-        <div class="module-title" onclick="toggleModule(this)">📘 ${mod} <span style="font-weight:normal;font-size:0.9rem;">(${questions.length} Qs)</span></div>
-        <div class="module-body">`;
-      questions.forEach((q, i) => {
-        const qText = lang === 'en' ? q.qE : q.qH;
-        const opts = lang === 'en' ? q.oE : q.oH;
-        const correct = q.correct !== undefined ? q.correct : q.c;
-        html += `<div class="q-item">
-          <b>Q${i+1}:</b> ${qText}<br>
-          ${opts.map((o, oi) => {
-            let cls = '';
-            if (oi === correct) cls = 'opt-correct';
-            return `<span class="${cls}" style="margin-right:12px;">${String.fromCharCode(65+oi)}. ${o}</span>`;
-          }).join('')}
-          <span style="color:#28a745;font-size:0.85rem;"> ✅ ${opts[correct]}</span>
-        </div>`;
+  <!-- ===== PAGE TITLE ===== -->
+  <section class="page-title">
+    <div class="container">
+      <h1>📘 Employability Skills – All Modules</h1>
+      <p>1st Year · 2nd Year · AI Module — Complete Index</p>
+      <div class="stats" id="statsDisplay">
+        <span id="totalQCount">0</span> Total Questions • <span id="totalModules">0</span> Modules
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN ===== -->
+  <div class="container">
+
+    <!-- LOADER -->
+    <div id="loaderScreen" class="loader">
+      <div class="spinner"></div>
+      <p>⏳ Loading question bank...</p>
+    </div>
+
+    <!-- SEARCH -->
+    <div class="search-section" id="searchSection" style="display:none;">
+      <input type="text" id="searchInput" placeholder="Search module by name or number..." oninput="filterModules()">
+      <button class="search-btn" onclick="filterModules()">🔍 Search</button>
+    </div>
+
+    <!-- YEAR TABS -->
+    <div class="year-tabs" id="yearTabs" style="display:none;">
+      <button class="year-tab active" data-year="all" onclick="setYear('all')">All Years</button>
+      <button class="year-tab" data-year="1st Year" onclick="setYear('1st Year')">1st Year</button>
+      <button class="year-tab" data-year="2nd Year" onclick="setYear('2nd Year')">2nd Year</button>
+      <button class="year-tab" data-year="AI Module" onclick="setYear('AI Module')">AI Module</button>
+    </div>
+
+    <!-- MODULE GRID -->
+    <div id="moduleGrid" class="module-grid"></div>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-links">
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ============================================================
+  JAVASCRIPT
+  ============================================================ -->
+  <script>
+    // ============================================================
+    // 1. LOAD QUESTION BANK
+    // ============================================================
+    let QUESTION_BANK = null;
+    let isLoaded = false;
+    let currentYear = 'all';
+    let allModules = [];
+    let totalQuestions = 0;
+
+    function loadQuestionBank() {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = '/js/question-bank.js?v=' + Date.now();
+        script.onload = function() {
+          if (typeof window.QUESTION_BANK !== 'undefined') {
+            QUESTION_BANK = window.QUESTION_BANK;
+            isLoaded = true;
+            console.log('✅ QUESTION_BANK loaded:', Object.keys(QUESTION_BANK));
+            resolve();
+          } else {
+            reject('QUESTION_BANK not found in loaded script');
+          }
+        };
+        script.onerror = function() {
+          reject('Failed to load /js/question-bank.js');
+        };
+        document.head.appendChild(script);
       });
-      html += `</div></div>`;
     }
-  }
-  document.getElementById('content').innerHTML = html || '<p>No modules found.</p>';
-}
 
-function toggleModule(el) {
-  const body = el.nextElementSibling;
-  body.style.display = body.style.display === 'none' ? 'block' : 'none';
-}
+    // ============================================================
+    // 2. DISPLAY NAMES MAPPING (as per screenshots)
+    // ============================================================
+    const DISPLAY_NAMES = {
+      "1st Year": {
+        "Module 1: Introduction": {
+          en: "Introduction to Employability Skills",
+          hi: "एम्प्लॉयिबिलिटी स्किल्स का परिचय"
+        },
+        "Module 2: 21st Century Skills": {
+          en: "Constitutional Values: Citizenship",
+          hi: "स्वैधानिक मूल्यः नागरिकता"
+        },
+        "Module 3: Digital Skills": {
+          en: "Becoming a Professional in the 21st Century",
+          hi: "21वीं सदी में एक पेशेवर बनना"
+        },
+        "Module 4: Financial Literacy": {
+          en: "Basic English Skills",
+          hi: "बुनियादी अंग्रेजी कौशल"
+        },
+        "Module 5: Communication Skills (from Part 1)": {
+          en: "Communication Skills",
+          hi: "संचार कौशल"
+        },
+        "Module 6: Gender & Diversity": {
+          en: "Essential Digital Skills",
+          hi: "आवश्यक डिजिटल कौशल"
+        },
+        "Module 7: Entrepreneurship": {
+          en: "Diversity and Inclusion",
+          hi: "विविधता और समावेशन"
+        },
+        "Module 8: Financial & Legal": {
+          en: "Financial and Legal Literacy",
+          hi: "वित्तीय और कानूनी साक्षरता"
+        },
+        "Module 9: Entrepreneurship (Part 2)": {
+          en: "Entrepreneurship",
+          hi: "उद्यमिता"
+        },
+        "Module 10: Career Development": {
+          en: "Career Development and Goal-Setting",
+          hi: "करियर विकास और लक्ष्य निर्धारण"
+        },
+        "Module 11: Customer Service": {
+          en: "Customer Service",
+          hi: "ग्राहक सेवा"
+        },
+        "Module 12: Getting Ready": {
+          en: "Getting Ready for Apprenticeships and Jobs",
+          hi: "प्रशिक्षुता और नौकरियों के लिए तैयार होना"
+        }
+      },
+      "2nd Year": {
+        "Module 1: Basic Career Skills": {
+          en: "Basic Career Skills",
+          hi: "बुनियादी कार्यक्रम कौशल"
+        },
+        "Module 2: Future Work Skills": {
+          en: "Future Work Skills",
+          hi: "भविष्य के कार्य कौशल"
+        },
+        "Module 3: Professional Skills": {
+          en: "Internet Skills",
+          hi: "इंटरनेट कौशल"
+        },
+        "Module 4: Design Thinking": {
+          en: "Design Thinking",
+          hi: "डिजाइन थिंकिंग"
+        },
+        "Module 5: Entrepreneurial Skills": {
+          en: "Entrepreneurial Skills",
+          hi: "उद्यमशीलता कौशल"
+        },
+        "Module 6: Internet Skills": {
+          en: "Internet Skills (Advanced)",
+          hi: "इंटरनेट कौशल (उन्नत)"
+        },
+        "Module 7: Stress Management & Networking": {
+          en: "Stress Management & Networking",
+          hi: "तनाव प्रबंधन और नेटवर्किंग"
+        },
+        "Module 8: Introduction to Artificial Intelligence": {
+          en: "Introduction to Artificial Intelligence (AI)",
+          hi: "आर्टिफिशियल इंटेलिजेंस (AI) का परिचय"
+        }
+      },
+      "AI Module": {
+        "Module 1: Introduction to Artificial Intelligence": {
+          en: "Introduction to Artificial Intelligence (AI)",
+          hi: "आर्टिफिशियल इंटेलिजेंस (AI) का परिचय"
+        }
+      }
+    };
 
-function toggleLang() {
-  lang = (lang === 'en') ? 'hi' : 'en';
-  render();
-  document.querySelector('.lang-btn').textContent = lang === 'en' ? '🇮🇳 हिंदी / 🇬🇧 English' : '🇬🇧 English / 🇮🇳 हिंदी';
-}
+    // ============================================================
+    // 3. RENDER MODULES
+    // ============================================================
+    function renderModules() {
+      const grid = document.getElementById('moduleGrid');
+      grid.innerHTML = '';
 
-loadData();
-</script>
+      if (!QUESTION_BANK) {
+        grid.innerHTML = '<div class="no-results">❌ No data found.</div>';
+        return;
+      }
+
+      let allModulesData = [];
+      let totalQ = 0;
+
+      // Check both patterns: QUESTION_BANK.employability OR QUESTION_BANK directly
+      let dataSource = QUESTION_BANK;
+      if (QUESTION_BANK.employability) {
+        dataSource = QUESTION_BANK.employability;
+      }
+
+      // Process each year
+      const years = ['1st Year', '2nd Year'];
+      // Also check for AI Module
+      const aiYears = ['AI Module', 'AI'];
+
+      // Process 1st & 2nd Year
+      years.forEach(year => {
+        if (dataSource[year]) {
+          const yearData = dataSource[year];
+          if (yearData.modules) {
+            Object.keys(yearData.modules).forEach(key => {
+              const mod = yearData.modules[key];
+              const qs = mod.questions || [];
+              totalQ += qs.length;
+              const display = DISPLAY_NAMES[year] && DISPLAY_NAMES[year][key] || { en: key, hi: '' };
+              allModulesData.push({
+                year: year,
+                key: key,
+                display: display,
+                questions: qs,
+                count: qs.length
+              });
+            });
+          }
+        }
+      });
+
+      // Process AI Module
+      aiYears.forEach(aiYear => {
+        let aiData = dataSource[aiYear] || QUESTION_BANK[aiYear] || null;
+        if (!aiData) return;
+        if (aiData.modules) {
+          Object.keys(aiData.modules).forEach(key => {
+            const mod = aiData.modules[key];
+            const qs = mod.questions || [];
+            totalQ += qs.length;
+            const display = DISPLAY_NAMES['AI Module'] && DISPLAY_NAMES['AI Module'][key] || { en: key, hi: '' };
+            allModulesData.push({
+              year: 'AI Module',
+              key: key,
+              display: display,
+              questions: qs,
+              count: qs.length
+            });
+          });
+        } else if (Array.isArray(aiData)) {
+          // If AI Module is directly an array
+          totalQ += aiData.length;
+          allModulesData.push({
+            year: 'AI Module',
+            key: 'Module 1: Introduction to Artificial Intelligence',
+            display: { en: 'Introduction to Artificial Intelligence (AI)', hi: 'आर्टिफिशियल इंटेलिजेंस (AI) का परिचय' },
+            questions: aiData,
+            count: aiData.length
+          });
+        }
+      });
+
+      allModules = allModulesData;
+      totalQuestions = totalQ;
+      document.getElementById('totalQCount').textContent = totalQ;
+      document.getElementById('totalModules').textContent = allModulesData.length;
+
+      filterModules();
+    }
+
+    // ============================================================
+    // 4. FILTER MODULES
+    // ============================================================
+    function filterModules() {
+      const search = document.getElementById('searchInput').value.toLowerCase().trim();
+      const grid = document.getElementById('moduleGrid');
+      let filtered = allModules;
+
+      if (currentYear !== 'all') {
+        filtered = filtered.filter(m => m.year === currentYear);
+      }
+
+      if (search) {
+        filtered = filtered.filter(m => {
+          const nameEn = m.display.en.toLowerCase();
+          const nameHi = m.display.hi.toLowerCase();
+          const key = m.key.toLowerCase();
+          return nameEn.includes(search) || nameHi.includes(search) || key.includes(search);
+        });
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div class="no-results">😕 No modules match your filters.</div>';
+        return;
+      }
+
+      let html = '';
+      filtered.forEach((mod, idx) => {
+        const display = mod.display;
+        const qCount = mod.count;
+        const yearLabel = mod.year;
+        html += `
+          <div class="module-card" data-year="${mod.year}" data-key="${mod.key}">
+            <div class="mod-number">${mod.key.replace('Module ', 'Module ')}</div>
+            <h3>${display.en}</h3>
+            <div class="mod-hi">${display.hi}</div>
+            <div class="mod-count"><strong>${qCount}</strong> Questions · ${yearLabel}</div>
+            <button class="open-btn" onclick="toggleQuestions(this, '${mod.key}', '${mod.year}')">📖 Open Module →</button>
+            <div class="module-questions" id="qs-${idx}"></div>
+          </div>
+        `;
+      });
+      grid.innerHTML = html;
+    }
+
+    // ============================================================
+    // 5. TOGGLE QUESTIONS
+    // ============================================================
+    function toggleQuestions(btn, moduleKey, year) {
+      const card = btn.closest('.module-card');
+      const container = card.querySelector('.module-questions');
+      if (container.classList.contains('open')) {
+        container.classList.remove('open');
+        btn.textContent = '📖 Open Module →';
+        return;
+      }
+
+      const modData = allModules.find(m => m.key === moduleKey && m.year === year);
+      if (!modData) return;
+
+      let html = '';
+      const qs = modData.questions;
+      if (qs.length === 0) {
+        html = '<p style="color:#888;">No questions in this module.</p>';
+      } else {
+        qs.forEach((q, i) => {
+          const qEn = q.qE || q.q || '';
+          const qHi = q.qH || '';
+          const optsEn = q.oE || q.options || [];
+          const optsHi = q.oH || [];
+          const correct = q.correct !== undefined ? q.correct : (q.c || 0);
+          let qText = qEn;
+          if (qHi) {
+            qText = qEn + ' <span class="lang-hi">🇮🇳 ' + qHi + '</span>';
+          }
+          let optsHtml = '';
+          const maxOpt = Math.max(optsEn.length, optsHi.length);
+          for (let oi = 0; oi < maxOpt; oi++) {
+            const optEn = optsEn[oi] || '';
+            const optHi = optsHi[oi] || '';
+            let optDisplay = optEn;
+            if (optHi) {
+              optDisplay = optEn + ' <span style="font-size:0.8rem;color:#888;">(🇮🇳 ' + optHi + ')</span>';
+            }
+            const isCorrect = oi === correct;
+            optsHtml += `
+              <span class="${isCorrect ? 'opt-correct' : ''}" style="margin-right:10px;">
+                ${String.fromCharCode(65 + oi)}. ${optDisplay}
+              </span>
+            `;
+          }
+          html += `
+            <div class="q-item">
+              <div class="q-text">${qText}</div>
+              <div class="options">${optsHtml}</div>
+            </div>
+          `;
+        });
+      }
+      container.innerHTML = html;
+      container.classList.add('open');
+      btn.textContent = '📕 Close Module';
+    }
+
+    // ============================================================
+    // 6. YEAR TAB
+    // ============================================================
+    function setYear(year) {
+      currentYear = year;
+      document.querySelectorAll('.year-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.dataset.year === year);
+      });
+      filterModules();
+    }
+
+    // ============================================================
+    // 7. INIT
+    // ============================================================
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+      loadQuestionBank()
+        .then(() => {
+          document.getElementById('loaderScreen').style.display = 'none';
+          document.getElementById('searchSection').style.display = 'flex';
+          document.getElementById('yearTabs').style.display = 'flex';
+          renderModules();
+          console.log('✅ Question Bank page ready! Total questions:', totalQuestions);
+        })
+        .catch((err) => {
+          document.getElementById('loaderScreen').innerHTML = `
+            <p style="color:#dc3545; font-size:1.2rem;">❌ Failed to load question bank</p>
+            <p style="color:#888; font-size:0.9rem;">Make sure <strong>/js/question-bank.js</strong> exists.</p>
+            <p style="color:#888; font-size:0.85rem;">Error: ${err}</p>
+            <button onclick="location.reload()" style="margin-top:16px; padding:10px 24px; background:#003366; color:#fff; border:none; border-radius:6px; cursor:pointer;">🔄 Retry</button>
+          `;
+          console.error('❌ Error:', err);
+        });
+    });
+  </script>
+
 </body>
 </html>
