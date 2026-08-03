@@ -38,7 +38,6 @@
         .selection-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:12px; margin:16px 0; }
         .selection-btn { padding:12px 16px; background:#e9ecef; border:2px solid transparent; border-radius:10px; font-size:0.95rem; font-weight:600; color:#333; cursor:pointer; transition:0.3s; text-align:center; }
         .selection-btn:hover { background:#d0d5db; transform:scale(1.02); }
-        .selection-btn.active { background:#003366; color:#fff; border-color:#003366; }
         .back-btn { background:none; border:none; color:#003366; font-weight:600; cursor:pointer; font-size:0.95rem; padding:8px 0; display:inline-flex; align-items:center; gap:6px; }
         .back-btn:hover { color:#002244; text-decoration:underline; }
         .test-info { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; padding:12px 16px; background:#f8fafc; border-radius:8px; margin-bottom:20px; border:1px solid #e9ecef; }
@@ -47,7 +46,6 @@
         .test-info .timer { color:#dc3545; font-weight:700; font-size:1.1rem; }
         .question-container { margin:20px 0; }
         .question-item { background:#fafcff; padding:18px 22px; border-radius:10px; border:1px solid #e6eaef; margin-bottom:16px; }
-        .question-item:hover { border-color:#003366; }
         .question-item .q-number { font-weight:700; color:#003366; font-size:0.9rem; display:block; margin-bottom:4px; }
         .question-item .q-text { font-size:1.05rem; font-weight:500; margin-bottom:10px; }
         .question-item .options { display:flex; flex-direction:column; gap:6px; }
@@ -142,9 +140,7 @@
         <!-- ===== SCREEN 1: MAIN OPTIONS ===== -->
         <div id="screenMain" class="selection-screen active">
             <h3 style="color:#003366; text-align:center; margin-bottom:16px;">Choose Test Type</h3>
-            <div class="option-grid" id="mainOptionsGrid">
-                <!-- Dynamically generated from question-bank.js -->
-            </div>
+            <div class="option-grid" id="mainOptionsGrid"></div>
         </div>
 
         <!-- ===== SCREEN 2: YEAR SELECTION ===== -->
@@ -154,7 +150,7 @@
             <div class="selection-grid" id="yearGrid"></div>
         </div>
 
-        <!-- ===== SCREEN 3: MODULE / TRADE SELECTION ===== -->
+        <!-- ===== SCREEN 3: MODULE SELECTION (ONLY FOR EMPLOYABILITY) ===== -->
         <div id="screenModule" class="selection-screen">
             <button class="back-btn" onclick="goBackYear()">← Back</button>
             <h3 style="color:#003366; text-align:center; margin:16px 0;" id="moduleTitle">Select Module</h3>
@@ -204,11 +200,11 @@
 </footer>
 
 <!-- ============================================================
-JAVASCRIPT
+JAVASCRIPT - SMARTER TEST ENGINE
 ============================================================ -->
 <script>
 // ============================================================
-// LOAD QUESTION BANK FROM EXTERNAL FILE
+// LOAD QUESTION BANK
 // ============================================================
 let QUESTION_BANK = null;
 let isLoaded = false;
@@ -227,7 +223,7 @@ function loadQuestionBank() {
             }
         };
         script.onerror = function() {
-            reject('Failed to load question-bank.js');
+            reject('Failed to load /js/question-bank.js');
         };
         document.head.appendChild(script);
     });
@@ -236,7 +232,7 @@ function loadQuestionBank() {
 // ============================================================
 // APP STATE
 // ============================================================
-let testType = ''; // 'employability' or 'fitter' or 'plumber' etc.
+let testType = '';          // 'employability', 'fitter', 'plumber' etc.
 let selectedYear = '';
 let selectedModule = '';
 let currentQuestions = [];
@@ -245,38 +241,31 @@ let timerInterval = null;
 let seconds = 0;
 let testSubmitted = false;
 let totalQuestions = 25;
-let timeLimit = 15; // minutes
-let availableYears = [];
-let availableModules = {};
+let timeLimit = 15;
 
 // ============================================================
-// MAIN MENU - DYNAMICALLY GENERATE FROM QUESTION_BANK
+// RENDER MAIN MENU – Dynamic Trades
 // ============================================================
 function renderMainMenu() {
     const grid = document.getElementById('mainOptionsGrid');
     grid.innerHTML = '';
-
     const trades = Object.keys(QUESTION_BANK || {});
 
+    const tradeMeta = {
+        employability: { icon: '📚', title: 'Employability Skills', desc: '25 Questions · 2 marks each · 15 min', badge: 'Total: 50 marks', cls: 'employability' },
+        fitter: { icon: '🔧', title: 'Fitter Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', cls: 'trade' },
+        plumber: { icon: '🚰', title: 'Plumber Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', cls: 'trade' }
+    };
+
     if (trades.length === 0) {
-        grid.innerHTML = '<p style="text-align:center;color:#888;grid-column:1/-1;">No trades available. Please check question-bank.js</p>';
+        grid.innerHTML = '<p style="text-align:center;color:#888;grid-column:1/-1;">No trades available.</p>';
         return;
     }
 
-    // Define icons and descriptions for each trade
-    const tradeMeta = {
-        employability: { icon: '📚', title: 'Employability Skills', desc: '25 Questions · 2 marks each · 15 min', badge: 'Total: 50 marks', class: 'employability' },
-        fitter: { icon: '🔧', title: 'Fitter Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' },
-        plumber: { icon: '🚰', title: 'Plumber Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' },
-        electrician: { icon: '⚡', title: 'Electrician Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' },
-        welder: { icon: '🔥', title: 'Welder Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' },
-        carpenter: { icon: '🪚', title: 'Carpenter Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' }
-    };
-
     trades.forEach(trade => {
-        const meta = tradeMeta[trade] || { icon: '📘', title: trade.charAt(0).toUpperCase() + trade.slice(1), desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' };
+        const meta = tradeMeta[trade] || { icon: '📘', title: trade, desc: '50 Questions', badge: 'Total: 100 marks', cls: 'trade' };
         const card = document.createElement('div');
-        card.className = `option-card ${meta.class || 'trade'}`;
+        card.className = `option-card ${meta.cls}`;
         card.innerHTML = `
             <span class="oc-icon">${meta.icon}</span>
             <div class="oc-title">${meta.title}</div>
@@ -289,168 +278,124 @@ function renderMainMenu() {
 }
 
 // ============================================================
-// NAVIGATION FUNCTIONS
+// NAVIGATION
 // ============================================================
-function showScreen(screenId) {
+function showScreen(id) {
     document.querySelectorAll('.selection-screen').forEach(el => el.classList.remove('active'));
-    document.getElementById(screenId).classList.add('active');
+    document.getElementById(id).classList.add('active');
 }
 
 function selectTestType(type) {
-    if (!isLoaded) {
-        alert('Question bank is still loading. Please wait...');
-        return;
-    }
+    if (!isLoaded) { alert('Loading... please wait.'); return; }
     testType = type;
     loadYears();
     showScreen('screenYear');
 }
 
-function goBackMain() {
-    resetTest();
-    showScreen('screenMain');
-}
-
-function selectYear(year) {
-    selectedYear = year;
-    loadModules();
-    showScreen('screenModule');
-}
-
-function goBackYear() {
-    showScreen('screenYear');
-}
+function goBackMain() { resetTest(); showScreen('screenMain'); }
+function goBackYear() { showScreen('screenYear'); }
 
 function confirmExit() {
-    if (confirm('Are you sure you want to exit the test? Your progress will be lost.')) {
+    if (confirm('Exit test? Progress will be lost.')) {
         resetTest();
         showScreen('screenModule');
     }
 }
 
 // ============================================================
-// LOAD YEARS FROM QUESTION BANK
+// LOAD YEARS
 // ============================================================
 function loadYears() {
     const grid = document.getElementById('yearGrid');
     grid.innerHTML = '';
-    const years = new Set();
-
     const data = QUESTION_BANK[testType];
-    if (data) {
-        for (let year in data) {
-            if (year !== 'name' && year !== 'type' && year !== 'modules') {
-                years.add(year);
-            }
-        }
-    }
+    if (!data) { grid.innerHTML = '<p style="text-align:center;color:#888;">No data found.</p>'; return; }
 
-    availableYears = Array.from(years).sort();
-
-    if (availableYears.length === 0) {
-        grid.innerHTML = '<p style="text-align:center;color:#888;">No years available for this trade.</p>';
+    const years = Object.keys(data).filter(k => k !== 'modules' && k !== 'name' && k !== 'type');
+    if (years.length === 0) {
+        grid.innerHTML = '<p style="text-align:center;color:#888;">No years available.</p>';
         return;
     }
 
-    availableYears.forEach(year => {
+    years.sort().forEach(year => {
         const btn = document.createElement('button');
         btn.className = 'selection-btn';
         btn.textContent = '🎓 ' + year;
-        btn.onclick = () => selectYear(year);
+        btn.onclick = () => handleYearSelect(year);
         grid.appendChild(btn);
     });
 }
 
 // ============================================================
-// LOAD MODULES / TRADES
+// 🔥 SMART LOGIC: Check if Year has Modules or Direct Questions
+// ============================================================
+function handleYearSelect(year) {
+    selectedYear = year;
+    const yearData = QUESTION_BANK[testType][year];
+
+    // CASE 1: Direct Array (Fitter/Plumber style) → Skip Modules
+    if (Array.isArray(yearData)) {
+        startTestDirect(yearData, year);
+        return;
+    }
+
+    // CASE 2: Has Modules (Employability style) → Show Modules
+    if (yearData.modules || typeof yearData === 'object') {
+        loadModules();
+        showScreen('screenModule');
+        return;
+    }
+
+    alert('Invalid data structure for this year.');
+}
+
+// ============================================================
+// LOAD MODULES (Only for Employability)
 // ============================================================
 function loadModules() {
     const grid = document.getElementById('moduleGrid');
     const title = document.getElementById('moduleTitle');
     grid.innerHTML = '';
 
-    let items = [];
-    const data = QUESTION_BANK[testType];
+    const data = QUESTION_BANK[testType]?.[selectedYear];
+    let modules = [];
+    if (data?.modules) modules = Object.keys(data.modules);
+    else if (typeof data === 'object' && !Array.isArray(data)) modules = Object.keys(data);
 
-    if (data && data[selectedYear]) {
-        // Check if data[selectedYear] has 'modules' key (our new structure)
-        if (data[selectedYear].modules) {
-            items = Object.keys(data[selectedYear].modules);
-        } else {
-            // Old structure: directly modules under year
-            items = Object.keys(data[selectedYear]);
-        }
-    }
-
-    if (items.length === 0) {
-        grid.innerHTML = '<p style="text-align:center;color:#888;">No modules/trades available for this year.</p>';
+    if (modules.length === 0) {
+        grid.innerHTML = '<p style="text-align:center;color:#888;">No modules found.</p>';
         return;
     }
 
-    // For trade tests, show trade names; for employability, show module names
-    if (testType === 'employability') {
-        title.textContent = 'Select Module';
-    } else {
-        title.textContent = `Select Module for ${testType.charAt(0).toUpperCase() + testType.slice(1)}`;
-    }
-
-    items.sort().forEach(item => {
+    title.textContent = testType === 'employability' ? 'Select Module' : `Select ${testType} Module`;
+    modules.sort().forEach(mod => {
         const btn = document.createElement('button');
         btn.className = 'selection-btn';
-        btn.textContent = item;
-        btn.onclick = () => startTest(item);
+        btn.textContent = mod;
+        btn.onclick = () => startTestWithModule(mod);
         grid.appendChild(btn);
     });
 }
 
 // ============================================================
-// GET QUESTIONS FOR A SPECIFIC TRADE/MODULE
+// START TEST - Direct (Fitter/Plumber)
 // ============================================================
-function getQuestionsFor(moduleName) {
-    let questions = [];
-    const data = QUESTION_BANK[testType];
-
-    if (data && data[selectedYear]) {
-        if (data[selectedYear].modules) {
-            // New structure: year.modules.moduleName.questions
-            if (data[selectedYear].modules[moduleName]) {
-                questions = data[selectedYear].modules[moduleName].questions || [];
-            }
-        } else {
-            // Old structure: year.moduleName directly
-            if (data[selectedYear][moduleName]) {
-                questions = data[selectedYear][moduleName];
-            }
-        }
-    }
-
-    return questions;
-}
-
-// ============================================================
-// START TEST
-// ============================================================
-function startTest(moduleName) {
-    selectedModule = moduleName;
-    const questions = getQuestionsFor(moduleName);
-
-    if (!questions || questions.length === 0) {
-        alert('No questions available for this selection.');
+function startTestDirect(questionsArray, yearName) {
+    if (!questionsArray || questionsArray.length === 0) {
+        alert('No questions available for ' + yearName);
         return;
     }
 
-    totalQuestions = testType === 'employability' ? 25 : 50;
-    timeLimit = testType === 'employability' ? 15 : 30;
-
-    const shuffled = shuffleArray([...questions]);
+    const shuffled = shuffleArray([...questionsArray]);
+    totalQuestions = 50; // Trade default
+    timeLimit = 30;
     currentQuestions = shuffled.slice(0, Math.min(totalQuestions, shuffled.length));
     userAnswers = new Array(currentQuestions.length).fill(null);
     testSubmitted = false;
     seconds = 0;
 
     showScreen('screenTest');
-    document.getElementById('testSubject').textContent =
-        `${selectedYear} – ${selectedModule} (${currentQuestions.length} questions)`;
+    document.getElementById('testSubject').textContent = `${testType.toUpperCase()} – ${yearName} (${currentQuestions.length} Qs)`;
     document.getElementById('testTotalQ').textContent = currentQuestions.length;
     document.getElementById('resultBox').classList.add('hidden');
     document.getElementById('submitBtn').disabled = false;
@@ -462,7 +407,42 @@ function startTest(moduleName) {
 }
 
 // ============================================================
-// RENDER QUESTIONS
+// START TEST - Module (Employability)
+// ============================================================
+function startTestWithModule(moduleName) {
+    selectedModule = moduleName;
+    const data = QUESTION_BANK[testType]?.[selectedYear];
+    let questions = [];
+    if (data?.modules) questions = data.modules[moduleName]?.questions || [];
+    else if (data && typeof data === 'object' && !Array.isArray(data)) questions = data[moduleName] || [];
+
+    if (questions.length === 0) {
+        alert('No questions in this module.');
+        return;
+    }
+
+    const shuffled = shuffleArray([...questions]);
+    totalQuestions = testType === 'employability' ? 25 : 50;
+    timeLimit = testType === 'employability' ? 15 : 30;
+    currentQuestions = shuffled.slice(0, Math.min(totalQuestions, shuffled.length));
+    userAnswers = new Array(currentQuestions.length).fill(null);
+    testSubmitted = false;
+    seconds = 0;
+
+    showScreen('screenTest');
+    document.getElementById('testSubject').textContent = `${selectedYear} – ${selectedModule}`;
+    document.getElementById('testTotalQ').textContent = currentQuestions.length;
+    document.getElementById('resultBox').classList.add('hidden');
+    document.getElementById('submitBtn').disabled = false;
+    document.getElementById('submitBtn').textContent = '✅ Submit Test';
+
+    renderQuestions();
+    updateCounter();
+    startTimer();
+}
+
+// ============================================================
+// RENDER, TIMER, SUBMIT, REVIEW (Standard Functions)
 // ============================================================
 function renderQuestions() {
     const container = document.getElementById('questionsContainer');
@@ -471,7 +451,6 @@ function renderQuestions() {
         const div = document.createElement('div');
         div.className = 'question-item';
         div.id = 'q-' + idx;
-        // Use qE/qH if available, else fallback to q
         const qText = q.qE || q.qH || q.q || q.question;
         const opts = q.oE || q.oH || q.options || [];
         div.innerHTML = `
@@ -488,24 +467,18 @@ function renderQuestions() {
         `;
         container.appendChild(div);
     });
-
     userAnswers.forEach((ans, idx) => {
         if (ans !== null) {
-            const labels = document.querySelectorAll(`#q-${idx} .options label`);
-            labels.forEach((label, oi) => {
+            document.querySelectorAll(`#q-${idx} .options label`).forEach((label, oi) => {
                 if (oi === ans) label.classList.add('selected');
             });
         }
     });
 }
 
-// ============================================================
-// SELECT ANSWER
-// ============================================================
 function selectAnswer(qIdx, optIdx) {
     if (testSubmitted) return;
     userAnswers[qIdx] = optIdx;
-
     const labels = document.querySelectorAll(`#q-${qIdx} .options label`);
     labels.forEach((label, oi) => {
         label.classList.toggle('selected', oi === optIdx);
@@ -515,18 +488,11 @@ function selectAnswer(qIdx, optIdx) {
     updateCounter();
 }
 
-// ============================================================
-// UPDATE COUNTER
-// ============================================================
 function updateCounter() {
     const answered = userAnswers.filter(a => a !== null).length;
-    document.getElementById('questionCounter').textContent =
-        `Answered: ${answered} of ${currentQuestions.length} questions`;
+    document.getElementById('questionCounter').textContent = `Answered: ${answered} of ${currentQuestions.length}`;
 }
 
-// ============================================================
-// TIMER
-// ============================================================
 function startTimer() {
     seconds = 0;
     if (timerInterval) clearInterval(timerInterval);
@@ -545,58 +511,35 @@ function startTimer() {
     }, 1000);
 }
 
-// ============================================================
-// SUBMIT TEST
-// ============================================================
 function submitTest() {
     if (testSubmitted) return;
-
     const answered = userAnswers.filter(a => a !== null).length;
     if (answered < currentQuestions.length) {
-        const confirmSubmit = confirm(
-            `You have answered only ${answered} out of ${currentQuestions.length} questions.\n` +
-            `Remaining questions will be marked as skipped.\n\nAre you sure you want to submit?`
-        );
-        if (!confirmSubmit) return;
+        if (!confirm(`Answered ${answered} of ${currentQuestions.length}. Skip remaining?`)) return;
     }
-
     testSubmitted = true;
-    if (timerInterval) {
-        clearInterval(timerInterval);
-        timerInterval = null;
-    }
+    if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
 
     let correct = 0, wrong = 0, skipped = 0;
     currentQuestions.forEach((q, idx) => {
         const ans = userAnswers[idx];
         if (ans === null) { skipped++; return; }
         const correctAns = q.correct !== undefined ? q.correct : (q.c || 0);
-        if (ans === correctAns) { correct++; } else { wrong++; }
+        if (ans === correctAns) correct++; else wrong++;
     });
 
     const total = currentQuestions.length;
-    const score = correct;
-    const percentage = Math.round((score / total) * 100);
-
-    document.getElementById('scoreDisplay').textContent = `${score}/${total}`;
+    const percentage = Math.round((correct / total) * 100);
+    document.getElementById('scoreDisplay').textContent = `${correct}/${total}`;
     document.getElementById('correctCount').textContent = correct;
     document.getElementById('wrongCount').textContent = wrong;
     document.getElementById('skippedCount').textContent = skipped;
 
     const statusEl = document.getElementById('statusDisplay');
-    if (percentage >= 80) {
-        statusEl.textContent = '🌟 Excellent! Outstanding performance!';
-        statusEl.className = 'status excellent';
-    } else if (percentage >= 60) {
-        statusEl.textContent = '✅ Good job! Keep practicing!';
-        statusEl.className = 'status pass';
-    } else if (percentage >= 40) {
-        statusEl.textContent = '📖 Fair. Review the topics and try again!';
-        statusEl.className = 'status fail';
-    } else {
-        statusEl.textContent = '💪 Need more practice. Don\'t give up!';
-        statusEl.className = 'status fail';
-    }
+    if (percentage >= 80) { statusEl.textContent = '🌟 Excellent!'; statusEl.className = 'status excellent'; }
+    else if (percentage >= 60) { statusEl.textContent = '✅ Good job!'; statusEl.className = 'status pass'; }
+    else if (percentage >= 40) { statusEl.textContent = '📖 Fair.'; statusEl.className = 'status fail'; }
+    else { statusEl.textContent = '💪 Need practice.'; statusEl.className = 'status fail'; }
 
     document.getElementById('resultBox').classList.remove('hidden');
 
@@ -606,63 +549,40 @@ function submitTest() {
         const labels = div.querySelectorAll('.options label');
         const correctAns = q.correct !== undefined ? q.correct : (q.c || 0);
         labels.forEach((label, oi) => {
-            if (oi === correctAns) {
-                label.classList.add('correct-answer');
-            }
+            if (oi === correctAns) label.classList.add('correct-answer');
             if (userAnswers[idx] !== null && oi === userAnswers[idx] && oi !== correctAns) {
                 label.classList.add('wrong-answer');
             }
         });
     });
-
     document.getElementById('submitBtn').disabled = true;
     document.getElementById('submitBtn').textContent = '✅ Submitted';
     document.getElementById('timerDisplay').textContent = '⏱️ Finished';
 }
 
-// ============================================================
-// REVIEW ANSWERS
-// ============================================================
 function toggleReview() {
     const area = document.getElementById('reviewArea');
-    if (area.classList.contains('active')) {
-        area.classList.remove('active');
-        return;
-    }
+    if (area.classList.contains('active')) { area.classList.remove('active'); return; }
     area.classList.add('active');
-    let html = '<h4 style="color:#003366; margin-bottom:12px;">📖 Answer Review</h4>';
+    let html = '<h4 style="color:#003366;">📖 Answer Review</h4>';
     currentQuestions.forEach((q, idx) => {
         const ans = userAnswers[idx];
         const correctAns = q.correct !== undefined ? q.correct : (q.c || 0);
-        const isCorrect = ans !== null && ans === correctAns;
-        const qText = q.qE || q.qH || q.q || q.question;
         const opts = q.oE || q.oH || q.options || [];
-        let statusClass = 'r-correct';
-        let statusText = '✅ Correct';
-        if (ans === null) {
-            statusClass = 'r-skipped';
-            statusText = '⏭️ Skipped';
-        } else if (!isCorrect) {
-            statusClass = 'r-wrong';
-            statusText = '❌ Wrong';
-        }
-        const userAnsText = ans !== null ? opts[ans] : 'Skipped';
-        const correctAnsText = opts[correctAns];
+        const qText = q.qE || q.qH || q.q || q.question;
+        const isCorrect = ans !== null && ans === correctAns;
+        let status = '⏭️ Skipped', cls = 'r-skipped';
+        if (ans !== null) { status = isCorrect ? '✅ Correct' : '❌ Wrong'; cls = isCorrect ? 'r-correct' : 'r-wrong'; }
         html += `
             <div class="review-item">
                 <strong>Q${idx+1}:</strong> ${qText}<br>
-                <span class="${statusClass}">${statusText} – Your answer: ${userAnsText}</span>
-                ${!isCorrect && ans !== null ? `<br><span class="r-correct">✅ Correct answer: ${correctAnsText}</span>` : ''}
-                ${ans === null ? `<br><span class="r-correct">✅ Correct answer: ${correctAnsText}</span>` : ''}
+                <span class="${cls}">${status} – Your: ${ans !== null ? opts[ans] : 'Skipped'} | Correct: ${opts[correctAns]}</span>
             </div>
         `;
     });
     area.innerHTML = html;
 }
 
-// ============================================================
-// RESET
-// ============================================================
 function resetTest() {
     if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
     testSubmitted = false;
@@ -677,43 +597,15 @@ function resetTest() {
     document.getElementById('questionsContainer').innerHTML = '';
 }
 
-function resetFullTest() {
-    resetTest();
-    showScreen('screenModule');
-    loadModules();
-}
+function resetFullTest() { resetTest(); showScreen('screenModule'); loadModules(); }
 
-// ============================================================
-// UTILITY
-// ============================================================
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-// ============================================================
-// SCROLL TO TOP
-// ============================================================
-const scrollBtn = document.getElementById('scrollTop');
-if (scrollBtn) {
-    window.addEventListener('scroll', function() {
-        scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
-    });
-    scrollBtn.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
+function shuffleArray(arr) { for (let i = arr.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [arr[i], arr[j]] = [arr[j], arr[i]]; } return arr; }
 
 // ============================================================
 // INIT
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
-    const footerP = document.querySelector('footer p');
-    if (footerP) footerP.textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
-
+    document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
     const loader = document.getElementById('loaderScreen');
     const mainScreen = document.getElementById('screenMain');
 
@@ -722,17 +614,16 @@ document.addEventListener('DOMContentLoaded', function() {
             loader.style.display = 'none';
             mainScreen.classList.add('active');
             renderMainMenu();
-            console.log('✅ Question Bank loaded successfully!');
-            console.log('📊 Available Trades:', Object.keys(QUESTION_BANK));
+            console.log('✅ Loaded! Trades:', Object.keys(QUESTION_BANK));
         })
         .catch((err) => {
             loader.innerHTML = `
                 <p style="color:#dc3545; font-size:1.2rem;">❌ Failed to load question bank</p>
-                <p style="color:#888; font-size:0.9rem;">Make sure <strong>/js/question-bank.js</strong> exists.</p>
+                <p style="color:#888; font-size:0.9rem;">Make sure <strong>/js/question-bank.js</strong> exists and has <strong>window.QUESTION_BANK</strong> exported.</p>
                 <p style="color:#888; font-size:0.85rem;">Error: ${err}</p>
                 <button onclick="location.reload()" style="margin-top:16px; padding:10px 24px; background:#003366; color:#fff; border:none; border-radius:6px; cursor:pointer;">🔄 Retry</button>
             `;
-            console.error('❌ Error loading question bank:', err);
+            console.error('❌ Error:', err);
         });
 });
 </script>
