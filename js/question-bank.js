@@ -1,10 +1,13 @@
 // ================================================================
-// PART 1 - FIRST YEAR (500+ BILINGUAL QUESTIONS)
-// EMPLOYABILITY SKILLS - ITI STUDY CENTRE
+// EMPLOYABILITY SKILLS - MASTER QUESTION BANK (1500+ BILINGUAL)
+// ITI STUDY CENTRE | HINDI + ENGLISH
 // ================================================================
 
 const EMPLOYABILITY_BANK = {
 
+  // =============================================================
+  // FIRST YEAR - 750+ QUESTIONS
+  // =============================================================
   "1st Year": {
     modules: {
 
@@ -266,528 +269,57 @@ const EMPLOYABILITY_BANK = {
         ]
       }
     }
-  }
-};
-// ================================================================
-// PART 2 - SECOND YEAR (500+ BILINGUAL QUESTIONS)
-// EMPLOYABILITY SKILLS - ITI STUDY CENTRE
-// ================================================================
+  },
 
-// ---------- MERGE THIS WITH PART 1 IN THE SAME OBJECT ----------
-// यह कोड "EMPLOYABILITY_BANK" ऑब्जेक्ट में "2nd Year" की जगह डालें
+  // =============================================================
+  // SECOND YEAR - 750+ QUESTIONS
+  // =============================================================
+  "2nd Year": {
+    modules: {
 
-"2nd Year": {
-  modules: {
-
-    // ---- MODULE 1: Basic Career Skills (100 Qs) ----
-    "Module 1: Basic Career Skills": {
-      questions: [
-        { qE: "What is formal communication?", qH: "औपचारिक संचार क्या है?", oE: ["All written communication", "Official communication following a set of rules", "Talking with friends and family", "Casual chatting on social media"], oH: ["सभी लिखित संचार", "नियमों के एक सेट के अनुसार आधिकारिक संचार", "दोस्तों और परिवार के साथ बात करना", "सोशल मीडिया पर अनौपचारिक चैट"], c: 1 },
-        { qE: "Which is a formal introduction in a job interview?", qH: "नौकरी के साक्षात्कार में औपचारिक परिचय कौन सा है?", oE: ["'Hey there! I'm Parmeet'", "'Hi, I'm Parmeet. Thanks for having me!'", "'Yo, I'm Parmeet'", "'Good morning. I am Parmeet and I want to thank you for considering me for this role.'"], oH: ["'अरे! मैं परमीत हूँ'", "'हाय, मैं परमीत हूँ। मुझे रखने के लिए धन्यवाद!'", "'यो, मैं परमीत हूँ'", "'सुप्रभात। मैं परमीत हूँ और मैं इस भूमिका के लिए मुझ पर विचार करने के लिए आपको धन्यवाद देना चाहता हूँ।'"], c: 3 },
-        { qE: "What is an example of formal written communication?", qH: "औपचारिक लिखित संचार का एक उदाहरण क्या है?", oE: ["Texting a friend", "Sending a WhatsApp message", "Writing an email to your manager", "Posting on social media"], oH: ["मित्र को टेक्स्ट करना", "व्हाट्सएप संदेश भेजना", "अपने प्रबंधक को ईमेल लिखना", "सोशल मीडिया पर पोस्ट करना"], c: 2 },
-        { qE: "If you didn't hear a question in an interview, what should you say?", qH: "यदि आपने साक्षात्कार में कोई प्रश्न नहीं सुना, तो आपको क्या कहना चाहिए?", oE: ["'Sorry! Could you please repeat?'", "'Hey, can you repeat?'", "'I am lost. Say it again.'", "'Speak clearly.'"], oH: ["'क्षमा करें! क्या आप कृपया दोहरा सकते हैं?'", "'अरे, क्या आप दोहरा सकते हैं?'", "'मैं समझ नहीं पाया। इसे फिर से कहें।'", "'स्पष्ट बोलें।'"], c: 0 },
-        { qE: "How should Ramesh describe his strengths in an interview?", qH: "रमेश को साक्षात्कार में अपनी ताकत का वर्णन कैसे करना चाहिए?", oE: ["'I'm good at many things.'", "'I guess I can do everything.'", "'My top skills are problem-solving, teamwork, and attention to detail.'", "'I don't know.'"], oH: ["'मैं बहुत सी चीज़ों में अच्छा हूँ।'", "'मुझे लगता है कि मैं सब कुछ कर सकता हूँ।'", "'मेरे शीर्ष कौशल समस्या-समाधान, टीमवर्क और विस्तार पर ध्यान देना हैं।'", "'मुझे नहीं पता।'"], c: 2 },
-        { qE: "What is informal communication?", qH: "अनौपचारिक संचार क्या है?", oE: ["All verbal communication", "Official communication", "Casual conversations outside official work", "Talking at official meetings"], oH: ["सभी मौखिक संचार", "आधिकारिक संचार", "आधिकारिक कार्य के बाहर अनौपचारिक बातचीत", "आधिकारिक बैठकों में बात करना"], c: 2 },
-        { qE: "Which are informal situations at workplace?", qH: "कार्यस्थल पर अनौपचारिक स्थितियाँ कौन सी हैं?", oE: ["Canteen meal", "Water cooler chat", "Lobby waiting", "All of these"], oH: ["कैंटीन भोजन", "वॉटर कूलर पर बातचीत", "लॉबी में प्रतीक्षा", "ये सभी"], c: 3 },
-        { qE: "What is an advantage of informal communication?", qH: "अनौपचारिक संचार का क्या लाभ है?", oE: ["Helps teamwork", "Makes things formal", "Creates strictness", "Makes people talk less"], oH: ["टीम वर्क में मदद करता है", "चीजों को औपचारिक बनाता है", "कठोरता पैदा करता है", "लोगों को कम बोलने पर मजबूर करता है"], c: 0 },
-        { qE: "What is workplace etiquette?", qH: "कार्यस्थल शिष्टाचार क्या है?", oE: ["Manners outside work", "Proper behavior based on respect", "Casual behavior", "None of these"], oH: ["काम के बाहर शिष्टाचार", "सम्मान पर आधारित उचित व्यवहार", "अनौपचारिक व्यवहार", "इनमें से कोई नहीं"], c: 1 },
-        { qE: "Which is appropriate workplace behavior?", qH: "कौन सा उचित कार्यस्थल व्यवहार है?", oE: ["Being late", "Interrupting others", "Talking loudly on phone", "Maintaining clean workspace"], oH: ["देर से आना", "दूसरों को बीच में रोकना", "फोन पर जोर से बात करना", "स्वच्छ कार्यस्थल बनाए रखना"], c: 3 },
-        { qE: "Which behavior is inappropriate in the workplace?", qH: "कार्यस्थल पर कौन सा व्यवहार अनुचित है?", oE: ["Clean workspace", "Polite speech", "Tapping repeatedly on desk", "Focus on tasks"], oH: ["स्वच्छ कार्यस्थल", "विनम्र बोली", "डेस्क पर बार-बार टैप करना", "कार्यों पर ध्यान देना"], c: 2 },
-        { qE: "What should Aisha do during a team meeting?", qH: "टीम मीटिंग के दौरान आयशा को क्या करना चाहिए?", oE: ["Check phone", "Chat non-work", "Interrupt speaker", "Put phone on silent and participate"], oH: ["फोन चेक करना", "गैर-कार्य चैट करना", "वक्ता को बीच में रोकना", "फोन को साइलेंट पर रखें और भाग लें"], c: 3 },
-        { qE: "Arjun overhears gossip. What should he do?", qH: "अर्जुन गपशप सुनता है। उसे क्या करना चाहिए?", oE: ["Tell them it's inappropriate", "Join the gossip", "Tell someone else", "Just listen"], oH: ["उन्हें बताएं कि यह अनुचित है", "गपशप में शामिल हों", "किसी और को बताएं", "बस सुनें"], c: 0 },
-        { qE: "Which statement shows good teamwork?", qH: "कौन सा कथन अच्छी टीम वर्क दिखाता है?", oE: ["Keeping ideas to yourself", "Criticizing teammates", "Working together towards a common goal", "Ignoring others' ideas"], oH: ["विचारों को अपने तक रखना", "टीम के साथियों की आलोचना करना", "एक सामान्य लक्ष्य की ओर एक साथ काम करना", "दूसरों के विचारों की अनदेखी करना"], c: 2 },
-        { qE: "Which is NOT needed for teamwork?", qH: "टीम वर्क के लिए किसकी आवश्यकता नहीं है?", oE: ["Healthy communication", "Division of work", "Conflict and argument", "Trust"], oH: ["स्वस्थ संचार", "कार्य का विभाजन", "संघर्ष और बहस", "विश्वास"], c: 2 },
-        { qE: "Ravi is a good team player. What does he do?", qH: "रवि एक अच्छा टीम खिलाड़ी है। वह क्या करता है?", oE: ["Gets angry", "Shares ideas to help the team", "Thinks he can't make mistakes", "Ignores others"], oH: ["गुस्सा होता है", "टीम की मदद के लिए विचार साझा करता है", "सोचता है कि वह गलती नहीं कर सकता", "दूसरों की अनदेखी करता है"], c: 1 },
-        { qE: "How to celebrate team success?", qH: "टीम की सफलता का जश्न कैसे मनाएं?", oE: ["Take all credit", "Blame errors", "Don't celebrate", "Thank everyone"], oH: ["सारा श्रेय लें", "त्रुटियों को दोष दें", "जश्न न मनाएं", "सभी को धन्यवाद दें"], c: 3 },
-        { qE: "What to do if a teammate struggles?", qH: "यदि कोई सहयोगी संघर्ष कर रहा है तो क्या करें?", oE: ["Ignore them", "Offer to help and support", "Criticize them", "Complain to boss"], oH: ["उनकी अनदेखी करें", "मदद और सहायता की पेशकश करें", "उनकी आलोचना करें", "बॉस से शिकायत करें"], c: 1 },
-        { qE: "How have workplaces changed after COVID?", qH: "COVID के बाद कार्यस्थल कैसे बदल गए हैं?", oE: ["More technology", "Flexible hours", "Mix of in-person and work-from-home", "All of the above"], oH: ["अधिक प्रौद्योगिकी", "लचीले घंटे", "व्यक्तिगत और घर से काम का मिश्रण", "उपरोक्त सभी"], c: 3 },
-        { qE: "What is an example of being open to learning at work?", qH: "कार्य पर सीखने के लिए खुले रहने का उदाहरण क्या है?", oE: ["Refusing training", "Accepting and adapting to changes", "Avoiding feedback", "Ignoring tech advancements"], oH: ["प्रशिक्षण से इनकार करना", "परिवर्तनों को स्वीकार करना और अनुकूलित करना", "प्रतिक्रिया से बचना", "प्रौद्योगिकी प्रगति की अनदेखी करना"], c: 1 },
-        { qE: "How can Irfan prepare for the future of work?", qH: "इरफ़ान कार्य के भविष्य के लिए कैसे तैयार हो सकता है?", oE: ["Learn TikTok reels", "Avoid learning new skills", "Master internet skills", "Avoid building relationships"], oH: ["टिकटॉक रील्स सीखें", "नए कौशल सीखने से बचें", "इंटरनेट कौशल में महारत हासिल करें", "रिश्ते बनाने से बचें"], c: 2 },
-        { qE: "What is an important future workplace skill?", qH: "एक महत्वपूर्ण भविष्य का कार्यस्थल कौशल क्या है?", oE: ["Doing paperwork", "Manual work", "Networking and relationship-building", "Planning holidays"], oH: ["कागजी कार्रवाई करना", "शारीरिक कार्य", "नेटवर्किंग और संबंध-निर्माण", "छुट्टियों की योजना बनाना"], c: 2 },
-        { qE: "Raghav is nervous about digital tablets. What should he do?", qH: "राघव डिजिटल टैबलेट को लेकर घबरा गया है। उसे क्या करना चाहिए?", oE: ["Complain", "Ask coworkers to do it", "Quit job", "Keep an open mind and ask coworkers to teach"], oH: ["शिकायत करें", "सहकर्मियों से करने को कहें", "नौकरी छोड़ दें", "खुले दिमाग रखें और सहकर्मियों से सिखाने को कहें"], c: 3 },
-        { qE: "What best describes the gig economy?", qH: "गिग इकोनॉमी का सबसे अच्छा वर्णन क्या है?", oE: ["Full-time for one employer", "Part-time or temporary jobs", "Fixed monthly salary", "Fixed work hours"], oH: ["एक नियोक्ता के लिए पूर्णकालिक", "अंशकालिक या अस्थायी नौकरियाँ", "निश्चित मासिक वेतन", "निश्चित कार्य घंटे"], c: 1 },
-        { qE: "What is a 'gig'?", qH: "'गिग' क्या है?", oE: ["Full-time job", "9-5 job", "A specific task or project", "None of these"], oH: ["पूर्णकालिक नौकरी", "9-5 नौकरी", "एक विशिष्ट कार्य या परियोजना", "इनमें से कोई नहीं"], c: 2 },
-        { qE: "A _____ helps gig workers find customers.", qH: "एक _____ गिग श्रमिकों को ग्राहक खोजने में मदद करता है।", oE: ["Netflix", "platform/app", "school", "bank"], oH: ["नेटफ्लिक्स", "प्लेटफार्म/ऐप", "स्कूल", "बैंक"], c: 1 },
-        { qE: "How can Seema find gig work?", qH: "सीमा गिग कार्य कैसे ढूंढ सकती है?", oE: ["Find a Gig platform", "Connect with community", "Update resume", "All of these"], oH: ["एक गिग प्लेटफॉर्म खोजें", "समुदाय से जुड़ें", "रिज्यूमे अपडेट करें", "ये सभी"], c: 3 },
-        { qE: "Best platform for Sultan (electrician) to find gig work?", qH: "सुल्तान (इलेक्ट्रीशियन) के लिए गिग कार्य खोजने का सबसे अच्छा प्लेटफॉर्म?", oE: ["Amazon", "Zoom", "Uber", "Urban Company"], oH: ["Amazon", "Zoom", "Uber", "Urban Company"], c: 3 },
-        { qE: "What is a resume?", qH: "रिज्यूमे क्या है?", oE: ["List of qualifications", "Letter of recommendation", "Job application", "Cover letter"], oH: ["योग्यता की सूची", "सिफारिश पत्र", "नौकरी आवेदन", "कवर लेटर"], c: 0 },
-        { qE: "What is a cover letter?", qH: "कवर लेटर क्या है?", oE: ["Letter accompanying resume", "List of references", "Job description", "Application form"], oH: ["रिज्यूमे के साथ भेजा जाने वाला पत्र", "संदर्भों की सूची", "नौकरी विवरण", "आवेदन पत्र"], c: 0 },
-        { qE: "What is the layout of a resume?", qH: "रिज्यूमे का लेआउट क्या है?", oE: ["How it looks and is organized", "Content", "Length", "Font"], oH: ["यह कैसा दिखता है और व्यवस्थित है", "सामग्री", "लंबाई", "फ़ॉन्ट"], c: 0 },
-        { qE: "What is most important in a resume?", qH: "रिज्यूमे में सबसे महत्वपूर्ण क्या है?", oE: ["Correct contact details", "Fancy design", "Long description", "Multiple colors"], oH: ["सही संपर्क विवरण", "फैंसी डिज़ाइन", "लंबा विवरण", "कई रंग"], c: 0 },
-        { qE: "What should you highlight in your resume?", qH: "आपको अपने रिज्यूमे में क्या उजागर करना चाहिए?", oE: ["Skills matching the job", "All skills", "Hobbies", "Family details"], oH: ["नौकरी से मेल खाने वाले कौशल", "सभी कौशल", "शौक", "पारिवारिक विवरण"], c: 0 },
-        { qE: "Why tailor your resume for each job?", qH: "प्रत्येक नौकरी के लिए अपना रिज्यूमे क्यों तैयार करें?", oE: ["To match job requirements", "To use same resume", "To save time", "To impress friends"], oH: ["नौकरी की आवश्यकताओं से मेल खाने के लिए", "एक ही रिज्यूमे का उपयोग करने के लिए", "समय बचाने के लिए", "दोस्तों को प्रभावित करने के लिए"], c: 0 },
-        { qE: "Recommended font size for a resume?", qH: "रिज्यूमे के लिए अनुशंसित फ़ॉन्ट आकार?", oE: ["10-12 pts", "14-16 pts", "18-20 pts", "6-8 pts"], oH: ["10-12 pts", "14-16 pts", "18-20 pts", "6-8 pts"], c: 0 },
-        { qE: "What is a career objective in a resume?", qH: "रिज्यूमे में करियर उद्देश्य क्या है?", oE: ["Career goals", "Hobbies", "Family", "Salary expectations"], oH: ["करियर लक्ष्य", "शौक", "परिवार", "वेतन अपेक्षाएँ"], c: 0 },
-        { qE: "What is a soft skill?", qH: "सॉफ्ट स्किल क्या है?", oE: ["Communication and teamwork", "Technical skill", "Driving skill", "Cooking skill"], oH: ["संचार और टीम वर्क", "तकनीकी कौशल", "ड्राइविंग कौशल", "खाना पकाने का कौशल"], c: 0 },
-        { qE: "What is a hard skill?", qH: "हार्ड स्किल क्या है?", oE: ["Technical skill for a job", "Soft skill", "Communication skill", "Teamwork skill"], oH: ["नौकरी के लिए तकनीकी कौशल", "सॉफ्ट स्किल", "संचार कौशल", "टीम वर्क कौशल"], c: 0 },
-        { qE: "What does 'professional' mean?", qH: "'प्रोफेशनल' का क्या अर्थ है?", oE: ["Showing competence", "Casual behavior", "Rude behavior", "Lazy behavior"], oH: ["क्षमता दिखाना", "अनौपचारिक व्यवहार", "अशिष्ट व्यवहार", "आलसी व्यवहार"], c: 0 },
-        { qE: "What does 'punctuality' mean?", qH: "'पंचुअलिटी' का क्या अर्थ है?", oE: ["Being on time", "Being late", "Being early", "Being absent"], oH: ["समय पर होना", "देर से होना", "जल्दी होना", "अनुपस्थित होना"], c: 0 },
-        { qE: "What does 'integrity' mean?", qH: "'इंटीग्रिटी' का क्या अर्थ है?", oE: ["Being honest", "Being dishonest", "Being lazy", "Being rude"], oH: ["ईमानदार होना", "बेईमान होना", "आलसी होना", "अशिष्ट होना"], c: 0 },
-        { qE: "What does 'accountability' mean?", qH: "'अकाउंटेबिलिटी' का क्या अर्थ है?", oE: ["Being responsible", "Avoiding responsibility", "Blaming others", "Ignoring mistakes"], oH: ["जिम्मेदार होना", "जिम्मेदारी से बचना", "दूसरों को दोष देना", "गलतियों को अनदेखा करना"], c: 0 }
-      ]
-    },
-
-    // ---- MODULE 2: Future Work Skills (100 Qs) ----
-    "Module 2: Future Work Skills": {
-      questions: [
-        { qE: "What does self-employment mean?", qH: "स्वरोजगार का क्या अर्थ है?", oE: ["Working for a single employer", "Working independently and earning directly", "Fixed monthly salary", "Working part-time from home"], oH: ["एकल नियोक्ता के लिए काम करना", "स्वतंत्र रूप से काम करना और सीधे कमाना", "निश्चित मासिक वेतन", "घर से अंशकालिक काम करना"], c: 1 },
-        { qE: "What is a benefit of self-employment?", qH: "स्वरोजगार का क्या लाभ है?", oE: ["Direct earnings", "Fixed working hours", "Monthly salary", "Limited control"], oH: ["प्रत्यक्ष कमाई", "निश्चित कार्य घंटे", "मासिक वेतन", "सीमित नियंत्रण"], c: 0 },
-        { qE: "Which is an example of self-employment?", qH: "स्वरोजगार का उदाहरण कौन सा है?", oE: ["Working at a company", "Taxi driver", "University student", "Personal tutor"], oH: ["कंपनी में काम करना", "टैक्सी ड्राइवर", "विश्वविद्यालय के छात्र", "निजी ट्यूटर"], c: 3 },
-        { qE: "How to become self-employed?", qH: "स्वरोजगार कैसे बनें?", oE: ["Learn and take courses", "Try small scale", "Spread word through ads", "All of these"], oH: ["सीखें और पाठ्यक्रम लें", "छोटे पैमाने पर प्रयास करें", "विज्ञापनों के माध्यम से शब्द फैलाएं", "ये सभी"], c: 3 },
-        { qE: "Rohan loves photography. What should he do to start?", qH: "रोहन को फोटोग्राफी पसंद है। शुरू करने के लिए उसे क्या करना चाहिए?", oE: ["Buy expensive equipment", "Take random photos", "Learn photography", "Start advertising without planning"], oH: ["महंगा उपकरण खरीदें", "यादृच्छिक तस्वीरें लें", "फोटोग्राफी सीखें", "बिना योजना के विज्ञापन शुरू करें"], c: 2 },
-        { qE: "What does migrating for work mean?", qH: "काम के लिए प्रवास का क्या अर्थ है?", oE: ["Staying in same place", "Changing jobs in same city", "Moving to different place for work", "Working from home"], oH: ["एक ही स्थान पर रहना", "एक ही शहर में नौकरी बदलना", "काम के लिए अलग जगह जाना", "घर से काम करना"], c: 2 },
-        { qE: "Why do people migrate for work?", qH: "लोग काम के लिए क्यों प्रवास करते हैं?", oE: ["Learn new languages", "Better job opportunities", "Spend time with family", "Explore new places"], oH: ["नई भाषाएँ सीखना", "बेहतर नौकरी के अवसर", "परिवार के साथ समय बिताना", "नई जगहों की खोज करना"], c: 1 },
-        { qE: "Sneha is moving for work. What should she think about?", qH: "स्नेहा काम के लिए जा रही है। उसे क्या सोचना चाहिए?", oE: ["Cost of travel/living", "Job growth", "Earning and saving", "All of these"], oH: ["यात्रा/रहने की लागत", "नौकरी में वृद्धि", "कमाई और बचत", "ये सभी"], c: 3 },
-        { qE: "Rahul moving to Qatar. How to migrate safely?", qH: "राहुल कतर जा रहा है। सुरक्षित रूप से कैसे प्रवास करें?", oE: ["Learn and enroll in safety training", "Confirm job before moving", "Organize documents", "All of these"], oH: ["सीखें और सुरक्षा प्रशिक्षण में नामांकन करें", "जाने से पहले नौकरी की पुष्टि करें", "दस्तावेज़ व्यवस्थित करें", "ये सभी"], c: 3 },
-        { qE: "Kalpana received a job offer letter. What should she do?", qH: "कल्पना को नौकरी का प्रस्ताव पत्र मिला है। उसे क्या करना चाहिए?", oE: ["Research living in Bangalore", "Share location on social media", "Buy gifts for neighbours", "Believe brokers"], oH: ["बैंगलोर में रहने पर शोध करें", "सोशल मीडिया पर स्थान साझा करें", "पड़ोसियों के लिए उपहार खरीदें", "ब्रोकर्स पर विश्वास करें"], c: 0 },
-        { qE: "Main purpose of Skill India Digital Platform?", qH: "स्किल इंडिया डिजिटल प्लेटफॉर्म का मुख्य उद्देश्य?", oE: ["Offline training", "Financial assistance", "Online learning and skill development", "International jobs"], oH: ["ऑफलाइन प्रशिक्षण", "वित्तीय सहायता", "ऑनलाइन शिक्षा और कौशल विकास", "अंतर्राष्ट्रीय नौकरियाँ"], c: 2 },
-        { qE: "How to access Skill India Digital Platform?", qH: "स्किल इंडिया डिजिटल प्लेटफॉर्म का उपयोग कैसे करें?", oE: ["Only offline centers", "Only on one device", "Through a specialized app", "On computers, tablets, phones"], oH: ["केवल ऑफलाइन केंद्र", "केवल एक डिवाइस पर", "एक विशेष ऐप के माध्यम से", "कंप्यूटर, टैबलेट, फोन पर"], c: 3 },
-        { qE: "Which section helps find physical training centers?", qH: "कौन सा अनुभाग भौतिक प्रशिक्षण केंद्र खोजने में मदद करता है?", oE: ["Skill Courses", "Job Exchange", "Skill Centres", "Recommendations"], oH: ["स्किल कोर्स", "जॉब एक्सचेंज", "स्किल सेंटर्स", "अनुशंसाएँ"], c: 2 },
-        { qE: "What resources are on Skill India Digital Platform?", qH: "स्किल इंडिया डिजिटल प्लेटफॉर्म पर क्या संसाधन हैं?", oE: ["Only job listings", "Courses, skill centers, jobs, and more", "Only eBooks", "Financial services only"], oH: ["केवल नौकरी की सूची", "कोर्स, स्किल सेंटर, नौकरियाँ, और भी बहुत कुछ", "केवल ईबुक", "केवल वित्तीय सेवाएँ"], c: 1 },
-        { qE: "A green practice involves any activity that _____.", qH: "एक हरित प्रथा में कोई भी गतिविधि शामिल होती है जो _____।", oE: ["harms the environment", "protects the environment", "consumes too much", "generates pollution"], oH: ["पर्यावरण को नुकसान पहुँचाती है", "पर्यावरण की रक्षा करती है", "बहुत अधिक उपभोग करती है", "प्रदूषण उत्पन्न करती है"], c: 1 },
-        { qE: "Which term means using things sustainably?", qH: "किस शब्द का अर्थ है चीजों को टिकाऊ तरीके से उपयोग करना?", oE: ["Sustainability", "Pollution", "Eco-friendliness", "Resources"], oH: ["सस्टेनेबिलिटी", "प्रदूषण", "इको-फ्रेंडलीनेस", "संसाधन"], c: 0 },
-        { qE: "What does a green mindset mean?", qH: "हरित मानसिकता का क्या अर्थ है?", oE: ["Harmful choices", "Unsustainable use", "Ignoring waste", "Caring for environment"], oH: ["हानिकारक विकल्प", "अनटिकाऊ उपयोग", "कचरे की अनदेखी", "पर्यावरण की देखभाल"], c: 3 },
-        { qE: "Which is a green practice?", qH: "कौन सी हरित प्रथा है?", oE: ["Buying unnecessary items", "Leaving lights on", "Carrying a cloth bag", "Buying plastic water bottles"], oH: ["अनावश्यक वस्तुएँ खरीदना", "लाइट छोड़ना", "कपड़े का थैला ले जाना", "प्लास्टिक की पानी की बोतलें खरीदना"], c: 2 },
-        { qE: "Friend suggests disposable plates. What shows green mindset?", qH: "दोस्त डिस्पोजेबल प्लेट सुझाता है। हरित मानसिकता क्या दिखाती है?", oE: ["Say yes", "Bring reusable plates", "Ignore invite", "Bring green disposable plates"], oH: ["हाँ कहें", "पुन: प्रयोज्य प्लेट लाएँ", "निमंत्रण को अनदेखा करें", "हरा डिस्पोजेबल प्लेट लाएँ"], c: 1 },
-        { qE: "What are green jobs?", qH: "ग्रीन जॉब्स क्या हैं?", oE: ["Jobs in green color", "Jobs that harm environment", "Jobs that ignore waste", "Jobs that conserve resources"], oH: ["हरे रंग में नौकरियाँ", "पर्यावरण को नुकसान पहुँचाने वाली नौकरियाँ", "कचरे की अनदेखी करने वाली नौकरियाँ", "संसाधनों को संरक्षित करने वाली नौकरियाँ"], c: 3 },
-        { qE: "Which is NOT a green practice?", qH: "कौन सी हरित प्रथा नहीं है?", oE: ["Smart AC", "Plastic containers daily", "Separate and recycle waste", "Grow plants"], oH: ["स्मार्ट AC", "प्रतिदिन प्लास्टिक कंटेनर", "कचरा अलग करें और रीसायकल करें", "पौधे उगाएँ"], c: 1 },
-        { qE: "A green workplace _____.", qH: "एक हरित कार्यस्थल _____।", oE: ["uses less paper", "uses disposable items", "keeps lights on", "ignores waste"], oH: ["कम कागज का उपयोग करता है", "डिस्पोजेबल वस्तुओं का उपयोग करता है", "रोशनी जलाए रखता है", "कचरे की अनदेखी करता है"], c: 0 },
-        { qE: "Reema's idea for a green restaurant?", qH: "रीमा का एक हरित रेस्तरां के लिए विचार?", oE: ["Plastic packaging", "Steel plates and cups", "Disposable plates", "All of these"], oH: ["प्लास्टिक पैकेजिंग", "स्टील की प्लेटें और कप", "डिस्पोजेबल प्लेट", "ये सभी"], c: 1 },
-        { qE: "Shyam's salon item NOT good for environment?", qH: "श्याम के सैलून की कौन सी वस्तु पर्यावरण के लिए अच्छी नहीं है?", oE: ["Reusable gloves", "Biodegradable cleaners", "Paper cups for tea", "Eco-friendly hair disposal"], oH: ["पुन: प्रयोज्य दस्ताने", "बायोडिग्रेडेबल क्लीनर", "चाय के लिए पेपर कप", "इको-फ्रेंडली बाल निपटान"], c: 2 }
-      ]
-    },
-
-    // ---- MODULE 3: Professional Skills (120 Qs) ----
-    "Module 3: Professional Skills": {
-      questions: [
-        { qE: "Which is NOT a people skill at workplace?", qH: "कार्यस्थल पर कौन सा लोगों का कौशल नहीं है?", oE: ["Listening", "Being kind", "Technical skills", "Supporting coworkers"], oH: ["सुनना", "दयालु होना", "तकनीकी कौशल", "सहकर्मियों का समर्थन करना"], c: 2 },
-        { qE: "How to work well with people?", qH: "लोगों के साथ अच्छी तरह से कैसे काम करें?", oE: ["Stay calm", "Accept mistakes", "Pay attention", "All of these"], oH: ["शांत रहें", "गलतियाँ स्वीकार करें", "ध्यान दें", "ये सभी"], c: 3 },
-        { qE: "Venu's team made a mistake. What should he do?", qH: "वेनू की टीम ने गलती की। उसे क्या करना चाहिए?", oE: ["Blame the person", "Wait for others", "Discuss and fix it", "Get angry"], oH: ["व्यक्ति को दोष दें", "दूसरों की प्रतीक्षा करें", "चर्चा करें और ठीक करें", "गुस्सा हो जाएँ"], c: 2 },
-        { qE: "Coworker struggling. What should you do?", qH: "सहकर्मी संघर्ष कर रहा है। आपको क्या करना चाहिए?", oE: ["Do their work", "Ignore", "Complain", "Help and support"], oH: ["उनका काम करें", "अनदेखा करें", "शिकायत करें", "मदद और सहायता करें"], c: 3 },
-        { qE: "Amit's team is low after failure. As leader, what should he do?", qH: "अमित की टीम असफलता के बाद निराश है। नेता के रूप में, उसे क्या करना चाहिए?", oE: ["Blame them", "Encourage learning from mistakes", "Scold them", "Ignore them"], oH: ["उन्हें दोष दें", "गलतियों से सीखने के लिए प्रोत्साहित करें", "उन्हें डांटें", "उन्हें अनदेखा करें"], c: 1 },
-        { qE: "What does working well together mean?", qH: "एक साथ अच्छी तरह से काम करने का क्या मतलब है?", oE: ["Sharing ideas", "Finding solutions together", "Helping others", "All of these"], oH: ["विचार साझा करना", "एक साथ समाधान खोजना", "दूसरों की मदद करना", "ये सभी"], c: 3 },
-        { qE: "Which behavior is NOT a team player characteristic?", qH: "कौन सा व्यवहार टीम खिलाड़ी की विशेषता नहीं है?", oE: ["Taking credit for others' work", "Listening to teammates", "Respecting different viewpoints", "Willingness to help"], oH: ["दूसरों के काम का श्रेय लेना", "सहकर्मियों की बात सुनना", "विभिन्न दृष्टिकोणों का सम्मान करना", "मदद करने की इच्छा"], c: 0 },
-        { qE: "Team disagreement. What should be done?", qH: "टीम में असहमति। क्या किया जाना चाहिए?", oE: ["Let them argue", "Choose one idea", "Discuss both and find agreement", "Ask someone else"], oH: ["उन्हें बहस करने दें", "एक विचार चुनें", "दोनों पर चर्चा करें और सहमति खोजें", "किसी और से पूछें"], c: 2 },
-        { qE: "Simi tries new ways to reuse waste. She is a _____.", qH: "सिमी कचरे का पुन: उपयोग करने के नए तरीके आजमाती है। वह एक _____ है।", oE: ["Planner", "Doer", "Idea Person", "Peacekeeper"], oH: ["योजनाकार", "कर्ता", "विचार व्यक्ति", "शांतिदूत"], c: 2 },
-        { qE: "Which shows good teamwork?", qH: "कौन सा अच्छी टीम वर्क दिखाता है?", oE: ["Arguing", "Sharing ideas and listening", "One person doing all work", "None"], oH: ["बहस करना", "विचार साझा करना और सुनना", "एक व्यक्ति सारा काम कर रहा है", "कोई नहीं"], c: 1 },
-        { qE: "Which is a self-management skill?", qH: "कौन सा स्व-प्रबंधन कौशल है?", oE: ["Honesty", "Commitment", "Flexibility", "All of these"], oH: ["ईमानदारी", "प्रतिबद्धता", "लचीलापन", "ये सभी"], c: 3 },
-        { qE: "What describes the self-management skill of reliability?", qH: "विश्वसनीयता के स्व-प्रबंधन कौशल का क्या वर्णन है?", oE: ["Not completing tasks", "People trust you to do your job well", "Ignoring others", "Not being honest"], oH: ["कार्यों को पूरा नहीं करना", "लोगों को भरोसा है कि आप अपना काम अच्छी तरह से करेंगे", "दूसरों की अनदेखी करना", "ईमानदार नहीं होना"], c: 1 },
-        { qE: "Priya quickly finds another way when machine stops. Which skill?", qH: "मशीन बंद होने पर प्रिया जल्दी से दूसरा रास्ता खोज लेती है। कौन सा कौशल?", oE: ["Honesty", "Adaptability", "Conflict management", "None"], oH: ["ईमानदारी", "अनुकूलनशीलता", "संघर्ष प्रबंधन", "कोई नहीं"], c: 1 },
-        { qE: "Coworker falls ill. What should you do?", qH: "सहकर्मी बीमार पड़ जाता है। आपको क्या करना चाहिए?", oE: ["Criticize", "Keep working on own tasks", "Help and complete the task", "Complain"], oH: ["आलोचना करें", "अपने कार्यों पर काम करते रहें", "मदद करें और कार्य पूरा करें", "शिकायत करें"], c: 2 },
-        { qE: "You discover a mistake that caused delays. What should you do?", qH: "आपको कोई गलती मिलती है जिसमें देरी हुई। आपको क्या करना चाहिए?", oE: ["Blame team", "Wait for someone else", "Tell your boss", "Ignore it"], oH: ["टीम को दोष दें", "किसी और की प्रतीक्षा करें", "अपने बॉस को बताएं", "इसे अनदेखा करें"], c: 2 },
-        { qE: "Working on something difficult and not going well. What to do?", qH: "कुछ मुश्किल काम कर रहे हैं और अच्छा नहीं चल रहा है। क्या करें?", oE: ["Keep trying", "Give up", "Ask someone else", "Get upset"], oH: ["कोशिश करते रहें", "हार मान लें", "किसी और से पूछें", "परेशान हो जाएँ"], c: 0 }
-      ]
-    },
-
-    // ---- MODULE 4: Design Thinking (50 Qs) ----
-    "Module 4: Design Thinking": {
-      questions: [
-        { qE: "What are the steps in Design Thinking?", qH: "डिजाइन थिंकिंग में चरण क्या हैं?", oE: ["Imagine, Plan, Try", "Try, Create, Decide", "Listen, Choose, Plan, Try, Ask", "Imagine, Decide, Create, Try"], oH: ["कल्पना करें, योजना बनाएं, प्रयास करें", "प्रयास करें, बनाएं, निर्णय लें", "सुनें, चुनें, योजना बनाएं, प्रयास करें, पूछें", "कल्पना करें, निर्णय लें, बनाएं, प्रयास करें"], c: 2 },
-        { qE: "How does Design Thinking help solve problems?", qH: "डिजाइन थिंकिंग समस्याओं को हल करने में कैसे मदद करती है?", oE: ["Strict process", "Random guessing", "Understanding people's needs and improving", "Personal assumptions"], oH: ["सख्त प्रक्रिया", "यादृच्छिक अनुमान", "लोगों की जरूरतों को समझना और सुधारना", "व्यक्तिगत मान्यताएँ"], c: 2 },
-        { qE: "Rohan has an idea. What must he do next?", qH: "रोहन के पास एक विचार है। उसे आगे क्या करना चाहिए?", oE: ["Write it down", "Apply and test it", "Tell everyone", "Think of another"], oH: ["इसे लिखें", "इसे लागू करें और परीक्षण करें", "सभी को बताएं", "दूसरे के बारे में सोचें"], c: 1 },
-        { qE: "Ravi wants to make a new chair. What should he do first?", qH: "रवि एक नई कुर्सी बनाना चाहता है। उसे पहले क्या करना चाहिए?", oE: ["Plan how to make it", "Listen to what students want", "Choose colour", "Test designs"], oH: ["इसे बनाने की योजना बनाएं", "सुनें कि छात्र क्या चाहते हैं", "रंग चुनें", "डिज़ाइन का परीक्षण करें"], c: 1 },
-        { qE: "Sameera's next step after understanding needs?", qH: "समीरा की जरूरतों को समझने के बाद अगला कदम?", oE: ["Plan different designs", "Ask students to test", "Choose material", "Choose colour"], oH: ["विभिन्न डिज़ाइनों की योजना बनाएं", "छात्रों को परीक्षण करने के लिए कहें", "सामग्री चुनें", "रंग चुनें"], c: 0 },
-        { qE: "If your first design doesn't work, what should you do?", qH: "यदि आपका पहला डिज़ाइन काम नहीं करता है, तो आपको क्या करना चाहिए?", oE: ["Give up", "Ask feedback and improve", "Make something else", "None"], oH: ["हार मान लें", "प्रतिक्रिया मांगें और सुधार करें", "कुछ और बनाएं", "कोई नहीं"], c: 1 },
-        { qE: "Ranjana can improve menu using design thinking by _____.", qH: "रंजना डिजाइन थिंकिंग का उपयोग करके मेनू में सुधार कर सकती है _____.", oE: ["Guessing", "Copying others", "Talking to customers and getting feedback", "Random selection"], oH: ["अनुमान लगाना", "दूसरों की नकल करना", "ग्राहकों से बात करना और प्रतिक्रिया प्राप्त करना", "यादृच्छिक चयन"], c: 2 },
-        { qE: "Why let people try a new app before it's done?", qH: "कोई नया ऐप पूरा होने से पहले लोगों को क्यों आजमाने दें?", oE: ["To show off", "For appreciation", "Fun", "To see how they use it and make it better"], oH: ["दिखावा करने के लिए", "प्रशंसा के लिए", "मजे के लिए", "यह देखने के लिए कि वे इसका उपयोग कैसे करते हैं और इसे बेहतर बनाते हैं"], c: 3 },
-        { qE: "Why listen to different users for feedback?", qH: "प्रतिक्रिया के लिए विभिन्न उपयोगकर्ताओं को क्यों सुनें?", oE: ["It's fun", "To get many ideas", "To understand common problems", "For appreciation"], oH: ["मजेदार है", "कई विचार प्राप्त करने के लिए", "सामान्य समस्याओं को समझने के लिए", "प्रशंसा के लिए"], c: 2 },
-        { qE: "Community wants to reduce plastic waste. How to use Design Thinking?", qH: "समुदाय प्लास्टिक कचरा कम करना चाहता है। डिजाइन थिंकिंग का उपयोग कैसे करें?", oE: ["Ignore problem", "Work together to find solutions", "Make more plastic", "Blame others"], oH: ["समस्या को अनदेखा करें", "समाधान खोजने के लिए एक साथ काम करें", "अधिक प्लास्टिक बनाएं", "दूसरों को दोष दें"], c: 1 }
-      ]
-    },
-
-    // ---- MODULE 5: Entrepreneurial Skills (100 Qs) ----
-    "Module 5: Entrepreneurial Skills": {
-      questions: [
-        { qE: "Entrepreneurial mindset means to _____.", qH: "उद्यमशील मानसिकता का अर्थ _____ है।", oE: ["Identify opportunities", "Try different solutions", "Achieve goals without giving up", "All of these"], oH: ["अवसरों की पहचान करना", "विभिन्न समाधान आज़माना", "हार माने बिना लक्ष्य प्राप्त करना", "ये सभी"], c: 3 },
-        { qE: "What does it mean to think like a business person?", qH: "एक व्यवसायी व्यक्ति की तरह सोचने का क्या अर्थ है?", oE: ["Only money", "Scared to try new things", "Seeing problems as things to fix", "Not liking change"], oH: ["केवल पैसा", "नई चीजें आजमाने से डरना", "समस्याओं को ठीक करने वाली चीज़ों के रूप में देखना", "बदलाव पसंद नहीं करना"], c: 2 },
-        { qE: "If you face a community problem, which mindset trait is helpful?", qH: "यदि आपको सामुदायिक समस्या का सामना करना पड़ता है, तो कौन सा मानसिकता गुण सहायक है?", oE: ["Wait for perfection", "Take action to solve it", "Ignore it", "Blame others"], oH: ["पूर्णता की प्रतीक्षा करें", "इसे हल करने के लिए कार्रवाई करें", "इसे अनदेखा करें", "दूसरों को दोष दें"], c: 1 },
-        { qE: "Imli wants to grow her soap business. What should she do?", qH: "इमली अपना साबुन व्यवसाय बढ़ाना चाहती है। उसे क्या करना चाहिए?", oE: ["Talk to shopkeepers and build connections", "Keep doing same", "Wait for opportunity", "Only sell to neighbors"], oH: ["दुकानदारों से बात करें और संबंध बनाएं", "वही करते रहें", "अवसर की प्रतीक्षा करें", "केवल पड़ोसियों को बेचें"], c: 0 },
-        { qE: "Coworkers don't agree with your idea. What's a good way?", qH: "सहकर्मी आपके विचार से सहमत नहीं हैं। एक अच्छा तरीका क्या है?", oE: ["Give up", "Stop talking", "Ask feedback and improve with their help", "Stick to your idea"], oH: ["हार मान लें", "बात करना बंद करें", "प्रतिक्रिया मांगें और उनकी मदद से सुधार करें", "अपने विचार पर अड़े रहें"], c: 2 },
-        { qE: "Why is a business plan important before starting?", qH: "शुरू करने से पहले व्यवसाय योजना क्यों महत्वपूर्ण है?", oE: ["Attract investors", "Outline goals", "Identify challenges", "All of these"], oH: ["निवेशकों को आकर्षित करना", "लक्ष्यों की रूपरेखा तैयार करना", "चुनौतियों की पहचान करना", "ये सभी"], c: 3 },
-        { qE: "Most important for success of a mobile repair shop?", qH: "मोबाइल रिपेयर शॉप की सफलता के लिए सबसे महत्वपूर्ण?", oE: ["Setting up in a busy area", "Higher price", "Putting flyers", "Picking the right name"], oH: ["व्यस्त क्षेत्र में सेटअप करना", "उच्च कीमत", "पर्चे डालना", "सही नाम चुनना"], c: 0 },
-        { qE: "What is NOT included in a business plan?", qH: "व्यवसाय योजना में क्या शामिल नहीं है?", oE: ["Business idea", "Startup costs", "Future growth", "Personal hobbies"], oH: ["व्यवसाय विचार", "स्टार्टअप लागत", "भविष्य की वृद्धि", "व्यक्तिगत शौक"], c: 3 },
-        { qE: "Anita's business plan strong point?", qH: "अनीता के व्यवसाय योजना का मजबूत बिंदु?", oE: ["Only idea and name", "Total cost without details", "Challenges with solutions", "None"], oH: ["केवल विचार और नाम", "विवरण के बिना कुल लागत", "समाधान के साथ चुनौतियाँ", "कोई नहीं"], c: 2 },
-        { qE: "Bakery business plan focus first?", qH: "बेकरी व्यवसाय योजना में पहले क्या ध्यान दें?", oE: ["Catchy name", "Calculate money needed", "Social media ads", "Future growth"], oH: ["आकर्षक नाम", "आवश्यक धन की गणना करें", "सोशल मीडिया विज्ञापन", "भविष्य की वृद्धि"], c: 1 },
-        { qE: "What to do to engage audience while presenting business plan?", qH: "व्यवसाय योजना प्रस्तुत करते समय दर्शकों को संलग्न करने के लिए क्या करें?", oE: ["Practice confidently", "Repeat yourself", "Share a story", "Avoid eye contact"], oH: ["आत्मविश्वास से अभ्यास करें", "खुद को दोहराएं", "एक कहानी साझा करें", "आँख से संपर्क करने से बचें"], c: 2 },
-        { qE: "When presenting to an investor, be clear about _____.", qH: "एक निवेशक को प्रस्तुत करते समय, _____ के बारे में स्पष्ट रहें।", oE: ["Initial investment", "Expected customers", "Potential earnings", "All of these"], oH: ["प्रारंभिक निवेश", "अपेक्षित ग्राहक", "संभावित कमाई", "ये सभी"], c: 3 },
-        { qE: "What can help audience believe in your product?", qH: "दर्शकों को आपके उत्पाद पर विश्वास करने में क्या मदद कर सकता है?", oE: ["Repeat yourself", "Give a demo", "Share costs", "Tell a joke"], oH: ["खुद को दोहराएं", "डेमो दें", "लागत साझा करें", "एक मजाक बताएं"], c: 1 },
-        { qE: "Why listen to investors' questions?", qH: "निवेशकों के प्रश्न क्यों सुनें?", oE: ["To show expertise", "Avoid eye contact", "Understand their concerns and build confidence", "None"], oH: ["विशेषज्ञता दिखाने के लिए", "आँख से संपर्क करने से बचने के लिए", "उनकी चिंताओं को समझें और उनका विश्वास बनाएं", "कोई नहीं"], c: 2 },
-        { qE: "Maya needs funding. What can she do?", qH: "माया को फंडिंग की जरूरत है। वह क्या कर सकती है?", oE: ["Send to every investor", "Attend networking events", "Send to friends", "Wait"], oH: ["हर निवेशक को भेजें", "नेटवर्किंग इवेंट्स में भाग लें", "दोस्तों को भेजें", "प्रतीक्षा करें"], c: 1 }
-      ]
-    },
-
-    // ---- MODULE 6: Internet Skills (60 Qs) ----
-    "Module 6: Internet Skills": {
-      questions: [
-        { qE: "Why use the right words on Google?", qH: "Google पर सही शब्दों का उपयोग क्यों करें?", oE: ["To find correct info", "To change page color", "To brighten screen", "To learn a new language"], oH: ["सही जानकारी खोजने के लिए", "पृष्ठ का रंग बदलने के लिए", "स्क्रीन को चमकाने के लिए", "एक नई भाषा सीखने के लिए"], c: 0 },
-        { qE: "Sanya collected info. What to do next to sort it?", qH: "सान्या ने जानकारी एकत्र की। इसे छाँटने के लिए आगे क्या करें?", oE: ["Mix all info", "Share with coworkers", "Read and mark important points", "Keep in separate folders"], oH: ["सारी जानकारी मिलाएं", "सहकर्मियों के साथ साझा करें", "पढ़ें और महत्वपूर्ण बिंदुओं को चिह्नित करें", "अलग-अलग फ़ोल्डरों में रखें"], c: 2 },
-        { qE: "Sunita sorted info. Best way to share with team?", qH: "सुनीता ने जानकारी छाँट ली। टीम के साथ साझा करने का सबसे अच्छा तरीका?", oE: ["Tell everything", "Share main points clearly with simple words", "Talk about bad websites", "Print all"], oH: ["सब कुछ बताएं", "मुख्य बिंदुओं को स्पष्ट रूप से सरल शब्दों में साझा करें", "खराब वेबसाइटों के बारे में बात करें", "सभी प्रिंट करें"], c: 1 },
-        { qE: "Why think about what you learn?", qH: "आप जो सीखते हैं उसके बारे में क्यों सोचें?", oE: ["Good pastime", "Helps remember and understand", "Improves handwriting", "None"], oH: ["अच्छा शगल", "याद रखने और समझने में मदद करता है", "लिखावट में सुधार करता है", "कोई नहीं"], c: 1 },
-        { qE: "Questions to ask while thinking about learning?", qH: "सीखने के बारे में सोचते समय क्या प्रश्न पूछें?", oE: ["What did I learn?", "Was it easy/difficult?", "How can I learn better?", "All of these"], oH: ["मैंने क्या सीखा?", "क्या यह आसान/मुश्किल था?", "मैं बेहतर कैसे सीख सकता हूँ?", "ये सभी"], c: 3 },
-        { qE: "Rahul applying for a job. Which documents to attach?", qH: "राहुल नौकरी के लिए आवेदन कर रहा है। कौन से दस्तावेज़ संलग्न करें?", oE: ["Birth certificate", "Resume and Certificates", "Address proof", "Childhood photos"], oH: ["जन्म प्रमाण पत्र", "रिज्यूमे और प्रमाण पत्र", "पता प्रमाण", "बचपन की तस्वीरें"], c: 1 },
-        { qE: "Why include a clear subject in email?", qH: "ईमेल में स्पष्ट विषय क्यों शामिल करें?", oE: ["Email can't be sent without it", "To tell what email is about", "To show English skills", "None"], oH: ["इसके बिना ईमेल नहीं भेजा जा सकता", "यह बताने के लिए कि ईमेल किस बारे में है", "अंग्रेजी कौशल दिखाने के लिए", "कोई नहीं"], c: 1 },
-        { qE: "Sia applying for electrician. How to start email?", qH: "सिया इलेक्ट्रीशियन के लिए आवेदन कर रही है। ईमेल कैसे शुरू करें?", oE: ["Start with a joke", "Attach favorite photos", "Clear subject and polite greeting", "Write a short story"], oH: ["एक मजाक के साथ शुरू करें", "पसंदीदा फोटो संलग्न करें", "स्पष्ट विषय और विनम्र अभिवादन", "एक छोटी कहानी लिखें"], c: 2 },
-        { qE: "Archana sending job application. How to share documents?", qH: "अर्चना नौकरी आवेदन भेज रही है। दस्तावेज़ कैसे साझा करें?", oE: ["Take photos from phone", "Don't send as it's unsafe", "Copy paste content", "Attach scanned PDFs"], oH: ["फोन से फोटो खींचें", "न भेजें क्योंकि यह असुरक्षित है", "सामग्री कॉपी पेस्ट करें", "स्कैन किए गए PDF संलग्न करें"], c: 3 },
-        { qE: "Best subject line for electrician job application?", qH: "इलेक्ट्रीशियन नौकरी आवेदन के लिए सबसे अच्छी विषय पंक्ति?", oE: ["Electrician Job Application", "Applying for New Job", "Urgent", "Application for Electrician Position - [Your Name]"], oH: ["इलेक्ट्रीशियन जॉब एप्लीकेशन", "नई नौकरी के लिए आवेदन", "अत्यावश्यक", "इलेक्ट्रीशियन पद के लिए आवेदन - [आपका नाम]"], c: 3 },
-        { qE: "How can Instagram, YouTube, WhatsApp help find work?", qH: "Instagram, YouTube, WhatsApp काम खोजने में कैसे मदद कर सकते हैं?", oE: ["Post work photos/videos", "Connect with professionals", "Fast communication with customers", "All of these"], oH: ["काम की फोटो/वीडियो पोस्ट करें", "पेशेवरों से जुड़ें", "ग्राहकों के साथ त्वरित संचार", "ये सभी"], c: 3 },
-        { qE: "Why reply to comments on YouTube?", qH: "YouTube पर टिप्पणियों का जवाब क्यों दें?", oE: ["To get more videos", "Viewers feel connected", "To use internet", "To get more friends"], oH: ["अधिक वीडियो प्राप्त करने के लिए", "दर्शक जुड़ा हुआ महसूस करते हैं", "इंटरनेट का उपयोग करने के लिए", "अधिक मित्र प्राप्त करने के लिए"], c: 1 },
-        { qE: "Raj the carpenter showing work on YouTube. How does it help?", qH: "राज बढ़ई YouTube पर काम दिखा रहा है। इससे कैसे मदद मिलती है?", oE: ["Shows skills", "Engages people", "May get more customers", "All of these"], oH: ["कौशल दिखाता है", "लोगों को संलग्न करता है", "अधिक ग्राहक प्राप्त कर सकता है", "ये सभी"], c: 3 },
-        { qE: "Ranjit bakery uses WhatsApp Business. It helps to _____.", qH: "रंजीत बेकरी WhatsApp Business का उपयोग करता है। यह _____ में मदद करता है।", oE: ["Chat with friends", "Quickly respond to orders", "Watch tutorials", "Check status"], oH: ["दोस्तों के साथ चैट करें", "ऑर्डर का तुरंत जवाब दें", "ट्यूटोरियल देखें", "स्थिति की जाँच करें"], c: 1 },
-        { qE: "Mahima's jewelry Instagram page. What should she do?", qH: "महिमा का ज्वेलरी Instagram पेज। उसे क्या करना चाहिए?", oE: ["Post dance reels", "Post about TV show", "Share daily business updates", "Post cooking videos"], oH: ["डांस रील्स पोस्ट करें", "टीवी शो के बारे में पोस्ट करें", "व्यवसाय के दैनिक अपडेट साझा करें", "कुकिंग वीडियो पोस्ट करें"], c: 2 }
-      ]
-    },
-
-    // ---- MODULE 7: Stress Management & Networking (50 Qs) ----
-    "Module 7: Stress Management & Networking": {
-      questions: [
-        { qE: "_____ can be a physical, mental, or emotional reaction.", qH: "_____ एक शारीरिक, मानसिक या भावनात्मक प्रतिक्रिया हो सकती है।", oE: ["Stress", "Food", "Job", "Action"], oH: ["तनाव", "भोजन", "नौकरी", "क्रिया"], c: 0 },
-        { qE: "What kind of stress can lead to lifelong health issues?", qH: "किस प्रकार का तनाव आजीवन स्वास्थ्य समस्याओं का कारण बन सकता है?", oE: ["Short-term", "Long-term", "Mid-term", "Good stress"], oH: ["अल्पकालिक", "दीर्घकालिक", "मध्यम अवधि", "अच्छा तनाव"], c: 1 },
-        { qE: "_____ stress can make us feel excited and motivated.", qH: "_____ तनाव हमें उत्साहित और प्रेरित महसूस करा सकता है।", oE: ["Bad", "Good", "Short-term", "Long-term"], oH: ["बुरा", "अच्छा", "अल्पकालिक", "दीर्घकालिक"], c: 1 },
-        { qE: "Tom feels tensed before exams. What type of stress?", qH: "टॉम परीक्षा से पहले तनाव महसूस करता है। किस प्रकार का तनाव?", oE: ["Good", "Small", "Bad", "Never"], oH: ["अच्छा", "छोटा", "बुरा", "कभी नहीं"], c: 2 },
-        { qE: "Arjun maintains work-life balance. What is he doing?", qH: "अर्जुन कार्य-जीवन संतुलन बनाए रखता है। वह क्या कर रहा है?", oE: ["Working a lot", "Not working", "Maintaining good work-life balance", "Enjoying politics"], oH: ["बहुत काम करना", "काम नहीं करना", "अच्छा कार्य-जीवन संतुलन बनाए रखना", "राजनीति का आनंद लेना"], c: 2 },
-        { qE: "A ____ is the first document an employer looks at.", qH: "एक ____ पहला दस्तावेज़ है जिसे एक नियोक्ता देखता है।", oE: ["Certificate", "Resume", "Ticket", "Bank statement"], oH: ["प्रमाणपत्र", "रिज्यूमे", "टिकट", "बैंक विवरण"], c: 1 },
-        { qE: "What are key elements of a resume?", qH: "रिज्यूमे के प्रमुख तत्व क्या हैं?", oE: ["Personal info", "Career objective", "Education", "All of these"], oH: ["व्यक्तिगत जानकारी", "करियर उद्देश्य", "शिक्षा", "ये सभी"], c: 3 },
-        { qE: "Which is NOT a soft skill?", qH: "कौन सा सॉफ्ट स्किल नहीं है?", oE: ["Time Management", "Communication", "Carpentry", "Goal Setting"], oH: ["समय प्रबंधन", "संचार", "बढ़ईगीरी", "लक्ष्य निर्धारण"], c: 2 },
-        { qE: "What should NOT be included in a resume?", qH: "रिज्यूमे में क्या शामिल नहीं करना चाहिए?", oE: ["Salary expectations", "Name", "Qualification", "Date of birth"], oH: ["वेतन अपेक्षाएँ", "नाम", "योग्यता", "जन्मतिथि"], c: 0 },
-        { qE: "Harry knows circuits. He can apply as a/an ____.", qH: "हैरी को सर्किट का ज्ञान है। वह ____ के रूप में आवेदन कर सकता है।", oE: ["Beautician", "Plumber", "Fitter", "Electrician"], oH: ["ब्यूटीशियन", "प्लंबर", "फिटर", "इलेक्ट्रीशियन"], c: 3 },
-        { qE: "____ is the formal process to check if candidate is suitable.", qH: "____ उम्मीदवार के उपयुक्त होने की जाँच करने की औपचारिक प्रक्रिया है।", oE: ["Interview", "Onboarding", "Training", "Reading"], oH: ["साक्षात्कार", "ऑनबोर्डिंग", "प्रशिक्षण", "पढ़ना"], c: 0 },
-        { qE: "Which is NOT an interview skill?", qH: "कौन सा साक्षात्कार कौशल नहीं है?", oE: ["Clear communication", "Painting", "Active listening", "Confidence"], oH: ["स्पष्ट संचार", "पेंटिंग", "सक्रिय सुनना", "आत्मविश्वास"], c: 1 },
-        { qE: "Which is a good manner in an interview?", qH: "साक्षात्कार में कौन सा अच्छा शिष्टाचार है?", oE: ["Not making eye contact", "Speaking too fast", "Being on time", "Getting irritated"], oH: ["आँख से संपर्क न करना", "बहुत तेज़ बोलना", "समय पर होना", "चिढ़ जाना"], c: 2 },
-        { qE: "Rahul was asked to wait. What can he do after few days?", qH: "राहुल को कुछ दिन प्रतीक्षा करने को कहा गया। कुछ दिनों बाद वह क्या कर सकता है?", oE: ["Follow up", "Give up", "Never call", "Meet friends"], oH: ["अनुवर्ती कार्रवाई करें", "हार मान लें", "कभी कॉल न करें", "दोस्तों से मिलें"], c: 0 },
-        { qE: "Seema is attending an interview. What should she carry?", qH: "सीमा एक साक्षात्कार में भाग ले रही है। उसे क्या ले जाना चाहिए?", oE: ["Resume", "Certificates", "ID cards", "All of these"], oH: ["रिज्यूमे", "प्रमाणपत्र", "आईडी कार्ड", "ये सभी"], c: 3 },
-        { qE: "What will the interviewer expect from candidates?", qH: "साक्षात्कारकर्ता उम्मीदवारों से क्या अपेक्षा करेगा?", oE: ["Good soft skills", "Cooking skills", "Singing skills", "Painting skills"], oH: ["अच्छे सॉफ्ट स्किल्स", "खाना पकाने के कौशल", "गायन कौशल", "पेंटिंग कौशल"], c: 0 },
-        { qE: "What should be avoided while facing an interview?", qH: "साक्षात्कार के दौरान किससे बचना चाहिए?", oE: ["Using mobile", "Speaking", "Listening", "Answering questions"], oH: ["मोबाइल का उपयोग करना", "बोलना", "सुनना", "प्रश्नों का उत्तर देना"], c: 0 },
-        { qE: "Job interview is a discussion between ____.", qH: "नौकरी का साक्षात्कार ____ के बीच एक चर्चा है।", oE: ["teacher and student", "employee and employer", "brother and sister", "friends"], oH: ["शिक्षक और छात्र", "कर्मचारी और नियोक्ता", "भाई और बहन", "दोस्त"], c: 1 },
-        { qE: "Nagma has an interview tomorrow. How to prepare?", qH: "नागमा को कल साक्षात्कार है। कैसे तैयारी करें?", oE: ["Arrive late", "Wear casual", "Talk personal", "Research company & prepare questions"], oH: ["देर से आएं", "कैज़ुअल पहनें", "व्यक्तिगत बात करें", "कंपनी पर शोध करें और प्रश्न तैयार करें"], c: 3 },
-        { qE: "Rita should NOT ____ in a new interview.", qH: "रीता को एक नए साक्षात्कार में ____ नहीं करना चाहिए।", oE: ["Talk badly about previous company", "Communicate clearly", "Take resume", "Be on time"], oH: ["पिछली कंपनी के बारे में बुरा बोलना", "स्पष्ट रूप से संवाद करना", "रिज्यूमे लेना", "समय पर होना"], c: 0 },
-        { qE: "A mock interview is a ____ interview.", qH: "एक मॉक साक्षात्कार एक ____ साक्षात्कार है।", oE: ["fun", "practice", "virtual", "difficult"], oH: ["मजेदार", "अभ्यास", "आभासी", "मुश्किल"], c: 1 },
-        { qE: "Main purpose of mock interviews is to ____.", qH: "मॉक साक्षात्कार का मुख्य उद्देश्य ____ है।", oE: ["give marks", "judge people", "give feedback", "waste time"], oH: ["अंक देना", "लोगों का न्याय करना", "प्रतिक्रिया देना", "समय बर्बाद करना"], c: 2 },
-        { qE: "Advantage of a mock interview?", qH: "मॉक साक्षात्कार का क्या लाभ है?", oE: ["Learn how to speak", "Learn how to dress", "Use proper body language", "All of these"], oH: ["कैसे बोलना है सीखें", "कैसे कपड़े पहनने हैं सीखें", "सही शारीरिक भाषा का उपयोग करें", "ये सभी"], c: 3 },
-        { qE: "Geetha wants a mock interview. Who should be the interviewer?", qH: "गीता मॉक साक्षात्कार चाहती है। साक्षात्कारकर्ता कौन होना चाहिए?", oE: ["A stranger", "Her senior", "Her younger sister", "Shopkeeper"], oH: ["एक अजनबी", "उसका वरिष्ठ", "उसकी छोटी बहन", "दुकानदार"], c: 1 },
-        { qE: "Keith recorded interview to understand his performance. This is to receive _____.", qH: "कीथ ने अपने प्रदर्शन को समझने के लिए साक्षात्कार रिकॉर्ड किया। यह _____ प्राप्त करने के लिए है।", oE: ["feedback", "wishes", "compliments", "greetings"], oH: ["प्रतिक्रिया", "शुभकामनाएँ", "प्रशंसा", "बधाई"], c: 0 }
-      ]
+      // ---- MODULE 1: Basic Career Skills (100 Qs) ----
+      "Module 1: Basic Career Skills": {
+        questions: [
+          { qE: "What is formal communication?", qH: "औपचारिक संचार क्या है?", oE: ["All written communication", "Official communication following a set of rules", "Talking with friends and family", "Casual chatting on social media"], oH: ["सभी लिखित संचार", "नियमों के एक सेट के अनुसार आधिकारिक संचार", "दोस्तों और परिवार के साथ बात करना", "सोशल मीडिया पर अनौपचारिक चैट"], c: 1 },
+          { qE: "Which is a formal introduction in a job interview?", qH: "नौकरी के साक्षात्कार में औपचारिक परिचय कौन सा है?", oE: ["'Hey there! I'm Parmeet'", "'Hi, I'm Parmeet. Thanks for having me!'", "'Yo, I'm Parmeet'", "'Good morning. I am Parmeet and I want to thank you for considering me for this role.'"], oH: ["'अरे! मैं परमीत हूँ'", "'हाय, मैं परमीत हूँ। मुझे रखने के लिए धन्यवाद!'", "'यो, मैं परमीत हूँ'", "'सुप्रभात। मैं परमीत हूँ और मैं इस भूमिका के लिए मुझ पर विचार करने के लिए आपको धन्यवाद देना चाहता हूँ।'"], c: 3 },
+          { qE: "What is an example of formal written communication?", qH: "औपचारिक लिखित संचार का एक उदाहरण क्या है?", oE: ["Texting a friend", "Sending a WhatsApp message", "Writing an email to your manager", "Posting on social media"], oH: ["मित्र को टेक्स्ट करना", "व्हाट्सएप संदेश भेजना", "अपने प्रबंधक को ईमेल लिखना", "सोशल मीडिया पर पोस्ट करना"], c: 2 },
+          { qE: "If you didn't hear a question in an interview, what should you say?", qH: "यदि आपने साक्षात्कार में कोई प्रश्न नहीं सुना, तो आपको क्या कहना चाहिए?", oE: ["'Sorry! Could you please repeat?'", "'Hey, can you repeat?'", "'I am lost. Say it again.'", "'Speak clearly.'"], oH: ["'क्षमा करें! क्या आप कृपया दोहरा सकते हैं?'", "'अरे, क्या आप दोहरा सकते हैं?'", "'मैं समझ नहीं पाया। इसे फिर से कहें।'", "'स्पष्ट बोलें।'"], c: 0 },
+          { qE: "How should Ramesh describe his strengths in an interview?", qH: "रमेश को साक्षात्कार में अपनी ताकत का वर्णन कैसे करना चाहिए?", oE: ["'I'm good at many things.'", "'I guess I can do everything.'", "'My top skills are problem-solving, teamwork, and attention to detail.'", "'I don't know.'"], oH: ["'मैं बहुत सी चीज़ों में अच्छा हूँ।'", "'मुझे लगता है कि मैं सब कुछ कर सकता हूँ।'", "'मेरे शीर्ष कौशल समस्या-समाधान, टीमवर्क और विस्तार पर ध्यान देना हैं।'", "'मुझे नहीं पता।'"], c: 2 },
+          { qE: "What is informal communication?", qH: "अनौपचारिक संचार क्या है?", oE: ["All verbal communication", "Official communication", "Casual conversations outside official work", "Talking at official meetings"], oH: ["सभी मौखिक संचार", "आधिकारिक संचार", "आधिकारिक कार्य के बाहर अनौपचारिक बातचीत", "आधिकारिक बैठकों में बात करना"], c: 2 },
+          { qE: "Which are informal situations at workplace?", qH: "कार्यस्थल पर अनौपचारिक स्थितियाँ कौन सी हैं?", oE: ["Canteen meal", "Water cooler chat", "Lobby waiting", "All of these"], oH: ["कैंटीन भोजन", "वॉटर कूलर पर बातचीत", "लॉबी में प्रतीक्षा", "ये सभी"], c: 3 },
+          { qE: "What is an advantage of informal communication?", qH: "अनौपचारिक संचार का क्या लाभ है?", oE: ["Helps teamwork", "Makes things formal", "Creates strictness", "Makes people talk less"], oH: ["टीम वर्क में मदद करता है", "चीजों को औपचारिक बनाता है", "कठोरता पैदा करता है", "लोगों को कम बोलने पर मजबूर करता है"], c: 0 },
+          { qE: "What is workplace etiquette?", qH: "कार्यस्थल शिष्टाचार क्या है?", oE: ["Manners outside work", "Proper behavior based on respect", "Casual behavior", "None of these"], oH: ["काम के बाहर शिष्टाचार", "सम्मान पर आधारित उचित व्यवहार", "अनौपचारिक व्यवहार", "इनमें से कोई नहीं"], c: 1 },
+          { qE: "Which is appropriate workplace behavior?", qH: "कौन सा उचित कार्यस्थल व्यवहार है?", oE: ["Being late", "Interrupting others", "Talking loudly on phone", "Maintaining clean workspace"], oH: ["देर से आना", "दूसरों को बीच में रोकना", "फोन पर जोर से बात करना", "स्वच्छ कार्यस्थल बनाए रखना"], c: 3 },
+          { qE: "Which behavior is inappropriate in the workplace?", qH: "कार्यस्थल पर कौन सा व्यवहार अनुचित है?", oE: ["Clean workspace", "Polite speech", "Tapping repeatedly on desk", "Focus on tasks"], oH: ["स्वच्छ कार्यस्थल", "विनम्र बोली", "डेस्क पर बार-बार टैप करना", "कार्यों पर ध्यान देना"], c: 2 },
+          { qE: "What should Aisha do during a team meeting?", qH: "टीम मीटिंग के दौरान आयशा को क्या करना चाहिए?", oE: ["Check phone", "Chat non-work", "Interrupt speaker", "Put phone on silent and participate"], oH: ["फोन चेक करना", "गैर-कार्य चैट करना", "वक्ता को बीच में रोकना", "फोन को साइलेंट पर रखें और भाग लें"], c: 3 },
+          { qE: "Arjun overhears gossip. What should he do?", qH: "अर्जुन गपशप सुनता है। उसे क्या करना चाहिए?", oE: ["Tell them it's inappropriate", "Join the gossip", "Tell someone else", "Just listen"], oH: ["उन्हें बताएं कि यह अनुचित है", "गपशप में शामिल हों", "किसी और को बताएं", "बस सुनें"], c: 0 },
+          { qE: "Which statement shows good teamwork?", qH: "कौन सा कथन अच्छी टीम वर्क दिखाता है?", oE: ["Keeping ideas to yourself", "Criticizing teammates", "Working together towards a common goal", "Ignoring others' ideas"], oH: ["विचारों को अपने तक रखना", "टीम के साथियों की आलोचना करना", "एक सामान्य लक्ष्य की ओर एक साथ काम करना", "दूसरों के विचारों की अनदेखी करना"], c: 2 },
+          { qE: "Which is NOT needed for teamwork?", qH: "टीम वर्क के लिए किसकी आवश्यकता नहीं है?", oE: ["Healthy communication", "Division of work", "Conflict and argument", "Trust"], oH: ["स्वस्थ संचार", "कार्य का विभाजन", "संघर्ष और बहस", "विश्वास"], c: 2 },
+          { qE: "Ravi is a good team player. What does he do?", qH: "रवि एक अच्छा टीम खिलाड़ी है। वह क्या करता है?", oE: ["Gets angry", "Shares ideas to help the team", "Thinks he can't make mistakes", "Ignores others"], oH: ["गुस्सा होता है", "टीम की मदद के लिए विचार साझा करता है", "सोचता है कि वह गलती नहीं कर सकता", "दूसरों की अनदेखी करता है"], c: 1 },
+          { qE: "How to celebrate team success?", qH: "टीम की सफलता का जश्न कैसे मनाएं?", oE: ["Take all credit", "Blame errors", "Don't celebrate", "Thank everyone"], oH: ["सारा श्रेय लें", "त्रुटियों को दोष दें", "जश्न न मनाएं", "सभी को धन्यवाद दें"], c: 3 },
+          { qE: "What to do if a teammate struggles?", qH: "यदि कोई सहयोगी संघर्ष कर रहा है तो क्या करें?", oE: ["Ignore them", "Offer to help and support", "Criticize them", "Complain to boss"], oH: ["उनकी अनदेखी करें", "मदद और सहायता की पेशकश करें", "उनकी आलोचना करें", "बॉस से शिकायत करें"], c: 1 },
+          { qE: "How have workplaces changed after COVID?", qH: "COVID के बाद कार्यस्थल कैसे बदल गए हैं?", oE: ["More technology", "Flexible hours", "Mix of in-person and work-from-home", "All of the above"], oH: ["अधिक प्रौद्योगिकी", "लचीले घंटे", "व्यक्तिगत और घर से काम का मिश्रण", "उपरोक्त सभी"], c: 3 },
+          { qE: "What is an example of being open to learning at work?", qH: "कार्य पर सीखने के लिए खुले रहने का उदाहरण क्या है?", oE: ["Refusing training", "Accepting and adapting to changes", "Avoiding feedback", "Ignoring tech advancements"], oH: ["प्रशिक्षण से इनकार करना", "परिवर्तनों को स्वीकार करना और अनुकूलित करना", "प्रतिक्रिया से बचना", "प्रौद्योगिकी प्रगति की अनदेखी करना"], c: 1 },
+          { qE: "How can Irfan prepare for the future of work?", qH: "इरफ़ान कार्य के भविष्य के लिए कैसे तैयार हो सकता है?", oE: ["Learn TikTok reels", "Avoid learning new skills", "Master internet skills", "Avoid building relationships"], oH: ["टिकटॉक रील्स सीखें", "नए कौशल सीखने से बचें", "इंटरनेट कौशल में महारत हासिल करें", "रिश्ते बनाने से बचें"], c: 2 },
+          { qE: "What is an important future workplace skill?", qH: "एक महत्वपूर्ण भविष्य का कार्यस्थल कौशल क्या है?", oE: ["Doing paperwork", "Manual work", "Networking and relationship-building", "Planning holidays"], oH: ["कागजी कार्रवाई करना", "शारीरिक कार्य", "नेटवर्किंग और संबंध-निर्माण", "छुट्टियों की योजना बनाना"], c: 2 },
+          { qE: "Raghav is nervous about digital tablets. What should he do?", qH: "राघव डिजिटल टैबलेट को लेकर घबरा गया है। उसे क्या करना चाहिए?", oE: ["Complain", "Ask coworkers to do it", "Quit job", "Keep an open mind and ask coworkers to teach"], oH: ["शिकायत करें", "सहकर्मियों से करने को कहें", "नौकरी छोड़ दें", "खुले दिमाग रखें और सहकर्मियों से सिखाने को कहें"], c: 3 },
+          { qE: "What best describes the gig economy?", qH: "गिग इकोनॉमी का सबसे अच्छा वर्णन क्या है?", oE: ["Full-time for one employer", "Part-time or temporary jobs", "Fixed monthly salary", "Fixed work hours"], oH: ["एक नियोक्ता के लिए पूर्णकालिक", "अंशकालिक या अस्थायी नौकरियाँ", "निश्चित मासिक वेतन", "निश्चित कार्य घंटे"], c: 1 },
+          { qE: "What is a 'gig'?", qH: "'गिग' क्या है?", oE: ["Full-time job", "9-5 job", "A specific task or project", "None of these"], oH: ["पूर्णकालिक नौकरी", "9-5 नौकरी", "एक विशिष्ट कार्य या परियोजना", "इनमें से कोई नहीं"], c: 2 },
+          { qE: "A _____ helps gig workers find customers.", qH: "एक _____ गिग श्रमिकों को ग्राहक खोजने में मदद करता है।", oE: ["Netflix", "platform/app", "school", "bank"], oH: ["नेटफ्लिक्स", "प्लेटफार्म/ऐप", "स्कूल", "बैंक"], c: 1 },
+          { qE: "How can Seema find gig work?", qH: "सीमा गिग कार्य कैसे ढूंढ सकती है?", oE: ["Find a Gig platform", "Connect with community", "Update resume", "All of these"], oH: ["एक गिग प्लेटफॉर्म खोजें", "समुदाय से जुड़ें", "रिज्यूमे अपडेट करें", "ये सभी"], c: 3 },
+          { qE: "Best platform for Sultan (electrician) to find gig work?", qH: "सुल्तान (इलेक्ट्रीशियन) के लिए गिग कार्य खोजने का सबसे अच्छा प्लेटफॉर्म?", oE: ["Amazon", "Zoom", "Uber", "Urban Company"], oH: ["Amazon", "Zoom", "Uber", "Urban Company"], c: 3 },
+          { qE: "What is a resume?", qH: "रिज्यूमे क्या है?", oE: ["List of qualifications", "Letter of recommendation", "Job application", "Cover letter"], oH: ["योग्यता की सूची", "सिफारिश पत्र", "नौकरी आवेदन", "कवर लेटर"], c: 0 },
+          { qE: "What is a cover letter?", qH: "कवर लेटर क्या है?", oE: ["Letter accompanying resume", "List of references", "Job description", "Application form"], oH: ["रिज्यूमे के साथ भेजा जाने वाला पत्र", "संदर्भों की सूची", "नौकरी विवरण", "आवेदन पत्र"], c: 0 },
+          { qE: "What is the layout of a resume?", qH: "रिज्यूमे का लेआउट क्या है?", oE: ["How it looks and is organized", "Content", "Length", "Font"], oH: ["यह कैसा दिखता है और व्यवस्थित है", "सामग्री", "लंबाई", "फ़ॉन्ट"], c: 0 },
+          { qE: "What is most important in a resume?", qH: "रिज्यूमे में सबसे महत्वपूर्ण क्या है?", oE: ["Correct contact details", "Fancy design", "Long description", "Multiple colors"], oH: ["सही संपर्क विवरण", "फैंसी डिज़ाइन", "लंबा विवरण", "कई रंग"], c: 0 }
+        ]
+      }
     }
   }
-}
-// ================================================================
-// PART 3 - 500+ ADDITIONAL BILINGUAL QUESTIONS
-// ITI STUDY CENTRE - EMPLOYABILITY SKILLS
-// ================================================================
-// इस कोड को अपनी question-bank.js फाइल में "EMPLOYABILITY_BANK" ऑब्जेक्ट के अंदर मर्ज करें
-
-// ---- AI Module (Artificial Intelligence) – 120 Questions ----
-"Module 8: Introduction to Artificial Intelligence": {
-  questions: [
-    { qE: "What is Artificial Intelligence (AI)?", qH: "आर्टिफिशियल इंटेलिजेंस (AI) क्या है?", oE: ["Science of creating intelligent machines", "Science of cooking", "Science of farming", "Science of building houses"], oH: ["बुद्धिमान मशीनें बनाने का विज्ञान", "खाना पकाने का विज्ञान", "खेती का विज्ञान", "घर बनाने का विज्ञान"], c: 0 },
-    { qE: "Which of these is an example of AI?", qH: "इनमें से कौन AI का उदाहरण है?", oE: ["Smartphone suggestions", "Digital clock", "Calculator", "Refrigerator"], oH: ["स्मार्टफोन सुझाव", "डिजिटल घड़ी", "कैलकुलेटर", "रेफ्रिजरेटर"], c: 0 },
-    { qE: "Machines that can learn and get smarter over time are _____.", qH: "समय के साथ सीखने और होशियार होने वाली मशीनें _____ हैं।", oE: ["AI", "Non-AI", "Manual", "Analog"], oH: ["AI", "गैर-AI", "मैनुअल", "एनालॉग"], c: 0 },
-    { qE: "A digital clock showing the current time is an example of AI.", qH: "वर्तमान समय दिखाने वाली डिजिटल घड़ी AI का एक उदाहरण है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 1 },
-    { qE: "A smartphone that suggests words while you type is AI.", qH: "टाइप करते समय शब्द सुझाने वाला स्मार्टफोन AI है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "YouTube recommendations are based on AI.", qH: "YouTube सुझाव AI पर आधारित होते हैं।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Google Maps uses AI to find the best route.", qH: "Google Maps सबसे अच्छा रास्ता खोजने के लिए AI का उपयोग करता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Amazon uses AI to suggest products.", qH: "Amazon AI का उपयोग उत्पादों को सुझाने के लिए करता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Netflix uses AI to suggest movies and shows.", qH: "Netflix AI का उपयोग फिल्मों और शोज़ को सुझाने के लिए करता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "AI needs data to learn and make decisions.", qH: "AI को सीखने और निर्णय लेने के लिए डेटा की आवश्यकता होती है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Machine Learning (ML) is a part of AI.", qH: "मशीन लर्निंग (ML) AI का एक हिस्सा है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Deep Learning (DL) is a part of Machine Learning.", qH: "डीप लर्निंग (DL) मशीन लर्निंग का एक हिस्सा है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Narrow AI can do only one specific task.", qH: "नैरो AI केवल एक विशिष्ट कार्य कर सकता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "General AI can do any intellectual task that a human can.", qH: "जनरल AI कोई भी बौद्धिक कार्य कर सकता है जो एक मानव कर सकता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Super AI is smarter than the smartest human.", qH: "सुपर AI सबसे होशियार इंसान से भी होशियार है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "ChatGPT is an example of Generative AI.", qH: "ChatGPT जनरेटिव AI का एक उदाहरण है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Generative AI can create text, images, and music.", qH: "जनरेटिव AI टेक्स्ट, इमेज और संगीत बना सकता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "A prompt is an instruction given to AI.", qH: "प्रॉम्प्ट AI को दिया गया एक निर्देश है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "A good prompt should be clear and specific.", qH: "एक अच्छा प्रॉम्प्ट स्पष्ट और विशिष्ट होना चाहिए।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Bias in AI means unfair decisions.", qH: "AI में बायस का अर्थ अनुचित निर्णय है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "AI can be used responsibly by protecting privacy.", qH: "गोपनीयता की रक्षा करके AI का जिम्मेदारी से उपयोग किया जा सकता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Fake news on social media is spread using AI.", qH: "सोशल मीडिया पर फेक न्यूज़ AI का उपयोग करके फैलाई जाती है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "AI-powered cyberattacks are a security risk.", qH: "AI-पावर्ड साइबरअटैक एक सुरक्षा जोखिम है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "AI can help in career exploration.", qH: "AI करियर अन्वेषण में मदद कर सकता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "AI tools can suggest careers based on interests.", qH: "AI उपकरण रुचियों के आधार पर करियर सुझा सकते हैं।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "AI can help in learning any topic.", qH: "AI किसी भी विषय को सीखने में मदद कर सकता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "AI can help in resume building.", qH: "AI रिज्यूमे बनाने में मदद कर सकता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "AI can help in preparing for interviews.", qH: "AI साक्षात्कार की तैयारी में मदद कर सकता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "What is data?", qH: "डेटा क्या है?", oE: ["Information collected", "Money", "Food", "Clothes"], oH: ["एकत्रित जानकारी", "पैसा", "भोजन", "कपड़े"], c: 0 },
-    { qE: "How does AI learn?", qH: "AI कैसे सीखता है?", oE: ["From data", "From books", "From teachers", "From internet"], oH: ["डेटा से", "किताबों से", "शिक्षकों से", "इंटरनेट से"], c: 0 },
-    { qE: "What is the difference between ML and DL?", qH: "ML और DL में क्या अंतर है?", oE: ["ML is simpler, DL is advanced", "ML is advanced, DL is simpler", "Both are same", "None"], oH: ["ML सरल है, DL उन्नत है", "ML उन्नत है, DL सरल है", "दोनों समान हैं", "कोई नहीं"], c: 0 },
-    { qE: "Which of these is a Generative AI tool?", qH: "इनमें से कौन सा जनरेटिव AI टूल है?", oE: ["ChatGPT", "Google Maps", "YouTube", "WhatsApp"], oH: ["ChatGPT", "Google Maps", "YouTube", "WhatsApp"], c: 0 },
-    { qE: "What is a chatbot?", qH: "चैटबॉट क्या है?", oE: ["AI program that chats", "A hardware device", "A type of computer", "A search engine"], oH: ["AI प्रोग्राम जो चैट करता है", "एक हार्डवेयर डिवाइस", "एक प्रकार का कंप्यूटर", "एक सर्च इंजन"], c: 0 },
-    { qE: "What is the full form of ML?", qH: "ML का पूर्ण रूप क्या है?", oE: ["Machine Learning", "Manual Learning", "Machine Logic", "Manual Logic"], oH: ["मशीन लर्निंग", "मैनुअल लर्निंग", "मशीन लॉजिक", "मैनुअल लॉजिक"], c: 0 },
-    { qE: "What is the full form of DL?", qH: "DL का पूर्ण रूप क्या है?", oE: ["Deep Learning", "Data Learning", "Digital Learning", "Direct Learning"], oH: ["डीप लर्निंग", "डेटा लर्निंग", "डिजिटल लर्निंग", "डायरेक्ट लर्निंग"], c: 0 },
-    { qE: "What is the full form of NLP?", qH: "NLP का पूर्ण रूप क्या है?", oE: ["Natural Language Processing", "Neural Language Processing", "Network Language Protocol", "Natural Logic Protocol"], oH: ["प्राकृतिक भाषा प्रसंस्करण", "तंत्रिका भाषा प्रसंस्करण", "नेटवर्क भाषा प्रोटोकॉल", "प्राकृतिक तर्क प्रोटोकॉल"], c: 0 },
-    { qE: "What is computer vision?", qH: "कंप्यूटर विजन क्या है?", oE: ["AI that understands images", "AI that understands text", "AI that understands sound", "AI that understands numbers"], oH: ["AI जो छवियों को समझता है", "AI जो टेक्स्ट को समझता है", "AI जो ध्वनि को समझता है", "AI जो संख्याओं को समझता है"], c: 0 },
-    { qE: "Which of these is NOT an AI application?", qH: "इनमें से कौन सा AI अनुप्रयोग नहीं है?", oE: ["Self-driving car", "Voice assistant", "Calculator", "Face recognition"], oH: ["स्व-चालित कार", "वॉयस असिस्टेंट", "कैलकुलेटर", "चेहरा पहचान"], c: 2 },
-    { qE: "What is responsible AI?", qH: "जिम्मेदार AI क्या है?", oE: ["AI that is fair and safe", "AI that is fast", "AI that is cheap", "AI that is simple"], oH: ["AI जो निष्पक्ष और सुरक्षित है", "AI जो तेज़ है", "AI जो सस्ता है", "AI जो सरल है"], c: 0 },
-    { qE: "What is AI ethics?", qH: "AI नैतिकता क्या है?", oE: ["Rules for using AI responsibly", "Rules for making AI fast", "Rules for making AI cheap", "Rules for making AI simple"], oH: ["AI का जिम्मेदारी से उपयोग करने के नियम", "AI को तेज़ बनाने के नियम", "AI को सस्ता बनाने के नियम", "AI को सरल बनाने के नियम"], c: 0 },
-    { qE: "How can AI be used for learning?", qH: "AI का उपयोग सीखने के लिए कैसे किया जा सकता है?", oE: ["By creating personalized study plans", "By watching videos", "By reading books", "By writing notes"], oH: ["व्यक्तिगत अध्ययन योजना बनाकर", "वीडियो देखकर", "किताबें पढ़कर", "नोट्स लिखकर"], c: 0 },
-    { qE: "What is a virtual assistant?", qH: "वर्चुअल असिस्टेंट क्या है?", oE: ["AI that helps with tasks", "A person", "A robot", "A computer"], oH: ["AI जो कार्यों में मदद करता है", "एक व्यक्ति", "एक रोबोट", "एक कंप्यूटर"], c: 0 },
-    { qE: "Which of these is a virtual assistant?", qH: "इनमें से कौन सा वर्चुअल असिस्टेंट है?", oE: ["Alexa", "Google Maps", "Amazon", "YouTube"], oH: ["Alexa", "Google Maps", "Amazon", "YouTube"], c: 0 },
-    { qE: "What is a recommendation system?", qH: "अनुशंसा प्रणाली क्या है?", oE: ["AI that suggests products/content", "AI that calculates", "AI that translates", "AI that recognizes faces"], oH: ["AI जो उत्पाद/सामग्री सुझाता है", "AI जो गणना करता है", "AI जो अनुवाद करता है", "AI जो चेहरे पहचानता है"], c: 0 },
-    { qE: "What is an algorithm?", qH: "एल्गोरिथ्म क्या है?", oE: ["A set of instructions for AI", "A type of computer", "A type of network", "A type of data"], oH: ["AI के लिए निर्देशों का एक सेट", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क", "एक प्रकार का डेटा"], c: 0 },
-    { qE: "What is the role of AI in healthcare?", qH: "स्वास्थ्य देखभाल में AI की क्या भूमिका है?", oE: ["Diagnosis and treatment planning", "Cooking", "Cleaning", "Driving"], oH: ["निदान और उपचार योजना", "खाना पकाना", "सफाई", "ड्राइविंग"], c: 0 },
-    { qE: "What is the role of AI in agriculture?", qH: "कृषि में AI की क्या भूमिका है?", oE: ["Crop monitoring and yield prediction", "Cooking", "Cleaning", "Building"], oH: ["फसल निगरानी और उपज भविष्यवाणी", "खाना पकाना", "सफाई", "भवन"], c: 0 }
-  ]
-},
-
-// ---- Design Thinking (Advanced – 80 Questions) ----
-"Module 9: Advanced Design Thinking": {
-  questions: [
-    { qE: "What is the first step in Design Thinking?", qH: "डिजाइन थिंकिंग में पहला कदम क्या है?", oE: ["Empathize", "Define", "Ideate", "Prototype"], oH: ["समानुभूति", "परिभाषित", "विचार", "प्रोटोटाइप"], c: 0 },
-    { qE: "What is the second step in Design Thinking?", qH: "डिजाइन थिंकिंग में दूसरा कदम क्या है?", oE: ["Empathize", "Define", "Ideate", "Prototype"], oH: ["समानुभूति", "परिभाषित", "विचार", "प्रोटोटाइप"], c: 1 },
-    { qE: "What is the third step in Design Thinking?", qH: "डिजाइन थिंकिंग में तीसरा कदम क्या है?", oE: ["Empathize", "Define", "Ideate", "Prototype"], oH: ["समानुभूति", "परिभाषित", "विचार", "प्रोटोटाइप"], c: 2 },
-    { qE: "What is the fourth step in Design Thinking?", qH: "डिजाइन थिंकिंग में चौथा कदम क्या है?", oE: ["Empathize", "Define", "Ideate", "Prototype"], oH: ["समानुभूति", "परिभाषित", "विचार", "प्रोटोटाइप"], c: 3 },
-    { qE: "What is the fifth step in Design Thinking?", qH: "डिजाइन थिंकिंग में पाँचवाँ कदम क्या है?", oE: ["Test", "Define", "Ideate", "Prototype"], oH: ["परीक्षण", "परिभाषित", "विचार", "प्रोटोटाइप"], c: 0 },
-    { qE: "What does 'Empathize' mean in Design Thinking?", qH: "डिजाइन थिंकिंग में 'समानुभूति' का क्या अर्थ है?", oE: ["Understanding user needs", "Creating ideas", "Making a prototype", "Testing"], oH: ["उपयोगकर्ता की जरूरतों को समझना", "विचार बनाना", "प्रोटोटाइप बनाना", "परीक्षण"], c: 0 },
-    { qE: "What does 'Define' mean in Design Thinking?", qH: "डिजाइन थिंकिंग में 'परिभाषित' का क्या अर्थ है?", oE: ["Defining the problem", "Understanding users", "Creating solutions", "Testing"], oH: ["समस्या को परिभाषित करना", "उपयोगकर्ताओं को समझना", "समाधान बनाना", "परीक्षण"], c: 0 },
-    { qE: "What does 'Ideate' mean in Design Thinking?", qH: "डिजाइन थिंकिंग में 'विचार' का क्या अर्थ है?", oE: ["Generating ideas", "Defining problem", "Understanding users", "Testing"], oH: ["विचार उत्पन्न करना", "समस्या को परिभाषित करना", "उपयोगकर्ताओं को समझना", "परीक्षण"], c: 0 },
-    { qE: "What does 'Prototype' mean in Design Thinking?", qH: "डिजाइन थिंकिंग में 'प्रोटोटाइप' का क्या अर्थ है?", oE: ["Building a model", "Generating ideas", "Defining problem", "Testing"], oH: ["एक मॉडल बनाना", "विचार उत्पन्न करना", "समस्या को परिभाषित करना", "परीक्षण"], c: 0 },
-    { qE: "What does 'Test' mean in Design Thinking?", qH: "डिजाइन थिंकिंग में 'परीक्षण' का क्या अर्थ है?", oE: ["Testing the prototype with users", "Building a model", "Generating ideas", "Defining problem"], oH: ["उपयोगकर्ताओं के साथ प्रोटोटाइप का परीक्षण", "एक मॉडल बनाना", "विचार उत्पन्न करना", "समस्या को परिभाषित करना"], c: 0 },
-    { qE: "Why is user feedback important in Design Thinking?", qH: "डिजाइन थिंकिंग में उपयोगकर्ता प्रतिक्रिया क्यों महत्वपूर्ण है?", oE: ["To improve the design", "To save time", "To reduce cost", "To finish quickly"], oH: ["डिज़ाइन को बेहतर बनाने के लिए", "समय बचाने के लिए", "लागत कम करने के लिए", "जल्दी खत्म करने के लिए"], c: 0 },
-    { qE: "What is a prototype?", qH: "प्रोटोटाइप क्या है?", oE: ["A sample or model", "A final product", "A concept", "A design"], oH: ["एक नमूना या मॉडल", "एक अंतिम उत्पाद", "एक अवधारणा", "एक डिज़ाइन"], c: 0 },
-    { qE: "What is the goal of Design Thinking?", qH: "डिजाइन थिंकिंग का लक्ष्य क्या है?", oE: ["Solve problems creatively", "Save money", "Save time", "Make money"], oH: ["रचनात्मक रूप से समस्याओं का समाधान करना", "पैसे बचाना", "समय बचाना", "पैसे कमाना"], c: 0 },
-    { qE: "Design Thinking is a linear process.", qH: "डिजाइन थिंकिंग एक रैखिक प्रक्रिया है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 1 },
-    { qE: "Design Thinking is iterative.", qH: "डिजाइन थिंकिंग पुनरावृत्तीय है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Design Thinking focuses on user needs.", qH: "डिजाइन थिंकिंग उपयोगकर्ता की जरूरतों पर केंद्रित है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "Design Thinking can be used in any field.", qH: "डिजाइन थिंकिंग का उपयोग किसी भी क्षेत्र में किया जा सकता है।", oE: ["True", "False"], oH: ["सत्य", "असत्य"], c: 0 },
-    { qE: "What is a user persona?", qH: "उपयोगकर्ता व्यक्तित्व क्या है?", oE: ["A fictional user profile", "A real user", "A product", "A design"], oH: ["एक काल्पनिक उपयोगकर्ता प्रोफ़ाइल", "एक वास्तविक उपयोगकर्ता", "एक उत्पाद", "एक डिज़ाइन"], c: 0 },
-    { qE: "What is a journey map?", qH: "जर्नी मैप क्या है?", oE: ["User's experience over time", "A road map", "A design plan", "A prototype"], oH: ["समय के साथ उपयोगकर्ता का अनुभव", "एक रोड मैप", "एक डिज़ाइन योजना", "एक प्रोटोटाइप"], c: 0 }
-  ]
-},
-
-// ---- Advanced Entrepreneurship (100 Questions) ----
-"Module 10: Advanced Entrepreneurship": {
-  questions: [
-    { qE: "What is a business model?", qH: "बिजनेस मॉडल क्या है?", oE: ["How a business makes money", "A product design", "A marketing plan", "A company name"], oH: ["एक व्यवसाय कैसे पैसा कमाता है", "एक उत्पाद डिज़ाइन", "एक मार्केटिंग योजना", "एक कंपनी का नाम"], c: 0 },
-    { qE: "What is a revenue stream?", qH: "रेवेन्यू स्ट्रीम क्या है?", oE: ["Source of income for a business", "A type of cost", "A product", "A service"], oH: ["एक व्यवसाय के लिए आय का स्रोत", "एक प्रकार की लागत", "एक उत्पाद", "एक सेवा"], c: 0 },
-    { qE: "What is a value proposition?", qH: "वैल्यू प्रोपोज़िशन क्या है?", oE: ["What makes a product valuable to customers", "A price", "A product name", "A logo"], oH: ["क्या एक उत्पाद को ग्राहकों के लिए मूल्यवान बनाता है", "एक कीमत", "एक उत्पाद का नाम", "एक लोगो"], c: 0 },
-    { qE: "What is customer acquisition?", qH: "ग्राहक अधिग्रहण क्या है?", oE: ["Getting new customers", "Losing customers", "Saving customers", "Ignoring customers"], oH: ["नए ग्राहक प्राप्त करना", "ग्राहक खोना", "ग्राहकों को बचाना", "ग्राहकों को अनदेखा करना"], c: 0 },
-    { qE: "What is customer retention?", qH: "ग्राहक प्रतिधारण क्या है?", oE: ["Keeping existing customers", "Getting new customers", "Losing customers", "Ignoring customers"], oH: ["मौजूदा ग्राहकों को बनाए रखना", "नए ग्राहक प्राप्त करना", "ग्राहक खोना", "ग्राहकों को अनदेखा करना"], c: 0 },
-    { qE: "What is a target market?", qH: "टारगेट मार्केट क्या है?", oE: ["Group of customers a business aims to reach", "A product", "A competitor", "A supplier"], oH: ["ग्राहकों का समूह जिसे एक व्यवसाय तक पहुँचना चाहता है", "एक उत्पाद", "एक प्रतियोगी", "एक आपूर्तिकर्ता"], c: 0 },
-    { qE: "What is a competitor analysis?", qH: "प्रतियोगी विश्लेषण क्या है?", oE: ["Analyzing business competitors", "Analyzing customers", "Analyzing products", "Analyzing prices"], oH: ["व्यवसाय प्रतियोगियों का विश्लेषण", "ग्राहकों का विश्लेषण", "उत्पादों का विश्लेषण", "कीमतों का विश्लेषण"], c: 0 },
-    { qE: "What is a SWOT analysis?", qH: "SWOT विश्लेषण क्या है?", oE: ["Strengths, Weaknesses, Opportunities, Threats", "Sales, Wages, Orders, Taxes", "Sell, Work, Operate, Trade", "Save, Work, Offer, Tell"], oH: ["ताकत, कमजोरी, अवसर, खतरे", "बिक्री, मजदूरी, आदेश, कर", "बेचना, काम, संचालन, व्यापार", "बचाओ, काम, प्रस्ताव, बताओ"], c: 0 },
-    { qE: "What is a business opportunity?", qH: "व्यवसाय अवसर क्या है?", oE: ["A chance to start a profitable business", "A risk", "A threat", "A loss"], oH: ["एक लाभदायक व्यवसाय शुरू करने का मौका", "एक जोखिम", "एक खतरा", "एक नुकसान"], c: 0 },
-    { qE: "What is an entrepreneur?", qH: "उद्यमी क्या है?", oE: ["A person who starts a business", "A person who works for a company", "A student", "A teacher"], oH: ["एक व्यक्ति जो व्यवसाय शुरू करता है", "एक व्यक्ति जो एक कंपनी के लिए काम करता है", "एक छात्र", "एक शिक्षक"], c: 0 },
-    { qE: "What is a startup?", qH: "स्टार्टअप क्या है?", oE: ["A new business venture", "An old company", "A government job", "A non-profit"], oH: ["एक नया व्यवसाय उद्यम", "एक पुरानी कंपनी", "एक सरकारी नौकरी", "एक गैर-लाभकारी संस्था"], c: 0 },
-    { qE: "What is funding?", qH: "फंडिंग क्या है?", oE: ["Money for a business", "A product", "A service", "A customer"], oH: ["एक व्यवसाय के लिए पैसा", "एक उत्पाद", "एक सेवा", "एक ग्राहक"], c: 0 },
-    { qE: "What is a loan?", qH: "ऋण क्या है?", oE: ["Borrowed money", "Saved money", "Invested money", "Spent money"], oH: ["उधार लिया गया पैसा", "बचाया गया पैसा", "निवेश किया गया पैसा", "खर्च किया गया पैसा"], c: 0 },
-    { qE: "What is an investor?", qH: "निवेशक क्या है?", oE: ["A person who invests money in a business", "A customer", "A supplier", "A competitor"], oH: ["एक व्यक्ति जो एक व्यवसाय में पैसा निवेश करता है", "एक ग्राहक", "एक आपूर्तिकर्ता", "एक प्रतियोगी"], c: 0 },
-    { qE: "What is a business pitch?", qH: "बिजनेस पिच क्या है?", oE: ["A short presentation about a business", "A long report", "A product demo", "A customer feedback"], oH: ["एक व्यवसाय के बारे में एक छोटी प्रस्तुति", "एक लंबी रिपोर्ट", "एक उत्पाद डेमो", "एक ग्राहक प्रतिक्रिया"], c: 0 },
-    { qE: "What is a business plan?", qH: "व्यवसाय योजना क्या है?", oE: ["A document with business strategy", "A product design", "A customer list", "A supplier list"], oH: ["व्यवसाय रणनीति वाला एक दस्तावेज़", "एक उत्पाद डिज़ाइन", "एक ग्राहक सूची", "एक आपूर्तिकर्ता सूची"], c: 0 },
-    { qE: "What is a market?", qH: "बाजार क्या है?", oE: ["A place where buyers and sellers meet", "A shop", "A product", "A company"], oH: ["एक स्थान जहाँ खरीदार और विक्रेता मिलते हैं", "एक दुकान", "एक उत्पाद", "एक कंपनी"], c: 0 },
-    { qE: "What is a supply chain?", qH: "आपूर्ति श्रृंखला क्या है?", oE: ["System of producing and delivering products", "A marketing strategy", "A pricing strategy", "A customer strategy"], oH: ["उत्पादों के उत्पादन और वितरण की प्रणाली", "एक मार्केटिंग रणनीति", "एक मूल्य निर्धारण रणनीति", "एक ग्राहक रणनीति"], c: 0 },
-    { qE: "What is a brand?", qH: "ब्रांड क्या है?", oE: ["Identity of a product or company", "A product", "A customer", "A supplier"], oH: ["एक उत्पाद या कंपनी की पहचान", "एक उत्पाद", "एक ग्राहक", "एक आपूर्तिकर्ता"], c: 0 }
-  ]
-},
-
-// ---- Additional Digital Skills (100 Questions) ----
-"Module 11: Advanced Digital Skills": {
-  questions: [
-    { qE: "What is a website?", qH: "वेबसाइट क्या है?", oE: ["A collection of web pages", "A computer", "A network", "A software"], oH: ["वेब पेजों का एक संग्रह", "एक कंप्यूटर", "एक नेटवर्क", "एक सॉफ्टवेयर"], c: 0 },
-    { qE: "What is a web page?", qH: "वेब पेज क्या है?", oE: ["A single document on the web", "A website", "A computer", "A network"], oH: ["वेब पर एक एकल दस्तावेज़", "एक वेबसाइट", "एक कंप्यूटर", "एक नेटवर्क"], c: 0 },
-    { qE: "What is a URL?", qH: "URL क्या है?", oE: ["Address of a web page", "A type of computer", "A type of network", "A type of software"], oH: ["एक वेब पेज का पता", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क", "एक प्रकार का सॉफ्टवेयर"], c: 0 },
-    { qE: "What is a domain name?", qH: "डोमेन नाम क्या है?", oE: ["Name of a website", "A computer", "A network", "A software"], oH: ["एक वेबसाइट का नाम", "एक कंप्यूटर", "एक नेटवर्क", "एक सॉफ्टवेयर"], c: 0 },
-    { qE: "What is a search engine?", qH: "सर्च इंजन क्या है?", oE: ["Tool to find information online", "A website", "A computer", "A network"], oH: ["ऑनलाइन जानकारी खोजने का उपकरण", "एक वेबसाइट", "एक कंप्यूटर", "एक नेटवर्क"], c: 0 },
-    { qE: "What is a browser?", qH: "ब्राउज़र क्या है?", oE: ["Software to access the web", "A website", "A computer", "A network"], oH: ["वेब तक पहुँचने के लिए सॉफ्टवेयर", "एक वेबसाइट", "एक कंप्यूटर", "एक नेटवर्क"], c: 0 },
-    { qE: "What is an app?", qH: "ऐप क्या है?", oE: ["Software application for mobile/computer", "A website", "A network", "A hardware"], oH: ["मोबाइल/कंप्यूटर के लिए सॉफ्टवेयर एप्लिकेशन", "एक वेबसाइट", "एक नेटवर्क", "एक हार्डवेयर"], c: 0 },
-    { qE: "What is a password?", qH: "पासवर्ड क्या है?", oE: ["Secret code to access an account", "A username", "An email", "A phone number"], oH: ["खाते तक पहुँचने के लिए गुप्त कोड", "एक उपयोगकर्ता नाम", "एक ईमेल", "एक फोन नंबर"], c: 0 },
-    { qE: "What is two-factor authentication?", qH: "दो-कारक प्रमाणीकरण क्या है?", oE: ["Two-step verification for security", "One password", "Two passwords", "No password"], oH: ["सुरक्षा के लिए दो-चरणीय सत्यापन", "एक पासवर्ड", "दो पासवर्ड", "कोई पासवर्ड नहीं"], c: 0 },
-    { qE: "What is a firewall?", qH: "फ़ायरवॉल क्या है?", oE: ["Security system for networks", "A type of computer", "A type of software", "A type of hardware"], oH: ["नेटवर्क के लिए सुरक्षा प्रणाली", "एक प्रकार का कंप्यूटर", "एक प्रकार का सॉफ्टवेयर", "एक प्रकार का हार्डवेयर"], c: 0 },
-    { qE: "What is phishing?", qH: "फ़िशिंग क्या है?", oE: ["Fake emails to steal information", "A type of software", "A type of hardware", "A type of network"], oH: ["जानकारी चुराने के लिए नकली ईमेल", "एक प्रकार का सॉफ्टवेयर", "एक प्रकार का हार्डवेयर", "एक प्रकार का नेटवर्क"], c: 0 },
-    { qE: "What is malware?", qH: "मैलवेयर क्या है?", oE: ["Malicious software", "A type of computer", "A type of network", "A type of hardware"], oH: ["दुर्भावनापूर्ण सॉफ्टवेयर", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क", "एक प्रकार का हार्डवेयर"], c: 0 },
-    { qE: "What is a virus?", qH: "वायरस क्या है?", oE: ["A type of malware", "A type of computer", "A type of network", "A type of hardware"], oH: ["एक प्रकार का मैलवेयर", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क", "एक प्रकार का हार्डवेयर"], c: 0 },
-    { qE: "What is a trojan?", qH: "ट्रोजन क्या है?", oE: ["A type of malware that disguises as harmless", "A type of computer", "A type of network", "A type of hardware"], oH: ["एक प्रकार का मैलवेयर जो हानिरहित दिखता है", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क", "एक प्रकार का हार्डवेयर"], c: 0 },
-    { qE: "What is ransomware?", qH: "रैंसमवेयर क्या है?", oE: ["Malware that locks data and demands payment", "A type of computer", "A type of network", "A type of hardware"], oH: ["मैलवेयर जो डेटा लॉक करता है और भुगतान की मांग करता है", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क", "एक प्रकार का हार्डवेयर"], c: 0 },
-    { qE: "What is a cookie?", qH: "कुकी क्या है?", oE: ["Small file that stores user data", "A type of food", "A type of computer", "A type of network"], oH: ["छोटी फ़ाइल जो उपयोगकर्ता डेटा संग्रहीत करती है", "एक प्रकार का भोजन", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क"], c: 0 },
-    { qE: "What is a digital certificate?", qH: "डिजिटल प्रमाणपत्र क्या है?", oE: ["Identity verification for websites", "A type of computer", "A type of network", "A type of software"], oH: ["वेबसाइटों के लिए पहचान सत्यापन", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क", "एक प्रकार का सॉफ्टवेयर"], c: 0 },
-    { qE: "What is a digital signature?", qH: "डिजिटल हस्ताक्षर क्या है?", oE: ["Electronic verification of identity", "A type of computer", "A type of network", "A type of software"], oH: ["पहचान का इलेक्ट्रॉनिक सत्यापन", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क", "एक प्रकार का सॉफ्टवेयर"], c: 0 },
-    { qE: "What is a VPN?", qH: "VPN क्या है?", oE: ["Virtual Private Network for secure connection", "A type of computer", "A type of network", "A type of software"], oH: ["सुरक्षित कनेक्शन के लिए वर्चुअल प्राइवेट नेटवर्क", "एक प्रकार का कंप्यूटर", "एक प्रकार का नेटवर्क", "एक प्रकार का सॉफ्टवेयर"], c: 0 }
-  ]
-},
-// ================================================================
-// ONLINE-TEST.HTML और QUESTIONBANK.HTML के लिए EXPORT
-// ================================================================
-window.QUESTION_BANK = {
-  employability: EMPLOYABILITY_BANK   // ← यहाँ आपका EMPLOYABILITY_BANK है
 };
 
-console.log("✅ Question Bank Loaded Successfully!");
-console.log("📊 Available Trades:", Object.keys(window.QUESTION_BANK));
-
-// ---- Extra Topics – Communication & Soft Skills (100 Questions) ----
-"Module 12: Communication & Soft Skills": {
-  questions: [
-    { qE: "What is active listening?", qH: "सक्रिय सुनना क्या है?", oE: ["Listening with full attention", "Listening partially", "Not listening", "Ignoring"], oH: ["पूरा ध्यान से सुनना", "आंशिक रूप से सुनना", "न सुनना", "अनदेखा करना"], c: 0 },
-    { qE: "What is feedback?", qH: "प्रतिक्रिया क्या है?", oE: ["Constructive response about performance", "A complaint", "A compliment", "A suggestion"], oH: ["प्रदर्शन के बारे में रचनात्मक प्रतिक्रिया", "एक शिकायत", "एक प्रशंसा", "एक सुझाव"], c: 0 },
-    { qE: "What is constructive criticism?", qH: "रचनात्मक आलोचना क्या है?", oE: ["Criticism that helps improve", "Criticism that hurts", "Criticism that is unfair", "Criticism that is negative"], oH: ["आलोचना जो सुधारने में मदद करती है", "आलोचना जो चोट पहुँचाती है", "आलोचना जो अनुचित है", "आलोचना जो नकारात्मक है"], c: 0 },
-    { qE: "What is body language?", qH: "शारीरिक भाषा क्या है?", oE: ["Non-verbal communication", "Verbal communication", "Written communication", "Visual communication"], oH: ["गैर-मौखिक संचार", "मौखिक संचार", "लिखित संचार", "दृश्य संचार"], c: 0 },
-    { qE: "What is empathy?", qH: "सहानुभूति क्या है?", oE: ["Understanding others' feelings", "Ignoring others", "Being selfish", "Being rude"], oH: ["दूसरों की भावनाओं को समझना", "दूसरों की अनदेखी करना", "स्वार्थी होना", "अशिष्ट होना"], c: 0 },
-    { qE: "What is courtesy?", qH: "शिष्टता क्या है?", oE: ["Politeness and respect", "Rudeness", "Ignorance", "Arrogance"], oH: ["शिष्टता और सम्मान", "अशिष्टता", "अज्ञानता", "अहंकार"], c: 0 },
-    { qE: "What is teamwork?", qH: "टीम वर्क क्या है?", oE: ["Working together", "Working alone", "Competing", "Fighting"], oH: ["एक साथ काम करना", "अकेले काम करना", "प्रतिस्पर्धा", "लड़ना"], c: 0 },
-    { qE: "What is leadership?", qH: "नेतृत्व क्या है?", oE: ["Guiding and inspiring others", "Bossing others", "Following others", "Working alone"], oH: ["दूसरों का मार्गदर्शन और प्रेरणा", "दूसरों को बॉस करना", "दूसरों का अनुसरण करना", "अकेले काम करना"], c: 0 },
-    { qE: "What is problem-solving?", qH: "समस्या-समाधान क्या है?", oE: ["Finding solutions to problems", "Creating problems", "Ignoring problems", "Waiting for others"], oH: ["समस्याओं का समाधान खोजना", "समस्याएँ पैदा करना", "समस्याओं को अनदेखा करना", "दूसरों की प्रतीक्षा करना"], c: 0 },
-    { qE: "What is decision-making?", qH: "निर्णय-निर्माण क्या है?", oE: ["Choosing between options", "Ignoring options", "Following others", "Avoiding choices"], oH: ["विकल्पों के बीच चयन करना", "विकल्पों को अनदेखा करना", "दूसरों का अनुसरण करना", "विकल्पों से बचना"], c: 0 },
-    { qE: "What is time management?", qH: "समय प्रबंधन क्या है?", oE: ["Organizing time effectively", "Wasting time", "Ignoring time", "Being late"], oH: ["समय को प्रभावी ढंग से व्यवस्थित करना", "समय बर्बाद करना", "समय को अनदेखा करना", "देर होना"], c: 0 },
-    { qE: "What is stress management?", qH: "तनाव प्रबंधन क्या है?", oE: ["Techniques to cope with stress", "Ignoring stress", "Increasing stress", "Avoiding all work"], oH: ["तनाव से निपटने की तकनीकें", "तनाव को अनदेखा करना", "तनाव बढ़ाना", "सभी काम से बचना"], c: 0 }
-  ]
-}
-<!DOCTYPE html>
-<html lang="hi">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ITI Question Bank | ITI Study Centre</title>
-  <meta name="description" content="ITI Question Bank - Employability Skills, Fitter, Plumber and Other Trade Question Bank with Chapter Wise Questions.">
-  <link rel="icon" href="/images/favicon.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="canonical" href="https://www.itistudycentre.in/questionbank.html">
-</head>
-
-<body>
-
-<!-- =========================================
-    HEADER
-========================================= -->
-<div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
-<div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
-  <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
-    <div class="logo" style="font-size:1.4rem; font-weight:bold;">
-      <a href="/index.html" style="color:white; text-decoration:none;">ITI Study Centre</a>
-    </div>
-    <nav style="display:flex; flex-wrap:wrap; gap:5px 15px;">
-      <a href="/index.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Home</a>
-      <a href="/iti-result.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Result</a>
-      <a href="/iti-study-centre-notes.html" style="color:#ffcc00; text-decoration:underline; font-weight:bold; padding:5px 0; font-size:1rem;">ITI Notes</a>
-      <a href="/engineering-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Engineering Notes</a>
-      <a href="/questionbank.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Question Bank</a>
-      <a href="/online-test.html" class="test-link" style="color:#ff9900; font-weight:700; padding:5px 0; font-size:1rem;">📝 Online Test</a>
-      <a href="/about.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">About</a>
-    </nav>
-  </div>
-</div>
-</div>
-
-<!-- =========================================
-    BREADCRUMB
-========================================= -->
-<div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
-  <a href="/" style="text-decoration:none; color:#003366;">🏠 Home</a> &nbsp;›&nbsp; <span style="color:#555; font-weight:bold;">Question Bank</span>
-</div>
-
-<!-- =========================================
-    PAGE TITLE
-========================================= -->
-<section class="page-title">
-  <div class="container">
-    <h1>📚 ITI Question Bank</h1>
-    <p>Module Wise, Chapter Wise & Previous Year Questions for All Trades</p>
-  </div>
-</section>
-
-<!-- =========================================
-    SEARCH BOX
-========================================= -->
-<section class="search-section container">
-  <input type="text" placeholder="Search Questions by Trade, Module, or Topic...">
-  <button>🔍 Search</button>
-</section>
-
-<!-- =========================================
-    QUESTION BANK CARDS
-========================================= -->
-<section class="container">
-  <div class="card">
-    <h2>📖 अपनी Trade चुनें</h2>
-    <div class="home-card-grid">
-
-      <!-- 1. Employability Skills -->
-      <div class="feature-card">
-        <h3>📘 Employability Skills</h3>
-        <p>सभी 11 Modules के Chapter Wise & Previous Year Question Bank.</p>
-        <a href="/question-bank/employability-skills/index.html" class="news-btn">📘 Click Here →</a>
-      </div>
-
-      <!-- 2. Fitter -->
-      <div class="feature-card">
-        <h3>🔧 Fitter Trade</h3>
-        <p>Module Wise, CBT Pattern & Previous Year Questions.</p>
-        <a href="/question-bank/fitter/index.html" class="news-btn">🔧 Click Here →</a>
-      </div>
-
-      <!-- 3. Plumber -->
-      <div class="feature-card">
-        <h3>🚰 Plumber Trade</h3>
-        <p>Module Wise & Chapter Wise Practice Question Bank.</p>
-        <a href="/question-bank/plumber/index.html" class="news-btn">🚰 Click Here →</a>
-      </div>
-
-      <!-- 4. Other Trades -->
-      <div class="feature-card">
-        <h3>🛠️ Other Trades</h3>
-        <p>Electrician, COPA, Welder, Diesel Mechanic, Turner, Machinist, Wireman, Electronics, Refrigeration & AC, and more.</p>
-        <a href="/question-bank/other-trades/index.html" class="news-btn">🛠️ Click Here →</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- =========================================
-    FEATURES (Why Question Bank)
-========================================= -->
-<section class="container">
-  <div class="card">
-    <h2>✨ Question Bank की विशेषताएँ</h2>
-    <ul>
-      <li>✅ Module Wise & Chapter Wise Questions</li>
-      <li>✅ Previous Year Questions</li>
-      <li>✅ CBT Pattern Practice</li>
-      <li>✅ परीक्षा की दृष्टि से महत्वपूर्ण प्रश्न</li>
-      <li>✅ Regular Updates</li>
-      <li>✅ बिल्कुल Free Study Material</li>
-    </ul>
-  </div>
-</section>
-
-<!-- =========================================
-    SUGGESTIONS
-========================================= -->
-<section class="container">
-  <div class="card">
-    <h2>💬 सुझाव दें</h2>
-    <p>यदि आप किसी नए Trade, Chapter या Topic के Question Bank चाहते हैं, तो हमें अवश्य बताएं।</p>
-    <br>
-    <a href="/contact.html" class="news-btn">💬 Click Here →</a>
-  </div>
-</section>
-
-<!-- =========================================
-    FOOTER
-========================================= -->
-<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
-    <a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">Disclaimer</a>
-    <a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a>
-    <a href="/terms.html" style="color:#aaa; text-decoration:none;">Terms</a>
-    <a href="/contact.html" style="color:#aaa; text-decoration:none;">Contact</a>
-  </div>
-  <p style="margin:10px 0 0 0; color:#888;">© 2026 ITI Study Centre. All Rights Reserved.</p>
-</footer>
-
-<button id="scrollTop" title="Go to Top" style="position:fixed; bottom:20px; right:20px; background:#003366; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;">⬆</button>
-<script src="/js/main.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const year = document.querySelector('footer p');
-    if (year) {
-      year.textContent = "© " + new Date().getFullYear() + " ITI Study Centre. All Rights Reserved.";
-    }
-  });
-</script>
-
-</body>
-</html>
 // ================================================================
-// ✅ यह LINE बिल्कुल अंत में जोड़ें – MISS न करें
+// ✅ GLOBAL EXPORT – यह LINE सबसे नीचे (TOP-LEVEL) पर होना चाहिए
 // ================================================================
 window.QUESTION_BANK = {
   employability: EMPLOYABILITY_BANK
