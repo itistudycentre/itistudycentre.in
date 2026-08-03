@@ -777,3 +777,11 @@ const EMPLOYABILITY_BANK = {
 
 </body>
 </html>
+// ================================================================
+// GLOBAL EXPORT – online-test.html और questionbank.html के लिए
+// ================================================================
+window.QUESTION_BANK = {
+  employability: EMPLOYABILITY_BANK   // ← Employability Skills के लिए
+};
+
+console.log("✅ Question Bank Loaded Successfully!");
