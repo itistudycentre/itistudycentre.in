@@ -3,1240 +3,739 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Test – Question Bank | ITI Study Centre</title>
+    <title>Online Test – ITI Study Centre</title>
     <link rel="icon" href="/images/favicon.png" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            background: #f5f7fb;
-            color: #1e2a3a;
-            line-height: 1.7;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        .main-header {
-            background: #003366;
-            padding: 14px 0;
-            border-bottom: 4px solid #ffcc00;
-        }
-        .main-header .container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .main-header .logo a {
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-        .main-header nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 18px;
-        }
-        .main-header nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            padding: 4px 0;
-            border-bottom: 2px solid transparent;
-            transition: 0.2s;
-        }
-        .main-header nav a:hover,
-        .main-header nav a.active {
-            border-bottom-color: #ffcc00;
-            color: #ffcc00;
-        }
-        .main-header nav a.notes-link {
-            color: #ffcc00;
-            font-weight: 600;
-        }
-        .main-header nav a.test-link {
-            color: #ff9900;
-            font-weight: 700;
-        }
-
-        .breadcrumb {
-            background: #eef1f5;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            border-bottom: 1px solid #dde1e7;
-        }
-        .breadcrumb a {
-            color: #003366;
-            text-decoration: none;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        .breadcrumb .current {
-            color: #555;
-            font-weight: 600;
-        }
-
-        .page-title {
-            padding: 30px 0 20px;
-            text-align: center;
-        }
-        .page-title h1 {
-            font-size: 2.2rem;
-            color: #003366;
-            letter-spacing: -0.5px;
-        }
-        .page-title p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-top: 6px;
-        }
-
-        /* Loader */
-        .loader {
-            text-align: center;
-            padding: 40px 20px;
-            color: #555;
-        }
-        .loader .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #003366;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 16px;
-        }
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        /* ===== TEST UI ===== */
-        .test-container {
-            background: #fff;
-            border-radius: 14px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e6eaef;
-            padding: 28px 32px;
-            margin-bottom: 30px;
-        }
-
-        /* Cards */
-        .option-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        @media (max-width: 600px) {
-            .option-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        .option-card {
-            padding: 30px 20px;
-            border-radius: 14px;
-            text-align: center;
-            cursor: pointer;
-            transition: 0.3s;
-            border: 3px solid #e6eaef;
-            background: #fafcff;
-        }
-        .option-card:hover {
-            transform: scale(1.02);
-            border-color: #003366;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-        .option-card .oc-icon {
-            font-size: 3rem;
-            display: block;
-            margin-bottom: 8px;
-        }
-        .option-card .oc-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #003366;
-        }
-        .option-card .oc-desc {
-            font-size: 0.9rem;
-            color: #555;
-            margin-top: 4px;
-        }
-        .option-card .oc-badge {
-            display: inline-block;
-            background: #003366;
-            color: #fff;
-            padding: 2px 14px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-            margin-top: 8px;
-        }
-        .option-card.employability {
-            border-color: #003366;
-            background: #f0f5ff;
-        }
-        .option-card.trade {
-            border-color: #ff9900;
-            background: #fff8e1;
-        }
-
-        /* Selection screens */
-        .selection-screen {
-            display: none;
-        }
-        .selection-screen.active {
-            display: block;
-        }
-
-        .selection-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 12px;
-            margin: 16px 0;
-        }
-        .selection-btn {
-            padding: 12px 16px;
-            background: #e9ecef;
-            border: 2px solid transparent;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #333;
-            cursor: pointer;
-            transition: 0.3s;
-            text-align: center;
-        }
-        .selection-btn:hover {
-            background: #d0d5db;
-            transform: scale(1.02);
-        }
-        .selection-btn.active {
-            background: #003366;
-            color: #fff;
-            border-color: #003366;
-        }
-        .selection-btn .badge {
-            background: #ff9900;
-            color: #fff;
-            border-radius: 12px;
-            padding: 0 8px;
-            font-size: 0.7rem;
-            margin-left: 4px;
-        }
-
-        .back-btn {
-            background: none;
-            border: none;
-            color: #003366;
-            font-weight: 600;
-            cursor: pointer;
-            font-size: 0.95rem;
-            padding: 8px 0;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .back-btn:hover {
-            color: #002244;
-            text-decoration: underline;
-        }
-
-        /* Test Info */
-        .test-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 12px 16px;
-            background: #f8fafc;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            border: 1px solid #e9ecef;
-        }
-        .test-info .info-item {
-            font-size: 0.95rem;
-        }
-        .test-info .info-item strong {
-            color: #003366;
-        }
-        .test-info .timer {
-            color: #dc3545;
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        /* Questions */
-        .question-container {
-            margin: 20px 0;
-        }
-        .question-item {
-            background: #fafcff;
-            padding: 18px 22px;
-            border-radius: 10px;
-            border: 1px solid #e6eaef;
-            margin-bottom: 16px;
-            transition: 0.2s;
-        }
-        .question-item:hover {
-            border-color: #003366;
-        }
-        .question-item .q-number {
-            font-weight: 700;
-            color: #003366;
-            font-size: 0.9rem;
-            display: block;
-            margin-bottom: 4px;
-        }
-        .question-item .q-text {
-            font-size: 1.05rem;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
-        .question-item .options {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-        .question-item .options label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 14px;
-            background: #f8f9fc;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.2s;
-            border: 1px solid transparent;
-        }
-        .question-item .options label:hover {
-            background: #eef2f7;
-            border-color: #ccc;
-        }
-        .question-item .options input[type="radio"] {
-            width: 18px;
-            height: 18px;
-            accent-color: #003366;
-            cursor: pointer;
-            flex-shrink: 0;
-        }
-        .question-item .options label.selected {
-            background: #e8f0fe;
-            border-color: #003366;
-        }
-        .question-item .options label.correct-answer {
-            background: #d4edda;
-            border-color: #28a745;
-        }
-        .question-item .options label.wrong-answer {
-            background: #f8d7da;
-            border-color: #dc3545;
-        }
-
-        .question-counter {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #888;
-            margin-top: 12px;
-        }
-
-        .test-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            justify-content: center;
-            margin-top: 24px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 36px;
-            background: #003366;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-        .btn:hover {
-            background: #002244;
-            transform: scale(1.02);
-        }
-        .btn-success {
-            background: #28a745;
-        }
-        .btn-success:hover {
-            background: #1e7e34;
-        }
-        .btn-warning {
-            background: #ffc107;
-            color: #222;
-        }
-        .btn-warning:hover {
-            background: #e0a800;
-        }
-        .btn-outline {
-            background: transparent;
-            color: #003366;
-            border: 2px solid #003366;
-        }
-        .btn-outline:hover {
-            background: #003366;
-            color: #fff;
-        }
-        .btn:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        /* Result */
-        .result-box {
-            background: #f0f5ff;
-            border-radius: 12px;
-            padding: 24px 28px;
-            text-align: center;
-            border: 2px solid #003366;
-            margin-top: 20px;
-        }
-        .result-box .score {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #003366;
-        }
-        .result-box .score-detail {
-            font-size: 1.1rem;
-            color: #555;
-            margin: 8px 0;
-        }
-        .result-box .status {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin: 12px 0;
-        }
-        .result-box .status.pass {
-            color: #28a745;
-        }
-        .result-box .status.fail {
-            color: #dc3545;
-        }
-        .result-box .status.excellent {
-            color: #ff9900;
-        }
-
-        .review-area {
-            display: none;
-            margin-top: 16px;
-            text-align: left;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-        .review-area.active {
-            display: block;
-        }
-        .review-item {
-            padding: 10px 14px;
-            border-bottom: 1px solid #eee;
-            font-size: 0.9rem;
-        }
-        .review-item .r-correct {
-            color: #28a745;
-        }
-        .review-item .r-wrong {
-            color: #dc3545;
-        }
-        .review-item .r-skipped {
-            color: #888;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a2634;
-            color: #b0b8c5;
-            padding: 24px 20px;
-            text-align: center;
-            margin-top: 44px;
-            border-top: 4px solid #003366;
-        }
-        footer .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px 24px;
-            margin-bottom: 12px;
-        }
-        footer .footer-links a {
-            color: #b0b8c5;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: 0.2s;
-        }
-        footer .footer-links a:hover {
-            color: #fff;
-        }
-        footer p {
-            margin: 8px 0 0;
-            font-size: 0.85rem;
-            color: #7a8494;
-        }
-
-        #scrollTop {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background: #003366;
-            color: #fff;
-            border: none;
-            padding: 12px 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: 0.25s;
-            display: none;
-            z-index: 999;
-        }
-        #scrollTop:hover {
-            background: #002244;
-            transform: scale(1.05);
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        @media (max-width: 768px) {
-            .main-header .container {
-                flex-direction: column;
-                gap: 8px;
-            }
-            .main-header nav {
-                justify-content: center;
-                gap: 6px 12px;
-            }
-            .page-title h1 {
-                font-size: 1.6rem;
-            }
-            .test-container {
-                padding: 16px 18px;
-            }
-            .option-card {
-                padding: 20px 16px;
-            }
-            .option-card .oc-title {
-                font-size: 1.1rem;
-            }
-            .selection-grid {
-                grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-            }
-            .test-info {
-                flex-direction: column;
-                gap: 6px;
-                text-align: center;
-            }
-            .result-box .score {
-                font-size: 2.4rem;
-            }
-        }
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 12px;
-            }
-            .test-container {
-                padding: 12px 14px;
-            }
-            .selection-grid {
-                grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-            }
-            .selection-btn {
-                font-size: 0.8rem;
-                padding: 8px 10px;
-            }
-            .btn {
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-            .option-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Segoe UI', Roboto, Arial, sans-serif; background:#f5f7fb; color:#1e2a3a; line-height:1.7; }
+        .container { max-width:900px; margin:0 auto; padding:0 20px; }
+        .main-header { background:#003366; padding:12px 0; border-bottom:4px solid #ffcc00; }
+        .main-header .container { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; }
+        .main-header .logo a { color:#fff; font-size:1.4rem; font-weight:700; text-decoration:none; }
+        .main-header nav { display:flex; flex-wrap:wrap; gap:5px 15px; }
+        .main-header nav a { color:#fff; text-decoration:none; font-size:1rem; padding:4px 0; border-bottom:2px solid transparent; }
+        .main-header nav a:hover, .main-header nav a.active { border-bottom-color:#ffcc00; color:#ffcc00; }
+        .main-header nav a.test-link { color:#ff9900; font-weight:700; }
+        .breadcrumb { background:#eef1f5; padding:10px 20px; font-size:0.9rem; border-bottom:1px solid #dde1e7; }
+        .breadcrumb a { color:#003366; text-decoration:none; }
+        .breadcrumb .current { color:#555; font-weight:600; }
+        .page-title { padding:30px 0 16px; text-align:center; }
+        .page-title h1 { font-size:2rem; color:#003366; }
+        .page-title p { font-size:1rem; color:#555; }
+        .test-container { background:#fff; border-radius:14px; box-shadow:0 2px 16px rgba(0,0,0,0.05); border:1px solid #e6eaef; padding:28px 32px; margin-bottom:30px; }
+        .option-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:20px 0; }
+        @media (max-width:600px){ .option-grid{grid-template-columns:1fr;} }
+        .option-card { padding:30px 20px; border-radius:14px; text-align:center; cursor:pointer; transition:0.3s; border:3px solid #e6eaef; background:#fafcff; }
+        .option-card:hover { transform:scale(1.02); border-color:#003366; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+        .option-card .oc-icon { font-size:3rem; display:block; margin-bottom:8px; }
+        .option-card .oc-title { font-size:1.3rem; font-weight:700; color:#003366; }
+        .option-card .oc-desc { font-size:0.9rem; color:#555; }
+        .option-card .oc-badge { display:inline-block; background:#003366; color:#fff; padding:2px 14px; border-radius:12px; font-size:0.75rem; margin-top:8px; }
+        .option-card.employability { border-color:#003366; background:#f0f5ff; }
+        .option-card.trade { border-color:#ff9900; background:#fff8e1; }
+        .selection-screen { display:none; }
+        .selection-screen.active { display:block; }
+        .selection-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px,1fr)); gap:12px; margin:16px 0; }
+        .selection-btn { padding:12px 16px; background:#e9ecef; border:2px solid transparent; border-radius:10px; font-size:0.95rem; font-weight:600; color:#333; cursor:pointer; transition:0.3s; text-align:center; }
+        .selection-btn:hover { background:#d0d5db; transform:scale(1.02); }
+        .selection-btn.active { background:#003366; color:#fff; border-color:#003366; }
+        .back-btn { background:none; border:none; color:#003366; font-weight:600; cursor:pointer; font-size:0.95rem; padding:8px 0; display:inline-flex; align-items:center; gap:6px; }
+        .back-btn:hover { color:#002244; text-decoration:underline; }
+        .test-info { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; padding:12px 16px; background:#f8fafc; border-radius:8px; margin-bottom:20px; border:1px solid #e9ecef; }
+        .test-info .info-item { font-size:0.95rem; }
+        .test-info .info-item strong { color:#003366; }
+        .test-info .timer { color:#dc3545; font-weight:700; font-size:1.1rem; }
+        .question-container { margin:20px 0; }
+        .question-item { background:#fafcff; padding:18px 22px; border-radius:10px; border:1px solid #e6eaef; margin-bottom:16px; }
+        .question-item:hover { border-color:#003366; }
+        .question-item .q-number { font-weight:700; color:#003366; font-size:0.9rem; display:block; margin-bottom:4px; }
+        .question-item .q-text { font-size:1.05rem; font-weight:500; margin-bottom:10px; }
+        .question-item .options { display:flex; flex-direction:column; gap:6px; }
+        .question-item .options label { display:flex; align-items:center; gap:10px; padding:8px 14px; background:#f8f9fc; border-radius:8px; cursor:pointer; transition:0.2s; border:1px solid transparent; }
+        .question-item .options label:hover { background:#eef2f7; border-color:#ccc; }
+        .question-item .options input[type="radio"] { width:18px; height:18px; accent-color:#003366; cursor:pointer; flex-shrink:0; }
+        .question-item .options label.selected { background:#e8f0fe; border-color:#003366; }
+        .question-item .options label.correct-answer { background:#d4edda; border-color:#28a745; }
+        .question-item .options label.wrong-answer { background:#f8d7da; border-color:#dc3545; }
+        .question-counter { text-align:center; font-size:0.9rem; color:#888; margin-top:12px; }
+        .test-actions { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:24px; }
+        .btn { display:inline-block; padding:12px 36px; background:#003366; color:#fff; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer; transition:0.3s; }
+        .btn:hover { background:#002244; transform:scale(1.02); }
+        .btn-success { background:#28a745; }
+        .btn-success:hover { background:#1e7e34; }
+        .btn-warning { background:#ffc107; color:#222; }
+        .btn-warning:hover { background:#e0a800; }
+        .btn-outline { background:transparent; color:#003366; border:2px solid #003366; }
+        .btn-outline:hover { background:#003366; color:#fff; }
+        .btn:disabled { opacity:0.5; cursor:not-allowed; transform:none; }
+        .result-box { background:#f0f5ff; border-radius:12px; padding:24px 28px; text-align:center; border:2px solid #003366; margin-top:20px; }
+        .result-box .score { font-size:3rem; font-weight:700; color:#003366; }
+        .result-box .score-detail { font-size:1.1rem; color:#555; margin:8px 0; }
+        .result-box .status { font-size:1.3rem; font-weight:700; margin:12px 0; }
+        .result-box .status.pass { color:#28a745; }
+        .result-box .status.fail { color:#dc3545; }
+        .result-box .status.excellent { color:#ff9900; }
+        .review-area { display:none; margin-top:16px; text-align:left; max-height:400px; overflow-y:auto; }
+        .review-area.active { display:block; }
+        .review-item { padding:10px 14px; border-bottom:1px solid #eee; font-size:0.9rem; }
+        .review-item .r-correct { color:#28a745; }
+        .review-item .r-wrong { color:#dc3545; }
+        .review-item .r-skipped { color:#888; }
+        .hidden { display:none !important; }
+        .loader { text-align:center; padding:40px 20px; color:#555; }
+        .loader .spinner { border:4px solid #f3f3f3; border-top:4px solid #003366; border-radius:50%; width:40px; height:40px; animation:spin 1s linear infinite; margin:0 auto 16px; }
+        @keyframes spin { 0%{transform:rotate(0);} 100%{transform:rotate(360deg);} }
+        footer { background:#1a2634; color:#b0b8c5; padding:24px 20px; text-align:center; margin-top:44px; border-top:4px solid #003366; }
+        footer .footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:12px 24px; margin-bottom:12px; }
+        footer .footer-links a { color:#b0b8c5; text-decoration:none; font-size:0.9rem; }
+        footer .footer-links a:hover { color:#fff; }
+        footer p { margin:8px 0 0; font-size:0.85rem; color:#7a8494; }
+        @media (max-width:768px){ .main-header .container{flex-direction:column;gap:8px;} .main-header nav{justify-content:center;gap:6px 12px;} .page-title h1{font-size:1.6rem;} .test-container{padding:16px 18px;} .option-card{padding:20px 16px;} .option-card .oc-title{font-size:1.1rem;} .selection-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr));} .test-info{flex-direction:column;gap:6px;text-align:center;} .result-box .score{font-size:2.4rem;} }
+        @media (max-width:480px){ .container{padding:0 12px;} .test-container{padding:12px 14px;} .selection-grid{grid-template-columns:repeat(auto-fill,minmax(90px,1fr));} .selection-btn{font-size:0.8rem;padding:8px 10px;} .btn{padding:10px 20px;font-size:0.9rem;} .option-grid{grid-template-columns:1fr;} }
     </style>
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo"><a href="/">ITI Study Centre</a></div>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/iti-result.html">ITI Result</a>
-                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
-                <a href="/engineering-notes.html">Engineering Notes</a>
-                <a href="/questionbank.html">Question Bank</a>
-                <a href="/online-test.html" class="test-link">📝 Online Test</a>
-                <a href="/about.html">About</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- ===== BREADCRUMB ===== -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
-            <a href="/questionbank.html">Question Bank</a> &nbsp;›&nbsp;
-            <span class="current">📝 Online Test</span>
-        </div>
-    </div>
-
-    <!-- ===== PAGE TITLE ===== -->
-    <section class="page-title">
-        <div class="container">
-            <h1>📝 Online Test</h1>
-            <p>Employability Skills &amp; Trade Tests • Instant Results</p>
-        </div>
-    </section>
-
-    <!-- ===== TEST CONTAINER ===== -->
+<!-- ===== HEADER ===== -->
+<header class="main-header">
     <div class="container">
-        <div class="test-container" id="testApp">
-
-            <!-- LOADER -->
-            <div id="loaderScreen" class="loader">
-                <div class="spinner"></div>
-                <p>⏳ Loading question bank...</p>
-            </div>
-
-            <!-- ==========================================================
-            SCREEN 1: MAIN OPTIONS
-            ========================================================== -->
-            <div id="screenMain" class="selection-screen">
-                <h3 style="color:#003366; text-align:center; margin-bottom:16px;">Choose Test Type</h3>
-                <div class="option-grid">
-                    <div class="option-card employability" onclick="selectTestType('employability')">
-                        <span class="oc-icon">📚</span>
-                        <div class="oc-title">Employability Skills</div>
-                        <div class="oc-desc">25 Questions · 2 marks each · 15 min</div>
-                        <span class="oc-badge">Total: 50 marks</span>
-                    </div>
-                    <div class="option-card trade" onclick="selectTestType('trade')">
-                        <span class="oc-icon">🔧</span>
-                        <div class="oc-title">Trade Test</div>
-                        <div class="oc-desc">50 Questions · 2 marks each · 30 min</div>
-                        <span class="oc-badge">Total: 100 marks</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ==========================================================
-            SCREEN 2: YEAR SELECTION
-            ========================================================== -->
-            <div id="screenYear" class="selection-screen">
-                <button class="back-btn" onclick="goBackMain()">← Back</button>
-                <h3 style="color:#003366; text-align:center; margin:16px 0;">Select Year</h3>
-                <div class="selection-grid" id="yearGrid">
-                    <!-- Dynamically generated from question-bank.js -->
-                </div>
-            </div>
-
-            <!-- ==========================================================
-            SCREEN 3: MODULE / TRADE SELECTION
-            ========================================================== -->
-            <div id="screenModule" class="selection-screen">
-                <button class="back-btn" onclick="goBackYear()">← Back</button>
-                <h3 style="color:#003366; text-align:center; margin:16px 0;" id="moduleTitle">Select Module</h3>
-                <div class="selection-grid" id="moduleGrid">
-                    <!-- Dynamically generated -->
-                </div>
-            </div>
-
-            <!-- ==========================================================
-            SCREEN 4: TEST AREA
-            ========================================================== -->
-            <div id="screenTest" class="selection-screen">
-                <button class="back-btn" onclick="confirmExit()">← Exit Test</button>
-                <div class="test-info">
-                    <span class="info-item"><strong>📚</strong> <span id="testSubject">Module 1</span></span>
-                    <span class="info-item"><strong>📝</strong> <span id="testTotalQ">25</span> questions</span>
-                    <span class="info-item timer" id="timerDisplay">⏱️ 15:00</span>
-                </div>
-
-                <div id="questionsContainer" class="question-container"></div>
-
-                <div class="question-counter" id="questionCounter">Answered: 0 of 25</div>
-
-                <div class="test-actions">
-                    <button class="btn btn-success" id="submitBtn" onclick="submitTest()">✅ Submit Test</button>
-                </div>
-
-                <!-- Result -->
-                <div id="resultBox" class="result-box hidden">
-                    <h3 style="color:#003366; margin-bottom:12px;">📊 Your Result</h3>
-                    <div class="score" id="scoreDisplay">0/25</div>
-                    <div class="score-detail">
-                        ✅ Correct: <strong id="correctCount">0</strong> &nbsp;|&nbsp; ❌ Wrong: <strong id="wrongCount">0</strong> &nbsp;|&nbsp; ⏭️ Skipped: <strong id="skippedCount">0</strong>
-                    </div>
-                    <div class="status" id="statusDisplay">🌟 Excellent!</div>
-                    <div style="margin-top:12px;">
-                        <button class="btn btn-warning" onclick="resetFullTest()">🔄 Try Again</button>
-                        <button class="btn btn-outline" onclick="toggleReview()" style="margin-left:10px;">📖 Review Answers</button>
-                    </div>
-                    <div id="reviewArea" class="review-area"></div>
-                </div>
-            </div>
-
-        </div>
+        <div class="logo"><a href="/">ITI Study Centre</a></div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/iti-result.html">ITI Result</a>
+            <a href="/iti-study-centre-notes.html">ITI Notes</a>
+            <a href="/engineering-notes.html">Engineering Notes</a>
+            <a href="/questionbank.html">Question Bank</a>
+            <a href="/online-test.html" class="test-link active">📝 Online Test</a>
+            <a href="/about.html">About</a>
+        </nav>
     </div>
+</header>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="footer-links">
-            <a href="/disclaimer.html">Disclaimer</a>
-            <a href="/privacy-policy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms</a>
-            <a href="/contact.html">Contact</a>
+<!-- ===== BREADCRUMB ===== -->
+<div class="breadcrumb">
+    <div class="container">
+        <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+        <a href="/questionbank.html">Question Bank</a> &nbsp;›&nbsp;
+        <span class="current">📝 Online Test</span>
+    </div>
+</div>
+
+<!-- ===== PAGE TITLE ===== -->
+<section class="page-title">
+    <div class="container">
+        <h1>📝 Online Test</h1>
+        <p>Employability Skills &amp; Trade Tests • Instant Results</p>
+    </div>
+</section>
+
+<!-- ===== TEST CONTAINER ===== -->
+<div class="container">
+    <div class="test-container" id="testApp">
+
+        <!-- LOADER -->
+        <div id="loaderScreen" class="loader">
+            <div class="spinner"></div>
+            <p>⏳ Loading question bank...</p>
         </div>
-        <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
-    </footer>
 
-    <button id="scrollTop" title="Go to Top">⬆</button>
+        <!-- ===== SCREEN 1: MAIN OPTIONS ===== -->
+        <div id="screenMain" class="selection-screen active">
+            <h3 style="color:#003366; text-align:center; margin-bottom:16px;">Choose Test Type</h3>
+            <div class="option-grid" id="mainOptionsGrid">
+                <!-- Dynamically generated from question-bank.js -->
+            </div>
+        </div>
 
-    <!-- ============================================================
-    JAVASCRIPT
-    ============================================================ -->
-    <script>
-        // ============================================================
-        // LOAD QUESTION BANK FROM EXTERNAL FILE
-        // ============================================================
-        let QUESTION_BANK = null;
-        let isLoaded = false;
+        <!-- ===== SCREEN 2: YEAR SELECTION ===== -->
+        <div id="screenYear" class="selection-screen">
+            <button class="back-btn" onclick="goBackMain()">← Back</button>
+            <h3 style="color:#003366; text-align:center; margin:16px 0;">Select Year</h3>
+            <div class="selection-grid" id="yearGrid"></div>
+        </div>
 
-        function loadQuestionBank() {
-            return new Promise((resolve, reject) => {
-                const script = document.createElement('script');
-                script.src = 'js/question-bank.js?v=' + Date.now();
-                script.onload = function() {
-                    if (typeof QUESTION_BANK !== 'undefined') {
-                        isLoaded = true;
-                        resolve();
-                    } else {
-                        reject('QUESTION_BANK not found in loaded script');
-                    }
-                };
-                script.onerror = function() {
-                    reject('Failed to load question-bank.js');
-                };
-                document.head.appendChild(script);
-            });
-        }
+        <!-- ===== SCREEN 3: MODULE / TRADE SELECTION ===== -->
+        <div id="screenModule" class="selection-screen">
+            <button class="back-btn" onclick="goBackYear()">← Back</button>
+            <h3 style="color:#003366; text-align:center; margin:16px 0;" id="moduleTitle">Select Module</h3>
+            <div class="selection-grid" id="moduleGrid"></div>
+        </div>
 
-        // ============================================================
-        // APP STATE
-        // ============================================================
-        let testType = ''; // 'employability' or 'trade'
-        let selectedYear = '';
-        let selectedModule = '';
-        let currentQuestions = [];
-        let userAnswers = [];
-        let timerInterval = null;
-        let seconds = 0;
-        let testSubmitted = false;
-        let totalQuestions = 25;
-        let timeLimit = 15; // minutes
-        let availableYears = [];
-        let availableModules = {};
+        <!-- ===== SCREEN 4: TEST AREA ===== -->
+        <div id="screenTest" class="selection-screen">
+            <button class="back-btn" onclick="confirmExit()">← Exit Test</button>
+            <div class="test-info">
+                <span class="info-item"><strong>📚</strong> <span id="testSubject">Module 1</span></span>
+                <span class="info-item"><strong>📝</strong> <span id="testTotalQ">25</span> questions</span>
+                <span class="info-item timer" id="timerDisplay">⏱️ 15:00</span>
+            </div>
+            <div id="questionsContainer" class="question-container"></div>
+            <div class="question-counter" id="questionCounter">Answered: 0 of 25</div>
+            <div class="test-actions">
+                <button class="btn btn-success" id="submitBtn" onclick="submitTest()">✅ Submit Test</button>
+            </div>
+            <div id="resultBox" class="result-box hidden">
+                <h3 style="color:#003366; margin-bottom:12px;">📊 Your Result</h3>
+                <div class="score" id="scoreDisplay">0/25</div>
+                <div class="score-detail">
+                    ✅ Correct: <strong id="correctCount">0</strong> &nbsp;|&nbsp; ❌ Wrong: <strong id="wrongCount">0</strong> &nbsp;|&nbsp; ⏭️ Skipped: <strong id="skippedCount">0</strong>
+                </div>
+                <div class="status" id="statusDisplay">🌟 Excellent!</div>
+                <div style="margin-top:12px;">
+                    <button class="btn btn-warning" onclick="resetFullTest()">🔄 Try Again</button>
+                    <button class="btn btn-outline" onclick="toggleReview()" style="margin-left:10px;">📖 Review Answers</button>
+                </div>
+                <div id="reviewArea" class="review-area"></div>
+            </div>
+        </div>
 
-        // ============================================================
-        // NAVIGATION FUNCTIONS
-        // ============================================================
-        function showScreen(screenId) {
-            document.querySelectorAll('.selection-screen').forEach(el => el.classList.remove('active'));
-            document.getElementById(screenId).classList.add('active');
-        }
+    </div>
+</div>
 
-        function selectTestType(type) {
-            if (!isLoaded) {
-                alert('Question bank is still loading. Please wait...');
-                return;
-            }
-            testType = type;
-            loadYears();
-            showScreen('screenYear');
-        }
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-links">
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/contact.html">Contact</a>
+    </div>
+    <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
 
-        function goBackMain() {
-            resetTest();
-            showScreen('screenMain');
-        }
+<!-- ============================================================
+JAVASCRIPT
+============================================================ -->
+<script>
+// ============================================================
+// LOAD QUESTION BANK FROM EXTERNAL FILE
+// ============================================================
+let QUESTION_BANK = null;
+let isLoaded = false;
 
-        function selectYear(year) {
-            selectedYear = year;
-            loadModules();
-            showScreen('screenModule');
-        }
-
-        function goBackYear() {
-            showScreen('screenYear');
-        }
-
-        function confirmExit() {
-            if (confirm('Are you sure you want to exit the test? Your progress will be lost.')) {
-                resetTest();
-                showScreen('screenModule');
-            }
-        }
-
-        // ============================================================
-        // LOAD YEARS FROM QUESTION BANK
-        // ============================================================
-        function loadYears() {
-            const grid = document.getElementById('yearGrid');
-            grid.innerHTML = '';
-            const years = new Set();
-
-            if (testType === 'employability') {
-                // Employability Skills
-                if (QUESTION_BANK.employability) {
-                    for (let year in QUESTION_BANK.employability) {
-                        if (year !== 'name' && year !== 'type') {
-                            years.add(year);
-                        }
-                    }
-                }
+function loadQuestionBank() {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = '/js/question-bank.js?v=' + Date.now();
+        script.onload = function() {
+            if (typeof window.QUESTION_BANK !== 'undefined') {
+                QUESTION_BANK = window.QUESTION_BANK;
+                isLoaded = true;
+                resolve();
             } else {
-                // Trade Tests - get from all trades
-                for (let trade in QUESTION_BANK) {
-                    if (trade === 'employability' || trade === 'name' || trade === 'type') continue;
-                    for (let year in QUESTION_BANK[trade]) {
-                        if (year !== 'name' && year !== 'type' && year !== 'questions') {
-                            years.add(year);
-                        }
-                    }
-                }
+                reject('QUESTION_BANK not found in loaded script');
             }
+        };
+        script.onerror = function() {
+            reject('Failed to load question-bank.js');
+        };
+        document.head.appendChild(script);
+    });
+}
 
-            availableYears = Array.from(years).sort();
+// ============================================================
+// APP STATE
+// ============================================================
+let testType = ''; // 'employability' or 'fitter' or 'plumber' etc.
+let selectedYear = '';
+let selectedModule = '';
+let currentQuestions = [];
+let userAnswers = [];
+let timerInterval = null;
+let seconds = 0;
+let testSubmitted = false;
+let totalQuestions = 25;
+let timeLimit = 15; // minutes
+let availableYears = [];
+let availableModules = {};
 
-            if (availableYears.length === 0) {
-                grid.innerHTML = '<p style="text-align:center;color:#888;">No years available.</p>';
-                return;
+// ============================================================
+// MAIN MENU - DYNAMICALLY GENERATE FROM QUESTION_BANK
+// ============================================================
+function renderMainMenu() {
+    const grid = document.getElementById('mainOptionsGrid');
+    grid.innerHTML = '';
+
+    const trades = Object.keys(QUESTION_BANK || {});
+
+    if (trades.length === 0) {
+        grid.innerHTML = '<p style="text-align:center;color:#888;grid-column:1/-1;">No trades available. Please check question-bank.js</p>';
+        return;
+    }
+
+    // Define icons and descriptions for each trade
+    const tradeMeta = {
+        employability: { icon: '📚', title: 'Employability Skills', desc: '25 Questions · 2 marks each · 15 min', badge: 'Total: 50 marks', class: 'employability' },
+        fitter: { icon: '🔧', title: 'Fitter Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' },
+        plumber: { icon: '🚰', title: 'Plumber Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' },
+        electrician: { icon: '⚡', title: 'Electrician Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' },
+        welder: { icon: '🔥', title: 'Welder Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' },
+        carpenter: { icon: '🪚', title: 'Carpenter Trade', desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' }
+    };
+
+    trades.forEach(trade => {
+        const meta = tradeMeta[trade] || { icon: '📘', title: trade.charAt(0).toUpperCase() + trade.slice(1), desc: '50 Questions · 2 marks each · 30 min', badge: 'Total: 100 marks', class: 'trade' };
+        const card = document.createElement('div');
+        card.className = `option-card ${meta.class || 'trade'}`;
+        card.innerHTML = `
+            <span class="oc-icon">${meta.icon}</span>
+            <div class="oc-title">${meta.title}</div>
+            <div class="oc-desc">${meta.desc}</div>
+            <span class="oc-badge">${meta.badge}</span>
+        `;
+        card.onclick = () => selectTestType(trade);
+        grid.appendChild(card);
+    });
+}
+
+// ============================================================
+// NAVIGATION FUNCTIONS
+// ============================================================
+function showScreen(screenId) {
+    document.querySelectorAll('.selection-screen').forEach(el => el.classList.remove('active'));
+    document.getElementById(screenId).classList.add('active');
+}
+
+function selectTestType(type) {
+    if (!isLoaded) {
+        alert('Question bank is still loading. Please wait...');
+        return;
+    }
+    testType = type;
+    loadYears();
+    showScreen('screenYear');
+}
+
+function goBackMain() {
+    resetTest();
+    showScreen('screenMain');
+}
+
+function selectYear(year) {
+    selectedYear = year;
+    loadModules();
+    showScreen('screenModule');
+}
+
+function goBackYear() {
+    showScreen('screenYear');
+}
+
+function confirmExit() {
+    if (confirm('Are you sure you want to exit the test? Your progress will be lost.')) {
+        resetTest();
+        showScreen('screenModule');
+    }
+}
+
+// ============================================================
+// LOAD YEARS FROM QUESTION BANK
+// ============================================================
+function loadYears() {
+    const grid = document.getElementById('yearGrid');
+    grid.innerHTML = '';
+    const years = new Set();
+
+    const data = QUESTION_BANK[testType];
+    if (data) {
+        for (let year in data) {
+            if (year !== 'name' && year !== 'type' && year !== 'modules') {
+                years.add(year);
             }
-
-            availableYears.forEach(year => {
-                const btn = document.createElement('button');
-                btn.className = 'selection-btn';
-                btn.textContent = '🎓 ' + year;
-                btn.onclick = () => selectYear(year);
-                grid.appendChild(btn);
-            });
         }
+    }
 
-        // ============================================================
-        // LOAD MODULES / TRADES
-        // ============================================================
-        function loadModules() {
-            const grid = document.getElementById('moduleGrid');
-            const title = document.getElementById('moduleTitle');
-            grid.innerHTML = '';
+    availableYears = Array.from(years).sort();
 
-            let items = [];
+    if (availableYears.length === 0) {
+        grid.innerHTML = '<p style="text-align:center;color:#888;">No years available for this trade.</p>';
+        return;
+    }
 
-            if (testType === 'employability') {
-                title.textContent = 'Select Module';
-                if (QUESTION_BANK.employability && QUESTION_BANK.employability[selectedYear]) {
-                    items = Object.keys(QUESTION_BANK.employability[selectedYear]);
-                }
-            } else {
-                title.textContent = 'Select Trade';
-                // Collect all trades that have this year
-                for (let trade in QUESTION_BANK) {
-                    if (trade === 'employability' || trade === 'name' || trade === 'type') continue;
-                    if (QUESTION_BANK[trade] && QUESTION_BANK[trade][selectedYear]) {
-                        // Check if trade has any questions
-                        const modules = Object.keys(QUESTION_BANK[trade][selectedYear]);
-                        if (modules.length > 0) {
-                            items.push(trade);
-                        }
-                    }
-                }
-                items.sort();
-            }
+    availableYears.forEach(year => {
+        const btn = document.createElement('button');
+        btn.className = 'selection-btn';
+        btn.textContent = '🎓 ' + year;
+        btn.onclick = () => selectYear(year);
+        grid.appendChild(btn);
+    });
+}
 
-            if (items.length === 0) {
-                grid.innerHTML = '<p style="text-align:center;color:#888;">No modules/trades available for this year.</p>';
-                return;
-            }
+// ============================================================
+// LOAD MODULES / TRADES
+// ============================================================
+function loadModules() {
+    const grid = document.getElementById('moduleGrid');
+    const title = document.getElementById('moduleTitle');
+    grid.innerHTML = '';
 
-            items.forEach(item => {
-                const btn = document.createElement('button');
-                btn.className = 'selection-btn';
-                btn.textContent = item;
-                btn.onclick = () => startTest(item);
-                grid.appendChild(btn);
-            });
+    let items = [];
+    const data = QUESTION_BANK[testType];
+
+    if (data && data[selectedYear]) {
+        // Check if data[selectedYear] has 'modules' key (our new structure)
+        if (data[selectedYear].modules) {
+            items = Object.keys(data[selectedYear].modules);
+        } else {
+            // Old structure: directly modules under year
+            items = Object.keys(data[selectedYear]);
         }
+    }
 
-        // ============================================================
-        // GET QUESTIONS FOR A SPECIFIC TRADE/MODULE
-        // ============================================================
-        function getQuestionsFor(tradeOrModule) {
-            let questions = [];
+    if (items.length === 0) {
+        grid.innerHTML = '<p style="text-align:center;color:#888;">No modules/trades available for this year.</p>';
+        return;
+    }
 
-            if (testType === 'employability') {
-                // Employability Skills
-                if (QUESTION_BANK.employability &&
-                    QUESTION_BANK.employability[selectedYear] &&
-                    QUESTION_BANK.employability[selectedYear][tradeOrModule]) {
-                    questions = QUESTION_BANK.employability[selectedYear][tradeOrModule];
-                }
-            } else {
-                // Trade Test
-                if (QUESTION_BANK[tradeOrModule] &&
-                    QUESTION_BANK[tradeOrModule][selectedYear]) {
-                    // Get all modules for this trade/year
-                    const modules = QUESTION_BANK[tradeOrModule][selectedYear];
-                    for (let moduleName in modules) {
-                        if (Array.isArray(modules[moduleName])) {
-                            questions = questions.concat(modules[moduleName]);
-                        }
-                    }
-                }
+    // For trade tests, show trade names; for employability, show module names
+    if (testType === 'employability') {
+        title.textContent = 'Select Module';
+    } else {
+        title.textContent = `Select Module for ${testType.charAt(0).toUpperCase() + testType.slice(1)}`;
+    }
+
+    items.sort().forEach(item => {
+        const btn = document.createElement('button');
+        btn.className = 'selection-btn';
+        btn.textContent = item;
+        btn.onclick = () => startTest(item);
+        grid.appendChild(btn);
+    });
+}
+
+// ============================================================
+// GET QUESTIONS FOR A SPECIFIC TRADE/MODULE
+// ============================================================
+function getQuestionsFor(moduleName) {
+    let questions = [];
+    const data = QUESTION_BANK[testType];
+
+    if (data && data[selectedYear]) {
+        if (data[selectedYear].modules) {
+            // New structure: year.modules.moduleName.questions
+            if (data[selectedYear].modules[moduleName]) {
+                questions = data[selectedYear].modules[moduleName].questions || [];
             }
-
-            return questions;
-        }
-
-        // ============================================================
-        // START TEST
-        // ============================================================
-        function startTest(moduleName) {
-            selectedModule = moduleName;
-            const questions = getQuestionsFor(moduleName);
-
-            if (!questions || questions.length === 0) {
-                alert('No questions available for this selection.');
-                return;
+        } else {
+            // Old structure: year.moduleName directly
+            if (data[selectedYear][moduleName]) {
+                questions = data[selectedYear][moduleName];
             }
-
-            totalQuestions = testType === 'employability' ? 25 : 50;
-            timeLimit = testType === 'employability' ? 15 : 30;
-
-            // Shuffle and pick random questions
-            const shuffled = shuffleArray([...questions]);
-            currentQuestions = shuffled.slice(0, Math.min(totalQuestions, shuffled.length));
-            userAnswers = new Array(currentQuestions.length).fill(null);
-            testSubmitted = false;
-            seconds = 0;
-
-            showScreen('screenTest');
-            document.getElementById('testSubject').textContent =
-                `${selectedYear} – ${selectedModule} (${currentQuestions.length} questions)`;
-            document.getElementById('testTotalQ').textContent = currentQuestions.length;
-            document.getElementById('resultBox').classList.add('hidden');
-            document.getElementById('submitBtn').disabled = false;
-            document.getElementById('submitBtn').textContent = '✅ Submit Test';
-
-            renderQuestions();
-            updateCounter();
-            startTimer();
         }
+    }
 
-        // ============================================================
-        // RENDER QUESTIONS
-        // ============================================================
-        function renderQuestions() {
-            const container = document.getElementById('questionsContainer');
-            container.innerHTML = '';
-            currentQuestions.forEach((q, idx) => {
-                const div = document.createElement('div');
-                div.className = 'question-item';
-                div.id = 'q-' + idx;
-                div.innerHTML = `
-                    <span class="q-number">Question ${idx + 1}</span>
-                    <div class="q-text">${q.q}</div>
-                    <div class="options">
-                        ${q.options.map((opt, oi) => `
-                            <label data-idx="${idx}" data-opt="${oi}" onclick="selectAnswer(${idx}, ${oi})">
-                                <input type="radio" name="q${idx}" value="${oi}" ${userAnswers[idx] === oi ? 'checked' : ''}>
-                                ${opt}
-                            </label>
-                        `).join('')}
-                    </div>
-                `;
-                container.appendChild(div);
-            });
+    return questions;
+}
 
-            // Restore selected states
-            userAnswers.forEach((ans, idx) => {
-                if (ans !== null) {
-                    const labels = document.querySelectorAll(`#q-${idx} .options label`);
-                    labels.forEach((label, oi) => {
-                        if (oi === ans) label.classList.add('selected');
-                    });
-                }
-            });
-        }
+// ============================================================
+// START TEST
+// ============================================================
+function startTest(moduleName) {
+    selectedModule = moduleName;
+    const questions = getQuestionsFor(moduleName);
 
-        // ============================================================
-        // SELECT ANSWER
-        // ============================================================
-        function selectAnswer(qIdx, optIdx) {
-            if (testSubmitted) return;
-            userAnswers[qIdx] = optIdx;
+    if (!questions || questions.length === 0) {
+        alert('No questions available for this selection.');
+        return;
+    }
 
-            const labels = document.querySelectorAll(`#q-${qIdx} .options label`);
+    totalQuestions = testType === 'employability' ? 25 : 50;
+    timeLimit = testType === 'employability' ? 15 : 30;
+
+    const shuffled = shuffleArray([...questions]);
+    currentQuestions = shuffled.slice(0, Math.min(totalQuestions, shuffled.length));
+    userAnswers = new Array(currentQuestions.length).fill(null);
+    testSubmitted = false;
+    seconds = 0;
+
+    showScreen('screenTest');
+    document.getElementById('testSubject').textContent =
+        `${selectedYear} – ${selectedModule} (${currentQuestions.length} questions)`;
+    document.getElementById('testTotalQ').textContent = currentQuestions.length;
+    document.getElementById('resultBox').classList.add('hidden');
+    document.getElementById('submitBtn').disabled = false;
+    document.getElementById('submitBtn').textContent = '✅ Submit Test';
+
+    renderQuestions();
+    updateCounter();
+    startTimer();
+}
+
+// ============================================================
+// RENDER QUESTIONS
+// ============================================================
+function renderQuestions() {
+    const container = document.getElementById('questionsContainer');
+    container.innerHTML = '';
+    currentQuestions.forEach((q, idx) => {
+        const div = document.createElement('div');
+        div.className = 'question-item';
+        div.id = 'q-' + idx;
+        // Use qE/qH if available, else fallback to q
+        const qText = q.qE || q.qH || q.q || q.question;
+        const opts = q.oE || q.oH || q.options || [];
+        div.innerHTML = `
+            <span class="q-number">Question ${idx + 1}</span>
+            <div class="q-text">${qText}</div>
+            <div class="options">
+                ${opts.map((opt, oi) => `
+                    <label data-idx="${idx}" data-opt="${oi}" onclick="selectAnswer(${idx}, ${oi})">
+                        <input type="radio" name="q${idx}" value="${oi}" ${userAnswers[idx] === oi ? 'checked' : ''}>
+                        ${String.fromCharCode(65 + oi)}. ${opt}
+                    </label>
+                `).join('')}
+            </div>
+        `;
+        container.appendChild(div);
+    });
+
+    userAnswers.forEach((ans, idx) => {
+        if (ans !== null) {
+            const labels = document.querySelectorAll(`#q-${idx} .options label`);
             labels.forEach((label, oi) => {
-                label.classList.toggle('selected', oi === optIdx);
-                const radio = label.querySelector('input[type="radio"]');
-                if (radio) radio.checked = (oi === optIdx);
+                if (oi === ans) label.classList.add('selected');
             });
-            updateCounter();
         }
+    });
+}
 
-        // ============================================================
-        // UPDATE COUNTER
-        // ============================================================
-        function updateCounter() {
-            const answered = userAnswers.filter(a => a !== null).length;
-            document.getElementById('questionCounter').textContent =
-                `Answered: ${answered} of ${currentQuestions.length} questions`;
+// ============================================================
+// SELECT ANSWER
+// ============================================================
+function selectAnswer(qIdx, optIdx) {
+    if (testSubmitted) return;
+    userAnswers[qIdx] = optIdx;
+
+    const labels = document.querySelectorAll(`#q-${qIdx} .options label`);
+    labels.forEach((label, oi) => {
+        label.classList.toggle('selected', oi === optIdx);
+        const radio = label.querySelector('input[type="radio"]');
+        if (radio) radio.checked = (oi === optIdx);
+    });
+    updateCounter();
+}
+
+// ============================================================
+// UPDATE COUNTER
+// ============================================================
+function updateCounter() {
+    const answered = userAnswers.filter(a => a !== null).length;
+    document.getElementById('questionCounter').textContent =
+        `Answered: ${answered} of ${currentQuestions.length} questions`;
+}
+
+// ============================================================
+// TIMER
+// ============================================================
+function startTimer() {
+    seconds = 0;
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+        seconds++;
+        const remaining = timeLimit * 60 - seconds;
+        if (remaining <= 0) {
+            clearInterval(timerInterval);
+            document.getElementById('timerDisplay').textContent = '⏱️ Time Up!';
+            submitTest();
+            return;
         }
+        const mins = String(Math.floor(remaining / 60)).padStart(2, '0');
+        const secs = String(remaining % 60).padStart(2, '0');
+        document.getElementById('timerDisplay').textContent = `⏱️ ${mins}:${secs}`;
+    }, 1000);
+}
 
-        // ============================================================
-        // TIMER
-        // ============================================================
-        function startTimer() {
-            seconds = 0;
-            if (timerInterval) clearInterval(timerInterval);
-            timerInterval = setInterval(() => {
-                seconds++;
-                const remaining = timeLimit * 60 - seconds;
-                if (remaining <= 0) {
-                    clearInterval(timerInterval);
-                    document.getElementById('timerDisplay').textContent = '⏱️ Time Up!';
-                    submitTest();
-                    return;
-                }
-                const mins = String(Math.floor(remaining / 60)).padStart(2, '0');
-                const secs = String(remaining % 60).padStart(2, '0');
-                document.getElementById('timerDisplay').textContent = `⏱️ ${mins}:${secs}`;
-            }, 1000);
-        }
+// ============================================================
+// SUBMIT TEST
+// ============================================================
+function submitTest() {
+    if (testSubmitted) return;
 
-        // ============================================================
-        // SUBMIT TEST
-        // ============================================================
-        function submitTest() {
-            if (testSubmitted) return;
+    const answered = userAnswers.filter(a => a !== null).length;
+    if (answered < currentQuestions.length) {
+        const confirmSubmit = confirm(
+            `You have answered only ${answered} out of ${currentQuestions.length} questions.\n` +
+            `Remaining questions will be marked as skipped.\n\nAre you sure you want to submit?`
+        );
+        if (!confirmSubmit) return;
+    }
 
-            const answered = userAnswers.filter(a => a !== null).length;
-            if (answered < currentQuestions.length) {
-                const confirmSubmit = confirm(
-                    `You have answered only ${answered} out of ${currentQuestions.length} questions.\n` +
-                    `Remaining questions will be marked as skipped.\n\nAre you sure you want to submit?`
-                );
-                if (!confirmSubmit) return;
+    testSubmitted = true;
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+
+    let correct = 0, wrong = 0, skipped = 0;
+    currentQuestions.forEach((q, idx) => {
+        const ans = userAnswers[idx];
+        if (ans === null) { skipped++; return; }
+        const correctAns = q.correct !== undefined ? q.correct : (q.c || 0);
+        if (ans === correctAns) { correct++; } else { wrong++; }
+    });
+
+    const total = currentQuestions.length;
+    const score = correct;
+    const percentage = Math.round((score / total) * 100);
+
+    document.getElementById('scoreDisplay').textContent = `${score}/${total}`;
+    document.getElementById('correctCount').textContent = correct;
+    document.getElementById('wrongCount').textContent = wrong;
+    document.getElementById('skippedCount').textContent = skipped;
+
+    const statusEl = document.getElementById('statusDisplay');
+    if (percentage >= 80) {
+        statusEl.textContent = '🌟 Excellent! Outstanding performance!';
+        statusEl.className = 'status excellent';
+    } else if (percentage >= 60) {
+        statusEl.textContent = '✅ Good job! Keep practicing!';
+        statusEl.className = 'status pass';
+    } else if (percentage >= 40) {
+        statusEl.textContent = '📖 Fair. Review the topics and try again!';
+        statusEl.className = 'status fail';
+    } else {
+        statusEl.textContent = '💪 Need more practice. Don\'t give up!';
+        statusEl.className = 'status fail';
+    }
+
+    document.getElementById('resultBox').classList.remove('hidden');
+
+    currentQuestions.forEach((q, idx) => {
+        const div = document.getElementById('q-' + idx);
+        if (!div) return;
+        const labels = div.querySelectorAll('.options label');
+        const correctAns = q.correct !== undefined ? q.correct : (q.c || 0);
+        labels.forEach((label, oi) => {
+            if (oi === correctAns) {
+                label.classList.add('correct-answer');
             }
-
-            testSubmitted = true;
-            if (timerInterval) {
-                clearInterval(timerInterval);
-                timerInterval = null;
+            if (userAnswers[idx] !== null && oi === userAnswers[idx] && oi !== correctAns) {
+                label.classList.add('wrong-answer');
             }
-
-            // Calculate result
-            let correct = 0,
-                wrong = 0,
-                skipped = 0;
-            currentQuestions.forEach((q, idx) => {
-                const ans = userAnswers[idx];
-                if (ans === null) {
-                    skipped++;
-                    return;
-                }
-                if (ans === q.correct) {
-                    correct++;
-                } else {
-                    wrong++;
-                }
-            });
-
-            const total = currentQuestions.length;
-            const score = correct;
-            const percentage = Math.round((score / total) * 100);
-
-            document.getElementById('scoreDisplay').textContent = `${score}/${total}`;
-            document.getElementById('correctCount').textContent = correct;
-            document.getElementById('wrongCount').textContent = wrong;
-            document.getElementById('skippedCount').textContent = skipped;
-
-            const statusEl = document.getElementById('statusDisplay');
-            if (percentage >= 80) {
-                statusEl.textContent = '🌟 Excellent! Outstanding performance!';
-                statusEl.className = 'status excellent';
-            } else if (percentage >= 60) {
-                statusEl.textContent = '✅ Good job! Keep practicing!';
-                statusEl.className = 'status pass';
-            } else if (percentage >= 40) {
-                statusEl.textContent = '📖 Fair. Review the topics and try again!';
-                statusEl.className = 'status fail';
-            } else {
-                statusEl.textContent = '💪 Need more practice. Don\'t give up!';
-                statusEl.className = 'status fail';
-            }
-
-            document.getElementById('resultBox').classList.remove('hidden');
-
-            // Mark correct/wrong in questions
-            currentQuestions.forEach((q, idx) => {
-                const div = document.getElementById('q-' + idx);
-                if (!div) return;
-                const labels = div.querySelectorAll('.options label');
-                labels.forEach((label, oi) => {
-                    if (oi === q.correct) {
-                        label.classList.add('correct-answer');
-                    }
-                    if (userAnswers[idx] !== null && oi === userAnswers[idx] && oi !== q.correct) {
-                        label.classList.add('wrong-answer');
-                    }
-                });
-            });
-
-            document.getElementById('submitBtn').disabled = true;
-            document.getElementById('submitBtn').textContent = '✅ Submitted';
-            document.getElementById('timerDisplay').textContent = '⏱️ Finished';
-        }
-
-        // ============================================================
-        // REVIEW ANSWERS
-        // ============================================================
-        function toggleReview() {
-            const area = document.getElementById('reviewArea');
-            if (area.classList.contains('active')) {
-                area.classList.remove('active');
-                return;
-            }
-            area.classList.add('active');
-            let html = '<h4 style="color:#003366; margin-bottom:12px;">📖 Answer Review</h4>';
-            currentQuestions.forEach((q, idx) => {
-                const ans = userAnswers[idx];
-                const isCorrect = ans !== null && ans === q.correct;
-                let statusClass = 'r-correct';
-                let statusText = '✅ Correct';
-                if (ans === null) {
-                    statusClass = 'r-skipped';
-                    statusText = '⏭️ Skipped';
-                } else if (!isCorrect) {
-                    statusClass = 'r-wrong';
-                    statusText = '❌ Wrong';
-                }
-                const userAnsText = ans !== null ? q.options[ans] : 'Skipped';
-                const correctAnsText = q.options[q.correct];
-                html += `
-                    <div class="review-item">
-                        <strong>Q${idx+1}:</strong> ${q.q}<br>
-                        <span class="${statusClass}">${statusText} – Your answer: ${userAnsText}</span>
-                        ${!isCorrect && ans !== null ? `<br><span class="r-correct">✅ Correct answer: ${correctAnsText}</span>` : ''}
-                        ${ans === null ? `<br><span class="r-correct">✅ Correct answer: ${correctAnsText}</span>` : ''}
-                    </div>
-                `;
-            });
-            area.innerHTML = html;
-        }
-
-        // ============================================================
-        // RESET
-        // ============================================================
-        function resetTest() {
-            if (timerInterval) {
-                clearInterval(timerInterval);
-                timerInterval = null;
-            }
-            testSubmitted = false;
-            currentQuestions = [];
-            userAnswers = [];
-            seconds = 0;
-            document.getElementById('timerDisplay').textContent = `⏱️ ${String(timeLimit).padStart(2,'0')}:00`;
-            document.getElementById('submitBtn').disabled = false;
-            document.getElementById('submitBtn').textContent = '✅ Submit Test';
-            document.getElementById('resultBox').classList.add('hidden');
-            document.getElementById('reviewArea').classList.remove('active');
-            document.getElementById('questionsContainer').innerHTML = '';
-        }
-
-        function resetFullTest() {
-            resetTest();
-            showScreen('screenModule');
-            loadModules();
-        }
-
-        // ============================================================
-        // UTILITY
-        // ============================================================
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        // ============================================================
-        // SCROLL TO TOP
-        // ============================================================
-        const scrollBtn = document.getElementById('scrollTop');
-        window.addEventListener('scroll', function() {
-            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
         });
-        scrollBtn.addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.getElementById('submitBtn').disabled = true;
+    document.getElementById('submitBtn').textContent = '✅ Submitted';
+    document.getElementById('timerDisplay').textContent = '⏱️ Finished';
+}
+
+// ============================================================
+// REVIEW ANSWERS
+// ============================================================
+function toggleReview() {
+    const area = document.getElementById('reviewArea');
+    if (area.classList.contains('active')) {
+        area.classList.remove('active');
+        return;
+    }
+    area.classList.add('active');
+    let html = '<h4 style="color:#003366; margin-bottom:12px;">📖 Answer Review</h4>';
+    currentQuestions.forEach((q, idx) => {
+        const ans = userAnswers[idx];
+        const correctAns = q.correct !== undefined ? q.correct : (q.c || 0);
+        const isCorrect = ans !== null && ans === correctAns;
+        const qText = q.qE || q.qH || q.q || q.question;
+        const opts = q.oE || q.oH || q.options || [];
+        let statusClass = 'r-correct';
+        let statusText = '✅ Correct';
+        if (ans === null) {
+            statusClass = 'r-skipped';
+            statusText = '⏭️ Skipped';
+        } else if (!isCorrect) {
+            statusClass = 'r-wrong';
+            statusText = '❌ Wrong';
+        }
+        const userAnsText = ans !== null ? opts[ans] : 'Skipped';
+        const correctAnsText = opts[correctAns];
+        html += `
+            <div class="review-item">
+                <strong>Q${idx+1}:</strong> ${qText}<br>
+                <span class="${statusClass}">${statusText} – Your answer: ${userAnsText}</span>
+                ${!isCorrect && ans !== null ? `<br><span class="r-correct">✅ Correct answer: ${correctAnsText}</span>` : ''}
+                ${ans === null ? `<br><span class="r-correct">✅ Correct answer: ${correctAnsText}</span>` : ''}
+            </div>
+        `;
+    });
+    area.innerHTML = html;
+}
+
+// ============================================================
+// RESET
+// ============================================================
+function resetTest() {
+    if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+    testSubmitted = false;
+    currentQuestions = [];
+    userAnswers = [];
+    seconds = 0;
+    document.getElementById('timerDisplay').textContent = `⏱️ ${String(timeLimit).padStart(2,'0')}:00`;
+    document.getElementById('submitBtn').disabled = false;
+    document.getElementById('submitBtn').textContent = '✅ Submit Test';
+    document.getElementById('resultBox').classList.add('hidden');
+    document.getElementById('reviewArea').classList.remove('active');
+    document.getElementById('questionsContainer').innerHTML = '';
+}
+
+function resetFullTest() {
+    resetTest();
+    showScreen('screenModule');
+    loadModules();
+}
+
+// ============================================================
+// UTILITY
+// ============================================================
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+// ============================================================
+// SCROLL TO TOP
+// ============================================================
+const scrollBtn = document.getElementById('scrollTop');
+if (scrollBtn) {
+    window.addEventListener('scroll', function() {
+        scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+    });
+    scrollBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// ============================================================
+// INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded', function() {
+    const footerP = document.querySelector('footer p');
+    if (footerP) footerP.textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+    const loader = document.getElementById('loaderScreen');
+    const mainScreen = document.getElementById('screenMain');
+
+    loadQuestionBank()
+        .then(() => {
+            loader.style.display = 'none';
+            mainScreen.classList.add('active');
+            renderMainMenu();
+            console.log('✅ Question Bank loaded successfully!');
+            console.log('📊 Available Trades:', Object.keys(QUESTION_BANK));
+        })
+        .catch((err) => {
+            loader.innerHTML = `
+                <p style="color:#dc3545; font-size:1.2rem;">❌ Failed to load question bank</p>
+                <p style="color:#888; font-size:0.9rem;">Make sure <strong>/js/question-bank.js</strong> exists.</p>
+                <p style="color:#888; font-size:0.85rem;">Error: ${err}</p>
+                <button onclick="location.reload()" style="margin-top:16px; padding:10px 24px; background:#003366; color:#fff; border:none; border-radius:6px; cursor:pointer;">🔄 Retry</button>
+            `;
+            console.error('❌ Error loading question bank:', err);
         });
+});
+</script>
 
-        // ============================================================
-        // INIT
-        // ============================================================
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
-                ' ITI Study Centre. All Rights Reserved.';
-
-            // Load question bank
-            const loader = document.getElementById('loaderScreen');
-            const mainScreen = document.getElementById('screenMain');
-
-            loadQuestionBank()
-                .then(() => {
-                    loader.style.display = 'none';
-                    mainScreen.classList.add('active');
-                    console.log('✅ Question Bank loaded successfully!');
-                    console.log('📊 Total Trades:', Object.keys(QUESTION_BANK).filter(t =>
-                        t !== 'employability' && t !== 'name' && t !== 'type'
-                    ).length);
-                })
-                .catch((err) => {
-                    loader.innerHTML = `
-                        <p style="color:#dc3545; font-size:1.2rem;">❌ Failed to load question bank</p>
-                        <p style="color:#888; font-size:0.9rem;">Make sure <strong>js/question-bank.js</strong> exists.</p>
-                        <p style="color:#888; font-size:0.85rem;">Error: ${err}</p>
-                        <button onclick="location.reload()" style="margin-top:16px; padding:10px 24px; background:#003366; color:#fff; border:none; border-radius:6px; cursor:pointer;">🔄 Retry</button>
-                    `;
-                    console.error('❌ Error loading question bank:', err);
-                });
-        });
-    </script>
 </body>
 </html>
