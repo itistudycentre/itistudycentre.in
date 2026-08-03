@@ -1,81 +1,1108 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Test – ITI Study Centre</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Employability Skills – Online Test</title>
   <style>
-    /* ... (आपका existing CSS यहाँ) ... */
+    /* ----- RESET & BASE ----- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+      background: #f0f4f9;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* ----- MAIN CONTAINER ----- */
+    .test-container {
+      max-width: 1000px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.10);
+      padding: 30px 35px 40px;
+      transition: all 0.2s;
+    }
+
+    /* ----- HEADER ----- */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      border-bottom: 3px solid #1a6b3c;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+    .header h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #0a2a3b;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header h1 small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #3d6b7a;
+    }
+    .timer-box {
+      background: #0a2a3b;
+      color: #fff;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .timer-box span {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 0.85;
+    }
+    .timer-box.warning {
+      background: #b22234;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    /* ----- YEAR SELECTION (Home) ----- */
+    .home-screen {
+      text-align: center;
+      padding: 30px 10px 20px;
+    }
+    .home-screen h2 {
+      font-size: 1.6rem;
+      color: #0a2a3b;
+      margin-bottom: 10px;
+    }
+    .home-screen p {
+      color: #4d6a7a;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+    .year-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+    }
+    .year-card {
+      background: #f8fafc;
+      border: 2px solid #dce4ed;
+      border-radius: 20px;
+      padding: 32px 40px;
+      width: 240px;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    }
+    .year-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+      border-color: #1a6b3c;
+      background: #f4faf7;
+    }
+    .year-card .year-icon {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .year-card .year-label {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #0a2a3b;
+    }
+    .year-card .year-count {
+      font-size: 0.9rem;
+      color: #5a7a8a;
+      margin-top: 4px;
+    }
+
+    /* ----- TEST SCREEN ----- */
+    .test-screen {
+      display: none;
+    }
+    .test-screen.active {
+      display: block;
+    }
+    .test-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      background: #f4f8fc;
+      padding: 12px 20px;
+      border-radius: 14px;
+      margin-bottom: 22px;
+    }
+    .test-info .badge {
+      background: #1a6b3c;
+      color: #fff;
+      padding: 4px 18px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .test-info .meta {
+      color: #1e3b4f;
+      font-size: 0.95rem;
+    }
+    .test-info .meta strong {
+      color: #0a2a3b;
+    }
+
+    /* ----- QUESTIONS ----- */
+    .question-card {
+      background: #fafcfe;
+      border: 1px solid #e6edf5;
+      border-radius: 16px;
+      padding: 18px 22px 16px;
+      margin-bottom: 18px;
+      transition: box-shadow 0.15s;
+    }
+    .question-card:hover {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    .q-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      margin-bottom: 8px;
+    }
+    .q-number {
+      font-weight: 700;
+      color: #1a6b3c;
+      font-size: 0.95rem;
+      background: #e4f0e9;
+      padding: 0 14px;
+      border-radius: 30px;
+      line-height: 28px;
+    }
+    .q-marks {
+      font-size: 0.8rem;
+      color: #4d6a7a;
+      background: #eef3f8;
+      padding: 0 14px;
+      border-radius: 30px;
+      line-height: 26px;
+    }
+    .q-text {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 10px 0 14px;
+      padding: 0 4px;
+    }
+    .q-text .en {
+      display: block;
+      font-weight: 500;
+      color: #0a2a3b;
+    }
+    .q-text .hi {
+      display: block;
+      color: #2f4a5a;
+      margin-top: 4px;
+      font-size: 0.97rem;
+    }
+    .q-text .lang-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #5a7a8a;
+      margin-right: 6px;
+    }
+
+    /* ----- OPTIONS (radio) ----- */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 18px;
+      padding: 4px 0 2px;
+    }
+    @media (max-width: 600px) {
+      .options-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .option-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      background: #f8fafc;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-size: 0.97rem;
+    }
+    .option-label:hover {
+      background: #eef4fa;
+      border-color: #c8d8e8;
+    }
+    .option-label input[type="radio"] {
+      accent-color: #1a6b3c;
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .option-label .opt-letter {
+      font-weight: 700;
+      color: #2a5a6a;
+      min-width: 22px;
+    }
+    .option-label .opt-en {
+      color: #1a2a3a;
+    }
+    .option-label .opt-hi {
+      color: #2f4a5a;
+      margin-left: 4px;
+    }
+    .option-label .opt-hi::before {
+      content: "• ";
+      color: #8aaabc;
+    }
+
+    /* ----- ANSWER REVIEW (after submit) ----- */
+    .option-label.correct-answer {
+      background: #d4edda;
+      border-color: #1a7a3a;
+    }
+    .option-label.correct-answer .opt-letter {
+      color: #0a5a2a;
+    }
+    .option-label.wrong-answer {
+      background: #f8dddd;
+      border-color: #b22234;
+    }
+    .option-label.wrong-answer .opt-letter {
+      color: #b22234;
+    }
+    .option-label.show-correct {
+      background: #d4edda;
+      border-color: #1a7a3a;
+      opacity: 0.85;
+    }
+    .explanation-box {
+      margin-top: 12px;
+      padding: 12px 18px;
+      background: #f0f7fe;
+      border-left: 4px solid #1a6b3c;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #0a2a3b;
+      display: none;
+    }
+    .explanation-box.show {
+      display: block;
+    }
+    .explanation-box .correct-ans {
+      font-weight: 600;
+      color: #0a5a2a;
+    }
+    .explanation-box .wrong-ans {
+      font-weight: 600;
+      color: #b22234;
+    }
+
+    /* ----- SUBMIT / ACTIONS ----- */
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 20px;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 2px solid #e6edf5;
+    }
+    .actions .left {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background: #0a2a3b;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #1a3a4b;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(10,42,59,0.25);
+    }
+    .btn-success {
+      background: #1a6b3c;
+      color: #fff;
+    }
+    .btn-success:hover {
+      background: #0f5a2e;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(26,107,60,0.30);
+    }
+    .btn-danger {
+      background: #b22234;
+      color: #fff;
+    }
+    .btn-danger:hover {
+      background: #8f1a2a;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #b0c8d8;
+      color: #1a3a4a;
+    }
+    .btn-outline:hover {
+      background: #eef4fa;
+      border-color: #7a9aaa;
+    }
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+    }
+
+    /* ----- RESULTS / SCORE ----- */
+    .result-summary {
+      background: #f0f7fc;
+      border-radius: 16px;
+      padding: 20px 26px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 40px;
+      align-items: center;
+    }
+    .result-summary .score-big {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0a2a3b;
+    }
+    .result-summary .score-big small {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #3d6b7a;
+    }
+    .result-summary .stats {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .result-summary .stats .stat-item {
+      text-align: center;
+    }
+    .result-summary .stats .stat-item .num {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .result-summary .stats .stat-item .label {
+      font-size: 0.8rem;
+      color: #4d6a7a;
+      display: block;
+    }
+    .stat-correct .num { color: #1a7a3a; }
+    .stat-wrong .num { color: #b22234; }
+    .stat-unattempted .num { color: #7a8a9a; }
+
+    /* ----- LOADER ----- */
+    #loaderScreen {
+      text-align: center;
+      padding: 50px 20px;
+      color: #0a2a3b;
+    }
+    #loaderScreen .spinner {
+      width: 48px;
+      height: 48px;
+      border: 5px solid #dce4ed;
+      border-top-color: #1a6b3c;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+      margin: 0 auto 20px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 700px) {
+      .test-container {
+        padding: 18px 14px 28px;
+        border-radius: 18px;
+      }
+      .header h1 {
+        font-size: 1.3rem;
+      }
+      .timer-box {
+        font-size: 1.1rem;
+        padding: 6px 16px;
+      }
+      .year-card {
+        width: 100%;
+        max-width: 280px;
+        padding: 24px 20px;
+      }
+      .question-card {
+        padding: 14px 16px;
+      }
+      .q-text {
+        font-size: 0.98rem;
+      }
+      .actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .actions .left {
+        justify-content: center;
+      }
+      .btn {
+        justify-content: center;
+        padding: 10px 20px;
+      }
+      .result-summary {
+        flex-direction: column;
+        text-align: center;
+      }
+      .result-summary .stats {
+        justify-content: center;
+      }
+    }
+    @media (max-width: 400px) {
+      .option-label {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+      }
+      .q-text .hi {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* ----- SCROLL CONTAINER ----- */
+    .questions-scroll {
+      max-height: 70vh;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+    .questions-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+    .questions-scroll::-webkit-scrollbar-track {
+      background: #eef3f8;
+      border-radius: 10px;
+    }
+    .questions-scroll::-webkit-scrollbar-thumb {
+      background: #b8ccda;
+      border-radius: 10px;
+    }
+    .questions-scroll::-webkit-scrollbar-thumb:hover {
+      background: #8aacbe;
+    }
+
+    /* ----- HIDE / SHOW ----- */
+    .hidden {
+      display: none !important;
+    }
   </style>
 </head>
 <body>
-  <!-- ... (आपका existing HTML) ... -->
 
-  <script>
-    function loadQuestionBank() {
-      return new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        // Try local file first, then /js/
-        script.src = 'question-bank.js?v=' + Date.now();
-        script.onload = function() {
-          if (typeof window.QUESTION_BANK !== 'undefined') {
-            console.log('✅ QUESTION_BANK loaded:', Object.keys(window.QUESTION_BANK));
-            resolve();
-          } else {
-            // Fallback: try /js/ path
-            const script2 = document.createElement('script');
-            script2.src = '/js/question-bank.js?v=' + Date.now();
-            script2.onload = function() {
-              if (typeof window.QUESTION_BANK !== 'undefined') {
-                console.log('✅ QUESTION_BANK loaded from /js/');
-                resolve();
-              } else {
-                reject('QUESTION_BANK not found in loaded script');
-              }
-            };
-            script2.onerror = function() { reject('Failed to load /js/question-bank.js'); };
-            document.head.appendChild(script2);
-          }
-        };
-        script.onerror = function() {
-          // Fallback to /js/
-          const script2 = document.createElement('script');
-          script2.src = '/js/question-bank.js?v=' + Date.now();
-          script2.onload = function() {
+<div class="test-container" id="appContainer">
+
+  <!-- ====== LOADER ====== -->
+  <div id="loaderScreen">
+    <div class="spinner"></div>
+    <h2 style="font-weight:500; color:#0a2a3b;">📚 लोड हो रहा है…</h2>
+    <p style="color:#4d6a7a;">प्रश्न बैंक तैयार किया जा रहा है</p>
+  </div>
+
+  <!-- ====== MAIN TEST UI ====== -->
+  <div id="mainUI" style="display:none;">
+
+    <!-- HEADER -->
+    <div class="header">
+      <h1>
+        📘 Employability
+        <small>Online Test</small>
+      </h1>
+      <div class="timer-box" id="timerDisplay">
+        <span>⏱</span> 15:00
+      </div>
+    </div>
+
+    <!-- ===== HOME SCREEN (Year Selection) ===== -->
+    <div id="homeScreen" class="home-screen">
+      <h2>🎯 अपना वर्ष चुनें</h2>
+      <p>25 रैंडम प्रश्न · 15 मिनट · प्रत्येक प्रश्न 2 अंक का</p>
+      <div class="year-grid" id="yearGrid">
+        <!-- dynamically filled -->
+      </div>
+    </div>
+
+    <!-- ===== TEST SCREEN ===== -->
+    <div id="testScreen" class="test-screen">
+      <div class="test-info">
+        <span class="badge" id="yearBadge">1st Year</span>
+        <span class="meta"><strong id="qProgress">0</strong> / 25 प्रश्न</span>
+        <span class="meta">⏱ शेष: <strong id="timerRemain">15:00</strong></span>
+      </div>
+
+      <div class="questions-scroll" id="questionsContainer">
+        <!-- rendered by JS -->
+      </div>
+
+      <div class="actions">
+        <div class="left">
+          <button class="btn btn-outline" id="btnReset" onclick="resetTest()">🔄 पुनः प्रारंभ</button>
+          <button class="btn btn-outline" id="btnHome" onclick="goHome()">🏠 होम</button>
+        </div>
+        <button class="btn btn-success" id="btnSubmit" onclick="submitTest()">📝 टेस्ट सबमिट करें</button>
+      </div>
+    </div>
+
+    <!-- ===== RESULT SCREEN (shown after submit) ===== -->
+    <div id="resultScreen" style="display:none;">
+      <div class="result-summary" id="resultSummary">
+        <!-- filled by JS -->
+      </div>
+      <div id="resultQuestions">
+        <!-- filled by JS -->
+      </div>
+      <div style="margin-top:24px; text-align:center;">
+        <button class="btn btn-primary" onclick="resetTest()">🔄 दोबारा टेस्ट दें</button>
+        <button class="btn btn-outline" onclick="goHome()" style="margin-left:12px;">🏠 होम</button>
+      </div>
+    </div>
+
+  </div><!-- end mainUI -->
+</div>
+
+<!-- ==================================================================== -->
+<!-- SCRIPT: Load question-bank.js and run the app                       -->
+<!-- ==================================================================== -->
+<script>
+  // --------------------------------------------------------------
+  // 1. LOAD QUESTION BANK (with fallback)
+  // --------------------------------------------------------------
+  function loadQuestionBank() {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = 'question-bank.js?v=' + Date.now();
+      script.onload = function() {
+        if (typeof window.QUESTION_BANK !== 'undefined') {
+          console.log('✅ QUESTION_BANK loaded');
+          resolve();
+        } else {
+          // fallback: /js/
+          const s2 = document.createElement('script');
+          s2.src = '/js/question-bank.js?v=' + Date.now();
+          s2.onload = function() {
             if (typeof window.QUESTION_BANK !== 'undefined') {
-              console.log('✅ QUESTION_BANK loaded from /js/ (fallback)');
+              console.log('✅ QUESTION_BANK loaded from /js/');
               resolve();
             } else {
-              reject('QUESTION_BANK not found in fallback script');
+              reject('QUESTION_BANK not found');
             }
           };
-          script2.onerror = function() { reject('Failed to load /js/question-bank.js (fallback)'); };
-          document.head.appendChild(script2);
+          s2.onerror = function() { reject('Failed to load /js/question-bank.js'); };
+          document.head.appendChild(s2);
+        }
+      };
+      script.onerror = function() {
+        const s2 = document.createElement('script');
+        s2.src = '/js/question-bank.js?v=' + Date.now();
+        s2.onload = function() {
+          if (typeof window.QUESTION_BANK !== 'undefined') {
+            console.log('✅ QUESTION_BANK loaded from /js/ (fallback)');
+            resolve();
+          } else {
+            reject('QUESTION_BANK not found in fallback');
+          }
         };
-        document.head.appendChild(script);
-      });
+        s2.onerror = function() { reject('Failed to load question-bank.js'); };
+        document.head.appendChild(s2);
+      };
+      document.head.appendChild(script);
+    });
+  }
+
+  // --------------------------------------------------------------
+  // 2. APP STATE
+  // --------------------------------------------------------------
+  const STATE = {
+    year: null,              // '1st Year' or '2nd Year'
+    questions: [],           // full list of questions for the year
+    selected: [],            // 25 random questions for this test
+    answers: {},             // { index: selectedOptionIndex }
+    submitted: false,
+    timer: 15 * 60,          // 15 minutes in seconds
+    timerInterval: null,
+    timeUp: false,
+  };
+
+  let bank = null;           // will hold EMPLOYABILITY_BANK
+
+  // --------------------------------------------------------------
+  // 3. DOM REFS
+  // --------------------------------------------------------------
+  const $ = id => document.getElementById(id);
+  const loaderScreen = $('loaderScreen');
+  const mainUI = $('mainUI');
+  const homeScreen = $('homeScreen');
+  const testScreen = $('testScreen');
+  const resultScreen = $('resultScreen');
+  const yearGrid = $('yearGrid');
+  const yearBadge = $('yearBadge');
+  const qProgress = $('qProgress');
+  const timerRemain = $('timerRemain');
+  const timerDisplay = $('timerDisplay');
+  const questionsContainer = $('questionsContainer');
+  const btnSubmit = $('btnSubmit');
+
+  // --------------------------------------------------------------
+  // 4. HELPERS
+  // --------------------------------------------------------------
+  function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  // Get all questions for a given year (flatten modules)
+  function getAllQuestionsForYear(yearKey) {
+    const yearData = bank[yearKey];
+    if (!yearData || !yearData.modules) return [];
+    const modules = yearData.modules;
+    let all = [];
+    for (const modName in modules) {
+      const qs = modules[modName].questions || [];
+      all = all.concat(qs);
+    }
+    return all;
+  }
+
+  // Pick 25 random questions (or fewer if not enough)
+  function pickRandomQuestions(allQs, count = 25) {
+    const shuffled = shuffleArray([...allQs]);
+    return shuffled.slice(0, Math.min(count, shuffled.length));
+  }
+
+  // Format time (seconds → MM:SS)
+  function formatTime(sec) {
+    const m = Math.floor(sec / 60);
+    const s = sec % 60;
+    return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+  }
+
+  // --------------------------------------------------------------
+  // 5. RENDER: Home (year selection)
+  // --------------------------------------------------------------
+  function renderHome() {
+    const years = Object.keys(bank);
+    yearGrid.innerHTML = '';
+    years.forEach(yearKey => {
+      const all = getAllQuestionsForYear(yearKey);
+      const count = all.length;
+      const card = document.createElement('div');
+      card.className = 'year-card';
+      card.innerHTML = `
+        <span class="year-icon">${yearKey.includes('1st') ? '📘' : yearKey.includes('2nd') ? '📗' : '📙'}</span>
+        <div class="year-label">${yearKey}</div>
+        <div class="year-count">${count} प्रश्न उपलब्ध</div>
+      `;
+      card.addEventListener('click', () => startTest(yearKey));
+      yearGrid.appendChild(card);
+    });
+  }
+
+  // --------------------------------------------------------------
+  // 6. START TEST
+  // --------------------------------------------------------------
+  function startTest(yearKey) {
+    const allQs = getAllQuestionsForYear(yearKey);
+    if (allQs.length === 0) {
+      alert('❌ इस वर्ष में कोई प्रश्न नहीं मिले।');
+      return;
+    }
+    const selected = pickRandomQuestions(allQs, 25);
+    if (selected.length === 0) {
+      alert('❌ प्रश्न चुनने में त्रुटि।');
+      return;
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-      loadQuestionBank()
-        .then(() => {
-          document.getElementById('loaderScreen').style.display = 'none';
-          document.getElementById('screenMain').classList.add('active');
-          renderMainMenu();
-          console.log('✅ Online Test ready!');
-        })
-        .catch((err) => {
-          document.getElementById('loaderScreen').innerHTML = `
-            <p style="color:#dc3545; font-size:1.2rem;">❌ Failed to load question bank</p>
-            <p style="color:#888; font-size:0.9rem;">Make sure <strong>question-bank.js</strong> is in the same folder as this page, or in <strong>/js/</strong> folder.</p>
-            <p style="color:#888; font-size:0.85rem;">Error: ${err}</p>
-            <button onclick="location.reload()" style="margin-top:16px; padding:10px 24px; background:#003366; color:#fff; border:none; border-radius:6px; cursor:pointer;">🔄 Retry</button>
-          `;
-          console.error('❌ Error loading question bank:', err);
-        });
+    // Reset state
+    STATE.year = yearKey;
+    STATE.questions = allQs;
+    STATE.selected = selected;
+    STATE.answers = {};
+    STATE.submitted = false;
+    STATE.timeUp = false;
+    STATE.timer = 15 * 60;
+
+    // Show test screen
+    homeScreen.style.display = 'none';
+    testScreen.classList.add('active');
+    resultScreen.style.display = 'none';
+    yearBadge.textContent = yearKey;
+
+    // Render questions
+    renderQuestions(selected);
+
+    // Start timer
+    startTimer();
+
+    // Update progress
+    updateProgress();
+  }
+
+  // --------------------------------------------------------------
+  // 7. RENDER QUESTIONS
+  // --------------------------------------------------------------
+  function renderQuestions(questions) {
+    const letters = ['A', 'B', 'C', 'D'];
+    let html = '';
+    questions.forEach((q, idx) => {
+      const enOpts = q.oE || [];
+      const hiOpts = q.oH || [];
+      const maxOpts = Math.max(enOpts.length, hiOpts.length);
+
+      html += `<div class="question-card" id="qcard-${idx}">`;
+      html += `<div class="q-header">`;
+      html += `<span class="q-number">प्रश्न ${idx + 1}</span>`;
+      html += `<span class="q-marks">2 अंक</span>`;
+      html += `</div>`;
+
+      html += `<div class="q-text">`;
+      html += `<span class="en"><span class="lang-tag">🇬🇧</span> ${q.qE || ''}</span>`;
+      html += `<span class="hi"><span class="lang-tag">🇮🇳</span> ${q.qH || ''}</span>`;
+      html += `</div>`;
+
+      html += `<div class="options-grid" id="options-${idx}">`;
+      for (let i = 0; i < maxOpts; i++) {
+        const enText = enOpts[i] || '';
+        const hiText = hiOpts[i] || '';
+        const isChecked = STATE.answers[idx] === i ? 'checked' : '';
+        html += `
+          <label class="option-label" id="ol-${idx}-${i}">
+            <input type="radio" name="q${idx}" value="${i}" ${isChecked} onchange="selectOption(${idx}, ${i})">
+            <span class="opt-letter">${letters[i] || ''}</span>
+            <span class="opt-en">${enText}</span>
+            ${hiText ? `<span class="opt-hi">${hiText}</span>` : ''}
+          </label>
+        `;
+      }
+      html += `</div>`;
+
+      // Explanation box (hidden until submit)
+      html += `<div class="explanation-box" id="exp-${idx}"></div>`;
+
+      html += `</div>`;
     });
 
-    // ... (बाकी functions: renderMainMenu, selectTestType, loadYears, etc.)
-  </script>
+    questionsContainer.innerHTML = html;
+  }
+
+  // --------------------------------------------------------------
+  // 8. OPTION SELECT
+  // --------------------------------------------------------------
+  function selectOption(qIdx, optIdx) {
+    if (STATE.submitted) return;
+    STATE.answers[qIdx] = optIdx;
+    updateProgress();
+  }
+
+  // --------------------------------------------------------------
+  // 9. UPDATE PROGRESS
+  // --------------------------------------------------------------
+  function updateProgress() {
+    const total = STATE.selected.length;
+    const answered = Object.keys(STATE.answers).length;
+    qProgress.textContent = answered;
+    // also update the test-info timer
+    timerRemain.textContent = formatTime(STATE.timer);
+  }
+
+  // --------------------------------------------------------------
+  // 10. TIMER
+  // --------------------------------------------------------------
+  function startTimer() {
+    if (STATE.timerInterval) clearInterval(STATE.timerInterval);
+    updateTimerDisplay();
+
+    STATE.timerInterval = setInterval(() => {
+      STATE.timer--;
+      updateTimerDisplay();
+
+      if (STATE.timer <= 60) {
+        timerDisplay.classList.add('warning');
+      }
+
+      if (STATE.timer <= 0) {
+        clearInterval(STATE.timerInterval);
+        STATE.timerInterval = null;
+        STATE.timeUp = true;
+        timerDisplay.classList.remove('warning');
+        timerDisplay.innerHTML = `<span>⏱</span> 00:00`;
+        alert('⏰ समय समाप्त! टेस्ट स्वतः सबमिट हो रहा है…');
+        submitTest();
+      }
+    }, 1000);
+  }
+
+  function updateTimerDisplay() {
+    const timeStr = formatTime(STATE.timer);
+    timerDisplay.innerHTML = `<span>⏱</span> ${timeStr}`;
+    timerRemain.textContent = timeStr;
+  }
+
+  // --------------------------------------------------------------
+  // 11. SUBMIT TEST
+  // --------------------------------------------------------------
+  function submitTest() {
+    if (STATE.submitted) return;
+    if (STATE.timerInterval) {
+      clearInterval(STATE.timerInterval);
+      STATE.timerInterval = null;
+    }
+
+    STATE.submitted = true;
+    btnSubmit.disabled = true;
+
+    // Calculate results
+    const selected = STATE.selected;
+    const answers = STATE.answers;
+    let correct = 0;
+    let wrong = 0;
+    let unattempted = 0;
+
+    selected.forEach((q, idx) => {
+      const userAns = answers[idx];
+      const correctAns = q.c; // 0-based index
+      const isCorrect = (userAns === correctAns);
+
+      // Mark the option labels
+      const optLabels = document.querySelectorAll(`#options-${idx} .option-label`);
+      optLabels.forEach((label, optIdx) => {
+        label.classList.remove('correct-answer', 'wrong-answer', 'show-correct');
+        const radio = label.querySelector('input[type="radio"]');
+        if (radio) radio.disabled = true;
+
+        if (optIdx === correctAns) {
+          label.classList.add('show-correct');
+        }
+        if (userAns === optIdx) {
+          if (isCorrect) {
+            label.classList.add('correct-answer');
+          } else {
+            label.classList.add('wrong-answer');
+          }
+        }
+      });
+
+      // Show explanation box
+      const expBox = document.getElementById(`exp-${idx}`);
+      if (expBox) {
+        const correctEn = (q.oE || [])[correctAns] || '';
+        const correctHi = (q.oH || [])[correctAns] || '';
+        let statusHtml = '';
+        if (userAns === undefined) {
+          unattempted++;
+          statusHtml = `<span style="color:#7a8a9a;">⬜ अनुत्तरित</span>`;
+        } else if (isCorrect) {
+          correct++;
+          statusHtml = `<span style="color:#1a7a3a; font-weight:600;">✅ सही</span>`;
+        } else {
+          wrong++;
+          statusHtml = `<span style="color:#b22234; font-weight:600;">❌ गलत</span>`;
+        }
+        expBox.innerHTML = `
+          <strong>📌 उत्तर / Answer:</strong>
+          <span class="correct-ans">${correctEn}</span>
+          ${correctHi ? ` <span style="color:#1a4a2a;">/ ${correctHi}</span>` : ''}
+          <br>
+          <strong>स्थिति / Status:</strong> ${statusHtml}
+        `;
+        expBox.classList.add('show');
+      }
+    });
+
+    // Show result screen
+    testScreen.classList.remove('active');
+    resultScreen.style.display = 'block';
+
+    // Render result summary
+    const total = selected.length;
+    const score = correct * 2;
+    const maxScore = total * 2;
+    const percentage = total > 0 ? Math.round((correct / total) * 100) : 0;
+
+    const summary = document.getElementById('resultSummary');
+    summary.innerHTML = `
+      <div class="score-big">
+        ${score} <small>/ ${maxScore}</small>
+      </div>
+      <div class="stats">
+        <div class="stat-item stat-correct">
+          <span class="num">${correct}</span>
+          <span class="label">✅ सही</span>
+        </div>
+        <div class="stat-item stat-wrong">
+          <span class="num">${wrong}</span>
+          <span class="label">❌ गलत</span>
+        </div>
+        <div class="stat-item stat-unattempted">
+          <span class="num">${unattempted}</span>
+          <span class="label">⬜ अनुत्तरित</span>
+        </div>
+        <div class="stat-item">
+          <span class="num">${percentage}%</span>
+          <span class="label">📊 प्रतिशत</span>
+        </div>
+      </div>
+    `;
+
+    // Re-show questions in result area (already visible)
+    // Move the questions container inside result area
+    const qContainer = questionsContainer;
+    const resultQuestions = document.getElementById('resultQuestions');
+    // but we already have questions in the container, just move it
+    // Actually the questions are already rendered in the container.
+    // We'll just keep them visible inside result screen.
+    // But result screen currently has its own div. Let's just append the container.
+    // Better: move the questions-scroll into result area.
+    const scrollDiv = document.querySelector('.questions-scroll');
+    if (scrollDiv) {
+      // It's already in testScreen, we need to move it to resultScreen
+      // But we want to keep it in both? Actually we'll just hide testScreen and show resultScreen
+      // and the questions-scroll is inside testScreen, so we need to move it.
+      // Let's just move it.
+      const parent = scrollDiv.parentNode;
+      parent.removeChild(scrollDiv);
+      document.getElementById('resultQuestions').appendChild(scrollDiv);
+    }
+
+    // Disable all radio buttons (already disabled above)
+    // Also disable submit button
+    btnSubmit.disabled = true;
+
+    // Scroll to top of results
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // --------------------------------------------------------------
+  // 12. RESET / GO HOME
+  // --------------------------------------------------------------
+  function resetTest() {
+    if (STATE.timerInterval) {
+      clearInterval(STATE.timerInterval);
+      STATE.timerInterval = null;
+    }
+    STATE.submitted = false;
+    STATE.answers = {};
+    STATE.timer = 15 * 60;
+    STATE.timeUp = false;
+    btnSubmit.disabled = false;
+    timerDisplay.classList.remove('warning');
+
+    // Go back to year selection
+    goHome();
+  }
+
+  function goHome() {
+    if (STATE.timerInterval) {
+      clearInterval(STATE.timerInterval);
+      STATE.timerInterval = null;
+    }
+    STATE.submitted = false;
+    STATE.answers = {};
+    STATE.timer = 15 * 60;
+    STATE.timeUp = false;
+    btnSubmit.disabled = false;
+    timerDisplay.classList.remove('warning');
+
+    homeScreen.style.display = 'block';
+    testScreen.classList.remove('active');
+    resultScreen.style.display = 'none';
+
+    // Restore questions container to testScreen
+    const resultQs = document.getElementById('resultQuestions');
+    const scrollDiv = resultQs.querySelector('.questions-scroll');
+    if (scrollDiv) {
+      resultQs.removeChild(scrollDiv);
+      document.getElementById('testScreen').insertBefore(scrollDiv, document.querySelector('.test-info').nextSibling);
+    }
+
+    // Reset timer display
+    updateTimerDisplay();
+    qProgress.textContent = '0';
+    timerRemain.textContent = '15:00';
+    questionsContainer.innerHTML = '<div style="text-align:center;padding:30px;color:#7a8a9a;">वर्ष चुनकर टेस्ट शुरू करें</div>';
+  }
+
+  // --------------------------------------------------------------
+  // 13. INIT
+  // --------------------------------------------------------------
+  document.addEventListener('DOMContentLoaded', function() {
+    loadQuestionBank()
+      .then(() => {
+        bank = window.QUESTION_BANK.employability;
+        if (!bank) {
+          throw new Error('EMPLOYABILITY_BANK not found in window.QUESTION_BANK');
+        }
+        loaderScreen.style.display = 'none';
+        mainUI.style.display = 'block';
+        renderHome();
+        console.log('✅ Online Test ready!');
+      })
+      .catch((err) => {
+        loaderScreen.innerHTML = `
+          <div style="color:#b22234; font-size:1.3rem; font-weight:600;">❌ प्रश्न बैंक लोड नहीं हो पाया</div>
+          <p style="color:#4d6a7a; margin:12px 0;">कृपया सुनिश्चित करें कि <strong>question-bank.js</strong> इस फ़ाइल के साथ मौजूद है।</p>
+          <p style="color:#888; font-size:0.9rem;">Error: ${err}</p>
+          <button onclick="location.reload()" style="margin-top:16px; padding:10px 28px; background:#0a2a3b; color:#fff; border:none; border-radius:40px; cursor:pointer; font-size:1rem;">🔄 पुनः प्रयास करें</button>
+        `;
+        console.error('❌ Error loading question bank:', err);
+      });
+  });
+
+  // Expose functions to global scope for inline onclick
+  window.selectOption = selectOption;
+  window.submitTest = submitTest;
+  window.resetTest = resetTest;
+  window.goHome = goHome;
+  window.startTest = startTest;
+</script>
+
 </body>
-</html>
+  </html>
