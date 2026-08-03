@@ -620,3 +620,160 @@ const EMPLOYABILITY_BANK = {
     { qE: "What is stress management?", qH: "तनाव प्रबंधन क्या है?", oE: ["Techniques to cope with stress", "Ignoring stress", "Increasing stress", "Avoiding all work"], oH: ["तनाव से निपटने की तकनीकें", "तनाव को अनदेखा करना", "तनाव बढ़ाना", "सभी काम से बचना"], c: 0 }
   ]
 }
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITI Question Bank | ITI Study Centre</title>
+  <meta name="description" content="ITI Question Bank - Employability Skills, Fitter, Plumber and Other Trade Question Bank with Chapter Wise Questions.">
+  <link rel="icon" href="/images/favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="canonical" href="https://www.itistudycentre.in/questionbank.html">
+</head>
+
+<body>
+
+<!-- =========================================
+    HEADER
+========================================= -->
+<div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
+<div class="main-header" style="background:#003366; padding:12px 0; border-bottom:3px solid #ffcc00;">
+  <div class="container" style="max-width:1200px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+    <div class="logo" style="font-size:1.4rem; font-weight:bold;">
+      <a href="/index.html" style="color:white; text-decoration:none;">ITI Study Centre</a>
+    </div>
+    <nav style="display:flex; flex-wrap:wrap; gap:5px 15px;">
+      <a href="/index.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Home</a>
+      <a href="/iti-result.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">ITI Result</a>
+      <a href="/iti-study-centre-notes.html" style="color:#ffcc00; text-decoration:underline; font-weight:bold; padding:5px 0; font-size:1rem;">ITI Notes</a>
+      <a href="/engineering-notes.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Engineering Notes</a>
+      <a href="/questionbank.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">Question Bank</a>
+      <a href="/online-test.html" class="test-link" style="color:#ff9900; font-weight:700; padding:5px 0; font-size:1rem;">📝 Online Test</a>
+      <a href="/about.html" style="color:white; text-decoration:none; padding:5px 0; font-size:1rem;">About</a>
+    </nav>
+  </div>
+</div>
+</div>
+
+<!-- =========================================
+    BREADCRUMB
+========================================= -->
+<div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
+  <a href="/" style="text-decoration:none; color:#003366;">🏠 Home</a> &nbsp;›&nbsp; <span style="color:#555; font-weight:bold;">Question Bank</span>
+</div>
+
+<!-- =========================================
+    PAGE TITLE
+========================================= -->
+<section class="page-title">
+  <div class="container">
+    <h1>📚 ITI Question Bank</h1>
+    <p>Module Wise, Chapter Wise & Previous Year Questions for All Trades</p>
+  </div>
+</section>
+
+<!-- =========================================
+    SEARCH BOX
+========================================= -->
+<section class="search-section container">
+  <input type="text" placeholder="Search Questions by Trade, Module, or Topic...">
+  <button>🔍 Search</button>
+</section>
+
+<!-- =========================================
+    QUESTION BANK CARDS
+========================================= -->
+<section class="container">
+  <div class="card">
+    <h2>📖 अपनी Trade चुनें</h2>
+    <div class="home-card-grid">
+
+      <!-- 1. Employability Skills -->
+      <div class="feature-card">
+        <h3>📘 Employability Skills</h3>
+        <p>सभी 11 Modules के Chapter Wise & Previous Year Question Bank.</p>
+        <a href="/question-bank/employability-skills/index.html" class="news-btn">📘 Click Here →</a>
+      </div>
+
+      <!-- 2. Fitter -->
+      <div class="feature-card">
+        <h3>🔧 Fitter Trade</h3>
+        <p>Module Wise, CBT Pattern & Previous Year Questions.</p>
+        <a href="/question-bank/fitter/index.html" class="news-btn">🔧 Click Here →</a>
+      </div>
+
+      <!-- 3. Plumber -->
+      <div class="feature-card">
+        <h3>🚰 Plumber Trade</h3>
+        <p>Module Wise & Chapter Wise Practice Question Bank.</p>
+        <a href="/question-bank/plumber/index.html" class="news-btn">🚰 Click Here →</a>
+      </div>
+
+      <!-- 4. Other Trades -->
+      <div class="feature-card">
+        <h3>🛠️ Other Trades</h3>
+        <p>Electrician, COPA, Welder, Diesel Mechanic, Turner, Machinist, Wireman, Electronics, Refrigeration & AC, and more.</p>
+        <a href="/question-bank/other-trades/index.html" class="news-btn">🛠️ Click Here →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================
+    FEATURES (Why Question Bank)
+========================================= -->
+<section class="container">
+  <div class="card">
+    <h2>✨ Question Bank की विशेषताएँ</h2>
+    <ul>
+      <li>✅ Module Wise & Chapter Wise Questions</li>
+      <li>✅ Previous Year Questions</li>
+      <li>✅ CBT Pattern Practice</li>
+      <li>✅ परीक्षा की दृष्टि से महत्वपूर्ण प्रश्न</li>
+      <li>✅ Regular Updates</li>
+      <li>✅ बिल्कुल Free Study Material</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =========================================
+    SUGGESTIONS
+========================================= -->
+<section class="container">
+  <div class="card">
+    <h2>💬 सुझाव दें</h2>
+    <p>यदि आप किसी नए Trade, Chapter या Topic के Question Bank चाहते हैं, तो हमें अवश्य बताएं।</p>
+    <br>
+    <a href="/contact.html" class="news-btn">💬 Click Here →</a>
+  </div>
+</section>
+
+<!-- =========================================
+    FOOTER
+========================================= -->
+<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
+    <a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">Disclaimer</a>
+    <a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a>
+    <a href="/terms.html" style="color:#aaa; text-decoration:none;">Terms</a>
+    <a href="/contact.html" style="color:#aaa; text-decoration:none;">Contact</a>
+  </div>
+  <p style="margin:10px 0 0 0; color:#888;">© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top" style="position:fixed; bottom:20px; right:20px; background:#003366; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;">⬆</button>
+<script src="/js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const year = document.querySelector('footer p');
+    if (year) {
+      year.textContent = "© " + new Date().getFullYear() + " ITI Study Centre. All Rights Reserved.";
+    }
+  });
+</script>
+
+</body>
+</html>
