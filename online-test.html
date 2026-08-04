@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Employability Skills – Online Test</title>
+<title>ऑनलाइन टेस्ट (Online Test) | ITI Study Centre</title>
 <style>
     /* ----- RESET & BASE ----- */
     * {
@@ -16,16 +16,123 @@
       font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
       background: #f0f4f9;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
     }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ----- BREADCRUMB (site-wide look) ----- */
+    .breadcrumb {
+      background: #eef2f7;
+      padding: 10px 0;
+      font-size: 0.9rem;
+      color: #3d5a73;
+    }
+    .breadcrumb a { color: #003366; text-decoration: none; }
+    .breadcrumb .current { color: #5a7a8a; }
+
+    /* ----- PAGE TITLE ----- */
+    .page-title {
+      padding: 26px 0 6px;
+    }
+    .page-title h1 {
+      font-size: 1.9rem;
+      color: #0a2a3b;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .page-title p {
+      color: #4d6a7a;
+      margin-top: 6px;
+    }
+
+    /* ----- TRADE GRID (Trade Selection screen) ----- */
+    .trade-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+      margin: 24px 0 44px;
+    }
+    .trade-card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #e2eaf2;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+      padding: 26px 22px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+    .trade-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+      border-color: #1a6b3c;
+    }
+    .trade-card .trade-icon {
+      font-size: 2.6rem;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .trade-card .trade-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #0a2a3b;
+    }
+    .trade-card .trade-name .hi {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #5a7a8a;
+      margin-top: 2px;
+    }
+    .trade-card .trade-btn {
+      display: inline-block;
+      margin-top: 14px;
+      background: #1a6b3c;
+      color: #fff;
+      padding: 7px 18px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .trade-card .soon-badge {
+      display: inline-block;
+      margin-top: 14px;
+      background: #fff3cd;
+      color: #8a6d00;
+      padding: 7px 18px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .trade-card.coming-soon {
+      opacity: 0.75;
+    }
+    .trade-card.coming-soon:hover {
+      border-color: #e2eaf2;
+      transform: none;
+    }
+    .back-to-trades {
+      display: inline-block;
+      margin-bottom: 14px;
+      background: none;
+      border: none;
+      color: #1a6b3c;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      padding: 0;
+    }
+    .back-to-trades:hover { text-decoration: underline; }
 
     /* ----- MAIN CONTAINER ----- */
     .test-container {
       max-width: 1000px;
       width: 100%;
+      margin: 10px auto 40px;
       background: #ffffff;
       border-radius: 28px;
       box-shadow: 0 12px 48px rgba(0, 0, 0, 0.10);
@@ -539,9 +646,24 @@
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
 
+<!-- ============================================================
+    TRADE SELECTION SCREEN (पहली स्क्रीन — सभी ट्रेड यहाँ दिखेंगे)
+    ============================================================ -->
+<div class="breadcrumb"><div class="container">
+  <a href="/index.html">🏠 Home</a> &nbsp;›&nbsp; <span class="current">Online Test</span>
+</div></div>
+<section class="page-title"><div class="container">
+  <h1>📝 ऑनलाइन टेस्ट</h1>
+  <p>अपना ट्रेड चुनें और मुफ्त मॉक टेस्ट दें — 25 प्रश्न · 15 मिनट · हर प्रश्न 2 अंक का</p>
+</div></section>
+<div class="container" id="tradeScreen">
+  <div class="trade-grid" id="tradeGrid">
+    <!-- JS से भरा जाएगा -->
+  </div>
+</div>
 
-
-<div class="test-container" id="appContainer">
+<div class="test-container" id="appContainer" style="display:none;">
+<button class="back-to-trades" onclick="backToTrades()">← सभी ट्रेड (Online Test होम)</button>
 <!-- ====== LOADER ====== -->
 <div id="loaderScreen">
 <div class="spinner"></div>
@@ -553,7 +675,7 @@
 <!-- HEADER -->
 <div class="header">
 <h1>
-        📘 Employability
+<span id="mainUIIcon">📘</span> <span id="mainUITitle">Employability</span>
         <small>Online Test</small>
 </h1>
 <div class="timer-box" id="timerDisplay">
@@ -651,6 +773,27 @@
   }
 
   // --------------------------------------------------------------
+  // 1b. TRADES LIST (भविष्य में नया ट्रेड जोड़ना हो तो सिर्फ यहाँ एंट्री
+  //     जोड़ें — key वही होना चाहिए जो question-bank.js में
+  //     window.QUESTION_BANK.<key> में दिया गया है, और available:true
+  //     कर दें जब उस ट्रेड का question-bank.js साइट पर जोड़ दें)
+  // --------------------------------------------------------------
+  const TRADES = [
+    { key: 'employability', title: 'Employability Skills', hindi: 'रोजगार कौशल', icon: '📘', available: true },
+    { key: 'fitter',        title: 'Fitter',                hindi: 'फिटर',        icon: '🔧', available: false },
+    { key: 'plumber',       title: 'Plumber',                hindi: 'प्लंबर',      icon: '🚰', available: false },
+    { key: 'other',         title: 'Other Trades',           hindi: 'अन्य ट्रेड',  icon: '🛠️', available: false }
+  ];
+
+  // जिस ट्रेड में "1st Year" के साथ किसी अतिरिक्त key (जैसे "AI Module")
+  // को भी मर्ज करके पूल में शामिल करना है, उसे यहाँ लिखें।
+  const MERGE_INTO_FIRST_YEAR = {
+    employability: ['AI Module']
+  };
+
+  let currentTradeKey = null;
+
+  // --------------------------------------------------------------
   // 2. APP STATE
   // --------------------------------------------------------------
   const STATE = {
@@ -664,7 +807,7 @@
     timeUp: false,
   };
 
-  let bank = null;           // will hold EMPLOYABILITY_BANK
+  let bank = null;           // वर्तमान में चुने गए ट्रेड का question bank
 
   // --------------------------------------------------------------
   // 3. DOM REFS
@@ -695,14 +838,24 @@
   }
 
   // Get all questions for a given year (flatten modules)
+  // - चयनित ट्रेड के उस year के सारे modules के प्रश्न मिलाए जाते हैं
+  // - अगर MERGE_INTO_FIRST_YEAR में इस ट्रेड के लिए extra keys दी हैं
+  //   (जैसे employability के लिए "AI Module"), तो "1st Year" चुनने पर
+  //   वो भी इसी पूल में जुड़ जाते हैं
+  function collectQuestions(key, into) {
+    const yearData = bank[key];
+    if (!yearData || !yearData.modules) return;
+    for (const modName in yearData.modules) {
+      into.push(...(yearData.modules[modName].questions || []));
+    }
+  }
+
   function getAllQuestionsForYear(yearKey) {
-    const yearData = bank[yearKey];
-    if (!yearData || !yearData.modules) return [];
-    const modules = yearData.modules;
     let all = [];
-    for (const modName in modules) {
-      const qs = modules[modName].questions || [];
-      all = all.concat(qs);
+    collectQuestions(yearKey, all);
+    if (yearKey === '1st Year') {
+      const extras = MERGE_INTO_FIRST_YEAR[currentTradeKey] || [];
+      extras.forEach(k => collectQuestions(k, all));
     }
     return all;
   }
@@ -724,7 +877,10 @@
   // 5. RENDER: Home (year selection)
   // --------------------------------------------------------------
   function renderHome() {
-    const years = Object.keys(bank);
+    // सिर्फ "1st Year" और "2nd Year" कार्ड दिखाओ (AI Module जैसी अतिरिक्त
+    // keys अलग कार्ड नहीं बनतीं, वो getAllQuestionsForYear() में
+    // 1st Year के पूल में अपने-आप मर्ज हो जाती हैं)
+    const years = ['1st Year', '2nd Year'].filter(y => bank[y]);
     yearGrid.innerHTML = '';
     years.forEach(yearKey => {
       const all = getAllQuestionsForYear(yearKey);
@@ -1066,27 +1222,80 @@
   }
 
   // --------------------------------------------------------------
-  // 13. INIT
+  // 13. TRADE SELECTION SCREEN
+  // --------------------------------------------------------------
+  function renderTrades() {
+    const grid = document.getElementById('tradeGrid');
+    grid.innerHTML = '';
+    TRADES.forEach(t => {
+      const card = document.createElement('div');
+      card.className = 'trade-card' + (t.available ? '' : ' coming-soon');
+      card.innerHTML = `
+        <span class="trade-icon">${t.icon}</span>
+        <div class="trade-name">${t.title}<span class="hi">${t.hindi}</span></div>
+        ${t.available
+          ? '<span class="trade-btn">टेस्ट शुरू करें →</span>'
+          : '<span class="soon-badge">🔔 जल्द आ रहा है</span>'}
+      `;
+      card.addEventListener('click', () => {
+        if (t.available) {
+          openTrade(t.key, t.title, t.icon);
+        } else {
+          alert('🔔 ' + t.title + ' के लिए प्रश्न बैंक जल्द जोड़ा जाएगा। कृपया प्रतीक्षा करें।');
+        }
+      });
+      grid.appendChild(card);
+    });
+  }
+
+  function openTrade(tradeKey, title, icon) {
+    const data = window.QUESTION_BANK && window.QUESTION_BANK[tradeKey];
+    if (!data) {
+      alert('❌ इस ट्रेड का प्रश्न बैंक अभी लोड नहीं हो पाया। कृपया पेज रीफ्रेश करके दोबारा प्रयास करें।');
+      return;
+    }
+    currentTradeKey = tradeKey;
+    bank = data;
+
+    document.getElementById('mainUIIcon').textContent = icon || '📘';
+    document.getElementById('mainUITitle').textContent = title;
+    document.getElementById('tradeScreen').style.display = 'none';
+    document.querySelector('.page-title').style.display = 'none';
+    document.querySelector('.breadcrumb').style.display = 'none';
+    appContainer.style.display = 'block';
+    loaderScreen.style.display = 'none';
+    mainUI.style.display = 'block';
+
+    goHome();
+    renderHome();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function backToTrades() {
+    if (STATE.timerInterval) {
+      clearInterval(STATE.timerInterval);
+      STATE.timerInterval = null;
+    }
+    appContainer.style.display = 'none';
+    document.getElementById('tradeScreen').style.display = 'block';
+    document.querySelector('.page-title').style.display = 'block';
+    document.querySelector('.breadcrumb').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // --------------------------------------------------------------
+  // 14. INIT
   // --------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', function() {
+    // ट्रेड-चयन स्क्रीन तुरंत दिखा दो
+    renderTrades();
+
+    // बैकग्राउंड में प्रश्न बैंक लोड करते रहो ताकि क्लिक करते ही टेस्ट तैयार मिले
     loadQuestionBank()
       .then(() => {
-        bank = window.QUESTION_BANK.employability;
-        if (!bank) {
-          throw new Error('EMPLOYABILITY_BANK not found in window.QUESTION_BANK');
-        }
-        loaderScreen.style.display = 'none';
-        mainUI.style.display = 'block';
-        renderHome();
-        console.log('✅ Online Test ready!');
+        console.log('✅ Question bank ready!');
       })
       .catch((err) => {
-        loaderScreen.innerHTML = `
-          <div style="color:#b22234; font-size:1.3rem; font-weight:600;">❌ प्रश्न बैंक लोड नहीं हो पाया</div>
-          <p style="color:#4d6a7a; margin:12px 0;">कृपया सुनिश्चित करें कि <strong>question-bank.js</strong> इस फ़ाइल के साथ मौजूद है।</p>
-          <p style="color:#888; font-size:0.9rem;">Error: ${err}</p>
-          <button onclick="location.reload()" style="margin-top:16px; padding:10px 28px; background:#0a2a3b; color:#fff; border:none; border-radius:40px; cursor:pointer; font-size:1rem;">🔄 पुनः प्रयास करें</button>
-        `;
         console.error('❌ Error loading question bank:', err);
       });
   });
@@ -1097,6 +1306,7 @@
   window.resetTest = resetTest;
   window.goHome = goHome;
   window.startTest = startTest;
+  window.backToTrades = backToTrades;
 </script>
 </body>
 </html>
