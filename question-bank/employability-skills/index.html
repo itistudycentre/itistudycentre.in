@@ -1,490 +1,357 @@
 <!DOCTYPE html>
-
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Employability Skills – Question Bank</title>
+<title>Employability Skills – Question Bank (Module Wise) | ITI Study Centre</title>
+<meta content="Employability Skills के सभी मॉड्यूल के प्रश्न उत्तर सहित — 1st Year, 2nd Year और AI Module." name="description"/>
+<link href="/images/favicon.png" rel="icon"/>
 <style>
-        /* ----- Reset & Base ----- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-            background: #f4f7fc;
-            padding: 20px;
-            color: #1e2a3a;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            padding: 25px 30px 40px;
-        }
-        h1 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #0b2b4a;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-bottom: 3px solid #1e7e34;
-            padding-bottom: 16px;
-            margin-bottom: 28px;
-        }
-        h1 small {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #3d5a73;
-            margin-left: auto;
-        }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        background: #f5f7fb;
+        color: #1e2a3a;
+        line-height: 1.7;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* ----- Filters ----- */
-        .filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px 30px;
-            background: #f0f5fa;
-            padding: 18px 22px;
-            border-radius: 14px;
-            margin-bottom: 30px;
-            align-items: flex-end;
-        }
-        .filter-group {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            flex: 1 1 200px;
-        }
-        .filter-group label {
-            font-weight: 500;
-            font-size: 0.9rem;
-            color: #1f3a4b;
-            letter-spacing: 0.3px;
-            text-transform: uppercase;
-        }
-        .filter-group select {
-            padding: 10px 14px;
-            border: 2px solid #cbd8e6;
-            border-radius: 10px;
-            font-size: 1rem;
-            background: white;
-            cursor: pointer;
-            transition: 0.2s;
-            width: 100%;
-        }
-        .filter-group select:focus {
-            border-color: #1e7e34;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(30, 126, 52, 0.2);
-        }
-        .stats {
-            font-size: 0.95rem;
-            background: #e6edf5;
-            padding: 6px 18px;
-            border-radius: 40px;
-            color: #1e3b4f;
-            margin-left: auto;
-            align-self: center;
-            white-space: nowrap;
-        }
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb { background: #eef2f7; padding: 10px 0; font-size: 0.9rem; color: #3d5a73; }
+    .breadcrumb a { color: #003366; text-decoration: none; }
+    .breadcrumb .current { color: #5a7a8a; }
 
-        /* ----- Questions ----- */
-        .question-card {
-            background: #ffffff;
-            border: 1px solid #e2eaf2;
-            border-radius: 16px;
-            padding: 20px 24px;
-            margin-bottom: 20px;
-            transition: box-shadow 0.15s;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-        }
-        .question-card:hover {
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-        }
-        .q-number {
-            font-weight: 600;
-            color: #1e7e34;
-            font-size: 0.9rem;
-            background: #e6f2ea;
-            display: inline-block;
-            padding: 2px 14px;
-            border-radius: 30px;
-            margin-bottom: 10px;
-        }
-        .q-text {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 20px;
-            font-size: 1.05rem;
-            line-height: 1.5;
-            margin-bottom: 14px;
-        }
-        .q-text .en {
-            font-weight: 500;
-            color: #0b2b4a;
-        }
-        .q-text .hi {
-            color: #2c3e50;
-            background: #f8fafc;
-            padding: 0 10px;
-            border-radius: 8px;
-        }
-        .q-text .lang-tag {
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: #5a7a8a;
-            margin-right: 4px;
-        }
+    /* ===== PAGE TITLE ===== */
+    .page-title { padding: 26px 0 6px; }
+    .page-title h1 {
+        font-size: 1.9rem; color: #0b2b4a; display: flex; align-items: center; gap: 10px;
+        border-bottom: 3px solid #1e7e34; padding-bottom: 14px;
+    }
+    .page-title p { color: #4d6a7a; margin-top: 10px; }
 
-        .options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px 20px;
-            background: #f9fcff;
-            padding: 12px 16px;
-            border-radius: 12px;
-            margin: 6px 0 12px;
-        }
-        .option-item {
-            display: flex;
-            align-items: baseline;
-            gap: 6px;
-            padding: 4px 0;
-            font-size: 0.98rem;
-        }
-        .option-item .opt-label {
-            font-weight: 600;
-            color: #3a5a6a;
-            min-width: 20px;
-        }
-        .option-item .opt-en {
-            color: #1a2a3a;
-        }
-        .option-item .opt-hi {
-            color: #2c3e50;
-            margin-left: 6px;
-        }
-        .option-item.correct {
-            background: #d4edda;
-            border-radius: 6px;
-            padding-left: 8px;
-            margin-left: -8px;
-        }
-        .option-item.correct .opt-label {
-            color: #0b5e2a;
-        }
-        .correct-badge {
-            display: inline-block;
-            background: #1e7e34;
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 2px 12px;
-            border-radius: 30px;
-            margin-left: 12px;
-            letter-spacing: 0.3px;
-        }
-        .answer-hint {
-            margin-top: 12px;
-            font-size: 0.95rem;
-            border-top: 1px dashed #dce5ef;
-            padding-top: 12px;
-            color: #1d3b4f;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px 20px;
-        }
-        .answer-hint strong {
-            color: #0b2b4a;
-        }
+    /* ===== TABS ===== */
+    .tab-container {
+        display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0; justify-content: center;
+    }
+    .tab-btn {
+        padding: 12px 32px; background: #e9ecef; border: none; border-radius: 30px;
+        font-size: 1rem; font-weight: 700; color: #333; cursor: pointer; transition: 0.3s;
+    }
+    .tab-btn:hover { background: #d0d5db; transform: scale(1.02); }
+    .tab-btn.active { background: #1e7e34; color: #fff; }
+    .tab-btn.ai-tab { background: #ff9900; color: #222; }
+    .tab-btn.ai-tab.active { background: #cc7a00; color: #fff; }
 
-        /* ----- Responsive ----- */
-        @media (max-width: 700px) {
-            .container {
-                padding: 18px 16px;
-            }
-            h1 {
-                font-size: 1.5rem;
-                flex-wrap: wrap;
-            }
-            h1 small {
-                margin-left: 0;
-                width: 100%;
-            }
-            .filters {
-                flex-direction: column;
-                gap: 12px;
-            }
-            .filter-group {
-                flex: 1 1 auto;
-                width: 100%;
-            }
-            .options {
-                grid-template-columns: 1fr;
-                gap: 4px;
-            }
-            .question-card {
-                padding: 16px;
-            }
-            .stats {
-                margin-left: 0;
-                align-self: flex-start;
-            }
-            .q-text {
-                font-size: 0.98rem;
-            }
-        }
+    /* ===== MODULE GRID ===== */
+    .year-section { display: none; }
+    .year-section.active { display: block; }
+    .module-grid {
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        gap: 18px; margin: 20px 0 40px;
+    }
+    .module-card {
+        background: #fff; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        border: 1px solid #e2eaf2; padding: 20px 22px; cursor: pointer; transition: 0.25s;
+        display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .module-card:hover {
+        box-shadow: 0 8px 24px rgba(0,0,0,0.09); transform: translateY(-3px); border-color: #1e7e34;
+    }
+    .module-card .mod-num {
+        font-size: 0.7rem; color: #888; font-weight: 700; background: #e9ecef;
+        padding: 2px 14px; border-radius: 20px; display: inline-block; margin-bottom: 8px;
+    }
+    .module-card .mod-name { font-size: 1.05rem; font-weight: 600; color: #0b2b4a; margin-bottom: 10px; }
+    .module-card .mod-count {
+        font-size: 0.85rem; color: #1e7e34; font-weight: 600; background: #e6f2ea;
+        display: inline-block; padding: 4px 14px; border-radius: 20px; align-self: flex-start;
+    }
+    .module-card.ai-card { border-color: #ff9900; background: #fffdf0; }
+    .module-card.ai-card .mod-num { background: #ff9900; color: #fff; }
 
-        @media (max-width: 480px) {
-            .option-item {
-                flex-wrap: wrap;
-            }
-            .correct-badge {
-                margin-left: 0;
-                margin-top: 4px;
-            }
-        }
+    /* ===== BACK BUTTON ===== */
+    .back-btn {
+        display: inline-flex; align-items: center; gap: 6px; margin: 22px 0 6px;
+        background: none; border: none; color: #1e7e34; font-weight: 700; font-size: 1rem;
+        cursor: pointer; padding: 0;
+    }
+    .back-btn:hover { text-decoration: underline; }
 
-        /* loader / empty */
-        .empty-msg {
-            text-align: center;
-            padding: 40px 20px;
-            color: #5a7a8a;
-            font-size: 1.1rem;
-        }
-        .loader {
-            text-align: center;
-            padding: 30px;
-            color: #3d6b7a;
-        }
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            color: #6a8a9a;
-            font-size: 0.85rem;
-            border-top: 1px solid #e0e8f0;
-            padding-top: 20px;
-        }
-    </style>
+    /* ===== QUESTIONS SCREEN ===== */
+    #questionsScreen { display: none; }
+    #questionsScreen.active { display: block; }
+    .qs-header {
+        display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+        gap: 10px; margin: 10px 0 24px;
+    }
+    .qs-header h2 { font-size: 1.4rem; color: #0b2b4a; }
+    .qs-count {
+        font-size: 0.9rem; background: #e6edf5; padding: 6px 18px; border-radius: 40px; color: #1e3b4f;
+    }
+
+    .question-card {
+        background: #ffffff; border: 1px solid #e2eaf2; border-radius: 16px; padding: 20px 24px;
+        margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .q-number {
+        font-weight: 600; color: #1e7e34; font-size: 0.9rem; background: #e6f2ea; display: inline-block;
+        padding: 2px 14px; border-radius: 30px; margin-bottom: 10px;
+    }
+    .q-text { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 1.05rem; margin-bottom: 14px; }
+    .q-text .en { font-weight: 500; color: #0b2b4a; }
+    .q-text .hi { color: #2c3e50; background: #f8fafc; padding: 0 10px; border-radius: 8px; }
+    .q-text .lang-tag { font-size: 0.7rem; font-weight: 600; color: #5a7a8a; margin-right: 4px; }
+
+    .options {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; background: #f9fcff;
+        padding: 12px 16px; border-radius: 12px; margin: 6px 0 12px;
+    }
+    .option-item { display: flex; align-items: baseline; gap: 6px; padding: 4px 0; font-size: 0.98rem; }
+    .option-item .opt-label { font-weight: 600; color: #3a5a6a; min-width: 20px; }
+    .option-item .opt-en { color: #1a2a3a; }
+    .option-item .opt-hi { color: #2c3e50; margin-left: 6px; }
+    .option-item.correct { background: #d4edda; border-radius: 6px; padding-left: 8px; margin-left: -8px; }
+    .option-item.correct .opt-label { color: #0b5e2a; }
+    .correct-badge {
+        display: inline-block; background: #1e7e34; color: #fff; font-size: 0.75rem; font-weight: 700;
+        padding: 2px 12px; border-radius: 30px; margin-left: 12px;
+    }
+    .answer-hint {
+        margin-top: 12px; font-size: 0.95rem; border-top: 1px dashed #dce5ef; padding-top: 12px;
+        color: #1d3b4f; display: flex; flex-wrap: wrap; gap: 6px 20px;
+    }
+    .answer-hint strong { color: #0b2b4a; }
+
+    .loader, .empty-msg { text-align: center; padding: 40px 20px; color: #5a7a8a; font-size: 1.05rem; }
+
+    footer {
+        background: #1a2634; color: #b0b8c5; padding: 24px 20px; text-align: center;
+        margin-top: 44px; border-top: 4px solid #003366;
+    }
+    footer .footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; margin-bottom: 12px; }
+    footer .footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; }
+    footer .footer-links a:hover { color: #fff; }
+    footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 700px) {
+        .page-title h1 { font-size: 1.5rem; }
+        .module-grid { grid-template-columns: 1fr; }
+        .tab-btn { padding: 8px 18px; font-size: 0.85rem; }
+        .options { grid-template-columns: 1fr; gap: 4px; }
+        .question-card { padding: 16px; }
+        .q-text { font-size: 0.98rem; }
+    }
+    @media (max-width: 480px) {
+        .option-item { flex-wrap: wrap; }
+        .correct-badge { margin-left: 0; margin-top: 4px; }
+    }
+</style>
 </head>
 <body>
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
 
+<div class="breadcrumb"><div class="container">
+<a href="/index.html">🏠 Home</a> &nbsp;›&nbsp;
+<a href="/questionbank.html">Question Bank</a> &nbsp;›&nbsp;
+<span class="current">Employability Skills</span>
+</div></div>
 
+<section class="page-title"><div class="container">
+<h1>📘 Employability Skills – Question Bank</h1>
+<p>मॉड्यूल चुनें, उस मॉड्यूल के सभी प्रश्न सही उत्तर के साथ दिखेंगे</p>
+</div></section>
 
-<div class="container">
-<h1>
-        📘 Employability Skills – Question Bank
-        <small>ITI Study Centre</small>
-</h1>
-<!-- Filters -->
-<div class="filters">
-<div class="filter-group">
-<label for="yearSelect">Year / Module Group</label>
-<select id="yearSelect"></select>
+<!-- ===== MODULES SCREEN ===== -->
+<div class="container" id="modulesScreen">
+    <div class="tab-container" id="tabContainer"></div>
+    <div class="year-section active" id="year-1st-Year"><div class="module-grid" id="grid-1st-Year"></div></div>
+    <div class="year-section" id="year-2nd-Year"><div class="module-grid" id="grid-2nd-Year"></div></div>
+    <div class="year-section" id="year-AI-Module"><div class="module-grid" id="grid-AI-Module"></div></div>
 </div>
-<div class="filter-group">
-<label for="moduleSelect">Module</label>
-<select id="moduleSelect"></select>
+
+<!-- ===== QUESTIONS SCREEN (मॉड्यूल पर क्लिक करने पर यह खुलेगा) ===== -->
+<div class="container" id="questionsScreen">
+    <button class="back-btn" onclick="backToModules()">← सभी मॉड्यूल पर वापस जाएँ</button>
+    <div class="qs-header">
+        <h2 id="qsTitle">मॉड्यूल</h2>
+        <span class="qs-count" id="qsCount">प्रश्न: 0</span>
+    </div>
+    <div id="questionsContainer"><div class="loader">⏳ कृपया प्रतीक्षा करें…</div></div>
 </div>
-<div class="stats" id="questionCount">प्रश्न: 0</div>
-</div>
-<!-- Questions container -->
-<div id="questionsContainer">
-<div class="loader">⏳ कृपया प्रतीक्षा करें…</div>
-</div>
+
 <footer>
-        प्रश्न बैंक v1.0 · हिंदी और अंग्रेज़ी में · सही उत्तर हरे रंग में हाइलाइट किए गए हैं
-    </footer>
-</div>
-<!-- Load question bank -->
-<script src="question-bank.js"></script>
-<!-- Main script -->
+    <div class="footer-links">
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/contact.html">Contact</a>
+    </div>
+    <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<!-- प्रश्न बैंक डेटा -->
+<script src="/js/question-bank.js"></script>
 <script>
-    (function() {
-        // ----- Wait for data to be available -----
-        function init() {
-            const bank = window.QUESTION_BANK && window.QUESTION_BANK.employability;
-            if (!bank) {
-                document.getElementById('questionsContainer').innerHTML =
-                    '<div class="empty-msg">❌ Question bank data not found. Make sure <strong>question-bank.js</strong> is loaded.</div>';
-                return;
-            }
+(function () {
+    const YEAR_TABS = [
+        { key: '1st Year', label: '📚 1st Year' },
+        { key: '2nd Year', label: '📚 2nd Year' },
+        { key: 'AI Module', label: '🤖 AI Module', cls: 'ai-tab' }
+    ];
 
-            // ----- DOM refs -----
-            const yearSelect = document.getElementById('yearSelect');
-            const moduleSelect = document.getElementById('moduleSelect');
-            const container = document.getElementById('questionsContainer');
-            const countSpan = document.getElementById('questionCount');
+    let bank = null;
+    let activeYear = '1st Year';
 
-            // Get sorted year keys (preserve order: 1st Year, 2nd Year, AI Module)
-            const yearKeys = Object.keys(bank);
-            // Optionally reorder if needed – we keep as is.
+    function init() {
+        bank = window.QUESTION_BANK && window.QUESTION_BANK.employability;
+        if (!bank) {
+            document.getElementById('modulesScreen').innerHTML =
+                '<div class="empty-msg">❌ Question bank डेटा नहीं मिला। सुनिश्चित करें कि /js/question-bank.js लोड हुआ है।</div>';
+            return;
+        }
+        renderTabs();
+        YEAR_TABS.forEach(t => renderModules(t.key));
+        switchYear('1st Year');
+    }
 
-            // ----- Populate year dropdown -----
-            yearKeys.forEach(year => {
-                const opt = document.createElement('option');
-                opt.value = year;
-                opt.textContent = year;
-                yearSelect.appendChild(opt);
-            });
+    function renderTabs() {
+        const box = document.getElementById('tabContainer');
+        box.innerHTML = '';
+        YEAR_TABS.forEach(t => {
+            if (!bank[t.key]) return;
+            const btn = document.createElement('button');
+            btn.className = 'tab-btn' + (t.cls ? ' ' + t.cls : '') + (t.key === activeYear ? ' active' : '');
+            btn.textContent = t.label;
+            btn.addEventListener('click', () => switchYear(t.key));
+            box.appendChild(btn);
+        });
+    }
 
-            // ----- Helper: load modules for a given year -----
-            function loadModules(year) {
-                const modules = bank[year]?.modules || {};
-                const moduleNames = Object.keys(modules);
-                moduleSelect.innerHTML = '';
-                if (moduleNames.length === 0) {
-                    const opt = document.createElement('option');
-                    opt.textContent = '— No modules —';
-                    opt.disabled = true;
-                    moduleSelect.appendChild(opt);
-                    container.innerHTML = '<div class="empty-msg">इस वर्ष में कोई मॉड्यूल नहीं हैं।</div>';
-                    countSpan.textContent = 'प्रश्न: 0';
-                    return;
-                }
-                moduleNames.forEach(mod => {
-                    const opt = document.createElement('option');
-                    opt.value = mod;
-                    opt.textContent = mod;
-                    moduleSelect.appendChild(opt);
-                });
-                // Auto-select first module and load questions
-                if (moduleNames.length > 0) {
-                    moduleSelect.value = moduleNames[0];
-                    loadQuestions(year, moduleNames[0]);
-                }
-            }
+    function switchYear(yearKey) {
+        activeYear = yearKey;
+        document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+            btn.classList.toggle('active', YEAR_TABS[i] && YEAR_TABS[i].key === yearKey);
+        });
+        document.querySelectorAll('.year-section').forEach(sec => sec.classList.remove('active'));
+        const target = document.getElementById('year-' + yearKey.replace(/\s+/g, '-'));
+        if (target) target.classList.add('active');
+    }
 
-            // ----- Helper: load questions for a specific module -----
-            function loadQuestions(year, moduleName) {
-                const moduleData = bank[year]?.modules?.[moduleName];
-                if (!moduleData || !Array.isArray(moduleData.questions)) {
-                    container.innerHTML = '<div class="empty-msg">❌ प्रश्न नहीं मिले।</div>';
-                    countSpan.textContent = 'प्रश्न: 0';
-                    return;
-                }
+    function renderModules(yearKey) {
+        const grid = document.getElementById('grid-' + yearKey.replace(/\s+/g, '-'));
+        if (!grid) return;
+        const modules = (bank[yearKey] && bank[yearKey].modules) || {};
+        const names = Object.keys(modules);
+        if (names.length === 0) {
+            grid.innerHTML = '<div class="empty-msg">इस वर्ष में अभी कोई मॉड्यूल उपलब्ध नहीं है।</div>';
+            return;
+        }
+        grid.innerHTML = '';
+        names.forEach((modName, idx) => {
+            const count = (modules[modName].questions || []).length;
+            const card = document.createElement('div');
+            card.className = 'module-card' + (yearKey === 'AI Module' ? ' ai-card' : '');
+            card.innerHTML = `
+                <div>
+                    <span class="mod-num">${yearKey === 'AI Module' ? 'AI' : 'MODULE ' + (idx + 1)}</span>
+                    <div class="mod-name">${modName}</div>
+                </div>
+                <span class="mod-count">${count} प्रश्न</span>
+            `;
+            card.addEventListener('click', () => openModule(yearKey, modName));
+            grid.appendChild(card);
+        });
+    }
 
-                const questions = moduleData.questions;
-                countSpan.textContent = `प्रश्न: ${questions.length}`;
+    // ===== QUESTIONS FOR A SINGLE MODULE =====
+    function openModule(yearKey, modName) {
+        const moduleData = bank[yearKey] && bank[yearKey].modules && bank[yearKey].modules[modName];
+        if (!moduleData) return;
 
-                if (questions.length === 0) {
-                    container.innerHTML = '<div class="empty-msg">इस मॉड्यूल में कोई प्रश्न नहीं हैं।</div>';
-                    return;
-                }
+        document.getElementById('modulesScreen').style.display = 'none';
+        document.getElementById('questionsScreen').classList.add('active');
+        document.getElementById('qsTitle').textContent = modName;
 
-                let html = '';
-                const optionLabels = ['A', 'B', 'C', 'D'];
+        const questions = moduleData.questions || [];
+        document.getElementById('qsCount').textContent = 'प्रश्न: ' + questions.length;
 
-                questions.forEach((q, idx) => {
-                    const correctIndex = q.c; // 0-based
-                    const enOpts = q.oE || [];
-                    const hiOpts = q.oH || [];
-
-                    html += `<div class="question-card">`;
-                    html += `<div class="q-number">प्रश्न ${idx + 1}</div>`;
-
-                    // Question text (English + Hindi)
-                    html += `<div class="q-text">`;
-                    html += `<span class="en"><span class="lang-tag">🇬🇧</span> ${q.qE || ''}</span>`;
-                    html += `<span class="hi"><span class="lang-tag">🇮🇳</span> ${q.qH || ''}</span>`;
-                    html += `</div>`;
-
-                    // Options
-                    html += `<div class="options">`;
-                    const maxOpts = Math.max(enOpts.length, hiOpts.length);
-                    for (let i = 0; i < maxOpts; i++) {
-                        const isCorrect = (i === correctIndex);
-                        const enText = enOpts[i] || '';
-                        const hiText = hiOpts[i] || '';
-                        html += `<div class="option-item${isCorrect ? ' correct' : ''}">`;
-                        html += `<span class="opt-label">${optionLabels[i] || ''}</span>`;
-                        html += `<span class="opt-en">${enText}</span>`;
-                        if (hiText) {
-                            html += `<span class="opt-hi"> / ${hiText}</span>`;
-                        }
-                        if (isCorrect) {
-                            html += `<span class="correct-badge">✔ सही</span>`;
-                        }
-                        html += `</div>`;
-                    }
-                    html += `</div>`;
-
-                    // Explicit correct answer (English + Hindi)
-                    const correctEn = enOpts[correctIndex] || '';
-                    const correctHi = hiOpts[correctIndex] || '';
-                    html += `<div class="answer-hint">`;
-                    html += `<strong>✅ सही उत्तर / Correct Answer:</strong>`;
-                    html += ` <span>${correctEn}</span>`;
-                    if (correctHi) {
-                        html += ` <span style="color:#1a4a2a;"> / ${correctHi}</span>`;
-                    }
-                    html += `</div>`;
-
-                    html += `</div>`;
-                });
-
-                container.innerHTML = html;
-            }
-
-            // ----- Event listeners -----
-            yearSelect.addEventListener('change', function() {
-                const year = this.value;
-                if (year) {
-                    loadModules(year);
-                } else {
-                    moduleSelect.innerHTML = '';
-                    container.innerHTML = '<div class="empty-msg">कृपया एक वर्ष चुनें।</div>';
-                    countSpan.textContent = 'प्रश्न: 0';
-                }
-            });
-
-            moduleSelect.addEventListener('change', function() {
-                const year = yearSelect.value;
-                const moduleName = this.value;
-                if (year && moduleName) {
-                    loadQuestions(year, moduleName);
-                }
-            });
-
-            // ----- Initial load (first year, first module) -----
-            if (yearKeys.length > 0) {
-                const firstYear = yearKeys[0];
-                yearSelect.value = firstYear;
-                loadModules(firstYear);
-            } else {
-                container.innerHTML = '<div class="empty-msg">कोई वर्ष उपलब्ध नहीं है।</div>';
-            }
+        const container = document.getElementById('questionsContainer');
+        if (questions.length === 0) {
+            container.innerHTML = '<div class="empty-msg">इस मॉड्यूल में कोई प्रश्न नहीं हैं।</div>';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
         }
 
-        // If data already loaded, init directly, else wait for script to finish
-        if (window.QUESTION_BANK && window.QUESTION_BANK.employability) {
-            init();
-        } else {
-            // fallback: wait a bit (in case script loads asynchronously)
-            const checkInterval = setInterval(() => {
-                if (window.QUESTION_BANK && window.QUESTION_BANK.employability) {
-                    clearInterval(checkInterval);
-                    init();
-                }
-            }, 100);
-            // safety timeout
-            setTimeout(() => {
+        const optionLabels = ['A', 'B', 'C', 'D'];
+        let html = '';
+        questions.forEach((q, idx) => {
+            const correctIndex = q.c;
+            const enOpts = q.oE || [];
+            const hiOpts = q.oH || [];
+            const maxOpts = Math.max(enOpts.length, hiOpts.length);
+
+            html += `<div class="question-card">`;
+            html += `<div class="q-number">प्रश्न ${idx + 1}</div>`;
+            html += `<div class="q-text">`;
+            html += `<span class="en"><span class="lang-tag">🇬🇧</span> ${q.qE || ''}</span>`;
+            html += `<span class="hi"><span class="lang-tag">🇮🇳</span> ${q.qH || ''}</span>`;
+            html += `</div>`;
+
+            html += `<div class="options">`;
+            for (let i = 0; i < maxOpts; i++) {
+                const isCorrect = (i === correctIndex);
+                const enText = enOpts[i] || '';
+                const hiText = hiOpts[i] || '';
+                html += `<div class="option-item${isCorrect ? ' correct' : ''}">`;
+                html += `<span class="opt-label">${optionLabels[i] || ''}</span>`;
+                html += `<span class="opt-en">${enText}</span>`;
+                if (hiText) html += `<span class="opt-hi"> / ${hiText}</span>`;
+                if (isCorrect) html += `<span class="correct-badge">✔ सही</span>`;
+                html += `</div>`;
+            }
+            html += `</div>`;
+
+            const correctEn = enOpts[correctIndex] || '';
+            const correctHi = hiOpts[correctIndex] || '';
+            html += `<div class="answer-hint">`;
+            html += `<strong>✅ सही उत्तर / Correct Answer:</strong>`;
+            html += ` <span>${correctEn}</span>`;
+            if (correctHi) html += ` <span style="color:#1a4a2a;"> / ${correctHi}</span>`;
+            html += `</div>`;
+
+            html += `</div>`;
+        });
+
+        container.innerHTML = html;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.backToModules = function () {
+        document.getElementById('questionsScreen').classList.remove('active');
+        document.getElementById('modulesScreen').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    if (window.QUESTION_BANK && window.QUESTION_BANK.employability) {
+        init();
+    } else {
+        const checkInterval = setInterval(() => {
+            if (window.QUESTION_BANK && window.QUESTION_BANK.employability) {
                 clearInterval(checkInterval);
-                if (!window.QUESTION_BANK || !window.QUESTION_BANK.employability) {
-                    document.getElementById('questionsContainer').innerHTML =
-                        '<div class="empty-msg">⏳ Data not loaded yet. Please refresh or check question-bank.js.</div>';
-                }
-            }, 5000);
-        }
-    })();
+                init();
+            }
+        }, 100);
+        setTimeout(() => {
+            clearInterval(checkInterval);
+            if (!window.QUESTION_BANK || !window.QUESTION_BANK.employability) {
+                document.getElementById('modulesScreen').innerHTML =
+                    '<div class="empty-msg">⏳ डेटा लोड नहीं हुआ। कृपया पेज रीफ्रेश करें।</div>';
+            }
+        }, 5000);
+    }
+})();
 </script>
 </body>
 </html>
