@@ -1,39 +1,3 @@
-import os
-import re
-from pathlib import Path
-from bs4 import BeautifulSoup
-
-ROOT = Path(".")
-SKIP_FOLDERS = ['.git', '.github', 'node_modules', 'venv', 'static', 'assets']
-HEADER_HTML = '''
-<div id="header-container"></div>
-<script src="/js/header-loader.js"></script>
-'''
-
-def is_header(tag):
-    # अगर tag header या nav है तो हटाओ
-    if tag.name in ['header', 'nav']:
-        return True
-    # अगर div है और उसमें header/nav जैसी class/id है
-    if tag.name == 'div':
-        classes = ' '.join(tag.get('class', [])) + ' ' + tag.get('id', '')
-        if any(x in classes.lower() for x in ['header', 'nav', 'navbar', 'top', 'menu']):
-            return True
-        # अगर div के अंदर कम से कम 3 लिंक हैं और वह body के अंदर सबसे ऊपर है
-        if len(tag.find_all('a')) >= 3 and tag.parent and tag.parent.name == 'body':
-            return True
-    return False
-
-print("🔍 Scanning for HTML files...")
-html_files = []
-for ext in ['*.html', '*.htm']:
-    html_files.extend(ROOT.rglob(ext))
-
-# Filter out unwanted
-html_files = [f for f in html_files if not any(x in str(f) for x in SKIP_FOLDERS)]
-html_files = [f for f in html_files if f.name not in ['header.html', 'replace_headers.py']]
-
-print(f"📂 Found {len(html_files)} files.")
 
 for filepath in html_files:
     print(f"\n📄 Processing: {filepath}")
