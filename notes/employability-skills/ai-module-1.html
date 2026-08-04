@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduction to Artificial Intelligence (AI) | ITI Study Centre</title>
-    <meta name="description" content="Complete notes for Employability Skills AI Module: Introduction to Artificial Intelligence. Bilingual (Hindi + English) with charts and examples." />
-    <link rel="icon" href="/images/favicon.png" />
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Introduction to Artificial Intelligence (AI) | ITI Study Centre</title>
+<meta content="Complete notes for Employability Skills AI Module: Introduction to Artificial Intelligence. Bilingual (Hindi + English) with charts and examples." name="description"/>
+<link href="/images/favicon.png" rel="icon"/>
+<style>
         /* ===== RESET & BASE ===== */
         * {
             margin: 0;
@@ -877,728 +878,683 @@
     </style>
 </head>
 <body>
+<div id="header-container"></div>
+<script defer="" src="/js/header-loader.js"></script>
 
-    <!-- ============================================================
+<!-- ============================================================
     HEADER
     ============================================================ -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo"><a href="/">ITI Study Centre</a></div>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/iti-result.html">ITI Result</a>
-                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
-                <a href="/engineering-notes.html">Engineering Notes</a>
-                <a href="/questionbank.html">Question Bank</a>
-                <a href="/about.html">About</a>
-            </nav>
-        </div>
-    </header>
 
-    <!-- ============================================================
+<!-- ============================================================
     BREADCRUMB
     ============================================================ -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
-            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
-            <a href="/notes/employability-skills/index.html">Employability Skills</a> &nbsp;›&nbsp;
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+            <a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+            <a href="/notes/employability-skills/index.html">Employability Skills</a>  › 
             <span class="current">Introduction to Artificial Intelligence (AI)</span>
-        </div>
-    </div>
-
-    <!-- ============================================================
+</div>
+</div>
+<!-- ============================================================
     PAGE TITLE
     ============================================================ -->
-    <section class="page-title">
-        <div class="container">
-            <h1>🤖 Introduction to Artificial Intelligence (AI)</h1>
-            <p>Complete notes based on NSDC / DGT curriculum • Bilingual (English + Hindi) • With charts &amp; diagrams</p>
-        </div>
-    </section>
-
-    <!-- ============================================================
+<section class="page-title">
+<div class="container">
+<h1>🤖 Introduction to Artificial Intelligence (AI)</h1>
+<p>Complete notes based on NSDC / DGT curriculum • Bilingual (English + Hindi) • With charts &amp; diagrams</p>
+</div>
+</section>
+<!-- ============================================================
     SEARCH
     ============================================================ -->
-    <section class="search-section container">
-        <input type="text" id="sectionSearch" placeholder="🔍 Search within this module...">
-        <button onclick="filterSections()">Search</button>
-    </section>
-
-    <!-- ============================================================
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 Search within this module..." type="text"/>
+<button onclick="filterSections()">Search</button>
+</section>
+<!-- ============================================================
     SHARE BUTTONS
     ============================================================ -->
-    <div class="container">
-        <div class="share-section" id="shareSection">
-            <span class="share-label">📤 Share this page:</span>
-            <button class="share-btn whatsapp" onclick="shareWhatsApp()">
-                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<div class="container">
+<div class="share-section" id="shareSection">
+<span class="share-label">📤 Share this page:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
                 WhatsApp
             </button>
-            <button class="share-btn facebook" onclick="shareFacebook()">
-                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
                 Facebook
             </button>
-            <button class="share-btn twitter" onclick="shareTwitter()">
-                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
                 Twitter
             </button>
-            <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
-                <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
-                <span id="copyLinkText">Copy Link</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+<!-- ============================================================
     13.1 UNDERSTANDING AI
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="ai-13-1">
-            <div class="section-header">
-                <span class="icon">🧠</span>
-                <span class="title">13.1 Understanding AI / AI को समझना</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="bilingual">
-                    <div class="en">
-                        <p><strong>Artificial Intelligence (AI)</strong> is the science of creating intelligent machines. Machines that can learn and get smarter over time are AI, while machines that follow set rules without learning are not AI.</p>
-                        <p><strong>Where have you seen or used AI?</strong> Common examples:</p>
-                        <ul>
-                            <li>Instagram – shows posts and reels based on your interests.</li>
-                            <li>Amazon – suggests things you might like to buy.</li>
-                            <li>Netflix – suggests movies and TV shows you might enjoy.</li>
-                            <li>Facebook – helps you find friends and shows ads that match your interests.</li>
-                            <li>Google Maps – helps you find the best way to reach places quickly.</li>
-                        </ul>
-                        <p><strong>What is not AI?</strong> Examples: A digital clock showing time, a calculator doing math, a refrigerator keeping food cold – these follow set rules and do not learn.</p>
-                    </div>
-                    <div class="hi">
-                        <p><strong>आर्टिफिशियल इंटेलिजेंस (AI)</strong> बुद्धिमान मशीनें बनाने का विज्ञान है। जो मशीनें समय के साथ सीखती और स्मार्ट बनती हैं, वे AI हैं, जबकि जो मशीनें केवल नियमों का पालन करती हैं और नहीं सीखतीं, वे AI नहीं हैं।</p>
-                        <p><strong>आपने AI कहाँ देखा या उपयोग किया है?</strong> सामान्य उदाहरण:</p>
-                        <ul>
-                            <li>Instagram – आपकी रुचि के आधार पर पोस्ट और रील्स दिखाता है।</li>
-                            <li>Amazon – आपको वे चीज़ें सुझाता है जो आप खरीदना चाहेंगे।</li>
-                            <li>Netflix – आपके पसंदीदा मूवीज़ और शो सुझाता है।</li>
-                            <li>Facebook – आपको दोस्त ढूँढने में मदद करता है और आपकी रुचि के अनुसार विज्ञापन दिखाता है।</li>
-                            <li>Google Maps – आपको जल्दी पहुँचने का सबसे अच्छा रास्ता दिखाता है।</li>
-                        </ul>
-                        <p><strong>AI क्या नहीं है?</strong> उदाहरण: डिजिटल घड़ी, कैलकुलेटर, रेफ्रिजरेटर – ये नियमों का पालन करते हैं, सीखते नहीं।</p>
-                    </div>
-                </div>
-
-                <!-- AI vs NOT AI Table -->
-                <div class="table-wrap">
-                    <table>
-                        <caption>AI vs Not AI – Examples / AI बनाम गैर-AI – उदाहरण</caption>
-                        <thead>
-                            <tr><th>Example</th><th>AI? (✓/✗)</th><th>Reason</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Digital clock showing time</td><td>✗</td><td>Follows set steps, does not learn.</td></tr>
-                            <tr><td>Smartphone suggesting words while typing</td><td>✓</td><td>Learns from your typing habits.</td></tr>
-                            <tr><td>App suggesting movies based on past choices</td><td>✓</td><td>Uses AI to recommend content.</td></tr>
-                            <tr><td>Calculator doing math</td><td>✗</td><td>Does not learn or recognize patterns.</td></tr>
-                            <tr><td>App identifying plant diseases from a photo</td><td>✓</td><td>Analyzes image using AI.</td></tr>
-                            <tr><td>Refrigerator keeping food cold</td><td>✗</td><td>No smart thinking or learning.</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="short-notes">
-                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 Key Takeaways / मुख्य बातें</h4>
-                    <ul>
-                        <li>AI is the science of creating intelligent machines.</li>
-                        <li>AI is everywhere – we use AI applications every day.</li>
-                        <li>Machines that learn are AI; machines that follow fixed rules are not.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="ai-13-1">
+<div class="section-header">
+<span class="icon">🧠</span>
+<span class="title">13.1 Understanding AI / AI को समझना</span>
+</div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Artificial Intelligence (AI)</strong> is the science of creating intelligent machines. Machines that can learn and get smarter over time are AI, while machines that follow set rules without learning are not AI.</p>
+<p><strong>Where have you seen or used AI?</strong> Common examples:</p>
+<ul>
+<li>Instagram – shows posts and reels based on your interests.</li>
+<li>Amazon – suggests things you might like to buy.</li>
+<li>Netflix – suggests movies and TV shows you might enjoy.</li>
+<li>Facebook – helps you find friends and shows ads that match your interests.</li>
+<li>Google Maps – helps you find the best way to reach places quickly.</li>
+</ul>
+<p><strong>What is not AI?</strong> Examples: A digital clock showing time, a calculator doing math, a refrigerator keeping food cold – these follow set rules and do not learn.</p>
+</div>
+<div class="hi">
+<p><strong>आर्टिफिशियल इंटेलिजेंस (AI)</strong> बुद्धिमान मशीनें बनाने का विज्ञान है। जो मशीनें समय के साथ सीखती और स्मार्ट बनती हैं, वे AI हैं, जबकि जो मशीनें केवल नियमों का पालन करती हैं और नहीं सीखतीं, वे AI नहीं हैं।</p>
+<p><strong>आपने AI कहाँ देखा या उपयोग किया है?</strong> सामान्य उदाहरण:</p>
+<ul>
+<li>Instagram – आपकी रुचि के आधार पर पोस्ट और रील्स दिखाता है।</li>
+<li>Amazon – आपको वे चीज़ें सुझाता है जो आप खरीदना चाहेंगे।</li>
+<li>Netflix – आपके पसंदीदा मूवीज़ और शो सुझाता है।</li>
+<li>Facebook – आपको दोस्त ढूँढने में मदद करता है और आपकी रुचि के अनुसार विज्ञापन दिखाता है।</li>
+<li>Google Maps – आपको जल्दी पहुँचने का सबसे अच्छा रास्ता दिखाता है।</li>
+</ul>
+<p><strong>AI क्या नहीं है?</strong> उदाहरण: डिजिटल घड़ी, कैलकुलेटर, रेफ्रिजरेटर – ये नियमों का पालन करते हैं, सीखते नहीं।</p>
+</div>
+</div>
+<!-- AI vs NOT AI Table -->
+<div class="table-wrap">
+<table>
+<caption>AI vs Not AI – Examples / AI बनाम गैर-AI – उदाहरण</caption>
+<thead>
+<tr><th>Example</th><th>AI? (✓/✗)</th><th>Reason</th></tr>
+</thead>
+<tbody>
+<tr><td>Digital clock showing time</td><td>✗</td><td>Follows set steps, does not learn.</td></tr>
+<tr><td>Smartphone suggesting words while typing</td><td>✓</td><td>Learns from your typing habits.</td></tr>
+<tr><td>App suggesting movies based on past choices</td><td>✓</td><td>Uses AI to recommend content.</td></tr>
+<tr><td>Calculator doing math</td><td>✗</td><td>Does not learn or recognize patterns.</td></tr>
+<tr><td>App identifying plant diseases from a photo</td><td>✓</td><td>Analyzes image using AI.</td></tr>
+<tr><td>Refrigerator keeping food cold</td><td>✗</td><td>No smart thinking or learning.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes">
+<h4 style="margin:0 0 6px; color:#1e7e34;">📌 Key Takeaways / मुख्य बातें</h4>
+<ul>
+<li>AI is the science of creating intelligent machines.</li>
+<li>AI is everywhere – we use AI applications every day.</li>
+<li>Machines that learn are AI; machines that follow fixed rules are not.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     13.2 HOW DOES AI WORK?
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="ai-13-2">
-            <div class="section-header">
-                <span class="icon">⚙️</span>
-                <span class="title">13.2 How does AI work? / AI कैसे काम करता है?</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="bilingual">
-                    <div class="en">
-                        <p><strong>AI learns from data.</strong> Data can be anything – text messages, social media posts, photos, music – any kind of information that can be collected.</p>
-                        <p><strong>Machine Learning (ML):</strong> Think of ML as someone learning to cook with a recipe book. Follow steps (algorithms) and use ingredients (data) to make a dish (output). The more recipes you try, the better you get.</p>
-                        <p><strong>Deep Learning (DL):</strong> You are an experienced chef who learns to cook by taste and experimentation. You do not need a recipe book; you experiment with ingredients and techniques to create new dishes. DL finds complex patterns in large amounts of data.</p>
-                        <p><strong>Key difference:</strong> ML follows steps, while DL learns like humans do – finding patterns without specific instructions.</p>
-                    </div>
-                    <div class="hi">
-                        <p><strong>AI डेटा से सीखता है।</strong> डेटा कुछ भी हो सकता है – टेक्स्ट संदेश, सोशल मीडिया पोस्ट, फ़ोटो, संगीत – कोई भी जानकारी जो एकत्रित की जा सकती है।</p>
-                        <p><strong>मशीन लर्निंग (ML):</strong> ML को किसी के रेसिपी बुक से खाना सीखने के रूप में सोचें। चरणों (एल्गोरिदम) का पालन करें और सामग्री (डेटा) का उपयोग करके एक व्यंजन (आउटपुट) बनाएँ। जितनी अधिक रेसिपी आज़माएँगे, उतना बेहतर बनेंगे।</p>
-                        <p><strong>डीप लर्निंग (DL):</strong> आप एक अनुभवी शेफ हैं जो स्वाद और प्रयोग से खाना सीखता है। आपको रेसिपी बुक की आवश्यकता नहीं है; आप नए व्यंजन बनाने के लिए सामग्री और तकनीकों के साथ प्रयोग करते हैं। DL बड़ी मात्रा में डेटा में जटिल पैटर्न ढूंढता है।</p>
-                        <p><strong>मुख्य अंतर:</strong> ML चरणों का पालन करता है, जबकि DL मनुष्यों की तरह सीखता है – बिना विशिष्ट निर्देशों के पैटर्न ढूँढता है।</p>
-                    </div>
-                </div>
-
-                <!-- ML vs DL Comparison -->
-                <div class="compare-grid">
-                    <div class="compare-card ml">
-                        <h4>🧮 Machine Learning (ML)</h4>
-                        <ul>
-                            <li><strong>Learning Style:</strong> Follows steps (algorithms).</li>
-                            <li><strong>Data Dependence:</strong> Works well with moderate data.</li>
-                            <li><strong>Training Time:</strong> Faster, less computation.</li>
-                            <li><strong>Applications:</strong> Email filtering, recommendation systems.</li>
-                        </ul>
-                    </div>
-                    <div class="compare-card dl">
-                        <h4>🧠 Deep Learning (DL)</h4>
-                        <ul>
-                            <li><strong>Learning Style:</strong> Finds patterns like humans.</li>
-                            <li><strong>Data Dependence:</strong> Needs large amounts of data.</li>
-                            <li><strong>Training Time:</strong> Slower, more computation.</li>
-                            <li><strong>Applications:</strong> Image recognition, speech recognition, self-driving cars.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="info-card blue">
-                    <h4 style="margin:0 0 6px; color:#003366;">🔑 Key Points</h4>
-                    <ul style="margin:0; padding-left:20px;">
-                        <li>AI learns from data – more data = better decisions.</li>
-                        <li>ML teaches computers through examples.</li>
-                        <li>DL is an advanced method within ML that finds complex patterns.</li>
-                        <li>Applications can use ML, DL, or both.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="ai-13-2">
+<div class="section-header">
+<span class="icon">⚙️</span>
+<span class="title">13.2 How does AI work? / AI कैसे काम करता है?</span>
+</div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>AI learns from data.</strong> Data can be anything – text messages, social media posts, photos, music – any kind of information that can be collected.</p>
+<p><strong>Machine Learning (ML):</strong> Think of ML as someone learning to cook with a recipe book. Follow steps (algorithms) and use ingredients (data) to make a dish (output). The more recipes you try, the better you get.</p>
+<p><strong>Deep Learning (DL):</strong> You are an experienced chef who learns to cook by taste and experimentation. You do not need a recipe book; you experiment with ingredients and techniques to create new dishes. DL finds complex patterns in large amounts of data.</p>
+<p><strong>Key difference:</strong> ML follows steps, while DL learns like humans do – finding patterns without specific instructions.</p>
+</div>
+<div class="hi">
+<p><strong>AI डेटा से सीखता है।</strong> डेटा कुछ भी हो सकता है – टेक्स्ट संदेश, सोशल मीडिया पोस्ट, फ़ोटो, संगीत – कोई भी जानकारी जो एकत्रित की जा सकती है।</p>
+<p><strong>मशीन लर्निंग (ML):</strong> ML को किसी के रेसिपी बुक से खाना सीखने के रूप में सोचें। चरणों (एल्गोरिदम) का पालन करें और सामग्री (डेटा) का उपयोग करके एक व्यंजन (आउटपुट) बनाएँ। जितनी अधिक रेसिपी आज़माएँगे, उतना बेहतर बनेंगे।</p>
+<p><strong>डीप लर्निंग (DL):</strong> आप एक अनुभवी शेफ हैं जो स्वाद और प्रयोग से खाना सीखता है। आपको रेसिपी बुक की आवश्यकता नहीं है; आप नए व्यंजन बनाने के लिए सामग्री और तकनीकों के साथ प्रयोग करते हैं। DL बड़ी मात्रा में डेटा में जटिल पैटर्न ढूंढता है।</p>
+<p><strong>मुख्य अंतर:</strong> ML चरणों का पालन करता है, जबकि DL मनुष्यों की तरह सीखता है – बिना विशिष्ट निर्देशों के पैटर्न ढूँढता है।</p>
+</div>
+</div>
+<!-- ML vs DL Comparison -->
+<div class="compare-grid">
+<div class="compare-card ml">
+<h4>🧮 Machine Learning (ML)</h4>
+<ul>
+<li><strong>Learning Style:</strong> Follows steps (algorithms).</li>
+<li><strong>Data Dependence:</strong> Works well with moderate data.</li>
+<li><strong>Training Time:</strong> Faster, less computation.</li>
+<li><strong>Applications:</strong> Email filtering, recommendation systems.</li>
+</ul>
+</div>
+<div class="compare-card dl">
+<h4>🧠 Deep Learning (DL)</h4>
+<ul>
+<li><strong>Learning Style:</strong> Finds patterns like humans.</li>
+<li><strong>Data Dependence:</strong> Needs large amounts of data.</li>
+<li><strong>Training Time:</strong> Slower, more computation.</li>
+<li><strong>Applications:</strong> Image recognition, speech recognition, self-driving cars.</li>
+</ul>
+</div>
+</div>
+<div class="info-card blue">
+<h4 style="margin:0 0 6px; color:#003366;">🔑 Key Points</h4>
+<ul style="margin:0; padding-left:20px;">
+<li>AI learns from data – more data = better decisions.</li>
+<li>ML teaches computers through examples.</li>
+<li>DL is an advanced method within ML that finds complex patterns.</li>
+<li>Applications can use ML, DL, or both.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     13.3 TYPES OF AI
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="ai-13-3">
-            <div class="section-header">
-                <span class="icon">📊</span>
-                <span class="title">13.3 Types of AI / AI के प्रकार</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="bilingual">
-                    <div class="en">
-                        <p><strong>Narrow AI (Weak AI):</strong> AI that is good at doing one specific task well. Examples: Chess-playing AI, language translation apps, voice assistants like Siri or Alexa (though they can do multiple tasks, each is still narrow).</p>
-                        <p><strong>General AI (Strong AI):</strong> AI that can do many different things – like a human. It does not exist yet; it is still a future goal.</p>
-                        <p><strong>History of AI Timeline:</strong></p>
-                        <ul>
-                            <li><strong>1950s:</strong> Scientists began talking about "Artificial Intelligence".</li>
-                            <li><strong>1960s–1970s:</strong> Chatbots and more – early AI programs.</li>
-                            <li><strong>1980s–1990s:</strong> A slow period – AI winter.</li>
-                            <li><strong>2000s:</strong> AI starts to bloom – increased computing power.</li>
-                            <li><strong>2010–present:</strong> Rapid improvements – deep learning, generative AI.</li>
-                        </ul>
-                    </div>
-                    <div class="hi">
-                        <p><strong>नैरो AI (कमजोर AI):</strong> AI जो एक विशिष्ट कार्य को अच्छी तरह से करने में माहिर है। उदाहरण: शतरंज खेलने वाला AI, भाषा अनुवाद ऐप, वॉइस असिस्टेंट जैसे Siri या Alexa (हालाँकि वे कई कार्य कर सकते हैं, फिर भी प्रत्येक नैरो है)।</p>
-                        <p><strong>जनरल AI (मजबूत AI):</strong> AI जो कई अलग-अलग काम कर सकता है – इंसान की तरह। यह अभी तक अस्तित्व में नहीं है; यह अभी भी एक भविष्य का लक्ष्य है।</p>
-                        <p><strong>AI का इतिहास – समयरेखा:</strong></p>
-                        <ul>
-                            <li><strong>1950s:</strong> वैज्ञानिकों ने "आर्टिफिशियल इंटेलिजेंस" के बारे में बात करना शुरू किया।</li>
-                            <li><strong>1960s–1970s:</strong> चैटबॉट और अधिक – प्रारंभिक AI प्रोग्राम।</li>
-                            <li><strong>1980s–1990s:</strong> धीमी अवधि – AI शीतकाल।</li>
-                            <li><strong>2000s:</strong> AI खिलना शुरू होता है – बढ़ी हुई कंप्यूटिंग शक्ति।</li>
-                            <li><strong>2010–वर्तमान:</strong> तीव्र सुधार – डीप लर्निंग, जनरेटिव AI।</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- History Timeline -->
-                <div class="timeline">
-                    <div class="timeline-item"><span class="year">1950s</span><span class="desc">Scientists began talking about "Artificial Intelligence".</span></div>
-                    <div class="timeline-item"><span class="year">1960s–1970s</span><span class="desc">Chatbots and early AI programs developed.</span></div>
-                    <div class="timeline-item"><span class="year">1980s–1990s</span><span class="desc">AI winter – slow progress.</span></div>
-                    <div class="timeline-item"><span class="year">2000s</span><span class="desc">AI starts to bloom with increased computing power.</span></div>
-                    <div class="timeline-item"><span class="year">2010–present</span><span class="desc">Rapid improvements – Deep Learning, Generative AI.</span></div>
-                </div>
-
-                <div class="info-card highlight">
-                    <h4 style="margin:0 0 6px; color:#856404;">💡 Quick Recap</h4>
-                    <ul style="margin:0; padding-left:20px;">
-                        <li>Narrow AI = good at one thing.</li>
-                        <li>General AI = can do many things (not ready yet).</li>
-                        <li>AI has impacted many parts of our lives.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="ai-13-3">
+<div class="section-header">
+<span class="icon">📊</span>
+<span class="title">13.3 Types of AI / AI के प्रकार</span>
+</div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Narrow AI (Weak AI):</strong> AI that is good at doing one specific task well. Examples: Chess-playing AI, language translation apps, voice assistants like Siri or Alexa (though they can do multiple tasks, each is still narrow).</p>
+<p><strong>General AI (Strong AI):</strong> AI that can do many different things – like a human. It does not exist yet; it is still a future goal.</p>
+<p><strong>History of AI Timeline:</strong></p>
+<ul>
+<li><strong>1950s:</strong> Scientists began talking about "Artificial Intelligence".</li>
+<li><strong>1960s–1970s:</strong> Chatbots and more – early AI programs.</li>
+<li><strong>1980s–1990s:</strong> A slow period – AI winter.</li>
+<li><strong>2000s:</strong> AI starts to bloom – increased computing power.</li>
+<li><strong>2010–present:</strong> Rapid improvements – deep learning, generative AI.</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>नैरो AI (कमजोर AI):</strong> AI जो एक विशिष्ट कार्य को अच्छी तरह से करने में माहिर है। उदाहरण: शतरंज खेलने वाला AI, भाषा अनुवाद ऐप, वॉइस असिस्टेंट जैसे Siri या Alexa (हालाँकि वे कई कार्य कर सकते हैं, फिर भी प्रत्येक नैरो है)।</p>
+<p><strong>जनरल AI (मजबूत AI):</strong> AI जो कई अलग-अलग काम कर सकता है – इंसान की तरह। यह अभी तक अस्तित्व में नहीं है; यह अभी भी एक भविष्य का लक्ष्य है।</p>
+<p><strong>AI का इतिहास – समयरेखा:</strong></p>
+<ul>
+<li><strong>1950s:</strong> वैज्ञानिकों ने "आर्टिफिशियल इंटेलिजेंस" के बारे में बात करना शुरू किया।</li>
+<li><strong>1960s–1970s:</strong> चैटबॉट और अधिक – प्रारंभिक AI प्रोग्राम।</li>
+<li><strong>1980s–1990s:</strong> धीमी अवधि – AI शीतकाल।</li>
+<li><strong>2000s:</strong> AI खिलना शुरू होता है – बढ़ी हुई कंप्यूटिंग शक्ति।</li>
+<li><strong>2010–वर्तमान:</strong> तीव्र सुधार – डीप लर्निंग, जनरेटिव AI।</li>
+</ul>
+</div>
+</div>
+<!-- History Timeline -->
+<div class="timeline">
+<div class="timeline-item"><span class="year">1950s</span><span class="desc">Scientists began talking about "Artificial Intelligence".</span></div>
+<div class="timeline-item"><span class="year">1960s–1970s</span><span class="desc">Chatbots and early AI programs developed.</span></div>
+<div class="timeline-item"><span class="year">1980s–1990s</span><span class="desc">AI winter – slow progress.</span></div>
+<div class="timeline-item"><span class="year">2000s</span><span class="desc">AI starts to bloom with increased computing power.</span></div>
+<div class="timeline-item"><span class="year">2010–present</span><span class="desc">Rapid improvements – Deep Learning, Generative AI.</span></div>
+</div>
+<div class="info-card highlight">
+<h4 style="margin:0 0 6px; color:#856404;">💡 Quick Recap</h4>
+<ul style="margin:0; padding-left:20px;">
+<li>Narrow AI = good at one thing.</li>
+<li>General AI = can do many things (not ready yet).</li>
+<li>AI has impacted many parts of our lives.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     13.4 WHAT CAN AI DO?
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="ai-13-4">
-            <div class="section-header">
-                <span class="icon">✨</span>
-                <span class="title">13.4 What can AI do? / AI क्या कर सकता है?</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="bilingual">
-                    <div class="en">
-                        <p><strong>Generative AI</strong> is a type of AI that can create new content – images, text, music, videos – based on what it has learned from existing data.</p>
-                        <p><strong>How to talk to AI:</strong> Use <strong>prompts</strong> – clear, specific instructions. A <strong>base prompt</strong> is the first instruction. <strong>Follow-up prompts</strong> refine the output.</p>
-                        <p><strong>Good prompts</strong> are clear and specific. <strong>Bad prompts</strong> are vague and unclear.</p>
-                        <p><strong>Generative AI tools:</strong> ChatGPT (writing), Microsoft Copilot, Gemini (images, text), Beatoven (music), VN editor (video).</p>
-                    </div>
-                    <div class="hi">
-                        <p><strong>जनरेटिव AI</strong> एक प्रकार का AI है जो मौजूदा डेटा से सीखकर नई सामग्री – छवियाँ, पाठ, संगीत, वीडियो – बना सकता है।</p>
-                        <p><strong>AI से कैसे बात करें:</strong> <strong>प्रॉम्प्ट</strong> का उपयोग करें – स्पष्ट, विशिष्ट निर्देश। <strong>बेस प्रॉम्प्ट</strong> पहला निर्देश है। <strong>फॉलो-अप प्रॉम्प्ट</strong> आउटपुट को परिष्कृत करते हैं।</p>
-                        <p><strong>अच्छे प्रॉम्प्ट</strong> स्पष्ट और विशिष्ट होते हैं। <strong>खराब प्रॉम्प्ट</strong> अस्पष्ट होते हैं।</p>
-                        <p><strong>जनरेटिव AI टूल्स:</strong> ChatGPT (लेखन), Microsoft Copilot, Gemini (छवियाँ, पाठ), Beatoven (संगीत), VN editor (वीडियो)।</p>
-                    </div>
-                </div>
-
-                <!-- Prompt Comparison -->
-                <div class="compare-grid">
-                    <div class="compare-card" style="border-color:#dc3545; background:#fdf0f1;">
-                        <h4 style="color:#b02a37;">❌ Bad Prompt</h4>
-                        <p style="font-size:0.95rem;">"Tell me how to cook."</p>
-                        <p style="font-size:0.85rem; color:#888;">Too vague – doesn't specify what to cook or for whom.</p>
-                    </div>
-                    <div class="compare-card" style="border-color:#28a745; background:#f0faf2;">
-                        <h4 style="color:#1e7e34;">✅ Good Prompt</h4>
-                        <p style="font-size:0.95rem;">"Share an easy Pav Bhaji recipe for 4 people, with instructions for cooking bhaji and preparing buttered pav."</p>
-                        <p style="font-size:0.85rem; color:#888;">Clear, specific, includes details.</p>
-                    </div>
-                </div>
-
-                <div class="short-notes">
-                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 Key Points</h4>
-                    <ul>
-                        <li>Generative AI creates new content from existing data.</li>
-                        <li>AI tools help with art, writing, music, and video creation.</li>
-                        <li>Popular tools: ChatGPT, Gemini, Beatoven, VN editor.</li>
-                        <li>Good prompts = clear + specific.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="ai-13-4">
+<div class="section-header">
+<span class="icon">✨</span>
+<span class="title">13.4 What can AI do? / AI क्या कर सकता है?</span>
+</div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Generative AI</strong> is a type of AI that can create new content – images, text, music, videos – based on what it has learned from existing data.</p>
+<p><strong>How to talk to AI:</strong> Use <strong>prompts</strong> – clear, specific instructions. A <strong>base prompt</strong> is the first instruction. <strong>Follow-up prompts</strong> refine the output.</p>
+<p><strong>Good prompts</strong> are clear and specific. <strong>Bad prompts</strong> are vague and unclear.</p>
+<p><strong>Generative AI tools:</strong> ChatGPT (writing), Microsoft Copilot, Gemini (images, text), Beatoven (music), VN editor (video).</p>
+</div>
+<div class="hi">
+<p><strong>जनरेटिव AI</strong> एक प्रकार का AI है जो मौजूदा डेटा से सीखकर नई सामग्री – छवियाँ, पाठ, संगीत, वीडियो – बना सकता है।</p>
+<p><strong>AI से कैसे बात करें:</strong> <strong>प्रॉम्प्ट</strong> का उपयोग करें – स्पष्ट, विशिष्ट निर्देश। <strong>बेस प्रॉम्प्ट</strong> पहला निर्देश है। <strong>फॉलो-अप प्रॉम्प्ट</strong> आउटपुट को परिष्कृत करते हैं।</p>
+<p><strong>अच्छे प्रॉम्प्ट</strong> स्पष्ट और विशिष्ट होते हैं। <strong>खराब प्रॉम्प्ट</strong> अस्पष्ट होते हैं।</p>
+<p><strong>जनरेटिव AI टूल्स:</strong> ChatGPT (लेखन), Microsoft Copilot, Gemini (छवियाँ, पाठ), Beatoven (संगीत), VN editor (वीडियो)।</p>
+</div>
+</div>
+<!-- Prompt Comparison -->
+<div class="compare-grid">
+<div class="compare-card" style="border-color:#dc3545; background:#fdf0f1;">
+<h4 style="color:#b02a37;">❌ Bad Prompt</h4>
+<p style="font-size:0.95rem;">"Tell me how to cook."</p>
+<p style="font-size:0.85rem; color:#888;">Too vague – doesn't specify what to cook or for whom.</p>
+</div>
+<div class="compare-card" style="border-color:#28a745; background:#f0faf2;">
+<h4 style="color:#1e7e34;">✅ Good Prompt</h4>
+<p style="font-size:0.95rem;">"Share an easy Pav Bhaji recipe for 4 people, with instructions for cooking bhaji and preparing buttered pav."</p>
+<p style="font-size:0.85rem; color:#888;">Clear, specific, includes details.</p>
+</div>
+</div>
+<div class="short-notes">
+<h4 style="margin:0 0 6px; color:#1e7e34;">📌 Key Points</h4>
+<ul>
+<li>Generative AI creates new content from existing data.</li>
+<li>AI tools help with art, writing, music, and video creation.</li>
+<li>Popular tools: ChatGPT, Gemini, Beatoven, VN editor.</li>
+<li>Good prompts = clear + specific.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     13.5 IMPACT OF AI ON JOBS & INDUSTRIES
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="ai-13-5">
-            <div class="section-header">
-                <span class="icon">🏭</span>
-                <span class="title">13.5 Impact of AI on Jobs & Industries / AI का नौकरियों और उद्योगों पर प्रभाव</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="bilingual">
-                    <div class="en">
-                        <p><strong>AI is changing the workplace.</strong> Examples: Amazon Go stores use AI for cashier-less shopping.</p>
-                        <p><strong>Advantages of AI at work:</strong></p>
-                        <ul>
-                            <li>Takes over boring, repetitive tasks.</li>
-                            <li>Helps make decisions faster.</li>
-                            <li>Can work 24/7 without getting tired.</li>
-                            <li>Analyzes large amounts of data quickly.</li>
-                        </ul>
-                        <p><strong>Disadvantages of AI at work:</strong></p>
-                        <ul>
-                            <li>Can be costly to implement.</li>
-                            <li>Can lead to job loss for some people.</li>
-                            <li>May make mistakes if not programmed correctly.</li>
-                            <li>Requires maintenance and updates.</li>
-                        </ul>
-                    </div>
-                    <div class="hi">
-                        <p><strong>AI कार्यस्थल को बदल रहा है।</strong> उदाहरण: Amazon Go स्टोर AI का उपयोग करके कैशियर-रहित खरीदारी करते हैं।</p>
-                        <p><strong>AI के लाभ:</strong></p>
-                        <ul>
-                            <li>उबाऊ, दोहराए जाने वाले कार्यों को संभालता है।</li>
-                            <li>तेज़ निर्णय लेने में मदद करता है।</li>
-                            <li>बिना थके 24/7 काम कर सकता है।</li>
-                            <li>बड़ी मात्रा में डेटा का त्वरित विश्लेषण करता है।</li>
-                        </ul>
-                        <p><strong>AI के नुकसान:</strong></p>
-                        <ul>
-                            <li>लागू करना महंगा हो सकता है।</li>
-                            <li>कुछ लोगों के लिए नौकरी छूट सकती है।</li>
-                            <li>यदि सही से प्रोग्राम न किया जाए तो गलतियाँ कर सकता है।</li>
-                            <li>रखरखाव और अपडेट की आवश्यकता होती है।</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="info-card blue">
-                    <h4 style="margin:0 0 6px; color:#003366;">📊 Quick Comparison</h4>
-                    <ul style="margin:0; padding-left:20px;">
-                        <li><strong>Advantages:</strong> Efficiency, speed, 24/7 availability.</li>
-                        <li><strong>Disadvantages:</strong> Cost, job displacement, errors.</li>
-                        <li>AI impacts the way we work – it's important to use it wisely.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="ai-13-5">
+<div class="section-header">
+<span class="icon">🏭</span>
+<span class="title">13.5 Impact of AI on Jobs &amp; Industries / AI का नौकरियों और उद्योगों पर प्रभाव</span>
+</div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>AI is changing the workplace.</strong> Examples: Amazon Go stores use AI for cashier-less shopping.</p>
+<p><strong>Advantages of AI at work:</strong></p>
+<ul>
+<li>Takes over boring, repetitive tasks.</li>
+<li>Helps make decisions faster.</li>
+<li>Can work 24/7 without getting tired.</li>
+<li>Analyzes large amounts of data quickly.</li>
+</ul>
+<p><strong>Disadvantages of AI at work:</strong></p>
+<ul>
+<li>Can be costly to implement.</li>
+<li>Can lead to job loss for some people.</li>
+<li>May make mistakes if not programmed correctly.</li>
+<li>Requires maintenance and updates.</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>AI कार्यस्थल को बदल रहा है।</strong> उदाहरण: Amazon Go स्टोर AI का उपयोग करके कैशियर-रहित खरीदारी करते हैं।</p>
+<p><strong>AI के लाभ:</strong></p>
+<ul>
+<li>उबाऊ, दोहराए जाने वाले कार्यों को संभालता है।</li>
+<li>तेज़ निर्णय लेने में मदद करता है।</li>
+<li>बिना थके 24/7 काम कर सकता है।</li>
+<li>बड़ी मात्रा में डेटा का त्वरित विश्लेषण करता है।</li>
+</ul>
+<p><strong>AI के नुकसान:</strong></p>
+<ul>
+<li>लागू करना महंगा हो सकता है।</li>
+<li>कुछ लोगों के लिए नौकरी छूट सकती है।</li>
+<li>यदि सही से प्रोग्राम न किया जाए तो गलतियाँ कर सकता है।</li>
+<li>रखरखाव और अपडेट की आवश्यकता होती है।</li>
+</ul>
+</div>
+</div>
+<div class="info-card blue">
+<h4 style="margin:0 0 6px; color:#003366;">📊 Quick Comparison</h4>
+<ul style="margin:0; padding-left:20px;">
+<li><strong>Advantages:</strong> Efficiency, speed, 24/7 availability.</li>
+<li><strong>Disadvantages:</strong> Cost, job displacement, errors.</li>
+<li>AI impacts the way we work – it's important to use it wisely.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     13.6 EXPLORING CAREERS WITH AI
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="ai-13-6">
-            <div class="section-header">
-                <span class="icon">🎯</span>
-                <span class="title">13.6 Exploring Careers with AI / AI के साथ करियर की खोज</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="bilingual">
-                    <div class="en">
-                        <p><strong>AI can help you find career options</strong> that match your interests and qualifications. Use AI tools like ChatGPT or Microsoft Copilot with prompts to get personalized career suggestions.</p>
-                        <p><strong>Example prompt:</strong> "I am 18 years old, living in Gujarat. My interests include reading, drawing, and learning new things. I am pursuing an Electrical course at ITI. Suggest 10 suitable career options – conventional and creative – that match my interests and qualifications."</p>
-                        <p><strong>Once you have career options, you can explore:</strong></p>
-                        <ul>
-                            <li>Roles & Responsibilities</li>
-                            <li>Work Environment</li>
-                            <li>Educational Requirements</li>
-                            <li>Skills Needed</li>
-                            <li>Demand & Growth</li>
-                            <li>Salary Range</li>
-                            <li>Finding Jobs</li>
-                        </ul>
-                    </div>
-                    <div class="hi">
-                        <p><strong>AI आपकी रुचियों और योग्यताओं के अनुसार करियर विकल्प</strong> ढूँढने में मदद कर सकता है। ChatGPT या Microsoft Copilot जैसे AI टूल्स का उपयोग करें और व्यक्तिगत करियर सुझाव प्राप्त करें।</p>
-                        <p><strong>उदाहरण प्रॉम्प्ट:</strong> "मैं 18 साल का हूँ, गुजरात में रहता हूँ। मेरी रुचियों में पढ़ना, चित्र बनाना और नई चीज़ें सीखना शामिल है। मैं ITI में इलेक्ट्रिकल कोर्स कर रहा हूँ। मेरी रुचियों और योग्यताओं से मेल खाने वाले 10 उपयुक्त करियर विकल्प सुझाएँ – पारंपरिक और रचनात्मक दोनों।"</p>
-                        <p><strong>करियर विकल्प मिलने के बाद, आप यह जान सकते हैं:</strong></p>
-                        <ul>
-                            <li>भूमिकाएँ और जिम्मेदारियाँ</li>
-                            <li>कार्य वातावरण</li>
-                            <li>शैक्षिक आवश्यकताएँ</li>
-                            <li>आवश्यक कौशल</li>
-                            <li>माँग और विकास</li>
-                            <li>वेतन सीमा</li>
-                            <li>नौकरी ढूँढना</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="info-card green">
-                    <h4 style="margin:0 0 6px; color:#1e7e34;">✅ Benefits of Using AI for Career Exploration</h4>
-                    <ul style="margin:0; padding-left:20px;">
-                        <li>Suggests careers that match your interests and qualifications.</li>
-                        <li>Helps you find new options you might not have thought of.</li>
-                        <li>Saves time by showing careers that fit your profile.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="ai-13-6">
+<div class="section-header">
+<span class="icon">🎯</span>
+<span class="title">13.6 Exploring Careers with AI / AI के साथ करियर की खोज</span>
+</div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>AI can help you find career options</strong> that match your interests and qualifications. Use AI tools like ChatGPT or Microsoft Copilot with prompts to get personalized career suggestions.</p>
+<p><strong>Example prompt:</strong> "I am 18 years old, living in Gujarat. My interests include reading, drawing, and learning new things. I am pursuing an Electrical course at ITI. Suggest 10 suitable career options – conventional and creative – that match my interests and qualifications."</p>
+<p><strong>Once you have career options, you can explore:</strong></p>
+<ul>
+<li>Roles &amp; Responsibilities</li>
+<li>Work Environment</li>
+<li>Educational Requirements</li>
+<li>Skills Needed</li>
+<li>Demand &amp; Growth</li>
+<li>Salary Range</li>
+<li>Finding Jobs</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>AI आपकी रुचियों और योग्यताओं के अनुसार करियर विकल्प</strong> ढूँढने में मदद कर सकता है। ChatGPT या Microsoft Copilot जैसे AI टूल्स का उपयोग करें और व्यक्तिगत करियर सुझाव प्राप्त करें।</p>
+<p><strong>उदाहरण प्रॉम्प्ट:</strong> "मैं 18 साल का हूँ, गुजरात में रहता हूँ। मेरी रुचियों में पढ़ना, चित्र बनाना और नई चीज़ें सीखना शामिल है। मैं ITI में इलेक्ट्रिकल कोर्स कर रहा हूँ। मेरी रुचियों और योग्यताओं से मेल खाने वाले 10 उपयुक्त करियर विकल्प सुझाएँ – पारंपरिक और रचनात्मक दोनों।"</p>
+<p><strong>करियर विकल्प मिलने के बाद, आप यह जान सकते हैं:</strong></p>
+<ul>
+<li>भूमिकाएँ और जिम्मेदारियाँ</li>
+<li>कार्य वातावरण</li>
+<li>शैक्षिक आवश्यकताएँ</li>
+<li>आवश्यक कौशल</li>
+<li>माँग और विकास</li>
+<li>वेतन सीमा</li>
+<li>नौकरी ढूँढना</li>
+</ul>
+</div>
+</div>
+<div class="info-card green">
+<h4 style="margin:0 0 6px; color:#1e7e34;">✅ Benefits of Using AI for Career Exploration</h4>
+<ul style="margin:0; padding-left:20px;">
+<li>Suggests careers that match your interests and qualifications.</li>
+<li>Helps you find new options you might not have thought of.</li>
+<li>Saves time by showing careers that fit your profile.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     13.7 LEARNING WITH AI
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="ai-13-7">
-            <div class="section-header">
-                <span class="icon">📖</span>
-                <span class="title">13.7 Learning with AI / AI के साथ सीखना</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="bilingual">
-                    <div class="en">
-                        <p><strong>AI can help you learn better</strong> by providing personalized study plans, simplifying complex topics, giving feedback, and suggesting resources.</p>
-                        <p><strong>How AI helps:</strong></p>
-                        <ul>
-                            <li><strong>Understanding what to learn:</strong> "List the main topics I should start with."</li>
-                            <li><strong>Simplifying complex topics:</strong> "Explain this in simple terms with examples."</li>
-                            <li><strong>Getting feedback:</strong> "Check my essay for grammar and punctuation errors."</li>
-                            <li><strong>Practicing for real-life situations:</strong> "Simulate a job interview in English."</li>
-                            <li><strong>Testing your knowledge:</strong> "Create a quiz to test my vocabulary."</li>
-                            <li><strong>Finding more resources:</strong> "Recommend websites and apps for learning."</li>
-                            <li><strong>Idea generation:</strong> "Help me come up with project ideas."</li>
-                            <li><strong>Resume building:</strong> "Help me improve my resume."</li>
-                            <li><strong>Personalizing your study schedule:</strong> "Create a weekly study plan."</li>
-                        </ul>
-                        <p><strong>Remember:</strong> AI is a powerful tool, but you still need to put in the effort. Use AI to stay organized and motivated, but don't expect it to do everything for you.</p>
-                    </div>
-                    <div class="hi">
-                        <p><strong>AI आपको बेहतर सीखने में मदद कर सकता है</strong> – व्यक्तिगत अध्ययन योजनाएँ, जटिल विषयों को सरल बनाना, फीडबैक देना और संसाधन सुझाना।</p>
-                        <p><strong>AI कैसे मदद करता है:</strong></p>
-                        <ul>
-                            <li><strong>क्या सीखना है:</strong> "मुख्य विषयों की सूची दें।"</li>
-                            <li><strong>जटिल विषयों को सरल बनाना:</strong> "इसे सरल शब्दों में उदाहरण सहित समझाएँ।"</li>
-                            <li><strong>फीडबैक प्राप्त करना:</strong> "मेरे निबंध में व्याकरण और विराम चिह्न की जाँच करें।"</li>
-                            <li><strong>वास्तविक जीवन के लिए अभ्यास:</strong> "अंग्रेजी में नौकरी साक्षात्कार का अनुकरण करें।"</li>
-                            <li><strong>ज्ञान परीक्षण:</strong> "मेरी शब्दावली का परीक्षण करने के लिए प्रश्नोत्तरी बनाएँ।"</li>
-                            <li><strong>अधिक संसाधन:</strong> "सीखने के लिए वेबसाइटें और ऐप्स सुझाएँ।"</li>
-                            <li><strong>विचार निर्माण:</strong> "प्रोजेक्ट विचारों में मदद करें।"</li>
-                            <li><strong>रिज्यूमे निर्माण:</strong> "मेरे रिज्यूमे को सुधारने में मदद करें।"</li>
-                            <li><strong>अध्ययन कार्यक्रम:</strong> "साप्ताहिक अध्ययन योजना बनाएँ।"</li>
-                        </ul>
-                        <p><strong>याद रखें:</strong> AI एक शक्तिशाली उपकरण है, लेकिन आपको अभी भी प्रयास करना होगा। AI का उपयोग व्यवस्थित और प्रेरित रहने के लिए करें, लेकिन यह उम्मीद न करें कि यह आपके लिए सब कुछ करेगा।</p>
-                    </div>
-                </div>
-
-                <div class="info-card purple">
-                    <h4 style="margin:0 0 6px; color:#5a2d91;">💡 Pro Tip</h4>
-                    <p style="margin:0; font-size:0.95rem;">AI tutoring apps can help you learn, but don't forget your teachers, books, and classmates! Using them all together makes you a super-learner.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="ai-13-7">
+<div class="section-header">
+<span class="icon">📖</span>
+<span class="title">13.7 Learning with AI / AI के साथ सीखना</span>
+</div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>AI can help you learn better</strong> by providing personalized study plans, simplifying complex topics, giving feedback, and suggesting resources.</p>
+<p><strong>How AI helps:</strong></p>
+<ul>
+<li><strong>Understanding what to learn:</strong> "List the main topics I should start with."</li>
+<li><strong>Simplifying complex topics:</strong> "Explain this in simple terms with examples."</li>
+<li><strong>Getting feedback:</strong> "Check my essay for grammar and punctuation errors."</li>
+<li><strong>Practicing for real-life situations:</strong> "Simulate a job interview in English."</li>
+<li><strong>Testing your knowledge:</strong> "Create a quiz to test my vocabulary."</li>
+<li><strong>Finding more resources:</strong> "Recommend websites and apps for learning."</li>
+<li><strong>Idea generation:</strong> "Help me come up with project ideas."</li>
+<li><strong>Resume building:</strong> "Help me improve my resume."</li>
+<li><strong>Personalizing your study schedule:</strong> "Create a weekly study plan."</li>
+</ul>
+<p><strong>Remember:</strong> AI is a powerful tool, but you still need to put in the effort. Use AI to stay organized and motivated, but don't expect it to do everything for you.</p>
+</div>
+<div class="hi">
+<p><strong>AI आपको बेहतर सीखने में मदद कर सकता है</strong> – व्यक्तिगत अध्ययन योजनाएँ, जटिल विषयों को सरल बनाना, फीडबैक देना और संसाधन सुझाना।</p>
+<p><strong>AI कैसे मदद करता है:</strong></p>
+<ul>
+<li><strong>क्या सीखना है:</strong> "मुख्य विषयों की सूची दें।"</li>
+<li><strong>जटिल विषयों को सरल बनाना:</strong> "इसे सरल शब्दों में उदाहरण सहित समझाएँ।"</li>
+<li><strong>फीडबैक प्राप्त करना:</strong> "मेरे निबंध में व्याकरण और विराम चिह्न की जाँच करें।"</li>
+<li><strong>वास्तविक जीवन के लिए अभ्यास:</strong> "अंग्रेजी में नौकरी साक्षात्कार का अनुकरण करें।"</li>
+<li><strong>ज्ञान परीक्षण:</strong> "मेरी शब्दावली का परीक्षण करने के लिए प्रश्नोत्तरी बनाएँ।"</li>
+<li><strong>अधिक संसाधन:</strong> "सीखने के लिए वेबसाइटें और ऐप्स सुझाएँ।"</li>
+<li><strong>विचार निर्माण:</strong> "प्रोजेक्ट विचारों में मदद करें।"</li>
+<li><strong>रिज्यूमे निर्माण:</strong> "मेरे रिज्यूमे को सुधारने में मदद करें।"</li>
+<li><strong>अध्ययन कार्यक्रम:</strong> "साप्ताहिक अध्ययन योजना बनाएँ।"</li>
+</ul>
+<p><strong>याद रखें:</strong> AI एक शक्तिशाली उपकरण है, लेकिन आपको अभी भी प्रयास करना होगा। AI का उपयोग व्यवस्थित और प्रेरित रहने के लिए करें, लेकिन यह उम्मीद न करें कि यह आपके लिए सब कुछ करेगा।</p>
+</div>
+</div>
+<div class="info-card purple">
+<h4 style="margin:0 0 6px; color:#5a2d91;">💡 Pro Tip</h4>
+<p style="margin:0; font-size:0.95rem;">AI tutoring apps can help you learn, but don't forget your teachers, books, and classmates! Using them all together makes you a super-learner.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     13.8 USING AI RESPONSIBLY
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="ai-13-8">
-            <div class="section-header">
-                <span class="icon">🛡️</span>
-                <span class="title">13.8 Using AI Responsibly / AI का जिम्मेदारी से उपयोग</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="bilingual">
-                    <div class="en">
-                        <p><strong>Ethical AI</strong> means following rules to ensure AI is created and used safely and fairly for everyone.</p>
-                        <p><strong>Key ethical challenges:</strong></p>
-                        <ul>
-                            <li><strong>Bias:</strong> AI can learn biases from data. Example: Amazon's AI hiring tool preferred men over women because it learned from past hiring data.</li>
-                            <li><strong>Privacy:</strong> AI can misuse personal data. Example: Cambridge Analytica scandal with Facebook.</li>
-                            <li><strong>Safety & Security:</strong> AI can be used for cyberattacks, fake news, and scams.</li>
-                        </ul>
-                        <p><strong>How to use AI responsibly:</strong></p>
-                        <ul>
-                            <li>Learn about how AI works and its impacts.</li>
-                            <li>Think about fairness and safety when using AI tools.</li>
-                            <li>Speak up if you see AI being used in a bad way.</li>
-                            <li>Follow rules and guidelines for using AI responsibly.</li>
-                            <li>Always check information before sharing – THINK: Is it True? Helpful? Inspiring? Necessary? Kind?</li>
-                        </ul>
-                    </div>
-                    <div class="hi">
-                        <p><strong>नैतिक AI</strong> का अर्थ है नियमों का पालन करना ताकि AI सुरक्षित और निष्पक्ष रूप से बनाया और उपयोग किया जाए।</p>
-                        <p><strong>प्रमुख नैतिक चुनौतियाँ:</strong></p>
-                        <ul>
-                            <li><strong>पूर्वाग्रह (Bias):</strong> AI डेटा से पूर्वाग्रह सीख सकता है। उदाहरण: Amazon का AI भर्ती उपकरण पुरुषों को महिलाओं से अधिक पसंद करता था क्योंकि उसने पिछले भर्ती डेटा से सीखा था।</li>
-                            <li><strong>गोपनीयता (Privacy):</strong> AI व्यक्तिगत डेटा का दुरुपयोग कर सकता है। उदाहरण: Facebook के साथ Cambridge Analytica घोटाला।</li>
-                            <li><strong>सुरक्षा (Safety & Security):</strong> AI का उपयोग साइबर हमलों, फेक न्यूज़ और घोटालों के लिए किया जा सकता है।</li>
-                        </ul>
-                        <p><strong>AI का जिम्मेदारी से उपयोग कैसे करें:</strong></p>
-                        <ul>
-                            <li>AI कैसे काम करता है और इसके प्रभावों के बारे में जानें।</li>
-                            <li>AI टूल्स का उपयोग करते समय निष्पक्षता और सुरक्षा के बारे में सोचें।</li>
-                            <li>यदि आप AI का गलत उपयोग होते देखें तो बोलें।</li>
-                            <li>AI के जिम्मेदार उपयोग के लिए नियमों और दिशानिर्देशों का पालन करें।</li>
-                            <li>जानकारी साझा करने से पहले हमेशा जाँच करें – THINK: क्या यह सत्य? सहायक? प्रेरणादायक? आवश्यक? दयालु?</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Ethical Challenges Cards -->
-                <div class="compare-grid">
-                    <div class="compare-card" style="border-color:#dc3545; background:#fdf0f1;">
-                        <h4 style="color:#b02a37;">⚠️ Bias</h4>
-                        <p style="font-size:0.9rem;">Amazon's AI hiring tool preferred male candidates because it learned from past data that favored men.</p>
-                        <p style="font-size:0.9rem;"><strong>Solution:</strong> Train AI with diverse datasets.</p>
-                    </div>
-                    <div class="compare-card" style="border-color:#6f42c1; background:#f5f0ff;">
-                        <h4 style="color:#5a2d91;">🔒 Privacy</h4>
-                        <p style="font-size:0.9rem;">Cambridge Analytica used AI to collect data from 87 million Facebook users without permission.</p>
-                        <p style="font-size:0.9rem;"><strong>Solution:</strong> Ask users for permission before sharing data.</p>
-                    </div>
-                    <div class="compare-card" style="border-color:#17a2b8; background:#f0f9fc;">
-                        <h4 style="color:#0f7b8a;">🛡️ Safety & Security</h4>
-                        <p style="font-size:0.9rem;">AI can send fake emails/messages to steal information (cyberattacks).</p>
-                        <p style="font-size:0.9rem;"><strong>Solution:</strong> Create international rules for AI use in online safety.</p>
-                    </div>
-                    <div class="compare-card" style="border-color:#ff9900; background:#fff8e1;">
-                        <h4 style="color:#cc7a00;">📢 Fake News</h4>
-                        <p style="font-size:0.9rem;">AI on social media promotes false information and causes arguments.</p>
-                        <p style="font-size:0.9rem;"><strong>Solution:</strong> Detect and reduce the spread of false information.</p>
-                    </div>
-                </div>
-
-                <div class="important-box">
-                    <h4 style="margin:0 0 6px; color:#856404;">🧠 THINK Before You Share</h4>
-                    <ul style="margin:0; padding-left:20px;">
-                        <li><strong>T</strong> – Is it True?</li>
-                        <li><strong>H</strong> – Is it Helpful?</li>
-                        <li><strong>I</strong> – Is it Inspiring?</li>
-                        <li><strong>N</strong> – Is it Necessary?</li>
-                        <li><strong>K</strong> – Is it Kind?</li>
-                    </ul>
-                </div>
-
-                <div class="short-notes">
-                    <h4 style="margin:0 0 6px; color:#1e7e34;">📌 Key Takeaways</h4>
-                    <ul>
-                        <li>Ethical AI = fair and good for everyone.</li>
-                        <li>AI problems: bias, privacy issues, security risks, spreading false information.</li>
-                        <li>Train AI with different kinds of information, protect people's privacy.</li>
-                        <li>Always verify information before sharing.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="ai-13-8">
+<div class="section-header">
+<span class="icon">🛡️</span>
+<span class="title">13.8 Using AI Responsibly / AI का जिम्मेदारी से उपयोग</span>
+</div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Ethical AI</strong> means following rules to ensure AI is created and used safely and fairly for everyone.</p>
+<p><strong>Key ethical challenges:</strong></p>
+<ul>
+<li><strong>Bias:</strong> AI can learn biases from data. Example: Amazon's AI hiring tool preferred men over women because it learned from past hiring data.</li>
+<li><strong>Privacy:</strong> AI can misuse personal data. Example: Cambridge Analytica scandal with Facebook.</li>
+<li><strong>Safety &amp; Security:</strong> AI can be used for cyberattacks, fake news, and scams.</li>
+</ul>
+<p><strong>How to use AI responsibly:</strong></p>
+<ul>
+<li>Learn about how AI works and its impacts.</li>
+<li>Think about fairness and safety when using AI tools.</li>
+<li>Speak up if you see AI being used in a bad way.</li>
+<li>Follow rules and guidelines for using AI responsibly.</li>
+<li>Always check information before sharing – THINK: Is it True? Helpful? Inspiring? Necessary? Kind?</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>नैतिक AI</strong> का अर्थ है नियमों का पालन करना ताकि AI सुरक्षित और निष्पक्ष रूप से बनाया और उपयोग किया जाए।</p>
+<p><strong>प्रमुख नैतिक चुनौतियाँ:</strong></p>
+<ul>
+<li><strong>पूर्वाग्रह (Bias):</strong> AI डेटा से पूर्वाग्रह सीख सकता है। उदाहरण: Amazon का AI भर्ती उपकरण पुरुषों को महिलाओं से अधिक पसंद करता था क्योंकि उसने पिछले भर्ती डेटा से सीखा था।</li>
+<li><strong>गोपनीयता (Privacy):</strong> AI व्यक्तिगत डेटा का दुरुपयोग कर सकता है। उदाहरण: Facebook के साथ Cambridge Analytica घोटाला।</li>
+<li><strong>सुरक्षा (Safety &amp; Security):</strong> AI का उपयोग साइबर हमलों, फेक न्यूज़ और घोटालों के लिए किया जा सकता है।</li>
+</ul>
+<p><strong>AI का जिम्मेदारी से उपयोग कैसे करें:</strong></p>
+<ul>
+<li>AI कैसे काम करता है और इसके प्रभावों के बारे में जानें।</li>
+<li>AI टूल्स का उपयोग करते समय निष्पक्षता और सुरक्षा के बारे में सोचें।</li>
+<li>यदि आप AI का गलत उपयोग होते देखें तो बोलें।</li>
+<li>AI के जिम्मेदार उपयोग के लिए नियमों और दिशानिर्देशों का पालन करें।</li>
+<li>जानकारी साझा करने से पहले हमेशा जाँच करें – THINK: क्या यह सत्य? सहायक? प्रेरणादायक? आवश्यक? दयालु?</li>
+</ul>
+</div>
+</div>
+<!-- Ethical Challenges Cards -->
+<div class="compare-grid">
+<div class="compare-card" style="border-color:#dc3545; background:#fdf0f1;">
+<h4 style="color:#b02a37;">⚠️ Bias</h4>
+<p style="font-size:0.9rem;">Amazon's AI hiring tool preferred male candidates because it learned from past data that favored men.</p>
+<p style="font-size:0.9rem;"><strong>Solution:</strong> Train AI with diverse datasets.</p>
+</div>
+<div class="compare-card" style="border-color:#6f42c1; background:#f5f0ff;">
+<h4 style="color:#5a2d91;">🔒 Privacy</h4>
+<p style="font-size:0.9rem;">Cambridge Analytica used AI to collect data from 87 million Facebook users without permission.</p>
+<p style="font-size:0.9rem;"><strong>Solution:</strong> Ask users for permission before sharing data.</p>
+</div>
+<div class="compare-card" style="border-color:#17a2b8; background:#f0f9fc;">
+<h4 style="color:#0f7b8a;">🛡️ Safety &amp; Security</h4>
+<p style="font-size:0.9rem;">AI can send fake emails/messages to steal information (cyberattacks).</p>
+<p style="font-size:0.9rem;"><strong>Solution:</strong> Create international rules for AI use in online safety.</p>
+</div>
+<div class="compare-card" style="border-color:#ff9900; background:#fff8e1;">
+<h4 style="color:#cc7a00;">📢 Fake News</h4>
+<p style="font-size:0.9rem;">AI on social media promotes false information and causes arguments.</p>
+<p style="font-size:0.9rem;"><strong>Solution:</strong> Detect and reduce the spread of false information.</p>
+</div>
+</div>
+<div class="important-box">
+<h4 style="margin:0 0 6px; color:#856404;">🧠 THINK Before You Share</h4>
+<ul style="margin:0; padding-left:20px;">
+<li><strong>T</strong> – Is it True?</li>
+<li><strong>H</strong> – Is it Helpful?</li>
+<li><strong>I</strong> – Is it Inspiring?</li>
+<li><strong>N</strong> – Is it Necessary?</li>
+<li><strong>K</strong> – Is it Kind?</li>
+</ul>
+</div>
+<div class="short-notes">
+<h4 style="margin:0 0 6px; color:#1e7e34;">📌 Key Takeaways</h4>
+<ul>
+<li>Ethical AI = fair and good for everyone.</li>
+<li>AI problems: bias, privacy issues, security risks, spreading false information.</li>
+<li>Train AI with different kinds of information, protect people's privacy.</li>
+<li>Always verify information before sharing.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     MCQ LINK
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="mcq">
-            <div class="section-header">
-                <span class="icon">❓</span>
-                <span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="mcq-link">
-                    <p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
-                    <a href="/question-bank/employability-skills/ai-module-1.html" target="_blank">📝 Go to Question Bank →</a>
-                    <p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header">
+<span class="icon">❓</span>
+<span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span>
+</div>
+<div class="section-body copy-protect">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/employability-skills/ai-module-1.html" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     RELATED MODULES
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="related">
-            <div class="section-header">
-                <span class="icon">🔗</span>
-                <span class="title">Related Modules / संबंधित मॉड्यूल</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div style="display:flex; flex-wrap:wrap; gap:12px;">
-                    <a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Introduction to Employability Skills</a>
-                    <a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Becoming a Professional</a>
-                    <a href="module-6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 6: Essential Digital Skills</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header">
+<span class="icon">🔗</span>
+<span class="title">Related Modules / संबंधित मॉड्यूल</span>
+</div>
+<div class="section-body copy-protect">
+<div style="display:flex; flex-wrap:wrap; gap:12px;">
+<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Introduction to Employability Skills</a>
+<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Becoming a Professional</a>
+<a href="module-6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 6: Essential Digital Skills</a>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     COMMENTS
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="comments">
-            <div class="section-header">
-                <span class="icon">💬</span>
-                <span class="title">Comments / टिप्पणियाँ – with Moderation Review</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="comments-section">
-                    <p>💬 <strong>Share your thoughts or ask questions about this module.</strong></p>
-                    <p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 All comments are reviewed by the admin before being published.</p>
-                    <textarea id="comment-text" rows="3" placeholder="Write your comment here..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
-                    <input type="text" id="comment-name" placeholder="Your Name (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
-                    <button onclick="postComment()" class="btn" style="margin-top:6px;">💬 Post Comment (Pending Review)</button>
-                    <div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
-                        <div class="comment-item">
-                            <strong>Admin</strong> <span class="meta">(Moderator)</span> <span class="status-approved">✅ Approved</span>
-                            <p style="margin:4px 0 0 0; font-size:0.95rem;">Welcome to the AI Module! Feel free to ask questions or share your feedback.</p>
-                        </div>
-                        <p style="color:#888; font-style:italic; margin-top:8px;">Your comment will appear here after admin approval.</p>
-                    </div>
-                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ Comments are moderated. Please be respectful.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="comments">
+<div class="section-header">
+<span class="icon">💬</span>
+<span class="title">Comments / टिप्पणियाँ – with Moderation Review</span>
+</div>
+<div class="section-body copy-protect">
+<div class="comments-section">
+<p>💬 <strong>Share your thoughts or ask questions about this module.</strong></p>
+<p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 All comments are reviewed by the admin before being published.</p>
+<textarea id="comment-text" placeholder="Write your comment here..." rows="3" style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
+<input id="comment-name" placeholder="Your Name (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;" type="text"/>
+<button class="btn" onclick="postComment()" style="margin-top:6px;">💬 Post Comment (Pending Review)</button>
+<div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
+<div class="comment-item">
+<strong>Admin</strong> <span class="meta">(Moderator)</span> <span class="status-approved">✅ Approved</span>
+<p style="margin:4px 0 0 0; font-size:0.95rem;">Welcome to the AI Module! Feel free to ask questions or share your feedback.</p>
+</div>
+<p style="color:#888; font-style:italic; margin-top:8px;">Your comment will appear here after admin approval.</p>
+</div>
+<p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ Comments are moderated. Please be respectful.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     ADMIN PANEL
     ============================================================ -->
-    <div class="container">
-        <div class="admin-toggle" onclick="toggleAdminPanel()">
-            <span class="key-icon">🔑</span>
-            <strong>Admin Panel</strong> – Comments Management
+<div class="container">
+<div class="admin-toggle" onclick="toggleAdminPanel()">
+<span class="key-icon">🔑</span>
+<strong>Admin Panel</strong> – Comments Management
             <span style="color:#888; font-weight:400; font-size:0.85rem; display:block; margin-top:4px;">(Click to open/close admin panel)</span>
-        </div>
-        <div class="admin-panel" id="adminPanel">
-            <div class="admin-header">
-                <h3>🔐 Comment Moderation</h3>
-                <button class="close-btn" onclick="toggleAdminPanel()">✕ Close</button>
-            </div>
-            <div class="admin-password-box" id="adminLogin">
-                <input type="password" id="adminPassword" placeholder="Enter admin password..." onkeyup="if(event.key==='Enter') checkAdminPassword()">
-                <button onclick="checkAdminPassword()">🔓 Login</button>
-                <span class="error-msg" id="passwordError">❌ Wrong password! Try again.</span>
-            </div>
-            <div id="adminContent" style="display:none;">
-                <div class="comment-stats" id="commentStats">
-                    <span>📊 Total: <span class="count" id="totalCount">0</span></span>
-                    <span>⏳ Pending: <span class="count" id="pendingCount">0</span></span>
-                    <span>✅ Approved: <span class="count" id="approvedCount">0</span></span>
-                    <span>❌ Rejected: <span class="count" id="rejectedCount">0</span></span>
-                </div>
-                <div id="adminCommentList"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+</div>
+<div class="admin-panel" id="adminPanel">
+<div class="admin-header">
+<h3>🔐 Comment Moderation</h3>
+<button class="close-btn" onclick="toggleAdminPanel()">✕ Close</button>
+</div>
+<div class="admin-password-box" id="adminLogin">
+<input id="adminPassword" onkeyup="if(event.key==='Enter') checkAdminPassword()" placeholder="Enter admin password..." type="password"/>
+<button onclick="checkAdminPassword()">🔓 Login</button>
+<span class="error-msg" id="passwordError">❌ Wrong password! Try again.</span>
+</div>
+<div id="adminContent" style="display:none;">
+<div class="comment-stats" id="commentStats">
+<span>📊 Total: <span class="count" id="totalCount">0</span></span>
+<span>⏳ Pending: <span class="count" id="pendingCount">0</span></span>
+<span>✅ Approved: <span class="count" id="approvedCount">0</span></span>
+<span>❌ Rejected: <span class="count" id="rejectedCount">0</span></span>
+</div>
+<div id="adminCommentList"></div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     TOPIC REQUEST
     ============================================================ -->
-    <div class="container">
-        <div class="content-section" data-content="topicrequest">
-            <div class="section-header">
-                <span class="icon">💭</span>
-                <span class="title">Topic Request / विषय अनुरोध</span>
-            </div>
-            <div class="section-body copy-protect">
-                <div class="topic-request">
-                    <p>📝 <strong>Request a new topic or suggest an improvement.</strong></p>
-                    <input type="text" id="topic-name" placeholder="Your Name (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;">
-                    <input type="email" id="topic-email" placeholder="Your Email (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;">
-                    <textarea id="topic-message" rows="4" placeholder="Describe the topic or improvement you'd like to see..." style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
-                    <button onclick="submitTopicRequest()" class="btn">📤 Submit Request</button>
-                    <p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ Your request will be reviewed by the admin and added soon.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ============================================================
+<div class="container">
+<div class="content-section" data-content="topicrequest">
+<div class="section-header">
+<span class="icon">💭</span>
+<span class="title">Topic Request / विषय अनुरोध</span>
+</div>
+<div class="section-body copy-protect">
+<div class="topic-request">
+<p>📝 <strong>Request a new topic or suggest an improvement.</strong></p>
+<input id="topic-name" placeholder="Your Name (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;" type="text"/>
+<input id="topic-email" placeholder="Your Email (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;" type="email"/>
+<textarea id="topic-message" placeholder="Describe the topic or improvement you'd like to see..." rows="4" style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
+<button class="btn" onclick="submitTopicRequest()">📤 Submit Request</button>
+<p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ Your request will be reviewed by the admin and added soon.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================================================
     SUGGESTIONS & DISCLAIMER
     ============================================================ -->
-    <div class="container" style="margin-top:16px;">
-        <div style="background:#fff; border-radius:14px; padding:20px 24px; border:1px solid #e6eaef; margin-bottom:20px;">
-            <h2 style="color:#003366; font-size:1.3rem; margin:0 0 6px;">💬 सुझाव दें</h2>
-            <p style="margin:0 0 12px;">यदि इस Module में कोई सुधार सुझाना है, तो हमें बताएं।</p>
-            <a href="/contact.html" class="btn">💬 Click Here →</a>
-        </div>
-        <div style="background:#fff8e1; border-radius:14px; padding:18px 22px; border:1px solid #ffe082; margin-bottom:20px;">
-            <h2 style="color:#856404; font-size:1.2rem; margin:0 0 4px;">⚠ Disclaimer</h2>
-            <p style="margin:0; font-size:0.95rem; color:#6c6c6c;">ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
-        </div>
-    </div>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="footer-links">
-            <a href="/disclaimer.html">Disclaimer</a>
-            <a href="/privacy-policy.html">Privacy Policy</a>
-            <a href="/terms.html">Terms</a>
-            <a href="/contact.html">Contact</a>
-        </div>
-        <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
-    </footer>
-
-    <button id="scrollTop" title="Go to Top">⬆</button>
-
-    <!-- ============================================================
+<div class="container" style="margin-top:16px;">
+<div style="background:#fff; border-radius:14px; padding:20px 24px; border:1px solid #e6eaef; margin-bottom:20px;">
+<h2 style="color:#003366; font-size:1.3rem; margin:0 0 6px;">💬 सुझाव दें</h2>
+<p style="margin:0 0 12px;">यदि इस Module में कोई सुधार सुझाना है, तो हमें बताएं।</p>
+<a class="btn" href="/contact.html">💬 Click Here →</a>
+</div>
+<div style="background:#fff8e1; border-radius:14px; padding:18px 22px; border:1px solid #ffe082; margin-bottom:20px;">
+<h2 style="color:#856404; font-size:1.2rem; margin:0 0 4px;">⚠ Disclaimer</h2>
+<p style="margin:0; font-size:0.95rem; color:#6c6c6c;">ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
+</div>
+</div>
+<!-- ===== FOOTER ===== -->
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+<button id="scrollTop" title="Go to Top">⬆</button>
+<!-- ============================================================
     JAVASCRIPT
     ============================================================ -->
-    <script>
+<script>
         // Disable right-click
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
@@ -1885,4 +1841,4 @@
         console.log(`🔑 Admin Password: ${ADMIN_PASSWORD}`);
     </script>
 </body>
-              </html>
+</html>

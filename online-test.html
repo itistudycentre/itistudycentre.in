@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Employability Skills – Online Test</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Employability Skills – Online Test</title>
+<style>
     /* ----- RESET & BASE ----- */
     * {
       box-sizing: border-box;
@@ -535,77 +536,69 @@
   </style>
 </head>
 <body>
+<div id="header-container"></div>
+<script defer="" src="/js/header-loader.js"></script>
 
 <div class="test-container" id="appContainer">
-
-  <!-- ====== LOADER ====== -->
-  <div id="loaderScreen">
-    <div class="spinner"></div>
-    <h2 style="font-weight:500; color:#0a2a3b;">📚 लोड हो रहा है…</h2>
-    <p style="color:#4d6a7a;">प्रश्न बैंक तैयार किया जा रहा है</p>
-  </div>
-
-  <!-- ====== MAIN TEST UI ====== -->
-  <div id="mainUI" style="display:none;">
-
-    <!-- HEADER -->
-    <div class="header">
-      <h1>
+<!-- ====== LOADER ====== -->
+<div id="loaderScreen">
+<div class="spinner"></div>
+<h2 style="font-weight:500; color:#0a2a3b;">📚 लोड हो रहा है…</h2>
+<p style="color:#4d6a7a;">प्रश्न बैंक तैयार किया जा रहा है</p>
+</div>
+<!-- ====== MAIN TEST UI ====== -->
+<div id="mainUI" style="display:none;">
+<!-- HEADER -->
+<div class="header">
+<h1>
         📘 Employability
         <small>Online Test</small>
-      </h1>
-      <div class="timer-box" id="timerDisplay">
-        <span>⏱</span> 15:00
+</h1>
+<div class="timer-box" id="timerDisplay">
+<span>⏱</span> 15:00
       </div>
-    </div>
-
-    <!-- ===== HOME SCREEN (Year Selection) ===== -->
-    <div id="homeScreen" class="home-screen">
-      <h2>🎯 अपना वर्ष चुनें</h2>
-      <p>25 रैंडम प्रश्न · 15 मिनट · प्रत्येक प्रश्न 2 अंक का</p>
-      <div class="year-grid" id="yearGrid">
-        <!-- dynamically filled -->
-      </div>
-    </div>
-
-    <!-- ===== TEST SCREEN ===== -->
-    <div id="testScreen" class="test-screen">
-      <div class="test-info">
-        <span class="badge" id="yearBadge">1st Year</span>
-        <span class="meta"><strong id="qProgress">0</strong> / 25 प्रश्न</span>
-        <span class="meta">⏱ शेष: <strong id="timerRemain">15:00</strong></span>
-      </div>
-
-      <div class="questions-scroll" id="questionsContainer">
-        <!-- rendered by JS -->
-      </div>
-
-      <div class="actions">
-        <div class="left">
-          <button class="btn btn-outline" id="btnReset" onclick="resetTest()">🔄 पुनः प्रारंभ</button>
-          <button class="btn btn-outline" id="btnHome" onclick="goHome()">🏠 होम</button>
-        </div>
-        <button class="btn btn-success" id="btnSubmit" onclick="submitTest()">📝 टेस्ट सबमिट करें</button>
-      </div>
-    </div>
-
-    <!-- ===== RESULT SCREEN (shown after submit) ===== -->
-    <div id="resultScreen" style="display:none;">
-      <div class="result-summary" id="resultSummary">
-        <!-- filled by JS -->
-      </div>
-      <div id="resultQuestions">
-        <!-- filled by JS -->
-      </div>
-      <div style="margin-top:24px; text-align:center;">
-        <button class="btn btn-primary" onclick="resetTest()">🔄 दोबारा टेस्ट दें</button>
-        <button class="btn btn-outline" onclick="goHome()" style="margin-left:12px;">🏠 होम</button>
-      </div>
-    </div>
-
-  </div><!-- end mainUI -->
 </div>
-
+<!-- ===== HOME SCREEN (Year Selection) ===== -->
+<div class="home-screen" id="homeScreen">
+<h2>🎯 अपना वर्ष चुनें</h2>
+<p>25 रैंडम प्रश्न · 15 मिनट · प्रत्येक प्रश्न 2 अंक का</p>
+<div class="year-grid" id="yearGrid">
+<!-- dynamically filled -->
+</div>
+</div>
+<!-- ===== TEST SCREEN ===== -->
+<div class="test-screen" id="testScreen">
+<div class="test-info">
+<span class="badge" id="yearBadge">1st Year</span>
+<span class="meta"><strong id="qProgress">0</strong> / 25 प्रश्न</span>
+<span class="meta">⏱ शेष: <strong id="timerRemain">15:00</strong></span>
+</div>
+<div class="questions-scroll" id="questionsContainer">
+<!-- rendered by JS -->
+</div>
+<div class="actions">
+<div class="left">
+<button class="btn btn-outline" id="btnReset" onclick="resetTest()">🔄 पुनः प्रारंभ</button>
+<button class="btn btn-outline" id="btnHome" onclick="goHome()">🏠 होम</button>
+</div>
+<button class="btn btn-success" id="btnSubmit" onclick="submitTest()">📝 टेस्ट सबमिट करें</button>
+</div>
+</div>
+<!-- ===== RESULT SCREEN (shown after submit) ===== -->
+<div id="resultScreen" style="display:none;">
+<div class="result-summary" id="resultSummary">
+<!-- filled by JS -->
+</div>
+<div id="resultQuestions">
+<!-- filled by JS -->
+</div>
+<div style="margin-top:24px; text-align:center;">
+<button class="btn btn-primary" onclick="resetTest()">🔄 दोबारा टेस्ट दें</button>
+<button class="btn btn-outline" onclick="goHome()" style="margin-left:12px;">🏠 होम</button>
+</div>
+</div>
+</div><!-- end mainUI -->
+</div>
 <!-- ==================================================================== -->
 <!-- SCRIPT: Load question-bank.js and run the app                       -->
 <!-- ==================================================================== -->
@@ -1103,6 +1096,5 @@
   window.goHome = goHome;
   window.startTest = startTest;
 </script>
-
 </body>
-  </html>
+</html>

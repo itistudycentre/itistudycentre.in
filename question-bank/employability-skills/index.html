@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employability Skills – Question Bank</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Employability Skills – Question Bank</title>
+<style>
         /* ----- Reset & Base ----- */
         * {
             box-sizing: border-box;
@@ -273,39 +274,36 @@
     </style>
 </head>
 <body>
-<div class="container">
+<div id="header-container"></div>
+<script defer="" src="/js/header-loader.js"></script>
 
-    <h1>
+<div class="container">
+<h1>
         📘 Employability Skills – Question Bank
         <small>ITI Study Centre</small>
-    </h1>
-
-    <!-- Filters -->
-    <div class="filters">
-        <div class="filter-group">
-            <label for="yearSelect">Year / Module Group</label>
-            <select id="yearSelect"></select>
-        </div>
-        <div class="filter-group">
-            <label for="moduleSelect">Module</label>
-            <select id="moduleSelect"></select>
-        </div>
-        <div class="stats" id="questionCount">प्रश्न: 0</div>
-    </div>
-
-    <!-- Questions container -->
-    <div id="questionsContainer">
-        <div class="loader">⏳ कृपया प्रतीक्षा करें…</div>
-    </div>
-
-    <footer>
+</h1>
+<!-- Filters -->
+<div class="filters">
+<div class="filter-group">
+<label for="yearSelect">Year / Module Group</label>
+<select id="yearSelect"></select>
+</div>
+<div class="filter-group">
+<label for="moduleSelect">Module</label>
+<select id="moduleSelect"></select>
+</div>
+<div class="stats" id="questionCount">प्रश्न: 0</div>
+</div>
+<!-- Questions container -->
+<div id="questionsContainer">
+<div class="loader">⏳ कृपया प्रतीक्षा करें…</div>
+</div>
+<footer>
         प्रश्न बैंक v1.0 · हिंदी और अंग्रेज़ी में · सही उत्तर हरे रंग में हाइलाइट किए गए हैं
     </footer>
 </div>
-
 <!-- Load question bank -->
 <script src="question-bank.js"></script>
-
 <!-- Main script -->
 <script>
     (function() {
@@ -486,6 +484,5 @@
         }
     })();
 </script>
-
 </body>
-  </html>
+</html>
