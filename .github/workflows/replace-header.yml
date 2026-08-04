@@ -1,36 +1,23 @@
-name: 🔄 Auto Fix Headers
-
+name: Replace Headers
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   fix-headers:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    permissions: write-all
     steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: 🐍 Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-
-      - name: 📦 Install Dependencies
-        run: pip install beautifulsoup4
-
-      - name: 🚀 Run Header Fixer
+      - uses: actions/checkout@v4
+      
+      - name: Run Python Script
         run: python replace_headers.py
-
-      - name: 📤 Commit Changes
+        
+      - name: Commit changes
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git add .
-          git diff --staged --quiet || git commit -m "fix: unified header applied [skip ci]"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Automated header fix"
           git push
