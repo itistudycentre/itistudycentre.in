@@ -1,4 +1,5 @@
 name: Replace Headers
+
 on:
   push:
     branches: [ main ]
@@ -10,14 +11,22 @@ jobs:
     permissions: write-all
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Run Python Script
-        run: python replace_headers.py
-        
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4
+
+      - name: Run header replace script
+        run: python replace_header.py
+
       - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add .
+          git add -A
           git diff --quiet && git diff --staged --quiet || git commit -m "Automated header fix"
           git push
