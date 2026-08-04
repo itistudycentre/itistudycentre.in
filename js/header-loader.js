@@ -1,6 +1,5 @@
 // js/header-loader.js
-(function() {
-    // Container बनाएं
+(function () {
     let container = document.getElementById('header-container');
     if (!container) {
         container = document.createElement('div');
@@ -8,26 +7,36 @@
         document.body.insertBefore(container, document.body.firstChild);
     }
 
-    // Header Load करें
     fetch('/header.html')
-        .then(res => {
+        .then(function (res) {
             if (!res.ok) throw new Error('Header not found');
             return res.text();
         })
-        .then(html => {
+        .then(function (html) {
             container.innerHTML = html;
-            // Active Link Highlight करें
-            const path = window.location.pathname.replace(/\/$/, '') || '/';
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === path || 
-                    (link.dataset.page && path.includes(link.dataset.page))) {
-                    link.classList.add('active');
-                }
-            });
+            highlightActiveLink();
         })
-        .catch(err => {
+        .catch(function (err) {
             console.warn('Header load failed:', err);
-            container.innerHTML = '<nav class="navbar"><div class="logo">ITI Study Centre</div></nav>';
+            container.innerHTML = '<header class="main-header"><div class="container"><div class="logo"><a href="/index.html">ITI Study Centre</a></div></div></header>';
         });
+
+    function highlightActiveLink() {
+        var path = window.location.pathname;
+        if (path.length > 1) {
+            path = path.replace(/\/$/, '');
+        }
+
+        var links = container.querySelectorAll('nav a');
+        links.forEach(function (link) {
+            link.classList.remove('active');
+            var raw = link.dataset.match || link.getAttribute('href');
+            var candidates = raw.split(',');
+            var isActive = candidates.some(function (m) {
+                if (m === '/') return path === '' || path === '/';
+                return path === m || path.startsWith(m);
+            });
+            if (isActive) link.classList.add('active');
+        });
+    }
 })();
