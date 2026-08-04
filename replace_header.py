@@ -1,35 +1,64 @@
 import os
-import re
+from pathlib import Path
+from bs4 import BeautifulSoup
 
-NEW_HEADER = """<div id="header-placeholder"></div>
-<script>
-fetch('/header.html')
-.then(r => r.text())
-.then(html => {
-    document.getElementById('header-placeholder').innerHTML = html;
-});
-</script>
-"""
+ROOT_DIR = Path(".")  # आपका रूट फोल्डर
 
-for root, dirs, files in os.walk("."):
-    if ".git" in root:
-        continue
+EXCLUDE_DIRS = ['node_modules', 'venv', '.git', 'static']
+EXCLUDE_FILES = ['header.html', 'header-loader.js', 'replace_headers.py']
 
-    for file in files:
-        if file.endswith(".html"):
+# यह कोड हर पेज के <body> के अंदर सबसे ऊपर जोड़ा जाएगा
+HEADER_LOADER_CODE = '''
+<div id="header-container"></div>
+<script src="/js/header-loader.js"></script>
+'''
 
-            path = os.path.join(root, file)
+def process_file(filepath):
+    print(f"Processing: {filepath}")
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
 
-            with open(path, "r", encoding="utf-8") as f:
-                html = f.read()
+    soup = BeautifulSoup(content, 'html.parser')
 
-            pattern = r'<div class="main-header".*?<section class="hero-banner">'
-            repl = NEW_HEADER + "\n\n<section class=\"hero-banner\">"
+    # --- 1. पुराने सभी Headers / Navbars हटाएं ---
+    for tag in soup.find_all(['header', 'nav']):
+        if 'navbar' in tag.get('class', []) or tag.name == 'header':
+            tag.decompose()
+        elif tag.find_all('a', limit=3) and tag.parent.name == 'body':
+            tag.decompose()
 
-            new_html = re.sub(pattern, repl, html, flags=re.S)
+    # पुराना container और script हटाएं
+    for div in soup.find_all('div', id='header-container'):
+        div.decompose()
+    for script in soup.find_all('script'):
+        if script.get('src') and 'header-loader.js' in script.get('src'):
+            script.decompose()
 
-            if new_html != html:
-                with open(path, "w", encoding="utf-8") as f:
-                    f.write(new_html)
+    # --- 2. नया Header Loader जोड़ें (body के अंदर सबसे ऊपर) ---
+    body = soup.body
+    if body:
+        new_soup = BeautifulSoup(HEADER_LOADER_CODE, 'html.parser')
+        for child in reversed(new_soup.contents):
+            body.insert(0, child)
+    else:
+        soup.append(BeautifulSoup(HEADER_LOADER_CODE, 'html.parser'))
 
-                print("Updated:", path)
+    # --- 3. फाइल सेव करें ---
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(str(soup))
+    print(f"✅ Updated: {filepath}")
+
+def main():
+    html_files = []
+    for ext in ['*.html', '*.htm']:
+        html_files.extend(ROOT_DIR.rglob(ext))
+
+    for f in html_files:
+        if any(excl in str(f) for excl in EXCLUDE_DIRS):
+            continue
+        if f.name in EXCLUDE_FILES:
+            continue
+        process_file(f)
+
+if __name__ == "__main__":
+    main()
