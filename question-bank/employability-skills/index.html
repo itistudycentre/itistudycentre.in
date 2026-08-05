@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
@@ -7,8 +6,6 @@
 <title>Employability Skills – Question Bank (Module Wise) | ITI Study Centre</title>
 <meta content="Employability Skills के सभी मॉड्यूल के प्रश्न उत्तर सहित — 1st Year, 2nd Year और AI Module." name="description"/>
 <link href="/images/favicon.png" rel="icon"/>
-<!-- ✅ यह नई CSS लिंक डाली गई है (बाकी पेजों की तरह कलरफुल Header के लिए) -->
-<link href="css/style.css" rel="stylesheet"/>
 <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -155,42 +152,45 @@
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
 
-
-
 <div class="breadcrumb"><div class="container">
-<a href="/index.html">🏠 Home</a>  › 
-<a href="/questionbank.html">Question Bank</a>  › 
+<a href="/index.html">🏠 Home</a> &nbsp;›&nbsp;
+<a href="/questionbank.html">Question Bank</a> &nbsp;›&nbsp;
 <span class="current">Employability Skills</span>
 </div></div>
+
 <section class="page-title"><div class="container">
 <h1>📘 Employability Skills – Question Bank</h1>
 <p>मॉड्यूल चुनें, उस मॉड्यूल के सभी प्रश्न सही उत्तर के साथ दिखेंगे</p>
 </div></section>
+
 <!-- ===== MODULES SCREEN ===== -->
 <div class="container" id="modulesScreen">
-<div class="tab-container" id="tabContainer"></div>
-<div class="year-section active" id="year-1st-Year"><div class="module-grid" id="grid-1st-Year"></div></div>
-<div class="year-section" id="year-2nd-Year"><div class="module-grid" id="grid-2nd-Year"></div></div>
-<div class="year-section" id="year-AI-Module"><div class="module-grid" id="grid-AI-Module"></div></div>
+    <div class="tab-container" id="tabContainer"></div>
+    <div class="year-section active" id="year-1st-Year"><div class="module-grid" id="grid-1st-Year"></div></div>
+    <div class="year-section" id="year-2nd-Year"><div class="module-grid" id="grid-2nd-Year"></div></div>
+    <div class="year-section" id="year-AI-Module"><div class="module-grid" id="grid-AI-Module"></div></div>
 </div>
+
 <!-- ===== QUESTIONS SCREEN (मॉड्यूल पर क्लिक करने पर यह खुलेगा) ===== -->
 <div class="container" id="questionsScreen">
-<button class="back-btn" onclick="backToModules()">← सभी मॉड्यूल पर वापस जाएँ</button>
-<div class="qs-header">
-<h2 id="qsTitle">मॉड्यूल</h2>
-<span class="qs-count" id="qsCount">प्रश्न: 0</span>
+    <button class="back-btn" onclick="backToModules()">← सभी मॉड्यूल पर वापस जाएँ</button>
+    <div class="qs-header">
+        <h2 id="qsTitle">मॉड्यूल</h2>
+        <span class="qs-count" id="qsCount">प्रश्न: 0</span>
+    </div>
+    <div id="questionsContainer"><div class="loader">⏳ कृपया प्रतीक्षा करें…</div></div>
 </div>
-<div id="questionsContainer"><div class="loader">⏳ कृपया प्रतीक्षा करें…</div></div>
-</div>
+
 <footer>
-<div class="footer-links">
-<a href="/disclaimer.html">Disclaimer</a>
-<a href="/privacy-policy.html">Privacy Policy</a>
-<a href="/terms.html">Terms</a>
-<a href="/contact.html">Contact</a>
-</div>
-<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+    <div class="footer-links">
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/contact.html">Contact</a>
+    </div>
+    <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
 </footer>
+
 <!-- प्रश्न बैंक डेटा -->
 <script src="/js/question-bank.js"></script>
 <script>
@@ -214,6 +214,29 @@
         renderTabs();
         YEAR_TABS.forEach(t => renderModules(t.key));
         switchYear('1st Year');
+        openFromUrl();
+    }
+
+    // ITI Notes पेजों से सीधे किसी खास module पर आने के लिए:
+    // उदाहरण: index.html?year=1st&mod=3  या  index.html?year=ai&mod=1
+    function openFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const yearParam = params.get('year');
+        const modParam = params.get('mod');
+        if (!yearParam || !modParam) return;
+
+        const yearKeyMap = { '1st': '1st Year', '2nd': '2nd Year', 'ai': 'AI Module' };
+        const yearKey = yearKeyMap[yearParam];
+        if (!yearKey || !bank[yearKey]) return;
+
+        const modules = bank[yearKey].modules;
+        const modName = Object.keys(modules).find(name =>
+            name.replace(/\s+/g, ' ').startsWith('Module ' + modParam + ':')
+        );
+        if (modName) {
+            switchYear(yearKey);
+            openModule(yearKey, modName);
+        }
     }
 
     function renderTabs() {
