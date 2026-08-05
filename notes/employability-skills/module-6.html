@@ -2123,7 +2123,7 @@
 <div class="section-body copy-protect">
 <div class="mcq-link">
 <p><strong>📌 इस मॉड्यूल के बहुविकल्पीय प्रश्नों का अभ्यास करने के लिए नीचे क्लिक करें।</strong></p>
-<a href="/question-bank/employability-skills/module-6.html" target="_blank">📝 प्रश्न बैंक पर जाएँ →</a>
+<a href="/question-bank/employability-skills/index.html?year=1st&mod=6" target="_blank">📝 प्रश्न बैंक पर जाएँ →</a>
 <p style="margin-top:10px; font-size:0.9rem; color:#888;">(नई टैब में खुलेगा)</p>
 </div>
 </div>
@@ -2256,81 +2256,4 @@
 <!-- ============================================================
     JAVASCRIPT
     ============================================================ -->
-<script>
-        // Disable right-click
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            alert('📚 सामग्री सुरक्षित है। कृपया इस पेज को शेयर करने के लिए शेयर बटन का उपयोग करें।');
-        });
-
-        // Disable Ctrl+C, Ctrl+X, Ctrl+U, Ctrl+S
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
-                e.preventDefault();
-                alert('📚 सामग्री कॉपी करना प्रतिबंधित है। कृपया शेयर बटन का उपयोग करें।');
-            }
-        });
-
-        // Search
-        function filterSections() {
-            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                const text = section.innerText.toLowerCase();
-                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
-            });
-        }
-        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
-            if (e.key === 'Enter') filterSections();
-        });
-
-        // Share functions
-        function getPageUrl() { return window.location.href; }
-
-        function getPageTitle() { return document.querySelector('title').textContent; }
-
-        function shareWhatsApp() {
-            const url = getPageUrl();
-            const text = encodeURIComponent('📘 ' + getPageTitle() + ' - इसे पढ़ें!');
-            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
-        }
-
-        function shareFacebook() {
-            const url = getPageUrl();
-            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
-        }
-
-        function shareTwitter() {
-            const url = getPageUrl();
-            const text = encodeURIComponent('📘 ' + getPageTitle());
-            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(url), '_blank');
-        }
-
-        function copyPageLink() {
-            const url = getPageUrl();
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(url).then(() => {
-                    const btn = document.getElementById('copyLinkBtn');
-                    const span = document.getElementById('copyLinkText');
-                    span.textContent = '✅ कॉपी हो गया!';
-                    btn.classList.add('copied');
-                    setTimeout(() => {
-                        span.textContent = 'लिंक कॉपी करें';
-                        btn.classList.remove('copied');
-                    }, 3000);
-                }).catch(() => { fallbackCopy(url); });
-            } else {
-                fallbackCopy(url);
-            }
-        }
-
-        function fallbackCopy(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            textarea.style.position = 'fixed';
-            textarea.style.opacity = '0';
-            document.body.appendChild(textarea);
-            textarea.select();
-            try {
-                document
-</script></body></html>
+<script></script></body></html>
