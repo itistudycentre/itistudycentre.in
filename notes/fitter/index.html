@@ -1,93 +1,884 @@
 <!DOCTYPE html>
-
 <html lang="hi">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Fitter Notes | ITI Study Centre</title>
-<meta content="ITI Fitter Trade Theory Notes in Hindi. Chapter Wise Study Material for NCVT and SCVT Students." name="description"/>
-<link href="/images/favicon.png" rel="icon"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<link href="https://www.itistudycentre.in/notes/fitter/index.html" rel="canonical"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITTER TRADE - NSQF Level 4 | Complete Theory & Question Bank</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .book-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            padding: 40px 50px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .header::before {
+            content: '⚙️';
+            position: absolute;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 120px;
+            opacity: 0.15;
+        }
+
+        .header::after {
+            content: '🔧';
+            position: absolute;
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 100px;
+            opacity: 0.12;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            color: #ffffff;
+            font-size: 3em;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+
+        .header .subtitle {
+            color: #ffd700;
+            font-size: 1.3em;
+            letter-spacing: 5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle-2 {
+            color: #ffffff;
+            font-size: 0.95em;
+            opacity: 0.9;
+            margin-top: 8px;
+            letter-spacing: 2px;
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-size: 0.85em;
+            margin-top: 12px;
+            border: 1px solid rgba(255,255,255,0.3);
+            letter-spacing: 1px;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #1a1a2e;
+            padding: 18px 30px;
+            gap: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: #fff;
+        }
+
+        .stat-item .number {
+            font-size: 1.6em;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-item .label {
+            font-size: 0.8em;
+            opacity: 0.8;
+            display: block;
+        }
+
+        .stat-divider {
+            width: 1px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            background: #f0f2f5;
+            border-bottom: 3px solid #1a2a6c;
+        }
+
+        .nav-tab {
+            flex: 1;
+            padding: 15px 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.05em;
+            transition: all 0.3s;
+            color: #555;
+            border-bottom: 3px solid transparent;
+            letter-spacing: 1px;
+        }
+
+        .nav-tab:hover {
+            background: #e8eaed;
+        }
+
+        .nav-tab.active {
+            color: #1a2a6c;
+            border-bottom-color: #1a2a6c;
+            background: #ffffff;
+        }
+
+        .nav-tab .icon {
+            margin-right: 8px;
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+            padding: 30px 40px 50px;
+            background: #ffffff;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        /* Year Header */
+        .year-header {
+            background: linear-gradient(135deg, #1a2a6c, #2d3b8f);
+            color: #fff;
+            padding: 20px 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 20px rgba(26,42,108,0.3);
+        }
+
+        .year-header .year-title {
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .year-header .year-sub {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .year-header .year-icon {
+            font-size: 3em;
+        }
+
+        /* Module Grid */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 25px;
+        }
+
+        .module-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #eef0f2;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .module-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .module-card .module-number {
+            font-size: 0.75em;
+            font-weight: bold;
+            color: #888;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .module-card .module-name-en {
+            font-size: 1.25em;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 8px 0 4px;
+        }
+
+        .module-card .module-name-hi {
+            font-size: 1.1em;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .module-card .module-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        .module-card .module-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .module-card .module-icon {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .module-card .status-badge {
+            display: inline-block;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.7em;
+            font-weight: bold;
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        /* Color Themes for Modules */
+        .module-card.color-1::before { background: #e74c3c; }
+        .module-card.color-2::before { background: #3498db; }
+        .module-card.color-3::before { background: #2ecc71; }
+        .module-card.color-4::before { background: #f39c12; }
+        .module-card.color-5::before { background: #9b59b6; }
+        .module-card.color-6::before { background: #1abc9c; }
+        .module-card.color-7::before { background: #e67e22; }
+        .module-card.color-8::before { background: #2c3e50; }
+        .module-card.color-9::before { background: #c0392b; }
+        .module-card.color-10::before { background: #2980b9; }
+        .module-card.color-11::before { background: #27ae60; }
+        .module-card.color-12::before { background: #d35400; }
+        .module-card.color-13::before { background: #8e44ad; }
+        .module-card.color-14::before { background: #16a085; }
+        .module-card.color-15::before { background: #2c3e50; }
+        .module-card.color-16::before { background: #7f8c8d; }
+
+        .module-card .click-hint {
+            font-size: 0.7em;
+            color: #aaa;
+            margin-top: 8px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .module-card:hover .click-hint {
+            opacity: 1;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 25px 40px;
+            text-align: center;
+            font-size: 0.85em;
+            border-top: 3px solid #ffd700;
+        }
+
+        .footer .footer-logo {
+            font-size: 1.2em;
+            color: #ffd700;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .footer .footer-text {
+            margin-top: 5px;
+            opacity: 0.7;
+        }
+
+        .footer .footer-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer .footer-links a:hover {
+            color: #ffd700;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 25px 20px;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .header .subtitle {
+                font-size: 1em;
+            }
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 12px 15px;
+            }
+            .stat-item .number {
+                font-size: 1.2em;
+            }
+            .nav-tabs {
+                flex-direction: column;
+            }
+            .nav-tab {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+            .content-section {
+                padding: 15px 15px 30px;
+            }
+            .module-grid {
+                grid-template-columns: 1fr;
+            }
+            .year-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+            .year-header .year-title {
+                font-size: 1.4em;
+            }
+            .footer {
+                padding: 15px 20px;
+            }
+            .footer .footer-links {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.4em;
+            }
+            .header .subtitle {
+                font-size: 0.85em;
+            }
+            .module-card .module-name-en {
+                font-size: 1em;
+            }
+            .module-card .module-name-hi {
+                font-size: 0.9em;
+            }
+        }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1a2a6c;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(26,42,108,0.4);
+            transition: all 0.3s;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 999;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(26,42,108,0.5);
+        }
+
+        /* Module Card Links - Make entire card clickable */
+        .module-card-link {
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+    </style>
 </head>
 <body>
-<div id="header-container"></div>
-<script defer="" src="/js/header-loader.js"></script>
 
+    <button class="scroll-top" id="scrollTop" title="Go to top">↑</button>
 
+    <div class="book-container">
 
-<!-- =========================================
-    HEADER (Absolute Paths - बिल्कुल पक्का)
-========================================= -->
-<!-- =========================================
-    BREADCRUMB
-========================================= -->
-<div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
-<a href="/" style="text-decoration:none; color:#003366;">🏠 Home</a>  ›  <a href="/iti-study-centre-notes.html" style="text-decoration:none; color:#003366;">ITI Notes</a>  ›  <span style="color:#555; font-weight:bold;">Fitter Notes</span>
-</div>
-<!-- =========================================
-    PAGE TITLE
-========================================= -->
-<section class="page-title">
-<div class="container">
-<h1>🔧 ITI Fitter Trade Notes</h1>
-<p>Chapter Wise Theory Notes | Hindi Medium | NCVT &amp; SCVT</p>
-</div>
-</section>
-<!-- =========================================
-    SEARCH BOX
-========================================= -->
-<section class="search-section container">
-<input placeholder="Search Fitter Topics, Chapters, or Keywords..." type="text"/>
-<button>🔍 Search</button>
-</section>
-<!-- =========================================
-    MAIN CONTENT (आपका Content यहाँ डालें)
-========================================= -->
-<section class="container">
-<div class="card">
-<h2>📖 Fitter Trade Study Notes</h2>
-<p>इस पेज पर ITI Fitter Trade के सभी Theory Notes Chapter Wise उपलब्ध कराए जाएंगे। सभी Notes सरल हिन्दी भाषा में तैयार किए जाएंगे ताकि NCVT एवं SCVT दोनों के विद्यार्थी आसानी से अध्ययन कर सकें।</p>
-<p>जैसे-जैसे नए Chapters तैयार होंगे, उन्हें इसी पेज पर जोड़ा जाएगा।</p>
-<div class="notice-box" style="background:#fff3cd; padding:15px; border-left:6px solid #ffc107; border-radius:6px; margin:20px 0;">
-<h3 style="margin-top:0; color:#856404;">📢 वर्तमान स्थिति</h3>
-<p>अभी Fitter Trade के Notes उपलब्ध नहीं हैं। जैसे-जैसे नए Notes तैयार होंगे, उन्हें इसी पेज पर जोड़ा जाएगा।</p>
-</div>
-<a class="news-btn" href="/iti-study-centre-notes.html">⬅ वापस ITI Notes पर जाएं</a>
-</div>
-</section>
-<!-- =========================================
-    SUGGESTIONS (कंटेंट में)
-========================================= -->
-<section class="container">
-<div class="card">
-<h2>💬 सुझाव दें</h2>
-<p>यदि आप किसी नए Chapter, Topic अथवा Study Material जोड़ना चाहते हैं, तो कृपया हमें अवश्य बताएं।</p>
-<br/>
-<a class="news-btn" href="/contact.html">💬 Click Here →</a>
-</div>
-</section>
-<!-- =========================================
-    FOOTER (पक्का)
-========================================= -->
-<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
-<a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">Disclaimer</a>
-<a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a>
-<a href="/terms.html" style="color:#aaa; text-decoration:none;">Terms</a>
-<a href="/contact.html" style="color:#aaa; text-decoration:none;">Contact</a>
-</div>
-<p style="margin:10px 0 0 0; color:#888;">© 2026 ITI Study Centre. All Rights Reserved.</p>
-</footer>
-<button id="scrollTop" style="position:fixed; bottom:20px; right:20px; background:#003366; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;" title="Go to Top">⬆</button>
-<script src="/js/main.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const year = document.querySelector('footer p');
-    if (year) {
-      year.textContent = "© " + new Date().getFullYear() + " ITI Study Centre. All Rights Reserved.";
-    }
-  });
-</script>
+        <!-- HEADER -->
+        <div class="header">
+            <div class="header-content">
+                <h1>⚙️ FITTER TRADE</h1>
+                <div class="subtitle">📘 COMPLETE THEORY &amp; QUESTION BANK</div>
+                <div class="subtitle-2">NSQF Level - 4 (Revised 2022) | Capital Goods &amp; Manufacturing Sector</div>
+                <div class="badge">📖 2 Years | 16 Modules | 10,000+ Questions</div>
+            </div>
+        </div>
+
+        <!-- STATS BAR -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="number">16</span>
+                <span class="label">📚 Modules</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="number">2400</span>
+                <span class="label">⏱️ Training Hours</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="number">10K+</span>
+                <span class="label">❓ Questions</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="number">2</span>
+                <span class="label">📅 Years</span>
+            </div>
+        </div>
+
+        <!-- NAVIGATION TABS -->
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-tab="year1" onclick="showTab('year1')">
+                <span class="icon">📘</span> FIRST YEAR (प्रथम वर्ष)
+            </div>
+            <div class="nav-tab" data-tab="year2" onclick="showTab('year2')">
+                <span class="icon">📗</span> SECOND YEAR (द्वितीय वर्ष)
+            </div>
+        </div>
+
+        <!-- ====== FIRST YEAR CONTENT ====== -->
+        <div class="content-section active" id="year1">
+
+            <div class="year-header">
+                <div>
+                    <div class="year-title">📘 FIRST YEAR — प्रथम वर्ष</div>
+                    <div class="year-sub">8 Modules | 1200 Hours | NSQF Level 4</div>
+                </div>
+                <div class="year-icon">🔧</div>
+            </div>
+
+            <div class="module-grid">
+
+                <!-- Module 1 -->
+                <a href="#" class="module-card-link" onclick="showModule(1)">
+                    <div class="module-card color-1">
+                        <span class="module-icon">🛡️</span>
+                        <div class="module-number">Module 01</div>
+                        <div class="module-name-en">SAFETY</div>
+                        <div class="module-name-hi">सुरक्षा</div>
+                        <div class="module-meta">
+                            <span>📖 37 Hrs Theory</span>
+                            <span>🔧 212 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 2 -->
+                <a href="#" class="module-card-link" onclick="showModule(2)">
+                    <div class="module-card color-2">
+                        <span class="module-icon">📏</span>
+                        <div class="module-number">Module 02</div>
+                        <div class="module-name-en">BASIC FITTING</div>
+                        <div class="module-name-hi">मूल फिटिंग</div>
+                        <div class="module-meta">
+                            <span>📖 100 Hrs Theory</span>
+                            <span>🔧 250 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 3 -->
+                <a href="#" class="module-card-link" onclick="showModule(3)">
+                    <div class="module-card color-3">
+                        <span class="module-icon">🔩</span>
+                        <div class="module-number">Module 03</div>
+                        <div class="module-name-en">SHEET METAL</div>
+                        <div class="module-name-hi">शीट मेटल</div>
+                        <div class="module-meta">
+                            <span>📖 21 Hrs Theory</span>
+                            <span>🔧 97 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 4 -->
+                <a href="#" class="module-card-link" onclick="showModule(4)">
+                    <div class="module-card color-4">
+                        <span class="module-icon">⚡</span>
+                        <div class="module-number">Module 04</div>
+                        <div class="module-name-en">WELDING</div>
+                        <div class="module-name-hi">वेल्डिंग</div>
+                        <div class="module-meta">
+                            <span>📖 16 Hrs Theory</span>
+                            <span>🔧 64 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 5 -->
+                <a href="#" class="module-card-link" onclick="showModule(5)">
+                    <div class="module-card color-5">
+                        <span class="module-icon">🔄</span>
+                        <div class="module-number">Module 05</div>
+                        <div class="module-name-en">DRILLING</div>
+                        <div class="module-name-hi">ड्रिलिंग</div>
+                        <div class="module-meta">
+                            <span>📖 26 Hrs Theory</span>
+                            <span>🔧 143 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 6 -->
+                <a href="#" class="module-card-link" onclick="showModule(6)">
+                    <div class="module-card color-6">
+                        <span class="module-icon">🔗</span>
+                        <div class="module-number">Module 06</div>
+                        <div class="module-name-en">FITTING ASSEMBLY</div>
+                        <div class="module-name-hi">फिटिंग असेम्बली</div>
+                        <div class="module-meta">
+                            <span>📖 28 Hrs Theory</span>
+                            <span>🔧 126 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 7 -->
+                <a href="#" class="module-card-link" onclick="showModule(7)">
+                    <div class="module-card color-7">
+                        <span class="module-icon">⚙️</span>
+                        <div class="module-number">Module 07</div>
+                        <div class="module-name-en">LATHE OPERATIONS</div>
+                        <div class="module-name-hi">खराद संचालन</div>
+                        <div class="module-meta">
+                            <span>📖 15 Hrs Theory</span>
+                            <span>🔧 95 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 8 -->
+                <a href="#" class="module-card-link" onclick="showModule(8)">
+                    <div class="module-card color-8">
+                        <span class="module-icon">🔧</span>
+                        <div class="module-number">Module 08</div>
+                        <div class="module-name-en">BASIC MAINTENANCE</div>
+                        <div class="module-name-hi">बुनियादी रखरखाव</div>
+                        <div class="module-meta">
+                            <span>📖 12 Hrs Theory</span>
+                            <span>🔧 63 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- ====== SECOND YEAR CONTENT ====== -->
+        <div class="content-section" id="year2">
+
+            <div class="year-header" style="background: linear-gradient(135deg, #0d47a1, #1565c0);">
+                <div>
+                    <div class="year-title">📗 SECOND YEAR — द्वितीय वर्ष</div>
+                    <div class="year-sub">8 Modules | 1200 Hours | NSQF Level 4</div>
+                </div>
+                <div class="year-icon">🛠️</div>
+            </div>
+
+            <div class="module-grid">
+
+                <!-- Module 9 -->
+                <a href="#" class="module-card-link" onclick="showModule(9)">
+                    <div class="module-card color-9">
+                        <span class="module-icon">🧩</span>
+                        <div class="module-number">Module 09</div>
+                        <div class="module-name-en">ASSEMBLY - 1</div>
+                        <div class="module-name-hi">असेम्बली - 1</div>
+                        <div class="module-meta">
+                            <span>📖 70 Hrs Theory</span>
+                            <span>🔧 255 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 10 -->
+                <a href="#" class="module-card-link" onclick="showModule(10)">
+                    <div class="module-card color-10">
+                        <span class="module-icon">📐</span>
+                        <div class="module-number">Module 10</div>
+                        <div class="module-name-en">GAUGES</div>
+                        <div class="module-name-hi">गेज</div>
+                        <div class="module-meta">
+                            <span>📖 20 Hrs Theory</span>
+                            <span>🔧 80 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 11 -->
+                <a href="#" class="module-card-link" onclick="showModule(11)">
+                    <div class="module-card color-11">
+                        <span class="module-icon">🔴</span>
+                        <div class="module-number">Module 11</div>
+                        <div class="module-name-en">PIPE &amp; PIPE FITTING</div>
+                        <div class="module-name-hi">पाइप और पाइप फिटिंग</div>
+                        <div class="module-meta">
+                            <span>📖 18 Hrs Theory</span>
+                            <span>🔧 62 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 12 -->
+                <a href="#" class="module-card-link" onclick="showModule(12)">
+                    <div class="module-card color-12">
+                        <span class="module-icon">🎯</span>
+                        <div class="module-number">Module 12</div>
+                        <div class="module-name-en">DRILL JIG</div>
+                        <div class="module-name-hi">ड्रिल जिग</div>
+                        <div class="module-meta">
+                            <span>📖 6 Hrs Theory</span>
+                            <span>🔧 24 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 13 -->
+                <a href="#" class="module-card-link" onclick="showModule(13)">
+                    <div class="module-card color-13">
+                        <span class="module-icon">🔨</span>
+                        <div class="module-number">Module 13</div>
+                        <div class="module-name-en">REPAIRING TECHNIQUE</div>
+                        <div class="module-name-hi">रिपेयरिंग टेक्निक</div>
+                        <div class="module-meta">
+                            <span>📖 43 Hrs Theory</span>
+                            <span>🔧 152 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 14 -->
+                <a href="#" class="module-card-link" onclick="showModule(14)">
+                    <div class="module-card color-14">
+                        <span class="module-icon">💧</span>
+                        <div class="module-number">Module 14</div>
+                        <div class="module-name-en">HYDRAULICS &amp; PNEUMATICS</div>
+                        <div class="module-name-hi">हाइड्रोलिक्स और न्यूमेटिक्स</div>
+                        <div class="module-meta">
+                            <span>📖 28 Hrs Theory</span>
+                            <span>🔧 97 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 15 -->
+                <a href="#" class="module-card-link" onclick="showModule(15)">
+                    <div class="module-card color-15">
+                        <span class="module-icon">📋</span>
+                        <div class="module-number">Module 15</div>
+                        <div class="module-name-en">PREVENTIVE MAINTENANCE</div>
+                        <div class="module-name-hi">निवारक रखरखाव</div>
+                        <div class="module-meta">
+                            <span>📖 23 Hrs Theory</span>
+                            <span>🔧 80 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+                <!-- Module 16 -->
+                <a href="#" class="module-card-link" onclick="showModule(16)">
+                    <div class="module-card color-16">
+                        <span class="module-icon">🏗️</span>
+                        <div class="module-number">Module 16</div>
+                        <div class="module-name-en">ERECTION &amp; TESTING</div>
+                        <div class="module-name-hi">इरेक्शन और परीक्षण</div>
+                        <div class="module-meta">
+                            <span>📖 16 Hrs Theory</span>
+                            <span>🔧 75 Hrs Practical</span>
+                            <span class="status-badge">✅ Available</span>
+                        </div>
+                        <div class="click-hint">👆 Click to open module</div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer-logo">⚙️ FITTER TRADE — NSQF Level 4</div>
+            <div class="footer-text">
+                Developed as per Revised Syllabus July 2022 | Directorate General of Training (DGT) | Ministry of Skill Development &amp; Entrepreneurship
+            </div>
+            <div class="footer-text" style="margin-top: 3px; font-size: 0.8em; opacity: 0.5;">
+                📚 National Instructional Media Institute (NIMI) | Chennai
+            </div>
+            <div class="footer-links">
+                <a href="#">📖 About</a>
+                <a href="#">📝 Syllabus</a>
+                <a href="#">❓ Question Bank</a>
+                <a href="#">📞 Contact</a>
+            </div>
+            <div style="margin-top: 12px; font-size: 0.7em; opacity: 0.4;">
+                © 2026 FITTER TRADE — All Rights Reserved
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Tab Switching
+        function showTab(tabId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Show selected section
+            document.getElementById(tabId).classList.add('active');
+
+            // Update tab buttons
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`.nav-tab[data-tab="${tabId}"]`).classList.add('active');
+        }
+
+        // Module Click Handler
+        function showModule(moduleNumber) {
+            // This will be expanded when individual module pages are created
+            const moduleNames = {
+                1: 'SAFETY (सुरक्षा)',
+                2: 'BASIC FITTING (मूल फिटिंग)',
+                3: 'SHEET METAL (शीट मेटल)',
+                4: 'WELDING (वेल्डिंग)',
+                5: 'DRILLING (ड्रिलिंग)',
+                6: 'FITTING ASSEMBLY (फिटिंग असेम्बली)',
+                7: 'LATHE OPERATIONS (खराद संचालन)',
+                8: 'BASIC MAINTENANCE (बुनियादी रखरखाव)',
+                9: 'ASSEMBLY - 1 (असेम्बली - 1)',
+                10: 'GAUGES (गेज)',
+                11: 'PIPE & PIPE FITTING (पाइप और पाइप फिटिंग)',
+                12: 'DRILL JIG (ड्रिल जिग)',
+                13: 'REPAIRING TECHNIQUE (रिपेयरिंग टेक्निक)',
+                14: 'HYDRAULICS & PNEUMATICS (हाइड्रोलिक्स और न्यूमेटिक्स)',
+                15: 'PREVENTIVE MAINTENANCE (निवारक रखरखाव)',
+                16: 'ERECTION & TESTING (इरेक्शन और परीक्षण)'
+            };
+            alert('📖 Opening Module ' + moduleNumber + ': ' + moduleNames[moduleNumber] + '\n\nThis will open the complete Theory & Question Bank for this module.\n\n(Module pages will be created with Theory, Images, and MCQs)');
+        }
+
+        // Scroll to Top Button
+        const scrollBtn = document.getElementById('scrollTop');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.classList.add('show');
+            } else {
+                scrollBtn.classList.remove('show');
+            }
+        };
+
+        scrollBtn.onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        // Keyboard shortcut for navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '1') showTab('year1');
+            if (e.key === '2') showTab('year2');
+        });
+    </script>
+
 </body>
 </html>
