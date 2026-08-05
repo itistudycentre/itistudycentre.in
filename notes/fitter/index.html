@@ -1,855 +1,926 @@
 <!DOCTYPE html>
-
 <html lang="hi">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>FITTER TRADE - NSQF Level 4 | Complete Theory &amp; Question Bank</title>
-<style>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Fitter Trade – Complete Theory & Question Bank | ITI Study Centre</title>
+    <meta content="Fitter Trade NSQF Level 4 Revised 2022 – 16 Modules, 10,000+ Questions, 2400 Training Hours" name="description" />
+    <link href="/images/favicon.png" rel="icon" />
+    <style>
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
-            font-family: 'Segoe UI', 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-            padding: 20px;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.7;
         }
-
-        .book-container {
-            max-width: 1400px;
+        .container {
+            max-width: 1180px;
             margin: 0 auto;
-            background: #ffffff;
-            border-radius: 30px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-            overflow: hidden;
+            padding: 0 24px;
         }
 
-        /* Header Section */
-        .header {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            padding: 40px 50px;
+        /* ============================================================
+                   HEADER – MATCHING IMAGE DESIGN
+                   ============================================================ */
+        .main-header {
+            background: #003366;
+            padding: 12px 0;
+            border-bottom: 4px solid #ffcc00;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        .main-header .logo a span {
+            color: #ffcc00;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 18px;
+            align-items: center;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        .main-header nav a.notes-link {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        .main-header nav a.test-link {
+            color: #ff9900;
+            font-weight: 700;
+        }
+        /* Mobile hamburger (hidden by default) */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 6px;
+        }
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ============================================================
+                   HERO / BANNER – TRADE INFO
+                   ============================================================ */
+        .trade-hero {
+            background: linear-gradient(135deg, #003366 0%, #1a4a7a 100%);
+            color: #fff;
+            padding: 44px 0 36px;
+            border-radius: 0 0 24px 24px;
+            margin: 0 0 24px 0;
+            box-shadow: 0 4px 20px rgba(0, 51, 102, 0.25);
             position: relative;
             overflow: hidden;
-            text-align: center;
         }
-
-        .header::before {
-            content: '⚙️';
+        .trade-hero::after {
+            content: '';
             position: absolute;
-            right: 50px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 120px;
-            opacity: 0.15;
+            top: -60%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 204, 0, 0.06);
+            border-radius: 50%;
+            pointer-events: none;
         }
-
-        .header::after {
-            content: '🔧';
-            position: absolute;
-            left: 50px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 100px;
-            opacity: 0.12;
-        }
-
-        .header-content {
+        .trade-hero .container {
             position: relative;
             z-index: 1;
         }
-
-        .header h1 {
-            color: #ffffff;
-            font-size: 3em;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            letter-spacing: 3px;
-            margin-bottom: 5px;
-        }
-
-        .header .subtitle {
-            color: #ffd700;
-            font-size: 1.3em;
-            letter-spacing: 5px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-
-        .header .subtitle-2 {
-            color: #ffffff;
-            font-size: 0.95em;
-            opacity: 0.9;
-            margin-top: 8px;
-            letter-spacing: 2px;
-        }
-
-        .header .badge {
+        .trade-hero .trade-badge {
             display: inline-block;
-            background: rgba(255,255,255,0.2);
-            color: #fff;
-            padding: 8px 25px;
-            border-radius: 50px;
-            font-size: 0.85em;
-            margin-top: 12px;
-            border: 1px solid rgba(255,255,255,0.3);
-            letter-spacing: 1px;
-        }
-
-        /* Stats Bar */
-        .stats-bar {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            background: #1a1a2e;
-            padding: 18px 30px;
-            gap: 10px;
-        }
-
-        .stat-item {
-            text-align: center;
-            color: #fff;
-        }
-
-        .stat-item .number {
-            font-size: 1.6em;
-            font-weight: bold;
-            color: #ffd700;
-        }
-
-        .stat-item .label {
-            font-size: 0.8em;
-            opacity: 0.8;
-            display: block;
-        }
-
-        .stat-divider {
-            width: 1px;
-            background: rgba(255,255,255,0.2);
-        }
-
-        /* Navigation Tabs */
-        .nav-tabs {
-            display: flex;
-            background: #f0f2f5;
-            border-bottom: 3px solid #1a2a6c;
-        }
-
-        .nav-tab {
-            flex: 1;
-            padding: 15px 20px;
-            text-align: center;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1.05em;
-            transition: all 0.3s;
-            color: #555;
-            border-bottom: 3px solid transparent;
-            letter-spacing: 1px;
-        }
-
-        .nav-tab:hover {
-            background: #e8eaed;
-        }
-
-        .nav-tab.active {
-            color: #1a2a6c;
-            border-bottom-color: #1a2a6c;
-            background: #ffffff;
-        }
-
-        .nav-tab .icon {
-            margin-right: 8px;
-        }
-
-        /* Content Sections */
-        .content-section {
-            display: none;
-            padding: 30px 40px 50px;
-            background: #ffffff;
-        }
-
-        .content-section.active {
-            display: block;
-        }
-
-        /* Year Header */
-        .year-header {
-            background: linear-gradient(135deg, #1a2a6c, #2d3b8f);
-            color: #fff;
-            padding: 20px 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 5px 20px rgba(26,42,108,0.3);
-        }
-
-        .year-header .year-title {
-            font-size: 2em;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .year-header .year-sub {
-            font-size: 1em;
-            opacity: 0.9;
-        }
-
-        .year-header .year-icon {
-            font-size: 3em;
-        }
-
-        /* Module Grid */
-        .module-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 25px;
-        }
-
-        .module-card {
-            background: #ffffff;
-            border-radius: 18px;
-            padding: 25px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            border: 1px solid #eef0f2;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .module-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-        }
-
-        .module-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
-        .module-card .module-number {
-            font-size: 0.75em;
-            font-weight: bold;
-            color: #888;
-            letter-spacing: 1px;
+            background: #ffcc00;
+            color: #003366;
+            font-size: 0.75rem;
+            font-weight: 800;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 18px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+        }
+        .trade-hero h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+        .trade-hero h1 span {
+            color: #ffcc00;
+        }
+        .trade-hero .sub-title {
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 6px;
+        }
+        .trade-hero .meta-info {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            margin-top: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 24px;
+        }
+        .trade-hero .meta-info strong {
+            color: #ffcc00;
+            font-weight: 600;
         }
 
-        .module-card .module-name-en {
-            font-size: 1.25em;
+        /* ===== STATS ROW ===== */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin: -18px 0 28px 0;
+            position: relative;
+            z-index: 2;
+        }
+        .stats-row .stat-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 18px 16px 14px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e6eaef;
+            transition: 0.3s;
+        }
+        .stats-row .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+        }
+        .stats-row .stat-card .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #003366;
+            line-height: 1.2;
+        }
+        .stats-row .stat-card .stat-number .k {
+            font-size: 1.2rem;
             font-weight: 700;
-            color: #1a1a2e;
-            margin: 8px 0 4px;
         }
-
-        .module-card .module-name-hi {
-            font-size: 1.1em;
+        .stats-row .stat-card .stat-label {
+            font-size: 0.85rem;
             color: #666;
             font-weight: 500;
+            margin-top: 2px;
+        }
+        .stats-row .stat-card.highlight {
+            background: #003366;
+            border-color: #003366;
+        }
+        .stats-row .stat-card.highlight .stat-number {
+            color: #ffcc00;
+        }
+        .stats-row .stat-card.highlight .stat-label {
+            color: rgba(255, 255, 255, 0.85);
         }
 
-        .module-card .module-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #f0f0f0;
-            font-size: 0.8em;
-            color: #888;
+        /* ============================================================
+                   BREADCRUMB
+                   ============================================================ */
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb .current {
+            color: #555;
+            font-weight: 600;
         }
 
-        .module-card .module-meta span {
+        /* ============================================================
+                   PAGE TITLE (inside hero we already have it, but keep for consistency)
+                   ============================================================ */
+        .page-title {
+            padding: 10px 0 6px;
+        }
+        .page-title h1 {
+            font-size: 1.8rem;
+            color: #003366;
+        }
+
+        /* ============================================================
+                   SEARCH
+                   ============================================================ */
+        .search-section {
             display: flex;
+            gap: 12px;
             align-items: center;
-            gap: 5px;
+            justify-content: center;
+            margin: 16px 0 24px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 520px;
+            padding: 13px 18px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+        }
+        .search-section button {
+            padding: 13px 36px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        @media (max-width: 640px) {
+            .search-section {
+                flex-direction: column;
+            }
+            .search-section input {
+                max-width: 100%;
+                width: 100%;
+            }
+            .search-section button {
+                width: 100%;
+            }
         }
 
-        .module-card .module-icon {
-            font-size: 2.2em;
-            margin-bottom: 8px;
+        /* ============================================================
+                   TABS
+                   ============================================================ */
+        .tab-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 16px 0 20px;
+            justify-content: center;
+        }
+        .tab-btn {
+            padding: 12px 32px;
+            background: #e9ecef;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #333;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .tab-btn:hover {
+            background: #d0d5db;
+            transform: scale(1.02);
+        }
+        .tab-btn.active {
+            background: #003366;
+            color: #fff;
+        }
+        .tab-btn.ai-tab {
+            background: #ff9900;
+            color: #222;
+        }
+        .tab-btn.ai-tab.active {
+            background: #cc7a00;
+            color: #fff;
+        }
+
+        /* ============================================================
+                   YEAR SECTIONS
+                   ============================================================ */
+        .year-section {
+            display: none;
+        }
+        .year-section.active {
             display: block;
         }
 
-        .module-card .status-badge {
-            display: inline-block;
-            padding: 2px 12px;
-            border-radius: 20px;
-            font-size: 0.7em;
-            font-weight: bold;
-            background: #e8f5e9;
-            color: #2e7d32;
+        /* ============================================================
+                   MODULE GRID
+                   ============================================================ */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 18px;
+            margin: 20px 0;
         }
-
-        /* Color Themes for Modules */
-        .module-card.color-1::before { background: #e74c3c; }
-        .module-card.color-2::before { background: #3498db; }
-        .module-card.color-3::before { background: #2ecc71; }
-        .module-card.color-4::before { background: #f39c12; }
-        .module-card.color-5::before { background: #9b59b6; }
-        .module-card.color-6::before { background: #1abc9c; }
-        .module-card.color-7::before { background: #e67e22; }
-        .module-card.color-8::before { background: #2c3e50; }
-        .module-card.color-9::before { background: #c0392b; }
-        .module-card.color-10::before { background: #2980b9; }
-        .module-card.color-11::before { background: #27ae60; }
-        .module-card.color-12::before { background: #d35400; }
-        .module-card.color-13::before { background: #8e44ad; }
-        .module-card.color-14::before { background: #16a085; }
-        .module-card.color-15::before { background: #2c3e50; }
-        .module-card.color-16::before { background: #7f8c8d; }
-
-        .module-card .click-hint {
-            font-size: 0.7em;
-            color: #aaa;
-            margin-top: 8px;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .module-card:hover .click-hint {
-            opacity: 1;
-        }
-
-        /* Footer */
-        .footer {
-            background: #1a1a2e;
-            color: #aaa;
-            padding: 25px 40px;
-            text-align: center;
-            font-size: 0.85em;
-            border-top: 3px solid #ffd700;
-        }
-
-        .footer .footer-logo {
-            font-size: 1.2em;
-            color: #ffd700;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .footer .footer-text {
-            margin-top: 5px;
-            opacity: 0.7;
-        }
-
-        .footer .footer-links {
-            margin-top: 10px;
+        .module-card {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e6eaef;
+            padding: 20px 22px;
+            transition: 0.3s;
             display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
         }
-
-        .footer .footer-links a {
-            color: #ddd;
+        .module-card:hover {
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+            border-color: #003366;
+        }
+        .module-card .mod-num {
+            font-size: 0.7rem;
+            color: #888;
+            font-weight: 700;
+            background: #e9ecef;
+            padding: 2px 14px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+        .module-card .mod-name {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #003366;
+            margin-bottom: 4px;
+        }
+        .module-card .mod-name .hi {
+            font-weight: 400;
+            color: #555;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 2px;
+        }
+        .module-card .btn {
+            align-self: flex-start;
+            background: #003366;
+            color: #fff;
+            padding: 8px 22px;
+            border-radius: 6px;
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 14px;
+        }
+        .module-card .btn:hover {
+            background: #002244;
+            transform: scale(1.02);
+        }
+        /* AI module special highlight */
+        .module-card.ai-card {
+            border-color: #ff9900;
+            background: #fffdf0;
+        }
+        .module-card.ai-card .mod-num {
+            background: #ff9900;
+            color: #fff;
         }
 
-        .footer .footer-links a:hover {
-            color: #ffd700;
+        /* ============================================================
+                   CARD / NOTICE
+                   ============================================================ */
+        .notice-box {
+            background: #fff8e1;
+            padding: 16px 22px;
+            border-left: 6px solid #ffc107;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .notice-box h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        .card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 20px 24px;
+            border: 1px solid #e6eaef;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+        .card h2 {
+            color: #003366;
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+        .btn,
+        .news-btn {
+            display: inline-block;
+            padding: 10px 28px;
+            background: #003366;
+            color: #fff !important;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn:hover,
+        .news-btn:hover {
+            background: #002244;
+            transform: scale(1.02);
         }
 
-        /* Responsive */
+        /* ============================================================
+                   FOOTER
+                   ============================================================ */
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 28px 20px 20px;
+            text-align: center;
+            margin-top: 44px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 24px;
+            margin-bottom: 12px;
+        }
+        footer .footer-links a {
+            color: #b0b8c5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        footer .footer-links a:hover {
+            color: #fff;
+        }
+        footer p {
+            margin: 8px 0 0;
+            font-size: 0.85rem;
+            color: #7a8494;
+        }
+
+        /* ============================================================
+                   SCROLL TOP
+                   ============================================================ */
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.25s;
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover {
+            background: #002244;
+            transform: scale(1.05);
+        }
+
+        /* ============================================================
+                   RESPONSIVE
+                   ============================================================ */
+        @media (max-width: 900px) {
+            .main-header .container {
+                flex-wrap: wrap;
+            }
+            .main-header nav {
+                gap: 4px 12px;
+                margin-top: 4px;
+                width: 100%;
+                justify-content: center;
+            }
+            .main-header nav a {
+                font-size: 0.85rem;
+            }
+        }
         @media (max-width: 768px) {
-            .header {
-                padding: 25px 20px;
+            .trade-hero h1 {
+                font-size: 1.8rem;
             }
-            .header h1 {
-                font-size: 1.8em;
+            .trade-hero .sub-title {
+                font-size: 1rem;
             }
-            .header .subtitle {
-                font-size: 1em;
-            }
-            .stats-bar {
+            .stats-row {
                 grid-template-columns: repeat(2, 1fr);
-                padding: 12px 15px;
+                gap: 12px;
             }
-            .stat-item .number {
-                font-size: 1.2em;
-            }
-            .nav-tabs {
-                flex-direction: column;
-            }
-            .nav-tab {
-                padding: 10px;
-                font-size: 0.9em;
-            }
-            .content-section {
-                padding: 15px 15px 30px;
+            .stats-row .stat-card .stat-number {
+                font-size: 1.5rem;
             }
             .module-grid {
                 grid-template-columns: 1fr;
             }
-            .year-header {
+            .tab-btn {
+                padding: 8px 18px;
+                font-size: 0.85rem;
+            }
+            .module-card .mod-name {
+                font-size: 0.95rem;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .main-header nav {
+                display: none;
                 flex-direction: column;
+                width: 100%;
+                gap: 4px;
+                padding: 12px 0 6px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                margin-top: 8px;
+            }
+            .main-header nav.open {
+                display: flex;
+            }
+            .main-header nav a {
+                padding: 6px 0;
+                width: 100%;
                 text-align: center;
-                padding: 15px;
+                border-bottom: none;
             }
-            .year-header .year-title {
-                font-size: 1.4em;
-            }
-            .footer {
-                padding: 15px 20px;
-            }
-            .footer .footer-links {
-                flex-direction: column;
-                gap: 8px;
+            .main-header nav a:hover {
+                border-bottom: none;
+                background: rgba(255, 255, 255, 0.06);
+                border-radius: 4px;
             }
         }
-
         @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.4em;
+            .container {
+                padding: 0 12px;
             }
-            .header .subtitle {
-                font-size: 0.85em;
+            .trade-hero {
+                padding: 28px 0 24px;
             }
-            .module-card .module-name-en {
-                font-size: 1em;
+            .trade-hero h1 {
+                font-size: 1.4rem;
             }
-            .module-card .module-name-hi {
-                font-size: 0.9em;
+            .stats-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+                margin-top: -8px;
             }
-        }
-
-        /* Scroll to top */
-        .scroll-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #1a2a6c;
-            color: #fff;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: none;
-            font-size: 1.5em;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(26,42,108,0.4);
-            transition: all 0.3s;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 999;
-        }
-
-        .scroll-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .scroll-top:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(26,42,108,0.5);
-        }
-
-        /* Module Card Links - Make entire card clickable */
-        .module-card-link {
-            text-decoration: none;
-            display: block;
-            color: inherit;
+            .stats-row .stat-card {
+                padding: 12px 8px;
+            }
+            .stats-row .stat-card .stat-number {
+                font-size: 1.3rem;
+            }
+            .tab-container {
+                gap: 6px;
+            }
+            .tab-btn {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
+            .module-card {
+                padding: 16px 18px;
+            }
         }
     </style>
 </head>
 <body>
-<div id="header-container"></div>
-<script defer="" src="/js/header-loader.js"></script>
 
-<button class="scroll-top" id="scrollTop" title="Go to top">↑</button>
-<div class="book-container">
-<!-- HEADER -->
-<div class="header">
-<div class="header-content">
-<h1>⚙️ FITTER TRADE</h1>
-<div class="subtitle">📘 COMPLETE THEORY &amp; QUESTION BANK</div>
-<div class="subtitle-2">NSQF Level - 4 (Revised 2022) | Capital Goods &amp; Manufacturing Sector</div>
-<div class="badge">📖 2 Years | 16 Modules | 10,000+ Questions</div>
-</div>
-</div>
-<!-- STATS BAR -->
-<div class="stats-bar">
-<div class="stat-item">
-<span class="number">16</span>
-<span class="label">📚 Modules</span>
-</div>
-<div class="stat-divider"></div>
-<div class="stat-item">
-<span class="number">2400</span>
-<span class="label">⏱️ Training Hours</span>
-</div>
-<div class="stat-divider"></div>
-<div class="stat-item">
-<span class="number">10K+</span>
-<span class="label">❓ Questions</span>
-</div>
-<div class="stat-divider"></div>
-<div class="stat-item">
-<span class="number">2</span>
-<span class="label">📅 Years</span>
-</div>
-</div>
-<!-- NAVIGATION TABS -->
-<div class="nav-tabs">
-<div class="nav-tab active" data-tab="year1" onclick="showTab('year1')">
-<span class="icon">📘</span> FIRST YEAR (प्रथम वर्ष)
+    <!-- ============================================================
+    HEADER – MATCHING IMAGE DESIGN
+    ============================================================ -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <div class="logo">
+                <a href="/">ITI Study <span>Centre</span></a>
             </div>
-<div class="nav-tab" data-tab="year2" onclick="showTab('year2')">
-<span class="icon">📗</span> SECOND YEAR (द्वितीय वर्ष)
-            </div>
-</div>
-<!-- ====== FIRST YEAR CONTENT ====== -->
-<div class="content-section active" id="year1">
-<div class="year-header">
-<div>
-<div class="year-title">📘 FIRST YEAR — प्रथम वर्ष</div>
-<div class="year-sub">8 Modules | 1200 Hours | NSQF Level 4</div>
-</div>
-<div class="year-icon">🔧</div>
-</div>
-<div class="module-grid">
-<!-- Module 1 -->
-<a class="module-card-link" href="#" onclick="showModule(1)">
-<div class="module-card color-1">
-<span class="module-icon">🛡️</span>
-<div class="module-number">Module 01</div>
-<div class="module-name-en">SAFETY</div>
-<div class="module-name-hi">सुरक्षा</div>
-<div class="module-meta">
-<span>📖 37 Hrs Theory</span>
-<span>🔧 212 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 2 -->
-<a class="module-card-link" href="#" onclick="showModule(2)">
-<div class="module-card color-2">
-<span class="module-icon">📏</span>
-<div class="module-number">Module 02</div>
-<div class="module-name-en">BASIC FITTING</div>
-<div class="module-name-hi">मूल फिटिंग</div>
-<div class="module-meta">
-<span>📖 100 Hrs Theory</span>
-<span>🔧 250 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 3 -->
-<a class="module-card-link" href="#" onclick="showModule(3)">
-<div class="module-card color-3">
-<span class="module-icon">🔩</span>
-<div class="module-number">Module 03</div>
-<div class="module-name-en">SHEET METAL</div>
-<div class="module-name-hi">शीट मेटल</div>
-<div class="module-meta">
-<span>📖 21 Hrs Theory</span>
-<span>🔧 97 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 4 -->
-<a class="module-card-link" href="#" onclick="showModule(4)">
-<div class="module-card color-4">
-<span class="module-icon">⚡</span>
-<div class="module-number">Module 04</div>
-<div class="module-name-en">WELDING</div>
-<div class="module-name-hi">वेल्डिंग</div>
-<div class="module-meta">
-<span>📖 16 Hrs Theory</span>
-<span>🔧 64 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 5 -->
-<a class="module-card-link" href="#" onclick="showModule(5)">
-<div class="module-card color-5">
-<span class="module-icon">🔄</span>
-<div class="module-number">Module 05</div>
-<div class="module-name-en">DRILLING</div>
-<div class="module-name-hi">ड्रिलिंग</div>
-<div class="module-meta">
-<span>📖 26 Hrs Theory</span>
-<span>🔧 143 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 6 -->
-<a class="module-card-link" href="#" onclick="showModule(6)">
-<div class="module-card color-6">
-<span class="module-icon">🔗</span>
-<div class="module-number">Module 06</div>
-<div class="module-name-en">FITTING ASSEMBLY</div>
-<div class="module-name-hi">फिटिंग असेम्बली</div>
-<div class="module-meta">
-<span>📖 28 Hrs Theory</span>
-<span>🔧 126 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 7 -->
-<a class="module-card-link" href="#" onclick="showModule(7)">
-<div class="module-card color-7">
-<span class="module-icon">⚙️</span>
-<div class="module-number">Module 07</div>
-<div class="module-name-en">LATHE OPERATIONS</div>
-<div class="module-name-hi">खराद संचालन</div>
-<div class="module-meta">
-<span>📖 15 Hrs Theory</span>
-<span>🔧 95 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 8 -->
-<a class="module-card-link" href="#" onclick="showModule(8)">
-<div class="module-card color-8">
-<span class="module-icon">🔧</span>
-<div class="module-number">Module 08</div>
-<div class="module-name-en">BASIC MAINTENANCE</div>
-<div class="module-name-hi">बुनियादी रखरखाव</div>
-<div class="module-meta">
-<span>📖 12 Hrs Theory</span>
-<span>🔧 63 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-</div>
-</div>
-<!-- ====== SECOND YEAR CONTENT ====== -->
-<div class="content-section" id="year2">
-<div class="year-header" style="background: linear-gradient(135deg, #0d47a1, #1565c0);">
-<div>
-<div class="year-title">📗 SECOND YEAR — द्वितीय वर्ष</div>
-<div class="year-sub">8 Modules | 1200 Hours | NSQF Level 4</div>
-</div>
-<div class="year-icon">🛠️</div>
-</div>
-<div class="module-grid">
-<!-- Module 9 -->
-<a class="module-card-link" href="#" onclick="showModule(9)">
-<div class="module-card color-9">
-<span class="module-icon">🧩</span>
-<div class="module-number">Module 09</div>
-<div class="module-name-en">ASSEMBLY - 1</div>
-<div class="module-name-hi">असेम्बली - 1</div>
-<div class="module-meta">
-<span>📖 70 Hrs Theory</span>
-<span>🔧 255 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 10 -->
-<a class="module-card-link" href="#" onclick="showModule(10)">
-<div class="module-card color-10">
-<span class="module-icon">📐</span>
-<div class="module-number">Module 10</div>
-<div class="module-name-en">GAUGES</div>
-<div class="module-name-hi">गेज</div>
-<div class="module-meta">
-<span>📖 20 Hrs Theory</span>
-<span>🔧 80 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 11 -->
-<a class="module-card-link" href="#" onclick="showModule(11)">
-<div class="module-card color-11">
-<span class="module-icon">🔴</span>
-<div class="module-number">Module 11</div>
-<div class="module-name-en">PIPE &amp; PIPE FITTING</div>
-<div class="module-name-hi">पाइप और पाइप फिटिंग</div>
-<div class="module-meta">
-<span>📖 18 Hrs Theory</span>
-<span>🔧 62 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 12 -->
-<a class="module-card-link" href="#" onclick="showModule(12)">
-<div class="module-card color-12">
-<span class="module-icon">🎯</span>
-<div class="module-number">Module 12</div>
-<div class="module-name-en">DRILL JIG</div>
-<div class="module-name-hi">ड्रिल जिग</div>
-<div class="module-meta">
-<span>📖 6 Hrs Theory</span>
-<span>🔧 24 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 13 -->
-<a class="module-card-link" href="#" onclick="showModule(13)">
-<div class="module-card color-13">
-<span class="module-icon">🔨</span>
-<div class="module-number">Module 13</div>
-<div class="module-name-en">REPAIRING TECHNIQUE</div>
-<div class="module-name-hi">रिपेयरिंग टेक्निक</div>
-<div class="module-meta">
-<span>📖 43 Hrs Theory</span>
-<span>🔧 152 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 14 -->
-<a class="module-card-link" href="#" onclick="showModule(14)">
-<div class="module-card color-14">
-<span class="module-icon">💧</span>
-<div class="module-number">Module 14</div>
-<div class="module-name-en">HYDRAULICS &amp; PNEUMATICS</div>
-<div class="module-name-hi">हाइड्रोलिक्स और न्यूमेटिक्स</div>
-<div class="module-meta">
-<span>📖 28 Hrs Theory</span>
-<span>🔧 97 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 15 -->
-<a class="module-card-link" href="#" onclick="showModule(15)">
-<div class="module-card color-15">
-<span class="module-icon">📋</span>
-<div class="module-number">Module 15</div>
-<div class="module-name-en">PREVENTIVE MAINTENANCE</div>
-<div class="module-name-hi">निवारक रखरखाव</div>
-<div class="module-meta">
-<span>📖 23 Hrs Theory</span>
-<span>🔧 80 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-<!-- Module 16 -->
-<a class="module-card-link" href="#" onclick="showModule(16)">
-<div class="module-card color-16">
-<span class="module-icon">🏗️</span>
-<div class="module-number">Module 16</div>
-<div class="module-name-en">ERECTION &amp; TESTING</div>
-<div class="module-name-hi">इरेक्शन और परीक्षण</div>
-<div class="module-meta">
-<span>📖 16 Hrs Theory</span>
-<span>🔧 75 Hrs Practical</span>
-<span class="status-badge">✅ Available</span>
-</div>
-<div class="click-hint">👆 Click to open module</div>
-</div>
-</a>
-</div>
-</div>
-<!-- FOOTER -->
-<div class="footer">
-<div class="footer-logo">⚙️ FITTER TRADE — NSQF Level 4</div>
-<div class="footer-text">
-                Developed as per Revised Syllabus July 2022 | Directorate General of Training (DGT) | Ministry of Skill Development &amp; Entrepreneurship
-            </div>
-<div class="footer-text" style="margin-top: 3px; font-size: 0.8em; opacity: 0.5;">
-                📚 National Instructional Media Institute (NIMI) | Chennai
-            </div>
-<div class="footer-links">
-<a href="#">📖 About</a>
-<a href="#">📝 Syllabus</a>
-<a href="#">❓ Question Bank</a>
-<a href="#">📞 Contact</a>
-</div>
-<div style="margin-top: 12px; font-size: 0.7em; opacity: 0.4;">
-                © 2026 FITTER TRADE — All Rights Reserved
-            </div>
-</div>
-</div>
-<script>
-        // Tab Switching
-        function showTab(tabId) {
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            // Show selected section
-            document.getElementById(tabId).classList.add('active');
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="mainNav">
+                <a href="/">Home</a>
+                <a href="/iti-result.html">ITI Result</a>
+                <a href="/iti-study-centre-notes.html" class="notes-link">ITI Notes</a>
+                <a href="/engineering-notes.html">Engineering Notes</a>
+                <a href="/question-bank.html">Question Bank</a>
+                <a href="/online-test.html" class="test-link">Online Test</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </div>
+    </header>
 
-            // Update tab buttons
-            document.querySelectorAll('.nav-tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.querySelector(`.nav-tab[data-tab="${tabId}"]`).classList.add('active');
-        }
+    <!-- ============================================================
+    BREADCRUMB
+    ============================================================ -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
+            <span class="current">Fitter Trade – Complete Theory &amp; Question Bank</span>
+        </div>
+    </div>
 
-        // Module Click Handler
-        function showModule(moduleNumber) {
-            // This will be expanded when individual module pages are created
-            const moduleNames = {
-                1: 'SAFETY (सुरक्षा)',
-                2: 'BASIC FITTING (मूल फिटिंग)',
-                3: 'SHEET METAL (शीट मेटल)',
-                4: 'WELDING (वेल्डिंग)',
-                5: 'DRILLING (ड्रिलिंग)',
-                6: 'FITTING ASSEMBLY (फिटिंग असेम्बली)',
-                7: 'LATHE OPERATIONS (खराद संचालन)',
-                8: 'BASIC MAINTENANCE (बुनियादी रखरखाव)',
-                9: 'ASSEMBLY - 1 (असेम्बली - 1)',
-                10: 'GAUGES (गेज)',
-                11: 'PIPE & PIPE FITTING (पाइप और पाइप फिटिंग)',
-                12: 'DRILL JIG (ड्रिल जिग)',
-                13: 'REPAIRING TECHNIQUE (रिपेयरिंग टेक्निक)',
-                14: 'HYDRAULICS & PNEUMATICS (हाइड्रोलिक्स और न्यूमेटिक्स)',
-                15: 'PREVENTIVE MAINTENANCE (निवारक रखरखाव)',
-                16: 'ERECTION & TESTING (इरेक्शन और परीक्षण)'
-            };
-            alert('📖 Opening Module ' + moduleNumber + ': ' + moduleNames[moduleNumber] + '\n\nThis will open the complete Theory & Question Bank for this module.\n\n(Module pages will be created with Theory, Images, and MCQs)');
-        }
+    <!-- ============================================================
+    HERO / BANNER – FITTER TRADE
+    ============================================================ -->
+    <section class="trade-hero">
+        <div class="container">
+            <div class="trade-badge">📍 NSQF Level - 4 (Revised 2022)</div>
+            <h1>FITTER <span>TRADE</span></h1>
+            <p class="sub-title">Complete Theory &amp; Question Bank</p>
+            <div class="meta-info">
+                <span><strong>Capital Goods &amp; Manufacturing</strong> Sector</span>
+                <span>⚙️ <strong>2 Years</strong> · <strong>16 Modules</strong> · <strong>10,000+</strong> Questions</span>
+            </div>
+        </div>
+    </section>
 
-        // Scroll to Top Button
-        const scrollBtn = document.getElementById('scrollTop');
+    <!-- ============================================================
+    STATS ROW
+    ============================================================ -->
+    <div class="container">
+        <div class="stats-row">
+            <div class="stat-card highlight">
+                <div class="stat-number">16</div>
+                <div class="stat-label">📘 Modules</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10<span class="k">K+</span></div>
+                <div class="stat-label">❓ Questions</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2400</div>
+                <div class="stat-label">⏱️ Training Hours</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">📅 Years</div>
+            </div>
+        </div>
+    </div>
 
-        window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                scrollBtn.classList.add('show');
-            } else {
-                scrollBtn.classList.remove('show');
-            }
+    <!-- ============================================================
+    SEARCH
+    ============================================================ -->
+    <section class="search-section container">
+        <input id="moduleSearch" placeholder="🔍 Search module by name or number..." type="text" />
+        <button onclick="filterModules()">Search</button>
+    </section>
+
+    <!-- ============================================================
+    TABS
+    ============================================================ -->
+    <div class="container">
+        <div class="tab-container">
+            <button class="tab-btn active" data-year="year1">📚 1st Year</button>
+            <button class="tab-btn" data-year="year2">📚 2nd Year</button>
+            <button class="tab-btn ai-tab" data-year="ai">🤖 AI Module</button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    1ST YEAR – Modules 1 to 12
+    ============================================================ -->
+    <div class="year-section active" id="year1">
+        <div class="container">
+            <div class="module-grid" id="year1-container"></div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    2ND YEAR – Modules 1 to 5
+    ============================================================ -->
+    <div class="year-section" id="year2">
+        <div class="container">
+            <div class="module-grid" id="year2-container"></div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    AI MODULE – ONLY 1 MODULE
+    ============================================================ -->
+    <div class="year-section" id="ai">
+        <div class="container">
+            <div class="module-grid" id="ai-container"></div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+    SUGGESTIONS & DISCLAIMER
+    ============================================================ -->
+    <section class="container">
+        <div class="card">
+            <h2>💬 सुझाव दें</h2>
+            <p>यदि आपको किसी Module में सुधार चाहिए, तो हमें बताएं।</p>
+            <br />
+            <a class="news-btn" href="/contact.html">💬 Click Here →</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="card">
+            <h2>⚠ Disclaimer</h2>
+            <p>ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+    FOOTER
+    ============================================================ -->
+    <footer>
+        <div class="footer-links">
+            <a href="/disclaimer.html">Disclaimer</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+    </footer>
+
+    <button id="scrollTop" title="Go to Top">⬆</button>
+
+    <!-- ============================================================
+    JAVASCRIPT
+    ============================================================ -->
+    <script>
+        // ============================================================
+        //  MODULE DATA
+        // ============================================================
+        const modulesData = {
+            year1: [
+                { num: 1, name: 'Introduction to Employability Skills', nameHi: 'एम्प्लॉयबिलिटी स्किल्स का परिचय' },
+                { num: 2, name: 'Constitutional Values: Citizenship', nameHi: 'संवैधानिक मूल्य: नागरिकता' },
+                { num: 3, name: 'Becoming a Professional in the 21st Century', nameHi: '21वीं सदी में एक पेशेवर बनना' },
+                { num: 4, name: 'Basic English Skills', nameHi: 'बुनियादी अंग्रेजी कौशल' },
+                { num: 5, name: 'Communication Skills', nameHi: 'संचार कौशल' },
+                { num: 6, name: 'Essential Digital Skills', nameHi: 'आवश्यक डिजिटल कौशल' },
+                { num: 7, name: 'Diversity and Inclusion', nameHi: 'विविधता और समावेशन' },
+                { num: 8, name: 'Financial and Legal Literacy', nameHi: 'वित्तीय और कानूनी साक्षरता' },
+                { num: 9, name: 'Entrepreneurship', nameHi: 'उद्यमिता' },
+                { num: 10, name: 'Career Development and Goal-Setting', nameHi: 'करियर विकास और लक्ष्य निर्धारण' },
+                { num: 11, name: 'Customer Service', nameHi: 'ग्राहक सेवा' },
+                { num: 12, name: 'Getting Ready for Apprenticeships and Jobs', nameHi: 'प्रशिक्षुता और नौकरियों के लिए तैयार होना' }
+            ],
+            year2: [
+                { num: 1, name: 'Basic Career Skills', nameHi: 'बुनियादी करियर कौशल' },
+                { num: 2, name: 'Future Work Skills', nameHi: 'भविष्य के कार्य कौशल' },
+                { num: 3, name: 'Internet Skills', nameHi: 'इंटरनेट कौशल' },
+                { num: 4, name: 'Professional Skills', nameHi: 'व्यावसायिक कौशल' },
+                { num: 5, name: 'Entrepreneurial Skills', nameHi: 'उद्यमिता कौशल' }
+            ],
+            ai: [
+                { num: 1, name: 'Introduction to Artificial Intelligence (AI)', nameHi: 'आर्टिफिशियल इंटेलिजेंस (AI) का परिचय' }
+            ]
         };
 
-        scrollBtn.onclick = function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
+        // ============================================================
+        //  RENDER
+        // ============================================================
+        function renderModules(containerId, modules, prefix = 'module-', isAi = false) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            let html = '';
+            modules.forEach(mod => {
+                let numStr = mod.num.toString();
+                if (mod.num === 8 || mod.num === 9) {
+                    numStr = '0' + numStr;
+                }
+                const link = `${prefix}${numStr}.html`;
+                const searchText = `${mod.num} ${mod.name} ${mod.nameHi}`.toLowerCase();
+                const aiClass = isAi ? 'ai-card' : '';
+                html += `
+                            <div class="module-card ${aiClass}" data-search="${searchText}">
+                                <div>
+                                    <span class="mod-num">Module ${mod.num}</span>
+                                    <div class="mod-name">${mod.name} <span class="hi">${mod.nameHi}</span></div>
+                                </div>
+                                <a href="${link}" class="btn">📖 Open Module →</a>
+                            </div>
+                        `;
+            });
+            container.innerHTML = html;
+        }
 
-        // Keyboard shortcut for navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.key === '1') showTab('year1');
-            if (e.key === '2') showTab('year2');
+        renderModules('year1-container', modulesData.year1, 'module-');
+        renderModules('year2-container', modulesData.year2, 'module-2-');
+        renderModules('ai-container', modulesData.ai, 'ai-module-', true);
+
+        // ============================================================
+        //  TAB SWITCH
+        // ============================================================
+        function switchTab(year) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.tab-btn[data-year="${year}"]`).classList.add('active');
+            document.querySelectorAll('.year-section').forEach(el => el.classList.remove('active'));
+            document.getElementById(year).classList.add('active');
+        }
+
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                switchTab(this.dataset.year);
+            });
         });
+
+        // ============================================================
+        //  SEARCH
+        // ============================================================
+        function filterModules() {
+            const keyword = document.getElementById('moduleSearch').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.module-card');
+            cards.forEach(card => {
+                const data = card.dataset.search || '';
+                card.style.display = (data.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+
+        document.getElementById('moduleSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterModules();
+        });
+
+        // ============================================================
+        //  HAMBURGER TOGGLE
+        // ============================================================
+        const hamburger = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        hamburger.addEventListener('click', function() {
+            mainNav.classList.toggle('open');
+        });
+
+        // Close nav when a link is clicked (mobile)
+        document.querySelectorAll('#mainNav a').forEach(link => {
+            link.addEventListener('click', function() {
+                mainNav.classList.remove('open');
+            });
+        });
+
+        // ============================================================
+        //  SCROLL TO TOP
+        // ============================================================
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ============================================================
+        //  FOOTER YEAR
+        // ============================================================
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
+            ' ITI Study Centre. All Rights Reserved.';
+
+        console.log('✅ Fitter Trade page loaded – header matches image design.');
     </script>
+
 </body>
 </html>
