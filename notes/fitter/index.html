@@ -318,14 +318,6 @@
             background: #003366;
             color: #fff;
         }
-        .tab-btn.ai-tab {
-            background: #ff9900;
-            color: #222;
-        }
-        .tab-btn.ai-tab.active {
-            background: #cc7a00;
-            color: #fff;
-        }
 
         /* ============================================================
                    YEAR SECTIONS
@@ -403,14 +395,6 @@
         .module-card .btn:hover {
             background: #002244;
             transform: scale(1.02);
-        }
-        .module-card.ai-card {
-            border-color: #ff9900;
-            background: #fffdf0;
-        }
-        .module-card.ai-card .mod-num {
-            background: #ff9900;
-            color: #fff;
         }
 
         /* ============================================================
@@ -624,10 +608,6 @@
 <script defer="" src="/js/header-loader.js"></script>
 
 <!-- ============================================================
-    HEADER
-    ============================================================ -->
-
-<!-- ============================================================
     BREADCRUMB
     ============================================================ -->
 <div class="breadcrumb">
@@ -637,8 +617,9 @@
             <span class="current">Fitter Trade – Complete Module Index</span>
 </div>
 </div>
+
 <!-- ============================================================
-    HERO / BANNER – FITTER TRADE (NO 10K STAT)
+    HERO / BANNER – FITTER TRADE
     ============================================================ -->
 <section class="trade-hero">
 <div class="container">
@@ -651,8 +632,9 @@
 </div>
 </div>
 </section>
+
 <!-- ============================================================
-    STATS ROW (NO 10K)
+    STATS ROW
     ============================================================ -->
 <div class="container">
 <div class="stats-row">
@@ -674,6 +656,7 @@
 </div>
 </div>
 </div>
+
 <!-- ============================================================
     SEARCH
     ============================================================ -->
@@ -681,16 +664,17 @@
 <input id="moduleSearch" placeholder="🔍 Search module by name or number..." type="text"/>
 <button onclick="filterModules()">Search</button>
 </section>
+
 <!-- ============================================================
-    TABS
+    TABS – ONLY 1st & 2nd YEAR
     ============================================================ -->
 <div class="container">
 <div class="tab-container">
 <button class="tab-btn active" data-year="year1">📚 1st Year</button>
 <button class="tab-btn" data-year="year2">📚 2nd Year</button>
-<button class="tab-btn ai-tab" data-year="ai">🤖 AI Module</button>
 </div>
 </div>
+
 <!-- ============================================================
     1ST YEAR – 8 Modules
     ============================================================ -->
@@ -699,6 +683,7 @@
 <div class="module-grid" id="year1-container"></div>
 </div>
 </div>
+
 <!-- ============================================================
     2ND YEAR – 8 Modules
     ============================================================ -->
@@ -707,14 +692,7 @@
 <div class="module-grid" id="year2-container"></div>
 </div>
 </div>
-<!-- ============================================================
-    AI MODULE – ONLY 1 MODULE
-    ============================================================ -->
-<div class="year-section" id="ai">
-<div class="container">
-<div class="module-grid" id="ai-container"></div>
-</div>
-</div>
+
 <!-- ============================================================
     SUGGESTIONS & DISCLAIMER
     ============================================================ -->
@@ -726,12 +704,14 @@
 <a class="news-btn" href="/contact.html">💬 Click Here →</a>
 </div>
 </section>
+
 <section class="container">
 <div class="card">
 <h2>⚠ Disclaimer</h2>
 <p>ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
 </div>
 </section>
+
 <!-- ============================================================
     FOOTER
     ============================================================ -->
@@ -744,13 +724,15 @@
 </div>
 <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
 </footer>
+
 <button id="scrollTop" title="Go to Top">⬆</button>
+
 <!-- ============================================================
     JAVASCRIPT
     ============================================================ -->
 <script>
         // ============================================================
-        //  MODULE DATA – FITTER TRADE (16 Modules)
+        //  MODULE DATA – FITTER TRADE (ONLY 16 MODULES, NO AI)
         // ============================================================
         const modulesData = {
             year1: [
@@ -772,41 +754,30 @@
                 { num: 14, name: 'Advanced Welding', nameHi: 'उन्नत वेल्डिंग' },
                 { num: 15, name: 'Quality Control', nameHi: 'गुणवत्ता नियंत्रण' },
                 { num: 16, name: 'Project Work & Entrepreneurship', nameHi: 'प्रोजेक्ट कार्य एवं उद्यमिता' }
-            ],
-            ai: [
-                { num: 1, name: 'Introduction to Artificial Intelligence (AI)', nameHi: 'आर्टिफिशियल इंटेलिजेंस (AI) का परिचय' }
             ]
         };
 
         // ============================================================
         //  RENDER
         // ============================================================
-        function renderModules(containerId, modules, prefix = 'fitter-module-', isAi = false) {
+        function renderModules(containerId, modules) {
             const container = document.getElementById(containerId);
             if (!container) return;
             let html = '';
             modules.forEach(mod => {
-                // For modules 1-8 use fitter1.html style, for 9-16 use fitter2-module-X.html
+                // 1st year: fitter1.html … fitter8.html
+                // 2nd year: fitter2-9.html … fitter2-16.html
                 let link;
-                if (isAi) {
-                    link = `ai-module-01.html`;
+                if (mod.num <= 8) {
+                    link = `fitter${mod.num}.html`;
                 } else {
-                    // 1st year modules: fitter1.html, fitter2.html ... fitter8.html
-                    // 2nd year modules: fitter2-9.html ... fitter2-16.html
-                    if (mod.num <= 8) {
-                        link = `fitter${mod.num}.html`;
-                    } else {
-                        link = `fitter2-${mod.num}.html`;
-                    }
+                    link = `fitter2-${mod.num}.html`;
                 }
                 const searchText = `${mod.num} ${mod.name} ${mod.nameHi}`.toLowerCase();
-                const aiClass = isAi ? 'ai-card' : '';
-                // Special styling for first 8 modules
-                const modNumDisplay = mod.num;
                 html += `
-                            <div class="module-card ${aiClass}" data-search="${searchText}">
+                            <div class="module-card" data-search="${searchText}">
                                 <div>
-                                    <span class="mod-num">Module ${modNumDisplay}</span>
+                                    <span class="mod-num">Module ${mod.num}</span>
                                     <div class="mod-name">${mod.name} <span class="hi">${mod.nameHi}</span></div>
                                 </div>
                                 <a href="${link}" class="btn">📖 Open Module →</a>
@@ -816,9 +787,8 @@
             container.innerHTML = html;
         }
 
-        renderModules('year1-container', modulesData.year1, 'fitter');
-        renderModules('year2-container', modulesData.year2, 'fitter2');
-        renderModules('ai-container', modulesData.ai, 'ai-module-', true);
+        renderModules('year1-container', modulesData.year1);
+        renderModules('year2-container', modulesData.year2);
 
         // ============================================================
         //  TAB SWITCH
@@ -857,15 +827,16 @@
         // ============================================================
         const hamburger = document.getElementById('hamburgerBtn');
         const mainNav = document.getElementById('mainNav');
-        hamburger.addEventListener('click', function() {
-            mainNav.classList.toggle('open');
-        });
-
-        document.querySelectorAll('#mainNav a').forEach(link => {
-            link.addEventListener('click', function() {
-                mainNav.classList.remove('open');
+        if (hamburger && mainNav) {
+            hamburger.addEventListener('click', function() {
+                mainNav.classList.toggle('open');
             });
-        });
+            document.querySelectorAll('#mainNav a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mainNav.classList.remove('open');
+                });
+            });
+        }
 
         // ============================================================
         //  SCROLL TO TOP
@@ -884,7 +855,7 @@
         document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
             ' ITI Study Centre. All Rights Reserved.';
 
-        console.log('✅ Fitter Trade Index loaded – 16 modules, no 10K stat.');
+        console.log('✅ Fitter Trade Index loaded – only 16 modules (8+8), AI removed.');
     </script>
 </body>
 </html>
