@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-
 <html lang="hi">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
 <title>Fitter Theory Module 1 – Safety | ITI Study Centre</title>
-<meta content="Fitter Theory Module 1 – Safety के complete Hindi English notes. ITI students के लिए Safety, PPE, First Aid, Electrical Safety, Waste Management, Occupational Safety, 5S, Material Handling और Heavy Equipment Safety." name="description"/>
-<meta content="Fitter Theory Module 1, Fitter Safety, ITI Fitter Notes, Safety Hindi English, PPE, First Aid, 5S, Material Handling" name="keywords"/>
-<link href="/images/favicon.png" rel="icon"/>
+
+<meta name="description"
+content="Fitter Theory Module 1 Safety – ITI में परिचय, Industrial Safety, Soft Skills, PPE, First Aid, Electrical Safety, Waste Management, OSH, Safety Signs, Emergency Response, Housekeeping, 5S और Material Handling के Hindi English Notes.">
+
+<meta name="keywords"
+content="Fitter Theory Module 1, Fitter Safety Notes, ITI Fitter Notes Hindi, PPE, First Aid, Golden Hour, Electrical Safety, 5S, Occupational Safety">
+
+<link rel="icon" href="/images/favicon.png">
+
+
 <style>
 
 /* =========================================================
    ITI STUDY CENTRE
-   FITTER THEORY MODULE PAGE
-   MODULE 1 – SAFETY
+   FITTER THEORY – MODULE 1
+   FINAL TEMPLATE
    ========================================================= */
 
 
-/* =========================================================
-   RESET
-   ========================================================= */
+/* ================= RESET ================= */
 
 * {
     margin: 0;
@@ -28,9 +37,7 @@
 }
 
 
-/* =========================================================
-   BODY
-   ========================================================= */
+/* ================= BODY ================= */
 
 body {
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
@@ -40,9 +47,7 @@ body {
 }
 
 
-/* =========================================================
-   CONTAINER
-   ========================================================= */
+/* ================= CONTAINER ================= */
 
 .container {
     max-width: 1100px;
@@ -51,65 +56,7 @@ body {
 }
 
 
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-.main-header {
-    background: #003366;
-    padding: 14px 0;
-    border-bottom: 4px solid #ffcc00;
-}
-
-.main-header .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.main-header .logo a {
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.main-header nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 18px;
-}
-
-.main-header nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 4px 0;
-    border-bottom: 2px solid transparent;
-    transition: 0.2s ease;
-}
-
-.main-header nav a:hover,
-.main-header nav a.active {
-    color: #ffcc00;
-    border-bottom-color: #ffcc00;
-}
-
-.main-header nav a.notes-link {
-    color: #ffcc00;
-    font-weight: 600;
-}
-
-.main-header nav a.test-link {
-    color: #ff9900;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   BREADCRUMB
-   ========================================================= */
+/* ================= BREADCRUMB ================= */
 
 .breadcrumb {
     background: #eef1f5;
@@ -133,49 +80,45 @@ body {
 }
 
 
-/* =========================================================
-   PAGE TITLE
-   ========================================================= */
+/* ================= PAGE TITLE ================= */
 
 .page-title {
-    padding: 30px 0 20px;
+    padding: 30px 0 18px;
     text-align: center;
 }
 
 .page-title h1 {
     font-size: 2.25rem;
     color: #003366;
-    letter-spacing: -0.5px;
+    line-height: 1.35;
 }
 
 .page-title p {
-    font-size: 1.08rem;
     color: #555;
-    margin-top: 6px;
+    font-size: 1.08rem;
+    margin-top: 7px;
 }
 
 
-/* =========================================================
-   MODULE NAVIGATION
-   ========================================================= */
+/* ================= MODULE NAVIGATION ================= */
 
 .module-navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     margin: 8px 0 25px;
 }
 
 .module-navigation a {
     background: #003366;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
-    padding: 9px 18px;
+    padding: 9px 17px;
     border-radius: 7px;
-    font-weight: 600;
     font-size: 0.9rem;
-    transition: 0.25s ease;
+    font-weight: 600;
+    transition: 0.25s;
 }
 
 .module-navigation a:hover {
@@ -184,40 +127,73 @@ body {
 }
 
 
-/* =========================================================
-   MAIN CONTENT
-   ========================================================= */
+/* ================= TABLE OF CONTENTS ================= */
+
+.toc-card {
+    background: #ffffff;
+    border: 1px solid #dfe5ec;
+    border-radius: 14px;
+    padding: 22px 25px;
+    margin: 18px 0 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.toc-card h2 {
+    color: #003366;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 15px;
+}
+
+.toc-grid a {
+    text-decoration: none;
+    color: #003366;
+    background: #f4f7fa;
+    border: 1px solid #e2e7ed;
+    padding: 8px 11px;
+    border-radius: 7px;
+    font-size: 0.92rem;
+    transition: 0.2s;
+}
+
+.toc-grid a:hover {
+    background: #eaf1f8;
+    border-color: #003366;
+}
+
+
+/* ================= CONTENT ================= */
 
 .module-content {
     margin-bottom: 35px;
 }
 
-
-/* =========================================================
-   CONTENT CARD
-   ========================================================= */
-
 .content-card {
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #e1e6ec;
     border-radius: 14px;
     padding: 25px 28px;
     margin: 20px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.035);
 }
 
 .content-card h2 {
     color: #003366;
-    font-size: 1.45rem;
+    font-size: 1.42rem;
+    line-height: 1.4;
     border-left: 5px solid #ffcc00;
     padding-left: 12px;
     margin-bottom: 14px;
-    line-height: 1.4;
 }
 
 .content-card h3 {
     color: #003366;
-    font-size: 1.16rem;
+    font-size: 1.14rem;
     margin: 20px 0 8px;
 }
 
@@ -227,7 +203,7 @@ body {
 
 .content-card ul,
 .content-card ol {
-    margin: 12px 0 12px 25px;
+    margin: 10px 0 12px 24px;
 }
 
 .content-card li {
@@ -239,116 +215,132 @@ body {
 }
 
 
-/* =========================================================
-   SUBHEADING
-   ========================================================= */
+/* ================= SECTION LABEL ================= */
 
-.topic-heading {
-    color: #003366;
-    font-size: 1.12rem;
+.section-label {
+    display: inline-block;
+    background: #003366;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
     font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 
-/* =========================================================
-   INFO BOX
-   ========================================================= */
+/* ================= INFO BOXES ================= */
+
+.info-box,
+.exam-box,
+.warning-box,
+.success-box {
+    border-radius: 9px;
+    padding: 15px 18px;
+    margin: 18px 0;
+}
 
 .info-box {
     background: #eef6ff;
     border-left: 5px solid #003366;
-    padding: 15px 18px;
-    border-radius: 8px;
-    margin: 18px 0;
+}
+
+.exam-box {
+    background: #fffdf0;
+    border-left: 5px solid #ffcc00;
 }
 
 .warning-box {
-    background: #fff8e1;
-    border-left: 5px solid #ffc107;
-    padding: 15px 18px;
-    border-radius: 8px;
-    margin: 18px 0;
+    background: #fff5f2;
+    border-left: 5px solid #e5533d;
 }
 
 .success-box {
     background: #eef9f1;
     border-left: 5px solid #198754;
-    padding: 15px 18px;
-    border-radius: 8px;
-    margin: 18px 0;
+}
+
+.box-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #003366;
 }
 
 
-/* =========================================================
-   IMAGE PLACEHOLDER
-   ========================================================= */
+/* ================= FLOW ================= */
+
+.flow-box {
+    background: #f5f8fb;
+    border: 1px solid #dce3ea;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 18px 0;
+    text-align: center;
+    color: #003366;
+    font-weight: 700;
+}
+
+
+/* ================= IMAGES ================= */
 
 .module-image {
     margin: 24px auto;
-    text-align: center;
     max-width: 900px;
+    text-align: center;
 }
 
 .module-image img {
     display: block;
     max-width: 100%;
-    width: auto;
     height: auto;
     margin: 0 auto;
     border-radius: 10px;
     border: 1px solid #d9dee5;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
 }
 
 .module-image figcaption {
     color: #666;
-    font-size: 0.88rem;
+    font-size: 0.87rem;
     margin-top: 7px;
 }
 
 
-/* =========================================================
-   IMAGE NOT AVAILABLE PLACEHOLDER
-   ========================================================= */
+/* ================= MISSING IMAGE ================= */
 
 .image-placeholder {
     display: none;
+    min-height: 160px;
     width: 100%;
-    min-height: 170px;
-    background: #f3f5f8;
-    border: 2px dashed #c9d0d8;
+    padding: 30px 18px;
+    background: #f4f6f8;
+    border: 2px dashed #c7ced7;
     border-radius: 10px;
-    padding: 35px 20px;
-    text-align: center;
     color: #68717c;
 }
 
-.image-placeholder .placeholder-icon {
+.placeholder-icon {
     font-size: 2rem;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 .image-placeholder strong {
     display: block;
     color: #003366;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .image-placeholder code {
-    background: #e8ecf1;
+    background: #e7ebef;
     padding: 3px 7px;
     border-radius: 4px;
     font-size: 0.8rem;
 }
 
 
-/* =========================================================
-   TABLE
-   ========================================================= */
+/* ================= TABLE ================= */
 
-.content-table-wrapper {
+.table-wrap {
     width: 100%;
     overflow-x: auto;
     margin: 18px 0;
@@ -358,12 +350,12 @@ body {
     width: 100%;
     min-width: 600px;
     border-collapse: collapse;
-    background: #ffffff;
+    background: #fff;
 }
 
 .content-table th {
     background: #003366;
-    color: #ffffff;
+    color: #fff;
     padding: 11px;
     text-align: left;
 }
@@ -379,32 +371,19 @@ body {
 }
 
 
-/* =========================================================
-   5S TABLE
-   ========================================================= */
-
-.five-s-table th:first-child,
-.five-s-table td:first-child {
-    width: 80px;
-    text-align: center;
-}
-
-
-/* =========================================================
-   QUICK REVISION
-   ========================================================= */
+/* ================= QUICK REVISION ================= */
 
 .quick-revision {
     background: #fffdf0;
     border: 2px solid #ffcc00;
     border-radius: 14px;
-    padding: 24px;
+    padding: 25px;
     margin: 28px 0;
 }
 
 .quick-revision h2 {
     color: #003366;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
 .quick-revision h3 {
@@ -412,34 +391,52 @@ body {
     margin: 15px 0 5px;
 }
 
-.quick-revision ul {
-    margin-left: 22px;
-}
 
+/* ================= FULL FORMS ================= */
 
-/* =========================================================
-   FORMULA / FLOW
-   ========================================================= */
-
-.flow-box {
-    background: #f7f9fc;
+.full-forms {
+    background: #ffffff;
     border: 1px solid #dfe5eb;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    margin: 18px 0;
-    font-weight: 700;
+    border-radius: 14px;
+    padding: 22px 25px;
+    margin: 25px 0;
+}
+
+.full-forms h2 {
     color: #003366;
+    margin-bottom: 12px;
 }
 
 
-/* =========================================================
-   DISCLAIMER
-   ========================================================= */
+/* ================= BOTTOM NAV ================= */
+
+.next-module {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.next-module a {
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.next-module a:hover {
+    background: #002244;
+}
+
+
+/* ================= DISCLAIMER ================= */
 
 .disclaimer {
-    background: #ffffff;
-    border: 1px solid #e2e6eb;
+    background: #fff;
+    border: 1px solid #e1e6eb;
     border-radius: 12px;
     padding: 20px 24px;
     margin: 25px 0;
@@ -448,39 +445,11 @@ body {
 .disclaimer h2 {
     color: #003366;
     font-size: 1.2rem;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 
-/* =========================================================
-   NEXT / PREVIOUS
-   ========================================================= */
-
-.next-module {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin: 30px 0;
-}
-
-.next-module a {
-    background: #003366;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 11px 20px;
-    border-radius: 7px;
-    font-weight: 600;
-    transition: 0.25s ease;
-}
-
-.next-module a:hover {
-    background: #002244;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* ================= FOOTER ================= */
 
 footer {
     background: #1a2634;
@@ -491,7 +460,7 @@ footer {
     border-top: 4px solid #003366;
 }
 
-footer .footer-links {
+.footer-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -499,84 +468,41 @@ footer .footer-links {
     margin-bottom: 12px;
 }
 
-footer .footer-links a {
+.footer-links a {
     color: #b0b8c5;
     text-decoration: none;
     font-size: 0.9rem;
 }
 
-footer .footer-links a:hover {
-    color: #ffffff;
-}
-
-footer p {
-    margin: 8px 0 0;
-    font-size: 0.85rem;
-    color: #7a8494;
+.footer-links a:hover {
+    color: #fff;
 }
 
 
-/* =========================================================
-   SCROLL TOP
-   ========================================================= */
+/* ================= SCROLL TOP ================= */
 
 #scrollTop {
     position: fixed;
-    bottom: 24px;
-    right: 24px;
-    background: #003366;
-    color: #ffffff;
-    border: none;
-    padding: 12px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: 0.25s;
+    right: 22px;
+    bottom: 22px;
     display: none;
+    background: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
     z-index: 999;
 }
 
-#scrollTop:hover {
-    background: #002244;
-    transform: scale(1.05);
-}
 
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
-    .main-header .container {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .main-header nav {
-        justify-content: center;
-        gap: 6px 12px;
-    }
-
-    .main-header nav a {
-        font-size: 0.9rem;
-    }
-
-    .page-title {
-        padding-top: 24px;
-    }
-
     .page-title h1 {
-        font-size: 1.6rem;
-    }
-
-    .content-card {
-        padding: 19px;
-    }
-
-    .content-card h2 {
-        font-size: 1.25rem;
+        font-size: 1.65rem;
     }
 
     .module-navigation,
@@ -587,12 +513,14 @@ footer p {
     .module-navigation a,
     .next-module a {
         width: 100%;
-        text-align: center;
     }
 
-    .image-placeholder {
-        min-height: 145px;
-        padding: 28px 15px;
+    .content-card {
+        padding: 19px;
+    }
+
+    .toc-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -604,20 +532,15 @@ footer p {
     }
 
     .page-title h1 {
-        font-size: 1.35rem;
-    }
-
-    .page-title p {
-        font-size: 0.95rem;
+        font-size: 1.4rem;
     }
 
     .content-card {
         padding: 16px;
-        border-radius: 10px;
     }
 
     .content-card h2 {
-        font-size: 1.15rem;
+        font-size: 1.18rem;
     }
 
     .content-card p,
@@ -631,2861 +554,3633 @@ footer p {
 }
 
 </style>
+
 </head>
+
+
 <body>
+
+
+<!-- ================= COMMON HEADER ================= -->
+
 <div id="header-container"></div>
-<script defer="" src="/js/header-loader.js"></script>
 
-<!-- =========================================================
-     COMMON HEADER
-     ========================================================= -->
+<script defer src="/js/header-loader.js"></script>
 
 
-<!-- =========================================================
-     BREADCRUMB
-     ========================================================= -->
+<!-- ================= BREADCRUMB ================= -->
+
 <div class="breadcrumb">
+
 <div class="container">
+
 <a href="/">🏠 Home</a>
-         › 
+&nbsp;›&nbsp;
 
-        <a href="/iti-study-centre-notes.html">
-            ITI Notes
-        </a>
-
-         › 
-
-        <span class="current">
-            Fitter Theory – Module 1
-        </span>
-</div>
-</div>
-<!-- =========================================================
-     PAGE TITLE
-     ========================================================= -->
-<section class="page-title">
-<div class="container">
-<h1>
-            🔧 Fitter Theory – Module 1
-        </h1>
-<p>
-            Safety – सुरक्षा | Hindi + English Theory
-        </p>
-</div>
-</section>
-<!-- =========================================================
-     MODULE NAVIGATION
-     ========================================================= -->
-<div class="container">
-<div class="module-navigation">
 <a href="/iti-study-centre-notes.html">
-            ← ITI Notes
-        </a>
-<a href="/notes/fitter/">
-            📚 All Fitter Modules
-        </a>
-<a href="module-2.html">
-            Next Module →
-        </a>
-</div>
-</div>
-<!-- =========================================================
-     MAIN CONTENT START
-     ========================================================= -->
-<main class="container module-content">
-<!-- =========================================================
-     SECTION 1
-     ========================================================= -->
-<section class="content-card">
-<h2>
-1. भारत में औद्योगिक प्रशिक्षण संस्थान का परिचय
-</h2>
-<h3>
-Familiarisation with Industrial Training Institute in India
-</h3>
-<p>
-<strong>Industrial Training Institute (ITI)</strong> का मुख्य उद्देश्य युवाओं को विभिन्न व्यावसायिक एवं तकनीकी ट्रेडों में <strong>Skill Training</strong> प्रदान करना है, ताकि वे उद्योगों में कार्य करने के योग्य बन सकें।
-</p>
-<p>
-ITI में प्रशिक्षण के दौरान <strong>Theory और Practical दोनों</strong> का अध्ययन कराया जाता है। Practical training के माध्यम से प्रशिक्षु मशीन, औजार, उपकरण और कार्यस्थल की वास्तविक परिस्थितियों में काम करना सीखता है।
-</p>
-<h3>ITI Training के प्रमुख उद्देश्य</h3>
-<ul>
-<li>उद्योगों के लिए skilled manpower तैयार करना।</li>
-<li>विद्यार्थियों को trade-related technical knowledge देना।</li>
-<li>Practical skills विकसित करना।</li>
-<li>रोजगार के लिए आवश्यक occupational skills विकसित करना।</li>
-<li>सुरक्षित तरीके से कार्य करने की आदत विकसित करना।</li>
-<li>प्रशिक्षुओं में discipline, responsibility और professional behaviour विकसित करना।</li>
-</ul>
-<h3>ITI में उपलब्ध प्रमुख सुविधाएँ</h3>
-<ul>
-<li>Workshop</li>
-<li>Training/Class Room</li>
-<li>Laboratory</li>
-<li>Machines and Tools</li>
-<li>Computer Facility</li>
-<li>Library</li>
-<li>Training Material</li>
-<li>Safety Equipment</li>
-</ul>
-<figure class="module-image">
-<img alt="ITI Workshop" data-image-name="iti_workshop.webp" src="/images/notes/fitter/module-1/iti_workshop.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: ITI Workshop
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-iti_workshop.webp
-</code>
-</div>
-<figcaption>
-चित्र – ITI Workshop / औद्योगिक प्रशिक्षण संस्थान की कार्यशाला
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SECTION 2
-     ========================================================= -->
-<section class="content-card">
-<h2>
-2. ITI Training System
-</h2>
-<p>
-ITI में training निर्धारित <strong>trade curriculum</strong> के अनुसार दी जाती है।
-</p>
-<p>
-Training में मुख्य रूप से:
-</p>
-<div class="flow-box">
-Theory + Practical + Skill Development
-</div>
-<p>
-शामिल होते हैं।
-</p>
-<p>
-Theory से trainee को principles और concepts की जानकारी मिलती है, जबकि practical training से वह उन concepts को वास्तविक कार्य में लागू करना सीखता है।
-</p>
-<figure class="module-image">
-<img alt="ITI Training Flowchart" data-image-name="iti_training_flowchart.webp" src="/images/notes/fitter/module-1/iti_training_flowchart.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: ITI Training Flowchart
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-iti_training_flowchart.webp
-</code>
-</div>
-<figcaption>
-चित्र – ITI Training System
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SECTION 3
-     ========================================================= -->
-<section class="content-card">
-<h2>
-3. CTS Admission Process और CBT Examination
-</h2>
-<h3>
-Craftsmen Training Scheme – CTS
-</h3>
-<p>
-ITI में विभिन्न trades में प्रशिक्षण <strong>Craftsmen Training Scheme (CTS)</strong> के अंतर्गत दिया जाता है।
-</p>
-<p>
-Admission संबंधित trade की निर्धारित eligibility एवं admission procedure के अनुसार होता है। प्रवेश के बाद trainee को निर्धारित curriculum के अनुसार theory और practical training दी जाती है।
-</p>
-<h3>
-CBT – Computer Based Test
-</h3>
-<p>
-Training के दौरान theory knowledge का assessment computer-based examination के माध्यम से किया जाता है। इसलिए trainee को technical theory के साथ-साथ trade terminology और safety concepts का भी अच्छा ज्ञान होना चाहिए।
-</p>
-<figure class="module-image">
-<img alt="ITI Admission and CBT" data-image-name="iti_admission_cbt.webp" src="/images/notes/fitter/module-1/iti_admission_cbt.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: ITI Admission और CBT
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-iti_admission_cbt.webp
-</code>
-</div>
-<figcaption>
-चित्र – CTS Admission और CBT Examination
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SECTION 4
-     ========================================================= -->
-<section class="content-card">
-<h2>
-4. Employment और Apprenticeship
-</h2>
-<h3>
-Employment
-</h3>
-<p>
-ITI training पूरी करने के बाद trainee को विभिन्न industries में रोजगार के अवसर मिल सकते हैं।
-</p>
-<p>
-Fitter trade के प्रशिक्षु के लिए प्रमुख कार्यक्षेत्र हैं:
-</p>
-<ul>
-<li>Engineering Industry</li>
-<li>Manufacturing Industry</li>
-<li>Production</li>
-<li>Maintenance</li>
-<li>Machine Shop</li>
-<li>Fabrication</li>
-<li>Workshop</li>
-<li>Plant/Industrial Maintenance</li>
-</ul>
-<h3>
-Apprenticeship Training
-</h3>
-<p>
-<strong>Apprenticeship Training</strong> trainee को वास्तविक industrial environment में practical experience प्राप्त करने का अवसर देता है।
-</p>
-<p>
-इसमें trainee industry में कार्य करते हुए industrial discipline, machine operation, safety practices, production process, maintenance work, teamwork और practical problem solving जैसी skills विकसित करता है।
-</p>
-<figure class="module-image">
-<img alt="Apprenticeship Training Flow" data-image-name="apprenticeship_flow.webp" src="/images/notes/fitter/module-1/apprenticeship_flow.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Apprenticeship Training Flow
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-apprenticeship_flow.webp
-</code>
-</div>
-<figcaption>
-चित्र – ITI से Apprenticeship और Employment तक
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SECTION 5
-     ========================================================= -->
-<section class="content-card">
-<h2>
-5. Skill Competition
-</h2>
-<p>
-<strong>Skill Competition</strong> का उद्देश्य trainees के practical skills और performance को विकसित करना है।
-</p>
-<p>
-इसमें trainee की technical knowledge, accuracy, quality, speed, practical skill और safety practices जैसी क्षमताओं का प्रदर्शन होता है।
-</p>
-<p>
-इससे trainee में confidence और professional competence विकसित होती है।
-</p>
-</section>
-<!-- =========================================================
-     SECTION 6
-     ========================================================= -->
-<section class="content-card">
-<h2>
-6. Fitter Learning Scope
-</h2>
-<p>
-Fitter trade में trainee को विभिन्न workshop operations और tools का उपयोग सिखाया जाता है।
-</p>
-<ul>
-<li>Measuring</li>
-<li>Marking</li>
-<li>Cutting</li>
-<li>Filing</li>
-<li>Drilling</li>
-<li>Threading</li>
-<li>Assembly</li>
-<li>Dismantling</li>
-<li>Maintenance</li>
-<li>Hand tools का उपयोग</li>
-<li>Measuring instruments का उपयोग</li>
-<li>Machine और workshop safety</li>
-</ul>
-<figure class="module-image">
-<img alt="Fitter Workshop Operations" data-image-name="fitter_workshop_operations.webp" src="/images/notes/fitter/module-1/fitter_workshop_operations.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Fitter Workshop Operations
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-fitter_workshop_operations.webp
-</code>
-</div>
-<figcaption>
-चित्र – Fitter के प्रमुख Workshop Operations
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SECTION 7
-     ========================================================= -->
-<section class="content-card">
-<h2>
-7. Soft Skills
-</h2>
-<p>
-Technical skill के साथ <strong>Soft Skills</strong> भी workplace में सफलता के लिए महत्वपूर्ण हैं।
-</p>
-<p>
-Soft skills वे personal और interpersonal skills हैं जो व्यक्ति को दूसरे लोगों के साथ प्रभावी ढंग से कार्य करने में सहायता करती हैं।
-</p>
-<h3>
-प्रमुख Soft Skills
-</h3>
-<ul>
-<li>Communication</li>
-<li>Teamwork</li>
-<li>Discipline</li>
-<li>Time Management</li>
-<li>Problem Solving</li>
-<li>Positive Attitude</li>
-<li>Responsibility</li>
-<li>Adaptability</li>
-<li>Professional Behaviour</li>
-</ul>
-<p>
-एक skilled technician के लिए technical knowledge के साथ अच्छा communication और teamwork भी आवश्यक है।
-</p>
-<figure class="module-image">
-<img alt="Soft Skills" data-image-name="soft_skills.webp" src="/images/notes/fitter/module-1/soft_skills.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Soft Skills
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-soft_skills.webp
-</code>
-</div>
-<figcaption>
-चित्र – Technical Skills और Soft Skills
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PART A – INDUSTRIAL SAFETY
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–A : INDUSTRIAL SAFETY
-</h2>
-<h2>
-8. Safety क्या है?
-</h2>
-<p>
-<strong>Safety</strong> का अर्थ है दुर्घटना, चोट, मशीन की क्षति तथा अन्य नुकसान से बचने के लिए आवश्यक सावधानियाँ अपनाना।
-</p>
-<p>
-Workshop में अनेक प्रकार के hazards मौजूद हो सकते हैं। इसलिए किसी भी कार्य को शुरू करने से पहले संभावित खतरे की पहचान करना और उचित safety precautions अपनाना आवश्यक है।
-</p>
-<h3>
-Safety के उद्देश्य
-</h3>
-<ul>
-<li>Accident रोकना।</li>
-<li>Injury कम करना।</li>
-<li>Machine एवं equipment को सुरक्षित रखना।</li>
-<li>Material loss कम करना।</li>
-<li>सुरक्षित working environment बनाना।</li>
-<li>Production में होने वाले नुकसान को कम करना।</li>
-</ul>
-</section>
-<!-- =========================================================
-     SECTION 9
-     ========================================================= -->
-<section class="content-card">
-<h2>
-9. General Safety Rules
-</h2>
-<ol>
-<li>हमेशा निर्धारित safety rules का पालन करें।</li>
-<li>काम के अनुसार उचित PPE पहनें।</li>
-<li>Machine शुरू करने से पहले उसकी condition check करें।</li>
-<li>सही और अच्छी condition वाले tools का उपयोग करें।</li>
-<li>Machine guard को हटाकर machine operate न करें।</li>
-<li>Moving machine parts को हाथ से न छुएँ।</li>
-<li>Loose clothes पहनकर machine पर काम न करें।</li>
-<li>लंबे बालों को सुरक्षित रखें।</li>
-<li>Floor पर oil, water और scrap न पड़ा रहने दें।</li>
-<li>Tools को उपयोग के बाद निर्धारित स्थान पर रखें।</li>
-<li>Workshop में अनावश्यक दौड़ना या मजाक करना नहीं चाहिए।</li>
-<li>Electrical equipment को wet hands से न छुएँ।</li>
-<li>Accident या unsafe condition को तुरंत report करें।</li>
-<li>Emergency exit और fire-fighting equipment का स्थान जानें।</li>
-<li>केवल अधिकृत/प्रशिक्षित व्यक्ति ही संबंधित machine operate करे।</li>
-</ol>
-<figure class="module-image">
-<img alt="Safe and Unsafe Workshop Practices" data-image-name="safe_unsafe_workshop.webp" src="/images/notes/fitter/module-1/safe_unsafe_workshop.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Safe और Unsafe Workshop
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-safe_unsafe_workshop.webp
-</code>
-</div>
-<figcaption>
-चित्र – Safe और Unsafe Workshop Practices
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SECTION 10
-     ========================================================= -->
-<section class="content-card">
-<h2>
-10. Personal Safety
-</h2>
-<p>
-<strong>Personal Safety</strong> का अर्थ स्वयं को workplace hazards से बचाना है।
-</p>
-<ul>
-<li>उचित PPE पहनें।</li>
-<li>सही working posture रखें।</li>
-<li>Tools का सही उपयोग करें।</li>
-<li>Machine instructions का पालन करें।</li>
-<li>Concentration के साथ काम करें।</li>
-<li>लापरवाही न करें।</li>
-<li>Unsafe condition दिखाई देने पर supervisor को सूचित करें।</li>
-</ul>
-</section>
-<!-- =========================================================
-     SECTION 11
-     ========================================================= -->
-<section class="content-card">
-<h2>
-11. Machine Safety
-</h2>
-<h3>
-Machine शुरू करने से पहले
-</h3>
-<ul>
-<li>Machine की condition check करें।</li>
-<li>Guard की स्थिति check करें।</li>
-<li>Electrical connection check करें।</li>
-<li>सही tool का चयन करें।</li>
-<li>Workpiece को उचित तरीके से secure करें।</li>
-</ul>
-<h3>
-Machine चलाते समय
-</h3>
-<ul>
-<li>Moving parts से सुरक्षित दूरी रखें।</li>
-<li>Running machine पर adjustment न करें।</li>
-<li>हाथ से chips हटाने से बचें।</li>
-<li>Loose clothing न पहनें।</li>
-<li>Machine को अनावश्यक रूप से unattended न छोड़ें।</li>
-</ul>
-<h3>
-Maintenance से पहले
-</h3>
-<p>
-Machine की cleaning, adjustment अथवा repair से पहले उसकी power supply को सुरक्षित रूप से बंद/isolate करना चाहिए।
-</p>
-<figure class="module-image">
-<img alt="Machine Safety" data-image-name="machine_safety.webp" src="/images/notes/fitter/module-1/machine_safety.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Machine Safety
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-machine_safety.webp
-</code>
-</div>
-<figcaption>
-चित्र – Machine Safety और Guarding
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PART B – PPE
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–B : PERSONAL PROTECTIVE EQUIPMENT
-</h2>
-<h2>
-12. Personal Protective Equipment – PPE
-</h2>
-<p>
-<strong>PPE (Personal Protective Equipment)</strong> वे protective devices हैं जिन्हें worker अपने शरीर को workplace hazards से बचाने के लिए पहनता है।
-</p>
-<p>
-PPE का चयन <strong>काम और hazard के प्रकार</strong> के अनुसार किया जाना चाहिए।
-</p>
-</section>
-<!-- =========================================================
-     PPE HELMET
-     ========================================================= -->
-<section class="content-card">
-<h2>
-13. Safety Helmet
-</h2>
-<p>
-Safety Helmet सिर को falling objects और impact से सुरक्षा प्रदान करता है।
-</p>
-<figure class="module-image">
-<img alt="Safety Helmet" data-image-name="safety_helmet.webp" src="/images/notes/fitter/module-1/safety_helmet.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Safety Helmet
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-safety_helmet.webp
-</code>
-</div>
-<figcaption>
-चित्र – Safety Helmet / सुरक्षा हेलमेट
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SAFETY SHOES
-     ========================================================= -->
-<section class="content-card">
-<h2>
-14. Safety Shoes
-</h2>
-<p>
-Safety Shoes पैरों को heavy objects, impact, sharp objects और slipping जैसे hazards से बचाने में सहायता करते हैं।
-</p>
-<figure class="module-image">
-<img alt="Safety Shoes" data-image-name="safety_shoes.webp" src="/images/notes/fitter/module-1/safety_shoes.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Safety Shoes
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-safety_shoes.webp
-</code>
-</div>
-<figcaption>
-चित्र – Safety Shoes
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     FACE SHIELD
-     ========================================================= -->
-<section class="content-card">
-<h2>
-15. Face Shield
-</h2>
-<p>
-Face Shield चेहरे को sparks, flying particles, splashes और heat आदि से सुरक्षा प्रदान करता है।
-</p>
-<figure class="module-image">
-<img alt="Face Shield" data-image-name="face_shield.webp" src="/images/notes/fitter/module-1/face_shield.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Face Shield
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-face_shield.webp
-</code>
-</div>
-<figcaption>
-चित्र – Face Shield
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SAFETY GLOVES
-     ========================================================= -->
-<section class="content-card">
-<h2>
-16. Safety Gloves
-</h2>
-<p>
-Safety Gloves हाथों को cuts, abrasions, heat तथा कार्य के अन्य hazards से बचाने के लिए उपयोग किए जाते हैं।
-</p>
-<p>
-काम के प्रकार के अनुसार उचित प्रकार के gloves का चयन करना चाहिए।
-</p>
-<figure class="module-image">
-<img alt="Safety Gloves" data-image-name="safety_gloves.webp" src="/images/notes/fitter/module-1/safety_gloves.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Safety Gloves
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-safety_gloves.webp
-</code>
-</div>
-<figcaption>
-चित्र – Safety Gloves
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SAFETY GOGGLES
-     ========================================================= -->
-<section class="content-card">
-<h2>
-17. Safety Goggles
-</h2>
-<p>
-Safety Goggles आँखों को dust और flying particles जैसे hazards से बचाने के लिए उपयोग किए जाते हैं।
-</p>
-<figure class="module-image">
-<img alt="Safety Goggles" data-image-name="safety_goggles.webp" src="/images/notes/fitter/module-1/safety_goggles.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Safety Goggles
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-safety_goggles.webp
-</code>
-</div>
-<figcaption>
-चित्र – Safety Goggles
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     EAR PROTECTION
-     ========================================================= -->
-<section class="content-card">
-<h2>
-18. Ear Protection
-</h2>
-<p>
-अधिक noise वाले workplace में <strong>Ear Muff</strong> और <strong>Ear Plug</strong> का उपयोग किया जाता है।
-</p>
-<p>
-इनका उद्देश्य कानों को excessive noise से बचाना है।
-</p>
-<figure class="module-image">
-<img alt="Ear Muff and Ear Plug" data-image-name="ear_protection.webp" src="/images/notes/fitter/module-1/ear_protection.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Ear Protection
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-ear_protection.webp
-</code>
-</div>
-<figcaption>
-चित्र – Ear Muff और Ear Plug
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PROTECTIVE CLOTHING
-     ========================================================= -->
-<section class="content-card">
-<h2>
-19. Protective Clothing / Apron
-</h2>
-<p>
-Protective clothing worker के शरीर और कपड़ों को heat, sparks, dust तथा अन्य workplace hazards से बचाने के लिए प्रयोग की जाती है।
-</p>
-<figure class="module-image">
-<img alt="Protective Clothing and Apron" data-image-name="protective_clothing.webp" src="/images/notes/fitter/module-1/protective_clothing.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Protective Clothing / Apron
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-protective_clothing.webp
-</code>
-</div>
-<figcaption>
-चित्र – Protective Clothing / Apron
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     RESPIRATORY PROTECTION
-     ========================================================= -->
-<section class="content-card">
-<h2>
-20. Respiratory Protection
-</h2>
-<p>
-Respiratory protective equipment का उपयोग dust, fumes, smoke अथवा अन्य airborne contaminants से respiratory system की सुरक्षा के लिए किया जाता है।
-</p>
-<figure class="module-image">
-<img alt="Respiratory Protection" data-image-name="respiratory_protection.webp" src="/images/notes/fitter/module-1/respiratory_protection.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Respiratory Protection
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-respiratory_protection.webp
-</code>
-</div>
-<figcaption>
-चित्र – Respiratory Protection
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PPE QUALITY
-     ========================================================= -->
-<section class="content-card">
-<h2>
-21. PPE की Quality
-</h2>
-<ul>
-<li>अच्छी quality का होना चाहिए।</li>
-<li>सही size का होना चाहिए।</li>
-<li>काम के hazard के अनुसार होना चाहिए।</li>
-<li>Damage-free होना चाहिए।</li>
-<li>नियमित रूप से inspect किया जाना चाहिए।</li>
-<li>खराब होने पर replace किया जाना चाहिए।</li>
-</ul>
-<h3>
-22. Proper Use of PPE
-</h3>
-<ul>
-<li>उसे सही तरीके से पहना जाए।</li>
-<li>सही काम के लिए सही PPE चुना जाए।</li>
-<li>Damaged PPE का उपयोग न किया जाए।</li>
-<li>PPE को साफ रखा जाए।</li>
-<li>उपयोग के बाद उचित स्थान पर रखा जाए।</li>
-</ul>
-</section>
-<!-- =========================================================
-     PART C – FIRST AID
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–C : FIRST AID
-</h2>
-<h2>
-23. First Aid – प्राथमिक चिकित्सा
-</h2>
-<p>
-<strong>First Aid</strong> किसी accident, injury या अचानक हुई emergency में professional medical help मिलने से पहले दी जाने वाली प्रारंभिक सहायता है।
-</p>
-<h3>
-First Aid के उद्देश्य
-</h3>
-<ul>
-<li>जीवन बचाना।</li>
-<li>Injury को और गंभीर होने से रोकना।</li>
-<li>घायल व्यक्ति की स्थिति को स्थिर रखना।</li>
-<li>Medical help मिलने तक सहायता करना।</li>
-</ul>
-</section>
-<!-- =========================================================
-     FIRST AID FLOW
-     ========================================================= -->
-<section class="content-card">
-<h2>
-24. First Aid में सबसे पहले क्या करें?
-</h2>
-<p>
-Accident होने पर सबसे पहले <strong>अपनी safety</strong> सुनिश्चित करें।
-</p>
-<p>
-यदि accident का खतरा अभी भी मौजूद है, तो बिना safety सुनिश्चित किए घायल व्यक्ति के पास जाना नहीं चाहिए।
-</p>
-<div class="flow-box">
-Scene Safety → Assess Victim → Call for Help → First Aid
-</div>
-<figure class="module-image">
-<img alt="First Aid Flowchart" data-image-name="first_aid_flowchart.webp" src="/images/notes/fitter/module-1/first_aid_flowchart.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: First Aid Flowchart
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-first_aid_flowchart.webp
-</code>
-</div>
-<figcaption>
-चित्र – First Aid Response Flow
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     ABC
-     ========================================================= -->
-<section class="content-card">
-<h2>
-25. ABC of First Aid
-</h2>
-<p>
-First Aid में <strong>ABC</strong> बहुत महत्वपूर्ण है।
-</p>
-<div class="content-table-wrapper">
-<table class="content-table">
-<thead>
-<tr>
-<th>Letter</th>
-<th>Meaning</th>
-<th>क्या जाँचें?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>A</strong></td>
-<td>Airway</td>
-<td>Airway खुला है या नहीं</td>
-</tr>
-<tr>
-<td><strong>B</strong></td>
-<td>Breathing</td>
-<td>व्यक्ति साँस ले रहा है या नहीं</td>
-</tr>
-<tr>
-<td><strong>C</strong></td>
-<td>Circulation</td>
-<td>Circulation और गंभीर bleeding की स्थिति</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="module-image">
-<img alt="ABC of First Aid" data-image-name="abc_first_aid.webp" src="/images/notes/fitter/module-1/abc_first_aid.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: ABC of First Aid
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-abc_first_aid.webp
-</code>
-</div>
-<figcaption>
-चित्र – ABC of First Aid
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     GOLDEN HOUR
-     ========================================================= -->
-<section class="content-card">
-<h2>
-26. Golden Hour
-</h2>
-<p>
-<strong>Golden Hour</strong> का अर्थ है गंभीर injury के बाद शुरुआती समय का अत्यधिक महत्वपूर्ण होना।
-</p>
-<p>
-इस अवधि में घायल व्यक्ति को उचित medical care जितनी जल्दी मिले, उतना बेहतर है।
-</p>
-<div class="flow-box">
-Early Recognition → First Aid → Emergency Help → Medical Care
-</div>
-<figure class="module-image">
-<img alt="Golden Hour in First Aid" data-image-name="golden_hour.webp" src="/images/notes/fitter/module-1/golden_hour.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Golden Hour
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-golden_hour.webp
-</code>
-</div>
-<figcaption>
-चित्र – Golden Hour Concept
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SPINAL INJURY
-     ========================================================= -->
-<section class="content-card">
-<h2>
-27. घायल व्यक्ति को अनावश्यक रूप से न हिलाएँ
-</h2>
-<p>
-यदि व्यक्ति को spinal injury, fracture या गंभीर trauma होने की संभावना हो तो उसे बिना आवश्यकता move नहीं करना चाहिए।
-</p>
-<p>
-गलत movement से injury और गंभीर हो सकती है।
-</p>
-<figure class="module-image">
-<img alt="Spinal Injury Safety" data-image-name="spinal_injury.webp" src="/images/notes/fitter/module-1/spinal_injury.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Suspected Spinal Injury
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-spinal_injury.webp
-</code>
-</div>
-<figcaption>
-चित्र – Suspected Spinal Injury में सावधानी
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     UNCONSCIOUS PERSON
-     ========================================================= -->
-<section class="content-card">
-<h2>
-28. Unconscious/Injured Person का Assessment
-</h2>
-<p>
-घायल या unconscious व्यक्ति की स्थिति का assessment करते समय निम्न बातों पर ध्यान दें:
-</p>
-<ul>
-<li>Response / Consciousness</li>
-<li>Breathing</li>
-<li>Circulation</li>
-<li>Bleeding</li>
-<li>Visible injuries</li>
-<li>अन्य संभावित medical conditions</li>
-</ul>
-<p>
-Unconsciousness के संभावित कारणों में Alcohol, Epilepsy, Drugs, Convulsion, Infection, Poisoning, Shock तथा अन्य medical conditions पर विचार किया जाता है।
-</p>
-<figure class="module-image">
-<img alt="Possible Causes of Unconsciousness" data-image-name="unconsciousness_causes.webp" src="/images/notes/fitter/module-1/unconsciousness_causes.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Unconsciousness के संभावित कारण
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-unconsciousness_causes.webp
-</code>
-</div>
-<figcaption>
-चित्र – Possible Causes of Unconsciousness
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     BLEEDING
-     ========================================================= -->
-<section class="content-card">
-<h2>
-29. Bleeding – रक्तस्राव
-</h2>
-<p>
-गंभीर bleeding की स्थिति में bleeding को नियंत्रित करना आवश्यक है।
-</p>
-<p>
-प्राथमिक सहायता में घायल व्यक्ति की स्थिति का ध्यान रखते हुए bleeding source पर उचित <strong>direct pressure</strong> दिया जाता है तथा आवश्यकता होने पर medical assistance प्राप्त की जाती है।
-</p>
-<figure class="module-image">
-<img alt="First Aid for Bleeding" data-image-name="bleeding_first_aid.webp" src="/images/notes/fitter/module-1/bleeding_first_aid.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Bleeding First Aid
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-bleeding_first_aid.webp
-</code>
-</div>
-<figcaption>
-चित्र – First Aid for Bleeding
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SHOCK
-     ========================================================= -->
-<section class="content-card">
-<h2>
-30. Shock
-</h2>
-<p>
-<strong>Shock</strong> एक गंभीर अवस्था है जिसमें शरीर के महत्वपूर्ण अंगों तक पर्याप्त blood circulation नहीं पहुँच पाती।
-</p>
-<p>
-Shock में व्यक्ति में कमजोरी, बेचैनी, पसीना, फीकी त्वचा और कमजोर/तेज pulse जैसे संकेत दिखाई दे सकते हैं।
-</p>
-<p>
-Shock की स्थिति में घायल व्यक्ति को सुरक्षित रखें और medical assistance प्राप्त करें।
-</p>
-</section>
-<!-- =========================================================
-     BURN
-     ========================================================= -->
-<section class="content-card">
-<h2>
-31. Burn
-</h2>
-<p>
-Burn होने पर व्यक्ति को heat source से सुरक्षित करना चाहिए और burn को और नुकसान से बचाना चाहिए।
-</p>
-<p>
-गंभीर burn में medical assistance आवश्यक है।
-</p>
-<figure class="module-image">
-<img alt="First Aid for Burns" data-image-name="burn_first_aid.webp" src="/images/notes/fitter/module-1/burn_first_aid.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Burn First Aid
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-burn_first_aid.webp
-</code>
-</div>
-<figcaption>
-चित्र – First Aid for Burns
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     CONCUSSION
-     ========================================================= -->
-<section class="content-card">
-<h2>
-32. Concussion
-</h2>
-<p>
-Head injury के बाद concussion की संभावना हो सकती है। व्यक्ति की consciousness और condition पर ध्यान देना चाहिए।
-</p>
-<p>
-यदि head injury के बाद स्थिति असामान्य हो या गंभीर symptoms दिखाई दें तो medical evaluation आवश्यक है।
-</p>
-</section>
-<!-- =========================================================
-     PART D – ELECTRICAL
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–D : ELECTRICAL SAFETY
-</h2>
-<h2>
-33. Electrical Machine Operation
-</h2>
-<p>
-Electrical machine operate करने से पहले:
-</p>
-<ul>
-<li>Machine की condition check करें।</li>
-<li>Electrical connections check करें।</li>
-<li>Safety arrangement check करें।</li>
-<li>उचित PPE का उपयोग करें।</li>
-<li>निर्धारित operating procedure का पालन करें।</li>
-</ul>
-<p>
-Machine में abnormal sound, smell या अन्य समस्या दिखाई दे तो operation रोककर संबंधित व्यक्ति को सूचित करें।
-</p>
-<figure class="module-image">
-<img alt="Electrical Machine Operation Safety" data-image-name="electrical_machine_operation.webp" src="/images/notes/fitter/module-1/electrical_machine_operation.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Electrical Machine Operation
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-electrical_machine_operation.webp
-</code>
-</div>
-<figcaption>
-चित्र – Electrical Machine Operation Safety
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     ELECTRICAL SAFETY
-     ========================================================= -->
-<section class="content-card">
-<h2>
-34. Electrical Safety
-</h2>
-<p>
-Electrical work में लापरवाही गंभीर injury या accident का कारण बन सकती है।
-</p>
-<h3>
-Safety Rules
-</h3>
-<ul>
-<li>Damaged electrical wires का उपयोग न करें।</li>
-<li>Proper insulation वाली wires का उपयोग करें।</li>
-<li>Electrical equipment को पानी से दूर रखें।</li>
-<li>Wet hands से electrical equipment न छुएँ।</li>
-<li>Proper earthing की व्यवस्था रखें।</li>
-<li>Maintenance से पहले power supply disconnect/isolate करें।</li>
-<li>Electrical equipment की condition नियमित रूप से check करें।</li>
-<li>Electrical repair केवल competent व्यक्ति द्वारा किया जाना चाहिए।</li>
-<li>Electrical fire में appropriate fire-fighting equipment का उपयोग करें।</li>
-</ul>
-<figure class="module-image">
-<img alt="Electrical Safety" data-image-name="electrical_safety.webp" src="/images/notes/fitter/module-1/electrical_safety.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Electrical Safety
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-electrical_safety.webp
-</code>
-</div>
-<figcaption>
-चित्र – Electrical Safety Rules
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PART E – WASTE MANAGEMENT
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–E : WASTE MANAGEMENT
-</h2>
-<h2>
-35. Waste Material
-</h2>
-<p>
-Workshop में विभिन्न प्रकार की waste materials उत्पन्न होती हैं, जैसे:
-</p>
-<ul>
-<li>Metal scrap</li>
-<li>Metal chips</li>
-<li>Used materials</li>
-<li>Paper</li>
-<li>Plastic</li>
-<li>Oil-related waste</li>
-<li>Electronic waste आदि</li>
-</ul>
-<p>
-Waste को निर्धारित तरीके से अलग करके dispose करना चाहिए।
-</p>
-<figure class="module-image">
-<img alt="Workshop Waste Segregation" data-image-name="waste_segregation.webp" src="/images/notes/fitter/module-1/waste_segregation.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Waste Segregation
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-waste_segregation.webp
-</code>
-</div>
-<figcaption>
-चित्र – Workshop Waste Segregation
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     WASTE DISPOSAL
-     ========================================================= -->
-<section class="content-card">
-<h2>
-36. Methods of Waste Disposal
-</h2>
-<h3>
-1. Reduce
-</h3>
-<p>
-Waste generation को कम करना।
-</p>
-<h3>
-2. Reuse
-</h3>
-<p>
-उपयोगी वस्तुओं का दोबारा उपयोग करना।
-</p>
-<h3>
-3. Recycling
-</h3>
-<p>
-Waste material को process करके फिर उपयोगी material में बदलना।
-</p>
-<h3>
-4. Composting
-</h3>
-<p>
-Biodegradable waste को compost में बदलना।
-</p>
-<h3>
-5. Landfill
-</h3>
-<p>
-निर्धारित स्थान पर waste को सुरक्षित तरीके से जमा/dispose करना।
-</p>
-<h3>
-6. Incineration
-</h3>
-<p>
-उचित waste को नियंत्रित परिस्थितियों में जलाकर dispose करना।
-</p>
-<figure class="module-image">
-<img alt="Waste Management Hierarchy" data-image-name="waste_management_hierarchy.webp" src="/images/notes/fitter/module-1/waste_management_hierarchy.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Waste Management Hierarchy
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-waste_management_hierarchy.webp
-</code>
-</div>
-<figcaption>
-चित्र – Waste Management Methods
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     WASTE BIN COLOUR CODE
-     ========================================================= -->
-<section class="content-card">
-<h2>
-37. Waste Bin Colour Code
-</h2>
-<p>
-Waste को सही प्रकार के container/bin में डालना चाहिए। विभिन्न प्रकार के waste को अलग-अलग रखने के लिए colour coding का उपयोग किया जाता है।
-</p>
-<div class="warning-box">
-<strong>महत्वपूर्ण:</strong>
-<p>
-Final version में waste-bin colour code को source में दिए गए classification के अनुसार graphical table/illustration के रूप में रखा जाएगा।
-</p>
-</div>
-<figure class="module-image">
-<img alt="Waste Bin Colour Code" data-image-name="waste_bin_colour_code.webp" src="/images/notes/fitter/module-1/waste_bin_colour_code.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Waste Bin Colour Code
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-waste_bin_colour_code.webp
-</code>
-</div>
-<figcaption>
-चित्र – Waste Bin Colour Code
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PART F – OCCUPATIONAL SAFETY
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–F : OCCUPATIONAL SAFETY AND HEALTH
-</h2>
-<h2>
-38. Occupational Safety and Health – OSH
-</h2>
-<p>
-<strong>Occupational Safety and Health (OSH)</strong> का उद्देश्य workplace पर workers की safety और health की रक्षा करना है।
-</p>
-<p>
-इसमें workplace hazards की पहचान, prevention और safe working conditions बनाए रखना शामिल है।
-</p>
-<h3>
-Occupational Safety का उद्देश्य
-</h3>
-<ul>
-<li>Workplace accidents को रोकना।</li>
-<li>Workers को hazards से बचाना।</li>
-<li>Safe working environment बनाना।</li>
-<li>Occupational injuries और health risks को कम करना।</li>
-<li>Safe working practices विकसित करना।</li>
-</ul>
-<figure class="module-image">
-<img alt="Occupational Safety and Health" data-image-name="occupational_safety_health.webp" src="/images/notes/fitter/module-1/occupational_safety_health.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Occupational Safety and Health
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-occupational_safety_health.webp
-</code>
-</div>
-<figcaption>
-चित्र – Occupational Safety and Health
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     OCCUPATIONAL HAZARDS
-     ========================================================= -->
-<section class="content-card">
-<h2>
-39. Occupational Hazards
-</h2>
-<p>
-Workplace पर विभिन्न प्रकार के hazards हो सकते हैं:
-</p>
-<h3>
-Physical Hazards
-</h3>
-<ul>
-<li>Noise</li>
-<li>Heat</li>
-<li>Vibration</li>
-</ul>
-<h3>
-Mechanical Hazards
-</h3>
-<ul>
-<li>Moving machinery</li>
-<li>Sharp edges</li>
-<li>Crushing</li>
-<li>Cutting</li>
-<li>Entanglement</li>
-</ul>
-<h3>
-Electrical Hazards
-</h3>
-<ul>
-<li>Electric shock</li>
-<li>Short circuit</li>
-<li>Electrical fire</li>
-</ul>
-<h3>
-Chemical Hazards
-</h3>
-<ul>
-<li>Dust</li>
-<li>Fumes</li>
-<li>Vapours</li>
-<li>Harmful chemicals</li>
-</ul>
-<h3>
-Fire Hazards
-</h3>
-<ul>
-<li>Flame</li>
-<li>Sparks</li>
-<li>Flammable materials</li>
-</ul>
-<h3>
-Ergonomic Hazards
-</h3>
-<p>
-गलत posture या गलत तरीके से repetitive/manual work करने से शरीर पर strain हो सकता है।
-</p>
-<figure class="module-image">
-<img alt="Types of Occupational Hazards" data-image-name="occupational_hazards.webp" src="/images/notes/fitter/module-1/occupational_hazards.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Occupational Hazards
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-occupational_hazards.webp
-</code>
-</div>
-<figcaption>
-चित्र – Types of Occupational Hazards
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     OSH IMPORTANCE
-     ========================================================= -->
-<section class="content-card">
-<h2>
-40. Occupational Safety and Health का महत्व
-</h2>
-<ul>
-<li>Worker की safety बेहतर होती है।</li>
-<li>Accidents कम होते हैं।</li>
-<li>Health risks कम होते हैं।</li>
-<li>Safe working conditions विकसित होती हैं।</li>
-<li>Productivity पर सकारात्मक प्रभाव पड़ता है।</li>
-</ul>
-</section>
-<!-- =========================================================
-     PART G – SAFETY SIGNS
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–G : SAFETY SIGNS
-</h2>
-<h2>
-41. Safety Signs
-</h2>
-<p>
-<strong>Safety Signs</strong> ऐसे संकेत हैं जो workplace पर खतरे, निषेध, अनिवार्य safety action और अन्य महत्वपूर्ण safety information को आसानी से समझाने के लिए लगाए जाते हैं।
-</p>
-<p>
-मुख्य प्रकार:
-</p>
-<ul>
-<li>Prohibition Signs</li>
-<li>Mandatory Signs</li>
-<li>Warning Signs</li>
-<li>Information Signs</li>
-</ul>
-</section>
-<!-- =========================================================
-     PROHIBITION
-     ========================================================= -->
-<section class="content-card">
-<h2>
-42. Prohibition Signs
-</h2>
-<p>
-<strong>Prohibition Sign</strong> किसी कार्य को करने से रोकता है।
-</p>
-<p>
-उदाहरण:
-</p>
-<ul>
-<li>No Smoking</li>
-<li>No Fire</li>
-<li>No Entry</li>
-<li>अन्य prohibited activities</li>
-</ul>
-<figure class="module-image">
-<img alt="Prohibition Safety Signs" data-image-name="prohibition_signs.webp" src="/images/notes/fitter/module-1/prohibition_signs.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Prohibition Signs
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-prohibition_signs.webp
-</code>
-</div>
-<figcaption>
-चित्र – Prohibition Safety Signs
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     MANDATORY
-     ========================================================= -->
-<section class="content-card">
-<h2>
-43. Mandatory Signs
-</h2>
-<p>
-<strong>Mandatory Sign</strong> बताता है कि कोई safety action करना आवश्यक/अनिवार्य है।
-</p>
-<p>
-उदाहरण:
-</p>
-<ul>
-<li>Wear Helmet</li>
-<li>Wear Eye Protection</li>
-<li>Wear Safety Shoes</li>
-<li>Wear Gloves</li>
-<li>Wear Respiratory Protection</li>
-</ul>
-<figure class="module-image">
-<img alt="Mandatory Safety Signs" data-image-name="mandatory_signs.webp" src="/images/notes/fitter/module-1/mandatory_signs.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Mandatory Signs
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-mandatory_signs.webp
-</code>
-</div>
-<figcaption>
-चित्र – Mandatory Safety Signs
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     WARNING
-     ========================================================= -->
-<section class="content-card">
-<h2>
-44. Warning Signs
-</h2>
-<p>
-<strong>Warning Sign</strong> संभावित खतरे के बारे में चेतावनी देता है।
-</p>
-<ul>
-<li>Fire Hazard</li>
-<li>Electric Shock / High Voltage</li>
-<li>Toxic Material</li>
-<li>Explosive Material</li>
-<li>Slippery Floor</li>
-<li>Moving Machinery</li>
-<li>अन्य hazardous conditions</li>
-</ul>
-<figure class="module-image">
-<img alt="Warning Safety Signs" data-image-name="warning_signs.webp" src="/images/notes/fitter/module-1/warning_signs.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Warning Signs
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-warning_signs.webp
-</code>
-</div>
-<figcaption>
-चित्र – Warning Safety Signs
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     INFORMATION
-     ========================================================= -->
-<section class="content-card">
-<h2>
-45. Information Signs
-</h2>
-<p>
-Information signs आवश्यक safety information प्रदान करते हैं।
-</p>
-<ul>
-<li>First Aid</li>
-<li>Emergency Information</li>
-<li>Safe Route</li>
-</ul>
-<figure class="module-image">
-<img alt="Emergency and Information Safety Signs" data-image-name="emergency_information_signs.webp" src="/images/notes/fitter/module-1/emergency_information_signs.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Information / Emergency Signs
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-emergency_information_signs.webp
-</code>
-</div>
-<figcaption>
-चित्र – Information और Emergency Signs
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PART H – EMERGENCY RESPONSE
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–H : EMERGENCY RESPONSE
-</h2>
-<h2>
-46. Response to Emergencies
-</h2>
-<p>
-Emergency ऐसी स्थिति है जिसमें तत्काल और उचित action लेना आवश्यक होता है।
-</p>
-<p>
-उदाहरण:
-</p>
-<ul>
-<li>Fire</li>
-<li>Electric shock</li>
-<li>Machine failure</li>
-<li>System failure</li>
-<li>Injury</li>
-<li>अन्य emergency situations</li>
-</ul>
-<h3>
-Emergency में सामान्य प्रक्रिया
-</h3>
-<ol>
-<li>Emergency की पहचान करें।</li>
-<li>स्वयं को सुरक्षित करें।</li>
-<li>यदि सुरक्षित हो तो खतरे के source को control/stop करें।</li>
-<li>आसपास के लोगों को alert करें।</li>
-<li>आवश्यक First Aid दें।</li>
-<li>Emergency assistance प्राप्त करें।</li>
-<li>आवश्यकता होने पर area खाली करें।</li>
-<li>Emergency के बाद घटना की report करें।</li>
-</ol>
-<figure class="module-image">
-<img alt="Emergency Response Flowchart" data-image-name="emergency_response.webp" src="/images/notes/fitter/module-1/emergency_response.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Emergency Response
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-emergency_response.webp
-</code>
-</div>
-<figcaption>
-चित्र – Emergency Response Flowchart
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PART I – HOUSEKEEPING
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–I : HOUSEKEEPING
-</h2>
-<h2>
-47. Housekeeping का महत्व
-</h2>
-<p>
-<strong>Housekeeping</strong> का अर्थ workplace को साफ, व्यवस्थित और सुरक्षित रखना है।
-</p>
-<p>
-यह केवल सफाई तक सीमित नहीं है, बल्कि tools, machines, materials, scrap और working area की proper arrangement भी इसमें शामिल है।
-</p>
-<h3>
-Housekeeping के मुख्य कार्य
-</h3>
-<ul>
-<li>Shop floor की cleaning</li>
-<li>Machines की cleaning</li>
-<li>Leakage और spillage की prevention</li>
-<li>Scrap का proper disposal</li>
-<li>Tools का proper storage</li>
-<li>Material का proper storage</li>
-<li>Material handling की उचित व्यवस्था</li>
-<li>Working area को व्यवस्थित रखना</li>
-</ul>
-<figure class="module-image">
-<img alt="Workshop Housekeeping" data-image-name="housekeeping.webp" src="/images/notes/fitter/module-1/housekeeping.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Workshop Housekeeping
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-housekeeping.webp
-</code>
-</div>
-<figcaption>
-चित्र – Good Workshop Housekeeping
-</figcaption>
-</figure>
-<h3>
-Housekeeping के लाभ
-</h3>
-<ul>
-<li>Accident का खतरा कम होता है।</li>
-<li>Tools आसानी से मिलते हैं।</li>
-<li>समय बचता है।</li>
-<li>Workplace सुरक्षित रहता है।</li>
-<li>Productivity बढ़ती है।</li>
-<li>Machines और materials की condition बेहतर रहती है।</li>
-</ul>
-</section>
-<!-- =========================================================
-     PART J – 5S
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–J : 5S CONCEPT
-</h2>
-<h2>
-48. 5S क्या है?
-</h2>
-<p>
-<strong>5S</strong> workplace को clean, organized, efficient और safe बनाने की systematic method है।
-</p>
-<div class="content-table-wrapper">
-<table class="content-table five-s-table">
-<thead>
-<tr>
-<th>S</th>
-<th>Japanese Term</th>
-<th>English</th>
-<th>सरल अर्थ</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>1</strong></td>
-<td>Seiri</td>
-<td>Sort</td>
-<td>छँटाई</td>
-</tr>
-<tr>
-<td><strong>2</strong></td>
-<td>Seiton</td>
-<td>Set in Order</td>
-<td>व्यवस्थित रखना</td>
-</tr>
-<tr>
-<td><strong>3</strong></td>
-<td>Seiso</td>
-<td>Shine</td>
-<td>सफाई</td>
-</tr>
-<tr>
-<td><strong>4</strong></td>
-<td>Seiketsu</td>
-<td>Standardization</td>
-<td>मानकीकरण</td>
-</tr>
-<tr>
-<td><strong>5</strong></td>
-<td>Shitsuke</td>
-<td>Sustain</td>
-<td>लगातार बनाए रखना</td>
-</tr>
-</tbody>
-</table>
-</div>
-<figure class="module-image">
-<img alt="5S Concept" data-image-name="5s_overview.webp" src="/images/notes/fitter/module-1/5s_overview.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: 5S Overview
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-5s_overview.webp
-</code>
-</div>
-<figcaption>
-चित्र – 5S Concept
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SEIRI
-     ========================================================= -->
-<section class="content-card">
-<h2>
-49. Seiri – Sort
-</h2>
-<p>
-<strong>Seiri</strong> का अर्थ है आवश्यक और अनावश्यक वस्तुओं को अलग करना।
-</p>
-<p>
-Workshop में जो tools/materials आवश्यक नहीं हैं, उन्हें working area से हटाया जाता है।
-</p>
-<h3>
-लाभ
-</h3>
-<ul>
-<li>Space बचता है।</li>
-<li>अनावश्यक वस्तुएँ हटती हैं।</li>
-<li>Workplace व्यवस्थित होता है।</li>
-<li>Accident का खतरा कम होता है।</li>
-</ul>
-<figure class="module-image">
-<img alt="5S Seiri Sort" data-image-name="5s_seiri_sort.webp" src="/images/notes/fitter/module-1/5s_seiri_sort.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Seiri – Sort
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-5s_seiri_sort.webp
-</code>
-</div>
-<figcaption>
-चित्र – Seiri / Sort
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SEITON
-     ========================================================= -->
-<section class="content-card">
-<h2>
-50. Seiton – Set in Order
-</h2>
-<p>
-<strong>Seiton</strong> का अर्थ है प्रत्येक आवश्यक वस्तु को उसके निर्धारित स्थान पर रखना।
-</p>
-<p>
-उदाहरण:
-</p>
-<ul>
-<li>Tool board</li>
-<li>Labelled storage</li>
-<li>Material racks</li>
-<li>Measuring instruments का निर्धारित स्थान</li>
-</ul>
-<div class="info-box">
-<strong>
-याद रखें:
-</strong>
-<p>
-“A place for everything and everything in its place.”
-</p>
-</div>
-<figure class="module-image">
-<img alt="5S Seiton Set in Order" data-image-name="5s_seiton_set_in_order.webp" src="/images/notes/fitter/module-1/5s_seiton_set_in_order.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Seiton – Set in Order
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-5s_seiton_set_in_order.webp
-</code>
-</div>
-<figcaption>
-चित्र – Seiton / Set in Order
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SEISO
-     ========================================================= -->
-<section class="content-card">
-<h2>
-51. Seiso – Shine
-</h2>
-<p>
-<strong>Seiso</strong> का अर्थ workplace, machines और tools की सफाई करना है।
-</p>
-<ul>
-<li>Machine cleaning</li>
-<li>Floor cleaning</li>
-<li>Tool cleaning</li>
-<li>Dust removal</li>
-<li>Oil/spillage removal</li>
-</ul>
-<p>
-सफाई से workplace की safety और equipment maintenance दोनों बेहतर होते हैं।
-</p>
-<figure class="module-image">
-<img alt="5S Seiso Shine" data-image-name="5s_seiso_shine.webp" src="/images/notes/fitter/module-1/5s_seiso_shine.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Seiso – Shine
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-5s_seiso_shine.webp
-</code>
-</div>
-<figcaption>
-चित्र – Seiso / Shine
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SEIKETSU
-     ========================================================= -->
-<section class="content-card">
-<h2>
-52. Seiketsu – Standardization
-</h2>
-<p>
-<strong>Seiketsu</strong> का अर्थ पहले किए गए Sort, Set in Order और Shine को बनाए रखने के लिए standard procedures बनाना है।
-</p>
-<p>
-इसके लिए:
-</p>
-<ul>
-<li>Cleaning schedule</li>
-<li>Checklists</li>
-<li>Labels</li>
-<li>Colour coding</li>
-<li>Standard procedures</li>
-</ul>
-<figure class="module-image">
-<img alt="5S Seiketsu Standardize" data-image-name="5s_seiketsu_standardize.webp" src="/images/notes/fitter/module-1/5s_seiketsu_standardize.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Seiketsu – Standardize
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-5s_seiketsu_standardize.webp
-</code>
-</div>
-<figcaption>
-चित्र – Seiketsu / Standardization
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SHITSUKE
-     ========================================================= -->
-<section class="content-card">
-<h2>
-53. Shitsuke – Sustain
-</h2>
-<p>
-<strong>Shitsuke</strong> का अर्थ निर्धारित standards को लगातार follow करना और उसे workplace की habit बनाना है।
-</p>
-<p>
-इसके लिए:
-</p>
-<ul>
-<li>Regular inspection</li>
-<li>Discipline</li>
-<li>Training</li>
-<li>Checklist</li>
-<li>Continuous improvement</li>
-</ul>
-<figure class="module-image">
-<img alt="5S Shitsuke Sustain" data-image-name="5s_shitsuke_sustain.webp" src="/images/notes/fitter/module-1/5s_shitsuke_sustain.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Shitsuke – Sustain
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-5s_shitsuke_sustain.webp
-</code>
-</div>
-<figcaption>
-चित्र – Shitsuke / Sustain
-</figcaption>
-</figure>
-<div class="success-box">
-<strong>
-5S का उद्देश्य:
-</strong>
-<p>
-Clean Workplace + Safe Workplace + Organized Workplace + Better Productivity
-</p>
-</div>
-</section>
-<!-- =========================================================
-     PART K – HOT WORK
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–K : HOT WORK
-</h2>
-<h2>
-54. Hot Work
-</h2>
-<p>
-<strong>Hot Work</strong> ऐसा कार्य है जिसमें heat, flame या sparks उत्पन्न होते हैं और जिससे fire या अन्य hazard हो सकता है।
-</p>
-<h3>
-उदाहरण
-</h3>
-<ul>
-<li>Welding</li>
-<li>Gas Cutting</li>
-<li>Heating</li>
-<li>Grinding</li>
-<li>Brazing आदि</li>
-</ul>
-<h3>
-Hot Work में Safety
-</h3>
-<ul>
-<li>Flammable material को दूर रखें।</li>
-<li>उचित PPE पहनें।</li>
-<li>Fire-fighting equipment उपलब्ध रखें।</li>
-<li>Work area की जाँच करें।</li>
-<li>उचित ventilation रखें।</li>
-<li>काम पूरा होने के बाद area को check करें।</li>
-</ul>
-<figure class="module-image">
-<img alt="Hot Work Safety" data-image-name="hot_work_safety.webp" src="/images/notes/fitter/module-1/hot_work_safety.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Hot Work Safety
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-hot_work_safety.webp
-</code>
-</div>
-<figcaption>
-चित्र – Hot Work Safety
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PART L – CONFINED SPACE
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–L : CONFINED SPACE
-</h2>
-<h2>
-55. Confined Space
-</h2>
-<p>
-<strong>Confined Space</strong> ऐसा सीमित स्थान है जहाँ entry/exit सीमित हो सकती है और सामान्य working conditions के लिए ventilation पर्याप्त न हो।
-</p>
-<h3>
-संभावित Hazards
-</h3>
-<ul>
-<li>Oxygen deficiency</li>
-<li>Toxic gases</li>
-<li>Flammable gases</li>
-<li>Heat</li>
-<li>Difficult rescue</li>
-</ul>
-<h3>
-Safety Precautions
-</h3>
-<ul>
-<li>Entry से पहले hazards की पहचान करें।</li>
-<li>आवश्यक safety checks करें।</li>
-<li>Proper PPE का उपयोग करें।</li>
-<li>Communication व्यवस्था रखें।</li>
-<li>Emergency/rescue procedure तैयार रखें।</li>
-<li>निर्धारित procedure के अनुसार ही entry करें।</li>
-</ul>
-<figure class="module-image">
-<img alt="Confined Space Safety" data-image-name="confined_space.webp" src="/images/notes/fitter/module-1/confined_space.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Confined Space
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-confined_space.webp
-</code>
-</div>
-<figcaption>
-चित्र – Confined Space Entry Safety
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PART M – MATERIAL HANDLING EQUIPMENT
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–M : MATERIAL HANDLING EQUIPMENT
-</h2>
-<h2>
-56. Material Handling Equipment
-</h2>
-<p>
-Material को उठाने, खींचने और स्थानांतरित करने के लिए विभिन्न equipment का उपयोग किया जाता है।
-</p>
-<h3>
-उदाहरण
-</h3>
-<ul>
-<li>Crane</li>
-<li>Hoist</li>
-<li>Winch</li>
-<li>Trolley</li>
-<li>अन्य suitable material handling equipment</li>
-</ul>
-<p>
-Equipment का चयन load की आवश्यकता और working condition के अनुसार किया जाना चाहिए।
-</p>
-<figure class="module-image">
-<img alt="Material Handling Equipment" data-image-name="material_handling_equipment.webp" src="/images/notes/fitter/module-1/material_handling_equipment.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Material Handling Equipment
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-material_handling_equipment.webp
-</code>
-</div>
-<figcaption>
-चित्र – Material Handling Equipment
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PART N – LIFTING AND HANDLING LOADS
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–N : LIFTING AND HANDLING LOADS
-</h2>
-<h2>
-57. Lifting and Handling Loads
-</h2>
-<p>
-Heavy load को गलत तरीके से उठाने या handle करने से चोट लग सकती है।
-</p>
-<h3>
-संभावित Injuries
-</h3>
-<ul>
-<li>Cuts and Abrasions</li>
-<li>Crushing of feet or hands</li>
-<li>Strain to muscles and joints</li>
-<li>Back injury</li>
-</ul>
-<figure class="module-image">
-<img alt="Material Handling Injuries" data-image-name="material_handling_injuries.webp" src="/images/notes/fitter/module-1/material_handling_injuries.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Material Handling Injuries
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-material_handling_injuries.webp
-</code>
-</div>
-<figcaption>
-चित्र – Material Handling से होने वाली Injuries
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     LOAD PREPARATION
-     ========================================================= -->
-<section class="content-card">
-<h2>
-58. Load उठाने से पहले तैयारी
-</h2>
-<ol>
-<li>Load का weight और condition समझें।</li>
-<li>Load stable है या नहीं देखें।</li>
-<li>रास्ता clear करें।</li>
-<li>उचित lifting method चुनें।</li>
-<li>आवश्यक होने पर assistance लें।</li>
-<li>Heavy load के लिए suitable lifting equipment का उपयोग करें।</li>
-</ol>
-</section>
-<!-- =========================================================
-     MANUAL LIFTING
-     ========================================================= -->
-<section class="content-card">
-<h2>
-59. Correct Manual Lifting Technique
-</h2>
-<h3>
-1. Load को Assess करें
-</h3>
-<p>
-भार का weight, size और condition देखें।
-</p>
-<h3>
-2. सही Position लें
-</h3>
-<p>
-भार के पास stable position में खड़े हों।
-</p>
-<h3>
-3. Knees Bend करें
-</h3>
-<p>
-घुटनों को मोड़कर नीचे जाएँ।
-</p>
-<h3>
-4. Back की Position सही रखें
-</h3>
-<p>
-पीठ को यथासंभव उचित/सीधी position में रखें।
-</p>
-<h3>
-5. Load को Body के पास रखें
-</h3>
-<p>
-भार को शरीर से बहुत दूर रखकर न उठाएँ।
-</p>
-<h3>
-6. Legs की शक्ति का उपयोग करें
-</h3>
-<p>
-उठाते समय पैरों की शक्ति का उपयोग करें।
-</p>
-<h3>
-7. Twisting से बचें
-</h3>
-<p>
-भार उठाते समय शरीर को अचानक twist न करें।
-</p>
-<figure class="module-image">
-<img alt="Correct and Incorrect Manual Lifting" data-image-name="correct_incorrect_lifting.webp" src="/images/notes/fitter/module-1/correct_incorrect_lifting.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Correct और Incorrect Lifting
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-correct_incorrect_lifting.webp
-</code>
-</div>
-<figcaption>
-चित्र – Correct vs Incorrect Manual Lifting Technique
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     CARRYING LOAD
-     ========================================================= -->
-<section class="content-card">
-<h2>
-60. Carrying the Load
-</h2>
-<p>
-भार को लेकर चलते समय:
-</p>
-<ul>
-<li>रास्ता पहले देखें।</li>
-<li>भार vision को पूरी तरह block न करे।</li>
-<li>Balance बनाए रखें।</li>
-<li>धीरे और नियंत्रित तरीके से चलें।</li>
-<li>Slippery floor पर विशेष सावधानी रखें।</li>
-</ul>
-<figure class="module-image">
-<img alt="Safe Load Carrying" data-image-name="safe_load_carrying.webp" src="/images/notes/fitter/module-1/safe_load_carrying.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Safe Load Carrying
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-safe_load_carrying.webp
-</code>
-</div>
-<figcaption>
-चित्र – Safe Load Carrying
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     LOWERING LOAD
-     ========================================================= -->
-<section class="content-card">
-<h2>
-61. Lowering the Load
-</h2>
-<p>
-Load को नीचे रखते समय भी सही technique अपनाएँ।
-</p>
-<ul>
-<li>Stable position लें।</li>
-<li>Knees bend करें।</li>
-<li>Load को धीरे-धीरे नीचे रखें।</li>
-<li>हाथ और पैर load के नीचे आने से बचाएँ।</li>
-<li>Load को अचानक न छोड़ें।</li>
-</ul>
-<figure class="module-image">
-<img alt="Safe Load Lowering" data-image-name="safe_load_lowering.webp" src="/images/notes/fitter/module-1/safe_load_lowering.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Safe Load Lowering
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-safe_load_lowering.webp
-</code>
-</div>
-<figcaption>
-चित्र – Safe Load Lowering Technique
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     PART O – MOVING HEAVY EQUIPMENT
-     ========================================================= -->
-<section class="content-card">
-<h2>
-PART–O : MOVING HEAVY EQUIPMENT
-</h2>
-<h2>
-62. Moving Heavy Equipment
-</h2>
-<p>
-Heavy equipment को move करते समय विशेष सावधानी आवश्यक है।
-</p>
-<h3>
-Move करने से पहले
-</h3>
-<ul>
-<li>Equipment का weight जानें।</li>
-<li>Centre of gravity पर ध्यान दें।</li>
-<li>Suitable lifting equipment चुनें।</li>
-<li>Rope, sling, chain आदि की condition check करें।</li>
-<li>Load को properly secure करें।</li>
-<li>Movement path clear करें।</li>
-<li>आसपास के लोगों को सुरक्षित दूरी पर रखें।</li>
-</ul>
-</section>
-<!-- =========================================================
-     CRANE
-     ========================================================= -->
-<section class="content-card">
-<h2>
-63. Crane
-</h2>
-<p>
-<strong>Crane</strong> का उपयोग heavy load को उठाने और एक स्थान से दूसरे स्थान पर ले जाने के लिए किया जाता है।
-</p>
-<h3>
-Crane Safety
-</h3>
-<ul>
-<li>Crane की capacity के अनुसार ही load उठाएँ।</li>
-<li>Lifting accessories की condition check करें।</li>
-<li>Load को properly attach करें।</li>
-<li>Suspended load के नीचे किसी व्यक्ति को न खड़े होने दें।</li>
-<li>Trained person/operator से operation करवाएँ।</li>
-<li>Clear communication और signals का पालन करें।</li>
-</ul>
-<figure class="module-image">
-<img alt="Crane Safety" data-image-name="crane_safety.webp" src="/images/notes/fitter/module-1/crane_safety.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Crane Safety
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-crane_safety.webp
-</code>
-</div>
-<figcaption>
-चित्र – Crane और Safe Lifting Zone
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     WINCH
-     ========================================================= -->
-<section class="content-card">
-<h2>
-64. Winch
-</h2>
-<p>
-<strong>Winch</strong> एक mechanical device है जिसका उपयोग load को खींचने अथवा lifting operation में सहायता के लिए किया जाता है।
-</p>
-<h3>
-Winch Safety
-</h3>
-<ul>
-<li>Rope/cable की condition check करें।</li>
-<li>Load capacity से अधिक load न लें।</li>
-<li>Rope/cable को सही तरीके से wind करें।</li>
-<li>Load को properly secure करें।</li>
-<li>लोगों को safe distance पर रखें।</li>
-<li>अचानक load release होने से बचाएँ।</li>
-</ul>
-<figure class="module-image">
-<img alt="Winch Safety" data-image-name="winch_safety.webp" src="/images/notes/fitter/module-1/winch_safety.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Winch Safety
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-winch_safety.webp
-</code>
-</div>
-<figcaption>
-चित्र – Winch और Safe Operation
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     MACHINE MOVING PLATFORM
-     ========================================================= -->
-<section class="content-card">
-<h2>
-65. Machine Moving Platform
-</h2>
-<p>
-Heavy machine को move करने के लिए suitable <strong>Machine Moving Platform</strong> का उपयोग किया जा सकता है।
-</p>
-<p>
-Machine move करने से पहले:
-</p>
-<ul>
-<li>Machine का weight check करें।</li>
-<li>Platform की capacity check करें।</li>
-<li>Machine को secure करें।</li>
-<li>Floor और route की condition देखें।</li>
-<li>रास्ते में obstacles हटाएँ।</li>
-<li>Machine को controlled तरीके से move करें।</li>
-</ul>
-<figure class="module-image">
-<img alt="Machine Moving Platform" data-image-name="machine_moving_platform.webp" src="/images/notes/fitter/module-1/machine_moving_platform.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Machine Moving Platform
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-machine_moving_platform.webp
-</code>
-</div>
-<figcaption>
-चित्र – Machine Moving Platform
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     HEAVY EQUIPMENT MOVEMENT
-     ========================================================= -->
-<section class="content-card">
-<h2>
-66. Heavy Equipment Movement में Safety Considerations
-</h2>
-<ul>
-<li>Load की capacity से अधिक भार न उठाएँ।</li>
-<li>Lifting accessories की condition check करें।</li>
-<li>Load को secure करें।</li>
-<li>Movement path clear रखें।</li>
-<li>Load के नीचे न खड़े हों।</li>
-<li>Load के रास्ते में न खड़े हों।</li>
-<li>अचानक movement से बचें।</li>
-<li>Communication बनाए रखें।</li>
-<li>केवल trained personnel का उपयोग करें।</li>
-</ul>
-<figure class="module-image">
-<img alt="Heavy Equipment Movement Safety" data-image-name="heavy_equipment_movement.webp" src="/images/notes/fitter/module-1/heavy_equipment_movement.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Heavy Equipment Movement
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-heavy_equipment_movement.webp
-</code>
-</div>
-<figcaption>
-चित्र – Safe और Unsafe Heavy Equipment Movement
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SUSPENDED LOAD
-     ========================================================= -->
-<section class="content-card">
-<h2>
-67. Suspended Load Safety
-</h2>
-<p>
-जब कोई load crane या lifting equipment से suspended हो:
-</p>
-<ul>
-<li>Load के नीचे कभी न खड़े हों।</li>
-<li>Load को properly attach करें।</li>
-<li>Area को clear रखें।</li>
-<li>Proper signals का उपयोग करें।</li>
-<li>Load को धीरे और controlled तरीके से move करें।</li>
-</ul>
-<figure class="module-image">
-<img alt="Suspended Load Safety" data-image-name="suspended_load_safety.webp" src="/images/notes/fitter/module-1/suspended_load_safety.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Suspended Load Safety
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-suspended_load_safety.webp
-</code>
-</div>
-<figcaption>
-चित्र – Suspended Load Safety
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     SLING
-     ========================================================= -->
-<section class="content-card">
-<h2>
-68. Sling और Lifting Accessories
-</h2>
-<p>
-Lifting operation से पहले sling, rope, chain और अन्य accessories की condition check करनी चाहिए।
-</p>
-<h3>
-विशेष रूप से देखें
-</h3>
-<ul>
-<li>Wear</li>
-<li>Damage</li>
-<li>Breakage</li>
-<li>Deformation</li>
-<li>Proper attachment</li>
-</ul>
-<div class="warning-box">
-<strong>
-महत्वपूर्ण Safety Rule:
-</strong>
-<p>
-Damaged lifting accessory का उपयोग नहीं करना चाहिए।
-</p>
-</div>
-<figure class="module-image">
-<img alt="Sling and Lifting Accessories" data-image-name="sling_lifting_accessories.webp" src="/images/notes/fitter/module-1/sling_lifting_accessories.webp"/>
-<div class="image-placeholder">
-<div class="placeholder-icon">🖼️</div>
-<strong>
-चित्र: Sling और Lifting Accessories
-</strong>
-<p>
-Image बाद में इस नाम से जोड़ें:
-</p>
-<code>
-sling_lifting_accessories.webp
-</code>
-</div>
-<figcaption>
-चित्र – Sling और Lifting Accessories
-</figcaption>
-</figure>
-</section>
-<!-- =========================================================
-     QUICK REVISION
-     ========================================================= -->
-<section class="quick-revision">
-<h2>
-⭐ MODULE–1 QUICK REVISION
-</h2>
-<h3>
-Safety
-</h3>
-<p>
-<strong>Safety = Accident, injury और damage से बचने के लिए precautions.</strong>
-</p>
-<h3>
-PPE
-</h3>
-<p>
-<strong>PPE = Personal Protective Equipment</strong>
-</p>
-<p>
-Helmet → Safety Shoes → Face Shield → Gloves → Goggles → Ear Protection → Protective Clothing → Respiratory Protection
-</p>
-<h3>
-First Aid
-</h3>
-<p>
-<strong>First Aid = Medical help मिलने से पहले दी जाने वाली प्रारंभिक सहायता।</strong>
-</p>
-<h3>
-ABC
-</h3>
-<ul>
-<li><strong>A – Airway</strong></li>
-<li><strong>B – Breathing</strong></li>
-<li><strong>C – Circulation</strong></li>
-</ul>
-<h3>
-Golden Hour
-</h3>
-<p>
-Accident के बाद शुरुआती समय में injured person को <strong>जल्द से जल्द appropriate medical care</strong> मिलना महत्वपूर्ण है।
-</p>
-<h3>
-Waste Management
-</h3>
-<p>
-<strong>Reduce → Reuse → Recycling → Proper Disposal</strong>
-</p>
-<h3>
-Safety Signs
-</h3>
-<div class="content-table-wrapper">
-<table class="content-table">
-<thead>
-<tr>
-<th>Sign</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Prohibition</strong></td>
-<td>किसी कार्य को करने से रोकता है।</td>
-</tr>
-<tr>
-<td><strong>Mandatory</strong></td>
-<td>आवश्यक safety action बताता है।</td>
-</tr>
-<tr>
-<td><strong>Warning</strong></td>
-<td>संभावित खतरे की चेतावनी देता है।</td>
-</tr>
-<tr>
-<td><strong>Information</strong></td>
-<td>Safety information देता है।</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3>
-5S
-</h3>
-<p>
-<strong>
-Seiri → Sort<br/>
-Seiton → Set in Order<br/>
-Seiso → Shine<br/>
-Seiketsu → Standardization<br/>
-Shitsuke → Sustain
-</strong>
-</p>
-<h3>
-Manual Lifting
-</h3>
-<div class="flow-box">
+ITI Notes
+</a>
+&nbsp;›&nbsp;
 
-Assess → Position → Bend Knees → Keep Load Close → Lift with Legs → Avoid Twisting
+<span class="current">
+Fitter Theory – Module 1
+</span>
 
 </div>
-<h3>
-Heavy Equipment
-</h3>
-<div class="flow-box">
-
-Inspect → Secure → Clear the Area → Communicate → Lift/Move Carefully
 
 </div>
-</section>
-<!-- =========================================================
-     FINAL MODULE SUMMARY
-     ========================================================= -->
-<section class="content-card">
-<h2>
-📌 Module–1 Summary
-</h2>
+
+
+<!-- ================= TITLE ================= -->
+
+<section class="page-title">
+
+<div class="container">
+
+<h1>
+🔧 Fitter Theory – Module 1
+</h1>
+
 <p>
-इस Module में ITI training system से लेकर industrial safety, personal safety, PPE, First Aid, Golden Hour, electrical safety, waste management, occupational safety and health, safety signs, emergency response, housekeeping, 5S, hot work, confined space, material handling, manual lifting और heavy equipment movement की मूल safety concepts को व्यवस्थित रूप से समझाया गया है।
+Safety & Industrial Training | Hindi + English Theory
 </p>
-<p>
-Workshop में किसी भी कार्य के दौरान safety rules का पालन करना केवल accident रोकने के लिए ही नहीं, बल्कि worker, machine, material और workplace की overall protection के लिए आवश्यक है।
-</p>
+
+</div>
+
 </section>
-<!-- =========================================================
-     MODULE NAVIGATION – BOTTOM
-     ========================================================= -->
-<div class="next-module">
+
+
+<!-- ================= NAV ================= -->
+
+<div class="container">
+
+<div class="module-navigation">
+
 <a href="/iti-study-centre-notes.html">
 ← ITI Notes
 </a>
+
 <a href="/notes/fitter/">
 📚 All Fitter Modules
 </a>
+
 <a href="module-2.html">
 Next Module →
 </a>
+
 </div>
+
+
+<!-- ================= TABLE OF CONTENTS ================= -->
+
+<div class="toc-card" id="topics">
+
+<h2>📚 इस Module में क्या पढ़ेंगे?</h2>
+
+<div class="toc-grid">
+
+<a href="#iti">
+1. ITI का परिचय
+</a>
+
+<a href="#job">
+2. Job Area & Further Learning
+</a>
+
+<a href="#softskills">
+3. Soft Skills
+</a>
+
+<a href="#safety">
+4. Safety & General Precautions
+</a>
+
+<a href="#ppe">
+5. Personal Protective Equipment
+</a>
+
+<a href="#firstaid">
+6. First Aid
+</a>
+
+<a href="#electrical">
+7. Electrical Safety
+</a>
+
+<a href="#waste">
+8. Waste Material Disposal
+</a>
+
+<a href="#osh">
+9. Occupational Safety & Health
+</a>
+
+<a href="#signs">
+10. Safety Signs
+</a>
+
+<a href="#emergency">
+11. Emergency Response
+</a>
+
+<a href="#housekeeping">
+12. Housekeeping
+</a>
+
+<a href="#five-s">
+13. 5S Concept
+</a>
+
+<a href="#hotwork">
+14. Hot Work
+</a>
+
+<a href="#confined">
+15. Confined Space
+</a>
+
+<a href="#material">
+16. Material Handling
+</a>
+
+<a href="#lifting">
+17. Lifting & Handling Loads
+</a>
+
+<a href="#heavy">
+18. Moving Heavy Equipment
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container module-content">
+
+
+<!-- ======================================================
+     1. ITI INTRODUCTION
+     ====================================================== -->
+
+<section class="content-card" id="iti">
+
+<span class="section-label">
+PART 1 · ITI INTRODUCTION
+</span>
+
+<h2>
+1. भारत में Industrial Training Institute – ITI का परिचय
+</h2>
+
+<h3>
+Familiarisation with Industrial Training Institute in India
+</h3>
+
+<p>
+<strong>Industrial Training Institute (ITI)</strong> और Industrial Training Centre (ITC), Craftsmen Training Scheme (CTS) के अंतर्गत विभिन्न trades में vocational training प्रदान करते हैं।
+</p>
+
+<p>
+ITI का उद्देश्य युवाओं को उद्योगों के लिए आवश्यक practical और technical skills प्रदान करना तथा उन्हें employment और self-employment के लिए तैयार करना है।
+</p>
+
+<div class="info-box">
+
+<div class="box-title">
+ITI का मुख्य उद्देश्य
+</div>
+
+<p>
+कुशल श्रमिकों का निरंतर प्रवाह बनाए रखना, युवाओं को industrial employment के लिए तैयार करना और self-employment के अवसरों के लिए आवश्यक training देना।
+</p>
+
+</div>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/iti_introduction.webp"
+alt="Industrial Training Institute ITI"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Industrial Training Institute</strong>
+
+<p>
+Image name:
+</p>
+
+<code>iti_introduction.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Industrial Training Institute (ITI)
+</figcaption>
+
+</figure>
+
+
+<h3>
+ITI और ITC
+</h3>
+
+<p>
+ITI सामान्यतः State/Central Government द्वारा संचालित संस्थान हो सकते हैं, जबकि ITC self-financed संस्थान होते हैं जो समान प्रकार का training curriculum प्रदान करते हैं।
+</p>
+
+<h3>
+ITI की संरचना
+</h3>
+
+<p>
+ITI की administrative और training structure राज्य एवं संस्थान के अनुसार अलग हो सकती है। सामान्यतः इसमें Principal, Vice Principal, Training Officers, Trade Instructors, administrative staff तथा Store-related personnel आदि होते हैं।
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/iti_organizational_structure.webp"
+alt="ITI Organizational Structure"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: ITI Organizational Structure</strong>
+
+<code>iti_organizational_structure.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – ITI Organizational Structure
+</figcaption>
+
+</figure>
+
+
+<h3>
+ITI में उपलब्ध सुविधाएँ
+</h3>
+
+<ul>
+
+<li>Workshop facilities</li>
+
+<li>Classroom / Smart Classroom</li>
+
+<li>Library</li>
+
+<li>Computer / Soft Skill Lab</li>
+
+<li>Store</li>
+
+<li>Hostel facility, जहाँ उपलब्ध हो</li>
+
+<li>Sports facilities</li>
+
+<li>Wi-Fi enabled campus, जहाँ उपलब्ध हो</li>
+
+<li>Industrial visits / guest lectures</li>
+
+<li>Apprenticeship / internship opportunities</li>
+
+<li>Campus interviews</li>
+
+</ul>
+
+
+<div class="exam-box">
+
+<div class="box-title">
+📌 Exam Focus
+</div>
+
+<p>
+ITI का मुख्य उद्देश्य केवल theory पढ़ाना नहीं बल्कि trainee को industry-oriented practical skill और employment-oriented competence प्रदान करना है।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     2. CTS + JOB + SKILL
+     ====================================================== -->
+
+<section class="content-card" id="job">
+
+<span class="section-label">
+PART 2 · TRAINING & CAREER
+</span>
+
+<h2>
+2. CTS Admission, Examination, Job Area और Further Learning
+</h2>
+
+<h3>
+CTS – Craftsmen Training Scheme
+</h3>
+
+<p>
+ITI में विभिन्न trades का training <strong>Craftsmen Training Scheme (CTS)</strong> के अंतर्गत किया जाता है। Admission प्रक्रिया संबंधित राज्य के नियमों, eligibility और counselling/selection procedure के अनुसार होती है।
+</p>
+
+<h3>
+CTS Examination
+</h3>
+
+<p>
+Training के बाद निर्धारित assessment और final trade testing के माध्यम से trainee की competence का मूल्यांकन किया जाता है। सफल trainee को निर्धारित authority द्वारा National Trade Certificate (NTC) प्रदान किया जाता है।
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/cts_admission_exam.webp"
+alt="CTS Admission and Examination"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: CTS Admission & Examination</strong>
+
+<code>cts_admission_exam.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – CTS Admission और Examination System
+</figcaption>
+
+</figure>
+
+
+<h3>
+Training पूरा करने के बाद Job Area
+</h3>
+
+<p>
+Engineering trade में training पूरा करने के बाद trainee भारत और विदेश में public sector, private sector तथा government industries में technician या skilled worker के रूप में employment प्राप्त कर सकता है।
+</p>
+
+<h3>
+Self Employment
+</h3>
+
+<p>
+ITI-trained व्यक्ति अपना workshop, small manufacturing unit, service unit अथवा अन्य उपयुक्त business शुरू करके self-employment का विकल्प भी चुन सकता है।
+</p>
+
+<h3>
+Further Learning
+</h3>
+
+<ul>
+
+<li>Apprenticeship Training</li>
+
+<li>Craft Instructor Training / Certificate Course</li>
+
+<li>Relevant Engineering Diploma</li>
+
+<li>अन्य advanced skill training</li>
+
+</ul>
+
+<h3>
+Skill Competition
+</h3>
+
+<p>
+Skill competitions trainees के practical skills और professional competence को प्रदर्शित करने तथा healthy competition को बढ़ावा देने का माध्यम हैं। भारत में विभिन्न trades के trainees के लिए national-level skill competitions आयोजित की जाती हैं।
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/skill_competition.webp"
+alt="Skill Competition"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Skill Competition</strong>
+
+<code>skill_competition.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Skill Competition
+</figcaption>
+
+</figure>
+
+</section>
+
+
+<!-- ======================================================
+     3. SOFT SKILLS
+     ====================================================== -->
+
+<section class="content-card" id="softskills">
+
+<span class="section-label">
+PART 3 · SOFT SKILLS
+</span>
+
+<h2>
+3. Soft Skills और Job Orientation
+</h2>
+
+<p>
+<strong>Soft Skills</strong> वे personal और interpersonal skills हैं जो व्यक्ति को दूसरे लोगों के साथ सकारात्मक और productive तरीके से communicate और work करने में सहायता करती हैं।
+</p>
+
+<p>
+Technical/Hard Skills के साथ Soft Skills professional life में बहुत महत्वपूर्ण हैं।
+</p>
+
+<h3>
+Common Soft Skills
+</h3>
+
+<ul>
+
+<li>Good Communication</li>
+
+<li>Teamwork</li>
+
+<li>Positive Attitude</li>
+
+<li>Interpersonal Skills</li>
+
+<li>Time Management</li>
+
+<li>Problem Solving</li>
+
+<li>Initiative और Motivation</li>
+
+<li>Self Confidence</li>
+
+<li>Integrity / Honesty</li>
+
+<li>Feedback स्वीकार करने और सीखने की क्षमता</li>
+
+<li>Flexibility</li>
+
+<li>Adaptability</li>
+
+<li>Pressure में काम करने की क्षमता</li>
+
+<li>Discipline और उचित work behaviour</li>
+
+</ul>
+
+<h3>
+Job Orientation
+</h3>
+
+<p>
+<strong>Job Orientation</strong> का अर्थ नए employee को उसके job role, workplace, responsibilities, procedures और working environment से परिचित कराना है।
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/soft_skills_job_orientation.webp"
+alt="Soft Skills and Job Orientation"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Soft Skills & Job Orientation</strong>
+
+<code>soft_skills_job_orientation.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Soft Skills और Job Orientation
+</figcaption>
+
+</figure>
+
+
+<div class="success-box">
+
+<div class="box-title">
+💡 याद रखें
+</div>
+
+<p>
+एक अच्छे technician के लिए Technical Skill के साथ Communication, Teamwork, Discipline, Time Management और Positive Attitude भी आवश्यक हैं।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     4. SAFETY
+     ====================================================== -->
+
+<section class="content-card" id="safety">
+
+<span class="section-label">
+PART 4 · INDUSTRIAL SAFETY
+</span>
+
+<h2>
+4. Safety और General Precautions in Industry / Shop Floor
+</h2>
+
+<p>
+Safety का उद्देश्य व्यक्ति, machine, equipment, material और workplace को accident तथा damage से बचाना है।
+</p>
+
+<p>
+अधिकांश accidents को उचित safety precautions, training और safe working habits के माध्यम से रोका जा सकता है।
+</p>
+
+<h3>
+Workshop Safety की तीन मुख्य श्रेणियाँ
+</h3>
+
+<div class="table-wrap">
+
+<table class="content-table">
+
+<thead>
+
+<tr>
+<th>Category</th>
+<th>Meaning</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td><strong>General Safety</strong></td>
+<td>पूरे workshop और working area की safety</td>
+</tr>
+
+<tr>
+<td><strong>Personal Safety</strong></td>
+<td>Worker की व्यक्तिगत सुरक्षा</td>
+</tr>
+
+<tr>
+<td><strong>Machine Safety</strong></td>
+<td>Machine operation और machine-related hazards से सुरक्षा</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<h3>
+General Safety Rules
+</h3>
+
+<ul>
+
+<li>Floor और gangways को साफ और obstruction-free रखें।</li>
+
+<li>Workshop में सावधानी से चलें; दौड़ें नहीं।</li>
+
+<li>Running machine को unattended न छोड़ें।</li>
+
+<li>अनधिकृत व्यक्ति machine या equipment को operate न करे।</li>
+
+<li>काम के लिए suitable tool का उपयोग करें।</li>
+
+<li>Tools को उपयोग के बाद उनके उचित स्थान पर रखें।</li>
+
+<li>Oil leakage/spillage को तुरंत साफ करें।</li>
+
+<li>Damaged tools को उपयोग न करें।</li>
+
+<li>Compressed air को अपने या दूसरे व्यक्ति के शरीर पर direct न करें।</li>
+
+<li>Workshop में पर्याप्त lighting रखें।</li>
+
+<li>Machine को cleaning करने से पहले उसे रोकें।</li>
+
+<li>Metal chips को उचित तरीके से हटाएँ।</li>
+
+<li>Machine start करने से पहले उसकी operating procedure समझें।</li>
+
+</ul>
+
+
+<h3>
+Personal Safety
+</h3>
+
+<ul>
+
+<li>Proper overall / suitable work clothing पहनें।</li>
+
+<li>Loose tie, scarf या dangling clothing से बचें।</li>
+
+<li>Safety shoes पहनें।</li>
+
+<li>बालों को सुरक्षित रखें।</li>
+
+<li>Ring, watch और chain जैसी loose accessories न पहनें जहाँ वे hazard बन सकती हों।</li>
+
+<li>Running machine पर झुकने से बचें।</li>
+
+<li>Moving machine parts को हाथ से न छुएँ।</li>
+
+<li>Running machine की guard न हटाएँ।</li>
+
+<li>Cracked या damaged tools का उपयोग न करें।</li>
+
+<li>Workpiece को सुरक्षित रूप से mount किए बिना machine operate न करें।</li>
+
+</ul>
+
+
+<h3>
+Machine Safety
+</h3>
+
+<ul>
+
+<li>कुछ गलत होने पर machine को तुरंत stop करें।</li>
+
+<li>Machine clean और maintained रखें।</li>
+
+<li>Damaged holding devices, nuts, bolts आदि को समय पर replace करें।</li>
+
+<li>जिस machine को operate करना नहीं आता, उसे operate न करें।</li>
+
+<li>Adjustment से पहले power supply बंद करें।</li>
+
+<li>Speed change करने से पहले machine stop करें।</li>
+
+<li>Automatic feed को बंद करने के बाद machine switch off करें।</li>
+
+<li>Machine start करने से पहले oil level आदि आवश्यक checks करें।</li>
+
+<li>Safety guards के बिना machine operate न करें।</li>
+
+<li>Machine completely stopped होने के बाद measurement लें।</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/general_machine_personal_safety.webp"
+alt="General Personal and Machine Safety"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: General, Personal & Machine Safety</strong>
+
+<code>general_machine_personal_safety.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – General, Personal और Machine Safety
+</figcaption>
+
+</figure>
+
+
+<div class="warning-box">
+
+<div class="box-title">
+⚠ Safety Alert
+</div>
+
+<p>
+<strong>Safety एक concept है, Safety एक habit है।</strong> सुरक्षित कार्य करने की आदत लगातार विकसित करनी चाहिए।
+</p>
+
+</div>
+
+   </section>
+   <!-- ======================================================
+     5. PPE
+     ====================================================== -->
+
+<section class="content-card" id="ppe">
+
+<span class="section-label">
+PART 5 · PPE
+</span>
+
+<h2>
+5. Personal Protective Equipment – PPE
+</h2>
+
+<p>
+<strong>Personal Protective Equipment (PPE)</strong> ऐसे protective equipment हैं जिन्हें worker workplace hazards के कारण होने वाली injury या occupational illness के risk को कम करने के लिए पहनता है।
+</p>
+
+<p>
+Workplace hazards chemical, physical, electrical, mechanical या अन्य प्रकार के हो सकते हैं।
+</p>
+
+
+<h3>
+PPE की दो मुख्य Categories
+</h3>
+
+<div class="table-wrap">
+
+<table class="content-table">
+
+<thead>
+
+<tr>
+<th>Category</th>
+<th>Purpose</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td><strong>Non-Respiratory PPE</strong></td>
+<td>Head, eyes, face, hands, feet और body के बाहरी भागों की सुरक्षा</td>
+</tr>
+
+<tr>
+<td><strong>Respiratory PPE</strong></td>
+<td>Contaminated air, dust, fumes, gases आदि के inhalation से सुरक्षा</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<h3>
+Common PPE
+</h3>
+
+<ul>
+
+<li>Safety Helmet / Hard Hat</li>
+
+<li>Safety Shoes</li>
+
+<li>Respiratory Protection</li>
+
+<li>Safety Gloves</li>
+
+<li>Safety Goggles</li>
+
+<li>Face Shield</li>
+
+<li>Ear Plug / Ear Muff</li>
+
+<li>Safety Belt / Harness जहाँ आवश्यक हो</li>
+
+<li>Protective Apron / Coverall</li>
+
+</ul>
+
+
+<h3>
+PPE और Hazards का संबंध
+</h3>
+
+<div class="table-wrap">
+
+<table class="content-table">
+
+<thead>
+
+<tr>
+<th>Body Part</th>
+<th>Hazard</th>
+<th>PPE</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Head</td>
+<td>Falling objects, impact</td>
+<td>Safety Helmet</td>
+</tr>
+
+<tr>
+<td>Feet</td>
+<td>Hot splash, falling objects, wet area</td>
+<td>Safety Shoes / Gum Boots / Leg Guards</td>
+</tr>
+
+<tr>
+<td>Respiratory System</td>
+<td>Dust, fumes, gases, vapours</td>
+<td>Suitable Respirator / Nose Mask</td>
+</tr>
+
+<tr>
+<td>Hands</td>
+<td>Heat, sparks, electric hazards आदि</td>
+<td>Suitable Gloves</td>
+</tr>
+
+<tr>
+<td>Eyes</td>
+<td>Dust, flying particles, radiation</td>
+<td>Safety Goggles / Face Shield</td>
+</tr>
+
+<tr>
+<td>Face</td>
+<td>Welding sparks, spatter, radiation</td>
+<td>Face Shield / Welding Protection</td>
+</tr>
+
+<tr>
+<td>Ears</td>
+<td>High noise</td>
+<td>Ear Plug / Ear Muff</td>
+</tr>
+
+<tr>
+<td>Body</td>
+<td>Hot particles, sparks</td>
+<td>Apron / Protective Clothing</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/ppe_complete_set.webp"
+alt="Complete Personal Protective Equipment"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Complete PPE Set</strong>
+
+<code>ppe_complete_set.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Personal Protective Equipment
+</figcaption>
+
+</figure>
+
+
+<h3>
+PPE की Quality
+</h3>
+
+<p>
+PPE को उस hazard के विरुद्ध पर्याप्त protection देना चाहिए जिसके लिए उसे design किया गया है। उसकी construction और quality suitable होनी चाहिए।
+</p>
+
+<h3>
+PPE Selection के Factors
+</h3>
+
+<ul>
+
+<li>Hazard का nature और severity</li>
+
+<li>Contaminant का type और concentration</li>
+
+<li>काम का प्रकार और duration</li>
+
+<li>Worker का comfort</li>
+
+<li>PPE की operating characteristics और limitations</li>
+
+<li>Maintenance और cleaning में सुविधा</li>
+
+<li>Applicable Indian / International standards के अनुरूप होना</li>
+
+<li>Testing / certification की उपलब्धता</li>
+
+</ul>
+
+
+<h3>
+Proper Use of PPE
+</h3>
+
+<ul>
+
+<li>सही hazard के लिए सही PPE चुनें।</li>
+
+<li>PPE को सही तरीके से पहनें।</li>
+
+<li>PPE comfortable और suitable fit का होना चाहिए।</li>
+
+<li>Damaged PPE का उपयोग न करें।</li>
+
+<li>PPE की आवश्यकता और उपयोग के बारे में workers को training दें।</li>
+
+<li>जहाँ आवश्यक हो वहाँ PPE का उपयोग compulsory रखें।</li>
+
+<li>Education और supervision के माध्यम से सही PPE usage सुनिश्चित करें।</li>
+
+</ul>
+
+
+<div class="exam-box">
+
+<div class="box-title">
+📌 Exam Focus
+</div>
+
+<p>
+<strong>PPE की दो मुख्य categories:</strong> Non-Respiratory और Respiratory.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     6. FIRST AID
+     ====================================================== -->
+
+<section class="content-card" id="firstaid">
+
+<span class="section-label">
+PART 6 · FIRST AID
+</span>
+
+<h2>
+6. First Aid – प्राथमिक चिकित्सा
+</h2>
+
+<p>
+<strong>Basic First Aid</strong> किसी injured या medical emergency में व्यक्ति की स्थिति का प्रारंभिक assessment और आवश्यक सहायता प्रदान करने की प्रक्रिया है, जब तक professional medical help उपलब्ध न हो।
+</p>
+
+<h3>
+First Aid का उद्देश्य
+</h3>
+
+<ul>
+
+<li>स्थिति का प्रारंभिक assessment करना।</li>
+
+<li>Injury या medical emergency को और गंभीर होने से रोकना।</li>
+
+<li>Life-supporting measures की आवश्यकता होने पर उचित action लेना।</li>
+
+<li>व्यक्ति को सुरक्षित रूप से medical assistance तक पहुँचाने में सहायता करना।</li>
+
+</ul>
+
+
+<h3>
+Golden Hours
+</h3>
+
+<p>
+गंभीर injury या medical emergency के बाद शुरुआती समय अत्यंत महत्वपूर्ण होता है। Source में इसे <strong>Golden Hours</strong> के रूप में समझाया गया है। Head injury, multiple trauma, heart attack और stroke जैसी स्थितियों में medical care तक समय पर पहुँच महत्वपूर्ण है।
+</p>
+
+<div class="warning-box">
+
+<div class="box-title">
+⚠ Golden Hours
+</div>
+
+<p>
+शुरुआती समय में उचित First Aid और शीघ्र medical care मिलने से treatment की effectiveness और survival की संभावना बेहतर हो सकती है।
+</p>
+
+</div>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/golden_hours.webp"
+alt="Golden Hours First Aid"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Golden Hours</strong>
+
+<code>golden_hours.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Golden Hours in First Aid
+</figcaption>
+
+</figure>
+
+
+<h3>
+First Aider के लिए Important Guidelines
+</h3>
+
+<ol>
+
+<li>सबसे पहले situation का assessment करें।</li>
+
+<li>अपने लिए fire, toxic fumes, gas, unstable structure, electrical wires आदि hazards को पहचानें।</li>
+
+<li>अपनी safety सुनिश्चित किए बिना emergency scene में जल्दबाजी न करें।</li>
+
+<li>Emergency assistance के लिए सहायता बुलाएँ।</li>
+
+<li>Victim की responsiveness check करें।</li>
+
+</ol>
+
+
+<h3>
+ABC of First Aid
+</h3>
+
+<div class="table-wrap">
+
+<table class="content-table">
+
+<thead>
+
+<tr>
+<th>Letter</th>
+<th>Full Form</th>
+<th>क्या देखना है?</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td><strong>A</strong></td>
+<td>Airway</td>
+<td>क्या airway खुला और unobstructed है?</td>
+</tr>
+
+<tr>
+<td><strong>B</strong></td>
+<td>Breathing</td>
+<td>क्या व्यक्ति breathing कर रहा है?</td>
+</tr>
+
+<tr>
+<td><strong>C</strong></td>
+<td>Circulation</td>
+<td>Circulation / pulse की स्थिति</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/first_aid_abc.webp"
+alt="ABC of First Aid"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: ABC of First Aid</strong>
+
+<code>first_aid_abc.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – ABC of First Aid
+</figcaption>
+
+</figure>
+
+
+<h3>
+Victim को अनावश्यक रूप से न हिलाएँ
+</h3>
+
+<p>
+यदि victim तुरंत खतरे में नहीं है, तो उसे अनावश्यक रूप से move नहीं करना चाहिए। विशेष रूप से suspected spinal injury में गलत movement से अतिरिक्त injury हो सकती है।
+</p>
+
+<h3>
+Responsiveness और Breathing
+</h3>
+
+<ul>
+
+<li>Victim की responsiveness check करें।</li>
+
+<li>Breathing के संकेत देखें, सुनें और महसूस करें।</li>
+
+<li>यदि व्यक्ति unconscious है लेकिन breathing कर रहा है, तो situation के अनुसार recovery position की आवश्यकता हो सकती है।</li>
+
+<li>यदि breathing या circulation रुक जाए तो trained व्यक्ति उचित emergency resuscitation/CPR procedure अपनाए।</li>
+
+</ul>
+
+
+<h3>
+Bleeding
+</h3>
+
+<p>
+Serious bleeding को जल्दी control करना First Aid की महत्वपूर्ण प्राथमिकताओं में से एक है। सामान्यतः wound पर appropriate direct pressure का उपयोग किया जाता है और medical help प्राप्त की जाती है।
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/bleeding_first_aid.webp"
+alt="First Aid for Bleeding"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Bleeding First Aid</strong>
+
+<code>bleeding_first_aid.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Bleeding के समय First Aid
+</figcaption>
+
+</figure>
+
+
+<h3>
+Shock
+</h3>
+
+<p>
+Shock में body के महत्वपूर्ण organs तक adequate blood circulation प्रभावित हो सकती है। व्यक्ति में pale skin, cold skin, restlessness और altered mental condition जैसे signs हो सकते हैं।
+</p>
+
+<h3>
+Choking
+</h3>
+
+<p>
+Choking में airway obstruction के कारण breathing प्रभावित हो सकती है और यह emergency हो सकती है। ऐसी स्थिति में trained person को appropriate emergency procedure अपनाना चाहिए।
+</p>
+
+<h3>
+Burn
+</h3>
+
+<p>
+Burn के मामले में source के अनुसार first और second-degree burns को cool water से cool किया जाता है। Cream, butter या अन्य घरेलू पदार्थ लगाने और blisters फोड़ने से बचना चाहिए। गंभीर burn में medical attention आवश्यक है।
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/burn_first_aid.webp"
+alt="First Aid for Burns"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Burn First Aid</strong>
+
+<code>burn_first_aid.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Burn First Aid
+</figcaption>
+
+</figure>
+
+
+<h3>
+Concussion
+</h3>
+
+<p>
+Head injury के बाद concussion की संभावना हो सकती है। इसके संकेतों में चोट के बाद confusion, memory loss, dizziness, nausea, drowsiness या consciousness में बदलाव शामिल हो सकते हैं।
+</p>
+
+<h3>
+Spinal Injury
+</h3>
+
+<p>
+यदि spinal injury का संदेह हो तो victim के head, neck और back को अनावश्यक रूप से move नहीं करना चाहिए, जब तक कि immediate danger के कारण movement आवश्यक न हो।
+</p>
+
+
+<h3>
+Unconsciousness / Coma
+</h3>
+
+<p>
+Unconsciousness एक गंभीर अवस्था है जिसमें व्यक्ति बाहरी आवाज या stimulation का response नहीं देता। इसके कारण अनेक हो सकते हैं।
+</p>
+
+<h3>
+Possible Causes
+</h3>
+
+<ul>
+
+<li>Shock</li>
+
+<li>Head injury</li>
+
+<li>Airway obstruction</li>
+
+<li>Extreme body temperature</li>
+
+<li>Cardiac arrest</li>
+
+<li>Stroke</li>
+
+<li>Blood loss</li>
+
+<li>Dehydration</li>
+
+<li>Low या high blood sugar</li>
+
+<li>Very low या high blood pressure</li>
+
+<li>Alcohol / drug overdose</li>
+
+<li>Poisoning</li>
+
+<li>Epileptic seizure</li>
+
+<li>Psychological causes</li>
+
+</ul>
+
+
+<h3>
+Unconscious Person के साथ क्या न करें
+</h3>
+
+<ul>
+
+<li>Unconscious व्यक्ति को खाना या पानी न दें।</li>
+
+<li>उसे अकेला न छोड़ें।</li>
+
+<li>चेहरे पर थप्पड़ या पानी के छींटे देकर जगाने का प्रयास न करें।</li>
+
+<li>अनावश्यक movement न करें।</li>
+
+</ul>
+
+
+<div class="success-box">
+
+<div class="box-title">
+💡 First Aid का मूल सिद्धांत
+</div>
+
+<p>
+<strong>Evaluate → ABC → Call for Help → Control Immediate Problems → Stay with Victim</strong>
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     7. ELECTRICAL SAFETY
+     ====================================================== -->
+
+<section class="content-card" id="electrical">
+
+<span class="section-label">
+PART 7 · ELECTRICAL SAFETY
+</span>
+
+<h2>
+7. Operation of Electrical Mains & Electrical Safety
+</h2>
+
+<h3>
+Emergency में Electrical Supply बंद करना
+</h3>
+
+<p>
+Workshop में electric shock अथवा machine accident जैसी emergency में victim को आगे injury से बचाने के लिए electrical supply को safely isolate करना महत्वपूर्ण हो सकता है।
+</p>
+
+<p>
+हर worker को अपने working area के main switch और sub-main switch की location तथा उनके controlled area की जानकारी होनी चाहिए।
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/electrical_main_switch.webp"
+alt="Electrical Main and Sub Main Switch"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Electrical Main / Sub-main Switch</strong>
+
+<code>electrical_main_switch.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Electrical Main और Sub-main Switch
+</figcaption>
+
+</figure>
+
+
+<h3>
+Electrical Safety Rules
+</h3>
+
+<ul>
+
+<li>Electrical work केवल competent/qualified person द्वारा किया जाना चाहिए।</li>
+
+<li>Live circuit पर काम करने से बचें।</li>
+
+<li>Electrical equipment को wet hands से न छुएँ।</li>
+
+<li>Exposed conductors को touch न करें।</li>
+
+<li>Proper insulated tools का उपयोग करें।</li>
+
+<li>Electrical circuit के लिए correct rating का fuse/protection device उपयोग करें।</li>
+
+<li>Fuse replace करने से पहले circuit को isolate करें।</li>
+
+<li>Damaged socket, plug, switch और electrical accessories का उपयोग न करें।</li>
+
+<li>Temporary wiring से बचें।</li>
+
+<li>Electrical panel पर काम करते समय appropriate insulating protection का उपयोग करें।</li>
+
+<li>Electrical equipment में proper earthing होनी चाहिए।</li>
+
+<li>Electrical equipment पर पानी का उपयोग न करें।</li>
+
+<li>Interlocks और safety devices के साथ छेड़छाड़ न करें।</li>
+
+<li>High-voltage equipment पर काम करने से पहले appropriate isolation और discharge procedure अपनाएँ।</li>
+
+</ul>
+
+
+<div class="warning-box">
+
+<div class="box-title">
+⚠ Important Electrical Safety
+</div>
+
+<p>
+Maintenance या repair से पहले supply को सुरक्षित तरीके से isolate करना और यह सुनिश्चित करना आवश्यक है कि equipment सुरक्षित condition में है।
+</p>
+
+</div>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/electrical_safety_rules.webp"
+alt="Electrical Safety Rules"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Electrical Safety Rules</strong>
+
+<code>electrical_safety_rules.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Electrical Safety Precautions
+</figcaption>
+
+</figure>
+
+</section>
+
+
+<!-- ======================================================
+     8. WASTE
+     ====================================================== -->
+
+<section class="content-card" id="waste">
+
+<span class="section-label">
+PART 8 · WASTE MANAGEMENT
+</span>
+
+<h2>
+8. Disposal of Waste Material
+</h2>
+
+<p>
+Industrial waste वह waste है जो factories, mills, mines और अन्य industrial activities से उत्पन्न होता है।
+</p>
+
+<h3>
+Workshop में पाए जाने वाले Waste
+</h3>
+
+<ul>
+
+<li>Cotton waste</li>
+
+<li>Metal chips</li>
+
+<li>Metal burrs</li>
+
+<li>Oily waste</li>
+
+<li>Lubricating oil</li>
+
+<li>Coolant-related waste</li>
+
+<li>Plastic</li>
+
+<li>Glass</li>
+
+<li>Other industrial waste</li>
+
+</ul>
+
+
+<h3>
+Waste Disposal Methods
+</h3>
+
+<div class="table-wrap">
+
+<table class="content-table">
+
+<thead>
+
+<tr>
+<th>Method</th>
+<th>Meaning</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td><strong>Recycling</strong></td>
+<td>Waste material को process करके दोबारा उपयोग योग्य material बनाना।</td>
+</tr>
+
+<tr>
+<td><strong>Composting</strong></td>
+<td>Organic material को natural process से compost में बदलना।</td>
+</tr>
+
+<tr>
+<td><strong>Waste Compaction</strong></td>
+<td>Waste को compact करके volume कम करना और handling/recycling आसान बनाना।</td>
+</tr>
+
+<tr>
+<td><strong>Landfill</strong></td>
+<td>निर्धारित स्थान पर waste का controlled disposal।</td>
+</tr>
+
+<tr>
+<td><strong>Incineration</strong></td>
+<td>Suitable waste का controlled combustion द्वारा disposal।</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/waste_disposal_methods.webp"
+alt="Waste Disposal Methods"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Waste Disposal Methods</strong>
+
+<code>waste_disposal_methods.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Waste Disposal Methods
+</figcaption>
+
+</figure>
+
+
+<h3>
+Waste Disposal के लाभ
+</h3>
+
+<ul>
+
+<li>Workshop साफ रहता है।</li>
+
+<li>Health hazards कम होते हैं।</li>
+
+<li>Economic efficiency में सुधार होता है।</li>
+
+<li>Environmental impact कम किया जा सकता है।</li>
+
+<li>Scrap और waste की proper management होती है।</li>
+
+</ul>
+
+
+<h3>
+Waste Segregation – Colour Code
+</h3>
+
+<div class="table-wrap">
+
+<table class="content-table">
+
+<thead>
+
+<tr>
+<th>Waste Material</th>
+<th>Colour Code</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Paper</td>
+<td>Blue</td>
+</tr>
+
+<tr>
+<td>Plastic</td>
+<td>Yellow</td>
+</tr>
+
+<tr>
+<td>Metal</td>
+<td>Red</td>
+</tr>
+
+<tr>
+<td>Glass</td>
+<td>Green</td>
+</tr>
+
+<tr>
+<td>Compost / Food Waste</td>
+<td>Black</td>
+</tr>
+
+<tr>
+<td>Other Waste</td>
+<td>Sky Blue</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/waste_bin_colour_code.webp"
+alt="Waste Segregation Colour Code"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Waste Bin Colour Code</strong>
+
+<code>waste_bin_colour_code.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Waste Segregation Colour Code
+</figcaption>
+
+</figure>
+
+</section>
+
+
+<!-- ======================================================
+     9. OSH
+     ====================================================== -->
+
+<section class="content-card" id="osh">
+
+<span class="section-label">
+PART 9 · OSH
+</span>
+
+<h2>
+9. Occupational Safety and Health – OSH
+</h2>
+
+<p>
+<strong>Occupational Safety and Health (OSH)</strong> का संबंध ऐसी working conditions और practices से है जो worker की life, body, mental well-being और health की सुरक्षा सुनिश्चित करें।
+</p>
+
+<h3>
+OSH का मुख्य लक्ष्य
+</h3>
+
+<p>
+एक safe और healthy working environment को बढ़ावा देना तथा workers और workplace से प्रभावित अन्य लोगों को occupational hazards से बचाना।
+</p>
+
+<h3>
+Environmental Safety
+</h3>
+
+<p>
+Environmental Safety का उद्देश्य industrial activities के कारण होने वाले accidental environmental damage और hazardous releases को रोकना तथा workers और आसपास के लोगों की safety और welfare को सुरक्षित रखना है।
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/osh_environmental_safety.webp"
+alt="Occupational Safety Health and Environment"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: OSH & Environmental Safety</strong>
+
+<code>osh_environmental_safety.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Occupational Safety, Health & Environment
+</figcaption>
+
+</figure>
+
+
+<h3>
+OSH से संबंधित भारतीय कानूनों का परिचय
+</h3>
+
+<p>
+Source material में workplace safety और labour welfare से संबंधित कई प्रमुख laws का उल्लेख किया गया है, जैसे:
+</p>
+
+<ul>
+
+<li>Factories Act, 1948</li>
+
+<li>Mines Act, 1952</li>
+
+<li>Dock Workers (Safety, Health and Welfare) Act, 1986</li>
+
+<li>Building and Other Construction Workers Act, 1996</li>
+
+<li>Plantation Labour Act, 1951</li>
+
+<li>Contract Labour (Regulation and Abolition) Act, 1970</li>
+
+<li>Child Labour (Prohibition and Regulation) Act, 1986</li>
+
+</ul>
+
+<p>
+किसी specific workplace पर लागू वर्तमान legislation और regulations संबंधित official authority के अनुसार देखे जाने चाहिए।
+</p>
+
+
+<h3>
+Occupational Safety & Health Tips
+</h3>
+
+<ul>
+
+<li>अपने आसपास के hazards के प्रति aware रहें।</li>
+
+<li>Correct posture बनाए रखें।</li>
+
+<li>Regular breaks लें।</li>
+
+<li>Tools और equipment का सही उपयोग करें।</li>
+
+<li>Emergency exits की location जानें।</li>
+
+<li>Unsafe conditions report करें।</li>
+
+<li>Good housekeeping practices अपनाएँ।</li>
+
+<li>जहाँ आवश्यक हो mechanical equipment का उपयोग करें।</li>
+
+<li>Correct safety equipment पहनें।</li>
+
+<li>Workplace stress को manage करें।</li>
+
+</ul>
+
+</section>
+
+
+<!-- ======================================================
+     10. SAFETY SIGNS
+     ====================================================== -->
+
+<section class="content-card" id="signs">
+
+<span class="section-label">
+PART 10 · SAFETY SIGNS
+</span>
+
+<h2>
+10. Safety Signs
+</h2>
+
+<p>
+Safety Signs workplace पर hazards, prohibitions, mandatory actions और safety information को visual रूप से communicate करते हैं।
+</p>
+
+<p>
+Safety signs मुख्यतः चार categories में बाँटे जाते हैं।
+</p>
+
+<div class="table-wrap">
+
+<table class="content-table">
+
+<thead>
+
+<tr>
+<th>Category</th>
+<th>Shape</th>
+<th>Colour</th>
+<th>Meaning</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td><strong>Prohibition</strong></td>
+<td>Circle</td>
+<td>Red border / cross</td>
+<td>यह कार्य नहीं करना है</td>
+</tr>
+
+<tr>
+<td><strong>Mandatory</strong></td>
+<td>Circle</td>
+<td>Blue background + white symbol</td>
+<td>यह कार्य करना आवश्यक है</td>
+</tr>
+
+<tr>
+<td><strong>Warning</strong></td>
+<td>Triangle</td>
+<td>Yellow background + black symbol</td>
+<td>Hazard / caution</td>
+</tr>
+
+<tr>
+<td><strong>Information</strong></td>
+<td>Square / Rectangle</td>
+<td>Green background + white symbol</td>
+<td>Safety information / facility</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/four_safety_sign_categories.webp"
+alt="Four Categories of Safety Signs"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Four Safety Sign Categories</strong>
+
+<code>four_safety_sign_categories.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Prohibition, Mandatory, Warning और Information Signs
+</figcaption>
+
+</figure>
+
+
+<h3>
+Prohibition Signs
+</h3>
+
+<p>
+किसी कार्य को करने से रोकते हैं। उदाहरण: No Smoking.
+</p>
+
+
+<h3>
+Mandatory Signs
+</h3>
+
+<p>
+किसी safety action को करना आवश्यक बताते हैं। उदाहरण: Wear Hand Gloves.
+</p>
+
+
+<h3>
+Warning Signs
+</h3>
+
+<p>
+Potential danger या hazard के बारे में चेतावनी देते हैं। उदाहरण: Electrical Shock Hazard.
+</p>
+
+
+<h3>
+Information Signs
+</h3>
+
+<p>
+Safety facility या information की location बताते हैं। उदाहरण: First Aid Centre.
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/safety_sign_examples.webp"
+alt="Safety Sign Examples"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Safety Sign Examples</strong>
+
+<code>safety_sign_examples.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Common Safety Signs
+</figcaption>
+
+</figure>
+
+
+<div class="exam-box">
+
+<div class="box-title">
+📌 Exam Focus
+</div>
+
+<p>
+चार basic safety sign categories: <strong>Prohibition, Mandatory, Warning और Information.</strong>
+</p>
+
+</div>
+
+   </section>
+   <!-- ======================================================
+     11. EMERGENCY
+     ====================================================== -->
+
+<section class="content-card" id="emergency">
+
+<span class="section-label">
+PART 11 · EMERGENCY RESPONSE
+</span>
+
+<h2>
+11. Response to Emergencies
+</h2>
+
+<p>
+Emergency एक unexpected situation है जिसमें immediate और appropriate action की आवश्यकता होती है।
+</p>
+
+<p>
+Workshop में electrical shock, machine accident, power failure, system failure और fire जैसी emergency situations हो सकती हैं।
+</p>
+
+<h3>
+Power Failure
+</h3>
+
+<p>
+Power failure की स्थिति में workplace की established emergency procedure का पालन करना चाहिए। Emergency lighting, emergency power system और संबंधित equipment को निर्धारित procedure के अनुसार operate किया जाता है।
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/emergency_power_failure.webp"
+alt="Emergency Power Failure Response"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Power Failure Emergency Response</strong>
+
+<code>emergency_power_failure.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Power Failure Emergency Response
+</figcaption>
+
+</figure>
+
+
+<h3>
+System Failure
+</h3>
+
+<p>
+System failure की स्थिति में panic न करें। निर्धारित emergency procedure, technical instructions और responsible personnel के निर्देशों का पालन करें।
+</p>
+
+<h3>
+Fire Emergency
+</h3>
+
+<ul>
+
+<li>Fire alarm सुनते ही निर्धारित emergency procedure अपनाएँ।</li>
+
+<li>यदि evacuation आवश्यक हो तो तुरंत सुरक्षित स्थान की ओर जाएँ।</li>
+
+<li>Emergency exit का उपयोग करें।</li>
+
+<li>Fire service personnel के लिए रास्ता clear रखें।</li>
+
+<li>Emergency के दौरान lift का उपयोग न करें।</li>
+
+<li>घबराएँ नहीं और भीड़ को नियंत्रित रखें।</li>
+
+<li>केवल trained व्यक्ति ही appropriate fire extinguisher का उपयोग करे।</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/fire_emergency_response.webp"
+alt="Fire Emergency Response"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Fire Emergency Response</strong>
+
+<code>fire_emergency_response.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Fire Emergency Response
+</figcaption>
+
+</figure>
+
+
+<h3>
+Emergency Report कैसे करें?
+</h3>
+
+<ul>
+
+<li>पहले situation की urgency assess करें।</li>
+
+<li>यदि life-threatening situation है तो emergency services को contact करें।</li>
+
+<li>Location स्पष्ट रूप से बताएं।</li>
+
+<li>Fire की स्थिति में fire का location और nature बताएं।</li>
+
+<li>यदि कोई व्यक्ति injured या missing है तो उसकी जानकारी दें।</li>
+
+<li>घटना की report संबंधित responsible person को करें।</li>
+
+</ul>
+
+</section>
+
+
+<!-- ======================================================
+     12. HOUSEKEEPING
+     ====================================================== -->
+
+<section class="content-card" id="housekeeping">
+
+<span class="section-label">
+PART 12 · HOUSEKEEPING
+</span>
+
+<h2>
+12. Importance of Housekeeping
+</h2>
+
+<p>
+<strong>Housekeeping</strong> का उद्देश्य workplace को साफ, व्यवस्थित और सुरक्षित रखना है। Good housekeeping accidents कम करने और work efficiency बढ़ाने में मदद करती है।
+</p>
+
+<h3>
+Housekeeping की प्रमुख Activities
+</h3>
+
+<div class="table-wrap">
+
+<table class="content-table">
+
+<thead>
+
+<tr>
+<th>Activity</th>
+<th>Practice</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>Shop Floor Cleaning</td>
+<td>Floor को साफ और scrap-free रखें।</td>
+</tr>
+
+<tr>
+<td>Machine Cleaning</td>
+<td>Machines को नियमित रूप से clean रखें।</td>
+</tr>
+
+<tr>
+<td>Leakage / Spillage Prevention</td>
+<td>Spillage रोकने के लिए suitable guards/trays का उपयोग करें।</td>
+</tr>
+
+<tr>
+<td>Scrap Disposal</td>
+<td>Scrap को निर्धारित containers में डालें।</td>
+</tr>
+
+<tr>
+<td>Tool Storage</td>
+<td>Tools के लिए racks/holders का उपयोग करें।</td>
+</tr>
+
+<tr>
+<td>Storage Space</td>
+<td>Materials को निर्धारित जगह पर रखें। Gangway block न करें।</td>
+</tr>
+
+<tr>
+<td>Piling</td>
+<td>Materials को safe height और stable condition में रखें।</td>
+</tr>
+
+<tr>
+<td>Material Handling</td>
+<td>Load के weight और quantity के अनुसार suitable equipment चुनें।</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/good_housekeeping.webp"
+alt="Good Workshop Housekeeping"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Good Housekeeping</strong>
+
+<code>good_housekeeping.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Good Shop Floor Housekeeping
+</figcaption>
+
+</figure>
+
+
+<div class="success-box">
+
+<div class="box-title">
+💡 Good Housekeeping के लाभ
+</div>
+
+<p>
+कम accidents + बेहतर cleanliness + बेहतर efficiency + आसान tool/material access + सुरक्षित workplace.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     13. 5S
+     ====================================================== -->
+
+<section class="content-card" id="five-s">
+
+<span class="section-label">
+PART 13 · 5S
+</span>
+
+<h2>
+13. 5S Concept in Industry
+</h2>
+
+<p>
+<strong>5S</strong> workplace और workflow को व्यवस्थित और efficiently manage करने की systematic method है। इसका उद्देश्य waste कम करना, workflow सुधारना और workplace को clean एवं organized बनाना है।
+</p>
+
+<p>
+5S का origin Japan से हुआ और पाँचों steps के मूल Japanese names हैं।
+</p>
+
+
+<div class="table-wrap">
+
+<table class="content-table">
+
+<thead>
+
+<tr>
+<th>No.</th>
+<th>Japanese</th>
+<th>English</th>
+<th>सरल अर्थ</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>1</td>
+<td><strong>Seiri</strong></td>
+<td>Sort</td>
+<td>अनावश्यक वस्तुओं को हटाना</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td><strong>Seiton</strong></td>
+<td>Set in Order</td>
+<td>वस्तुओं को व्यवस्थित रखना</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td><strong>Seiso</strong></td>
+<td>Shine</td>
+<td>सफाई करना</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td><strong>Seiketsu</strong></td>
+<td>Standardize</td>
+<td>Standard procedure बनाना</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td><strong>Shitsuke</strong></td>
+<td>Sustain</td>
+<td>अनुशासन के साथ बनाए रखना</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/5s_complete.webp"
+alt="5S Complete Concept"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Complete 5S Concept</strong>
+
+<code>5s_complete.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – 5S Concept
+</figcaption>
+
+</figure>
+
+
+<h3>
+Step 1 – Seiri / Sort
+</h3>
+
+<p>
+अनावश्यक items को working area से हटाना और केवल आवश्यक items रखना।
+</p>
+
+
+<h3>
+Step 2 – Seiton / Set in Order
+</h3>
+
+<p>
+हर वस्तु की निर्धारित जगह हो और उसे ढूँढना, उपयोग करना तथा वापस रखना आसान हो।
+</p>
+
+<div class="info-box">
+
+<div class="box-title">
+याद रखें
+</div>
+
+<p>
+<strong>A place for everything and everything in its place.</strong>
+</p>
+
+</div>
+
+
+<h3>
+Step 3 – Seiso / Shine
+</h3>
+
+<p>
+Workplace और equipment को नियमित रूप से clean करना तथा dirt और contamination को वापस आने से रोकना।
+</p>
+
+
+<h3>
+Step 4 – Seiketsu / Standardize
+</h3>
+
+<p>
+पहले तीन S को standard work procedures में शामिल करना। इसके लिए checklist, job-cycle chart, labels और signs उपयोगी हैं।
+</p>
+
+
+<h3>
+Step 5 – Shitsuke / Sustain
+</h3>
+
+<p>
+5S को लगातार follow करना और उसे workplace discipline तथा daily habit बनाना।
+</p>
+
+
+<h3>
+5S को Maintain करने के लिए
+</h3>
+
+<ul>
+
+<li>Management Support</li>
+
+<li>Department Tours</li>
+
+<li>Updated Training</li>
+
+<li>Progress Audits</li>
+
+<li>Performance Evaluation</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/5s_workshop_before_after.webp"
+alt="5S Workshop Before and After"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: 5S Before & After</strong>
+
+<code>5s_workshop_before_after.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – 5S लागू करने से पहले और बाद का Workshop
+</figcaption>
+
+</figure>
+
+</section>
+
+
+<!-- ======================================================
+     14. HOT WORK
+     ====================================================== -->
+
+<section class="content-card" id="hotwork">
+
+<span class="section-label">
+PART 14 · HOT WORK
+</span>
+
+<h2>
+14. Hot Work
+</h2>
+
+<p>
+<strong>Hot Work</strong> में ऐसे operations शामिल होते हैं जिनमें heat, flame, sparks या high temperature उत्पन्न होता है।
+</p>
+
+<h3>
+Examples
+</h3>
+
+<ul>
+
+<li>Forging</li>
+
+<li>Gas Cutting</li>
+
+<li>Welding</li>
+
+<li>Soldering</li>
+
+<li>Brazing</li>
+
+</ul>
+
+<h3>
+Hot Work Hazards
+</h3>
+
+<ul>
+
+<li>Fire</li>
+
+<li>Explosion</li>
+
+<li>Ignition of flammable material</li>
+
+<li>Flammable gas leakage</li>
+
+<li>Sparks और hot particles</li>
+
+</ul>
+
+<h3>
+Basic Safety
+</h3>
+
+<ul>
+
+<li>Work area में flammable materials को control करें।</li>
+
+<li>Suitable PPE पहनें।</li>
+
+<li>Required permit/procedure का पालन करें।</li>
+
+<li>Fire protection arrangement रखें।</li>
+
+<li>Gas leakage और ignition sources की जाँच करें।</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/hot_work_safety.webp"
+alt="Hot Work Safety"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Hot Work Safety</strong>
+
+<code>hot_work_safety.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Hot Work Safety
+</figcaption>
+
+</figure>
+
+</section>
+
+
+<!-- ======================================================
+     15. CONFINED SPACE
+     ====================================================== -->
+
+<section class="content-card" id="confined">
+
+<span class="section-label">
+PART 15 · CONFINED SPACE
+</span>
+
+<h2>
+15. Confined Space Work
+</h2>
+
+<p>
+<strong>Confined Space</strong> ऐसा स्थान है जिसमें entry/exit के साधन limited या restricted हो सकते हैं और जिसे continuous occupancy के लिए design नहीं किया गया होता।
+</p>
+
+<h3>
+Examples
+</h3>
+
+<ul>
+
+<li>Tank</li>
+
+<li>Vessel</li>
+
+<li>Silo</li>
+
+<li>Storage bin</li>
+
+<li>Hopper</li>
+
+<li>Vault</li>
+
+<li>Pit</li>
+
+<li>Manhole</li>
+
+<li>Tunnel</li>
+
+<li>Equipment housing</li>
+
+<li>Duct work</li>
+
+<li>Pipeline</li>
+
+</ul>
+
+<h3>
+Possible Hazards
+</h3>
+
+<ul>
+
+<li>Oxygen deficiency</li>
+
+<li>Toxic gases</li>
+
+<li>Flammable atmosphere</li>
+
+<li>Suffocation</li>
+
+<li>Difficulty in rescue</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/confined_space_safety.webp"
+alt="Confined Space Safety"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Confined Space Safety</strong>
+
+<code>confined_space_safety.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Confined Space Work
+</figcaption>
+
+</figure>
+
+
+<div class="warning-box">
+
+<div class="box-title">
+⚠ Safety Alert
+</div>
+
+<p>
+Confined space में entry केवल prescribed safety procedure, hazard assessment, appropriate monitoring, training और rescue arrangement के अनुसार होनी चाहिए।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     16. MATERIAL HANDLING
+     ====================================================== -->
+
+<section class="content-card" id="material">
+
+<span class="section-label">
+PART 16 · MATERIAL HANDLING
+</span>
+
+<h2>
+16. Material Handling Equipment
+</h2>
+
+<p>
+Material Handling Equipment ऐसे mechanical equipment हैं जिनका उपयोग material, goods और products की movement, storage, control और protection के लिए किया जाता है।
+</p>
+
+<h3>
+Types of Material Handling Equipment
+</h3>
+
+<ul>
+
+<li>Racks</li>
+
+<li>Trucks / Trolleys</li>
+
+<li>Conveyor Systems</li>
+
+<li>Forklifts</li>
+
+<li>Cranes</li>
+
+<li>Pallet Trucks</li>
+
+<li>Hoists</li>
+
+<li>अन्य suitable handling equipment</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/material_handling_equipment.webp"
+alt="Material Handling Equipment"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Material Handling Equipment</strong>
+
+<code>material_handling_equipment.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Material Handling Equipment
+</figcaption>
+
+</figure>
+
+</section>
+
+
+<!-- ======================================================
+     17. LIFTING
+     ====================================================== -->
+
+<section class="content-card" id="lifting">
+
+<span class="section-label">
+PART 17 · LIFTING & HANDLING
+</span>
+
+<h2>
+17. Lifting and Handling Loads
+</h2>
+
+<p>
+गलत lifting और carrying technique से injuries हो सकती हैं। Load बहुत heavy होना आवश्यक नहीं है; गलत posture और technique से भी muscles और joints पर strain पड़ सकता है।
+</p>
+
+<h3>
+Common Injuries
+</h3>
+
+<ul>
+
+<li>Cuts and Abrasions</li>
+
+<li>Crushing of Hands or Feet</li>
+
+<li>Strain to Muscles and Joints</li>
+
+<li>Back Injury</li>
+
+<li>Impact / Falling Object Injuries</li>
+
+</ul>
+
+
+<h3>
+Cuts and Abrasions
+</h3>
+
+<p>
+Rough surfaces, sharp edges, projections और splinters से cuts और abrasions हो सकते हैं। Suitable gloves और safe handling methods का उपयोग करें।
+</p>
+
+
+<h3>
+Crushing of Hands / Feet
+</h3>
+
+<p>
+Load को उठाते और नीचे रखते समय hands और feet को load के नीचे या trapping zone में नहीं रखना चाहिए। Heavy load में suitable blocks/wedges और safety shoes उपयोगी हो सकते हैं।
+</p>
+
+
+<h3>
+Muscle और Joint Strain
+</h3>
+
+<p>
+बहुत heavy load उठाना, गलत posture, अचानक twisting और awkward movement muscles तथा joints पर अत्यधिक strain डाल सकते हैं।
+</p>
+
+
+<h3>
+Load की Difficulty केवल Weight पर निर्भर नहीं करती
+</h3>
+
+<ul>
+
+<li>Weight</li>
+
+<li>Size</li>
+
+<li>Shape</li>
+
+<li>Centre of gravity</li>
+
+<li>Natural hand-holds की उपलब्धता</li>
+
+<li>Carrying distance</li>
+
+<li>Worker की age, physique और physical condition</li>
+
+</ul>
+
+
+<h3>
+Correct Manual Lifting Technique
+</h3>
+
+<ol>
+
+<li>Load को सामने से assess करें।</li>
+
+<li>Feet को suitable position में रखें।</li>
+
+<li>Load को body के पास रखें।</li>
+
+<li>Firm grip प्राप्त करें।</li>
+
+<li>Back को यथासंभव straight रखें।</li>
+
+<li>Knees bend करके lifting position लें।</li>
+
+<li>Leg muscles का उपयोग करके load उठाएँ।</li>
+
+<li>Sudden jerk से बचें।</li>
+
+<li>Load को body के पास रखें।</li>
+
+<li>Twisting से बचें; direction बदलते समय पूरे body को move करें।</li>
+
+</ol>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/correct_manual_lifting.webp"
+alt="Correct Manual Lifting Technique"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Correct Manual Lifting</strong>
+
+<code>correct_manual_lifting.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Correct Manual Lifting Technique
+</figcaption>
+
+</figure>
+
+
+<h3>
+Lifting से पहले स्वयं से पूछें
+</h3>
+
+<ul>
+
+<li>क्या move किया जाना है?</li>
+
+<li>कहाँ से कहाँ ले जाना है?</li>
+
+<li>क्या assistance की आवश्यकता होगी?</li>
+
+<li>क्या रास्ता obstacles से free है?</li>
+
+</ul>
+
+
+<h3>
+Lowering the Load
+</h3>
+
+<ul>
+
+<li>Place area clear रखें।</li>
+
+<li>Knees bend करें।</li>
+
+<li>Back और head को उचित position में रखें।</li>
+
+<li>Load को controlled तरीके से नीचे रखें।</li>
+
+<li>Hands को trapping points से दूर रखें।</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/safe_load_lowering.webp"
+alt="Safe Load Lowering"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Safe Load Lowering</strong>
+
+<code>safe_load_lowering.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Safe Load Lowering Technique
+</figcaption>
+
+</figure>
+
+</section>
+
+
+<!-- ======================================================
+     18. HEAVY EQUIPMENT
+     ====================================================== -->
+
+<section class="content-card" id="heavy">
+
+<span class="section-label">
+PART 18 · HEAVY EQUIPMENT
+</span>
+
+<h2>
+18. Moving Heavy Equipment
+</h2>
+
+<h3>
+Heavy Equipment को Move करने की प्रमुख Methods
+</h3>
+
+<ul>
+
+<li>Crane and Slings</li>
+
+<li>Winch</li>
+
+<li>Machine Moving Platform</li>
+
+<li>Skids and Rollers</li>
+
+</ul>
+
+
+<h3>
+Crane and Slings
+</h3>
+
+<p>
+Crane और slings का उपयोग heavy load को उठाने और स्थानांतरित करने के लिए किया जाता है।
+</p>
+
+<ul>
+
+<li>Steel rope/slings को cuts, abrasion, wear और corrosion के लिए inspect करें।</li>
+
+<li>Damaged sling का उपयोग न करें।</li>
+
+<li>Multiple slings होने पर load को उचित रूप से distribute करें।</li>
+
+<li>Slings को suitable position में रखें।</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/crane_and_slings.webp"
+alt="Crane and Slings Safety"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Crane and Slings</strong>
+
+<code>crane_and_slings.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Crane और Sling द्वारा Heavy Load Handling
+</figcaption>
+
+</figure>
+
+
+<h3>
+Winch
+</h3>
+
+<p>
+Winch का उपयोग जमीन पर heavy loads को pull करने के लिए किया जाता है। यह manually या electrically operated हो सकता है।
+</p>
+
+<h3>
+Winch Safety
+</h3>
+
+<ul>
+
+<li>Winch का Safe Working Load (SWL) suitable होना चाहिए।</li>
+
+<li>Winch को मजबूत structure से secure करें।</li>
+
+<li>Suitable sling चुनें।</li>
+
+<li>Sling को load और winch hook से properly attach करें।</li>
+
+<li>Brake और ratchet mechanism की condition check करें।</li>
+
+<li>Hands और fingers को gears से दूर रखें।</li>
+
+<li>Bearings और gears की appropriate lubrication करें।</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/winch_safety.webp"
+alt="Winch Safety"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Winch Safety</strong>
+
+<code>winch_safety.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Winch और Safe Working Load
+</figcaption>
+
+</figure>
+
+
+<h3>
+Machine Moving Platform
+</h3>
+
+<p>
+Machine Moving Platform heavy equipment को move करने के लिए विशेष रूप से designed equipment है।
+</p>
+
+<p>
+Load को suitable sling से secure करके platform पर controlled तरीके से रखा जाता है और centre of gravity को ध्यान में रखा जाता है।
+</p>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/machine_moving_platform.webp"
+alt="Machine Moving Platform"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Machine Moving Platform</strong>
+
+<code>machine_moving_platform.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Machine Moving Platform
+</figcaption>
+
+</figure>
+
+
+<h3>
+Skids and Rollers
+</h3>
+
+<p>
+कुछ heavy loads अपने irregular base या insufficient rigidity के कारण सीधे जमीन पर move नहीं किए जा सकते। ऐसे load को suitable skid और rollers पर रखा जा सकता है।
+</p>
+
+<ul>
+
+<li>Rollers load के नीचे उचित spacing में रखें।</li>
+
+<li>Rollers load से पर्याप्त बाहर निकले हों ताकि handling आसान हो।</li>
+
+<li>Rollers suitable size के होने चाहिए।</li>
+
+<li>Sloping surface पर विशेष सावधानी रखें।</li>
+
+<li>Load को uncontrolled rolling से बचाएँ।</li>
+
+<li>आवश्यकता होने पर effective brake वाली winch का उपयोग करें।</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/skids_and_rollers.webp"
+alt="Skids and Rollers for Heavy Load"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Skids and Rollers</strong>
+
+<code>skids_and_rollers.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Heavy Load को Skids और Rollers पर Move करना
+</figcaption>
+
+</figure>
+
+
+<h3>
+Heavy Load उठाते समय Safety
+</h3>
+
+<ul>
+
+<li>Crane और load के रास्ते को clear रखें।</li>
+
+<li>Sling को load और hook से properly secure करें।</li>
+
+<li>Load के projecting parts sling में properly positioned हों।</li>
+
+<li>Workers को lifting शुरू होने की warning दें।</li>
+
+<li>Load को धीरे-धीरे उठाएँ।</li>
+
+<li>Load के swing और rotation पर control रखें।</li>
+
+<li>Load को लोगों के सिर के ऊपर से न ले जाएँ।</li>
+
+<li>अन्य workers को load path से दूर रखें।</li>
+
+<li>Load के नीचे कभी न खड़े हों।</li>
+
+<li>Load move करते समय obstacles का ध्यान रखें।</li>
+
+</ul>
+
+
+<figure class="module-image">
+
+<img
+src="/images/notes/fitter/module-1/heavy_load_safety.webp"
+alt="Heavy Load Safety"
+loading="lazy">
+
+<div class="image-placeholder">
+
+<div class="placeholder-icon">🖼️</div>
+
+<strong>चित्र: Heavy Load Safety</strong>
+
+<code>heavy_load_safety.webp</code>
+
+</div>
+
+<figcaption>
+चित्र – Heavy Load Raising, Moving और Safety Zone
+</figcaption>
+
+</figure>
+
+
+<h3>
+Packing / Supporting Heavy Loads
+</h3>
+
+<ul>
+
+<li>Load के नीचे हाथ न डालें।</li>
+
+<li>Suitable push blocks का उपयोग करें।</li>
+
+<li>Packing को floor से slide करके load के नीचे रखें।</li>
+
+<li>Fingers को load के bottom edge से दूर रखें।</li>
+
+<li>Load के centre of gravity के अनुसार lifting/supporting point चुनें।</li>
+
+<li>Floor को unnecessary objects से clear रखें।</li>
+
+</ul>
+
+</section>
+
+
+<!-- ======================================================
+     QUICK REVISION
+     ====================================================== -->
+
+<section class="quick-revision">
+
+<h2>
+⭐ Module 1 – Quick Revision
+</h2>
+
+
+<h3>
+ITI
+</h3>
+
+<p>
+ITI = Industrial Training Institute. इसका उद्देश्य industry-oriented vocational training और skilled manpower development है।
+</p>
+
+
+<h3>
+Soft Skills
+</h3>
+
+<p>
+Communication + Teamwork + Discipline + Time Management + Problem Solving + Positive Attitude + Adaptability.
+</p>
+
+
+<h3>
+Safety की 3 Categories
+</h3>
+
+<p>
+<strong>General Safety → Personal Safety → Machine Safety</strong>
+</p>
+
+
+<h3>
+PPE
+</h3>
+
+<p>
+<strong>
+Helmet → Safety Shoes → Gloves → Goggles → Face Shield → Ear Protection → Respiratory Protection → Protective Clothing
+</strong>
+</p>
+
+
+<h3>
+First Aid ABC
+</h3>
+
+<p>
+<strong>
+A = Airway<br>
+B = Breathing<br>
+C = Circulation
+</strong>
+</p>
+
+
+<h3>
+Golden Hours
+</h3>
+
+<p>
+Serious emergency में शुरुआती समय में appropriate First Aid और timely medical care अत्यंत महत्वपूर्ण है।
+</p>
+
+
+<h3>
+Waste Disposal
+</h3>
+
+<p>
+<strong>
+Recycling → Composting → Compaction → Landfill / Controlled Disposal → Incineration
+</strong>
+</p>
+
+
+<h3>
+Safety Signs
+</h3>
+
+<p>
+<strong>
+Prohibition → Mandatory → Warning → Information
+</strong>
+</p>
+
+
+<h3>
+5S
+</h3>
+
+<p>
+<strong>
+Seiri → Seiton → Seiso → Seiketsu → Shitsuke
+</strong>
+</p>
+
+<p>
+Sort → Set in Order → Shine → Standardize → Sustain
+</p>
+
+
+<h3>
+Hot Work
+</h3>
+
+<p>
+Forging, Gas Cutting, Welding, Soldering और Brazing जैसे operations में fire/explosion hazards हो सकते हैं।
+</p>
+
+
+<h3>
+Confined Space
+</h3>
+
+<p>
+Limited/restricted entry-exit और continuous occupancy के लिए designed न किया गया स्थान।
+</p>
+
+
+<h3>
+Material Handling
+</h3>
+
+<p>
+Racks + Trolley + Conveyor + Forklift + Crane + Pallet Truck + Hoist.
+</p>
+
+
+<h3>
+Manual Lifting
+</h3>
+
+<div class="flow-box">
+
+Assess Load → Clear Route → Firm Grip → Bend Knees → Keep Back Proper → Lift with Legs → Keep Load Close → Avoid Twisting
+
+</div>
+
+
+<h3>
+Heavy Equipment
+</h3>
+
+<p>
+<strong>
+Crane & Sling → Winch → Machine Moving Platform → Skids & Rollers
+</strong>
+</p>
+
+</section>
+
+
+<!-- ======================================================
+     FULL FORMS
+     ====================================================== -->
+
+<section class="full-forms">
+
+<h2>
+📘 Important Full Forms
+</h2>
+
+<div class="table-wrap">
+
+<table class="content-table">
+
+<thead>
+
+<tr>
+<th>Short Form</th>
+<th>Full Form</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td>ITI</td>
+<td>Industrial Training Institute</td>
+</tr>
+
+<tr>
+<td>ITC</td>
+<td>Industrial Training Centre</td>
+</tr>
+
+<tr>
+<td>CTS</td>
+<td>Craftsmen Training Scheme</td>
+</tr>
+
+<tr>
+<td>NTC</td>
+<td>National Trade Certificate</td>
+</tr>
+
+<tr>
+<td>PPE</td>
+<td>Personal Protective Equipment</td>
+</tr>
+
+<tr>
+<td>OSH</td>
+<td>Occupational Safety and Health</td>
+</tr>
+
+<tr>
+<td>SWL</td>
+<td>Safe Working Load</td>
+</tr>
+
+<tr>
+<td>ABC</td>
+<td>Airway, Breathing, Circulation</td>
+</tr>
+
+<tr>
+<td>5S</td>
+<td>Seiri, Seiton, Seiso, Seiketsu, Shitsuke</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     IMPORTANT POINTS
+     ====================================================== -->
+
+<section class="content-card">
+
+<h2>
+📌 Module 1 – सबसे महत्वपूर्ण बातें
+</h2>
+
+<ul>
+
+<li>Safety rules को केवल पढ़ना नहीं, बल्कि daily practice में लागू करना चाहिए।</li>
+
+<li>Correct PPE का selection hazard के अनुसार किया जाता है।</li>
+
+<li>First Aid में सबसे पहले scene safety और ABC पर ध्यान दिया जाता है।</li>
+
+<li>Electrical emergency में supply isolation महत्वपूर्ण है।</li>
+
+<li>Waste को उचित तरीके से segregate और dispose करना चाहिए।</li>
+
+<li>OSH का उद्देश्य safe और healthy working environment बनाना है।</li>
+
+<li>Safety signs को उनके shape, colour और meaning से पहचानना चाहिए।</li>
+
+<li>Emergency में panic नहीं करना चाहिए और prescribed procedure follow करना चाहिए।</li>
+
+<li>Good housekeeping accidents और inefficiency को कम करती है।</li>
+
+<li>5S workplace को organized, clean और efficient बनाने की systematic method है।</li>
+
+<li>Hot Work में fire और explosion hazards पर विशेष ध्यान देना चाहिए।</li>
+
+<li>Confined Space में entry से पहले hazard और rescue arrangements का ध्यान रखना आवश्यक है।</li>
+
+<li>Manual lifting में सही posture और lifting technique injury risk को कम करती है।</li>
+
+<li>Heavy equipment movement में load, sling, route और workers की safety को प्राथमिकता देनी चाहिए।</li>
+
+</ul>
+
+</section>
+
+
+<!-- ======================================================
+     BOTTOM NAVIGATION
+     ====================================================== -->
+
+<div class="next-module">
+
+<a href="/iti-study-centre-notes.html">
+← ITI Notes
+</a>
+
+<a href="/notes/fitter/">
+📚 All Fitter Modules
+</a>
+
+<a href="module-2.html">
+Next Module →
+</a>
+
+</div>
+
 </main>
-<!-- =========================================================
+
+
+<!-- ======================================================
      DISCLAIMER
-     ========================================================= -->
+     ====================================================== -->
+
 <section class="container">
+
 <div class="disclaimer">
+
 <h2>
 ⚠ Disclaimer
 </h2>
+
 <p>
-ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।
+ITI Study Centre एक educational और study-support platform है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के लिए तैयार की गई है। Official syllabus, regulations और latest information के लिए संबंधित official authority की जानकारी को प्राथमिकता दें।
 </p>
+
 </div>
+
 </section>
-<!-- =========================================================
+
+
+<!-- ======================================================
      FOOTER
-     ========================================================= -->
+     ====================================================== -->
+
 <footer>
+
 <div class="footer-links">
-<a href="/disclaimer.html">
-Disclaimer
-</a>
-<a href="/privacy-policy.html">
-Privacy Policy
-</a>
-<a href="/terms.html">
-Terms
-</a>
-<a href="/contact.html">
-Contact
-</a>
+
+<a href="/disclaimer.html">Disclaimer</a>
+
+<a href="/privacy-policy.html">Privacy Policy</a>
+
+<a href="/terms.html">Terms</a>
+
+<a href="/contact.html">Contact</a>
+
 </div>
+
 <p id="footerYear">
 © 2026 ITI Study Centre. All Rights Reserved.
 </p>
+
 </footer>
-<!-- =========================================================
-     SCROLL TOP BUTTON
-     ========================================================= -->
+
+
+<!-- ======================================================
+     SCROLL TOP
+     ====================================================== -->
+
 <button id="scrollTop" title="Go to Top">
 ⬆
 </button>
-<!-- =========================================================
+
+
+<!-- ======================================================
      JAVASCRIPT
-     ========================================================= -->
+     ====================================================== -->
+
 <script>
 
-
 /* =========================================================
-   IMAGE FALLBACK SYSTEM
+   IMAGE FALLBACK
 
-   अगर image अभी folder में मौजूद नहीं है तो
-   broken image icon की जगह placeholder दिखेगा।
+   अगर image अभी folder में नहीं है,
+   तो broken-image icon की जगह placeholder दिखाई देगा।
 
-   बाद में उसी नाम की image डालने पर
-   automatically original image दिखाई देगी।
+   बाद में उसी नाम की image upload करने पर
+   image अपने आप दिखाई देगी।
    ========================================================= */
 
 document.querySelectorAll(".module-image").forEach(function(figure) {
 
     const img = figure.querySelector("img");
 
-    const placeholder = figure.querySelector(".image-placeholder");
+    const placeholder =
+        figure.querySelector(".image-placeholder");
 
     if (!img || !placeholder) {
         return;
@@ -3503,14 +4198,45 @@ document.querySelectorAll(".module-image").forEach(function(figure) {
 
 
 /* =========================================================
+   TABLE OF CONTENTS – SMOOTH SCROLL
+   ========================================================= */
+
+document.querySelectorAll('.toc-grid a').forEach(function(link) {
+
+    link.addEventListener('click', function(event) {
+
+        const targetId =
+            this.getAttribute('href');
+
+        const target =
+            document.querySelector(targetId);
+
+        if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+        }
+
+    });
+
+});
+
+
+/* =========================================================
    SCROLL TO TOP
    ========================================================= */
 
-const scrollBtn = document.getElementById("scrollTop");
+const scrollBtn =
+    document.getElementById("scrollTop");
 
 window.addEventListener("scroll", function() {
 
-    if (window.scrollY > 400) {
+    if (window.scrollY > 450) {
 
         scrollBtn.style.display = "block";
 
@@ -3526,11 +4252,8 @@ window.addEventListener("scroll", function() {
 scrollBtn.addEventListener("click", function() {
 
     window.scrollTo({
-
         top: 0,
-
         behavior: "smooth"
-
     });
 
 });
@@ -3540,7 +4263,8 @@ scrollBtn.addEventListener("click", function() {
    FOOTER YEAR
    ========================================================= */
 
-const footerYear = document.getElementById("footerYear");
+const footerYear =
+    document.getElementById("footerYear");
 
 if (footerYear) {
 
@@ -3553,18 +4277,16 @@ if (footerYear) {
 
 
 /* =========================================================
-   IMAGE DEBUG INFORMATION
-
-   Browser console में missing images की जानकारी
-   दिखाई जाएगी।
+   MISSING IMAGE DEBUG
    ========================================================= */
 
-document.querySelectorAll(".module-image img").forEach(function(img) {
+document.querySelectorAll(".module-image img")
+.forEach(function(img) {
 
     img.addEventListener("error", function() {
 
         console.log(
-            "Image अभी उपलब्ध नहीं है: " +
+            "Image not found yet: " +
             img.getAttribute("src")
         );
 
@@ -3574,9 +4296,13 @@ document.querySelectorAll(".module-image img").forEach(function(img) {
 
 
 console.log(
-    "✅ Fitter Theory Module 1 loaded successfully."
+    "✅ Fitter Theory Module 1 – Final Template Loaded"
 );
 
 </script>
+
+
 </body>
-</html>
+
+                                      </html>
+                                      
