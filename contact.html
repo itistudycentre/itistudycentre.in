@@ -1,18 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="hi">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
 <title>Contact Us | ITI Study Centre</title>
-<meta content="Contact ITI Study Centre - Share your valuable suggestions to improve ITI Study Centre." name="description"/>
-<meta content="Contact ITI Study Centre, Suggestions, Feedback, ITI Education" name="keywords"/>
-<meta content="ITI Study Centre" name="author"/>
-<link href="images/favicon.png" rel="icon"/>
-<link href="css/style.css" rel="stylesheet"/>
-<link href="https://www.itistudycentre.in/contact.html" rel="canonical"/>
-<!-- Google Analytics -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF"></script>
+
+<meta
+  name="description"
+  content="Contact ITI Study Centre - Share your valuable suggestions to improve ITI Study Centre."
+>
+
+<meta
+  name="keywords"
+  content="Contact ITI Study Centre, Suggestions, Feedback, ITI Education"
+>
+
+<meta
+  name="author"
+  content="ITI Study Centre"
+>
+
+<link
+  href="images/favicon.png"
+  rel="icon"
+>
+
+<link
+  href="css/style.css"
+  rel="stylesheet"
+>
+
+<link
+  href="https://www.itistudycentre.in/contact.html"
+  rel="canonical"
+>
+
+
+<!-- ================================
+     GOOGLE ANALYTICS
+================================ -->
+
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF">
+</script>
+
 <script>
 
 window.dataLayer = window.dataLayer || [];
@@ -23,106 +62,171 @@ function gtag(){
 
 gtag('js', new Date());
 
-gtag('config','G-RDLMQ0BNWF');
+gtag('config', 'G-RDLMQ0BNWF');
 
 </script>
+
+
 <style>
 
 /* =========================================
-   Search Box
+   SEARCH BOX
 ========================================= */
 
 .search-section {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0;
+
+  display:flex;
+
+  gap:10px;
+
+  align-items:center;
+
+  justify-content:center;
+
+  margin:20px 0;
+
 }
 
 .search-section input {
-  flex: 1;
-  max-width: 600px;
-  padding: 14px 20px;
-  font-size: 1.1rem;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  transition: 0.3s;
+
+  flex:1;
+
+  max-width:600px;
+
+  padding:14px 20px;
+
+  font-size:1.1rem;
+
+  border:2px solid #ccc;
+
+  border-radius:8px;
+
+  outline:none;
+
+  transition:0.3s;
+
 }
 
 .search-section input:focus {
-  border-color: #003366;
-  box-shadow: 0 0 8px rgba(0,51,102,0.2);
+
+  border-color:#003366;
+
+  box-shadow:
+    0 0 8px rgba(0,51,102,0.2);
+
 }
 
 .search-section button {
-  padding: 14px 40px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  min-width: 150px;
-  background: #003366;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+
+  padding:14px 40px;
+
+  font-size:1.2rem;
+
+  font-weight:bold;
+
+  min-width:150px;
+
+  background:#003366;
+
+  color:white;
+
+  border:none;
+
+  border-radius:8px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
 }
 
 .search-section button:hover {
-  background: #002244;
-  transform: scale(1.02);
+
+  background:#002244;
+
+  transform:scale(1.02);
+
 }
 
-@media (max-width: 767px) {
+
+/* =========================================
+   MOBILE SEARCH
+========================================= */
+
+@media (max-width:767px) {
 
   .search-section {
-    flex-direction: column;
-    gap: 10px;
+
+    flex-direction:column;
+
+    gap:10px;
+
   }
 
   .search-section input {
-    width: 100%;
-    max-width: 100%;
+
+    width:100%;
+
+    max-width:100%;
+
   }
 
   .search-section button {
-    width: 100%;
-    padding: 12px;
-    min-width: unset;
+
+    width:100%;
+
+    padding:12px;
+
+    min-width:unset;
+
   }
 
 }
 
 
 /* =========================================
-   Form Styling
+   CONTACT FORM
 ========================================= */
 
 .contact-form {
-  max-width: 600px;
-  margin: 0 auto;
+
+  max-width:600px;
+
+  margin:0 auto;
+
 }
 
 .contact-form label {
-  display: block;
-  font-weight: bold;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  color: #333;
+
+  display:block;
+
+  font-weight:bold;
+
+  margin-top:15px;
+
+  margin-bottom:5px;
+
+  color:#333;
+
 }
 
 .contact-form input,
 .contact-form textarea,
 .contact-form select {
 
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  background: #fff;
+  width:100%;
+
+  padding:12px 15px;
+
+  border:1px solid #ccc;
+
+  border-radius:6px;
+
+  font-size:1rem;
+
+  box-sizing:border-box;
+
+  background:#fff;
 
 }
 
@@ -130,470 +234,810 @@ gtag('config','G-RDLMQ0BNWF');
 .contact-form textarea:focus,
 .contact-form select:focus {
 
-  border-color: #003366;
-  outline: none;
-  box-shadow: 0 0 8px rgba(0,51,102,0.2);
+  border-color:#003366;
+
+  outline:none;
+
+  box-shadow:
+    0 0 8px rgba(0,51,102,0.2);
 
 }
 
-.contact-form .news-btn {
+.contact-form textarea {
 
-  margin-top: 15px;
-  width: 100%;
-  text-align: center;
+  resize:vertical;
 
 }
 
 
 /* =========================================
-   Required Star
+   REQUIRED STAR
 ========================================= */
 
 .required-star {
-  color: #d00000;
-}
 
-
-/* =========================================
-   Submit Button
-========================================= */
-
-.contact-form button:disabled {
-
-  opacity: 0.7;
-  cursor: not-allowed;
-  transform: none;
+  color:#d00000;
 
 }
 
 
 /* =========================================
-   Form Message
-========================================= */
-
-#formMessage {
-
-  display: none;
-  margin-top: 15px;
-  padding: 12px 15px;
-  border-radius: 6px;
-  font-weight: bold;
-  text-align: center;
-
-}
-
-#formMessage.success {
-
-  display: block;
-  background: #e8f5e9;
-  color: #1b5e20;
-  border: 1px solid #a5d6a7;
-
-}
-
-#formMessage.error {
-
-  display: block;
-  background: #ffebee;
-  color: #b71c1c;
-  border: 1px solid #ef9a9a;
-
-}
-
-
-/* =========================================
-   Feature Grid
-========================================= */
-
-.feature-grid {
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin: 20px 0;
-
-}
-
-.feature-item {
-
-  background: #f8f9fa;
-  padding: 20px;
-  border-radius: 10px;
-  border-left: 4px solid #003366;
-  transition: 0.3s;
-
-}
-
-.feature-item:hover {
-
-  background: #e9ecef;
-  transform: translateY(-3px);
-
-}
-
-.feature-item h3 {
-
-  margin-top: 0;
-  color: #003366;
-
-}
-
-
-/* =========================================
-   Common Buttons
+   BUTTON
 ========================================= */
 
 .news-btn {
 
-  display: inline-block;
-  background: #003366;
-  padding: 8px 20px;
-  border-radius: 5px;
-  color: #ffffff !important;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  border: none;
-  cursor: pointer;
+  display:inline-block;
+
+  background:#003366;
+
+  padding:10px 20px;
+
+  border-radius:5px;
+
+  color:#ffffff !important;
+
+  text-decoration:none;
+
+  font-weight:bold;
+
+  transition:0.3s;
+
+  border:none;
+
+  cursor:pointer;
 
 }
 
 .news-btn:hover {
 
-  background: #002244;
-  transform: scale(1.02);
+  background:#002244;
+
+  transform:scale(1.02);
+
+}
+
+.contact-form .news-btn {
+
+  margin-top:15px;
+
+  width:100%;
+
+  text-align:center;
+
+}
+
+.contact-form button:disabled {
+
+  opacity:0.7;
+
+  cursor:not-allowed;
+
+  transform:none;
 
 }
 
 
 /* =========================================
-   Important List
+   FORM MESSAGE
+========================================= */
+
+#formMessage {
+
+  display:none;
+
+  margin-top:15px;
+
+  padding:12px 15px;
+
+  border-radius:6px;
+
+  font-weight:bold;
+
+  text-align:center;
+
+}
+
+#formMessage.success {
+
+  display:block;
+
+  background:#e8f5e9;
+
+  color:#1b5e20;
+
+  border:1px solid #a5d6a7;
+
+}
+
+#formMessage.error {
+
+  display:block;
+
+  background:#ffebee;
+
+  color:#b71c1c;
+
+  border:1px solid #ef9a9a;
+
+}
+
+
+/* =========================================
+   IMPORTANT LIST
 ========================================= */
 
 .important-list {
 
-  list-style: none;
-  padding: 0;
+  list-style:none;
+
+  padding:0;
 
 }
 
 .important-list li {
 
-  padding: 6px 0;
-  border-bottom: 1px solid #eee;
+  padding:6px 0;
+
+  border-bottom:1px solid #eee;
 
 }
 
 .important-list li:last-child {
 
-  border-bottom: none;
+  border-bottom:none;
+
+}
+
+
+/* =========================================
+   SECURITY NOTE
+========================================= */
+
+.security-note {
+
+  margin-top:15px;
+
+  padding:10px 12px;
+
+  background:#f5f7fa;
+
+  border-left:4px solid #003366;
+
+  font-size:0.9rem;
+
+  color:#666;
 
 }
 
 </style>
-</head>
-<body>
-<div id="header-container"></div>
-<script defer="" src="/js/header-loader.js"></script>
 
+</head>
+
+
+<body>
 
 
 <!-- =========================================
-     1. BREADCRUMB
+     HEADER
 ========================================= -->
-<div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
-<a href="/" style="text-decoration:none; color:#003366;">
+
+<div id="header-container"></div>
+
+<script
+  defer
+  src="/js/header-loader.js">
+</script>
+
+
+<!-- =========================================
+     BREADCRUMB
+========================================= -->
+
+<div
+  id="breadcrumb"
+  style="
+    background:#f0f0f0;
+    padding:8px 20px;
+    font-size:0.9rem;
+    border-bottom:1px solid #ddd;
+  "
+>
+
+<a
+  href="/"
+  style="
+    text-decoration:none;
+    color:#003366;
+  "
+>
 
 🏠 Home
 
 </a>
 
- › 
+&nbsp;›&nbsp;
 
-<span style="color:#555; font-weight:bold;">
+<span
+  style="
+    color:#555;
+    font-weight:bold;
+  "
+>
 
 Contact / Suggestions
 
 </span>
+
 </div>
+
+
 <!-- =========================================
-     2. PAGE TITLE
+     PAGE TITLE
 ========================================= -->
+
 <section class="page-title">
+
 <div class="container">
-<h1>💬 Contact &amp; Suggestions</h1>
+
+<h1>
+💬 Contact &amp; Suggestions
+</h1>
+
 <p>
 Your valuable suggestions help us improve ITI Study Centre.
 </p>
+
 </div>
+
 </section>
+
+
 <!-- =========================================
-     3. SEARCH BOX
+     SEARCH
 ========================================= -->
+
 <section class="search-section container">
-<input placeholder="Search ITI Notes, Results, Topics..." type="text"/>
-<button type="button">
+
+<input
+  id="siteSearch"
+  type="text"
+  placeholder="Search ITI Notes, Results, Topics..."
+>
+
+<button
+  type="button"
+  id="searchButton"
+>
 
 🔍 Search
 
 </button>
+
 </section>
+
+
 <!-- =========================================
-     4. INTRODUCTION
+     INTRODUCTION
 ========================================= -->
+
 <section class="container">
+
 <div class="card">
-<h2>🙏 आपका सुझाव हमारे लिए महत्वपूर्ण है</h2>
+
+<h2>
+🙏 आपका सुझाव हमारे लिए महत्वपूर्ण है
+</h2>
+
 <p>
 
-यदि आपको किसी Topic में सुधार चाहिए, नया Trade जोड़ना है,
-किसी Link में समस्या है या वेबसाइट को बेहतर बनाने का कोई
-सुझाव देना चाहते हैं, तो कृपया अपना सुझाव नीचे लिखें।
+यदि आपको किसी Topic में सुधार चाहिए,
+किसी Link में समस्या है,
+वेबसाइट में कोई समस्या दिखाई देती है
+या वेबसाइट को बेहतर बनाने का कोई सुझाव देना चाहते हैं,
+तो कृपया अपना सुझाव नीचे भेजें।
 
 </p>
+
 </div>
+
 </section>
+
+
 <!-- =========================================
-     5. SUGGESTION FORM
+     SUGGESTION FORM
 ========================================= -->
+
 <section class="container">
+
 <div class="card">
-<h2>📝 Submit Your Suggestion</h2>
+
+<h2>
+📝 Submit Your Suggestion
+</h2>
+
 <p>
 
-अपने सुझाव नीचे लिखें। आपका सुझाव पहले Review के लिए जाएगा।
-Admin द्वारा Approve किए जाने के बाद ही उसे वेबसाइट पर प्रदर्शित किया जाएगा।
+आपका सुझाव पहले <strong>Pending</strong> स्थिति में जाएगा।
+Admin द्वारा Review करने के बाद ही
+उसे वेबसाइट पर प्रदर्शित किया जाएगा।
 
 </p>
-<form class="contact-form" id="suggestionForm">
-<!-- NAME -->
+
+
+<form
+  class="contact-form"
+  id="suggestionForm"
+>
+
+
+<!-- =====================================
+     NAME - REQUIRED
+===================================== -->
+
 <label for="name">
 
-Your Name <span class="required-star">*</span>
+Your Name
+
+<span class="required-star">*</span>
+
 </label>
-<input id="name" maxlength="100" name="name" placeholder="अपना नाम लिखें..." required="" type="text"/>
-<!-- EMAIL -->
+
+<input
+  id="name"
+  name="name"
+  type="text"
+  maxlength="100"
+  placeholder="अपना नाम लिखें..."
+  autocomplete="name"
+  required
+>
+
+
+<!-- =====================================
+     EMAIL - OPTIONAL
+===================================== -->
+
 <label for="email">
 
-Your Email <span style="font-weight:normal; color:#777;">
+Your Email
+
+<span
+  style="
+    font-weight:normal;
+    color:#777;
+  "
+>
 (Optional)
 </span>
+
 </label>
-<input id="email" maxlength="150" name="email" placeholder="अपना Email लिखें..." type="email"/>
-<!-- CATEGORY -->
+
+<input
+  id="email"
+  name="email"
+  type="email"
+  maxlength="150"
+  placeholder="अपना Email लिखें..."
+  autocomplete="email"
+>
+
+
+<!-- =====================================
+     CATEGORY - REQUIRED
+===================================== -->
+
 <label for="category">
 
-Suggestion Category <span class="required-star">*</span>
+Suggestion Category
+
+<span class="required-star">*</span>
+
 </label>
-<select id="category" name="category" required="">
+
+<select
+  id="category"
+  name="category"
+  required
+>
+
 <option value="">
 -- सुझाव की Category चुनें --
 </option>
+
 <option value="Study Material / Notes">
 📚 Study Material / Notes
 </option>
-<option value="Syllabus / Trade">
-📝 Syllabus / Trade
-</option>
+
 <option value="Broken Link">
 🔗 Broken Link
 </option>
+
 <option value="Wrong Information / Correction">
 ❌ गलत जानकारी / Correction
 </option>
+
 <option value="New Topic">
 ➕ नया Topic जोड़ना
 </option>
-<option value="New Trade">
-➕ नया Trade जोड़ना
-</option>
+
 <option value="Website Problem">
 🌐 Website Problem
 </option>
+
 <option value="General Suggestion">
 💡 General Suggestion
 </option>
+
 <option value="Other">
 📌 Other
 </option>
+
 </select>
-<!-- MESSAGE -->
+
+
+<!-- =====================================
+     MESSAGE - REQUIRED
+===================================== -->
+
 <label for="message">
 
-Your Suggestion <span class="required-star">*</span>
+Your Suggestion
+
+<span class="required-star">*</span>
+
 </label>
-<textarea id="message" maxlength="2000" name="message" placeholder="अपना सुझाव यहाँ लिखें..." required="" rows="5"></textarea>
-<!-- SUBMIT -->
-<button class="news-btn" id="submitSuggestion" type="submit">
+
+<textarea
+  id="message"
+  name="message"
+  maxlength="2000"
+  placeholder="अपना सुझाव यहाँ लिखें..."
+  rows="6"
+  required
+></textarea>
+
+
+<!-- =====================================
+     SUBMIT
+===================================== -->
+
+<button
+  class="news-btn"
+  id="submitSuggestion"
+  type="submit"
+>
 
 📤 Submit Suggestion →
 
 </button>
+
+
 </form>
-<!-- SUCCESS / ERROR MESSAGE -->
+
+
+<!-- =====================================
+     SUCCESS / ERROR
+===================================== -->
+
 <div id="formMessage"></div>
-<p style="margin-top:15px; font-size:0.9rem; color:#888;">
+
+
+<div class="security-note">
+
+🔒 आपका सुझाव सुरक्षित रूप से Firebase database में
+Pending status के साथ भेजा जाएगा।
+आपको कोई OTP या Login करने की आवश्यकता नहीं है।
+
+</div>
+
+
+<p
+  style="
+    margin-top:15px;
+    font-size:0.9rem;
+    color:#888;
+  "
+>
 
 ⚠️ <strong>नोट:</strong>
 
-नाम और Suggestion Category आवश्यक हैं।
+नाम, Category और Suggestion आवश्यक हैं।
 Email देना optional है।
 
-आपका सुझाव पहले Pending स्थिति में जाएगा।
-Admin द्वारा Review और Approval के बाद ही
-उसे वेबसाइट पर प्रदर्शित किया जाएगा।
-
 </p>
+
 </div>
+
 </section>
+
+
 <!-- =========================================
-     6. IMPORTANT NOTE
+     IMPORTANT NOTE
 ========================================= -->
+
 <section class="container">
+
 <div class="card">
-<h2>📢 Important Note</h2>
+
+<h2>
+📢 Important Note
+</h2>
+
 <ul class="important-list">
+
 <li>
 ✔ केवल ITI एवं Engineering से संबंधित सुझाव भेजें।
 </li>
+
 <li>
 ✔ Spam या अनुचित संदेश स्वीकार नहीं किए जाएंगे।
 </li>
+
 <li>
 ✔ उपयोगी सुझावों को भविष्य के अपडेट में शामिल किया जा सकता है।
 </li>
+
 <li>
-✔ व्यक्तिगत जानकारी (मोबाइल, आधार, बैंक विवरण आदि) साझा न करें।
+✔ व्यक्तिगत जानकारी जैसे Aadhaar, Bank Details,
+Password या OTP साझा न करें।
 </li>
+
 </ul>
+
 </div>
+
 </section>
+
+
 <!-- =========================================
-     7. WHY YOUR SUGGESTION MATTERS
+     WHY YOUR SUGGESTION MATTERS
 ========================================= -->
+
 <section class="container">
+
 <div class="card">
-<h2>⭐ Why Your Suggestion Matters?</h2>
+
+<h2>
+⭐ Why Your Suggestion Matters?
+</h2>
+
 <p>
 
 ITI Study Centre का उद्देश्य विद्यार्थियों की वास्तविक
 आवश्यकताओं के अनुसार अध्ययन सामग्री उपलब्ध कराना है।
-आपके सुझाव हमें वेबसाइट को और अधिक उपयोगी, सरल एवं बेहतर
-बनाने में सहायता करते हैं।
+आपके सुझाव हमें वेबसाइट को अधिक उपयोगी,
+सरल एवं बेहतर बनाने में सहायता करते हैं।
 
 </p>
+
 <p>
 
-प्रत्येक उपयोगी सुझाव का मूल्यांकन किया जाएगा और आवश्यकता
-होने पर उसे भविष्य के अपडेट में शामिल किया जाएगा।
+प्रत्येक उपयोगी सुझाव का मूल्यांकन किया जाएगा और
+आवश्यकता होने पर उसे भविष्य के अपडेट में शामिल किया जाएगा।
 
 </p>
+
 </div>
+
 </section>
+
+
 <!-- =========================================
-     8. FUTURE FEATURE
+     FUTURE FEATURE
 ========================================= -->
+
 <section class="container">
+
 <div class="card">
-<h2>🚀 Future Feature</h2>
+
+<h2>
+🚀 Suggestion Review System
+</h2>
+
 <p>
 
-आपके सुझाव पहले Pending स्थिति में सुरक्षित रूप से Save किए जाएंगे।
-भविष्य में Admin Panel के माध्यम से इन्हें Review, Approve,
-Reject या Delete किया जा सकेगा।
+आपके सुझाव पहले Pending स्थिति में सुरक्षित रूप से
+Save किए जाएंगे।
+
+Admin Panel से बाद में:
+
+<strong>
+Review → Approve → Reject → Delete
+</strong>
+
+किया जा सकेगा।
 
 </p>
+
 </div>
+
 </section>
+
+
 <!-- =========================================
-     9. DISCLAIMER
+     DISCLAIMER
 ========================================= -->
+
 <section class="container">
+
 <div class="card">
-<h2>⚠ Disclaimer</h2>
+
+<h2>
+⚠ Disclaimer
+</h2>
+
 <p>
 
-ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है।
-यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से
-प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए
+ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला
+प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की
+अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है।
+आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए
 संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।
 
 </p>
+
 </div>
+
 </section>
+
+
 <!-- =========================================
-     10. FOOTER
+     FOOTER
 ========================================= -->
-<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
-<a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">
 
+<footer
+  style="
+    background:#222;
+    color:#ccc;
+    padding:20px 15px;
+    text-align:center;
+    margin-top:40px;
+    border-top:4px solid #003366;
+  "
+>
+
+<div
+  style="
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px 20px;
+    margin-bottom:10px;
+  "
+>
+
+<a
+  href="/disclaimer.html"
+  style="color:#aaa;text-decoration:none;"
+>
 Disclaimer
-
 </a>
-<a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">
 
+<a
+  href="/privacy-policy.html"
+  style="color:#aaa;text-decoration:none;"
+>
 Privacy Policy
-
 </a>
-<a href="/terms.html" style="color:#aaa; text-decoration:none;">
 
+<a
+  href="/terms.html"
+  style="color:#aaa;text-decoration:none;"
+>
 Terms
-
 </a>
-<a href="/contact.html" style="color:#aaa; text-decoration:none;">
 
+<a
+  href="/contact.html"
+  style="color:#aaa;text-decoration:none;"
+>
 Contact
-
 </a>
+
 </div>
-<p style="margin:10px 0 0 0; color:#888;">
+
+
+<p
+  id="footerYear"
+  style="
+    margin:10px 0 0 0;
+    color:#888;
+  "
+>
 
 © 2026 ITI Study Centre. All Rights Reserved.
 
 </p>
+
 </footer>
+
+
 <!-- =========================================
-     11. SCROLL TO TOP
+     SCROLL TO TOP
 ========================================= -->
-<button id="scrollTop" style="position:fixed; bottom:20px; right:20px; background:#003366; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;" title="Go to Top">
+
+<button
+  id="scrollTop"
+  style="
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#003366;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+  "
+  title="Go to Top"
+>
 
 ⬆
 
 </button>
-<script src="js/main.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
 <!-- =========================================
-     12. FOOTER YEAR
+     FOOTER YEAR
 ========================================= -->
+
 <script>
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener(
+  "DOMContentLoaded",
+  function() {
 
-  const year = document.querySelector('footer p');
+    const year =
+      document.getElementById("footerYear");
 
-  if (year) {
+    if (year) {
 
-    year.textContent =
-      "© " + new Date().getFullYear() +
-      " ITI Study Centre. All Rights Reserved.";
+      year.textContent =
+        "© " +
+        new Date().getFullYear() +
+        " ITI Study Centre. All Rights Reserved.";
+
+    }
 
   }
-
-});
+);
 
 </script>
+
+
 <!-- =========================================
-     13. FIREBASE FIRESTORE
+     FIREBASE + APP CHECK + FIRESTORE
 ========================================= -->
+
 <script type="module">
 
-/* -----------------------------------------
-   Firebase SDK
------------------------------------------ */
+/* =========================================
+   FIREBASE SDK
+========================================= */
 
-import { initializeApp }
+import {
 
-from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+  initializeApp
+
+}
+
+from
+"https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+
+
+import {
+
+  initializeAppCheck,
+  ReCaptchaV3Provider
+
+}
+
+from
+"https://www.gstatic.com/firebasejs/12.17.1/firebase-app-check.js";
 
 
 import {
@@ -605,12 +1049,13 @@ import {
 
 }
 
-from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
+from
+"https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
 
-/* -----------------------------------------
-   Firebase Configuration
------------------------------------------ */
+/* =========================================
+   FIREBASE CONFIGURATION
+========================================= */
 
 const firebaseConfig = {
 
@@ -635,56 +1080,126 @@ const firebaseConfig = {
 };
 
 
-/* -----------------------------------------
-   Initialize Firebase
------------------------------------------ */
+/* =========================================
+   INITIALIZE FIREBASE
+========================================= */
 
 const app =
   initializeApp(firebaseConfig);
 
 
+/* =========================================
+   FIREBASE APP CHECK
+   reCAPTCHA v3
+========================================= */
+
+const appCheck =
+  initializeAppCheck(
+
+    app,
+
+    {
+
+      provider:
+        new ReCaptchaV3Provider(
+
+          "6LexjYctAAAAAJdA17IjqdkfJrecHtmqnd-DoODv"
+
+        ),
+
+      isTokenAutoRefreshEnabled:
+        true
+
+    }
+
+  );
+
+
+/* =========================================
+   INITIALIZE FIRESTORE
+========================================= */
+
 const db =
   getFirestore(app);
 
 
-/* -----------------------------------------
-   Form Elements
------------------------------------------ */
+/* =========================================
+   FORM ELEMENTS
+========================================= */
 
 const form =
-  document.getElementById("suggestionForm");
+  document.getElementById(
+    "suggestionForm"
+  );
 
 const nameInput =
-  document.getElementById("name");
+  document.getElementById(
+    "name"
+  );
 
 const emailInput =
-  document.getElementById("email");
+  document.getElementById(
+    "email"
+  );
 
 const categoryInput =
-  document.getElementById("category");
+  document.getElementById(
+    "category"
+  );
 
 const messageInput =
-  document.getElementById("message");
+  document.getElementById(
+    "message"
+  );
 
 const submitButton =
-  document.getElementById("submitSuggestion");
+  document.getElementById(
+    "submitSuggestion"
+  );
 
 const formMessage =
-  document.getElementById("formMessage");
+  document.getElementById(
+    "formMessage"
+  );
 
 
-/* -----------------------------------------
-   Submit Form
------------------------------------------ */
+/* =========================================
+   SHOW MESSAGE FUNCTION
+========================================= */
+
+function showMessage(
+  type,
+  message
+) {
+
+  formMessage.className =
+    type;
+
+  formMessage.textContent =
+    message;
+
+  formMessage.style.display =
+    "block";
+
+}
+
+
+/* =========================================
+   FORM SUBMIT
+========================================= */
 
 form.addEventListener(
+
   "submit",
+
   async function(event) {
 
     event.preventDefault();
 
 
-    /* Get Values */
+    /* =====================================
+       GET VALUES
+    ===================================== */
 
     const name =
       nameInput.value.trim();
@@ -699,20 +1214,18 @@ form.addEventListener(
       messageInput.value.trim();
 
 
-    /* ---------------------------------------
-       Validation
-    --------------------------------------- */
+    /* =====================================
+       VALIDATION
+    ===================================== */
 
     if (!name) {
 
-      formMessage.className =
-        "error";
+      showMessage(
+        "error",
+        "⚠️ कृपया अपना नाम लिखें।"
+      );
 
-      formMessage.textContent =
-        "⚠️ कृपया अपना नाम लिखें।";
-
-      formMessage.style.display =
-        "block";
+      nameInput.focus();
 
       return;
 
@@ -721,14 +1234,12 @@ form.addEventListener(
 
     if (!category) {
 
-      formMessage.className =
-        "error";
+      showMessage(
+        "error",
+        "⚠️ कृपया Suggestion Category चुनें।"
+      );
 
-      formMessage.textContent =
-        "⚠️ कृपया Suggestion Category चुनें।";
-
-      formMessage.style.display =
-        "block";
+      categoryInput.focus();
 
       return;
 
@@ -737,30 +1248,44 @@ form.addEventListener(
 
     if (!message) {
 
-      formMessage.className =
-        "error";
+      showMessage(
+        "error",
+        "⚠️ कृपया अपना सुझाव लिखें।"
+      );
 
-      formMessage.textContent =
-        "⚠️ कृपया अपना सुझाव लिखें।";
-
-      formMessage.style.display =
-        "block";
+      messageInput.focus();
 
       return;
 
     }
 
 
-    /* ---------------------------------------
-       Loading
-    --------------------------------------- */
+    if (
+      email &&
+      !emailInput.checkValidity()
+    ) {
+
+      showMessage(
+        "error",
+        "⚠️ कृपया सही Email Address डालें।"
+      );
+
+      emailInput.focus();
+
+      return;
+
+    }
+
+
+    /* =====================================
+       DISABLE BUTTON
+    ===================================== */
 
     submitButton.disabled =
       true;
 
     submitButton.textContent =
       "⏳ Sending...";
-
 
     formMessage.style.display =
       "none";
@@ -769,9 +1294,9 @@ form.addEventListener(
     try {
 
 
-      /* -------------------------------------
-         Save to Firestore
-      ------------------------------------- */
+      /* ===================================
+         FIRESTORE DOCUMENT
+      =================================== */
 
       await addDoc(
 
@@ -782,25 +1307,17 @@ form.addEventListener(
 
         {
 
-          /* Visitor Information */
-
           name:
             name,
 
           email:
             email || "",
 
-
-          /* Suggestion Information */
-
           category:
             category,
 
           message:
             message,
-
-
-          /* Automatic System Information */
 
           page:
             window.location.pathname,
@@ -819,23 +1336,35 @@ form.addEventListener(
       );
 
 
-      /* -------------------------------------
-         Success
-      ------------------------------------- */
+      /* ===================================
+         SUCCESS
+      =================================== */
 
-      formMessage.className =
-        "success";
+      showMessage(
 
-      formMessage.textContent =
-        "✅ आपका सुझाव सफलतापूर्वक भेज दिया गया है। यह अभी Pending Review में है।";
+        "success",
 
-      formMessage.style.display =
-        "block";
+        "✅ आपका सुझाव सफलतापूर्वक भेज दिया गया है। आपका सुझाव अभी Pending Review में है।"
+
+      );
 
 
-      /* Clear Form */
+      /* ===================================
+         RESET FORM
+      =================================== */
 
       form.reset();
+
+
+      /* Scroll to message */
+
+      formMessage.scrollIntoView({
+
+        behavior:"smooth",
+
+        block:"center"
+
+      });
 
 
     }
@@ -849,21 +1378,20 @@ form.addEventListener(
       );
 
 
-      formMessage.className =
-        "error";
+      showMessage(
 
-      formMessage.textContent =
-        "❌ सुझाव भेजने में समस्या हुई। कृपया कुछ समय बाद पुनः प्रयास करें।";
+        "error",
 
-      formMessage.style.display =
-        "block";
+        "❌ सुझाव भेजने में समस्या हुई। कृपया कुछ समय बाद पुनः प्रयास करें।"
+
+      );
 
     }
 
 
-    /* -------------------------------------
-       Reset Button
-    ------------------------------------- */
+    /* ===================================
+       ENABLE BUTTON
+    =================================== */
 
     submitButton.disabled =
       false;
@@ -875,6 +1403,83 @@ form.addEventListener(
 
 );
 
+
+/* =========================================
+   SEARCH BUTTON
+========================================= */
+
+const searchButton =
+  document.getElementById(
+    "searchButton"
+  );
+
+const siteSearch =
+  document.getElementById(
+    "siteSearch"
+  );
+
+
+if (searchButton) {
+
+  searchButton.addEventListener(
+
+    "click",
+
+    function() {
+
+      const query =
+        siteSearch.value.trim();
+
+      if (!query) {
+
+        siteSearch.focus();
+
+        return;
+
+      }
+
+      window.location.href =
+        "/search.html?q=" +
+        encodeURIComponent(query);
+
+    }
+
+  );
+
+}
+
+
+/* =========================================
+   ENTER KEY SEARCH
+========================================= */
+
+if (siteSearch) {
+
+  siteSearch.addEventListener(
+
+    "keydown",
+
+    function(event) {
+
+      if (
+        event.key === "Enter"
+      ) {
+
+        event.preventDefault();
+
+        searchButton.click();
+
+      }
+
+    }
+
+  );
+
+}
+
 </script>
+
+
 </body>
-</html>
+
+  </html>
