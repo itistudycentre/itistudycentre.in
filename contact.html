@@ -1,57 +1,21 @@
 <!DOCTYPE html>
+
 <html lang="hi">
-
 <head>
-
-<meta charset="utf-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact Us | ITI Study Centre</title>
-
-<meta
-  name="description"
-  content="Contact ITI Study Centre - Share your valuable suggestions to improve ITI Study Centre."
->
-
-<meta
-  name="keywords"
-  content="Contact ITI Study Centre, Suggestions, Feedback, ITI Education"
->
-
-<meta
-  name="author"
-  content="ITI Study Centre"
->
-
-<link
-  href="images/favicon.png"
-  rel="icon"
->
-
-<link
-  href="css/style.css"
-  rel="stylesheet"
->
-
-<link
-  href="https://www.itistudycentre.in/contact.html"
-  rel="canonical"
->
-
-
+<meta content="Contact ITI Study Centre - Share your valuable suggestions to improve ITI Study Centre." name="description"/>
+<meta content="Contact ITI Study Centre, Suggestions, Feedback, ITI Education" name="keywords"/>
+<meta content="ITI Study Centre" name="author"/>
+<link href="images/favicon.png" rel="icon"/>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://www.itistudycentre.in/contact.html" rel="canonical"/>
 <!-- ================================
      GOOGLE ANALYTICS
 ================================ -->
-
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF">
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF">
 </script>
-
 <script>
 
 window.dataLayer = window.dataLayer || [];
@@ -65,8 +29,6 @@ gtag('js', new Date());
 gtag('config', 'G-RDLMQ0BNWF');
 
 </script>
-
-
 <style>
 
 /* =========================================
@@ -411,124 +373,77 @@ gtag('config', 'G-RDLMQ0BNWF');
 }
 
 </style>
-
 </head>
-
-
 <body>
-
+<div id="header-container"></div>
+<script defer="" src="/js/header-loader.js"></script>
 
 <!-- =========================================
      HEADER
 ========================================= -->
 
-<div id="header-container"></div>
-
-<script
-  defer
-  src="/js/header-loader.js">
-</script>
-
 
 <!-- =========================================
      BREADCRUMB
 ========================================= -->
-
-<div
-  id="breadcrumb"
-  style="
+<div id="breadcrumb" style="
     background:#f0f0f0;
     padding:8px 20px;
     font-size:0.9rem;
     border-bottom:1px solid #ddd;
-  "
->
-
-<a
-  href="/"
-  style="
+  ">
+<a href="/" style="
     text-decoration:none;
     color:#003366;
-  "
->
+  ">
 
 🏠 Home
 
 </a>
 
-&nbsp;›&nbsp;
+ › 
 
-<span
-  style="
+<span style="
     color:#555;
     font-weight:bold;
-  "
->
+  ">
 
 Contact / Suggestions
 
 </span>
-
 </div>
-
-
 <!-- =========================================
      PAGE TITLE
 ========================================= -->
-
 <section class="page-title">
-
 <div class="container">
-
 <h1>
 💬 Contact &amp; Suggestions
 </h1>
-
 <p>
 Your valuable suggestions help us improve ITI Study Centre.
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      SEARCH
 ========================================= -->
-
 <section class="search-section container">
-
-<input
-  id="siteSearch"
-  type="text"
-  placeholder="Search ITI Notes, Results, Topics..."
->
-
-<button
-  type="button"
-  id="searchButton"
->
+<input id="siteSearch" placeholder="Search ITI Notes, Results, Topics..." type="text"/>
+<button id="searchButton" type="button">
 
 🔍 Search
 
 </button>
-
 </section>
-
-
 <!-- =========================================
      INTRODUCTION
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>
 🙏 आपका सुझाव हमारे लिए महत्वपूर्ण है
 </h2>
-
 <p>
 
 यदि आपको किसी Topic में सुधार चाहिए,
@@ -538,24 +453,16 @@ Your valuable suggestions help us improve ITI Study Centre.
 तो कृपया अपना सुझाव नीचे भेजें।
 
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      SUGGESTION FORM
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>
 📝 Submit Your Suggestion
 </h2>
-
 <p>
 
 आपका सुझाव पहले <strong>Pending</strong> स्थिति में जाएगा।
@@ -563,166 +470,90 @@ Admin द्वारा Review करने के बाद ही
 उसे वेबसाइट पर प्रदर्शित किया जाएगा।
 
 </p>
-
-
-<form
-  class="contact-form"
-  id="suggestionForm"
->
-
-
+<form class="contact-form" id="suggestionForm">
 <!-- =====================================
      NAME - REQUIRED
 ===================================== -->
-
 <label for="name">
 
 Your Name
 
 <span class="required-star">*</span>
-
 </label>
-
-<input
-  id="name"
-  name="name"
-  type="text"
-  maxlength="100"
-  placeholder="अपना नाम लिखें..."
-  autocomplete="name"
-  required
->
-
-
+<input autocomplete="name" id="name" maxlength="100" name="name" placeholder="अपना नाम लिखें..." required="" type="text"/>
 <!-- =====================================
      EMAIL - OPTIONAL
 ===================================== -->
-
 <label for="email">
 
 Your Email
 
-<span
-  style="
+<span style="
     font-weight:normal;
     color:#777;
-  "
->
+  ">
 (Optional)
 </span>
-
 </label>
-
-<input
-  id="email"
-  name="email"
-  type="email"
-  maxlength="150"
-  placeholder="अपना Email लिखें..."
-  autocomplete="email"
->
-
-
+<input autocomplete="email" id="email" maxlength="150" name="email" placeholder="अपना Email लिखें..." type="email"/>
 <!-- =====================================
      CATEGORY - REQUIRED
 ===================================== -->
-
 <label for="category">
 
 Suggestion Category
 
 <span class="required-star">*</span>
-
 </label>
-
-<select
-  id="category"
-  name="category"
-  required
->
-
+<select id="category" name="category" required="">
 <option value="">
 -- सुझाव की Category चुनें --
 </option>
-
 <option value="Study Material / Notes">
 📚 Study Material / Notes
 </option>
-
 <option value="Broken Link">
 🔗 Broken Link
 </option>
-
 <option value="Wrong Information / Correction">
 ❌ गलत जानकारी / Correction
 </option>
-
 <option value="New Topic">
 ➕ नया Topic जोड़ना
 </option>
-
 <option value="Website Problem">
 🌐 Website Problem
 </option>
-
 <option value="General Suggestion">
 💡 General Suggestion
 </option>
-
 <option value="Other">
 📌 Other
 </option>
-
 </select>
-
-
 <!-- =====================================
      MESSAGE - REQUIRED
 ===================================== -->
-
 <label for="message">
 
 Your Suggestion
 
 <span class="required-star">*</span>
-
 </label>
-
-<textarea
-  id="message"
-  name="message"
-  maxlength="2000"
-  placeholder="अपना सुझाव यहाँ लिखें..."
-  rows="6"
-  required
-></textarea>
-
-
+<textarea id="message" maxlength="2000" name="message" placeholder="अपना सुझाव यहाँ लिखें..." required="" rows="6"></textarea>
 <!-- =====================================
      SUBMIT
 ===================================== -->
-
-<button
-  class="news-btn"
-  id="submitSuggestion"
-  type="submit"
->
+<button class="news-btn" id="submitSuggestion" type="submit">
 
 📤 Submit Suggestion →
 
 </button>
-
-
 </form>
-
-
 <!-- =====================================
      SUCCESS / ERROR
 ===================================== -->
-
 <div id="formMessage"></div>
-
-
 <div class="security-note">
 
 🔒 आपका सुझाव सुरक्षित रूप से Firebase database में
@@ -730,15 +561,11 @@ Pending status के साथ भेजा जाएगा।
 आपको कोई OTP या Login करने की आवश्यकता नहीं है।
 
 </div>
-
-
-<p
-  style="
+<p style="
     margin-top:15px;
     font-size:0.9rem;
     color:#888;
-  "
->
+  ">
 
 ⚠️ <strong>नोट:</strong>
 
@@ -746,62 +573,41 @@ Pending status के साथ भेजा जाएगा।
 Email देना optional है।
 
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      IMPORTANT NOTE
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>
 📢 Important Note
 </h2>
-
 <ul class="important-list">
-
 <li>
 ✔ केवल ITI एवं Engineering से संबंधित सुझाव भेजें।
 </li>
-
 <li>
 ✔ Spam या अनुचित संदेश स्वीकार नहीं किए जाएंगे।
 </li>
-
 <li>
 ✔ उपयोगी सुझावों को भविष्य के अपडेट में शामिल किया जा सकता है।
 </li>
-
 <li>
 ✔ व्यक्तिगत जानकारी जैसे Aadhaar, Bank Details,
 Password या OTP साझा न करें।
 </li>
-
 </ul>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      WHY YOUR SUGGESTION MATTERS
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>
 ⭐ Why Your Suggestion Matters?
 </h2>
-
 <p>
 
 ITI Study Centre का उद्देश्य विद्यार्थियों की वास्तविक
@@ -810,31 +616,22 @@ ITI Study Centre का उद्देश्य विद्यार्थि�
 सरल एवं बेहतर बनाने में सहायता करते हैं।
 
 </p>
-
 <p>
 
 प्रत्येक उपयोगी सुझाव का मूल्यांकन किया जाएगा और
 आवश्यकता होने पर उसे भविष्य के अपडेट में शामिल किया जाएगा।
 
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      FUTURE FEATURE
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>
 🚀 Suggestion Review System
 </h2>
-
 <p>
 
 आपके सुझाव पहले Pending स्थिति में सुरक्षित रूप से
@@ -849,24 +646,16 @@ Review → Approve → Reject → Delete
 किया जा सकेगा।
 
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      DISCLAIMER
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>
 ⚠ Disclaimer
 </h2>
-
 <p>
 
 ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला
@@ -876,90 +665,52 @@ ITI Study Centre एक शैक्षणिक एवं सूचना प�
 संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।
 
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      FOOTER
 ========================================= -->
-
-<footer
-  style="
+<footer style="
     background:#222;
     color:#ccc;
     padding:20px 15px;
     text-align:center;
     margin-top:40px;
     border-top:4px solid #003366;
-  "
->
-
-<div
-  style="
+  ">
+<div style="
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     gap:10px 20px;
     margin-bottom:10px;
-  "
->
-
-<a
-  href="/disclaimer.html"
-  style="color:#aaa;text-decoration:none;"
->
+  ">
+<a href="/disclaimer.html" style="color:#aaa;text-decoration:none;">
 Disclaimer
 </a>
-
-<a
-  href="/privacy-policy.html"
-  style="color:#aaa;text-decoration:none;"
->
+<a href="/privacy-policy.html" style="color:#aaa;text-decoration:none;">
 Privacy Policy
 </a>
-
-<a
-  href="/terms.html"
-  style="color:#aaa;text-decoration:none;"
->
+<a href="/terms.html" style="color:#aaa;text-decoration:none;">
 Terms
 </a>
-
-<a
-  href="/contact.html"
-  style="color:#aaa;text-decoration:none;"
->
+<a href="/contact.html" style="color:#aaa;text-decoration:none;">
 Contact
 </a>
-
 </div>
-
-
-<p
-  id="footerYear"
-  style="
+<p id="footerYear" style="
     margin:10px 0 0 0;
     color:#888;
-  "
->
+  ">
 
 © 2026 ITI Study Centre. All Rights Reserved.
 
 </p>
-
 </footer>
-
-
 <!-- =========================================
      SCROLL TO TOP
 ========================================= -->
-
-<button
-  id="scrollTop"
-  style="
+<button id="scrollTop" style="
     position:fixed;
     bottom:20px;
     right:20px;
@@ -969,22 +720,15 @@ Contact
     padding:10px 15px;
     border-radius:5px;
     cursor:pointer;
-  "
-  title="Go to Top"
->
+  " title="Go to Top">
 
 ⬆
 
 </button>
-
-
 <script src="/js/main.js"></script>
-
-
 <!-- =========================================
      FOOTER YEAR
 ========================================= -->
-
 <script>
 
 document.addEventListener(
@@ -1007,12 +751,9 @@ document.addEventListener(
 );
 
 </script>
-
-
 <!-- =========================================
      FIREBASE + APP CHECK + FIRESTORE
 ========================================= -->
-
 <script type="module">
 
 /* =========================================
@@ -1478,8 +1219,5 @@ if (siteSearch) {
 }
 
 </script>
-
-
 </body>
-
-  </html>
+</html>
