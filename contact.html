@@ -2,30 +2,17 @@
 
 <html lang="hi">
 <head>
-
 <meta charset="utf-8"/>
-
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-
 <title>Contact Us | ITI Study Centre</title>
-
 <meta content="Contact ITI Study Centre - Share your valuable suggestions to improve ITI Study Centre." name="description"/>
-
 <meta content="Contact ITI Study Centre, Suggestions, Feedback, ITI Education" name="keywords"/>
-
 <meta content="ITI Study Centre" name="author"/>
-
 <link href="images/favicon.png" rel="icon"/>
-
 <link href="css/style.css" rel="stylesheet"/>
-
 <link href="https://www.itistudycentre.in/contact.html" rel="canonical"/>
-
-
 <!-- Google Analytics -->
-
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF"></script>
-
 <script>
 
 window.dataLayer = window.dataLayer || [];
@@ -39,8 +26,6 @@ gtag('js', new Date());
 gtag('config','G-RDLMQ0BNWF');
 
 </script>
-
-
 <style>
 
 /* =========================================
@@ -306,92 +291,59 @@ gtag('config','G-RDLMQ0BNWF');
 }
 
 </style>
-
 </head>
-
-
 <body>
-
-
 <div id="header-container"></div>
-
 <script defer="" src="/js/header-loader.js"></script>
+
 
 
 <!-- =========================================
      1. BREADCRUMB
 ========================================= -->
-
-<div id="breadcrumb"
-style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
-
-<a href="/"
-style="text-decoration:none; color:#003366;">
+<div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
+<a href="/" style="text-decoration:none; color:#003366;">
 
 🏠 Home
 
 </a>
 
-&nbsp;›&nbsp;
+ › 
 
 <span style="color:#555; font-weight:bold;">
 
 Contact / Suggestions
 
 </span>
-
 </div>
-
-
 <!-- =========================================
      2. PAGE TITLE
 ========================================= -->
-
 <section class="page-title">
-
 <div class="container">
-
 <h1>💬 Contact &amp; Suggestions</h1>
-
 <p>
 Your valuable suggestions help us improve ITI Study Centre.
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      3. SEARCH BOX
 ========================================= -->
-
 <section class="search-section container">
-
-<input
-placeholder="Search ITI Notes, Results, Topics..."
-type="text"
-/>
-
+<input placeholder="Search ITI Notes, Results, Topics..." type="text"/>
 <button type="button">
 
 🔍 Search
 
 </button>
-
 </section>
-
-
 <!-- =========================================
      4. INTRODUCTION
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>🙏 आपका सुझाव हमारे लिए महत्वपूर्ण है</h2>
-
 <p>
 
 यदि आपको किसी Topic में सुधार चाहिए, नया Trade जोड़ना है,
@@ -399,169 +351,87 @@ type="text"
 सुझाव देना चाहते हैं, तो कृपया अपना सुझाव नीचे लिखें।
 
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      5. SUGGESTION FORM
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>📝 Submit Your Suggestion</h2>
-
 <p>
 
 अपने सुझाव नीचे लिखें। आपका सुझाव पहले Review के लिए जाएगा।
 Admin द्वारा Approve किए जाने के बाद ही उसे वेबसाइट पर प्रदर्शित किया जाएगा।
 
 </p>
-
-
-<form
-id="suggestionForm"
-class="contact-form"
->
-
-
+<form class="contact-form" id="suggestionForm">
 <!-- NAME -->
-
 <label for="name">
 
 Your Name <span class="required-star">*</span>
-
 </label>
-
-<input
-id="name"
-name="name"
-placeholder="अपना नाम लिखें..."
-type="text"
-maxlength="100"
-required
-/>
-
-
+<input id="name" maxlength="100" name="name" placeholder="अपना नाम लिखें..." required="" type="text"/>
 <!-- EMAIL -->
-
 <label for="email">
 
 Your Email <span style="font-weight:normal; color:#777;">
 (Optional)
 </span>
-
 </label>
-
-<input
-id="email"
-name="email"
-placeholder="अपना Email लिखें..."
-type="email"
-maxlength="150"
-/>
-
-
+<input id="email" maxlength="150" name="email" placeholder="अपना Email लिखें..." type="email"/>
 <!-- CATEGORY -->
-
 <label for="category">
 
 Suggestion Category <span class="required-star">*</span>
-
 </label>
-
-<select
-id="category"
-name="category"
-required
->
-
+<select id="category" name="category" required="">
 <option value="">
 -- सुझाव की Category चुनें --
 </option>
-
 <option value="Study Material / Notes">
 📚 Study Material / Notes
 </option>
-
 <option value="Syllabus / Trade">
 📝 Syllabus / Trade
 </option>
-
 <option value="Broken Link">
 🔗 Broken Link
 </option>
-
 <option value="Wrong Information / Correction">
 ❌ गलत जानकारी / Correction
 </option>
-
 <option value="New Topic">
 ➕ नया Topic जोड़ना
 </option>
-
 <option value="New Trade">
 ➕ नया Trade जोड़ना
 </option>
-
 <option value="Website Problem">
 🌐 Website Problem
 </option>
-
 <option value="General Suggestion">
 💡 General Suggestion
 </option>
-
 <option value="Other">
 📌 Other
 </option>
-
 </select>
-
-
 <!-- MESSAGE -->
-
 <label for="message">
 
 Your Suggestion <span class="required-star">*</span>
-
 </label>
-
-<textarea
-id="message"
-name="message"
-placeholder="अपना सुझाव यहाँ लिखें..."
-required
-rows="5"
-maxlength="2000"
-></textarea>
-
-
+<textarea id="message" maxlength="2000" name="message" placeholder="अपना सुझाव यहाँ लिखें..." required="" rows="5"></textarea>
 <!-- SUBMIT -->
-
-<button
-id="submitSuggestion"
-class="news-btn"
-type="submit"
->
+<button class="news-btn" id="submitSuggestion" type="submit">
 
 📤 Submit Suggestion →
 
 </button>
-
-
 </form>
-
-
 <!-- SUCCESS / ERROR MESSAGE -->
-
 <div id="formMessage"></div>
-
-
 <p style="margin-top:15px; font-size:0.9rem; color:#888;">
 
 ⚠️ <strong>नोट:</strong>
@@ -574,57 +444,36 @@ Admin द्वारा Review और Approval के बाद ही
 उसे वेबसाइट पर प्रदर्शित किया जाएगा।
 
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      6. IMPORTANT NOTE
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>📢 Important Note</h2>
-
 <ul class="important-list">
-
 <li>
 ✔ केवल ITI एवं Engineering से संबंधित सुझाव भेजें।
 </li>
-
 <li>
 ✔ Spam या अनुचित संदेश स्वीकार नहीं किए जाएंगे।
 </li>
-
 <li>
 ✔ उपयोगी सुझावों को भविष्य के अपडेट में शामिल किया जा सकता है।
 </li>
-
 <li>
 ✔ व्यक्तिगत जानकारी (मोबाइल, आधार, बैंक विवरण आदि) साझा न करें।
 </li>
-
 </ul>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      7. WHY YOUR SUGGESTION MATTERS
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>⭐ Why Your Suggestion Matters?</h2>
-
 <p>
 
 ITI Study Centre का उद्देश्य विद्यार्थियों की वास्तविक
@@ -633,29 +482,20 @@ ITI Study Centre का उद्देश्य विद्यार्थि�
 बनाने में सहायता करते हैं।
 
 </p>
-
 <p>
 
 प्रत्येक उपयोगी सुझाव का मूल्यांकन किया जाएगा और आवश्यकता
 होने पर उसे भविष्य के अपडेट में शामिल किया जाएगा।
 
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      8. FUTURE FEATURE
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>🚀 Future Feature</h2>
-
 <p>
 
 आपके सुझाव पहले Pending स्थिति में सुरक्षित रूप से Save किए जाएंगे।
@@ -663,22 +503,14 @@ ITI Study Centre का उद्देश्य विद्यार्थि�
 Reject या Delete किया जा सकेगा।
 
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      9. DISCLAIMER
 ========================================= -->
-
 <section class="container">
-
 <div class="card">
-
 <h2>⚠ Disclaimer</h2>
-
 <p>
 
 ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है।
@@ -687,94 +519,52 @@ ITI Study Centre एक शैक्षणिक एवं सूचना प�
 संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।
 
 </p>
-
 </div>
-
 </section>
-
-
 <!-- =========================================
      10. FOOTER
 ========================================= -->
-
-<footer
-style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;"
->
-
-<div
-style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;"
->
-
-<a
-href="/disclaimer.html"
-style="color:#aaa; text-decoration:none;"
->
+<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
+<a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">
 
 Disclaimer
 
 </a>
-
-<a
-href="/privacy-policy.html"
-style="color:#aaa; text-decoration:none;"
->
+<a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">
 
 Privacy Policy
 
 </a>
-
-<a
-href="/terms.html"
-style="color:#aaa; text-decoration:none;"
->
+<a href="/terms.html" style="color:#aaa; text-decoration:none;">
 
 Terms
 
 </a>
-
-<a
-href="/contact.html"
-style="color:#aaa; text-decoration:none;"
->
+<a href="/contact.html" style="color:#aaa; text-decoration:none;">
 
 Contact
 
 </a>
-
 </div>
-
-
 <p style="margin:10px 0 0 0; color:#888;">
 
 © 2026 ITI Study Centre. All Rights Reserved.
 
 </p>
-
 </footer>
-
-
 <!-- =========================================
      11. SCROLL TO TOP
 ========================================= -->
-
-<button
-id="scrollTop"
-style="position:fixed; bottom:20px; right:20px; background:#003366; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;"
-title="Go to Top"
->
+<button id="scrollTop" style="position:fixed; bottom:20px; right:20px; background:#003366; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;" title="Go to Top">
 
 ⬆
 
 </button>
-
-
 <script src="js/main.js"></script>
-
-
 <!-- =========================================
      12. FOOTER YEAR
 ========================================= -->
-
 <script>
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -792,12 +582,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 </script>
-
-
 <!-- =========================================
      13. FIREBASE FIRESTORE
 ========================================= -->
-
 <script type="module">
 
 /* -----------------------------------------
@@ -1089,8 +876,5 @@ form.addEventListener(
 );
 
 </script>
-
-
 </body>
-
-    </html>
+</html>
