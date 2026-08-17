@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Admin — Comments Moderation | ITI Study Centre</title>
-<meta name="robots" content="noindex, nofollow">
-<link href="/images/favicon.png" rel="icon">
+<meta content="noindex, nofollow" name="robots"/>
+<link href="/images/favicon.png" rel="icon"/>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body{font-family:'Segoe UI',Roboto,Arial,sans-serif;background:#f5f7fb;color:#1e2a3a;}
@@ -43,52 +44,44 @@
 </style>
 </head>
 <body>
-<header>
-  <div class="bar">
-    <h1>🔐 Comments Admin — ITI Study Centre</h1>
-    <button id="logoutBtn" class="hidden">Logout</button>
-  </div>
-</header>
+<div id="header-container"></div>
+<script defer="" src="/js/header-loader.js"></script>
+
 
 <div class="container">
-
-  <!-- LOGIN -->
-  <div class="card" id="loginCard">
-    <h2 style="margin-bottom:12px;">Admin Login (Mobile OTP)</h2>
-    <div id="step-phone">
-      <input type="tel" id="phoneInput" class="field" placeholder="+91XXXXXXXXXX">
-      <button class="btn" id="sendOtpBtn">Send OTP</button>
-    </div>
-    <div id="step-otp" class="hidden">
-      <input type="text" id="otpInput" class="field" placeholder="Enter OTP">
-      <button class="btn" id="verifyOtpBtn">Verify &amp; Login</button>
-    </div>
-    <div id="loginError" class="err"></div>
-    <div id="recaptcha-container"></div>
-  </div>
-
-  <!-- NOT AUTHORIZED -->
-  <div class="card hidden" id="notAuthorizedCard">
-    <p>❌ यह मोबाइल नंबर Admin के रूप में authorized नहीं है। यदि यह गलती है, तो अपने Firebase Console में
-      <code>admins</code> collection में अपना UID जोड़ें।</p>
-  </div>
-
-  <!-- ADMIN CONTENT -->
-  <div class="hidden" id="adminContent">
-    <div class="card">
-      <div class="stats" id="stats"></div>
-      <div class="filters" id="filters">
-        <button data-filter="all" class="active">All</button>
-        <button data-filter="pending">Pending</button>
-        <button data-filter="approved">Approved</button>
-        <button data-filter="rejected">Rejected</button>
-      </div>
-      <div id="commentList"></div>
-    </div>
-  </div>
-
+<!-- LOGIN -->
+<div class="card" id="loginCard">
+<h2 style="margin-bottom:12px;">Admin Login (Mobile OTP)</h2>
+<div id="step-phone">
+<input class="field" id="phoneInput" placeholder="+91XXXXXXXXXX" type="tel"/>
+<button class="btn" id="sendOtpBtn">Send OTP</button>
 </div>
-
+<div class="hidden" id="step-otp">
+<input class="field" id="otpInput" placeholder="Enter OTP" type="text"/>
+<button class="btn" id="verifyOtpBtn">Verify &amp; Login</button>
+</div>
+<div class="err" id="loginError"></div>
+<div id="recaptcha-container"></div>
+</div>
+<!-- NOT AUTHORIZED -->
+<div class="card hidden" id="notAuthorizedCard">
+<p>❌ यह मोबाइल नंबर Admin के रूप में authorized नहीं है। यदि यह गलती है, तो अपने Firebase Console में
+      <code>admins</code> collection में अपना UID जोड़ें।</p>
+</div>
+<!-- ADMIN CONTENT -->
+<div class="hidden" id="adminContent">
+<div class="card">
+<div class="stats" id="stats"></div>
+<div class="filters" id="filters">
+<button class="active" data-filter="all">All</button>
+<button data-filter="pending">Pending</button>
+<button data-filter="approved">Approved</button>
+<button data-filter="rejected">Rejected</button>
+</div>
+<div id="commentList"></div>
+</div>
+</div>
+</div>
 <script type="module">
 import {
   initializeApp, getApps, getApp
