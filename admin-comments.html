@@ -1,304 +1,1532 @@
 <!DOCTYPE html>
-
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Admin — Comments Moderation | ITI Study Centre</title>
-<meta content="noindex, nofollow" name="robots"/>
-<link href="/images/favicon.png" rel="icon"/>
-<link href="/css/style.css" rel="stylesheet"/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="icon" href="/images/favicon.png"/>
+<link rel="stylesheet" href="/css/style.css"/>
+
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
-  body{font-family:'Segoe UI',Roboto,Arial,sans-serif;background:#f5f7fb;color:#1e2a3a;}
-  .admin-topbar{background:#003366;padding:16px 20px;border-bottom:4px solid #ffcc00;color:#fff;}
-  .admin-topbar .bar{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
-  .admin-topbar h1{font-size:1.15rem;}
-  .container{max-width:900px;margin:0 auto;padding:20px;}
-  .card{background:#fff;border-radius:14px;padding:22px;border:1px solid #e6eaef;margin-bottom:18px;}
-  .field{width:100%;padding:12px 16px;border:1px solid #ccc;border-radius:8px;font-size:1rem;margin-bottom:10px;font-family:inherit;}
-  .btn{background:#003366;color:#fff;border:none;padding:12px 22px;border-radius:8px;font-weight:600;cursor:pointer;border-bottom:3px solid #ffcc00;}
-  .btn:disabled{opacity:.6;cursor:not-allowed;}
-  .err{color:#a33;font-size:.9rem;margin-top:8px;display:none;}
-  .err.show{display:block;}
-  .hidden{display:none !important;}
-  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
-  .filters button{background:#e9ecef;border:none;padding:8px 16px;border-radius:20px;cursor:pointer;font-size:.9rem;}
-  .filters button.active{background:#003366;color:#fff;}
-  .stats{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;font-size:.9rem;color:#555;}
-  .stats b{color:#003366;}
-  .item{border:1px solid #e6eaef;border-radius:10px;padding:14px 16px;margin-bottom:12px;background:#f9fafc;}
-  .item .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:6px;align-items:center;}
-  .item .page{font-size:.78rem;color:#666;background:#eef2f7;padding:2px 8px;border-radius:6px;display:inline-block;margin-top:4px;}
-  .item .status{font-size:.75rem;padding:2px 10px;border-radius:12px;font-weight:600;}
-  .status.pending{background:#fff3cd;color:#856404;}
-  .status.approved{background:#d4edda;color:#256029;}
-  .status.rejected{background:#f8d7da;color:#842029;}
-  .item p{margin:6px 0;white-space:pre-wrap;word-break:break-word;}
-  .item .meta{font-size:.78rem;color:#888;}
-  .item .actions{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;}
-  .item .actions button{border:none;padding:8px 14px;border-radius:8px;font-size:.85rem;cursor:pointer;color:#fff;}
-  .btn-approve{background:#28a745;}
-  .btn-reject{background:#dc3545;}
-  .btn-delete{background:#6c757d;}
-  #logoutBtn{background:transparent;border:1px solid #fff;color:#fff;padding:6px 14px;border-radius:6px;cursor:pointer;}
+
+  body{
+    font-family:'Segoe UI',Roboto,Arial,sans-serif;
+    background:#f5f7fb;
+    color:#1e2a3a;
+  }
+
+  .admin-topbar{
+    background:#003366;
+    padding:16px 20px;
+    border-bottom:4px solid #ffcc00;
+    color:#fff;
+  }
+
+  .admin-topbar .bar{
+    max-width:900px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .admin-topbar h1{
+    font-size:1.15rem;
+  }
+
+  .container{
+    max-width:900px;
+    margin:0 auto;
+    padding:20px;
+  }
+
+  .card{
+    background:#fff;
+    border-radius:14px;
+    padding:22px;
+    border:1px solid #e6eaef;
+    margin-bottom:18px;
+  }
+
+  .field{
+    width:100%;
+    padding:12px 16px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:1rem;
+    margin-bottom:10px;
+    font-family:inherit;
+  }
+
+  .btn{
+    background:#003366;
+    color:#fff;
+    border:none;
+    padding:12px 22px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    border-bottom:3px solid #ffcc00;
+  }
+
+  .btn:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+  }
+
+  .err{
+    color:#a33;
+    font-size:.9rem;
+    margin-top:8px;
+    display:none;
+  }
+
+  .err.show{
+    display:block;
+  }
+
+  .hidden{
+    display:none !important;
+  }
+
+  .filters{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:16px;
+  }
+
+  .filters button{
+    background:#e9ecef;
+    border:none;
+    padding:8px 16px;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:.9rem;
+  }
+
+  .filters button.active{
+    background:#003366;
+    color:#fff;
+  }
+
+  .stats{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    margin-bottom:16px;
+    font-size:.9rem;
+    color:#555;
+  }
+
+  .stats b{
+    color:#003366;
+  }
+
+  .item{
+    border:1px solid #e6eaef;
+    border-radius:10px;
+    padding:14px 16px;
+    margin-bottom:12px;
+    background:#f9fafc;
+  }
+
+  .item .top{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-bottom:6px;
+    align-items:center;
+  }
+
+  .item .page{
+    font-size:.78rem;
+    color:#666;
+    background:#eef2f7;
+    padding:2px 8px;
+    border-radius:6px;
+    display:inline-block;
+    margin-top:4px;
+  }
+
+  .item .status{
+    font-size:.75rem;
+    padding:2px 10px;
+    border-radius:12px;
+    font-weight:600;
+  }
+
+  .status.pending{
+    background:#fff3cd;
+    color:#856404;
+  }
+
+  .status.approved{
+    background:#d4edda;
+    color:#256029;
+  }
+
+  .status.rejected{
+    background:#f8d7da;
+    color:#842029;
+  }
+
+  .item p{
+    margin:6px 0;
+    white-space:pre-wrap;
+    word-break:break-word;
+  }
+
+  .item .meta{
+    font-size:.78rem;
+    color:#888;
+  }
+
+  .item .actions{
+    display:flex;
+    gap:8px;
+    margin-top:8px;
+    flex-wrap:wrap;
+  }
+
+  .item .actions button{
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    font-size:.85rem;
+    cursor:pointer;
+    color:#fff;
+  }
+
+  .btn-approve{
+    background:#28a745;
+  }
+
+  .btn-reject{
+    background:#dc3545;
+  }
+
+  .btn-delete{
+    background:#6c757d;
+  }
+
+  #logoutBtn{
+    background:transparent;
+    border:1px solid #fff;
+    color:#fff;
+    padding:6px 14px;
+    border-radius:6px;
+    cursor:pointer;
+  }
 </style>
 </head>
+
 <body>
+
 <div id="header-container"></div>
-<script defer="" src="/js/header-loader.js"></script>
-
-
+<script defer src="/js/header-loader.js"></script>
 
 <div class="admin-topbar">
-<div class="bar">
-<h1>🔐 Comments Admin — ITI Study Centre</h1>
-<button class="hidden" id="logoutBtn">Logout</button>
+  <div class="bar">
+    <h1>🔐 Comments Admin — ITI Study Centre</h1>
+    <button class="hidden" id="logoutBtn">Logout</button>
+  </div>
 </div>
-</div>
+
 <div class="container">
-<!-- LOGIN -->
-<div class="card" id="loginCard">
-<h2 style="margin-bottom:12px;">Admin Login (Mobile OTP)</h2>
-<div id="step-phone">
-<input class="field" id="phoneInput" placeholder="+91XXXXXXXXXX" type="tel"/>
-<button class="btn" id="sendOtpBtn">Send OTP</button>
+
+  <!-- LOGIN -->
+  <div class="card" id="loginCard">
+
+    <h2 style="margin-bottom:12px;">
+      Admin Login (Mobile OTP)
+    </h2>
+
+    <div id="step-phone">
+      <input
+        class="field"
+        id="phoneInput"
+        placeholder="+91XXXXXXXXXX"
+        type="tel"
+        autocomplete="tel"
+      />
+
+      <button class="btn" id="sendOtpBtn">
+        Send OTP
+      </button>
+    </div>
+
+    <div class="hidden" id="step-otp">
+
+      <input
+        class="field"
+        id="otpInput"
+        placeholder="Enter OTP"
+        type="text"
+        inputmode="numeric"
+        autocomplete="one-time-code"
+      />
+
+      <button class="btn" id="verifyOtpBtn">
+        Verify &amp; Login
+      </button>
+
+    </div>
+
+    <div class="err" id="loginError"></div>
+
+    <!-- Visible reCAPTCHA container is kept for Firebase -->
+    <div id="recaptcha-container"></div>
+
+  </div>
+
+  <!-- NOT AUTHORIZED -->
+  <div class="card hidden" id="notAuthorizedCard">
+
+    <p>
+      ❌ यह मोबाइल नंबर Admin के रूप में authorized नहीं है।
+      यदि यह गलती है, तो अपने Firebase Console में
+      <code>admins</code> collection में अपना UID जोड़ें।
+    </p>
+
+  </div>
+
+  <!-- ADMIN CONTENT -->
+  <div class="hidden" id="adminContent">
+
+    <div class="card">
+
+      <div class="stats" id="stats"></div>
+
+      <div class="filters" id="filters">
+
+        <button class="active" data-filter="all">
+          All
+        </button>
+
+        <button data-filter="pending">
+          Pending
+        </button>
+
+        <button data-filter="approved">
+          Approved
+        </button>
+
+        <button data-filter="rejected">
+          Rejected
+        </button>
+
+      </div>
+
+      <div id="commentList"></div>
+
+    </div>
+
+  </div>
+
 </div>
-<div class="hidden" id="step-otp">
-<input class="field" id="otpInput" placeholder="Enter OTP" type="text"/>
-<button class="btn" id="verifyOtpBtn">Verify &amp; Login</button>
-</div>
-<div class="err" id="loginError"></div>
-<div id="recaptcha-container"></div>
-</div>
-<!-- NOT AUTHORIZED -->
-<div class="card hidden" id="notAuthorizedCard">
-<p>❌ यह मोबाइल नंबर Admin के रूप में authorized नहीं है। यदि यह गलती है, तो अपने Firebase Console में
-      <code>admins</code> collection में अपना UID जोड़ें।</p>
-</div>
-<!-- ADMIN CONTENT -->
-<div class="hidden" id="adminContent">
-<div class="card">
-<div class="stats" id="stats"></div>
-<div class="filters" id="filters">
-<button class="active" data-filter="all">All</button>
-<button data-filter="pending">Pending</button>
-<button data-filter="approved">Approved</button>
-<button data-filter="rejected">Rejected</button>
-</div>
-<div id="commentList"></div>
-</div>
-</div>
-</div>
-<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
-<p>© <span id="admYear"></span> ITI Study Centre. सर्वाधिकार सुरक्षित।</p>
+
+<footer style="background:#222;color:#ccc;padding:20px 15px;text-align:center;margin-top:40px;border-top:4px solid #003366;">
+
+  <p>
+    © <span id="admYear"></span>
+    ITI Study Centre. सर्वाधिकार सुरक्षित।
+  </p>
+
 </footer>
-<script>document.getElementById('admYear').textContent = new Date().getFullYear();</script>
+
+<script>
+  document.getElementById("admYear").textContent =
+    new Date().getFullYear();
+</script>
+
 <script type="module">
+
+/* =========================================================
+   FIREBASE IMPORTS
+========================================================= */
+
 import {
-  initializeApp, getApps, getApp
+  initializeApp,
+  getApps,
+  getApp
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
+
 import {
-  initializeAppCheck, ReCaptchaV3Provider
+  initializeAppCheck,
+  ReCaptchaV3Provider
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app-check.js";
+
 import {
-  getAuth, RecaptchaVerifier, signInWithPhoneNumber, signOut, onAuthStateChanged
+  getAuth,
+  RecaptchaVerifier,
+  signInWithPhoneNumber,
+  signOut,
+  onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-auth.js";
+
 import {
-  getFirestore, collection, doc, getDoc, onSnapshot, updateDoc, deleteDoc
+  getFirestore,
+  collection,
+  doc,
+  getDoc,
+  onSnapshot,
+  updateDoc,
+  deleteDoc
 } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js";
 
-/* Same Firebase project config used across the site — unchanged */
-const firebaseConfig = {
-  apiKey: "AIzaSyAyBiDGQxQ5LEtIV5JtMOT79rU3ksQg8TE",
-  authDomain: "iti-study-centre.firebaseapp.com",
-  projectId: "iti-study-centre",
-  storageBucket: "iti-study-centre.firebasestorage.app",
-  messagingSenderId: "690794814318",
-  appId: "1:690794814318:web:42ed1c1f582a9e1df5bf7f"
-};
-const RECAPTCHA_SITE_KEY = "6LexjYctAAAAAJdA17IjqdkfJrecHtmqnd-DoODv";
 
-const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
+/* =========================================================
+   FIREBASE CONFIG
+========================================================= */
+
+const firebaseConfig = {
+
+  apiKey: "AIzaSyAyBiDGQxQ5LEtIV5JtMOT79rU3ksQg8TE",
+
+  authDomain:
+    "iti-study-centre.firebaseapp.com",
+
+  projectId:
+    "iti-study-centre",
+
+  storageBucket:
+    "iti-study-centre.firebasestorage.app",
+
+  messagingSenderId:
+    "690794814318",
+
+  appId:
+    "1:690794814318:web:42ed1c1f582a9e1df5bf7f"
+
+};
+
+
+/* =========================================================
+   reCAPTCHA V3 SITE KEY FOR APP CHECK
+========================================================= */
+
+const RECAPTCHA_SITE_KEY =
+  "6LexjYctAAAAAJdA17IjqdkfJrecHtmqnd-DoODv";
+
+
+/* =========================================================
+   INITIALIZE FIREBASE APP
+========================================================= */
+
+const app =
+  getApps().length
+    ? getApp()
+    : initializeApp(firebaseConfig);
+
+
+/* =========================================================
+   FIREBASE APP CHECK
+========================================================= */
+
 if (!window.__itiAppCheckInitialized) {
+
   initializeAppCheck(app, {
-    provider: new ReCaptchaV3Provider(RECAPTCHA_SITE_KEY),
+
+    provider:
+      new ReCaptchaV3Provider(
+        RECAPTCHA_SITE_KEY
+      ),
+
     isTokenAutoRefreshEnabled: true
+
   });
+
   window.__itiAppCheckInitialized = true;
 }
 
+
+/* =========================================================
+   AUTH + FIRESTORE
+========================================================= */
+
 const auth = getAuth(app);
+
 const db = getFirestore(app);
 
-const loginCard = document.getElementById("loginCard");
-const notAuthorizedCard = document.getElementById("notAuthorizedCard");
-const adminContent = document.getElementById("adminContent");
-const logoutBtn = document.getElementById("logoutBtn");
-const loginError = document.getElementById("loginError");
 
-function showError(msg) { loginError.textContent = msg; loginError.classList.add("show"); }
-function clearError() { loginError.classList.remove("show"); }
+/* =========================================================
+   DOM ELEMENTS
+========================================================= */
+
+const loginCard =
+  document.getElementById("loginCard");
+
+const notAuthorizedCard =
+  document.getElementById("notAuthorizedCard");
+
+const adminContent =
+  document.getElementById("adminContent");
+
+const logoutBtn =
+  document.getElementById("logoutBtn");
+
+const loginError =
+  document.getElementById("loginError");
+
+const phoneInput =
+  document.getElementById("phoneInput");
+
+const otpInput =
+  document.getElementById("otpInput");
+
+const sendOtpBtn =
+  document.getElementById("sendOtpBtn");
+
+const verifyOtpBtn =
+  document.getElementById("verifyOtpBtn");
+
+
+/* =========================================================
+   ERROR FUNCTIONS
+========================================================= */
+
+function showError(msg) {
+
+  loginError.textContent = msg;
+
+  loginError.classList.add("show");
+
+}
+
+
+function clearError() {
+
+  loginError.textContent = "";
+
+  loginError.classList.remove("show");
+
+}
+
+
+/* =========================================================
+   HTML ESCAPE
+========================================================= */
 
 function escapeHtml(str) {
-  const div = document.createElement("div");
-  div.textContent = str == null ? "" : String(str);
+
+  const div =
+    document.createElement("div");
+
+  div.textContent =
+    str == null ? "" : String(str);
+
   return div.innerHTML;
 }
 
-/* ---------------- Phone OTP login (reuses existing Firebase Auth setup) ---------------- */
+
+/* =========================================================
+   PHONE OTP LOGIN
+========================================================= */
+
 let confirmationResult = null;
-window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha-container", { size: "invisible" });
 
-document.getElementById("sendOtpBtn").addEventListener("click", async () => {
-  clearError();
-  const phone = document.getElementById("phoneInput").value.trim();
-  if (!phone.startsWith("+")) {
-    showError("देश कोड सहित नंबर दर्ज करें, जैसे +91XXXXXXXXXX");
-    return;
-  }
+let recaptchaVerifier = null;
+
+
+/* ---------------------------------------------------------
+   Create invisible reCAPTCHA
+
+   IMPORTANT:
+   For invisible reCAPTCHA Firebase requires the ID
+   of the button that starts the sign-in request.
+--------------------------------------------------------- */
+
+function createRecaptcha() {
+
   try {
-    confirmationResult = await signInWithPhoneNumber(auth, phone, window.recaptchaVerifier);
-    document.getElementById("step-phone").classList.add("hidden");
-    document.getElementById("step-otp").classList.remove("hidden");
-  } catch (err) {
-    console.error(err);
-    showError("OTP भेजने में समस्या हुई: " + (err.code || err.message || "अज्ञात त्रुटि"));
-  }
-});
 
-document.getElementById("verifyOtpBtn").addEventListener("click", async () => {
-  clearError();
-  const code = document.getElementById("otpInput").value.trim();
-  if (!confirmationResult) return;
-  try {
-    await confirmationResult.confirm(code);
-    // onAuthStateChanged below takes over
-  } catch (err) {
-    console.error(err);
-    showError("गलत OTP। पुनः प्रयास करें।");
-  }
-});
+    if (recaptchaVerifier) {
 
-logoutBtn.addEventListener("click", () => signOut(auth));
+      try {
+        recaptchaVerifier.clear();
+      } catch (e) {
+        console.warn(
+          "Old reCAPTCHA clear failed:",
+          e
+        );
+      }
 
-/* ---------------- Auth state + admin authorization ----------------
-   A user is treated as Admin only if a document exists at
-   /admins/{uid} in Firestore (see Security Rules + setup steps).
---------------------------------------------------------------------- */
-onAuthStateChanged(auth, async (user) => {
-  if (!user) {
-    loginCard.classList.remove("hidden");
-    notAuthorizedCard.classList.add("hidden");
-    adminContent.classList.add("hidden");
-    logoutBtn.classList.add("hidden");
-    return;
+    }
+
+    recaptchaVerifier =
+      new RecaptchaVerifier(
+        auth,
+        "sendOtpBtn",
+        {
+          size: "invisible",
+
+          callback: function(response) {
+
+            console.log(
+              "Firebase reCAPTCHA solved."
+            );
+
+          },
+
+          "expired-callback": function() {
+
+            console.warn(
+              "Firebase reCAPTCHA expired."
+            );
+
+          }
+
+        }
+      );
+
+    window.recaptchaVerifier =
+      recaptchaVerifier;
+
+    return recaptchaVerifier;
+
+  } catch (error) {
+
+    console.error(
+      "reCAPTCHA initialization error:",
+      error
+    );
+
+    showError(
+      "reCAPTCHA शुरू नहीं हो सका। कृपया page refresh करें।"
+    );
+
+    return null;
   }
-  try {
-    const adminDoc = await getDoc(doc(db, "admins", user.uid));
-    logoutBtn.classList.remove("hidden");
-    if (!adminDoc.exists()) {
-      loginCard.classList.add("hidden");
-      notAuthorizedCard.classList.remove("hidden");
-      adminContent.classList.add("hidden");
+}
+
+
+/* ---------------------------------------------------------
+   Initialize reCAPTCHA
+--------------------------------------------------------- */
+
+createRecaptcha();
+
+
+/* =========================================================
+   SEND OTP
+========================================================= */
+
+sendOtpBtn.addEventListener(
+  "click",
+  async () => {
+
+    clearError();
+
+    const phone =
+      phoneInput.value.trim();
+
+
+    /* -----------------------------------------------
+       Basic phone validation
+    ------------------------------------------------ */
+
+    if (!phone.startsWith("+")) {
+
+      showError(
+        "देश कोड सहित नंबर दर्ज करें, जैसे +91XXXXXXXXXX"
+      );
+
+      phoneInput.focus();
+
       return;
     }
-    loginCard.classList.add("hidden");
-    notAuthorizedCard.classList.add("hidden");
-    adminContent.classList.remove("hidden");
-    startCommentsListener();
-  } catch (err) {
-    console.error(err);
-    showError("Authorization जांच में समस्या हुई।");
-  }
-});
 
-/* ---------------- Comments list (live) ---------------- */
+
+    if (phone.length < 10) {
+
+      showError(
+        "कृपया सही मोबाइल नंबर दर्ज करें।"
+      );
+
+      phoneInput.focus();
+
+      return;
+    }
+
+
+    /* -----------------------------------------------
+       Disable button while processing
+    ------------------------------------------------ */
+
+    sendOtpBtn.disabled = true;
+
+    sendOtpBtn.textContent =
+      "OTP भेजा जा रहा है...";
+
+
+    try {
+
+      /* ---------------------------------------------
+         Make sure reCAPTCHA exists
+      --------------------------------------------- */
+
+      if (!recaptchaVerifier) {
+
+        recaptchaVerifier =
+          createRecaptcha();
+
+      }
+
+
+      if (!recaptchaVerifier) {
+
+        throw new Error(
+          "reCAPTCHA verifier उपलब्ध नहीं है।"
+        );
+
+      }
+
+
+      /* ---------------------------------------------
+         Send Firebase OTP
+      --------------------------------------------- */
+
+      confirmationResult =
+        await signInWithPhoneNumber(
+          auth,
+          phone,
+          recaptchaVerifier
+        );
+
+
+      console.log(
+        "OTP successfully sent."
+      );
+
+
+      /* ---------------------------------------------
+         Move to OTP screen
+      --------------------------------------------- */
+
+      document
+        .getElementById("step-phone")
+        .classList.add("hidden");
+
+      document
+        .getElementById("step-otp")
+        .classList.remove("hidden");
+
+      otpInput.focus();
+
+
+      showError(
+        "OTP आपके मोबाइल नंबर पर भेज दिया गया है।"
+      );
+
+      loginError.style.color =
+        "#087f23";
+
+
+    } catch (err) {
+
+      console.error(
+        "OTP SEND ERROR:",
+        err
+      );
+
+
+      /* ---------------------------------------------
+         Reset reCAPTCHA after error
+
+         Firebase recommends resetting/recreating
+         the verifier when signInWithPhoneNumber fails.
+      --------------------------------------------- */
+
+      try {
+
+        if (recaptchaVerifier) {
+
+          recaptchaVerifier.clear();
+
+        }
+
+      } catch (resetError) {
+
+        console.warn(
+          "reCAPTCHA reset error:",
+          resetError
+        );
+
+      }
+
+
+      recaptchaVerifier =
+        null;
+
+      window.recaptchaVerifier =
+        null;
+
+
+      /* ---------------------------------------------
+         Re-create verifier for next attempt
+      --------------------------------------------- */
+
+      setTimeout(() => {
+
+        createRecaptcha();
+
+      }, 100);
+
+
+      /* ---------------------------------------------
+         Show exact Firebase error
+      --------------------------------------------- */
+
+      let errorMessage =
+        err.code ||
+        err.message ||
+        "अज्ञात त्रुटि";
+
+
+      showError(
+        "OTP भेजने में समस्या हुई: " +
+        errorMessage
+      );
+
+      loginError.style.color =
+        "#a33";
+
+
+    } finally {
+
+      sendOtpBtn.disabled =
+        false;
+
+      sendOtpBtn.textContent =
+        "Send OTP";
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   VERIFY OTP
+========================================================= */
+
+verifyOtpBtn.addEventListener(
+  "click",
+  async () => {
+
+    clearError();
+
+    loginError.style.color =
+      "#a33";
+
+
+    const code =
+      otpInput.value.trim();
+
+
+    if (!confirmationResult) {
+
+      showError(
+        "पहले Send OTP दबाकर OTP प्राप्त करें।"
+      );
+
+      return;
+    }
+
+
+    if (!code) {
+
+      showError(
+        "कृपया OTP दर्ज करें।"
+      );
+
+      otpInput.focus();
+
+      return;
+    }
+
+
+    if (code.length < 6) {
+
+      showError(
+        "कृपया 6 अंकों का OTP दर्ज करें।"
+      );
+
+      otpInput.focus();
+
+      return;
+    }
+
+
+    verifyOtpBtn.disabled =
+      true;
+
+    verifyOtpBtn.textContent =
+      "Verify हो रहा है...";
+
+
+    try {
+
+      await confirmationResult.confirm(code);
+
+      console.log(
+        "OTP verification successful."
+      );
+
+      /*
+        onAuthStateChanged()
+        automatically handles the next step.
+      */
+
+
+    } catch (err) {
+
+      console.error(
+        "OTP VERIFY ERROR:",
+        err
+      );
+
+
+      showError(
+        "OTP verification में समस्या हुई: " +
+        (
+          err.code ||
+          err.message ||
+          "अज्ञात त्रुटि"
+        )
+      );
+
+
+    } finally {
+
+      verifyOtpBtn.disabled =
+        false;
+
+      verifyOtpBtn.textContent =
+        "Verify & Login";
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+logoutBtn.addEventListener(
+  "click",
+  () => {
+
+    signOut(auth);
+
+  }
+);
+
+
+/* =========================================================
+   AUTH STATE + ADMIN AUTHORIZATION
+========================================================= */
+
+onAuthStateChanged(
+  auth,
+  async (user) => {
+
+    if (!user) {
+
+      loginCard
+        .classList
+        .remove("hidden");
+
+      notAuthorizedCard
+        .classList
+        .add("hidden");
+
+      adminContent
+        .classList
+        .add("hidden");
+
+      logoutBtn
+        .classList
+        .add("hidden");
+
+      return;
+    }
+
+
+    try {
+
+      const adminDoc =
+        await getDoc(
+          doc(
+            db,
+            "admins",
+            user.uid
+          )
+        );
+
+
+      logoutBtn
+        .classList
+        .remove("hidden");
+
+
+      /* ---------------------------------------------
+         User is NOT an admin
+      --------------------------------------------- */
+
+      if (!adminDoc.exists()) {
+
+        loginCard
+          .classList
+          .add("hidden");
+
+        notAuthorizedCard
+          .classList
+          .remove("hidden");
+
+        adminContent
+          .classList
+          .add("hidden");
+
+        return;
+      }
+
+
+      /* ---------------------------------------------
+         User IS an admin
+      --------------------------------------------- */
+
+      loginCard
+        .classList
+        .add("hidden");
+
+      notAuthorizedCard
+        .classList
+        .add("hidden");
+
+      adminContent
+        .classList
+        .remove("hidden");
+
+
+      startCommentsListener();
+
+
+    } catch (err) {
+
+      console.error(
+        "ADMIN AUTHORIZATION ERROR:",
+        err
+      );
+
+      showError(
+        "Authorization जांच में समस्या हुई। " +
+        (err.code || err.message || "")
+      );
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   COMMENTS LIST
+========================================================= */
+
 let allComments = [];
-let currentFilter = "all";
-let unsubscribe = null;
+
+let currentFilter =
+  "all";
+
+let unsubscribe =
+  null;
+
+
+/* =========================================================
+   START COMMENTS LISTENER
+========================================================= */
 
 function startCommentsListener() {
-  if (unsubscribe) return;
-  unsubscribe = onSnapshot(collection(db, "comments"), (snap) => {
-    allComments = [];
-    snap.forEach(d => allComments.push({ id: d.id, ...d.data() }));
-    allComments.sort((a, b) => {
-      const ta = a.createdAt && a.createdAt.toDate ? a.createdAt.toDate().getTime() : 0;
-      const tb = b.createdAt && b.createdAt.toDate ? b.createdAt.toDate().getTime() : 0;
-      return tb - ta;
-    });
-    renderStats();
-    renderList();
-  }, (err) => console.error("Listener error:", err));
-}
 
-function renderStats() {
-  const total = allComments.length;
-  const pending = allComments.filter(c => c.status === "pending").length;
-  const approved = allComments.filter(c => c.status === "approved").length;
-  const rejected = allComments.filter(c => c.status === "rejected").length;
-  document.getElementById("stats").innerHTML =
-    `<span>कुल: <b>${total}</b></span><span>Pending: <b>${pending}</b></span>` +
-    `<span>Approved: <b>${approved}</b></span><span>Rejected: <b>${rejected}</b></span>`;
-}
-
-function renderList() {
-  const list = currentFilter === "all" ? allComments : allComments.filter(c => c.status === currentFilter);
-  const container = document.getElementById("commentList");
-  if (list.length === 0) {
-    container.innerHTML = `<p style="color:#888;font-style:italic;">कोई comment नहीं मिला।</p>`;
+  if (unsubscribe) {
     return;
   }
-  container.innerHTML = list.map(c => {
-    const dt = c.createdAt && c.createdAt.toDate ? c.createdAt.toDate().toLocaleString("hi-IN") : "";
-    return `
-      <div class="item" data-id="${c.id}">
-        <div class="top">
-          <span><strong>${escapeHtml(c.name || "Anonymous")}</strong> <span class="meta">${escapeHtml(dt)}</span></span>
-          <span class="status ${escapeHtml(c.status)}">${escapeHtml(c.status)}</span>
-        </div>
-        <span class="page">${escapeHtml(c.page || "")}</span>
-        <p>${escapeHtml(c.message || "")}</p>
-        <div class="actions">
-          ${c.status !== "approved" ? `<button class="btn-approve" data-action="approve">✅ Approve</button>` : ""}
-          ${c.status !== "rejected" ? `<button class="btn-reject" data-action="reject">⛔ Reject</button>` : ""}
-          <button class="btn-delete" data-action="delete">🗑️ Delete</button>
-        </div>
-      </div>
-    `;
-  }).join("");
+
+
+  unsubscribe =
+    onSnapshot(
+      collection(db, "comments"),
+
+      (snap) => {
+
+        allComments = [];
+
+
+        snap.forEach(
+          (d) => {
+
+            allComments.push({
+
+              id: d.id,
+
+              ...d.data()
+
+            });
+
+          }
+        );
+
+
+        /* -------------------------------------------
+           Sort newest first
+        ------------------------------------------- */
+
+        allComments.sort(
+          (a, b) => {
+
+            const ta =
+              a.createdAt &&
+              a.createdAt.toDate
+                ? a.createdAt
+                    .toDate()
+                    .getTime()
+                : 0;
+
+
+            const tb =
+              b.createdAt &&
+              b.createdAt.toDate
+                ? b.createdAt
+                    .toDate()
+                    .getTime()
+                : 0;
+
+
+            return tb - ta;
+
+          }
+        );
+
+
+        renderStats();
+
+        renderList();
+
+      },
+
+      (err) => {
+
+        console.error(
+          "Comments Listener Error:",
+          err
+        );
+
+      }
+    );
+
 }
 
-document.getElementById("filters").addEventListener("click", (e) => {
-  const btn = e.target.closest("button[data-filter]");
-  if (!btn) return;
-  currentFilter = btn.dataset.filter;
-  document.querySelectorAll("#filters button").forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
-  renderList();
-});
 
-document.getElementById("commentList").addEventListener("click", async (e) => {
-  const btn = e.target.closest("button[data-action]");
-  if (!btn) return;
-  const itemEl = btn.closest(".item");
-  const id = itemEl.dataset.id;
-  const action = btn.dataset.action;
-  try {
-    if (action === "approve") {
-      await updateDoc(doc(db, "comments", id), { status: "approved" });
-    } else if (action === "reject") {
-      await updateDoc(doc(db, "comments", id), { status: "rejected" });
-    } else if (action === "delete") {
-      if (!confirm("क्या आप वाकई इस comment को हमेशा के लिए delete करना चाहते हैं?")) return;
-      await deleteDoc(doc(db, "comments", id));
-    }
-  } catch (err) {
-    console.error(err);
-    alert("Action विफल रहा। शायद आपके पास Admin अनुमति नहीं है।");
+/* =========================================================
+   RENDER STATS
+========================================================= */
+
+function renderStats() {
+
+  const total =
+    allComments.length;
+
+
+  const pending =
+    allComments.filter(
+      c => c.status === "pending"
+    ).length;
+
+
+  const approved =
+    allComments.filter(
+      c => c.status === "approved"
+    ).length;
+
+
+  const rejected =
+    allComments.filter(
+      c => c.status === "rejected"
+    ).length;
+
+
+  document.getElementById(
+    "stats"
+  ).innerHTML =
+
+    `<span>
+      कुल: <b>${total}</b>
+    </span>
+
+    <span>
+      Pending: <b>${pending}</b>
+    </span>
+
+    <span>
+      Approved: <b>${approved}</b>
+    </span>
+
+    <span>
+      Rejected: <b>${rejected}</b>
+    </span>`;
+
+}
+
+
+/* =========================================================
+   RENDER COMMENTS
+========================================================= */
+
+function renderList() {
+
+  const list =
+    currentFilter === "all"
+      ? allComments
+      : allComments.filter(
+          c =>
+            c.status ===
+            currentFilter
+        );
+
+
+  const container =
+    document.getElementById(
+      "commentList"
+    );
+
+
+  if (list.length === 0) {
+
+    container.innerHTML =
+      `<p style="color:#888;font-style:italic;">
+        कोई comment नहीं मिला।
+      </p>`;
+
+    return;
   }
-});
+
+
+  container.innerHTML =
+    list
+      .map(
+        c => {
+
+          const dt =
+            c.createdAt &&
+            c.createdAt.toDate
+              ? c.createdAt
+                  .toDate()
+                  .toLocaleString(
+                    "hi-IN"
+                  )
+              : "";
+
+
+          return `
+
+            <div
+              class="item"
+              data-id="${escapeHtml(c.id)}"
+            >
+
+              <div class="top">
+
+                <span>
+
+                  <strong>
+                    ${escapeHtml(
+                      c.name ||
+                      "Anonymous"
+                    )}
+                  </strong>
+
+                  <span class="meta">
+                    ${escapeHtml(dt)}
+                  </span>
+
+                </span>
+
+                <span
+                  class="status ${escapeHtml(
+                    c.status ||
+                    ""
+                  )}"
+                >
+                  ${escapeHtml(
+                    c.status ||
+                    ""
+                  )}
+                </span>
+
+              </div>
+
+
+              <span class="page">
+                ${escapeHtml(
+                  c.page ||
+                  ""
+                )}
+              </span>
+
+
+              <p>
+                ${escapeHtml(
+                  c.message ||
+                  ""
+                )}
+              </p>
+
+
+              <div class="actions">
+
+                ${
+                  c.status !== "approved"
+
+                    ? `
+                      <button
+                        class="btn-approve"
+                        data-action="approve"
+                      >
+                        ✅ Approve
+                      </button>
+                    `
+
+                    : ""
+                }
+
+
+                ${
+                  c.status !== "rejected"
+
+                    ? `
+                      <button
+                        class="btn-reject"
+                        data-action="reject"
+                      >
+                        ⛔ Reject
+                      </button>
+                    `
+
+                    : ""
+                }
+
+
+                <button
+                  class="btn-delete"
+                  data-action="delete"
+                >
+                  🗑️ Delete
+                </button>
+
+              </div>
+
+            </div>
+
+          `;
+
+        }
+      )
+      .join("");
+
+}
+
+
+/* =========================================================
+   FILTER BUTTONS
+========================================================= */
+
+document
+  .getElementById("filters")
+  .addEventListener(
+    "click",
+    (e) => {
+
+      const btn =
+        e.target.closest(
+          "button[data-filter]"
+        );
+
+
+      if (!btn) {
+        return;
+      }
+
+
+      currentFilter =
+        btn.dataset.filter;
+
+
+      document
+        .querySelectorAll(
+          "#filters button"
+        )
+        .forEach(
+          b =>
+            b.classList.remove(
+              "active"
+            )
+        );
+
+
+      btn.classList.add(
+        "active"
+      );
+
+
+      renderList();
+
+    }
+  );
+
+
+/* =========================================================
+   COMMENT ACTIONS
+========================================================= */
+
+document
+  .getElementById("commentList")
+  .addEventListener(
+    "click",
+    async (e) => {
+
+      const btn =
+        e.target.closest(
+          "button[data-action]"
+        );
+
+
+      if (!btn) {
+        return;
+      }
+
+
+      const itemEl =
+        btn.closest(".item");
+
+
+      if (!itemEl) {
+        return;
+      }
+
+
+      const id =
+        itemEl.dataset.id;
+
+
+      const action =
+        btn.dataset.action;
+
+
+      try {
+
+        /* -----------------------------------------
+           APPROVE
+        ----------------------------------------- */
+
+        if (
+          action ===
+          "approve"
+        ) {
+
+          await updateDoc(
+            doc(
+              db,
+              "comments",
+              id
+            ),
+            {
+              status:
+                "approved"
+            }
+          );
+
+        }
+
+
+        /* -----------------------------------------
+           REJECT
+        ----------------------------------------- */
+
+        else if (
+          action ===
+          "reject"
+        ) {
+
+          await updateDoc(
+            doc(
+              db,
+              "comments",
+              id
+            ),
+            {
+              status:
+                "rejected"
+            }
+          );
+
+        }
+
+
+        /* -----------------------------------------
+           DELETE
+        ----------------------------------------- */
+
+        else if (
+          action ===
+          "delete"
+        ) {
+
+          if (
+            !confirm(
+              "क्या आप वाकई इस comment को हमेशा के लिए delete करना चाहते हैं?"
+            )
+          ) {
+
+            return;
+
+          }
+
+
+          await deleteDoc(
+            doc(
+              db,
+              "comments",
+              id
+            )
+          );
+
+        }
+
+      } catch (err) {
+
+        console.error(
+          "COMMENT ACTION ERROR:",
+          err
+        );
+
+
+        alert(
+          "Action विफल रहा। शायद आपके पास Admin अनुमति नहीं है।"
+        );
+
+      }
+
+    }
+  );
+
 </script>
+
 </body>
-</html>
+       </html>
