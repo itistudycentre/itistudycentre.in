@@ -1,13 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Admin — Comments Moderation | ITI Study Centre</title>
-<meta name="robots" content="noindex, nofollow"/>
-<link rel="icon" href="/images/favicon.png"/>
-<link rel="stylesheet" href="/css/style.css"/>
-
+<meta content="noindex, nofollow" name="robots"/>
+<link href="/images/favicon.png" rel="icon"/>
+<link href="/css/style.css" rel="stylesheet"/>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
 
@@ -223,126 +223,80 @@
   }
 </style>
 </head>
-
 <body>
-
 <div id="header-container"></div>
-<script defer src="/js/header-loader.js"></script>
+<script defer="" src="/js/header-loader.js"></script>
+
+
 
 <div class="admin-topbar">
-  <div class="bar">
-    <h1>🔐 Comments Admin — ITI Study Centre</h1>
-    <button class="hidden" id="logoutBtn">Logout</button>
-  </div>
+<div class="bar">
+<h1>🔐 Comments Admin — ITI Study Centre</h1>
+<button class="hidden" id="logoutBtn">Logout</button>
 </div>
-
+</div>
 <div class="container">
-
-  <!-- LOGIN -->
-  <div class="card" id="loginCard">
-
-    <h2 style="margin-bottom:12px;">
+<!-- LOGIN -->
+<div class="card" id="loginCard">
+<h2 style="margin-bottom:12px;">
       Admin Login (Mobile OTP)
     </h2>
-
-    <div id="step-phone">
-      <input
-        class="field"
-        id="phoneInput"
-        placeholder="+91XXXXXXXXXX"
-        type="tel"
-        autocomplete="tel"
-      />
-
-      <button class="btn" id="sendOtpBtn">
+<div id="step-phone">
+<input autocomplete="tel" class="field" id="phoneInput" placeholder="+91XXXXXXXXXX" type="tel"/>
+<button class="btn" id="sendOtpBtn">
         Send OTP
       </button>
-    </div>
-
-    <div class="hidden" id="step-otp">
-
-      <input
-        class="field"
-        id="otpInput"
-        placeholder="Enter OTP"
-        type="text"
-        inputmode="numeric"
-        autocomplete="one-time-code"
-      />
-
-      <button class="btn" id="verifyOtpBtn">
+</div>
+<div class="hidden" id="step-otp">
+<input autocomplete="one-time-code" class="field" id="otpInput" inputmode="numeric" placeholder="Enter OTP" type="text"/>
+<button class="btn" id="verifyOtpBtn">
         Verify &amp; Login
       </button>
-
-    </div>
-
-    <div class="err" id="loginError"></div>
-
-    <!-- Visible reCAPTCHA container is kept for Firebase -->
-    <div id="recaptcha-container"></div>
-
-  </div>
-
-  <!-- NOT AUTHORIZED -->
-  <div class="card hidden" id="notAuthorizedCard">
-
-    <p>
+</div>
+<div class="err" id="loginError"></div>
+<!-- Visible reCAPTCHA container is kept for Firebase -->
+<div id="recaptcha-container"></div>
+</div>
+<!-- NOT AUTHORIZED -->
+<div class="card hidden" id="notAuthorizedCard">
+<p>
       ❌ यह मोबाइल नंबर Admin के रूप में authorized नहीं है।
       यदि यह गलती है, तो अपने Firebase Console में
       <code>admins</code> collection में अपना UID जोड़ें।
     </p>
-
-  </div>
-
-  <!-- ADMIN CONTENT -->
-  <div class="hidden" id="adminContent">
-
-    <div class="card">
-
-      <div class="stats" id="stats"></div>
-
-      <div class="filters" id="filters">
-
-        <button class="active" data-filter="all">
+</div>
+<!-- ADMIN CONTENT -->
+<div class="hidden" id="adminContent">
+<div class="card">
+<div class="stats" id="stats"></div>
+<div class="filters" id="filters">
+<button class="active" data-filter="all">
           All
         </button>
-
-        <button data-filter="pending">
+<button data-filter="pending">
           Pending
         </button>
-
-        <button data-filter="approved">
+<button data-filter="approved">
           Approved
         </button>
-
-        <button data-filter="rejected">
+<button data-filter="rejected">
           Rejected
         </button>
-
-      </div>
-
-      <div id="commentList"></div>
-
-    </div>
-
-  </div>
-
 </div>
-
+<div id="commentList"></div>
+</div>
+</div>
+</div>
 <footer style="background:#222;color:#ccc;padding:20px 15px;text-align:center;margin-top:40px;border-top:4px solid #003366;">
-
-  <p>
+<p>
     © <span id="admYear"></span>
     ITI Study Centre. सर्वाधिकार सुरक्षित।
   </p>
-
 </footer>
-
 <script>
   document.getElementById("admYear").textContent =
     new Date().getFullYear();
 </script>
-
 <script type="module">
 
 /* =========================================================
@@ -1527,6 +1481,5 @@ document
   );
 
 </script>
-
 </body>
-       </html>
+</html>
