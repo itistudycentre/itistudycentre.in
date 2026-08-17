@@ -1,16 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Admin — Comments Moderation | ITI Study Centre</title>
-
-<meta name="robots" content="noindex, nofollow">
-
-<link rel="icon" href="/images/favicon.png">
-<link rel="stylesheet" href="/css/style.css">
-
+<meta content="noindex, nofollow" name="robots"/>
+<link href="/images/favicon.png" rel="icon"/>
+<link href="/css/style.css" rel="stylesheet"/>
 <style>
 *{
   margin:0;
@@ -290,215 +287,104 @@ body{
 }
 </style>
 </head>
-
 <body>
-
 <div id="header-container"></div>
+<script defer="" src="/js/header-loader.js"></script>
 
-<script defer src="/js/header-loader.js"></script>
 
 
 <!-- ADMIN TOP BAR -->
 <div class="admin-topbar">
-
-  <div class="bar">
-
-    <h1>
+<div class="bar">
+<h1>
       🔐 Comments Admin — ITI Study Centre
     </h1>
-
-    <button
-      class="hidden"
-      id="logoutBtn"
-      type="button"
-    >
+<button class="hidden" id="logoutBtn" type="button">
       Logout
     </button>
-
-  </div>
-
 </div>
-
-
+</div>
 <div class="container">
-
-
 <!-- =====================================================
      LOGIN
 ====================================================== -->
-
 <div class="card" id="loginCard">
-
-  <h2 style="margin-bottom:10px;">
+<h2 style="margin-bottom:10px;">
     Admin Login
   </h2>
-
-  <p class="login-info">
+<p class="login-info">
     अपने Admin Email और Password से login करें।
   </p>
-
-  <form id="loginForm">
-
-    <input
-      class="field"
-      id="emailInput"
-      type="email"
-      placeholder="Admin Email"
-      autocomplete="email"
-      required
-    >
-
-    <input
-      class="field"
-      id="passwordInput"
-      type="password"
-      placeholder="Password"
-      autocomplete="current-password"
-      required
-    >
-
-    <button
-      class="btn login-btn"
-      id="loginBtn"
-      type="submit"
-    >
+<form id="loginForm">
+<input autocomplete="email" class="field" id="emailInput" placeholder="Admin Email" required="" type="email"/>
+<input autocomplete="current-password" class="field" id="passwordInput" placeholder="Password" required="" type="password"/>
+<button class="btn login-btn" id="loginBtn" type="submit">
       Login
     </button>
-
-  </form>
-
-  <div
-    class="err"
-    id="loginError"
-  ></div>
-
+</form>
+<div class="err" id="loginError"></div>
 </div>
-
-
 <!-- =====================================================
      NOT AUTHORIZED
 ====================================================== -->
-
-<div
-  class="card hidden"
-  id="notAuthorizedCard"
->
-
-  <h3 style="margin-bottom:10px;">
+<div class="card hidden" id="notAuthorizedCard">
+<h3 style="margin-bottom:10px;">
     ❌ Access Denied
   </h3>
-
-  <p>
+<p>
     यह Firebase account Admin के रूप में authorized नहीं है।
   </p>
-
-  <p style="margin-top:10px;color:#666;font-size:.9rem;">
+<p style="margin-top:10px;color:#666;font-size:.9rem;">
     Admin access के लिए Firebase Firestore में
     <code>admins/{User UID}</code> document होना चाहिए।
   </p>
-
 </div>
-
-
 <!-- =====================================================
      ADMIN CONTENT
 ====================================================== -->
-
-<div
-  class="hidden"
-  id="adminContent"
->
-
-  <div class="card">
-
-    <div
-      class="user-info"
-      id="adminUserInfo"
-    ></div>
-
-    <div
-      class="stats"
-      id="stats"
-    ></div>
-
-
-    <div
-      class="filters"
-      id="filters"
-    >
-
-      <button
-        class="active"
-        data-filter="all"
-        type="button"
-      >
+<div class="hidden" id="adminContent">
+<div class="card">
+<div class="user-info" id="adminUserInfo"></div>
+<div class="stats" id="stats"></div>
+<div class="filters" id="filters">
+<button class="active" data-filter="all" type="button">
         All
       </button>
-
-      <button
-        data-filter="pending"
-        type="button"
-      >
+<button data-filter="pending" type="button">
         Pending
       </button>
-
-      <button
-        data-filter="approved"
-        type="button"
-      >
+<button data-filter="approved" type="button">
         Approved
       </button>
-
-      <button
-        data-filter="rejected"
-        type="button"
-      >
+<button data-filter="rejected" type="button">
         Rejected
       </button>
-
-    </div>
-
-
-    <div id="commentList"></div>
-
-  </div>
-
 </div>
-
+<div id="commentList"></div>
 </div>
-
-
+</div>
+</div>
 <!-- FOOTER -->
-
-<footer
-  style="
+<footer style="
     background:#222;
     color:#ccc;
     padding:20px 15px;
     text-align:center;
     margin-top:40px;
     border-top:4px solid #003366;
-  "
->
-
-  <p>
+  ">
+<p>
     © <span id="admYear"></span>
     ITI Study Centre. सर्वाधिकार सुरक्षित।
   </p>
-
 </footer>
-
-
 <script>
 document.getElementById("admYear").textContent =
   new Date().getFullYear();
 </script>
-
-
 <!-- =====================================================
      FIREBASE
 ====================================================== -->
-
 <script type="module">
 
 import {
@@ -1678,6 +1564,5 @@ document
   );
 
 </script>
-
 </body>
 </html>
