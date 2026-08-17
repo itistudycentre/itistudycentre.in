@@ -1555,7 +1555,7 @@
 </div>
 </div>
 <!-- ============================================================
-    COMMENTS
+    COMMENTS (centralized — see /js/comments.js)
     ============================================================ -->
 <div class="container">
 <div class="content-section" data-content="comments">
@@ -1563,52 +1563,8 @@
 <span class="icon">💬</span>
 <span class="title">टिप्पणियाँ – मॉडरेशन के साथ</span>
 </div>
-<div class="section-body copy-protect">
-<div class="comments-section">
-<p>💬 <strong>इस मॉड्यूल के बारे में अपने विचार या प्रश्न साझा करें।</strong></p>
-<p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 सभी टिप्पणियाँ प्रकाशित होने से पहले एडमिन द्वारा समीक्षा की जाती हैं।</p>
-<textarea id="comment-text" placeholder="अपनी टिप्पणी यहाँ लिखें..." rows="3" style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
-<input id="comment-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;" type="text"/>
-<button class="btn" onclick="postComment()" style="margin-top:6px;">💬 टिप्पणी पोस्ट करें (समीक्षाधीन)</button>
-<div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
-<div class="comment-item">
-<strong>Admin</strong> <span class="meta">(मॉडरेटर)</span> <span class="status-approved">✅ स्वीकृत</span>
-<p style="margin:4px 0 0 0; font-size:0.95rem;">मॉड्यूल 8 में आपका स्वागत है! वित्तीय प्रबंधन, बैंकिंग, बचत, ऋण, बीमा और कानूनी अधिकारों के बारे में प्रश्न पूछने में संकोच न करें।</p>
-</div>
-<p style="color:#888; font-style:italic; margin-top:8px;">आपकी टिप्पणी एडमिन अनुमोदन के बाद यहाँ दिखाई देगी।</p>
-</div>
-<p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ टिप्पणियाँ मॉडरेट की जाती हैं। कृपया विनम्र रहें।</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    ADMIN PANEL
-    ============================================================ -->
-<div class="container">
-<div class="admin-toggle" onclick="toggleAdminPanel()">
-<span class="key-icon">🔑</span>
-<strong>Admin Panel</strong> – Comments Management
-            <span style="color:#888; font-weight:400; font-size:0.85rem; display:block; margin-top:4px;">(Click to open/close admin panel)</span>
-</div>
-<div class="admin-panel" id="adminPanel">
-<div class="admin-header">
-<h3>🔐 Comment Moderation</h3>
-<button class="close-btn" onclick="toggleAdminPanel()">✕ Close</button>
-</div>
-<div class="admin-password-box" id="adminLogin">
-<input id="adminPassword" onkeyup="if(event.key==='Enter') checkAdminPassword()" placeholder="Enter admin password..." type="password"/>
-<button onclick="checkAdminPassword()">🔓 Login</button>
-<span class="error-msg" id="passwordError">❌ Wrong password! Try again.</span>
-</div>
-<div id="adminContent" style="display:none;">
-<div class="comment-stats" id="commentStats">
-<span>📊 Total: <span class="count" id="totalCount">0</span></span>
-<span>⏳ Pending: <span class="count" id="pendingCount">0</span></span>
-<span>✅ Approved: <span class="count" id="approvedCount">0</span></span>
-<span>❌ Rejected: <span class="count" id="rejectedCount">0</span></span>
-</div>
-<div id="adminCommentList"></div>
+<div class="section-body">
+<div id="comment-section"></div>
 </div>
 </div>
 </div>
@@ -1752,185 +1708,6 @@
             document.body.removeChild(textarea);
         }
 
-        // ============================================================
-        // COMMENT SYSTEM
-        // ============================================================
-        const ADMIN_PASSWORD = 'admin123';
-        const STORAGE_KEY = 'module8_comments';
-
-        function getComments() {
-            try {
-                const data = localStorage.getItem(STORAGE_KEY);
-                return data ? JSON.parse(data) : [];
-            } catch {
-                return [];
-            }
-        }
-
-        function saveComments(comments) {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(comments));
-        }
-
-        function generateId() {
-            return Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
-        }
-
-        function getTimeAgo(timestamp) {
-            const diff = Date.now() - timestamp;
-            const minutes = Math.floor(diff / 60000);
-            if (minutes < 1) return 'Just now';
-            if (minutes < 60) return minutes + 'm ago';
-            const hours = Math.floor(minutes / 60);
-            if (hours < 24) return hours + 'h ago';
-            const days = Math.floor(hours / 24);
-            return days + 'd ago';
-        }
-
-        function renderPublicComments() {
-            const list = document.getElementById('comment-list');
-            if (!list) return;
-            const comments = getComments();
-            const approved = comments.filter(c => c.status === 'approved');
-
-            const noMsg = list.querySelector('.no-comments-msg');
-            if (noMsg) noMsg.remove();
-
-            const existingItems = list.querySelectorAll('.comment-item');
-            existingItems.forEach(el => {
-                if (!el.querySelector('.status-approved') || !el.querySelector('strong')?.textContent?.includes('Admin')) {
-                    el.remove();
-                }
-            });
-
-            if (approved.length === 0) {
-                let noMsgEl = document.createElement('p');
-                noMsgEl.className = 'no-comments-msg';
-                noMsgEl.textContent = 'No approved comments yet. Be the first to comment!';
-                list.appendChild(noMsgEl);
-                return;
-            }
-
-            approved.forEach(comment => {
-                const div = document.createElement('div');
-                div.className = 'comment-item';
-                div.innerHTML = `
-                    <strong>${comment.name}</strong>
-                    <span class="meta">(${getTimeAgo(comment.timestamp)})</span>
-                    <span class="status-approved">✅ Approved</span>
-                    <p style="margin:4px 0 0 0; font-size:0.95rem;">${comment.text}</p>
-                `;
-                list.prepend(div);
-            });
-        }
-
-        function postComment() {
-            const text = document.getElementById('comment-text').value.trim();
-            const name = document.getElementById('comment-name').value.trim() || 'Anonymous';
-            if (!text) {
-                alert('Please write a comment.');
-                return;
-            }
-            const comments = getComments();
-            comments.push({ id: generateId(), name, text, timestamp: Date.now(), status: 'pending' });
-            saveComments(comments);
-            document.getElementById('comment-text').value = '';
-            document.getElementById('comment-name').value = '';
-            renderPublicComments();
-            renderAdminComments();
-            alert('✅ Your comment has been submitted for review.');
-        }
-
-        function checkAdminPassword() {
-            const input = document.getElementById('adminPassword');
-            const error = document.getElementById('passwordError');
-            if (input.value === ADMIN_PASSWORD) {
-                document.getElementById('adminLogin').style.display = 'none';
-                document.getElementById('adminContent').style.display = 'block';
-                renderAdminComments();
-                error.classList.remove('show');
-            } else {
-                error.classList.add('show');
-                input.value = '';
-                input.focus();
-            }
-        }
-
-        function renderAdminComments() {
-            const container = document.getElementById('adminCommentList');
-            const comments = getComments();
-            document.getElementById('totalCount').textContent = comments.length;
-            document.getElementById('pendingCount').textContent = comments.filter(c => c.status === 'pending').length;
-            document.getElementById('approvedCount').textContent = comments.filter(c => c.status === 'approved').length;
-            document.getElementById('rejectedCount').textContent = comments.filter(c => c.status === 'rejected').length;
-
-            if (comments.length === 0) {
-                container.innerHTML = `<p class="no-comments-msg">No comments yet.</p>`;
-                return;
-            }
-
-            let html = '';
-            comments.forEach(comment => {
-                html += `
-                    <div class="admin-comment-item" data-id="${comment.id}">
-                        <div class="comment-info">
-                            <strong>${comment.name}</strong>
-                            <span class="time">${getTimeAgo(comment.timestamp)}</span>
-                            <span class="status ${comment.status}">${comment.status.charAt(0).toUpperCase() + comment.status.slice(1)}</span>
-                            <p style="margin:4px 0 0 0; font-size:0.9rem;">${comment.text}</p>
-                        </div>
-                        <div class="comment-actions">
-                            ${comment.status !== 'approved' ? `<button class="btn-approve" onclick="approveComment('${comment.id}')">✅ Approve</button>` : ''}
-                            ${comment.status !== 'rejected' ? `<button class="btn-reject" onclick="rejectComment('${comment.id}')">⛔ Reject</button>` : ''}
-                            <button class="btn-delete" onclick="deleteComment('${comment.id}')">🗑️ Delete</button>
-                        </div>
-                    </div>
-                `;
-            });
-            container.innerHTML = html;
-        }
-
-        function approveComment(id) {
-            let comments = getComments();
-            comments = comments.map(c => c.id === id ? { ...c, status: 'approved' } : c);
-            saveComments(comments);
-            renderAdminComments();
-            renderPublicComments();
-        }
-
-        function rejectComment(id) {
-            let comments = getComments();
-            comments = comments.map(c => c.id === id ? { ...c, status: 'rejected' } : c);
-            saveComments(comments);
-            renderAdminComments();
-            renderPublicComments();
-        }
-
-        function deleteComment(id) {
-            if (!confirm('Are you sure you want to delete this comment?')) return;
-            let comments = getComments();
-            comments = comments.filter(c => c.id !== id);
-            saveComments(comments);
-            renderAdminComments();
-            renderPublicComments();
-        }
-
-        function toggleAdminPanel() {
-            const panel = document.getElementById('adminPanel');
-            panel.classList.toggle('open');
-            if (!panel.classList.contains('open')) {
-                document.getElementById('adminLogin').style.display = 'flex';
-                document.getElementById('adminContent').style.display = 'none';
-                document.getElementById('adminPassword').value = '';
-                document.getElementById('passwordError').classList.remove('show');
-            }
-        }
-
-        // Init
-        document.addEventListener('DOMContentLoaded', function() {
-            renderPublicComments();
-            window.postComment = postComment;
-        });
-
         // Scroll to top
         const scrollBtn = document.getElementById('scrollTop');
         window.addEventListener('scroll', function() {
@@ -1944,7 +1721,7 @@
             ' ITI Study Centre. सर्वाधिकार सुरक्षित।';
 
         console.log('मॉड्यूल 8 लोड हुआ: वित्तीय और कानूनी साक्षरता – 9 पाठ, पूरी तरह से खुला, द्विभाषी।');
-        console.log(`🔑 Admin Password: ${ADMIN_PASSWORD}`);
     </script>
+<script src="/js/comments.js" type="module"></script>
 </body>
 </html>
