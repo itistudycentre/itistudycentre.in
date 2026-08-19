@@ -1384,55 +1384,6 @@
 </div>
 </div>
 <!-- ============================================================
-    COMMENTS
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="comments">
-<div class="section-header">
-<span class="icon">💬</span>
-<span class="title">टिप्पणियाँ – मॉडरेशन के साथ</span>
-</div>
-<div class="section-body copy-protect">
-<div class="comments-section">
-<p>💬 <strong>इस मॉड्यूल के बारे में अपने विचार या प्रश्न साझा करें।</strong></p>
-<p style="font-size:0.85rem; color:#888; margin-bottom:10px;">📌 सभी टिप्पणियाँ प्रकाशित होने से पहले एडमिन द्वारा समीक्षा की जाती हैं।</p>
-<textarea id="comment-text" placeholder="अपनी टिप्पणी यहाँ लिखें..." rows="3" style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
-<input id="comment-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;" type="text"/>
-<button class="btn" onclick="postComment()" style="margin-top:6px;">💬 टिप्पणी पोस्ट करें (समीक्षाधीन)</button>
-<div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
-<div class="comment-item">
-<strong>Admin</strong> <span class="meta">(मॉडरेटर)</span> <span class="status-approved">✅ स्वीकृत</span>
-<p style="margin:4px 0 0 0; font-size:0.95rem;">मॉड्यूल 3 में आपका स्वागत है! 21वीं सदी के कौशल, व्यवहार, दृष्टिकोण और समस्या समाधान के बारे में प्रश्न पूछने में संकोच न करें।</p>
-</div>
-<p style="color:#888; font-style:italic; margin-top:8px;">आपकी टिप्पणी एडमिन अनुमोदन के बाद यहाँ दिखाई देगी।</p>
-</div>
-<p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ टिप्पणियाँ मॉडरेट की जाती हैं। कृपया विनम्र रहें।</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    TOPIC REQUEST
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="topicrequest">
-<div class="section-header">
-<span class="icon">💭</span>
-<span class="title">विषय अनुरोध</span>
-</div>
-<div class="section-body copy-protect">
-<div class="topic-request">
-<p>📝 <strong>कोई नया विषय या सुधार सुझाएँ।</strong></p>
-<input id="topic-name" placeholder="आपका नाम (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;" type="text"/>
-<input id="topic-email" placeholder="आपका ईमेल (वैकल्पिक)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;" type="email"/>
-<textarea id="topic-message" placeholder="जिस विषय या सुधार को आप देखना चाहते हैं, उसका वर्णन करें..." rows="4" style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
-<button class="btn" onclick="submitTopicRequest()">📤 अनुरोध सबमिट करें</button>
-<p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ आपके अनुरोध की समीक्षा एडमिन द्वारा की जाएगी और जल्द ही जोड़ा जाएगा।</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
     SUGGESTIONS & DISCLAIMER
     ============================================================ -->
 <div class="container" style="margin-top:16px;">
@@ -1447,6 +1398,106 @@
 </div>
 </div>
 <!-- ===== FOOTER ===== -->
+
+<!-- CENTRAL SUGGESTION LINK START -->
+
+<div class="central-contact-suggestion">
+
+    <div class="central-contact-suggestion-content">
+
+        <div class="central-contact-suggestion-icon">💬</div>
+
+        <div>
+            <h3>इस पेज के बारे में सुझाव दें</h3>
+            <p>
+                कोई गलती, Broken Link, सुधार या नया Topic
+                सुझाना चाहते हैं?
+            </p>
+        </div>
+
+    </div>
+
+    <a
+        href="/contact.html"
+        class="central-contact-suggestion-button"
+    >
+        सुझाव दें →
+    </a>
+
+</div>
+
+<style>
+.central-contact-suggestion {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin:30px auto;
+    padding:18px 22px;
+    max-width:1100px;
+    background:#fff;
+    border:1px solid #e3e8ef;
+    border-left:5px solid #003366;
+    border-radius:12px;
+    box-shadow:0 2px 12px rgba(0,0,0,.05);
+}
+
+.central-contact-suggestion-content {
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.central-contact-suggestion-icon {
+    font-size:30px;
+}
+
+.central-contact-suggestion h3 {
+    margin:0 0 4px;
+    color:#003366;
+    font-size:1.15rem;
+}
+
+.central-contact-suggestion p {
+    margin:0;
+    color:#666;
+    font-size:.92rem;
+}
+
+.central-contact-suggestion-button {
+    display:inline-block;
+    padding:10px 20px;
+    background:#003366;
+    color:#fff !important;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.central-contact-suggestion-button:hover {
+    background:#002244;
+}
+
+@media(max-width:600px) {
+    .central-contact-suggestion {
+        flex-direction:column;
+        align-items:stretch;
+        text-align:center;
+    }
+
+    .central-contact-suggestion-content {
+        justify-content:center;
+    }
+
+    .central-contact-suggestion-button {
+        text-align:center;
+    }
+}
+</style>
+
+<!-- CENTRAL SUGGESTION LINK END -->
+
 <footer>
 <div class="footer-links">
 <a href="/disclaimer.html">अस्वीकरण</a>

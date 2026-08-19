@@ -1516,13 +1516,7 @@
 <textarea id="comment-text" placeholder="Write your comment here..." rows="3" style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text;"></textarea>
 <input id="comment-name" placeholder="Your Name (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;" type="text"/>
 <button class="btn" onclick="postComment()" style="margin-top:6px;">💬 Post Comment (Pending Review)</button>
-<div id="comment-list" style="margin-top:16px; max-height:350px; overflow-y:auto;">
-<div class="comment-item">
-<strong>Admin</strong> <span class="meta">(Moderator)</span> <span class="status-approved">✅ Approved</span>
-<p style="margin:4px 0 0 0; font-size:0.95rem;">Welcome to Module 1! Feel free to ask any questions or share your feedback. All comments will be reviewed by the admin before going live.</p>
-</div>
-<p style="color:#888; font-style:italic; margin-top:8px;">Your comment will appear here after admin approval.</p>
-</div>
+
 <p style="font-size:0.8rem; color:#888; margin-top:10px;">⚠️ Comments are moderated. Please be respectful and constructive.</p>
 </div>
 </div>
@@ -1538,14 +1532,7 @@
 <span class="title">Topic Request / विषय अनुरोध</span>
 </div>
 <div class="section-body copy-protect">
-<div class="topic-request">
-<p>📝 <strong>Request a new topic or suggest an improvement.</strong></p>
-<input id="topic-name" placeholder="Your Name (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-right:2%; margin-bottom:10px; font-family:inherit; user-select:text;" type="text"/>
-<input id="topic-email" placeholder="Your Email (optional)" style="padding:10px 14px; border:1px solid #ccc; border-radius:8px; font-size:0.95rem; width:48%; margin-bottom:10px; font-family:inherit; user-select:text;" type="email"/>
-<textarea id="topic-message" placeholder="Describe the topic or improvement you'd like to see..." rows="4" style="width:100%; padding:12px 16px; border:1px solid #ccc; border-radius:8px; font-size:1rem; resize:vertical; font-family:inherit; user-select:text; margin:10px 0;"></textarea>
-<button class="btn" onclick="submitTopicRequest()">📤 Submit Request</button>
-<p style="font-size:0.8rem; color:#888; margin-top:10px;">✅ Your request will be reviewed by the admin and added soon.</p>
-</div>
+
 </div>
 </div>
 </div>
@@ -1566,6 +1553,106 @@
 <!-- ============================================================
     FOOTER
     ============================================================ -->
+
+<!-- CENTRAL SUGGESTION LINK START -->
+
+<div class="central-contact-suggestion">
+
+    <div class="central-contact-suggestion-content">
+
+        <div class="central-contact-suggestion-icon">💬</div>
+
+        <div>
+            <h3>इस पेज के बारे में सुझाव दें</h3>
+            <p>
+                कोई गलती, Broken Link, सुधार या नया Topic
+                सुझाना चाहते हैं?
+            </p>
+        </div>
+
+    </div>
+
+    <a
+        href="/contact.html"
+        class="central-contact-suggestion-button"
+    >
+        सुझाव दें →
+    </a>
+
+</div>
+
+<style>
+.central-contact-suggestion {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin:30px auto;
+    padding:18px 22px;
+    max-width:1100px;
+    background:#fff;
+    border:1px solid #e3e8ef;
+    border-left:5px solid #003366;
+    border-radius:12px;
+    box-shadow:0 2px 12px rgba(0,0,0,.05);
+}
+
+.central-contact-suggestion-content {
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.central-contact-suggestion-icon {
+    font-size:30px;
+}
+
+.central-contact-suggestion h3 {
+    margin:0 0 4px;
+    color:#003366;
+    font-size:1.15rem;
+}
+
+.central-contact-suggestion p {
+    margin:0;
+    color:#666;
+    font-size:.92rem;
+}
+
+.central-contact-suggestion-button {
+    display:inline-block;
+    padding:10px 20px;
+    background:#003366;
+    color:#fff !important;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.central-contact-suggestion-button:hover {
+    background:#002244;
+}
+
+@media(max-width:600px) {
+    .central-contact-suggestion {
+        flex-direction:column;
+        align-items:stretch;
+        text-align:center;
+    }
+
+    .central-contact-suggestion-content {
+        justify-content:center;
+    }
+
+    .central-contact-suggestion-button {
+        text-align:center;
+    }
+}
+</style>
+
+<!-- CENTRAL SUGGESTION LINK END -->
+
 <footer>
 <div class="footer-links">
 <a href="/disclaimer.html">Disclaimer</a>
