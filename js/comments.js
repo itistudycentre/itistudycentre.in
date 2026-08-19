@@ -1,12 +1,14 @@
 // ================================================================
-// comment.js – एकीकृत कमेंट सिस्टम (पूरी वेबसाइट के लिए)
+// comment.js – ITI Study Centre
+// COMMON SUGGESTION SYSTEM
+// Contact Us के existing suggestion form के साथ compatible
 // ================================================================
 
-(function() {
+(function () {
     'use strict';
 
     const firebaseConfig = {
-        apiKey: "AIzaSyAyBiDGQxQ5LEtIV5JtMOT79rU3ksQg8TE",
+        apiKey: "AIzaSyAyBiDGQx5QLEtIV5JtMOT79rU3ksQg8TE",
         authDomain: "iti-study-centre.firebaseapp.com",
         projectId: "iti-study-centre",
         storageBucket: "iti-study-centre.firebasestorage.app",
@@ -14,176 +16,298 @@
         appId: "1:690794814318:web:42ed1c1f582a9e1df5bf7f"
     };
 
-    const CATEGORIES = [
-        { value: 'study-material', label: '📚 Study Material / Notes' },
-        { value: 'broken-link', label: '🔗 Broken Link' },
-        { value: 'wrong-info', label: '❌ Wrong Information / Correction' },
-        { value: 'new-topic', label: '➕ New Topic' },
-        { value: 'website-problem', label: '🌐 Website Problem' },
-        { value: 'general-suggestion', label: '💡 General Suggestion' },
-        { value: 'other', label: '📌 Other' }
-    ];
+    const RECAPTCHA_SITE_KEY =
+        "6LexjYctAAAAAJdA17IjqdkfJrecHtmqnd-DoODv";
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const wrapper = document.querySelector('.comment-section-wrapper');
-        if (!wrapper) return;
+    document.addEventListener("DOMContentLoaded", async function () {
 
-        Promise.all([
-            import('https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js'),
-            import('https://www.gstatic.com/firebasejs/12.17.1/firebase-app-check.js'),
-            import('https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js')
-        ]).then(([
-            { initializeApp },
-            { initializeAppCheck, ReCaptchaV3Provider },
-            { getFirestore, collection, addDoc, serverTimestamp, query, where, orderBy, getDocs }
-        ]) => {
+        // केवल Contact/Suggestion form मौजूद होने पर काम करेगा
+        const form = document.getElementById("suggestionForm");
+
+        if (!form) {
+            return;
+        }
+
+        try {
+
+            // =====================================================
+            // FIREBASE MODULES
+            // =====================================================
+
+            const [
+                firebaseApp,
+                firebaseAppCheck,
+                firebaseFirestore
+            ] = await Promise.all([
+                import(
+                    "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js"
+                ),
+                import(
+                    "https://www.gstatic.com/firebasejs/12.17.1/firebase-app-check.js"
+                ),
+                import(
+                    "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js"
+                )
+            ]);
+
+            const { initializeApp } = firebaseApp;
+
+            const {
+                initializeAppCheck,
+                ReCaptchaV3Provider
+            } = firebaseAppCheck;
+
+            const {
+                getFirestore,
+                collection,
+                addDoc,
+                serverTimestamp
+            } = firebaseFirestore;
+
+            // =====================================================
+            // INITIALIZE FIREBASE
+            // =====================================================
 
             const app = initializeApp(firebaseConfig);
+
             initializeAppCheck(app, {
-                provider: new ReCaptchaV3Provider("6LexjYctAAAAAJdA17IjqdkfJrecHtmqnd-DoODv"),
+                provider: new ReCaptchaV3Provider(RECAPTCHA_SITE_KEY),
                 isTokenAutoRefreshEnabled: true
             });
+
             const db = getFirestore(app);
 
-            const pageId = window.location.pathname.replace(/^\/|\/$/g, '').replace(/\//g, '_') || 'home';
-            const form = document.getElementById('commentForm');
-            const formMessage = document.getElementById('formMessage');
-            if (!form) return;
+            // =====================================================
+            // FORM ELEMENTS
+            // =====================================================
 
-            // Category dropdown add (अगर नहीं है)
-            let categorySelect = document.getElementById('commentCategory');
-            if (!categorySelect) {
-                const nameInput = document.getElementById('nameInput');
-                const parent = nameInput ? nameInput.parentNode : form;
-                const catWrapper = document.createElement('div');
-                catWrapper.style.cssText = 'margin-top:10px;';
-                const label = document.createElement('label');
-                label.htmlFor = 'commentCategory';
-                label.style.cssText = 'display:block; font-weight:600; font-size:14px; color:#333; margin-bottom:4px;';
-                label.innerHTML = 'Category <span style="color:#d00000;">*</span>';
-                const select = document.createElement('select');
-                select.id = 'commentCategory';
-                select.name = 'category';
-                select.required = true;
-                select.style.cssText = 'width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:6px; font-size:14px; background:#fff;';
-                const def = document.createElement('option');
-                def.value = '';
-                def.textContent = '-- Category चुनें --';
-                select.appendChild(def);
-                CATEGORIES.forEach(c => {
-                    const o = document.createElement('option');
-                    o.value = c.value;
-                    o.textContent = c.label;
-                    select.appendChild(o);
-                });
-                catWrapper.appendChild(label);
-                catWrapper.appendChild(select);
-                if (nameInput && nameInput.parentNode) {
-                    nameInput.parentNode.insertBefore(catWrapper, nameInput.nextSibling);
-                } else {
-                    form.insertBefore(catWrapper, form.querySelector('textarea') || form.firstChild);
-                }
-                categorySelect = select;
+            const nameInput =
+                document.getElementById("name");
+
+            const emailInput =
+                document.getElementById("email");
+
+            const categoryInput =
+                document.getElementById("category");
+
+            const messageInput =
+                document.getElementById("message");
+
+            const submitButton =
+                document.getElementById("submitSuggestion");
+
+            const formMessage =
+                document.getElementById("formMessage");
+
+            // =====================================================
+            // CHECK ELEMENTS
+            // =====================================================
+
+            if (
+                !nameInput ||
+                !categoryInput ||
+                !messageInput ||
+                !submitButton ||
+                !formMessage
+            ) {
+                console.error(
+                    "Suggestion form elements missing."
+                );
+                return;
             }
 
-            let pageInput = document.getElementById('pageInput');
-            if (!pageInput) {
-                pageInput = document.createElement('input');
-                pageInput.type = 'hidden';
-                pageInput.id = 'pageInput';
-                pageInput.name = 'page';
-                form.appendChild(pageInput);
-            }
-            pageInput.value = pageId;
+            // =====================================================
+            // MESSAGE FUNCTION
+            // =====================================================
 
-            form.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                const comment = document.getElementById('commentInput').value.trim();
-                const name = document.getElementById('nameInput').value.trim() || 'अनाम';
-                const category = document.getElementById('commentCategory').value;
-                const email = document.getElementById('emailInput')?.value?.trim() || '';
-                const submitBtn = form.querySelector('.btn-submit-comment');
+            function showMessage(type, message) {
 
-                if (!comment) {
-                    showMessage('error', '⚠️ कृपया कुछ लिखें।');
-                    document.getElementById('commentInput').focus();
-                    return;
-                }
-                if (!category) {
-                    showMessage('error', '⚠️ कृपया Category चुनें।');
-                    document.getElementById('commentCategory').focus();
-                    return;
-                }
-
-                submitBtn.disabled = true;
-                submitBtn.textContent = '⏳ भेजा जा रहा...';
-                formMessage.style.display = 'none';
-
-                try {
-                    await addDoc(collection(db, 'comments'), {
-                        name, email, category,
-                        message: comment,
-                        page: pageId,
-                        type: 'comment',
-                        status: 'pending',
-                        createdAt: serverTimestamp()
-                    });
-                    showMessage('success', '✅ आपकी टिप्पणी समीक्षा के लिए भेज दी गई है। धन्यवाद!');
-                    document.getElementById('commentInput').value = '';
-                    document.getElementById('nameInput').value = '';
-                    if (document.getElementById('emailInput')) document.getElementById('emailInput').value = '';
-                    document.getElementById('commentCategory').value = '';
-                } catch (error) {
-                    console.error('Error:', error);
-                    showMessage('error', '❌ टिप्पणी भेजने में समस्या हुई।');
-                }
-                submitBtn.disabled = false;
-                submitBtn.textContent = '📨 टिप्पणी पोस्ट करें';
-            });
-
-            function showMessage(type, text) {
                 formMessage.className = type;
-                formMessage.textContent = text;
-                formMessage.style.display = 'block';
+                formMessage.textContent = message;
+                formMessage.style.display = "block";
+
+                formMessage.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
             }
 
-            async function loadComments() {
-                const container = document.getElementById('approvedComments');
-                if (!container) return;
-                try {
-                    const q = query(
-                        collection(db, 'comments'),
-                        where('page', '==', pageId),
-                        where('status', '==', 'approved'),
-                        orderBy('createdAt', 'desc')
-                    );
-                    const snapshot = await getDocs(q);
-                    if (snapshot.empty) {
-                        container.innerHTML = '<p class="no-comments">अभी तक कोई स्वीकृत टिप्पणी नहीं है।</p>';
+            // =====================================================
+            // FORM SUBMIT
+            // =====================================================
+
+            form.addEventListener(
+                "submit",
+                async function (event) {
+
+                    event.preventDefault();
+
+                    // ------------------------------------------------
+                    // GET VALUES
+                    // ------------------------------------------------
+
+                    const name =
+                        nameInput.value.trim();
+
+                    const email =
+                        emailInput
+                            ? emailInput.value.trim()
+                            : "";
+
+                    const category =
+                        categoryInput.value;
+
+                    const message =
+                        messageInput.value.trim();
+
+                    // ------------------------------------------------
+                    // VALIDATION
+                    // ------------------------------------------------
+
+                    if (!name) {
+                        showMessage(
+                            "error",
+                            "⚠️ कृपया अपना नाम लिखें।"
+                        );
+                        nameInput.focus();
                         return;
                     }
-                    let html = '';
-                    snapshot.forEach(doc => {
-                        const data = doc.data();
-                        const date = data.createdAt?.toDate?.()?.toLocaleDateString('hi-IN') || 'अभी';
-                        const cat = data.category ? CATEGORIES.find(c => c.value === data.category) : null;
-                        const catLabel = cat ? cat.label : '💬 General';
-                        html += `
-                            <div class="comment-item">
-                                <div class="comment-meta">${data.name || 'अनाम'} · ${date}
-                                    <span style="background:#eef2f7; padding:1px 10px; border-radius:12px; font-size:12px; color:#555; margin-left:8px;">${catLabel}</span>
-                                </div>
-                                <div class="comment-text">${data.message}</div>
-                            </div>
-                        `;
-                    });
-                    container.innerHTML = html;
-                } catch (error) {
-                    console.error('Error loading comments:', error);
-                    container.innerHTML = '<p class="no-comments">टिप्पणियाँ लोड नहीं हो पाईं।</p>';
+
+                    if (!category) {
+                        showMessage(
+                            "error",
+                            "⚠️ कृपया Suggestion Category चुनें।"
+                        );
+                        categoryInput.focus();
+                        return;
+                    }
+
+                    if (!message) {
+                        showMessage(
+                            "error",
+                            "⚠️ कृपया अपना सुझाव लिखें।"
+                        );
+                        messageInput.focus();
+                        return;
+                    }
+
+                    if (
+                        email &&
+                        emailInput &&
+                        !emailInput.checkValidity()
+                    ) {
+                        showMessage(
+                            "error",
+                            "⚠️ कृपया सही Email Address डालें।"
+                        );
+                        emailInput.focus();
+                        return;
+                    }
+
+                    // ------------------------------------------------
+                    // BUTTON DISABLE
+                    // ------------------------------------------------
+
+                    submitButton.disabled = true;
+                    submitButton.textContent = "⏳ Sending...";
+                    formMessage.style.display = "none";
+
+                    try {
+
+                        // ============================================
+                        // FIRESTORE
+                        // ============================================
+
+                        await addDoc(
+                            collection(db, "comments"),
+                            {
+                                name: name,
+
+                                email: email || "",
+
+                                category: category,
+
+                                message: message,
+
+                                // Contact page से भेजा गया
+                                page: "/contact.html",
+
+                                // Admin panel के लिए
+                                type: "suggestion",
+
+                                // हमेशा Pending
+                                // Admin approve करेगा
+                                status: "pending",
+
+                                createdAt:
+                                    serverTimestamp()
+                            }
+                        );
+
+                        // ============================================
+                        // SUCCESS
+                        // ============================================
+
+                        showMessage(
+                            "success",
+                            "✅ आपका सुझाव सफलतापूर्वक भेज दिया गया है। आपका सुझाव अभी Pending Review में है।"
+                        );
+
+                        // Form साफ करें
+                        form.reset();
+
+                    } catch (error) {
+
+                        console.error(
+                            "Firebase Suggestion Error:",
+                            error
+                        );
+
+                        showMessage(
+                            "error",
+                            "❌ सुझाव भेजने में समस्या हुई। कृपया कुछ समय बाद पुनः प्रयास करें।"
+                        );
+
+                    } finally {
+
+                        // ============================================
+                        // BUTTON ENABLE
+                        // ============================================
+
+                        submitButton.disabled = false;
+
+                        submitButton.textContent =
+                            "📤 Submit Suggestion →";
+                    }
+
                 }
+            );
+
+            console.log(
+                "✅ ITI Study Centre Suggestion System Loaded"
+            );
+
+        } catch (error) {
+
+            console.error(
+                "Firebase Load Error:",
+                error
+            );
+
+            const formMessage =
+                document.getElementById("formMessage");
+
+            if (formMessage) {
+
+                formMessage.className = "error";
+
+                formMessage.textContent =
+                    "❌ Suggestion system load नहीं हो पाया।";
+
+                formMessage.style.display = "block";
             }
-            loadComments();
-        }).catch(err => console.error('Firebase load error:', err));
+        }
+
     });
+
 })();
