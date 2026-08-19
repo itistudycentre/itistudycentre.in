@@ -1,8 +1,0 @@
-ITI Study Centre — Common Feedback System
-
-Public pages use /js/header-loader.js, which loads /js/comments.js exactly once.
-The common widget provides two modes: टिप्पणी and सुझाव दें.
-Both are stored in Firestore collection: comments, with status=pending.
-Only approved type=comment entries are shown publicly. Suggestions remain admin-only.
-Admin moderation/login remains in /admin-comments.html using admins/{UID}.
-Legacy per-page Comments, Topic Request, and standalone Suggestion CTA blocks were removed.
