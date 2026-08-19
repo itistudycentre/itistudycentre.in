@@ -32,7 +32,7 @@ import {
 ============================================================ */
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAyBiDGQx5LEtIV5JtMOT79rU3ksQg8TE",
+  apiKey: "AIzaSyAyBiDGQxQ5LEtIV5JtMOT79rU3ksQg8TE",
   authDomain: "iti-study-centre.firebaseapp.com",
   projectId: "iti-study-centre",
   storageBucket: "iti-study-centre.firebasestorage.app",
@@ -192,11 +192,6 @@ function timeAgo(date) {
 
 function findCommentPosition() {
 
-  /*
-    First preference:
-    footer से ठीक पहले
-  */
-
   const footer =
     document.querySelector(
       "footer"
@@ -209,11 +204,6 @@ function findCommentPosition() {
 
   }
 
-
-  /*
-    Second preference:
-    main element के बाद
-  */
 
   const main =
     document.querySelector(
@@ -228,11 +218,6 @@ function findCommentPosition() {
   }
 
 
-  /*
-    Third preference:
-    body के अंत में
-  */
-
   return null;
 
 }
@@ -243,11 +228,6 @@ function findCommentPosition() {
 ============================================================ */
 
 function createCommentContainer() {
-
-  /*
-    अगर page में पहले से comment-section है
-    तो नया container नहीं बनाएँगे।
-  */
 
   let container =
     document.getElementById(
@@ -261,10 +241,6 @@ function createCommentContainer() {
 
   }
 
-
-  /*
-    नया container बनाएँ
-  */
 
   container =
     document.createElement(
@@ -288,10 +264,6 @@ function createCommentContainer() {
     "0 15px";
 
 
-  /*
-    Footer से पहले लगाएँ
-  */
-
   const footer =
     document.querySelector(
       "footer"
@@ -310,11 +282,6 @@ function createCommentContainer() {
   }
 
 
-  /*
-    अगर footer नहीं है,
-    तो main के बाद लगाएँ
-  */
-
   const main =
     document.querySelector(
       "main"
@@ -332,11 +299,6 @@ function createCommentContainer() {
 
   }
 
-
-  /*
-    अंतिम विकल्प:
-    body के अंत में
-  */
 
   document.body.appendChild(
     container
@@ -431,10 +393,6 @@ function injectStyles() {
     .cc-row .cc-field{
       flex:1 1 200px;
     }
-
-    /*
-      छोटा Comment Button
-    */
 
     .cc-btn{
       display:inline-flex;
@@ -603,6 +561,38 @@ function renderShell(
         </div>
 
 
+        <select
+          id="cc-category"
+          class="cc-field"
+          required
+        >
+          <option value="">
+            -- सुझाव की Category चुनें --
+          </option>
+          <option value="Study Material / Notes">
+            📚 Study Material / Notes
+          </option>
+          <option value="Broken Link">
+            🔗 Broken Link
+          </option>
+          <option value="Wrong Information / Correction">
+            ❌ गलत जानकारी / Correction
+          </option>
+          <option value="New Topic">
+            ➕ नया Topic जोड़ना
+          </option>
+          <option value="Website Problem">
+            🌐 Website Problem
+          </option>
+          <option value="General Suggestion">
+            💡 General Suggestion
+          </option>
+          <option value="Other">
+            📌 Other
+          </option>
+        </select>
+
+
         <textarea
           id="cc-message"
           class="cc-field"
@@ -627,7 +617,7 @@ function renderShell(
           class="cc-btn"
           id="cc-submit"
         >
-          💬 टिप्पणी पोस्ट करें
+          💬 सबमिट करें
         </button>
 
 
@@ -760,10 +750,6 @@ async function loadApprovedComments(
     );
 
 
-    /*
-      Newest first
-    */
-
     items.sort(
       (a,b) =>
 
@@ -891,10 +877,6 @@ function bindForm(
       e.preventDefault();
 
 
-      /*
-        Honeypot
-      */
-
       const honeypot =
         container
           .querySelector(
@@ -930,6 +912,14 @@ function bindForm(
           .slice(0,150);
 
 
+      const category =
+        container
+          .querySelector(
+            "#cc-category"
+          )
+          .value;
+
+
       const message =
         container
           .querySelector(
@@ -938,6 +928,19 @@ function bindForm(
           .value
           .trim()
           .slice(0,2000);
+
+
+      if(!category){
+
+        showStatus(
+          statusEl,
+          "कृपया Category चुनें।",
+          false
+        );
+
+        return;
+
+      }
 
 
       if(!message){
@@ -987,8 +990,7 @@ function bindForm(
             type:
               "comment",
 
-            category:
-              "comment",
+            category,
 
             status:
               "pending",
@@ -1032,7 +1034,7 @@ function bindForm(
           false;
 
         submitBtn.textContent =
-          "💬 टिप्पणी पोस्ट करें";
+          "💬 सबमिट करें";
 
       }
 
@@ -1047,11 +1049,6 @@ function bindForm(
 ============================================================ */
 
 function initComments(){
-
-  /*
-    अब HTML में comment-section होना जरूरी नहीं है।
-    JavaScript खुद बना देगा।
-  */
 
   const container =
     createCommentContainer();
@@ -1108,4 +1105,4 @@ if(
 
   initComments();
 
-         }
+}
