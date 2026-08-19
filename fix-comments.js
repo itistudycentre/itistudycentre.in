@@ -5,52 +5,34 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const CONTACT_URL = "/contact.html";
+
 /*
 ============================================================
 ITI STUDY CENTRE
-CENTRAL CONTACT / SUGGESTION SYSTEM CLEANUP
+CENTRAL CONTACT / SUGGESTION CLEANUP
 ============================================================
 
 यह script:
+- पुराने page-wise comment sections हटाती है
+- पुराने topic request sections हटाती है
+- पुराने localStorage comment system हटाती है
+- पुराने comment.js / comments.js references हटाती है
+- contact.html को नहीं छूती
+- admin-comments.html को नहीं छूती
+- हर सामान्य HTML page पर केवल Contact Us suggestion link लगाती है
 
-1. सभी HTML pages को scan करेगी।
-2. पुराने Comment System हटाएगी।
-3. पुराने Topic Request हटाएगी।
-4. पुराने page-wise Admin Panel हटाएगी।
-5. पुराने /js/comments.js references हटाएगी।
-6. उसकी जगह केवल Contact Us का link लगाएगी।
-7. contact.html को बिल्कुल नहीं छेड़ेगी।
-8. admin-comments.html को बिल्कुल नहीं छेड़ेगी।
-
-FINAL FLOW:
-
-Any Page
-   ↓
-"सुझाव दें"
-   ↓
-/contact.html
-   ↓
-Firebase comments collection
-   ↓
-status = pending
-   ↓
-/admin-comments.html
-   ↓
-Approve / Reject / Delete
+IMPORTANT:
+यह script js folder को delete/change नहीं करती।
+Firebase वाला central comment system सुरक्षित रहता है।
 ============================================================
 */
 
 
 /* =========================================================
-   SETTINGS
+   FILES / FOLDERS TO PROTECT
 ========================================================= */
 
-const CONTACT_URL = "/contact.html";
-
-
-/*
-   जिन files को बिल्कुल नहीं छूना है
-*/
 const EXCLUDED_FILES = new Set([
     "contact.html",
     "admin-comments.html",
@@ -59,17 +41,14 @@ const EXCLUDED_FILES = new Set([
     "404.html"
 ]);
 
-
-/*
-   जिन folders को scan नहीं करना है
-*/
 const EXCLUDED_DIRS = new Set([
     ".git",
+    ".github",
     "node_modules",
-    "assets",
     "images",
     "css",
     "js",
+    "assets",
     "pdf",
     "data",
     "templates"
@@ -77,26 +56,20 @@ const EXCLUDED_DIRS = new Set([
 
 
 /* =========================================================
-   NEW CONTACT LINK
+   CENTRAL CONTACT LINK
 ========================================================= */
 
 const CONTACT_SNIPPET = `
-<!-- =========================================================
-     CENTRAL SUGGESTION LINK
-     सभी सुझाव Contact Us page पर भेजे जाते हैं।
-     ========================================================= -->
+<!-- CENTRAL SUGGESTION LINK START -->
 
 <div class="central-contact-suggestion">
 
     <div class="central-contact-suggestion-content">
 
-        <div class="central-contact-suggestion-icon">
-            💬
-        </div>
+        <div class="central-contact-suggestion-icon">💬</div>
 
         <div>
             <h3>इस पेज के बारे में सुझाव दें</h3>
-
             <p>
                 कोई गलती, Broken Link, सुधार या नया Topic
                 सुझाना चाहते हैं?
@@ -105,7 +78,10 @@ const CONTACT_SNIPPET = `
 
     </div>
 
-    <a href="${CONTACT_URL}" class="central-contact-suggestion-button">
+    <a
+        href="${CONTACT_URL}"
+        class="central-contact-suggestion-button"
+    >
         सुझाव दें →
     </a>
 
@@ -113,125 +89,75 @@ const CONTACT_SNIPPET = `
 
 <style>
 .central-contact-suggestion {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 18px;
-
-    margin: 30px auto;
-
-    padding: 18px 22px;
-
-    max-width: 1100px;
-
-    background: #ffffff;
-
-    border: 1px solid #e3e8ef;
-
-    border-left: 5px solid #003366;
-
-    border-radius: 12px;
-
-    box-shadow: 0 2px 12px rgba(0,0,0,.05);
-
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin:30px auto;
+    padding:18px 22px;
+    max-width:1100px;
+    background:#fff;
+    border:1px solid #e3e8ef;
+    border-left:5px solid #003366;
+    border-radius:12px;
+    box-shadow:0 2px 12px rgba(0,0,0,.05);
 }
 
 .central-contact-suggestion-content {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 14px;
-
+    display:flex;
+    align-items:center;
+    gap:14px;
 }
 
 .central-contact-suggestion-icon {
-
-    font-size: 30px;
-
+    font-size:30px;
 }
 
 .central-contact-suggestion h3 {
-
-    margin: 0 0 4px 0;
-
-    color: #003366;
-
-    font-size: 1.15rem;
-
+    margin:0 0 4px;
+    color:#003366;
+    font-size:1.15rem;
 }
 
 .central-contact-suggestion p {
-
-    margin: 0;
-
-    color: #666;
-
-    font-size: .92rem;
-
+    margin:0;
+    color:#666;
+    font-size:.92rem;
 }
 
 .central-contact-suggestion-button {
-
-    display: inline-block;
-
-    padding: 10px 20px;
-
-    background: #003366;
-
-    color: #ffffff !important;
-
-    text-decoration: none;
-
-    border-radius: 7px;
-
-    font-weight: 600;
-
-    white-space: nowrap;
-
-    transition: .2s;
-
+    display:inline-block;
+    padding:10px 20px;
+    background:#003366;
+    color:#fff !important;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:600;
+    white-space:nowrap;
 }
 
 .central-contact-suggestion-button:hover {
-
-    background: #002244;
-
-    transform: scale(1.02);
-
+    background:#002244;
 }
 
-@media (max-width: 600px) {
-
+@media(max-width:600px) {
     .central-contact-suggestion {
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        text-align: center;
-
+        flex-direction:column;
+        align-items:stretch;
+        text-align:center;
     }
 
     .central-contact-suggestion-content {
-
-        justify-content: center;
-
+        justify-content:center;
     }
 
     .central-contact-suggestion-button {
-
-        text-align: center;
-
+        text-align:center;
     }
-
 }
 </style>
+
+<!-- CENTRAL SUGGESTION LINK END -->
 `;
 
 
@@ -241,300 +167,504 @@ const CONTACT_SNIPPET = `
 
 function createBackup(filePath) {
 
-    const backupPath =
-        filePath + ".comment-backup";
+    const backupPath = filePath + ".comment-backup";
 
     if (!fs.existsSync(backupPath)) {
-
-        fs.copyFileSync(
-            filePath,
-            backupPath
-        );
-
+        fs.copyFileSync(filePath, backupPath);
     }
-
 }
 
 
 /* =========================================================
-   REMOVE OLD COMMENT BLOCKS
+   REMOVE CENTRAL LINK IF ALREADY EXISTS
 ========================================================= */
 
-function removeOldCommentBlocks(content) {
+function removeCentralSuggestion(content) {
+
+    const start =
+        "<!-- CENTRAL SUGGESTION LINK START -->";
+
+    const end =
+        "<!-- CENTRAL SUGGESTION LINK END -->";
 
     let result = content;
 
-
-    /*
-    ---------------------------------------------------------
-    Pattern 1:
-    पुराने "COMMENTS" sections
-    ---------------------------------------------------------
-    */
-
-    result = result.replace(
-
-        /<!--\s*={3,}\s*COMMENTS[\s\S]*?<!--\s*={3,}[\s\S]*?COMMENTS[\s\S]*?-->/gi,
-
-        ""
-
-    );
-
-
-    /*
-    ---------------------------------------------------------
-    Pattern 2:
-    COMMENTS heading से अगले major container तक
-    ---------------------------------------------------------
-    */
-
-    result = result.replace(
-
-        /<!--\s*={3,}\s*COMMENTS[\s\S]*?(?=<!--\s*={3,})/gi,
-
-        ""
-
-    );
-
-
-    /*
-    ---------------------------------------------------------
-    Pattern 3:
-    Comment section headings
-    ---------------------------------------------------------
-    */
-
-    result = result.replace(
-
-        /<div[^>]*class=["'][^"']*content-section[^"']*["'][^>]*>[\s\S]*?(?:टिप्पणियाँ|टिप्पणी|Comments)[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/gi,
-
-        ""
-
-    );
-
-
-    /*
-    ---------------------------------------------------------
-    Pattern 4:
-    पुराने comment-section-wrapper
-    ---------------------------------------------------------
-    */
-
-    result = result.replace(
-
-        /<div[^>]*class=["'][^"']*comment-section-wrapper[^"']*["'][\s\S]*?<\/div>\s*<\/div>/gi,
-
-        ""
-
-    );
-
-
-    /*
-    ---------------------------------------------------------
-    Pattern 5:
-    Topic Request blocks
-    ---------------------------------------------------------
-    */
-
-    result = result.replace(
-
-        /<div[^>]*class=["'][^"']*content-section[^"']*["'][^>]*>[\s\S]*?(?:विषय अनुरोध|Topic Request)[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/gi,
-
-        ""
-
-    );
-
-
-    /*
-    ---------------------------------------------------------
-    Pattern 6:
-    Topic request generic containers
-    ---------------------------------------------------------
-    */
-
-    result = result.replace(
-
-        /<div[^>]*class=["'][^"']*topic-request[^"']*["'][\s\S]*?<\/div>/gi,
-
-        ""
-
-    );
-
-
-    /*
-    ---------------------------------------------------------
-    Pattern 7:
-    Old admin panels
-    ---------------------------------------------------------
-    */
-
-    result = result.replace(
-
-        /<div[^>]*class=["'][^"']*admin-toggle[^"']*["'][\s\S]*?<\/div>/gi,
-
-        ""
-
-    );
-
-
-    result = result.replace(
-
-        /<div[^>]*class=["'][^"']*admin-panel[^"']*["'][\s\S]*?<\/div>/gi,
-
-        ""
-
-    );
-
-
-    /*
-    ---------------------------------------------------------
-    Pattern 8:
-    Old comments JavaScript functions
-    ---------------------------------------------------------
-    */
-
-    result = result.replace(
-
-        /const\s+ADMIN_PASSWORD\s*=\s*['"][\s\S]*?['"]\s*;/gi,
-
-        ""
-
-    );
-
-
-    result = result.replace(
-
-        /const\s+STORAGE_KEY\s*=\s*['"][\s\S]*?['"]\s*;/gi,
-
-        ""
-
-    );
-
-
-    /*
-    ---------------------------------------------------------
-    पुराने comments.js script references
-    ---------------------------------------------------------
-    */
-
-    result = result.replace(
-
-        /<script[^>]*src=["']\/js\/comments\.js["'][^>]*><\/script>/gi,
-
-        ""
-
-    );
-
-
-    result = result.replace(
-
-        /<script[^>]*src=["'][^"']*comments\.js["'][^>]*><\/script>/gi,
-
-        ""
-
-    );
-
-
-    /*
-    ---------------------------------------------------------
-    पुराने fix comment system references
-    ---------------------------------------------------------
-    */
-
-    result = result.replace(
-
-        /<script[^>]*src=["'][^"']*fix-comments\.js["'][^>]*><\/script>/gi,
-
-        ""
-
-    );
-
+    while (true) {
+
+        const startIndex = result.indexOf(start);
+
+        if (startIndex === -1) {
+            break;
+        }
+
+        const endIndex = result.indexOf(
+            end,
+            startIndex
+        );
+
+        if (endIndex === -1) {
+            break;
+        }
+
+        result =
+            result.slice(0, startIndex) +
+            result.slice(
+                endIndex + end.length
+            );
+    }
 
     return result;
-
 }
 
 
 /* =========================================================
-   REMOVE DUPLICATE CENTRAL LINKS
+   REMOVE OLD SCRIPT REFERENCES
 ========================================================= */
 
-function removeExistingCentralLinks(content) {
+function removeOldScriptReferences(content) {
 
-    return content.replace(
+    let result = content;
 
-        /<!--\s*={3,}\s*CENTRAL SUGGESTION LINK[\s\S]*?<\/style>\s*/gi,
+    const patterns = [
 
-        ""
+        /<script[^>]*src=["'][^"']*comment\.js[^"']*["'][^>]*><\/script>/gi,
 
-    );
+        /<script[^>]*src=["'][^"']*comments\.js[^"']*["'][^>]*><\/script>/gi,
 
+        /<script[^>]*src=["'][^"']*fix-comments\.js[^"']*["'][^>]*><\/script>/gi
+
+    ];
+
+    for (const pattern of patterns) {
+        result = result.replace(pattern, "");
+    }
+
+    return result;
 }
 
 
 /* =========================================================
-   INSERT NEW CONTACT LINK
+   REMOVE OLD LOCALSTORAGE COMMENT JAVASCRIPT
+========================================================= */
+
+function removeOldCommentJavaScript(content) {
+
+    let result = content;
+
+    /*
+       पुराने Module-style localStorage variables
+    */
+
+    result = result.replace(
+        /const\s+ADMIN_PASSWORD\s*=\s*['"][\s\S]*?['"]\s*;/gi,
+        ""
+    );
+
+    result = result.replace(
+        /const\s+STORAGE_KEY\s*=\s*['"][\s\S]*?['"]\s*;/gi,
+        ""
+    );
+
+    /*
+       पुराने inline comment functions
+    */
+
+    const functions = [
+        "postComment",
+        "checkAdminPassword",
+        "renderAdminComments",
+        "approveComment",
+        "rejectComment",
+        "deleteComment",
+        "toggleAdminPanel"
+    ];
+
+    for (const name of functions) {
+
+        const pattern = new RegExp(
+            `function\\s+${name}\\s*\\([^)]*\\)\\s*\\{[\\s\\S]*?\\n\\}`,
+            "gi"
+        );
+
+        result = result.replace(pattern, "");
+    }
+
+    return result;
+}
+
+
+/* =========================================================
+   REMOVE OLD COMMENT / TOPIC HTML
+========================================================= */
+
+function removeOldCommentHTML(content) {
+
+    let result = content;
+
+    /*
+    ---------------------------------------------------------
+    1. पुराने explicit comment section markers
+    ---------------------------------------------------------
+    */
+
+    result = result.replace(
+        /<!--\s*=+\s*COMMENTS[\s\S]*?(?=<!--\s*=+|<\/body>)/gi,
+        ""
+    );
+
+    /*
+    ---------------------------------------------------------
+    2. पुराने explicit topic request markers
+    ---------------------------------------------------------
+    */
+
+    result = result.replace(
+        /<!--\s*=+\s*TOPIC REQUEST[\s\S]*?(?=<!--\s*=+|<\/body>)/gi,
+        ""
+    );
+
+    /*
+    ---------------------------------------------------------
+    3. comment-section-wrapper
+    ---------------------------------------------------------
+    */
+
+    result = removeDivBlockByClass(
+        result,
+        "comment-section-wrapper"
+    );
+
+    /*
+    ---------------------------------------------------------
+    4. old admin panel
+    ---------------------------------------------------------
+    */
+
+    result = removeDivBlockByClass(
+        result,
+        "admin-toggle"
+    );
+
+    result = removeDivBlockById(
+        result,
+        "adminPanel"
+    );
+
+    /*
+    ---------------------------------------------------------
+    5. topic-request
+    ---------------------------------------------------------
+    */
+
+    result = removeDivBlockByClass(
+        result,
+        "topic-request"
+    );
+
+    /*
+    ---------------------------------------------------------
+    6. पुराने IDs
+    ---------------------------------------------------------
+    */
+
+    const oldIds = [
+        "comment-section",
+        "comments-section",
+        "commentForm",
+        "comment-list",
+        "approvedComments",
+        "adminPanel",
+        "topicRequest",
+        "topic-request"
+    ];
+
+    for (const id of oldIds) {
+
+        result = removeElementById(
+            result,
+            id
+        );
+    }
+
+    return result;
+}
+
+
+/* =========================================================
+   GENERIC DIV BLOCK REMOVER
+   ========================================================= */
+
+function removeDivBlockByClass(content, className) {
+
+    const regex = new RegExp(
+        `<div\\b[^>]*class=["'][^"']*\\b${escapeRegex(className)}\\b[^"']*["'][^>]*>`,
+        "gi"
+    );
+
+    let result = content;
+    let match;
+
+    while ((match = regex.exec(result)) !== null) {
+
+        const start = match.index;
+
+        const end =
+            findMatchingDiv(
+                result,
+                start
+            );
+
+        if (end === -1) {
+            break;
+        }
+
+        result =
+            result.slice(0, start) +
+            result.slice(end);
+        
+        regex.lastIndex = start;
+    }
+
+    return result;
+}
+
+
+/* =========================================================
+   REMOVE DIV BY ID
+========================================================= */
+
+function removeDivBlockById(content, id) {
+
+    const regex = new RegExp(
+        `<div\\b[^>]*id=["']${escapeRegex(id)}["'][^>]*>`,
+        "gi"
+    );
+
+    let result = content;
+    let match;
+
+    while ((match = regex.exec(result)) !== null) {
+
+        const start = match.index;
+
+        const end =
+            findMatchingDiv(
+                result,
+                start
+            );
+
+        if (end === -1) {
+            break;
+        }
+
+        result =
+            result.slice(0, start) +
+            result.slice(end);
+
+        regex.lastIndex = start;
+    }
+
+    return result;
+}
+
+
+/* =========================================================
+   REMOVE ANY ELEMENT BY ID
+========================================================= */
+
+function removeElementById(content, id) {
+
+    const regex = new RegExp(
+        `<([a-zA-Z][a-zA-Z0-9]*)\\b[^>]*id=["']${escapeRegex(id)}["'][^>]*>`,
+        "gi"
+    );
+
+    let result = content;
+    let match;
+
+    while ((match = regex.exec(result)) !== null) {
+
+        const tag = match[1];
+        const start = match.index;
+
+        const end =
+            findMatchingElement(
+                result,
+                start,
+                tag
+            );
+
+        if (end === -1) {
+            break;
+        }
+
+        result =
+            result.slice(0, start) +
+            result.slice(end);
+
+        regex.lastIndex = start;
+    }
+
+    return result;
+}
+
+
+/* =========================================================
+   MATCHING DIV
+========================================================= */
+
+function findMatchingDiv(content, startIndex) {
+
+    return findMatchingElement(
+        content,
+        startIndex,
+        "div"
+    );
+}
+
+
+/* =========================================================
+   MATCHING HTML ELEMENT
+========================================================= */
+
+function findMatchingElement(
+    content,
+    startIndex,
+    tagName
+) {
+
+    const tokenRegex =
+        new RegExp(
+            `<\\/?${tagName}\\b[^>]*>`,
+            "gi"
+        );
+
+    tokenRegex.lastIndex =
+        startIndex;
+
+    let depth = 0;
+    let match;
+
+    while ((match = tokenRegex.exec(content)) !== null) {
+
+        const token =
+            match[0];
+
+        if (
+            token.startsWith("</")
+        ) {
+
+            depth--;
+
+            if (depth === 0) {
+
+                return (
+                    match.index +
+                    token.length
+                );
+            }
+
+        }
+        else if (
+            !token.endsWith("/>")
+        ) {
+
+            depth++;
+        }
+    }
+
+    return -1;
+}
+
+
+/* =========================================================
+   ESCAPE REGEX
+========================================================= */
+
+function escapeRegex(value) {
+
+    return value.replace(
+        /[.*+?^${}()|[\]\\]/g,
+        "\\$&"
+    );
+}
+
+
+/* =========================================================
+   INSERT CENTRAL CONTACT LINK
 ========================================================= */
 
 function insertContactLink(content) {
 
     /*
-       Footer से ठीक पहले डालेंगे।
+       पहले पुराने central block हटाएँ
+    */
+
+    let result =
+        removeCentralSuggestion(
+            content
+        );
+
+    /*
+       Footer से पहले
     */
 
     const footerIndex =
-        content.search(/<footer\b/i);
-
+        result.search(
+            /<footer\b/i
+        );
 
     if (footerIndex !== -1) {
 
         return (
-
-            content.slice(0, footerIndex) +
+            result.slice(
+                0,
+                footerIndex
+            ) +
 
             CONTACT_SNIPPET +
 
             "\n" +
 
-            content.slice(footerIndex)
-
+            result.slice(
+                footerIndex
+            )
         );
-
     }
-
 
     /*
-       Footer न मिले तो body end से पहले
+       Footer नहीं है तो </body> से पहले
     */
 
-    const bodyEnd =
-        content.lastIndexOf("</body>");
+    const bodyIndex =
+        result.lastIndexOf(
+            "</body>"
+        );
 
-
-    if (bodyEnd !== -1) {
+    if (bodyIndex !== -1) {
 
         return (
-
-            content.slice(0, bodyEnd) +
+            result.slice(
+                0,
+                bodyIndex
+            ) +
 
             CONTACT_SNIPPET +
 
             "\n" +
 
-            content.slice(bodyEnd)
-
+            result.slice(
+                bodyIndex
+            )
         );
-
     }
 
-
-    return content + CONTACT_SNIPPET;
-
+    return result + CONTACT_SNIPPET;
 }
 
 
 /* =========================================================
-   FIX ONE HTML FILE
+   FIX ONE HTML PAGE
 ========================================================= */
 
 function fixPage(filePath) {
@@ -550,36 +680,43 @@ function fixPage(filePath) {
         const original =
             content;
 
-
         /*
-        Backup
+           Backup
         */
 
-        createBackup(filePath);
-
-
-        /*
-        Remove old systems
-        */
-
-        content =
-            removeOldCommentBlocks(
-                content
-            );
-
+        createBackup(
+            filePath
+        );
 
         /*
-        Remove duplicate central system
+           Remove old comment HTML
         */
 
         content =
-            removeExistingCentralLinks(
+            removeOldCommentHTML(
                 content
             );
 
+        /*
+           Remove old scripts
+        */
+
+        content =
+            removeOldScriptReferences(
+                content
+            );
 
         /*
-        Add new single Contact Us link
+           Remove old inline comment JS
+        */
+
+        content =
+            removeOldCommentJavaScript(
+                content
+            );
+
+        /*
+           Add central Contact link
         */
 
         content =
@@ -587,12 +724,13 @@ function fixPage(filePath) {
                 content
             );
 
-
         /*
-        Save only if changed
+           Save
         */
 
-        if (content !== original) {
+        if (
+            content !== original
+        ) {
 
             fs.writeFileSync(
                 filePath,
@@ -601,27 +739,20 @@ function fixPage(filePath) {
             );
 
             return true;
-
         }
-
 
         return false;
 
     }
-
     catch (error) {
 
         console.error(
-            "\n❌ Error:",
-            filePath,
-            "\n",
+            `❌ Error in ${filePath}:`,
             error.message
         );
 
         return false;
-
     }
-
 }
 
 
@@ -641,7 +772,6 @@ function getAllHtmlFiles(dir) {
             }
         );
 
-
     for (const item of items) {
 
         const fullPath =
@@ -650,12 +780,9 @@ function getAllHtmlFiles(dir) {
                 item.name
             );
 
-
-        /*
-        Directory
-        */
-
-        if (item.isDirectory()) {
+        if (
+            item.isDirectory()
+        ) {
 
             if (
                 !EXCLUDED_DIRS.has(
@@ -668,17 +795,10 @@ function getAllHtmlFiles(dir) {
                         fullPath
                     )
                 );
-
             }
 
             continue;
-
         }
-
-
-        /*
-        HTML file
-        */
 
         if (
             item.name
@@ -695,16 +815,11 @@ function getAllHtmlFiles(dir) {
                 files.push(
                     fullPath
                 );
-
             }
-
         }
-
     }
 
-
     return files;
-
 }
 
 
@@ -714,41 +829,32 @@ function getAllHtmlFiles(dir) {
 
 function main() {
 
-    console.log("");
     console.log(
-        "================================================="
+        "=============================================="
     );
 
     console.log(
-        " ITI STUDY CENTRE"
+        "ITI STUDY CENTRE"
     );
 
     console.log(
-        " CENTRAL CONTACT SYSTEM CLEANUP"
+        "CENTRAL CONTACT SYSTEM CLEANUP"
     );
 
     console.log(
-        "================================================="
+        "=============================================="
     );
-
-    console.log("");
-
 
     const htmlFiles =
         getAllHtmlFiles(
             __dirname
         );
 
-
     console.log(
-        `📄 कुल HTML files: ${htmlFiles.length}`
+        `HTML files found: ${htmlFiles.length}`
     );
 
-    console.log("");
-
-
     let changed = 0;
-
 
     for (
         const filePath
@@ -761,11 +867,9 @@ function main() {
                 filePath
             );
 
-
         process.stdout.write(
-            `⏳ ${relative} ... `
+            `Processing: ${relative} ... `
         );
-
 
         if (
             fixPage(
@@ -780,53 +884,23 @@ function main() {
             changed++;
 
         }
-
         else {
 
             console.log(
                 "⏭️ No change"
             );
-
         }
-
     }
 
-
     console.log("");
-
-    console.log(
-        "================================================="
-    );
 
     console.log(
         `🎉 ${changed} HTML files updated.`
     );
 
     console.log(
-        "================================================="
+        "Contact Us central suggestion system ready."
     );
-
-    console.log("");
-
-    console.log(
-        "✅ सभी पुराने Comment/Topic Request systems हटाए गए।"
-    );
-
-    console.log(
-        "✅ सभी pages पर Contact Us suggestion link लगाया गया।"
-    );
-
-    console.log(
-        "✅ contact.html और admin-comments.html को नहीं छुआ गया।"
-    );
-
-    console.log(
-        "✅ हर modified file की .comment-backup copy बनाई गई।"
-    );
-
-    console.log("");
-
 }
-
 
 main();
