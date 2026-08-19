@@ -1,761 +1,216 @@
-<!DOCTYPE html>
+// ================================================================
+// ITI Study Centre - COMMON SUGGESTION SYSTEM
+// ================================================================
+
+(function () {
+    "use strict";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAyBiDGQxQ5LEtIV5JtMOT79rU3ksQg8TE",
+        authDomain: "iti-study-centre.firebaseapp.com",
+        projectId: "iti-study-centre",
+        storageBucket: "iti-study-centre.firebasestorage.app",
+        messagingSenderId: "690794814318",
+        appId: "1:690794814318:web:42ed1c1f582a9e1df5bf7f"
+    };
+
+    const RECAPTCHA_SITE_KEY =
+        "6LexjYctAAAAAJdA17IjqdkfJrecHtmqnd-DoODv";
+
+    document.addEventListener("DOMContentLoaded", async function () {
+
+        const form = document.getElementById("suggestionForm");
+
+        if (!form) {
+            return;
+        }
+
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const categoryInput = document.getElementById("category");
+        const messageInput = document.getElementById("message");
+        const submitButton = document.getElementById("submitSuggestion");
+        const formMessage = document.getElementById("formMessage");
+
+        if (
+            !nameInput ||
+            !categoryInput ||
+            !messageInput ||
+            !submitButton
+        ) {
+            console.error("Suggestion form elements missing.");
+            return;
+        }
+
+        function showMessage(type, text) {
+
+            if (!formMessage) {
+                alert(text);
+                return;
+            }
+
+            formMessage.className = type;
+            formMessage.textContent = text;
+            formMessage.style.display = "block";
+        }
+
+        try {
+
+            const firebaseApp =
+                await import(
+                    "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js"
+                );
+
+            const firebaseAppCheck =
+                await import(
+                    "https://www.gstatic.com/firebasejs/12.17.1/firebase-app-check.js"
+                );
+
+            const firebaseFirestore =
+                await import(
+                    "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js"
+                );
+
+            const {
+                initializeApp
+            } = firebaseApp;
+
+            const {
+                initializeAppCheck,
+                ReCaptchaV3Provider
+            } = firebaseAppCheck;
+
+            const {
+                getFirestore,
+                collection,
+                addDoc,
+                serverTimestamp
+            } = firebaseFirestore;
+
+            const app = initializeApp(firebaseConfig);
+
+            initializeAppCheck(app, {
+                provider:
+                    new ReCaptchaV3Provider(
+                        RECAPTCHA_SITE_KEY
+                    ),
+                isTokenAutoRefreshEnabled: true
+            });
+
+            const db = getFirestore(app);
+
+            form.addEventListener("submit", async function (event) {
 
-<html lang="hi">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Contact Us | ITI Study Centre</title>
-<meta content="Contact ITI Study Centre - Share your valuable suggestions to improve ITI Study Centre." name="description"/>
-<meta content="Contact ITI Study Centre, Suggestions, Feedback, ITI Education" name="keywords"/>
-<meta content="ITI Study Centre" name="author"/>
-<link href="images/favicon.png" rel="icon"/>
-<link href="css/style.css" rel="stylesheet"/>
-<link href="https://www.itistudycentre.in/contact.html" rel="canonical"/>
-<!-- ================================
-     GOOGLE ANALYTICS
-================================ -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RDLMQ0BNWF">
-</script>
-<script>
+                event.preventDefault();
 
-window.dataLayer = window.dataLayer || [];
+                const name =
+                    nameInput.value.trim();
 
-function gtag(){
-  dataLayer.push(arguments);
-}
+                const email =
+                    emailInput
+                        ? emailInput.value.trim()
+                        : "";
 
-gtag('js', new Date());
+                const category =
+                    categoryInput.value;
 
-gtag('config', 'G-RDLMQ0BNWF');
+                const message =
+                    messageInput.value.trim();
 
-</script>
-<style>
+                if (!name) {
+                    showMessage(
+                        "error",
+                        "⚠️ कृपया अपना नाम लिखें।"
+                    );
+                    nameInput.focus();
+                    return;
+                }
 
-/* =========================================
-   SEARCH BOX
-========================================= */
+                if (!category) {
+                    showMessage(
+                        "error",
+                        "⚠️ कृपया Category चुनें।"
+                    );
+                    categoryInput.focus();
+                    return;
+                }
 
-.search-section {
+                if (!message) {
+                    showMessage(
+                        "error",
+                        "⚠️ कृपया अपना सुझाव लिखें।"
+                    );
+                    messageInput.focus();
+                    return;
+                }
 
-  display:flex;
+                submitButton.disabled = true;
+                submitButton.textContent =
+                    "⏳ सुझाव भेजा जा रहा है...";
 
-  gap:10px;
+                try {
 
-  align-items:center;
+                    await addDoc(
+                        collection(db, "comments"),
+                        {
+                            name: name,
+                            email: email,
+                            category: category,
+                            message: message,
 
-  justify-content:center;
+                            page: "contact.html",
 
-  margin:20px 0;
+                            type: "suggestion",
 
-}
+                            status: "pending",
 
-.search-section input {
+                            createdAt:
+                                serverTimestamp()
+                        }
+                    );
 
-  flex:1;
+                    showMessage(
+                        "success",
+                        "✅ आपका सुझाव सफलतापूर्वक भेज दिया गया है। आपका सुझाव Admin Approval के लिए भेज दिया गया है।"
+                    );
 
-  max-width:600px;
+                    form.reset();
 
-  padding:14px 20px;
+                } catch (error) {
 
-  font-size:1.1rem;
+                    console.error(
+                        "Firebase Error:",
+                        error
+                    );
 
-  border:2px solid #ccc;
+                    showMessage(
+                        "error",
+                        "❌ सुझाव भेजने में समस्या हुई। कृपया कुछ समय बाद पुनः प्रयास करें।"
+                    );
 
-  border-radius:8px;
+                } finally {
 
-  outline:none;
+                    submitButton.disabled = false;
 
-  transition:0.3s;
+                    submitButton.textContent =
+                        "📤 Submit Suggestion →";
+                }
 
-}
+            });
 
-.search-section input:focus {
+        } catch (error) {
 
-  border-color:#003366;
+            console.error(
+                "Firebase Load Error:",
+                error
+            );
 
-  box-shadow:
-    0 0 8px rgba(0,51,102,0.2);
+            showMessage(
+                "error",
+                "❌ Firebase system load नहीं हो पाया।"
+            );
+        }
 
-}
+    });
 
-.search-section button {
-
-  padding:14px 40px;
-
-  font-size:1.2rem;
-
-  font-weight:bold;
-
-  min-width:150px;
-
-  background:#003366;
-
-  color:white;
-
-  border:none;
-
-  border-radius:8px;
-
-  cursor:pointer;
-
-  transition:0.3s;
-
-}
-
-.search-section button:hover {
-
-  background:#002244;
-
-  transform:scale(1.02);
-
-}
-
-
-/* =========================================
-   MOBILE SEARCH
-========================================= */
-
-@media (max-width:767px) {
-
-  .search-section {
-
-    flex-direction:column;
-
-    gap:10px;
-
-  }
-
-  .search-section input {
-
-    width:100%;
-
-    max-width:100%;
-
-  }
-
-  .search-section button {
-
-    width:100%;
-
-    padding:12px;
-
-    min-width:unset;
-
-  }
-
-}
-
-
-/* =========================================
-   CONTACT FORM
-========================================= */
-
-.contact-form {
-
-  max-width:600px;
-
-  margin:0 auto;
-
-}
-
-.contact-form label {
-
-  display:block;
-
-  font-weight:bold;
-
-  margin-top:15px;
-
-  margin-bottom:5px;
-
-  color:#333;
-
-}
-
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
-
-  width:100%;
-
-  padding:12px 15px;
-
-  border:1px solid #ccc;
-
-  border-radius:6px;
-
-  font-size:1rem;
-
-  box-sizing:border-box;
-
-  background:#fff;
-
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus {
-
-  border-color:#003366;
-
-  outline:none;
-
-  box-shadow:
-    0 0 8px rgba(0,51,102,0.2);
-
-}
-
-.contact-form textarea {
-
-  resize:vertical;
-
-}
-
-
-/* =========================================
-   REQUIRED STAR
-========================================= */
-
-.required-star {
-
-  color:#d00000;
-
-}
-
-
-/* =========================================
-   BUTTON
-========================================= */
-
-.news-btn {
-
-  display:inline-block;
-
-  background:#003366;
-
-  padding:10px 20px;
-
-  border-radius:5px;
-
-  color:#ffffff !important;
-
-  text-decoration:none;
-
-  font-weight:bold;
-
-  transition:0.3s;
-
-  border:none;
-
-  cursor:pointer;
-
-}
-
-.news-btn:hover {
-
-  background:#002244;
-
-  transform:scale(1.02);
-
-}
-
-.contact-form .news-btn {
-
-  margin-top:15px;
-
-  width:100%;
-
-  text-align:center;
-
-}
-
-.contact-form button:disabled {
-
-  opacity:0.7;
-
-  cursor:not-allowed;
-
-  transform:none;
-
-}
-
-
-/* =========================================
-   FORM MESSAGE
-========================================= */
-
-#formMessage {
-
-  display:none;
-
-  margin-top:15px;
-
-  padding:12px 15px;
-
-  border-radius:6px;
-
-  font-weight:bold;
-
-  text-align:center;
-
-}
-
-#formMessage.success {
-
-  display:block;
-
-  background:#e8f5e9;
-
-  color:#1b5e20;
-
-  border:1px solid #a5d6a7;
-
-}
-
-#formMessage.error {
-
-  display:block;
-
-  background:#ffebee;
-
-  color:#b71c1c;
-
-  border:1px solid #ef9a9a;
-
-}
-
-
-/* =========================================
-   IMPORTANT LIST
-========================================= */
-
-.important-list {
-
-  list-style:none;
-
-  padding:0;
-
-}
-
-.important-list li {
-
-  padding:6px 0;
-
-  border-bottom:1px solid #eee;
-
-}
-
-.important-list li:last-child {
-
-  border-bottom:none;
-
-}
-
-
-/* =========================================
-   SECURITY NOTE
-========================================= */
-
-.security-note {
-
-  margin-top:15px;
-
-  padding:10px 12px;
-
-  background:#f5f7fa;
-
-  border-left:4px solid #003366;
-
-  font-size:0.9rem;
-
-  color:#666;
-
-}
-
-</style>
-</head>
-<body>
-<div id="header-container"></div>
-<script defer="" src="/js/header-loader.js"></script>
-
-
-
-<!-- =========================================
-     HEADER
-========================================= -->
-<!-- =========================================
-     BREADCRUMB
-========================================= -->
-<div id="breadcrumb" style="
-    background:#f0f0f0;
-    padding:8px 20px;
-    font-size:0.9rem;
-    border-bottom:1px solid #ddd;
-  ">
-<a href="/" style="
-    text-decoration:none;
-    color:#003366;
-  ">
-
-🏠 Home
-
-</a>
-
- › 
-
-<span style="
-    color:#555;
-    font-weight:bold;
-  ">
-
-Contact / Suggestions
-
-</span>
-</div>
-<!-- =========================================
-     PAGE TITLE
-========================================= -->
-<section class="page-title">
-<div class="container">
-<h1>
-💬 Contact &amp; Suggestions
-</h1>
-<p>
-Your valuable suggestions help us improve ITI Study Centre.
-</p>
-</div>
-</section>
-<!-- =========================================
-     SEARCH
-========================================= -->
-<section class="search-section container">
-<input id="siteSearch" placeholder="Search ITI Notes, Results, Topics..." type="text"/>
-<button id="searchButton" type="button">
-
-🔍 Search
-
-</button>
-</section>
-<!-- =========================================
-     INTRODUCTION
-========================================= -->
-<section class="container">
-<div class="card">
-<h2>
-🙏 आपका सुझाव हमारे लिए महत्वपूर्ण है
-</h2>
-<p>
-
-यदि आपको किसी Topic में सुधार चाहिए,
-किसी Link में समस्या है,
-वेबसाइट में कोई समस्या दिखाई देती है
-या वेबसाइट को बेहतर बनाने का कोई सुझाव देना चाहते हैं,
-तो कृपया अपना सुझाव नीचे भेजें।
-
-</p>
-</div>
-</section>
-<!-- =========================================
-     SUGGESTION FORM
-========================================= -->
-<section class="container">
-<div class="card">
-<h2>
-📝 Submit Your Suggestion
-</h2>
-<p>
-
-आपका सुझाव पहले <strong>Pending</strong> स्थिति में जाएगा।
-Admin द्वारा Review करने के बाद ही
-उसे वेबसाइट पर प्रदर्शित किया जाएगा।
-
-</p>
-<form class="contact-form" id="suggestionForm">
-<!-- =====================================
-     NAME - REQUIRED
-===================================== -->
-<label for="name">
-
-Your Name
-
-<span class="required-star">*</span>
-</label>
-<input autocomplete="name" id="name" maxlength="100" name="name" placeholder="अपना नाम लिखें..." required="" type="text"/>
-<!-- =====================================
-     EMAIL - OPTIONAL
-===================================== -->
-<label for="email">
-
-Your Email
-
-<span style="
-    font-weight:normal;
-    color:#777;
-  ">
-(Optional)
-</span>
-</label>
-<input autocomplete="email" id="email" maxlength="150" name="email" placeholder="अपना Email लिखें..." type="email"/>
-<!-- =====================================
-     CATEGORY - REQUIRED
-===================================== -->
-<label for="category">
-
-Suggestion Category
-
-<span class="required-star">*</span>
-</label>
-<select id="category" name="category" required="">
-<option value="">
--- सुझाव की Category चुनें --
-</option>
-<option value="Study Material / Notes">
-📚 Study Material / Notes
-</option>
-<option value="Broken Link">
-🔗 Broken Link
-</option>
-<option value="Wrong Information / Correction">
-❌ गलत जानकारी / Correction
-</option>
-<option value="New Topic">
-➕ नया Topic जोड़ना
-</option>
-<option value="Website Problem">
-🌐 Website Problem
-</option>
-<option value="General Suggestion">
-💡 General Suggestion
-</option>
-<option value="Other">
-📌 Other
-</option>
-</select>
-<!-- =====================================
-     MESSAGE - REQUIRED
-===================================== -->
-<label for="message">
-
-Your Suggestion
-
-<span class="required-star">*</span>
-</label>
-<textarea id="message" maxlength="2000" name="message" placeholder="अपना सुझाव यहाँ लिखें..." required="" rows="6"></textarea>
-<!-- =====================================
-     SUBMIT
-===================================== -->
-<button class="news-btn" id="submitSuggestion" type="submit">
-
-📤 Submit Suggestion →
-
-</button>
-</form>
-<!-- =====================================
-     SUCCESS / ERROR
-===================================== -->
-<div id="formMessage"></div>
-<div class="security-note">
-
-🔒 आपका सुझाव सुरक्षित रूप से Firebase database में
-Pending status के साथ भेजा जाएगा।
-आपको कोई OTP या Login करने की आवश्यकता नहीं है।
-
-</div>
-<p style="
-    margin-top:15px;
-    font-size:0.9rem;
-    color:#888;
-  ">
-
-⚠️ <strong>नोट:</strong>
-
-नाम, Category और Suggestion आवश्यक हैं।
-Email देना optional है।
-
-</p>
-</div>
-</section>
-<!-- =========================================
-     IMPORTANT NOTE
-========================================= -->
-<section class="container">
-<div class="card">
-<h2>
-📢 Important Note
-</h2>
-<ul class="important-list">
-<li>
-✔ केवल ITI एवं Engineering से संबंधित सुझाव भेजें।
-</li>
-<li>
-✔ Spam या अनुचित संदेश स्वीकार नहीं किए जाएंगे।
-</li>
-<li>
-✔ उपयोगी सुझावों को भविष्य के अपडेट में शामिल किया जा सकता है।
-</li>
-<li>
-✔ व्यक्तिगत जानकारी जैसे Aadhaar, Bank Details,
-Password या OTP साझा न करें।
-</li>
-</ul>
-</div>
-</section>
-<!-- =========================================
-     WHY YOUR SUGGESTION MATTERS
-========================================= -->
-<section class="container">
-<div class="card">
-<h2>
-⭐ Why Your Suggestion Matters?
-</h2>
-<p>
-
-ITI Study Centre का उद्देश्य विद्यार्थियों की वास्तविक
-आवश्यकताओं के अनुसार अध्ययन सामग्री उपलब्ध कराना है।
-आपके सुझाव हमें वेबसाइट को अधिक उपयोगी,
-सरल एवं बेहतर बनाने में सहायता करते हैं।
-
-</p>
-<p>
-
-प्रत्येक उपयोगी सुझाव का मूल्यांकन किया जाएगा और
-आवश्यकता होने पर उसे भविष्य के अपडेट में शामिल किया जाएगा।
-
-</p>
-</div>
-</section>
-<!-- =========================================
-     FUTURE FEATURE
-========================================= -->
-<section class="container">
-<div class="card">
-<h2>
-🚀 Suggestion Review System
-</h2>
-<p>
-
-आपके सुझाव पहले Pending स्थिति में सुरक्षित रूप से
-Save किए जाएंगे।
-
-Admin Panel से बाद में:
-
-<strong>
-Review → Approve → Reject → Delete
-</strong>
-
-किया जा सकेगा।
-
-</p>
-</div>
-</section>
-<!-- =========================================
-     DISCLAIMER
-========================================= -->
-<section class="container">
-<div class="card">
-<h2>
-⚠ Disclaimer
-</h2>
-<p>
-
-ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला
-प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की
-अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है।
-आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए
-संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।
-
-</p>
-</div>
-</section>
-<!-- =========================================
-     FOOTER
-========================================= -->
-<footer style="
-    background:#222;
-    color:#ccc;
-    padding:20px 15px;
-    text-align:center;
-    margin-top:40px;
-    border-top:4px solid #003366;
-  ">
-<div style="
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px 20px;
-    margin-bottom:10px;
-  ">
-<a href="/disclaimer.html" style="color:#aaa;text-decoration:none;">
-Disclaimer
-</a>
-<a href="/privacy-policy.html" style="color:#aaa;text-decoration:none;">
-Privacy Policy
-</a>
-<a href="/terms.html" style="color:#aaa;text-decoration:none;">
-Terms
-</a>
-<a href="/contact.html" style="color:#aaa;text-decoration:none;">
-Contact
-</a>
-</div>
-<p id="footerYear" style="
-    margin:10px 0 0 0;
-    color:#888;
-  ">
-
-© 2026 ITI Study Centre. All Rights Reserved.
-
-</p>
-</footer>
-<!-- =========================================
-     SCROLL TO TOP
-========================================= -->
-<button id="scrollTop" style="
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#003366;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:5px;
-    cursor:pointer;
-  " title="Go to Top">
-
-⬆
-
-</button>
-<script src="/js/main.js"></script>
-<!-- =========================================
-     FOOTER YEAR
-========================================= -->
-<script>
-
-document.addEventListener(
-  "DOMContentLoaded",
-  function() {
-
-    const year =
-      document.getElementById("footerYear");
-
-    if (year) {
-
-      year.textContent =
-        "© " +
-        new Date().getFullYear() +
-        " ITI Study Centre. All Rights Reserved.";
-
-    }
-
-  }
-);
-
-</script>
-<!-- =========================================================
-     SHARED COMMENT / SUGGESTION SYSTEM
-     Firebase + App Check is handled by /js/comment.js
-========================================================= -->
-<script src="/js/comment.js"></script>
-
-</body>
-</html>
+})();
