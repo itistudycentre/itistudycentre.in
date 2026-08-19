@@ -1,14 +1,17 @@
 // ================================================================
 // comment.js – ITI Study Centre
-// COMMON SUGGESTION SYSTEM
-// Contact Us के existing suggestion form के साथ compatible
+// एकीकृत सुझाव / Comment System
 // ================================================================
 
 (function () {
-    'use strict';
+    "use strict";
+
+    // ============================================================
+    // FIREBASE CONFIGURATION
+    // ============================================================
 
     const firebaseConfig = {
-        apiKey: "AIzaSyAyBiDGQx5QLEtIV5JtMOT79rU3ksQg8TE",
+        apiKey: "AIzaSyAyBiDGQxQ5LEtIV5JtMOT79rU3ksQg8TE",
         authDomain: "iti-study-centre.firebaseapp.com",
         projectId: "iti-study-centre",
         storageBucket: "iti-study-centre.firebasestorage.app",
@@ -16,41 +19,123 @@
         appId: "1:690794814318:web:42ed1c1f582a9e1df5bf7f"
     };
 
+    // ============================================================
+    // reCAPTCHA V3 SITE KEY
+    // ============================================================
+
     const RECAPTCHA_SITE_KEY =
         "6LexjYctAAAAAJdA17IjqdkfJrecHtmqnd-DoODv";
 
+    // ============================================================
+    // START
+    // ============================================================
+
     document.addEventListener("DOMContentLoaded", async function () {
 
-        // केवल Contact/Suggestion form मौजूद होने पर काम करेगा
-        const form = document.getElementById("suggestionForm");
+        // --------------------------------------------------------
+        // केवल Contact/Suggestion Form पर सिस्टम चलेगा
+        // --------------------------------------------------------
+
+        const form =
+            document.getElementById("suggestionForm") ||
+            document.getElementById("commentForm");
 
         if (!form) {
             return;
         }
 
-        try {
+        // --------------------------------------------------------
+        // FORM ELEMENTS
+        // --------------------------------------------------------
 
-            // =====================================================
-            // FIREBASE MODULES
-            // =====================================================
+        const nameInput =
+            document.getElementById("name") ||
+            document.getElementById("nameInput");
+
+        const emailInput =
+            document.getElementById("email") ||
+            document.getElementById("emailInput");
+
+        const categoryInput =
+            document.getElementById("category") ||
+            document.getElementById("commentCategory");
+
+        const messageInput =
+            document.getElementById("message") ||
+            document.getElementById("commentInput");
+
+        const submitButton =
+            document.getElementById("submitSuggestion") ||
+            form.querySelector(".btn-submit-comment");
+
+        const formMessage =
+            document.getElementById("formMessage");
+
+        // --------------------------------------------------------
+        // CHECK FORM
+        // --------------------------------------------------------
+
+        if (
+            !nameInput ||
+            !categoryInput ||
+            !messageInput ||
+            !submitButton
+        ) {
+            console.error(
+                "Suggestion form elements नहीं मिले।"
+            );
+            return;
+        }
+
+        // ========================================================
+        // MESSAGE FUNCTION
+        // ========================================================
+
+        function showMessage(type, message) {
+
+            if (!formMessage) {
+                alert(message);
+                return;
+            }
+
+            formMessage.className = type;
+            formMessage.textContent = message;
+            formMessage.style.display = "block";
+        }
+
+        // ========================================================
+        // LOAD FIREBASE
+        // ========================================================
+
+        try {
 
             const [
                 firebaseApp,
                 firebaseAppCheck,
                 firebaseFirestore
             ] = await Promise.all([
+
                 import(
                     "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js"
                 ),
+
                 import(
                     "https://www.gstatic.com/firebasejs/12.17.1/firebase-app-check.js"
                 ),
+
                 import(
                     "https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore.js"
                 )
+
             ]);
 
-            const { initializeApp } = firebaseApp;
+            // ----------------------------------------------------
+            // Firebase Functions
+            // ----------------------------------------------------
+
+            const {
+                initializeApp
+            } = firebaseApp;
 
             const {
                 initializeAppCheck,
@@ -64,77 +149,36 @@
                 serverTimestamp
             } = firebaseFirestore;
 
-            // =====================================================
+            // ====================================================
             // INITIALIZE FIREBASE
-            // =====================================================
+            // ====================================================
 
             const app = initializeApp(firebaseConfig);
 
+            // ====================================================
+            // APP CHECK
+            // ====================================================
+
             initializeAppCheck(app, {
-                provider: new ReCaptchaV3Provider(RECAPTCHA_SITE_KEY),
+
+                provider:
+                    new ReCaptchaV3Provider(
+                        RECAPTCHA_SITE_KEY
+                    ),
+
                 isTokenAutoRefreshEnabled: true
+
             });
+
+            // ====================================================
+            // FIRESTORE
+            // ====================================================
 
             const db = getFirestore(app);
 
-            // =====================================================
-            // FORM ELEMENTS
-            // =====================================================
-
-            const nameInput =
-                document.getElementById("name");
-
-            const emailInput =
-                document.getElementById("email");
-
-            const categoryInput =
-                document.getElementById("category");
-
-            const messageInput =
-                document.getElementById("message");
-
-            const submitButton =
-                document.getElementById("submitSuggestion");
-
-            const formMessage =
-                document.getElementById("formMessage");
-
-            // =====================================================
-            // CHECK ELEMENTS
-            // =====================================================
-
-            if (
-                !nameInput ||
-                !categoryInput ||
-                !messageInput ||
-                !submitButton ||
-                !formMessage
-            ) {
-                console.error(
-                    "Suggestion form elements missing."
-                );
-                return;
-            }
-
-            // =====================================================
-            // MESSAGE FUNCTION
-            // =====================================================
-
-            function showMessage(type, message) {
-
-                formMessage.className = type;
-                formMessage.textContent = message;
-                formMessage.style.display = "block";
-
-                formMessage.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center"
-                });
-            }
-
-            // =====================================================
+            // ====================================================
             // FORM SUBMIT
-            // =====================================================
+            // ====================================================
 
             form.addEventListener(
                 "submit",
@@ -143,7 +187,7 @@
                     event.preventDefault();
 
                     // ------------------------------------------------
-                    // GET VALUES
+                    // GET FORM VALUES
                     // ------------------------------------------------
 
                     const name =
@@ -160,106 +204,153 @@
                     const message =
                         messageInput.value.trim();
 
-                    // ------------------------------------------------
+                    // =================================================
                     // VALIDATION
-                    // ------------------------------------------------
+                    // =================================================
 
                     if (!name) {
+
                         showMessage(
                             "error",
                             "⚠️ कृपया अपना नाम लिखें।"
                         );
+
                         nameInput.focus();
+
                         return;
                     }
 
                     if (!category) {
+
                         showMessage(
                             "error",
                             "⚠️ कृपया Suggestion Category चुनें।"
                         );
+
                         categoryInput.focus();
+
                         return;
                     }
 
                     if (!message) {
+
                         showMessage(
                             "error",
                             "⚠️ कृपया अपना सुझाव लिखें।"
                         );
+
                         messageInput.focus();
+
                         return;
                     }
+
+                    // ------------------------------------------------
+                    // EMAIL OPTIONAL
+                    // ------------------------------------------------
 
                     if (
                         email &&
                         emailInput &&
                         !emailInput.checkValidity()
                     ) {
+
                         showMessage(
                             "error",
                             "⚠️ कृपया सही Email Address डालें।"
                         );
+
                         emailInput.focus();
+
                         return;
                     }
 
-                    // ------------------------------------------------
-                    // BUTTON DISABLE
-                    // ------------------------------------------------
+                    // =================================================
+                    // DISABLE BUTTON
+                    // =================================================
 
                     submitButton.disabled = true;
-                    submitButton.textContent = "⏳ Sending...";
-                    formMessage.style.display = "none";
+
+                    submitButton.textContent =
+                        "⏳ सुझाव भेजा जा रहा है...";
+
+                    if (formMessage) {
+                        formMessage.style.display = "none";
+                    }
+
+                    // =================================================
+                    // SAVE TO FIRESTORE
+                    // =================================================
 
                     try {
-
-                        // ============================================
-                        // FIRESTORE
-                        // ============================================
 
                         await addDoc(
                             collection(db, "comments"),
                             {
+
+                                // User Information
                                 name: name,
 
                                 email: email || "",
 
+                                // Suggestion Information
                                 category: category,
 
                                 message: message,
 
-                                // Contact page से भेजा गया
-                                page: "/contact.html",
+                                // सभी सुझाव Contact page से
+                                page: "contact.html",
 
-                                // Admin panel के लिए
+                                // Admin Panel के लिए
                                 type: "suggestion",
 
-                                // हमेशा Pending
-                                // Admin approve करेगा
+                                // Approval System
                                 status: "pending",
 
+                                // Server Time
                                 createdAt:
                                     serverTimestamp()
+
                             }
                         );
 
-                        // ============================================
+                        // =================================================
                         // SUCCESS
-                        // ============================================
+                        // =================================================
 
                         showMessage(
                             "success",
                             "✅ आपका सुझाव सफलतापूर्वक भेज दिया गया है। आपका सुझाव अभी Pending Review में है।"
                         );
 
-                        // Form साफ करें
+                        // ------------------------------------------------
+                        // RESET FORM
+                        // ------------------------------------------------
+
                         form.reset();
 
-                    } catch (error) {
+                        // ------------------------------------------------
+                        // MESSAGE पर scroll
+                        // ------------------------------------------------
+
+                        if (formMessage) {
+
+                            formMessage.scrollIntoView({
+                                behavior: "smooth",
+                                block: "center"
+                            });
+
+                        }
+
+                    }
+
+                    // =================================================
+                    // ERROR
+                    // =================================================
+
+                    catch (error) {
 
                         console.error(
-                            "Firebase Suggestion Error:",
+                            "Firebase Error:",
                             error
                         );
 
@@ -268,44 +359,42 @@
                             "❌ सुझाव भेजने में समस्या हुई। कृपया कुछ समय बाद पुनः प्रयास करें।"
                         );
 
-                    } finally {
+                    }
 
-                        // ============================================
-                        // BUTTON ENABLE
-                        // ============================================
+                    // =================================================
+                    // ENABLE BUTTON
+                    // =================================================
+
+                    finally {
 
                         submitButton.disabled = false;
 
                         submitButton.textContent =
                             "📤 Submit Suggestion →";
+
                     }
 
                 }
             );
 
-            console.log(
-                "✅ ITI Study Centre Suggestion System Loaded"
-            );
+        }
 
-        } catch (error) {
+        // ========================================================
+        // FIREBASE LOAD ERROR
+        // ========================================================
+
+        catch (error) {
 
             console.error(
-                "Firebase Load Error:",
+                "Firebase load error:",
                 error
             );
 
-            const formMessage =
-                document.getElementById("formMessage");
+            showMessage(
+                "error",
+                "❌ सुझाव सिस्टम लोड नहीं हो पाया। कृपया पेज को Refresh करें।"
+            );
 
-            if (formMessage) {
-
-                formMessage.className = "error";
-
-                formMessage.textContent =
-                    "❌ Suggestion system load नहीं हो पाया।";
-
-                formMessage.style.display = "block";
-            }
         }
 
     });
