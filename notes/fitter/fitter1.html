@@ -273,28 +273,44 @@ body {
 
 /* ================= IMAGES ================= */
 
-.module-image {
-    margin: 24px auto;
-    max-width: 900px;
-    text-align: center;
+.module-image{
+    width:100%;
+    max-width:960px;
+    margin:28px auto 32px;
+    text-align:center;
 }
 
-.module-image img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: 1px solid #d9dee5;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+.module-image img{
+    display:block;
+    width:100%;
+    max-width:100%;
+    height:auto;
+    margin:0 auto;
+    border:1px solid #d9dee5;
+    border-radius:10px;
+    background:#fff;
+    box-shadow:0 3px 12px rgba(0,0,0,.07);
+    /* Never stretch or crop the original illustration */
+    object-fit:contain;
+    image-rendering:auto;
 }
 
-.module-image figcaption {
-    color: #666;
-    font-size: 0.87rem;
-    margin-top: 7px;
+.module-image figcaption{
+    color:#666;
+    font-size:.87rem;
+    margin-top:8px;
+    line-height:1.5;
 }
 
+@media (max-width:768px){
+    .module-image{
+        max-width:100%;
+        margin:22px auto 26px;
+    }
+    .module-image img{
+        border-radius:8px;
+    }
+}
 
 /* ================= MISSING IMAGE ================= */
 
@@ -550,11 +566,6 @@ footer {
     background:linear-gradient(90deg,#003366,#ffcc00);
     z-index:10000;transition:width .08s linear;
 }
-@media print{
-    #readingProgress,#scrollTop,.module-navigation{display:none!important}
-    body{background:#fff!important}
-    .content-card,.toc-card,.full-forms,.disclaimer{box-shadow:none!important;break-inside:avoid}
-}
 
 </style>
 </head>
@@ -697,7 +708,7 @@ ITI का मुख्य उद्देश्य
 </p>
 </div>
 <figure class="module-image">
-<img alt="Industrial Training Institute ITI" decoding="async" loading="lazy" src="/images/notes/fitter/module-1/iti_introduction.jpg"/>
+<img alt="Industrial Training Institute ITI" decoding="async" loading="eager" fetchpriority="high" src="/images/notes/fitter/module-1/iti_introduction.jpg"/>
 <div class="image-placeholder">
 <div class="placeholder-icon">🖼️</div>
 <strong>चित्र: Industrial Training Institute</strong>
@@ -2826,9 +2837,19 @@ document.querySelectorAll(".module-image img")
     img.addEventListener("error", function() {
 
         console.log(
-            "Image not found yet: " +
+            "Image not found: " +
             img.getAttribute("src")
         );
+
+        const figure = img.closest(".module-image");
+        const placeholder = figure
+            ? figure.querySelector(".image-placeholder")
+            : null;
+
+        if (placeholder) {
+            img.style.display = "none";
+            placeholder.style.display = "block";
+        }
 
     });
 
