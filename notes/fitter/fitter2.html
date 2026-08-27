@@ -1,21 +1,14 @@
 <!DOCTYPE html>
-
 <html lang="hi">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Fitter Theory Module 2 – Basic Fitting (Detailed) | ITI Study Centre</title>
-<meta content="Complete, detailed notes for Fitter Theory Module 2 – Basic Fitting (NSQF Level 4, Revised 2022). Bilingual (Hindi + English) with charts, tables, examples, and extensive explanations." name="description"/>
-<link href="/images/favicon.png" rel="icon"/>
-<style>
-        /* ============================================================
-           RESET & BASE (same as AI module for consistency)
-           ============================================================ */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitter Theory Module 2 – Basic Fitting (Complete Guide) | ITI Study Centre</title>
+    <meta name="description" content="Complete Fitter Theory Module 2 – Basic Fitting (NSQF Level 4, Revised 2022). All 23 topics covered in Hindi + English. One-stop guide for ITI exams and competitive tests.">
+    <link href="/images/favicon.png" rel="icon">
+    <style>
+        /* ============================== RESET & BASE ============================== */
+        * { margin:0; padding:0; box-sizing:border-box; }
         body {
             font-family: 'Segoe UI', Roboto, Arial, sans-serif;
             background: #f5f7fb;
@@ -23,15 +16,9 @@
             line-height: 1.8;
             user-select: none;
         }
-        .container {
-            max-width: 1150px;
-            margin: 0 auto;
-            padding: 0 22px;
-        }
+        .container { max-width: 1180px; margin: 0 auto; padding: 0 22px; }
 
-        /* ============================================================
-           HEADER
-           ============================================================ */
+        /* ============================== HEADER ============================== */
         .main-header {
             background: #003366;
             padding: 16px 0;
@@ -48,7 +35,6 @@
             font-size: 1.5rem;
             font-weight: 700;
             text-decoration: none;
-            letter-spacing: -0.5px;
         }
         .main-header nav {
             display: flex;
@@ -72,44 +58,24 @@
             color: #ffcc00;
             font-weight: 600;
         }
-        @media (max-width: 768px) {
-            .main-header .container {
-                flex-direction: column;
-                gap: 8px;
-            }
-            .main-header nav {
-                justify-content: center;
-                gap: 6px 14px;
-            }
-            .main-header nav a {
-                font-size: 0.9rem;
-            }
+        @media(max-width:768px) {
+            .main-header .container { flex-direction: column; gap: 8px; }
+            .main-header nav { justify-content: center; gap: 6px 14px; }
+            .main-header nav a { font-size: 0.9rem; }
         }
 
-        /* ============================================================
-           BREADCRUMB
-           ============================================================ */
+        /* ============================== BREADCRUMB ============================== */
         .breadcrumb {
             background: #eef1f5;
             padding: 10px 20px;
             font-size: 0.9rem;
             border-bottom: 1px solid #dde1e7;
         }
-        .breadcrumb a {
-            color: #003366;
-            text-decoration: none;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        .breadcrumb .current {
-            color: #555;
-            font-weight: 600;
-        }
+        .breadcrumb a { color: #003366; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .current { color: #555; font-weight: 600; }
 
-        /* ============================================================
-           PAGE TITLE
-           ============================================================ */
+        /* ============================== PAGE TITLE ============================== */
         .page-title {
             padding: 32px 0 22px;
             text-align: center;
@@ -125,23 +91,10 @@
             color: #555;
             margin-top: 6px;
         }
-        @media (max-width: 768px) {
-            .page-title h1 {
-                font-size: 1.7rem;
-            }
-        }
-        @media (max-width: 480px) {
-            .page-title h1 {
-                font-size: 1.4rem;
-            }
-            .page-title p {
-                font-size: 0.95rem;
-            }
-        }
+        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
+        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
 
-        /* ============================================================
-           SEARCH
-           ============================================================ */
+        /* ============================== SEARCH ============================== */
         .search-section {
             display: flex;
             gap: 12px;
@@ -163,7 +116,7 @@
         }
         .search-section input:focus {
             border-color: #003366;
-            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.12);
+            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
         }
         .search-section button {
             padding: 14px 40px;
@@ -176,37 +129,21 @@
             cursor: pointer;
             transition: 0.25s;
         }
-        .search-section button:hover {
-            background: #002244;
-            transform: scale(1.02);
-        }
-        @media (max-width: 640px) {
-            .search-section {
-                flex-direction: column;
-            }
-            .search-section input {
-                max-width: 100%;
-                width: 100%;
-            }
-            .search-section button {
-                width: 100%;
-            }
+        .search-section button:hover { background: #002244; transform: scale(1.02); }
+        @media(max-width:640px) {
+            .search-section { flex-direction: column; }
+            .search-section input { max-width: 100%; width: 100%; }
+            .search-section button { width: 100%; }
         }
 
-        /* ============================================================
-           CONTENT SECTIONS
-           ============================================================ */
+        /* ============================== CONTENT SECTIONS ============================== */
         .content-section {
             background: #ffffff;
             border-radius: 14px;
-            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
             margin-bottom: 32px;
             border: 1px solid #e6eaef;
             overflow: hidden;
-            transition: 0.2s;
-        }
-        .content-section:hover {
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
         }
         .section-header {
             padding: 20px 28px;
@@ -216,13 +153,9 @@
             align-items: center;
             gap: 14px;
             cursor: default;
-            user-select: none;
             flex-wrap: wrap;
         }
-        .section-header .icon {
-            font-size: 1.8rem;
-            line-height: 1;
-        }
+        .section-header .icon { font-size: 1.8rem; line-height: 1; }
         .section-header .title {
             font-size: 1.3rem;
             font-weight: 700;
@@ -235,10 +168,7 @@
             font-weight: 400;
             margin-left: 8px;
         }
-        .section-body {
-            padding: 28px 32px;
-            background: #fafcff;
-        }
+        .section-body { padding: 28px 32px; background: #fafcff; }
         .section-body h3 {
             color: #003366;
             font-size: 1.35rem;
@@ -246,9 +176,7 @@
             border-left: 5px solid #ffcc00;
             padding-left: 18px;
         }
-        .section-body h3:first-of-type {
-            margin-top: 0;
-        }
+        .section-body h3:first-of-type { margin-top: 0; }
         .section-body h4 {
             color: #1e3a5f;
             font-size: 1.12rem;
@@ -260,42 +188,21 @@
             margin: 16px 0 8px;
             font-weight: 600;
         }
-        @media (max-width: 768px) {
-            .section-header {
-                padding: 14px 18px;
-            }
-            .section-header .title {
-                font-size: 1.05rem;
-            }
-            .section-body {
-                padding: 18px 18px;
-            }
-            .section-body h3 {
-                font-size: 1.1rem;
-                padding-left: 12px;
-            }
-            .section-body h4 {
-                font-size: 1rem;
-            }
+        @media(max-width:768px) {
+            .section-header { padding: 14px 18px; }
+            .section-header .title { font-size: 1.05rem; }
+            .section-body { padding: 18px 18px; }
+            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
+            .section-body h4 { font-size: 1rem; }
         }
-        @media (max-width: 480px) {
-            .section-body {
-                padding: 14px 14px;
-            }
-            .section-header .icon {
-                font-size: 1.4rem;
-            }
-            .section-header .title {
-                font-size: 0.95rem;
-            }
+        @media(max-width:480px) {
+            .section-body { padding: 14px 14px; }
+            .section-header .icon { font-size: 1.4rem; }
+            .section-header .title { font-size: 0.95rem; }
         }
 
-        /* ============================================================
-           BILINGUAL CONTENT
-           ============================================================ */
-        .bilingual {
-            margin: 14px 0;
-        }
+        /* ============================== BILINGUAL ============================== */
+        .bilingual { margin: 14px 0; }
         .bilingual .en {
             font-size: 1.05rem;
             line-height: 1.9;
@@ -311,78 +218,34 @@
             border-left: 5px solid #003366;
             margin-top: 14px;
         }
-        .bilingual ul,
-        .bilingual ol {
-            padding-left: 26px;
-            margin: 10px 0;
-        }
-        .bilingual ul li,
-        .bilingual ol li {
-            margin-bottom: 6px;
-        }
-        .bilingual p {
-            margin: 10px 0;
-        }
-        @media (max-width: 480px) {
-            .bilingual .en {
-                font-size: 0.95rem;
-            }
-            .bilingual .hi {
-                font-size: 0.9rem;
-                padding: 12px 16px;
-            }
+        .bilingual ul, .bilingual ol { padding-left: 26px; margin: 10px 0; }
+        .bilingual ul li, .bilingual ol li { margin-bottom: 6px; }
+        .bilingual p { margin: 10px 0; }
+        @media(max-width:480px) {
+            .bilingual .en { font-size: 0.95rem; }
+            .bilingual .hi { font-size: 0.9rem; padding: 12px 16px; }
         }
 
-        /* ============================================================
-           INFO / EXAM / WARNING / SUCCESS CARDS
-           ============================================================ */
+        /* ============================== INFO CARDS ============================== */
         .info-card {
             border-radius: 12px;
             padding: 18px 24px;
             margin: 18px 0;
             background: #fff;
             border: 1px solid #e8ecf0;
-            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
         }
-        .info-card.blue {
-            border-left: 5px solid #003366;
-            background: #f0f5ff;
-        }
-        .info-card.green {
-            border-left: 5px solid #28a745;
-            background: #f0faf2;
-        }
-        .info-card.orange {
-            border-left: 5px solid #ff9900;
-            background: #fff8e1;
-        }
-        .info-card.purple {
-            border-left: 5px solid #6f42c1;
-            background: #f5f0ff;
-        }
-        .info-card.highlight {
-            border-left: 5px solid #ffc107;
-            background: #fffdf0;
-        }
-        .info-card.danger {
-            border-left: 5px solid #dc3545;
-            background: #fdf0f1;
-        }
-        .info-card h4 {
-            margin: 0 0 6px;
-            color: #003366;
-        }
-        .info-card ul {
-            margin: 0;
-            padding-left: 22px;
-        }
-        .info-card ul li {
-            margin-bottom: 4px;
-        }
+        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
+        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
+        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
+        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
+        .info-card.highlight { border-left: 5px solid #ffc107; background: #fffdf0; }
+        .info-card.danger { border-left: 5px solid #dc3545; background: #fdf0f1; }
+        .info-card h4 { margin: 0 0 6px; color: #003366; }
+        .info-card ul { margin: 0; padding-left: 22px; }
+        .info-card ul li { margin-bottom: 4px; }
 
-        /* ============================================================
-           TABLES
-           ============================================================ */
+        /* ============================== TABLES ============================== */
         .table-wrap {
             overflow-x: auto;
             margin: 22px 0;
@@ -393,7 +256,7 @@
             font-size: 0.95rem;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
         }
         .table-wrap th {
             background: #003366;
@@ -406,12 +269,8 @@
             padding: 11px 18px;
             border-bottom: 1px solid #e9ecef;
         }
-        .table-wrap tr:nth-child(even) {
-            background: #f8f9fc;
-        }
-        .table-wrap tr:hover {
-            background: #eef2f7;
-        }
+        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
+        .table-wrap tr:hover { background: #eef2f7; }
         .table-wrap caption {
             caption-side: top;
             font-weight: 700;
@@ -420,67 +279,36 @@
             margin-bottom: 12px;
             text-align: left;
         }
-        @media (max-width: 480px) {
-            .table-wrap table {
-                font-size: 0.85rem;
-            }
-            .table-wrap th,
-            .table-wrap td {
-                padding: 8px 10px;
-            }
+        @media(max-width:480px) {
+            .table-wrap table { font-size: 0.85rem; }
+            .table-wrap th, .table-wrap td { padding: 8px 10px; }
         }
 
-        /* ============================================================
-           COMPARISON CARDS (reuse from AI module)
-           ============================================================ */
+        /* ============================== COMPARISON GRID ============================== */
         .compare-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 22px;
             margin: 20px 0;
         }
-        @media (max-width: 600px) {
-            .compare-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
         .compare-card {
             padding: 20px 24px;
             border-radius: 12px;
             border: 2px solid #e6eaef;
             background: #fff;
-            transition: 0.2s;
-        }
-        .compare-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
         }
         .compare-card h4 {
             font-size: 1.1rem;
             margin: 0 0 10px;
             color: #003366;
         }
-        .compare-card ul {
-            padding-left: 20px;
-            margin: 0;
-        }
-        .compare-card ul li {
-            margin-bottom: 5px;
-            font-size: 0.95rem;
-        }
-        .compare-card p {
-            font-size: 0.95rem;
-            margin: 6px 0;
-        }
+        .compare-card ul { padding-left: 20px; margin: 0; }
+        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
         .compare-card.ml { border-color: #003366; background: #f0f5ff; }
         .compare-card.dl { border-color: #ff9900; background: #fff8e1; }
-        /* Additional colors for module 2 */
-        .compare-card.vice { border-color: #6f42c1; background: #f5f0ff; }
-        .compare-card.file { border-color: #28a745; background: #f0faf2; }
 
-        /* ============================================================
-           EXAMPLE BOX
-           ============================================================ */
+        /* ============================== EXAMPLE / IMPORTANT / SHORT NOTES ============================== */
         .example-box {
             background: #e8f4fd;
             border-left: 5px solid #003366;
@@ -488,16 +316,7 @@
             border-radius: 8px;
             margin: 18px 0;
         }
-        .example-box strong {
-            color: #003366;
-        }
-        .example-box p {
-            margin: 6px 0;
-        }
-
-        /* ============================================================
-           IMPORTANT / SHORT NOTES
-           ============================================================ */
+        .example-box strong { color: #003366; }
         .important-box {
             background: #fff8e1;
             border-left: 5px solid #ffc107;
@@ -505,14 +324,8 @@
             border-radius: 8px;
             margin: 18px 0;
         }
-        .important-box h4 {
-            margin: 0 0 6px;
-            color: #856404;
-        }
-        .important-box ul {
-            padding-left: 22px;
-            margin: 0;
-        }
+        .important-box h4 { margin: 0 0 6px; color: #856404; }
+        .important-box ul { padding-left: 22px; margin: 0; }
         .short-notes {
             background: #d4edda;
             border-left: 5px solid #28a745;
@@ -520,21 +333,19 @@
             border-radius: 8px;
             margin: 18px 0;
         }
-        .short-notes h4 {
-            margin: 0 0 6px;
-            color: #1e7e34;
+        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
+        .short-notes ul { padding-left: 22px; margin: 0; }
+        .warning-box {
+            background: #fff5f2;
+            border-left: 5px solid #dc3545;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
         }
-        .short-notes ul {
-            padding-left: 22px;
-            margin: 0;
-        }
-        .short-notes ul li {
-            margin-bottom: 4px;
-        }
+        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
+        .warning-box p { margin: 0; }
 
-        /* ============================================================
-           SHARE BUTTONS
-           ============================================================ */
+        /* ============================== SHARE ============================== */
         .share-section {
             display: flex;
             flex-wrap: wrap;
@@ -562,65 +373,24 @@
             font-weight: 600;
             font-size: 0.9rem;
             cursor: pointer;
-            transition: 0.2s;
             color: #fff;
             text-decoration: none;
         }
-        .share-btn:hover {
-            transform: scale(1.04);
-            opacity: 0.9;
-        }
+        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
         .share-btn.whatsapp { background: #25d366; }
         .share-btn.facebook { background: #1877f2; }
         .share-btn.twitter { background: #1da1f2; }
         .share-btn.link { background: #6c757d; }
         .share-btn.link.copied { background: #28a745; }
-        .share-btn svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-        @media (max-width: 600px) {
-            .share-section {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .share-section .share-label {
-                text-align: center;
-            }
-            .share-btn {
-                justify-content: center;
-            }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        @media(max-width:600px) {
+            .share-section { flex-direction: column; align-items: stretch; }
+            .share-section .share-label { text-align: center; }
+            .share-btn { justify-content: center; }
         }
 
-        /* ============================================================
-           BUTTONS
-           ============================================================ */
-        .btn {
-            display: inline-block;
-            padding: 11px 32px;
-            background: #003366;
-            color: #fff !important;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: 0.25s;
-            font-size: 1rem;
-        }
-        .btn:hover {
-            background: #002244;
-            transform: scale(1.02);
-        }
-
-        /* ============================================================
-           MCQ LINK
-           ============================================================ */
-        .mcq-link {
-            text-align: center;
-            padding: 12px 0;
-        }
+        /* ============================== MCQ LINK ============================== */
+        .mcq-link { text-align: center; padding: 12px 0; }
         .mcq-link a {
             display: inline-block;
             padding: 14px 44px;
@@ -632,277 +402,10 @@
             text-decoration: none;
             transition: 0.3s;
         }
-        .mcq-link a:hover {
-            background: #e6b800;
-            transform: scale(1.03);
-        }
-        .mcq-link p {
-            margin: 10px 0 0;
-            color: #888;
-            font-size: 0.9rem;
-        }
+        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
+        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
 
-        /* ============================================================
-           COMMENTS & ADMIN PANEL (same as AI module)
-           ============================================================ */
-        .comments-section textarea,
-        .topic-request textarea {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 1rem;
-            resize: vertical;
-            font-family: inherit;
-            user-select: text;
-        }
-        .comments-section input,
-        .topic-request input {
-            padding: 10px 14px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            width: 48%;
-            margin-right: 2%;
-            margin-bottom: 10px;
-            font-family: inherit;
-            user-select: text;
-        }
-        @media (max-width: 600px) {
-            .comments-section input,
-            .topic-request input {
-                width: 100%;
-                margin-right: 0;
-            }
-        }
-        .comment-item {
-            background: #f1f4f9;
-            padding: 12px 18px;
-            margin: 8px 0;
-            border-radius: 8px;
-            border-left: 4px solid #003366;
-        }
-        .comment-item .meta {
-            color: #888;
-            font-size: 0.8rem;
-        }
-        .comment-item .status-pending {
-            color: #ff9900;
-            font-weight: 600;
-            font-size: 0.75rem;
-            background: #fff3cd;
-            padding: 2px 12px;
-            border-radius: 12px;
-            margin-left: 8px;
-        }
-        .comment-item .status-approved {
-            color: #28a745;
-            font-weight: 600;
-            font-size: 0.75rem;
-            background: #d4edda;
-            padding: 2px 12px;
-            border-radius: 12px;
-            margin-left: 8px;
-        }
-
-        .admin-toggle {
-            text-align: center;
-            margin: 20px 0;
-            padding: 14px;
-            background: #f8f9fc;
-            border-radius: 8px;
-            border: 1px dashed #ccc;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .admin-toggle:hover {
-            background: #eef2f7;
-            border-color: #003366;
-        }
-        .admin-toggle .key-icon {
-            font-size: 1.2rem;
-            margin-right: 8px;
-        }
-        .admin-panel {
-            display: none;
-            background: #fff;
-            border-radius: 14px;
-            padding: 26px 30px;
-            border: 2px solid #003366;
-            margin: 20px 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-        .admin-panel.open {
-            display: block;
-        }
-        .admin-panel .admin-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 18px;
-        }
-        .admin-panel .admin-header h3 {
-            color: #003366;
-            margin: 0;
-        }
-        .admin-panel .admin-header .close-btn {
-            background: #dc3545;
-            color: #fff;
-            border: none;
-            padding: 6px 18px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-        .admin-panel .admin-header .close-btn:hover {
-            background: #b02a37;
-        }
-        .admin-password-box {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-bottom: 18px;
-        }
-        .admin-password-box input {
-            padding: 10px 14px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            font-size: 1rem;
-            flex: 1;
-            min-width: 200px;
-        }
-        .admin-password-box input:focus {
-            border-color: #003366;
-            outline: none;
-        }
-        .admin-password-box button {
-            padding: 10px 28px;
-            background: #003366;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .admin-password-box button:hover {
-            background: #002244;
-        }
-        .admin-password-box .error-msg {
-            color: #dc3545;
-            font-size: 0.9rem;
-            display: none;
-        }
-        .admin-password-box .error-msg.show {
-            display: block;
-        }
-        .comment-stats {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 18px;
-            padding: 12px 18px;
-            background: #f8f9fc;
-            border-radius: 8px;
-        }
-        .comment-stats span {
-            font-size: 0.9rem;
-        }
-        .comment-stats .count {
-            font-weight: 700;
-            color: #003366;
-        }
-        .admin-comment-item {
-            background: #f8f9fc;
-            padding: 14px 20px;
-            border-radius: 8px;
-            margin-bottom: 12px;
-            border-left: 4px solid #ccc;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-        }
-        .admin-comment-item .comment-info {
-            flex: 1;
-            min-width: 200px;
-        }
-        .admin-comment-item .comment-info strong {
-            color: #003366;
-        }
-        .admin-comment-item .comment-info .time {
-            color: #888;
-            font-size: 0.8rem;
-            margin-left: 10px;
-        }
-        .admin-comment-item .comment-info .status {
-            font-size: 0.7rem;
-            padding: 2px 14px;
-            border-radius: 12px;
-            font-weight: 600;
-            margin-left: 8px;
-        }
-        .admin-comment-item .comment-info .status.pending {
-            background: #fff3cd;
-            color: #856404;
-        }
-        .admin-comment-item .comment-info .status.approved {
-            background: #d4edda;
-            color: #1e7e34;
-        }
-        .admin-comment-item .comment-info .status.rejected {
-            background: #f8d7da;
-            color: #721c24;
-        }
-        .admin-comment-item .comment-actions {
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-        }
-        .admin-comment-item .comment-actions button {
-            padding: 4px 16px;
-            border: none;
-            border-radius: 5px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-        .admin-comment-item .comment-actions .btn-approve {
-            background: #28a745;
-            color: #fff;
-        }
-        .admin-comment-item .comment-actions .btn-approve:hover {
-            background: #1e7e34;
-        }
-        .admin-comment-item .comment-actions .btn-reject {
-            background: #ffc107;
-            color: #222;
-        }
-        .admin-comment-item .comment-actions .btn-reject:hover {
-            background: #e0a800;
-        }
-        .admin-comment-item .comment-actions .btn-delete {
-            background: #dc3545;
-            color: #fff;
-        }
-        .admin-comment-item .comment-actions .btn-delete:hover {
-            background: #b02a37;
-        }
-        .no-comments-msg {
-            color: #888;
-            font-style: italic;
-            text-align: center;
-            padding: 24px;
-        }
-
-        /* ============================================================
-           FOOTER
-           ============================================================ */
+        /* ============================== FOOTER ============================== */
         footer {
             background: #1a2634;
             color: #b0b8c5;
@@ -924,18 +427,10 @@
             font-size: 0.9rem;
             transition: 0.2s;
         }
-        footer .footer-links a:hover {
-            color: #fff;
-        }
-        footer p {
-            margin: 8px 0 0;
-            font-size: 0.85rem;
-            color: #7a8494;
-        }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
 
-        /* ============================================================
-           SCROLL TOP
-           ============================================================ */
+        /* ============================== SCROLL TOP ============================== */
         #scrollTop {
             position: fixed;
             bottom: 24px;
@@ -947,1218 +442,1110 @@
             border-radius: 8px;
             cursor: pointer;
             font-size: 1.2rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: 0.25s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             display: none;
             z-index: 999;
         }
-        #scrollTop:hover {
-            background: #002244;
-            transform: scale(1.05);
-        }
+        #scrollTop:hover { background: #002244; transform: scale(1.05); }
 
-        /* ============================================================
-           COPY PROTECTION
-           ============================================================ */
-        .copy-protect::selection {
-            background: #b3d4fc;
-            color: #000;
-        }
+        /* ============================== COPY PROTECTION ============================== */
+        .copy-protect::selection { background: #b3d4fc; color: #000; }
 
-        /* ============================================================
-           PRINT
-           ============================================================ */
+        /* ============================== PRINT ============================== */
         @media print {
-            #scrollTop,
-            .share-section,
-            .search-section,
-            .admin-toggle,
-            .admin-panel,
-            .comments-section .btn,
-            .topic-request .btn {
-                display: none !important;
-            }
-            body {
-                background: #fff !important;
-            }
-            .content-section {
-                box-shadow: none !important;
-                border: 1px solid #ddd !important;
-                break-inside: avoid;
-            }
-            .section-body {
-                background: #fff !important;
-            }
-            .bilingual .hi {
-                background: #f5f5f5 !important;
-            }
+            #scrollTop, .share-section, .search-section { display: none !important; }
+            body { background: #fff !important; }
+            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+            .section-body { background: #fff !important; }
+            .bilingual .hi { background: #f5f5f5 !important; }
         }
     </style>
 </head>
 <body>
-<div id="header-container"></div>
-<script defer="" src="/js/header-loader.js"></script>
 
-<!-- ============================================================
-    HEADER
-    ============================================================ -->
+    <!-- ============================== HEADER ============================== -->
+    <div id="header-container"></div>
+    <script defer src="/js/header-loader.js"></script>
 
+    <!-- ============================== BREADCRUMB ============================== -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/">🏠 Home</a> &nbsp;›&nbsp;
+            <a href="/iti-study-centre-notes.html">ITI Notes</a> &nbsp;›&nbsp;
+            <a href="/notes/fitter/index.html">Fitter Theory</a> &nbsp;›&nbsp;
+            <span class="current">Module 2 – Basic Fitting (Complete Guide)</span>
+        </div>
+    </div>
 
-<!-- ============================================================
-    BREADCRUMB
-    ============================================================ -->
-<div class="breadcrumb">
-<div class="container">
-<a href="/">🏠 Home</a>  › 
-            <a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
-            <a href="/notes/fitter/index.html">Fitter Theory</a>  › 
-            <span class="current">Module 2 – Basic Fitting (Detailed)</span>
-</div>
-</div>
-<!-- ============================================================
-    PAGE TITLE
-    ============================================================ -->
-<section class="page-title">
-<div class="container">
-<h1>🔧 Fitter Theory – Module 2 (Basic Fitting)</h1>
-<p>Complete detailed notes based on NSQF Level 4, Revised 2022 • Bilingual (English + Hindi) • With charts, tables, examples &amp; extensive explanations</p>
-</div>
-</section>
-<!-- ============================================================
-    SEARCH
-    ============================================================ -->
-<section class="search-section container">
-<input id="sectionSearch" placeholder="🔍 Search within this module (type and press Enter)..." type="text"/>
-<button onclick="filterSections()">🔍 Search</button>
-</section>
-<!-- ============================================================
-    SHARE BUTTONS
-    ============================================================ -->
-<div class="container">
-<div class="share-section" id="shareSection">
-<span class="share-label">📤 Share this page:</span>
-<button class="share-btn whatsapp" onclick="shareWhatsApp()">
-<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+    <!-- ============================== PAGE TITLE ============================== -->
+    <section class="page-title">
+        <div class="container">
+            <h1>🔧 Fitter Theory – Module 2 <br>Basic Fitting (Complete Guide)</h1>
+            <p>All 23 Topics Covered • NSQF Level 4 (Revised 2022) • Hindi + English • One-Stop Resource for ITI &amp; Competitive Exams</p>
+        </div>
+    </section>
+
+    <!-- ============================== SEARCH ============================== -->
+    <section class="search-section container">
+        <input id="sectionSearch" placeholder="🔍 Search within this module (type and press Enter)..." type="text">
+        <button onclick="filterSections()">🔍 Search</button>
+    </section>
+
+    <!-- ============================== SHARE ============================== -->
+    <div class="container">
+        <div class="share-section">
+            <span class="share-label">📤 Share this page:</span>
+            <button class="share-btn whatsapp" onclick="shareWhatsApp()">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
                 WhatsApp
             </button>
-<button class="share-btn facebook" onclick="shareFacebook()">
-<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+            <button class="share-btn facebook" onclick="shareFacebook()">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
                 Facebook
             </button>
-<button class="share-btn twitter" onclick="shareTwitter()">
-<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+            <button class="share-btn twitter" onclick="shareTwitter()">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
                 Twitter
             </button>
-<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
-<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
-<span id="copyLinkText">Copy Link</span>
-</button>
-</div>
-</div>
-<!-- ============================================================
-    TABLE OF CONTENTS (TOC) – with links to sections
-    ============================================================ -->
-<div class="container">
-<div class="content-section" style="border: 2px solid #003366;">
-<div class="section-header" style="background: #003366; border-bottom: none;">
-<span class="icon" style="color:#ffcc00;">📚</span>
-<span class="title" style="color:#fff;">विषय-सूची / Table of Contents</span>
-</div>
-<div class="section-body" style="background:#fff;">
-<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:8px 16px;">
-<a href="#linear" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">1. Linear Measurement</a>
-<a href="#scribes" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">2. Scribers</a>
-<a href="#calipers" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">3. Calipers</a>
-<a href="#punches" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">4. Marking Punches</a>
-<a href="#vice" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">5. Bench Vice</a>
-<a href="#vice-types" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">6. Types of Vices</a>
-<a href="#trysquare" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">7. Try Square</a>
-<a href="#files" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">8. Types of Files</a>
-<a href="#angles" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">9. Measurement of Angles</a>
-<a href="#surfacegauge" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">10. Surface Gauges</a>
-<a href="#chisel" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">11. Cold Chisel</a>
-<a href="#markingmedia" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">12. Marking Media</a>
-<a href="#surfaceplate" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">13. Surface Plate</a>
-<a href="#angleplate" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">14. Angle Plate</a>
-<a href="#properties" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">15. Physical &amp; Mechanical Properties</a>
-<a href="#saws" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">16. Metal-Cutting Saws</a>
-<a href="#micrometer" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">17. Outside Micrometer</a>
-<a href="#depthmic" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">18. Depth Micrometer</a>
-<a href="#vernier" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">19. Vernier Calipers</a>
-<a href="#bevel" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">20. Vernier Bevel Protractor</a>
-<a href="#dial" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">21. Dial Caliper</a>
-<a href="#drilling" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">22. Drilling Processes</a>
-<a href="#taps" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">23. Hand Taps &amp; Wrenches</a>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 1 – LINEAR MEASUREMENT
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="linear" id="linear">
-<div class="section-header">
-<span class="icon">📏</span>
-<span class="title">1. Linear Measurement / रेखीय माप</span>
-<span class="subtitle">— SI units, steel rules, vernier principles</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p><strong>Linear measurement</strong> is the measurement of length. The base unit of length in the SI (International System) is the <strong>Metre (m)</strong>.</p>
-<p>In engineering practice, the preferred unit is the <strong>Millimetre (mm)</strong> because it provides a convenient scale for most workshop dimensions. <strong>1 m = 1000 mm</strong>.</p>
-<p><strong>British System:</strong> In the Imperial system, the base unit is the <strong>Inch (″)</strong>. 1 inch = 25.4 mm. Subdivisions: 1/2″, 1/4″, 1/8″, 1/16″, 1/32″, 1/64″.</p>
-<p><strong>Steel Rule:</strong> An engineer's steel rule (or scale) is used for direct measurement. It is made of spring steel or stainless steel. Available lengths: 150 mm, 300 mm, 600 mm. Accuracy: 0.5 mm and 1/64 inch.</p>
-<p>For accurate reading, <strong>parallax</strong> errors must be avoided — read the scale with the eye directly above the mark.</p>
-</div>
-<div class="hi">
-<p><strong>रेखीय माप</strong> लंबाई का माप है। SI (अंतर्राष्ट्रीय प्रणाली) में लंबाई की आधार इकाई <strong>मीटर (m)</strong> है।</p>
-<p>इंजीनियरिंग अभ्यास में <strong>मिलीमीटर (mm)</strong> पसंदीदा इकाई है क्योंकि यह अधिकांश कार्यशाला आयामों के लिए सुविधाजनक है। <strong>1 m = 1000 mm</strong>.</p>
-<p><strong>ब्रिटिश प्रणाली:</strong> इंपीरियल प्रणाली में आधार इकाई <strong>इंच (″)</strong> है। 1 इंच = 25.4 mm। उपविभाजन: 1/2″, 1/4″, 1/8″, 1/16″, 1/32″, 1/64″.</p>
-<p><strong>स्टील रूल:</strong> इंजीनियर का स्टील रूल (या स्केल) प्रत्यक्ष माप के लिए उपयोग किया जाता है। यह स्प्रिंग स्टील या स्टेनलेस स्टील से बना होता है। उपलब्ध लंबाई: 150 mm, 300 mm, 600 mm। सटीकता: 0.5 mm और 1/64 इंच।</p>
-<p>सटीक पठन के लिए <strong>लंबन (parallax)</strong> त्रुटियों से बचना चाहिए — आँख को निशान के ठीक ऊपर रखें।</p>
-</div>
-</div>
-<!-- Table: SI units -->
-<div class="table-wrap">
-<table>
-<caption>SI Units of Length / लंबाई की SI इकाइयाँ</caption>
-<thead><tr><th>Unit</th><th>Equivalent</th></tr></thead>
-<tbody>
-<tr><td>1 Metre (m)</td><td>1000 mm</td></tr>
-<tr><td>1 Centimetre (cm)</td><td>10 mm</td></tr>
-<tr><td>1 Millimetre (mm)</td><td>1000 µm</td></tr>
-<tr><td>1 Micrometre (µm)</td><td>0.001 mm</td></tr>
-</tbody>
-</table>
-</div>
-<div class="short-notes">
-<h4>📌 Key Takeaways / मुख्य बातें</h4>
-<ul>
-<li>SI base unit of length: <strong>Metre (m)</strong>.</li>
-<li>Engineering preference: <strong>Millimetre (mm)</strong>.</li>
-<li>Steel rule is the most common linear measuring tool.</li>
-<li>Parallax error: read with eye directly above the mark.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 2 – SCRIBERS
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="scribes" id="scribes">
-<div class="section-header">
-<span class="icon">✏️</span>
-<span class="title">2. Scribers / स्क्राइबर</span>
-<span class="subtitle">— Marking lines on metal surfaces</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A <strong>Scriber</strong> is a marking tool used to draw fine lines on metal surfaces. It is made of <strong>high carbon steel</strong>, hardened and tempered to maintain a sharp point.</p>
-<p><strong>Types:</strong></p>
-<ul>
-<li><strong>Straight Scriber:</strong> Most common type; used for general marking.</li>
-<li><strong>Bent Scriber:</strong> Has a bent point for marking in difficult-to-reach areas.</li>
-<li><strong>Scratch Awl:</strong> Similar to a scriber but with a thicker point; used on leather, wood, and softer materials.</li>
-</ul>
-<p><strong>Care:</strong> Scriber points are very sharp. Never carry one in your pocket. When not in use, cover the point with a cork or cap.</p>
-</div>
-<div class="hi">
-<p><strong>स्क्राइबर</strong> एक अंकन उपकरण है जिसका उपयोग धातु की सतहों पर महीन रेखाएँ खींचने के लिए किया जाता है। यह <strong>उच्च कार्बन स्टील</strong> से बना होता है, जिसे तीक्ष्ण बिंदु बनाए रखने के लिए कठोर और तड़का लगाया जाता है।</p>
-<p><strong>प्रकार:</strong></p>
-<ul>
-<li><strong>सीधा स्क्राइबर:</strong> सबसे सामान्य प्रकार; सामान्य अंकन के लिए उपयोग किया जाता है।</li>
-<li><strong>मुड़ा हुआ स्क्राइबर:</strong> दुर्गम क्षेत्रों में अंकन के लिए मुड़ा हुआ बिंदु होता है।</li>
-<li><strong>स्क्रैच अवल:</strong> स्क्राइबर के समान लेकिन मोटे बिंदु के साथ; चमड़े, लकड़ी और नरम सामग्री पर उपयोग किया जाता है।</li>
-</ul>
-<p><strong>देखभाल:</strong> स्क्राइबर बिंदु बहुत तीक्ष्ण होते हैं। इन्हें कभी भी जेब में न रखें। उपयोग में न होने पर बिंदु को कॉर्क या टोपी से ढक दें।</p>
-</div>
-</div>
-<div class="warning-box" style="background:#fff5f2; border-left:5px solid #dc3545; padding:16px 22px; border-radius:8px; margin:16px 0;">
-<h4 style="margin:0 0 6px; color:#b02a37;">⚠️ Safety</h4>
-<p style="margin:0;">Scriber points are very sharp — handle with care. Use a cork to cover the point when not in use.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 3 – CALIPERS
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="calipers" id="calipers">
-<div class="section-header">
-<span class="icon">📐</span>
-<span class="title">3. Calipers / कैलिपर्स</span>
-<span class="subtitle">— Indirect measurement and transfer</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p><strong>Calipers</strong> are indirect measuring tools used to transfer measurements from a steel rule to the job, and vice versa. They are classified by their <strong>joint type</strong> and <strong>leg shape</strong>.</p>
-<p><strong>By Joint:</strong></p>
-<ul>
-<li><strong>Firm Joint Calipers:</strong> Legs are set by tapping on a wooden surface; once set, they stay in position.</li>
-<li><strong>Spring Joint Calipers:</strong> Have a spring and adjusting nut for quick and precise setting.</li>
-</ul>
-<p><strong>By Leg Shape:</strong></p>
-<ul>
-<li><strong>Inside Calipers:</strong> For measuring internal dimensions (holes, slots).</li>
-<li><strong>Outside Calipers:</strong> For measuring external dimensions (diameters, thicknesses).</li>
-<li><strong>Jenny Calipers (Hermaphrodite):</strong> One leg has a point; used for marking parallel lines and finding centres.</li>
-</ul>
-<p><strong>Advantage of Spring Joint:</strong> Quick setting using the adjusting nut, reducing setup time.</p>
-</div>
-<div class="hi">
-<p><strong>कैलिपर्स</strong> अप्रत्यक्ष माप उपकरण हैं जिनका उपयोग स्टील रूल से माप को जॉब पर स्थानांतरित करने के लिए किया जाता है। इन्हें <strong>जोड़ के प्रकार</strong> और <strong>पैर के आकार</strong> के अनुसार वर्गीकृत किया जाता है।</p>
-<p><strong>जोड़ के अनुसार:</strong></p>
-<ul>
-<li><strong>फर्म जॉइंट कैलिपर्स:</strong> पैरों को लकड़ी की सतह पर टैप करके सेट किया जाता है; एक बार सेट होने पर स्थिर रहते हैं।</li>
-<li><strong>स्प्रिंग जॉइंट कैलिपर्स:</strong> त्वरित और सटीक सेटिंग के लिए स्प्रिंग और समायोजन नट होता है।</li>
-</ul>
-<p><strong>पैर के आकार के अनुसार:</strong></p>
-<ul>
-<li><strong>इनसाइड कैलिपर्स:</strong> आंतरिक आयामों (छेद, स्लॉट) को मापने के लिए।</li>
-<li><strong>आउटसाइड कैलिपर्स:</strong> बाहरी आयामों (व्यास, मोटाई) को मापने के लिए।</li>
-<li><strong>जेनी कैलिपर्स (हर्माफ्रोडाइट):</strong> एक पैर में बिंदु होता है; समानांतर रेखाओं और केंद्रों को चिह्नित करने के लिए उपयोग किया जाता है।</li>
-</ul>
-<p><strong>स्प्रिंग जॉइंट का लाभ:</strong> समायोजन नट का उपयोग करके त्वरित सेटिंग, जिससे समय की बचत होती है।</p>
-</div>
-</div>
-<div class="info-card blue">
-<h4>💡 Key Point</h4>
-<p>Spring joint calipers are preferred for production work because they allow quick adjustment without losing the setting.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 4 – MARKING PUNCHES
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="punches" id="punches">
-<div class="section-header">
-<span class="icon">🔨</span>
-<span class="title">4. Marking Punches / मार्किंग पंच के प्रकार</span>
-<span class="subtitle">— Centre punch, prick punch, dot punch</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p><strong>Marking punches</strong> are used to make permanent indentations on workpieces to guide subsequent operations.</p>
-<ul>
-<li><strong>Centre Punch:</strong> Point angle = <strong>90°</strong>. Used to mark the centre of a hole. The wide mark gives a good seat for the drill to start.</li>
-<li><strong>Prick Punch (Dot Punch):</strong> Point angle = <strong>30°</strong> or <strong>60°</strong>. The 30° point is used for locating divider points; the 60° point is used for making witness marks.</li>
-</ul>
-<p><strong>Difference:</strong> Centre punch marks are wide and shallow; prick punch marks are narrow and deeper.</p>
-</div>
-<div class="hi">
-<p><strong>मार्किंग पंच</strong> का उपयोग वर्कपीस पर स्थायी निशान बनाने के लिए किया जाता है ताकि आगे के संचालन का मार्गदर्शन हो सके।</p>
-<ul>
-<li><strong>सेंटर पंच:</strong> बिंदु कोण = <strong>90°</strong>. छेद का केंद्र चिह्नित करने के लिए उपयोग किया जाता है। चौड़ा निशान ड्रिल शुरू करने के लिए अच्छी सीट देता है।</li>
-<li><strong>प्रिक पंच (डॉट पंच):</strong> बिंदु कोण = <strong>30°</strong> या <strong>60°</strong>. 30° बिंदु का उपयोग डिवाइडर बिंदुओं के स्थान के लिए किया जाता है; 60° बिंदु का उपयोग साक्षी चिह्नों के लिए किया जाता है।</li>
-</ul>
-<p><strong>अंतर:</strong> सेंटर पंच के निशान चौड़े और उथले होते हैं; प्रिक पंच के निशान संकीर्ण और गहरे होते हैं।</p>
-</div>
-</div>
-<div class="compare-grid">
-<div class="compare-card" style="border-color:#003366; background:#f0f5ff;">
-<h4>🔵 Centre Punch</h4>
-<ul>
-<li><strong>Angle:</strong> 90°</li>
-<li><strong>Usage:</strong> Hole centres</li>
-<li><strong>Mark:</strong> Wide, shallow</li>
-</ul>
-</div>
-<div class="compare-card" style="border-color:#ff9900; background:#fff8e1;">
-<h4>🟠 Prick Punch</h4>
-<ul>
-<li><strong>Angle:</strong> 30° or 60°</li>
-<li><strong>Usage:</strong> Divider points, witness marks</li>
-<li><strong>Mark:</strong> Narrow, deeper</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 5 – BENCH VICE
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="vice" id="vice">
-<div class="section-header">
-<span class="icon">🛠️</span>
-<span class="title">5. Bench Vice / बेंच वाइस</span>
-<span class="subtitle">— Construction, parts, and care</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A <strong>Bench Vice</strong> (or Engineer's Vice) is used to hold workpieces securely during filing, sawing, threading, and other operations.</p>
-<p>It is made of <strong>cast iron</strong> or <strong>cast steel</strong>. The size is specified by the <strong>width of the jaws</strong> (e.g., 150 mm bench vice).</p>
-<p><strong>Main Parts:</strong></p>
-<ul>
-<li><strong>Fixed Jaw</strong> – attached to the body.</li>
-<li><strong>Movable Jaw</strong> – slides in the body.</li>
-<li><strong>Hardened Steel Jaws</strong> – replaceable inserts for gripping.</li>
-<li><strong>Spindle</strong> – threaded shaft that moves the movable jaw.</li>
-<li><strong>Handle</strong> – used to turn the spindle.</li>
-<li><strong>Box-nut &amp; Spring</strong> – internal parts for smooth operation.</li>
-</ul>
-<p><strong>Care:</strong> Use <strong>soft jaws (vice clamps)</strong> made of aluminium or copper over the hardened jaws to protect finished surfaces. Never over-tighten the vice.</p>
-</div>
-<div class="hi">
-<p><strong>बेंच वाइस</strong> (या इंजीनियर का वाइस) का उपयोग फाइलिंग, आरा, थ्रेडिंग और अन्य कार्यों के दौरान वर्कपीस को सुरक्षित रूप से पकड़ने के लिए किया जाता है।</p>
-<p>यह <strong>कास्ट आयरन</strong> या <strong>कास्ट स्टील</strong> से बना होता है। आकार <strong>जॉ की चौड़ाई</strong> द्वारा निर्दिष्ट किया जाता है (जैसे, 150 mm बेंच वाइस)।</p>
-<p><strong>मुख्य भाग:</strong></p>
-<ul>
-<li><strong>स्थिर जॉ</strong> – शरीर से जुड़ा होता है।</li>
-<li><strong>चल जॉ</strong> – शरीर में स्लाइड करता है।</li>
-<li><strong>कठोर स्टील जॉ</strong> – पकड़ने के लिए बदली जाने योग्य इंसर्ट।</li>
-<li><strong>स्पिंडल</strong> – पिरोया हुआ शाफ़्ट जो चल जॉ को चलाता है।</li>
-<li><strong>हैंडल</strong> – स्पिंडल को घुमाने के लिए उपयोग किया जाता है।</li>
-<li><strong>बॉक्स-नट और स्प्रिंग</strong> – सुचारू संचालन के लिए आंतरिक भाग।</li>
-</ul>
-<p><strong>देखभाल:</strong> तैयार सतहों की सुरक्षा के लिए कठोर जॉ के ऊपर <strong>सॉफ्ट जॉ (वाइस क्लैम्प)</strong> का उपयोग करें। वाइस को कभी भी अत्यधिक न कसें।</p>
-</div>
-</div>
-<div class="success-box" style="background:#eef9f1; border-left:5px solid #28a745; padding:16px 22px; border-radius:8px; margin:16px 0;">
-<h4 style="margin:0 0 6px; color:#1e7e34;">✅ Best Practice</h4>
-<p style="margin:0;">Apply a thin layer of oil on the sliding parts and spindle threads regularly to prevent rust and ensure smooth operation.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 6 – TYPES OF VICES
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="vice-types" id="vice-types">
-<div class="section-header">
-<span class="icon">🔩</span>
-<span class="title">6. Types of Vices / वाइस के प्रकार</span>
-<span class="subtitle">— Quick releasing, pipe, hand, pin, toolmaker, leg</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>Different types of vices are used for different holding requirements:</p>
-<ul>
-<li><strong>Quick Releasing Vice:</strong> Has a trigger/lever to release the movable jaw instantly for fast positioning.</li>
-<li><strong>Pipe Vice:</strong> Designed for holding pipes and tubes. Jaws work vertically, gripping at four points.</li>
-<li><strong>Hand Vice:</strong> Used for holding small parts like taps, rivets, and small drills during filing or threading.</li>
-<li><strong>Pin Vice:</strong> For holding very small diameter jobs (like watch parts). Has a collet chuck.</li>
-<li><strong>Toolmaker's Vice:</strong> Precision vice for toolroom work; used on surface plates for small jobs.</li>
-<li><strong>Leg Vice:</strong> Used in forge shops for bending and forging. Made of mild steel to withstand hammer blows.</li>
-</ul>
-</div>
-<div class="hi">
-<p>विभिन्न होल्डिंग आवश्यकताओं के लिए विभिन्न प्रकार के वाइस का उपयोग किया जाता है:</p>
-<ul>
-<li><strong>क्विक रिलीजिंग वाइस:</strong> त्वरित स्थिति के लिए चल जॉ को तुरंत रिलीज करने के लिए ट्रिगर/लीवर होता है।</li>
-<li><strong>पाइप वाइस:</strong> पाइप और ट्यूब पकड़ने के लिए डिज़ाइन किया गया। जॉ लंबवत रूप से काम करते हैं, चार बिंदुओं पर पकड़ते हैं।</li>
-<li><strong>हैंड वाइस:</strong> फाइलिंग या थ्रेडिंग के दौरान टैप, रिवेट्स और छोटे ड्रिल जैसे छोटे भागों को पकड़ने के लिए।</li>
-<li><strong>पिन वाइस:</strong> बहुत छोटे व्यास के जॉब (जैसे घड़ी के पुर्जे) पकड़ने के लिए। इसमें कोलेट चक होता है।</li>
-<li><strong>टूलमेकर का वाइस:</strong> टूलरूम के काम के लिए प्रेसिजन वाइस; छोटे जॉब के लिए सरफेस प्लेट पर उपयोग किया जाता है।</li>
-<li><strong>लेग वाइस:</strong> फोर्ज शॉप में झुकने और फोर्जिंग के लिए उपयोग किया जाता है। हथौड़े के प्रहार को सहन करने के लिए माइल्ड स्टील से बना होता है।</li>
-</ul>
-</div>
-</div>
-<div class="info-card purple">
-<h4>🔍 Selection Tip</h4>
-<p>Choose the vice type based on the <strong>size, shape, and material</strong> of the workpiece, and the operation to be performed (filing, sawing, forging, etc.).</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 7 – TRY SQUARE
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="trysquare" id="trysquare">
-<div class="section-header">
-<span class="icon">📐</span>
-<span class="title">7. Try Square / ट्राई स्क्वायर</span>
-<span class="subtitle">— Checking and marking 90° angles</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A <strong>Try Square</strong> is a precision tool used to check the squareness (90° angle) of a surface. It consists of a <strong>blade</strong> (steel rule) fixed at exactly 90° to a <strong>stock</strong> (handle).</p>
-<p>Accuracy: approximately <strong>0.002 mm per 10 mm</strong> length. Specified by the blade length: 100 mm, 150 mm, 200 mm.</p>
-<p><strong>Uses:</strong></p>
-<ul>
-<li>Checking squareness of surfaces.</li>
-<li>Checking flatness of surfaces.</li>
-<li>Marking lines at 90° to an edge.</li>
-<li>Setting workpieces at right angles on machines.</li>
-</ul>
-</div>
-<div class="hi">
-<p><strong>ट्राई स्क्वायर</strong> एक प्रेसिजन टूल है जिसका उपयोग किसी सतह की वर्गाकारता (90° कोण) की जाँच करने के लिए किया जाता है। इसमें एक <strong>ब्लेड</strong> (स्टील रूल) होता है जो <strong>स्टॉक</strong> (हैंडल) से बिल्कुल 90° पर लगा होता है।</p>
-<p>सटीकता: लगभग <strong>0.002 mm प्रति 10 mm</strong> लंबाई। ब्लेड की लंबाई द्वारा निर्दिष्ट: 100 mm, 150 mm, 200 mm.</p>
-<p><strong>उपयोग:</strong></p>
-<ul>
-<li>सतहों की वर्गाकारता की जाँच करना।</li>
-<li>सतहों की समतलता की जाँच करना।</li>
-<li>किसी किनारे पर 90° पर रेखाएँ अंकित करना।</li>
-<li>मशीनों पर वर्कपीस को समकोण पर सेट करना।</li>
-</ul>
-</div>
-</div>
-<div class="short-notes">
-<h4>📌 Key Points</h4>
-<ul>
-<li>Try square is used for both <strong>checking</strong> and <strong>marking</strong> right angles.</li>
-<li>Keep the blade and stock clean and free from nicks to maintain accuracy.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 8 – TYPES OF FILES
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="files" id="files">
-<div class="section-header">
-<span class="icon">📁</span>
-<span class="title">8. Types of Files / फाइलों के प्रकार</span>
-<span class="subtitle">— Shapes, cuts, grades, and selection</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p><strong>Files</strong> are cutting tools used to remove excess material from workpieces. They are classified by <strong>shape, cut, and grade</strong>.</p>
-<p><strong>File Cuts:</strong></p>
-<ul>
-<li><strong>Single Cut:</strong> One row of teeth; used for soft metals (brass, aluminium, copper).</li>
-<li><strong>Double Cut:</strong> Two rows of teeth; faster material removal.</li>
-<li><strong>Rasp Cut:</strong> Individual sharp teeth; used for wood, leather.</li>
-<li><strong>Curved Cut:</strong> Deep cutting action; used for soft materials like aluminium, tin, plastic.</li>
-</ul>
-<p><strong>File Grades (teeth per 10 mm):</strong></p>
-<ul>
-<li><strong>Rough</strong> – for very fast stock removal.</li>
-<li><strong>Bastard</strong> – general purpose.</li>
-<li><strong>Second Cut</strong> – for finer work.</li>
-<li><strong>Smooth</strong> – for finishing.</li>
-<li><strong>Dead Smooth</strong> – for final polishing.</li>
-</ul>
-<p><strong>File Shapes:</strong> Flat, Hand, Square, Round, Half-Round, Triangular, Knife Edge.</p>
-<p><strong>Pinning:</strong> When metal chips get stuck between teeth, it's called <strong>pinning</strong>. Clean with a <strong>file card</strong> or brass strip.</p>
-</div>
-<div class="hi">
-<p><strong>फाइलें</strong> काटने के उपकरण हैं जिनका उपयोग वर्कपीस से अतिरिक्त सामग्री निकालने के लिए किया जाता है। इन्हें <strong>आकार, कट, और ग्रेड</strong> के अनुसार वर्गीकृत किया जाता है।</p>
-<p><strong>फाइल कट:</strong></p>
-<ul>
-<li><strong>सिंगल कट:</strong> दांतों की एक पंक्ति; नरम धातुओं (पीतल, एल्यूमीनियम, तांबा) के लिए उपयोग किया जाता है।</li>
-<li><strong>डबल कट:</strong> दांतों की दो पंक्तियाँ; तेजी से सामग्री हटाने के लिए।</li>
-<li><strong>रास्प कट:</strong> व्यक्तिगत तीक्ष्ण दांत; लकड़ी, चमड़े के लिए उपयोग किया जाता है।</li>
-<li><strong>कर्व्ड कट:</strong> गहरी कटिंग क्रिया; एल्यूमीनियम, टिन, प्लास्टिक जैसी नरम सामग्री के लिए।</li>
-</ul>
-<p><strong>फाइल ग्रेड (10 mm में दांतों की संख्या):</strong></p>
-<ul>
-<li><strong>रफ</strong> – बहुत तेजी से सामग्री हटाने के लिए।</li>
-<li><strong>बास्टर्ड</strong> – सामान्य प्रयोजन।</li>
-<li><strong>सेकेंड कट</strong> – महीन काम के लिए।</li>
-<li><strong>स्मूद</strong> – फिनिशिंग के लिए।</li>
-<li><strong>डेड स्मूद</strong> – अंतिम पॉलिशिंग के लिए।</li>
-</ul>
-<p><strong>फाइल आकार:</strong> फ्लैट, हैंड, स्क्वायर, राउंड, हाफ-राउंड, ट्राईएंगुलर, नाइफ एज।</p>
-<p><strong>पिनिंग:</strong> जब धातु के चिप्स दांतों के बीच फंस जाते हैं, तो इसे <strong>पिनिंग</strong> कहा जाता है। <strong>फाइल कार्ड</strong> या पीतल की पट्टी से साफ करें।</p>
-</div>
-</div>
-<!-- Table for grades -->
-<div class="table-wrap">
-<table>
-<caption>File Grades (Teeth per 10 mm length) / फाइल ग्रेड (10 mm लंबाई में दांतों की संख्या)</caption>
-<thead><tr><th>Length</th><th>Rough</th><th>Bastard</th><th>Second Cut</th><th>Smooth</th><th>Dead Smooth</th></tr></thead>
-<tbody>
-<tr><td>150 mm</td><td>8</td><td>13</td><td>17</td><td>24</td><td>33</td></tr>
-<tr><td>200 mm</td><td>7</td><td>11</td><td>16</td><td>22</td><td>31</td></tr>
-<tr><td>250 mm</td><td>6</td><td>10</td><td>15</td><td>20</td><td>30</td></tr>
-<tr><td>300 mm</td><td>5</td><td>9</td><td>14</td><td>19</td><td>28</td></tr>
-</tbody>
-</table>
-</div>
-<div class="warning-box" style="background:#fff5f2; border-left:5px solid #dc3545; padding:16px 22px; border-radius:8px; margin:16px 0;">
-<h4 style="margin:0 0 6px; color:#b02a37;">⚠️ Pinning</h4>
-<p style="margin:0;">Always clean files with a file card or brass strip to remove pinning. A pinned file scratches the workpiece and cuts poorly.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 9 – MEASUREMENT OF ANGLES
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="angles" id="angles">
-<div class="section-header">
-<span class="icon">📐</span>
-<span class="title">9. Measurement of Angles / कोणों का मापन</span>
-<span class="subtitle">— Degrees, minutes, seconds, and instruments</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A full circle is divided into <strong>360 degrees (°)</strong>. Each degree = <strong>60 minutes (′)</strong>, each minute = <strong>60 seconds (″)</strong>.</p>
-<p><strong>Angular measuring instruments:</strong></p>
-<ul>
-<li><strong>Bevel Gauge:</strong> Indirect measurement; used with a protractor.</li>
-<li><strong>Universal Bevel Gauge:</strong> Has an additional blade for measuring angles that a simple bevel gauge cannot.</li>
-<li><strong>Bevel Protractor:</strong> Direct measurement; accuracy 1°.</li>
-<li><strong>Combination Set:</strong> Includes protractor head, square head, centre head, and rule. Used for layout, measurement, and angle checking.</li>
-</ul>
-<p>The <strong>combination set</strong> is versatile – it can measure angles, check squareness, find centres, and measure depths.</p>
-</div>
-<div class="hi">
-<p>एक पूर्ण वृत्त <strong>360 डिग्री (°)</strong> में विभाजित होता है। प्रत्येक डिग्री = <strong>60 मिनट (′)</strong>, प्रत्येक मिनट = <strong>60 सेकंड (″)</strong>.</p>
-<p><strong>कोणीय माप उपकरण:</strong></p>
-<ul>
-<li><strong>बेवल गेज:</strong> अप्रत्यक्ष माप; प्रोट्रैक्टर के साथ उपयोग किया जाता है।</li>
-<li><strong>यूनिवर्सल बेवल गेज:</strong> अतिरिक्त ब्लेड होता है जो सरल बेवल गेज से न मापे जा सकने वाले कोणों को मापता है।</li>
-<li><strong>बेवल प्रोट्रैक्टर:</strong> प्रत्यक्ष माप; सटीकता 1°.</li>
-<li><strong>संयोजन सेट:</strong> इसमें प्रोट्रैक्टर हेड, स्क्वायर हेड, सेंटर हेड और रूल शामिल हैं। लेआउट, माप और कोण जाँच के लिए उपयोग किया जाता है।</li>
-</ul>
-<p><strong>संयोजन सेट</strong> बहुमुखी है – यह कोण माप सकता है, वर्गाकारता जाँच सकता है, केंद्र ढूँढ सकता है और गहराई माप सकता है।</p>
-</div>
-</div>
-<div class="info-card orange">
-<h4>📌 Remember</h4>
-<ul>
-<li>1° = 60′</li>
-<li>1′ = 60″</li>
-<li>Bevel protractor accuracy: 1°</li>
-<li>Combination set is a multi-purpose tool.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 10 – SURFACE GAUGES
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="surfacegauge" id="surfacegauge">
-<div class="section-header">
-<span class="icon">📏</span>
-<span class="title">10. Surface Gauges / सरफेस गेज</span>
-<span class="subtitle">— Scribing blocks for parallel marking</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A <strong>Surface Gauge</strong> (or Scribing Block) is used to draw lines parallel to a datum surface, set jobs on machines, check height, and check parallelism.</p>
-<p><strong>Types:</strong></p>
-<ul>
-<li><strong>Fixed Type:</strong> Heavy flat base, vertical spindle with a scriber clamped on it.</li>
-<li><strong>Universal Type:</strong> Spindle adjustable to any position; fine adjustment; can be used on cylindrical surfaces. Has a guide pin for scribing parallel lines from any datum edge.</li>
-</ul>
-<p><strong>Parts:</strong> Base (with V-groove), rocker arm, spindle, scriber, clamping nut.</p>
-</div>
-<div class="hi">
-<p><strong>सरफेस गेज</strong> (या स्क्राइबिंग ब्लॉक) का उपयोग डेटम सतह के समानांतर रेखाएँ खींचने, मशीनों पर जॉब सेट करने, ऊँचाई और समानता की जाँच करने के लिए किया जाता है।</p>
-<p><strong>प्रकार:</strong></p>
-<ul>
-<li><strong>फिक्स्ड टाइप:</strong> भारी सपाट आधार, ऊर्ध्वाधर स्पिंडल जिस पर स्क्राइबर क्लैम्प किया जाता है।</li>
-<li><strong>यूनिवर्सल टाइप:</strong> स्पिंडल किसी भी स्थिति में समायोज्य; बढ़िया समायोजन; बेलनाकार सतहों पर उपयोग किया जा सकता है। इसमें किसी भी डेटम किनारे से समानांतर रेखाएँ खींचने के लिए गाइड पिन होता है।</li>
-</ul>
-<p><strong>भाग:</strong> आधार (V-ग्रूव के साथ), रॉकर आर्म, स्पिंडल, स्क्राइबर, क्लैम्पिंग नट।</p>
-</div>
-</div>
-<div class="info-card blue">
-<h4>💡 Tip</h4>
-<p>Apply a thin layer of oil on the base before use to prevent scratching the surface plate.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 11 – COLD CHISEL
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="chisel" id="chisel">
-<div class="section-header">
-<span class="icon">🔪</span>
-<span class="title">11. Cold Chisel / ठंडी छेनी</span>
-<span class="subtitle">— Chipping, angles, and types</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A <strong>Cold Chisel</strong> is a hand cutting tool used for chipping and cutting operations. It is made of <strong>high carbon steel</strong> or <strong>chrome vanadium steel</strong>.</p>
-<p><strong>Common Types:</strong></p>
-<ul>
-<li><strong>Flat Chisel:</strong> For large flat surfaces.</li>
-<li><strong>Cross-cut (Cape) Chisel:</strong> For keyways, grooves, and slots.</li>
-<li><strong>Half-Round Nose Chisel:</strong> For curved grooves (oil grooves).</li>
-<li><strong>Diamond Point Chisel:</strong> For squaring corners.</li>
-<li><strong>Web (Punching) Chisel:</strong> For separating metals after chain drilling.</li>
-</ul>
-<p><strong>Chisel Angles (point angle depends on material):</strong></p>
-<ul>
-<li>Mild Steel: 55°</li>
-<li>Cast Iron: 60°</li>
-<li>High Carbon Steel: 65°</li>
-<li>Brass: 50°</li>
-<li>Copper: 45°</li>
-<li>Aluminium: 30°</li>
-</ul>
-<p><strong>Clearance angle</strong> (rake angle) and <strong>clearance angle</strong> must be correct for effective cutting.</p>
-</div>
-<div class="hi">
-<p><strong>ठंडी छेनी</strong> एक हाथ काटने का उपकरण है जिसका उपयोग चिपिंग और काटने के संचालन के लिए किया जाता है। यह <strong>उच्च कार्बन स्टील</strong> या <strong>क्रोम वैनेडियम स्टील</strong> से बनी होती है।</p>
-<p><strong>सामान्य प्रकार:</strong></p>
-<ul>
-<li><strong>फ्लैट छेनी:</strong> बड़ी सपाट सतहों के लिए।</li>
-<li><strong>क्रॉस-कट (केप) छेनी:</strong> की-वे, खांचे और स्लॉट के लिए।</li>
-<li><strong>हाफ-राउंड नोज़ छेनी:</strong> घुमावदार खांचे (तेल खांचे) के लिए।</li>
-<li><strong>डायमंड पॉइंट छेनी:</strong> कोनों को चौकोर करने के लिए।</li>
-<li><strong>वेब (पंचिंग) छेनी:</strong> चेन ड्रिलिंग के बाद धातुओं को अलग करने के लिए।</li>
-</ul>
-<p><strong>छेनी के कोण (बिंदु कोण सामग्री पर निर्भर करता है):</strong></p>
-<ul>
-<li>माइल्ड स्टील: 55°</li>
-<li>कास्ट आयरन: 60°</li>
-<li>उच्च कार्बन स्टील: 65°</li>
-<li>पीतल: 50°</li>
-<li>तांबा: 45°</li>
-<li>एल्यूमीनियम: 30°</li>
-</ul>
-<p><strong>रेक कोण</strong> और <strong>निकासी कोण</strong> प्रभावी कटिंग के लिए सही होने चाहिए।</p>
-</div>
-</div>
-<div class="warning-box" style="background:#fff5f2; border-left:5px solid #dc3545; padding:16px 22px; border-radius:8px; margin:16px 0;">
-<h4 style="margin:0 0 6px; color:#b02a37;">⚠️ Safety</h4>
-<p style="margin:0;">Never use a mushroom-headed chisel. Grind it properly. Always wear <strong>safety goggles</strong> while chipping.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 12 – MARKING MEDIA
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="markingmedia" id="markingmedia">
-<div class="section-header">
-<span class="icon">🎨</span>
-<span class="title">12. Marking Media / मार्किंग मीडिया</span>
-<span class="subtitle">— White wash, marking blue, Prussian blue, etc.</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p><strong>Marking media</strong> are applied to workpieces to make scribed lines clearly visible.</p>
-<ul>
-<li><strong>White Wash:</strong> Chalk powder mixed with water, methylated spirit, or turpentine. Used on rough castings and forgings.</li>
-<li><strong>Marking Blue:</strong> Chemical dye mixed with methylated spirit. Used on machined surfaces.</li>
-<li><strong>Prussian Blue:</strong> Used on filed or machine-finished surfaces. Gives very clear lines but takes longer to dry.</li>
-<li><strong>Copper Sulphate:</strong> Mixed with water and nitric acid. Used on filed or machined surfaces. Toxic – handle with care.</li>
-<li><strong>Cellulose Lacquer:</strong> Commercially available, quick drying, various colours.</li>
-</ul>
-<p>Selection depends on the <strong>surface finish</strong> and the <strong>accuracy</strong> required.</p>
-</div>
-<div class="hi">
-<p><strong>मार्किंग मीडिया</strong> को वर्कपीस पर लगाया जाता है ताकि अंकित रेखाएँ स्पष्ट रूप से दिखाई दें।</p>
-<ul>
-<li><strong>व्हाइट वॉश:</strong> चाक पाउडर पानी, मिथाइलेटेड स्पिरिट या तारपीन के साथ मिश्रित। खुरदरी ढलाई और फोर्जिंग पर उपयोग किया जाता है।</li>
-<li><strong>मार्किंग ब्लू:</strong> रासायनिक डाई मिथाइलेटेड स्पिरिट के साथ मिश्रित। मशीनी सतहों पर उपयोग किया जाता है।</li>
-<li><strong>प्रशियन ब्लू:</strong> फाइल या मशीन से तैयार सतहों पर उपयोग किया जाता है। बहुत स्पष्ट रेखाएँ देता है लेकिन सूखने में अधिक समय लगता है।</li>
-<li><strong>कॉपर सल्फेट:</strong> पानी और नाइट्रिक एसिड के साथ मिश्रित। फाइल या मशीनी सतहों पर उपयोग किया जाता है। जहरीला – सावधानी से संभालें।</li>
-<li><strong>सेल्यूलोज लैकर:</strong> व्यावसायिक रूप से उपलब्ध, जल्दी सूखने वाला, विभिन्न रंगों में।</li>
-</ul>
-<p>चयन <strong>सतह की फिनिश</strong> और आवश्यक <strong>सटीकता</strong> पर निर्भर करता है।</p>
-</div>
-</div>
-<div class="warning-box" style="background:#fff5f2; border-left:5px solid #dc3545; padding:16px 22px; border-radius:8px; margin:16px 0;">
-<h4 style="margin:0 0 6px; color:#b02a37;">⚠️ Safety</h4>
-<p style="margin:0;">Copper sulphate is toxic. Handle with gloves and avoid contact with skin. Do not ingest.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 13 – SURFACE PLATE
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="surfaceplate" id="surfaceplate">
-<div class="section-header">
-<span class="icon">⬛</span>
-<span class="title">13. Surface Plate / सरफेस प्लेट</span>
-<span class="subtitle">— Datum surface for marking and inspection</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A <strong>Surface Plate</strong> provides a perfectly flat datum surface for accurate marking and inspection. Made of <strong>high-quality cast iron</strong> or <strong>granite</strong>.</p>
-<p>Three grades: <strong>Grade 1</strong> (most accurate), <strong>Grade 2</strong>, and <strong>Grade 3</strong>.</p>
-<p><strong>Care:</strong> Clean before and after use. Apply a thin layer of oil to prevent rust. Never place cutting tools on the surface plate.</p>
-</div>
-<div class="hi">
-<p><strong>सरफेस प्लेट</strong> सटीक अंकन और निरीक्षण के लिए एक पूरी तरह से सपाट डेटम सतह प्रदान करती है। <strong>उच्च गुणवत्ता वाले कास्ट आयरन</strong> या <strong>ग्रेनाइट</strong> से बना होता है।</p>
-<p>तीन ग्रेड: <strong>ग्रेड 1</strong> (सबसे सटीक), <strong>ग्रेड 2</strong>, और <strong>ग्रेड 3</strong>.</p>
-<p><strong>देखभाल:</strong> उपयोग से पहले और बाद में साफ करें। जंग रोकने के लिए तेल की पतली परत लगाएं। सरफेस प्लेट पर कभी भी काटने के उपकरण न रखें।</p>
-</div>
-</div>
-<div class="short-notes">
-<h4>📌 Key Points</h4>
-<ul>
-<li>Surface plates are used as reference surfaces.</li>
-<li>Granite plates maintain accuracy even if scratched.</li>
-<li>Grade 1 is used for precision work.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 14 – ANGLE PLATE
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="angleplate" id="angleplate">
-<div class="section-header">
-<span class="icon">📐</span>
-<span class="title">14. Angle Plate / एंगल प्लेट</span>
-<span class="subtitle">— Holding work at 90°</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>An <strong>Angle Plate</strong> has two flat surfaces machined perfectly at <strong>90°</strong> to each other. Made of fine-grained cast iron or steel.</p>
-<p><strong>Types:</strong></p>
-<ul>
-<li><strong>Plain Solid Angle Plate:</strong> Most common; two flat surfaces at 90°.</li>
-<li><strong>Slotted Type Angle Plate:</strong> Has slots for clamping bolts.</li>
-<li><strong>Swivel Type Angle Plate:</strong> Adjustable angle between surfaces.</li>
-<li><strong>Box Angle Plate:</strong> All faces square to each other; job can be turned.</li>
-</ul>
-<p>Grades: <strong>Grade 1</strong> (high precision) and <strong>Grade 2</strong> (general shop work).</p>
-</div>
-<div class="hi">
-<p><strong>एंगल प्लेट</strong> में दो सपाट सतहें होती हैं जो एक दूसरे से <strong>90°</strong> पर पूर्ण रूप से मशीनीकृत होती हैं। बारीक दानेदार कास्ट आयरन या स्टील से बनी होती है।</p>
-<p><strong>प्रकार:</strong></p>
-<ul>
-<li><strong>सादा ठोस एंगल प्लेट:</strong> सबसे सामान्य; 90° पर दो सपाट सतहें।</li>
-<li><strong>स्लॉटेड टाइप एंगल प्लेट:</strong> क्लैम्पिंग बोल्ट के लिए स्लॉट होते हैं।</li>
-<li><strong>स्विवेल टाइप एंगल प्लेट:</strong> सतहों के बीच समायोज्य कोण।</li>
-<li><strong>बॉक्स एंगल प्लेट:</strong> सभी फलक एक दूसरे के वर्गाकार होते हैं; जॉब को घुमाया जा सकता है।</li>
-</ul>
-<p>ग्रेड: <strong>ग्रेड 1</strong> (उच्च परिशुद्धता) और <strong>ग्रेड 2</strong> (सामान्य शॉप कार्य)।</p>
-</div>
-</div>
-<div class="info-card purple">
-<h4>🔍 Selection Tip</h4>
-<p>Use Grade 1 for precision inspection and toolroom work; Grade 2 for general machining.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 15 – PHYSICAL & MECHANICAL PROPERTIES
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="properties" id="properties">
-<div class="section-header">
-<span class="icon">⚛️</span>
-<span class="title">15. Physical &amp; Mechanical Properties / भौतिक और यांत्रिक गुण</span>
-<span class="subtitle">— Colour, weight, ductility, hardness, etc.</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p><strong>Physical properties</strong> include colour, weight, structure, conductivity, magnetic properties, fusibility, and specific gravity.</p>
-<p><strong>Mechanical properties</strong> include ductility, malleability, hardness, brittleness, toughness, tenacity, and elasticity.</p>
-<ul>
-<li><strong>Ductility:</strong> Ability to be drawn into wire (e.g., copper, aluminium).</li>
-<li><strong>Malleability:</strong> Ability to be hammered or rolled into sheets (e.g., lead).</li>
-<li><strong>Hardness:</strong> Resistance to indentation.</li>
-<li><strong>Brittleness:</strong> Breaks without permanent deformation (e.g., cast iron).</li>
-<li><strong>Toughness:</strong> Can withstand impact (e.g., wrought iron).</li>
-<li><strong>Tenacity:</strong> Resistance to tensile forces (e.g., mild steel).</li>
-<li><strong>Elasticity:</strong> Returns to original shape after force removal (e.g., springs).</li>
-</ul>
-</div>
-<div class="hi">
-<p><strong>भौतिक गुण</strong> में रंग, वजन, संरचना, चालकता, चुंबकीय गुण, गलनशीलता और विशिष्ट गुरुत्व शामिल हैं।</p>
-<p><strong>यांत्रिक गुण</strong> में लचीलापन, आघातवर्धनीयता, कठोरता, भंगुरता, क्रूरता, दृढ़ता और प्रत्यास्थता शामिल हैं।</p>
-<ul>
-<li><strong>लचीलापन (Ductility):</strong> तार खींचने की क्षमता (जैसे, तांबा, एल्यूमीनियम)।</li>
-<li><strong>आघातवर्धनीयता (Malleability):</strong> हथौड़े से पीटकर या रोल करके शीट बनाने की क्षमता (जैसे, सीसा)।</li>
-<li><strong>कठोरता (Hardness):</strong> इंडेंटेशन का प्रतिरोध।</li>
-<li><strong>भंगुरता (Brittleness):</strong> बिना स्थायी विरूपण के टूट जाता है (जैसे, कास्ट आयरन)।</li>
-<li><strong>क्रूरता (Toughness):</strong> आघात सह सकता है (जैसे, गढ़ा लोहा)।</li>
-<li><strong>दृढ़ता (Tenacity):</strong> तन्य बलों का प्रतिरोध (जैसे, माइल्ड स्टील)।</li>
-<li><strong>प्रत्यास्थता (Elasticity):</strong> बल हटने के बाद मूल आकार में लौटने की क्षमता (जैसे, स्प्रिंग्स)।</li>
-</ul>
-</div>
-</div>
-<div class="info-card green">
-<h4>📌 Remember</h4>
-<ul>
-<li>Ferrous metals contain iron; non-ferrous do not.</li>
-<li>Mechanical properties determine the suitability of a metal for a given application.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 16 – METAL-CUTTING SAWS
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="saws" id="saws">
-<div class="section-header">
-<span class="icon">🪚</span>
-<span class="title">16. Metal-Cutting Saws / धातु काटने वाली आरी</span>
-<span class="subtitle">— Power saw, band saw, circular saw, contour saw</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p><strong>Metal-cutting saws</strong> are machine tools used to cut metal stock. Common types:</p>
-<ul>
-<li><strong>Power Saw:</strong> Most common; reciprocating action.</li>
-<li><strong>Horizontal Band-Saw:</strong> Continuous cutting; faster than power saw.</li>
-<li><strong>Circular Saw:</strong> For large cross-sections; continuous cutting.</li>
-<li><strong>Contour Saw:</strong> For cutting irregular profiles; uses a metal band saw blade.</li>
-</ul>
-<p><strong>Safety:</strong> Always use cutting fluid. Do not apply excessive cutting pressure. Use a stop gauge for multiple pieces.</p>
-</div>
-<div class="hi">
-<p><strong>धातु काटने वाली आरी</strong> मशीन उपकरण हैं जिनका उपयोग धातु स्टॉक काटने के लिए किया जाता है। सामान्य प्रकार:</p>
-<ul>
-<li><strong>पावर आरी:</strong> सबसे सामान्य; प्रत्यागामी क्रिया।</li>
-<li><strong>क्षैतिज बैंड-आरी:</strong> निरंतर काटने; पावर आरी से तेज़।</li>
-<li><strong>वृत्ताकार आरी:</strong> बड़े क्रॉस-सेक्शन के लिए; निरंतर काटने।</li>
-<li><strong>कंटूर आरी:</strong> अनियमित प्रोफाइल काटने के लिए; धातु बैंड आरी ब्लेड का उपयोग करता है।</li>
-</ul>
-<p><strong>सुरक्षा:</strong> हमेशा कटिंग फ्लुइड का उपयोग करें। अत्यधिक काटने का दबाव न लगाएँ। कई टुकड़ों के लिए स्टॉप गेज का उपयोग करें।</p>
-</div>
-</div>
-<div class="warning-box" style="background:#fff5f2; border-left:5px solid #dc3545; padding:16px 22px; border-radius:8px; margin:16px 0;">
-<h4 style="margin:0 0 6px; color:#b02a37;">⚠️ Safety</h4>
-<p style="margin:0;">Never measure the workpiece while the saw is running. Keep hands clear of the blade.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 17 – OUTSIDE MICROMETER
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="micrometer" id="micrometer">
-<div class="section-header">
-<span class="icon">🔬</span>
-<span class="title">17. Outside Micrometer / बाह्य माइक्रोमीटर</span>
-<span class="subtitle">— Precision measurement up to 0.01 mm</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>An <strong>Outside Micrometer</strong> is a precision instrument for measuring dimensions with accuracy up to <strong>0.01 mm</strong>.</p>
-<p><strong>Parts:</strong> Frame, Barrel/Sleeve, Thimble, Spindle, Anvil, Spindle Lock Nut, Ratchet Stop.</p>
-<p><strong>Least Count (Metric):</strong> Spindle pitch = 0.5 mm. Thimble has 50 divisions. LC = 0.5 / 50 = <strong>0.01 mm</strong>.</p>
-<p><strong>Reading:</strong> Barrel reading (mm) + Thimble reading (number of divisions × 0.01).</p>
-<p>Ranges: 0-25 mm, 25-50 mm, 50-75 mm, etc.</p>
-</div>
-<div class="hi">
-<p><strong>बाह्य माइक्रोमीटर</strong> एक प्रेसिजन उपकरण है जो <strong>0.01 mm</strong> तक की सटीकता के साथ आयाम मापता है।</p>
-<p><strong>भाग:</strong> फ्रेम, बैरल/स्लीव, थिम्बल, स्पिंडल, एन्विल, स्पिंडल लॉक नट, रैचेट स्टॉप।</p>
-<p><strong>अल्पतमांक (मीट्रिक):</strong> स्पिंडल पिच = 0.5 mm. थिम्बल पर 50 विभाजन होते हैं। LC = 0.5 / 50 = <strong>0.01 mm</strong>.</p>
-<p><strong>पठन:</strong> बैरल रीडिंग (mm) + थिम्बल रीडिंग (विभाजनों की संख्या × 0.01).</p>
-<p>रेंज: 0-25 mm, 25-50 mm, 50-75 mm, आदि।</p>
-</div>
-</div>
-<div class="example-box">
-<h4 style="margin:0 0 6px; color:#003366;">📘 Example</h4>
-<p><strong>Reading:</strong> Barrel shows 13 mm and 1 half-division (0.5 mm). Thimble aligns at 13th division. Total = 13 + 0.5 + (13 × 0.01) = 13.63 mm.</p>
-</div>
-<div class="short-notes">
-<h4>📌 Key Points</h4>
-<ul>
-<li>Always check the zero reading before use.</li>
-<li>Use the ratchet stop to apply uniform pressure.</li>
-<li>Clean the measuring faces before and after use.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 18 – DEPTH MICROMETER
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="depthmic" id="depthmic">
-<div class="section-header">
-<span class="icon">📏</span>
-<span class="title">18. Depth Micrometer / डेप्थ माइक्रोमीटर</span>
-<span class="subtitle">— Measuring depths of holes, slots, and steps</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A <strong>Depth Micrometer</strong> is used to measure the depth of holes, slots, recesses, and steps.</p>
-<p>It consists of a <strong>stock</strong> (base), a <strong>sleeve</strong> with graduations, a <strong>thimble</strong>, and <strong>interchangeable extension rods</strong>.</p>
-<p>Least count: <strong>0.01 mm</strong>.</p>
-<p>Extension rods are available in various sizes to cover different depth ranges (e.g., 0-25 mm, 25-50 mm, etc.).</p>
-</div>
-<div class="hi">
-<p><strong>डेप्थ माइक्रोमीटर</strong> का उपयोग छिद्रों, स्लॉट्स, रिसेस और स्टेप्स की गहराई मापने के लिए किया जाता है।</p>
-<p>इसमें एक <strong>स्टॉक</strong> (आधार), अंशांकन के साथ एक <strong>स्लीव</strong>, एक <strong>थिम्बल</strong> और <strong>विनिमेय एक्सटेंशन रॉड्स</strong> होते हैं।</p>
-<p>अल्पतमांक: <strong>0.01 mm</strong>.</p>
-<p>एक्सटेंशन रॉड विभिन्न आकारों में उपलब्ध हैं (जैसे, 0-25 mm, 25-50 mm, आदि)।</p>
-</div>
-</div>
-<div class="info-card blue">
-<h4>💡 Tip</h4>
-<p>When measuring, ensure the extension rod is properly seated and the base is flat against the workpiece surface.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 19 – VERNIER CALIPERS
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="vernier" id="vernier">
-<div class="section-header">
-<span class="icon">📐</span>
-<span class="title">19. Vernier Calipers / वर्नियर कैलिपर्स</span>
-<span class="subtitle">— Precision measurement up to 0.02 mm</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A <strong>Vernier Caliper</strong> is a precision measuring instrument with accuracy up to <strong>0.02 mm</strong>.</p>
-<p><strong>Parts:</strong> Fixed Jaws (outside &amp; inside), Movable Jaws, Vernier Slide, Beam (Main Scale), Depth Bar, Thumb Lever, Vernier Scale.</p>
-<p><strong>Least Count (50-division vernier):</strong> 50 VSD = 49 mm; 1 MSD = 1 mm; LC = 1 - 49/50 = <strong>0.02 mm</strong>.</p>
-<p><strong>Reading:</strong> Main scale reading + (Vernier coincidence × LC).</p>
-<p><strong>Care:</strong> Never use for purposes other than measuring. Clean and store in its box after use.</p>
-</div>
-<div class="hi">
-<p><strong>वर्नियर कैलिपर</strong> एक प्रेसिजन माप उपकरण है जिसकी सटीकता <strong>0.02 mm</strong> तक होती है।</p>
-<p><strong>भाग:</strong> फिक्स्ड जॉ (बाहरी और भीतरी), मूवेबल जॉ, वर्नियर स्लाइड, बीम (मुख्य स्केल), डेप्थ बार, थंब लीवर, वर्नियर स्केल।</p>
-<p><strong>अल्पतमांक (50-विभाजन वर्नियर):</strong> 50 VSD = 49 mm; 1 MSD = 1 mm; LC = 1 - 49/50 = <strong>0.02 mm</strong>.</p>
-<p><strong>पठन:</strong> मुख्य स्केल रीडिंग + (वर्नियर संयोग × LC).</p>
-<p><strong>देखभाल:</strong> मापने के अलावा किसी अन्य उद्देश्य के लिए कभी उपयोग न करें। उपयोग के बाद साफ करके बॉक्स में रखें।</p>
-</div>
-</div>
-<div class="example-box">
-<h4 style="margin:0 0 6px; color:#003366;">📘 Example</h4>
-<p><strong>Reading:</strong> Main scale shows 60 mm. Vernier scale's 28th division aligns with a main scale division. LC = 0.02 mm. Total = 60 + (28 × 0.02) = 60.56 mm.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 20 – VERNIER BEVEL PROTRACTOR
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="bevel" id="bevel">
-<div class="section-header">
-<span class="icon">📐</span>
-<span class="title">20. Vernier Bevel Protractor / वर्नियर बेवल प्रोट्रैक्टर</span>
-<span class="subtitle">— Angle measurement with 5′ accuracy</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A <strong>Vernier Bevel Protractor</strong> is used for measuring angles with accuracy of <strong>5 minutes (5′)</strong>.</p>
-<p><strong>Parts:</strong> Stock, Dial, Blade, Locking Screws.</p>
-<p><strong>Least Count:</strong> 23 MSD = 12 VSD; 1 MSD = 1°; LC = 2° - (23/12)° = <strong>5′</strong>.</p>
-<p><strong>Uses:</strong> Measuring angles (acute and obtuse), setting work-holding devices on machine tools.</p>
-</div>
-<div class="hi">
-<p><strong>वर्नियर बेवल प्रोट्रैक्टर</strong> का उपयोग <strong>5 मिनट (5′)</strong> की सटीकता के साथ कोण मापने के लिए किया जाता है।</p>
-<p><strong>भाग:</strong> स्टॉक, डायल, ब्लेड, लॉकिंग स्क्रू।</p>
-<p><strong>अल्पतमांक:</strong> 23 MSD = 12 VSD; 1 MSD = 1°; LC = 2° - (23/12)° = <strong>5′</strong>.</p>
-<p><strong>उपयोग:</strong> कोण मापना (न्यून और अधिक), मशीन टूल्स पर वर्क-होल्डिंग डिवाइस सेट करना।</p>
-</div>
-</div>
-<div class="info-card orange">
-<h4>🔍 Note</h4>
-<p>For obtuse angles, read the scale on the other side and subtract from 180°.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 21 – DIAL CALIPER
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="dial" id="dial">
-<div class="section-header">
-<span class="icon">📊</span>
-<span class="title">21. Dial Caliper / डायल कैलिपर</span>
-<span class="subtitle">— Direct-reading alternative to vernier</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p>A <strong>Dial Caliper</strong> is a direct-reading instrument similar to a vernier caliper but faster and easier to read.</p>
-<p>The beam scale is graduated in <strong>5 mm</strong> increments. The dial is divided into 100 equal parts. Each dial graduation represents <strong>5/100 = 0.05 mm</strong>.</p>
-<p><strong>Reading:</strong> Beam scale reading + Dial reading × 0.05.</p>
-<p>Digital calipers provide even higher accuracy (0.01 mm) with LCD display, zero setting, and inch/mm conversion.</p>
-</div>
-<div class="hi">
-<p><strong>डायल कैलिपर</strong> एक प्रत्यक्ष-पठन उपकरण है जो वर्नियर कैलिपर के समान है लेकिन पढ़ने में तेज़ और आसान है।</p>
-<p>बीम स्केल <strong>5 mm</strong> की वृद्धि में अंशांकित है। डायल को 100 बराबर भागों में विभाजित किया गया है। प्रत्येक डायल विभाजन <strong>5/100 = 0.05 mm</strong> का प्रतिनिधित्व करता है।</p>
-<p><strong>पठन:</strong> बीम स्केल रीडिंग + डायल रीडिंग × 0.05.</p>
-<p>डिजिटल कैलिपर्स और भी अधिक सटीकता (0.01 mm) प्रदान करते हैं, जिसमें LCD प्रदर्शन, शून्य सेटिंग और inch/mm रूपांतरण होता है।</p>
-</div>
-</div>
-<div class="short-notes">
-<h4>📌 Key Points</h4>
-<ul>
-<li>Dial calipers are quicker to read than vernier calipers.</li>
-<li>Digital calipers offer the highest accuracy and ease of use.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 22 – DRILLING PROCESSES
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="drilling" id="drilling">
-<div class="section-header">
-<span class="icon">🔧</span>
-<span class="title">22. Drilling Processes / ड्रिलिंग प्रक्रियाएँ</span>
-<span class="subtitle">— Drilling machines, types, and work-holding</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p><strong>Drilling</strong> is the operation of producing cylindrical holes in a workpiece using a cutting tool called a <strong>drill</strong>.</p>
-<p><strong>Drilling Machine Types:</strong></p>
-<ul>
-<li><strong>Sensitive Bench Drilling Machine:</strong> For light-duty work up to 12.5 mm diameter.</li>
-<li><strong>Pillar Drilling Machine:</strong> Larger version, floor-mounted, more powerful.</li>
-<li><strong>Column Drilling Machine:</strong> For heavy work.</li>
-<li><strong>Radial Drilling Machine:</strong> Arm can swing; drill can cover large work area.</li>
-<li><strong>Gang Drilling Machine:</strong> Multiple spindles on a common table for sequential operations.</li>
-<li><strong>Multiple Spindle Head Drilling Machine:</strong> Many spindles driven by one head; for mass production.</li>
-</ul>
-<p><strong>Work-Holding Devices:</strong> Machine vice, clamps and bolts, V-blocks, angle plates.</p>
-<p><strong>Drill Point Angle:</strong> Standard 118° for general purpose; varies with material.</p>
-</div>
-<div class="hi">
-<p><strong>ड्रिलिंग</strong> एक <strong>ड्रिल</strong> नामक काटने के उपकरण का उपयोग करके वर्कपीस में बेलनाकार छेद बनाने का संचालन है।</p>
-<p><strong>ड्रिलिंग मशीन के प्रकार:</strong></p>
-<ul>
-<li><strong>सेंसिटिव बेंच ड्रिलिंग मशीन:</strong> 12.5 mm व्यास तक हल्के काम के लिए।</li>
-<li><strong>पिलर ड्रिलिंग मशीन:</strong> बड़ा संस्करण, फर्श पर लगी, अधिक शक्तिशाली।</li>
-<li><strong>कॉलम ड्रिलिंग मशीन:</strong> भारी काम के लिए।</li>
-<li><strong>रेडियल ड्रिलिंग मशीन:</strong> आर्म घूम सकता है; ड्रिल बड़े कार्य क्षेत्र को कवर कर सकता है।</li>
-<li><strong>गैंग ड्रिलिंग मशीन:</strong> अनुक्रमिक संचालन के लिए एक सामान्य टेबल पर कई स्पिंडल।</li>
-<li><strong>मल्टीपल स्पिंडल हेड ड्रिलिंग मशीन:</strong> एक हेड द्वारा संचालित कई स्पिंडल; बड़े पैमाने पर उत्पादन के लिए।</li>
-</ul>
-<p><strong>वर्क-होल्डिंग डिवाइस:</strong> मशीन वाइस, क्लैम्प और बोल्ट, V-ब्लॉक, एंगल प्लेट।</p>
-<p><strong>ड्रिल पॉइंट कोण:</strong> सामान्य प्रयोजन के लिए मानक 118°; सामग्री के अनुसार भिन्न होता है।</p>
-</div>
-</div>
-<div class="example-box">
-<h4 style="margin:0 0 6px; color:#003366;">📘 Example</h4>
-<p><strong>Tap drill size for M10 × 1.5:</strong> Major dia (10) - Pitch (1.5) = <strong>8.5 mm</strong>.</p>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    SECTION 23 – HAND TAPS & WRENCHES
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="taps" id="taps">
-<div class="section-header">
-<span class="icon">🔩</span>
-<span class="title">23. Hand Taps &amp; Wrenches / हैंड टैप और रिंच</span>
-<span class="subtitle">— Internal threading tools</span>
-</div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="en">
-<p><strong>Hand Taps</strong> are used to cut internal threads. Made of high carbon steel or HSS.</p>
-<p><strong>Set of Three Taps:</strong></p>
-<ul>
-<li><strong>Taper Tap (First):</strong> For starting the thread; has a long taper lead.</li>
-<li><strong>Intermediate Tap (Second):</strong> For continuing the thread; shorter taper.</li>
-<li><strong>Bottoming Tap (Plug):</strong> For finishing threads to full depth in blind holes; almost no taper.</li>
-</ul>
-<p><strong>Tap Wrenches:</strong> Double-ended adjustable, T-handle, solid type.</p>
-<p><strong>Tap Drill Size (ISO metric):</strong> Tap drill size = Major diameter – Pitch. Example: M10 × 1.5 → 8.5 mm.</p>
-</div>
-<div class="hi">
-<p><strong>हैंड टैप</strong> का उपयोग आंतरिक धागे काटने के लिए किया जाता है। उच्च कार्बन स्टील या HSS से बने होते हैं।</p>
-<p><strong>तीन टैप का सेट:</strong></p>
-<ul>
-<li><strong>टेपर टैप (प्रथम):</strong> धागा शुरू करने के लिए; लंबी टेपर लीड होती है।</li>
-<li><strong>इंटरमीडिएट टैप (द्वितीय):</strong> धागा जारी रखने के लिए; छोटी टेपर।</li>
-<li><strong>बॉटमिंग टैप (प्लग):</strong> अंधे छिद्रों में पूर्ण गहराई तक धागा समाप्त करने के लिए; लगभग कोई टेपर नहीं।</li>
-</ul>
-<p><strong>टैप रिंच:</strong> डबल-एंडेड एडजस्टेबल, टी-हैंडल, सॉलिड टाइप।</p>
-<p><strong>टैप ड्रिल आकार (ISO मीट्रिक):</strong> टैप ड्रिल आकार = मुख्य व्यास – पिच। उदाहरण: M10 × 1.5 → 8.5 mm.</p>
-</div>
-</div>
-<div class="warning-box" style="background:#fff5f2; border-left:5px solid #dc3545; padding:16px 22px; border-radius:8px; margin:16px 0;">
-<h4 style="margin:0 0 6px; color:#b02a37;">⚠️ Important</h4>
-<p style="margin:0;">Always use the correct tap drill size. Too small → tap may break; too large → weak threads.</p>
-</div>
-<div class="info-card green">
-<h4>✅ Best Practice</h4>
-<ul>
-<li>Use cutting fluid (lubricant) while tapping to reduce friction and prolong tap life.</li>
-<li>Tap in small steps: turn forward 1/2 turn, then back 1/4 turn to break chips.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    MCQ & RELATED MODULES (like AI module)
-    ============================================================ -->
-<div class="container">
-<div class="content-section" data-content="mcq">
-<div class="section-header">
-<span class="icon">❓</span>
-<span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span>
-</div>
-<div class="section-body">
-<div class="mcq-link">
-<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
-<a href="/question-bank/fitter/index.html?mod=2" target="_blank">📝 Go to Question Bank →</a>
-<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="container">
-<div class="content-section" data-content="related">
-<div class="section-header">
-<span class="icon">🔗</span>
-<span class="title">Related Modules / संबंधित मॉड्यूल</span>
-</div>
-<div class="section-body">
-<div style="display:flex; flex-wrap:wrap; gap:12px;">
-<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
-<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
-<a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
-</div>
-</div>
-</div>
-</div>
-<!-- ============================================================
-    ADMIN PANEL (same as AI module)
-    ============================================================ -->
-<div class="container">
-<div class="admin-toggle" onclick="toggleAdminPanel()">
-<span class="key-icon">🔑</span>
-<span>Admin Panel – Manage Comments</span>
-</div>
-<div class="admin-panel" id="adminPanel">
-</div></div></body></html>
+            <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+                <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+                <span id="copyLinkText">Copy Link</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================== TABLE OF CONTENTS ============================== -->
+    <div class="container">
+        <div class="content-section" style="border:2px solid #003366;">
+            <div class="section-header" style="background:#003366; border-bottom:none;">
+                <span class="icon" style="color:#ffcc00;">📚</span>
+                <span class="title" style="color:#fff;">विषय-सूची / Table of Contents – All 23 Topics</span>
+            </div>
+            <div class="section-body" style="background:#fff;">
+                <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:6px 14px;">
+                    <a href="#linear" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">1. Linear Measurement</a>
+                    <a href="#scribes" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">2. Scribers</a>
+                    <a href="#calipers" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">3. Calipers</a>
+                    <a href="#punches" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">4. Marking Punches</a>
+                    <a href="#vice" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">5. Bench Vice</a>
+                    <a href="#vice-types" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">6. Types of Vices</a>
+                    <a href="#trysquare" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">7. Try Square</a>
+                    <a href="#files" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">8. Types of Files</a>
+                    <a href="#angles" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">9. Measurement of Angles</a>
+                    <a href="#surfacegauge" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">10. Surface Gauges</a>
+                    <a href="#chisel" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">11. Cold Chisel</a>
+                    <a href="#markingmedia" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">12. Marking Media</a>
+                    <a href="#surfaceplate" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">13. Surface Plate</a>
+                    <a href="#angleplate" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">14. Angle Plate</a>
+                    <a href="#properties" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">15. Physical &amp; Mechanical Properties</a>
+                    <a href="#saws" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">16. Metal-Cutting Saws</a>
+                    <a href="#micrometer" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">17. Outside Micrometer</a>
+                    <a href="#depthmic" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">18. Depth Micrometer</a>
+                    <a href="#vernier" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">19. Vernier Calipers</a>
+                    <a href="#bevel" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">20. Vernier Bevel Protractor</a>
+                    <a href="#dial" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">21. Dial Caliper</a>
+                    <a href="#drilling" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">22. Drilling Processes</a>
+                    <a href="#taps" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">23. Hand Taps &amp; Wrenches</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    1. LINEAR MEASUREMENT – Full
+    ====================================================================== -->
+    <div class="container" id="linear">
+        <div class="content-section" data-content="linear">
+            <div class="section-header"><span class="icon">📏</span><span class="title">1. Linear Measurement / रेखीय माप</span><span class="subtitle">— SI units, steel rules, British system, parallax</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Linear measurement</strong> is the measurement of length. In the SI system, the base unit is the <strong>Metre (m)</strong>. In engineering practice, the <strong>Millimetre (mm)</strong> is preferred. <strong>1 m = 1000 mm</strong>.</p>
+                        <p><strong>British System:</strong> The base unit is the <strong>Inch (″)</strong>. 1 inch = 25.4 mm. Subdivisions: 1/2″, 1/4″, 1/8″, 1/16″, 1/32″, 1/64″.</p>
+                        <p><strong>Steel Rule:</strong> Made of spring steel or stainless steel. Available lengths: 150 mm, 300 mm, 600 mm. Accuracy: 0.5 mm and 1/64 inch. Always read with the eye directly above the mark to avoid <strong>parallax</strong> error.</p>
+                        <p><strong>Other steel rules:</strong> Narrow steel rule (for keyways and small holes), short steel rule set (with holder for restricted spaces), tapered end rule (for measuring small holes and slots).</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>रेखीय माप</strong> लंबाई का माप है। SI प्रणाली में आधार इकाई <strong>मीटर (m)</strong> है। इंजीनियरिंग में <strong>मिलीमीटर (mm)</strong> पसंदीदा है। <strong>1 m = 1000 mm</strong>.</p>
+                        <p><strong>ब्रिटिश प्रणाली:</strong> आधार इकाई <strong>इंच (″)</strong> है। 1 इंच = 25.4 mm. उपविभाजन: 1/2″, 1/4″, 1/8″, 1/16″, 1/32″, 1/64″.</p>
+                        <p><strong>स्टील रूल:</strong> स्प्रिंग स्टील या स्टेनलेस स्टील से बना। उपलब्ध लंबाई: 150 mm, 300 mm, 600 mm. सटीकता: 0.5 mm और 1/64 इंच। <strong>लंबन</strong> त्रुटि से बचने के लिए आँख को निशान के ठीक ऊपर रखें।</p>
+                        <p><strong>अन्य स्टील रूल:</strong> संकीर्ण स्टील रूल (की-वे और छोटे छेदों के लिए), लघु स्टील रूल सेट (प्रतिबंधित स्थानों के लिए), पतला अंत वाला रूल (छोटे छेद और स्लॉट मापने के लिए).</p>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <caption>SI Units of Length / लंबाई की SI इकाइयाँ</caption>
+                        <thead><tr><th>Unit</th><th>Equivalent</th></tr></thead>
+                        <tbody><tr><td>1 Metre (m)</td><td>1000 mm</td></tr><tr><td>1 Centimetre (cm)</td><td>10 mm</td></tr><tr><td>1 Millimetre (mm)</td><td>1000 µm</td></tr><tr><td>1 Micrometre (µm)</td><td>0.001 mm</td></tr></tbody>
+                    </table>
+                </div>
+                <div class="short-notes"><h4>📌 Key Takeaways</h4><ul><li>SI base: Metre (m) | Engineering: Millimetre (mm)</li><li>Steel rule is the most common linear measuring tool.</li><li>Parallax error: read with eye directly above the mark.</li><li>1 inch = 25.4 mm (exact conversion).</li></ul></div>
+                <div class="important-box"><h4>📌 Exam Focus</h4><ul><li>What is the SI base unit of length? → Metre (m).</li><li>What is the preferred unit in engineering? → Millimetre (mm).</li><li>What is parallax error? → Error due to eye not being directly above the mark.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    2. SCRIBERS – Full
+    ====================================================================== -->
+    <div class="container" id="scribes">
+        <div class="content-section" data-content="scribes">
+            <div class="section-header"><span class="icon">✏️</span><span class="title">2. Scribers / स्क्राइबर</span><span class="subtitle">— Marking lines on metal — types, use, care</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A <strong>Scriber</strong> is a marking tool used to draw fine lines on metal surfaces. Made of <strong>high carbon steel</strong>, hardened and tempered to maintain a sharp point.</p>
+                        <p><strong>Types:</strong></p>
+                        <ul>
+                            <li><strong>Straight Scriber:</strong> Most common; used for general marking.</li>
+                            <li><strong>Bent Scriber:</strong> Has a bent point for marking in difficult-to-reach areas.</li>
+                            <li><strong>Scratch Awl:</strong> Similar to a scriber but with a thicker point; used on leather, wood, and softer materials.</li>
+                        </ul>
+                        <p><strong>Care:</strong> Scriber points are very sharp. Never carry one in your pocket. When not in use, cover the point with a cork or cap.</p>
+                        <p><strong>Use:</strong> Hold the scriber like a pencil. Keep the point sharp by grinding on an oilstone. Do not use excessive pressure while scribing.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>स्क्राइबर</strong> धातु की सतहों पर महीन रेखाएँ खींचने का अंकन उपकरण है। <strong>उच्च कार्बन स्टील</strong> से बना, कठोर और तड़का लगा हुआ।</p>
+                        <p><strong>प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>सीधा स्क्राइबर:</strong> सबसे सामान्य; सामान्य अंकन के लिए।</li>
+                            <li><strong>मुड़ा हुआ स्क्राइबर:</strong> दुर्गम क्षेत्रों में अंकन के लिए मुड़ा हुआ बिंदु।</li>
+                            <li><strong>स्क्रैच अवल:</strong> स्क्राइबर के समान लेकिन मोटे बिंदु के साथ; चमड़े, लकड़ी, नरम सामग्री के लिए।</li>
+                        </ul>
+                        <p><strong>देखभाल:</strong> बिंदु बहुत तीक्ष्ण होते हैं। जेब में न रखें। उपयोग में न होने पर कॉर्क से ढकें।</p>
+                        <p><strong>उपयोग:</strong> स्क्राइबर को पेंसिल की तरह पकड़ें। बिंदु को ऑइलस्टोन पर पीसकर तीक्ष्ण रखें। अंकन करते समय अत्यधिक दबाव न डालें।</p>
+                    </div>
+                </div>
+                <div class="warning-box"><h4>⚠️ Safety</h4><p>Scriber points are very sharp — handle with care. Use a cork to cover the point when not in use.</p></div>
+                <div class="info-card blue"><h4>💡 Exam Tip</h4><ul><li>Scriber is made of <strong>high carbon steel</strong>.</li><li>Bent scriber is used for <strong>difficult-to-reach</strong> areas.</li><li>Scratch awl is used for <strong>leather, wood, and soft materials</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    3. CALIPERS – Full
+    ====================================================================== -->
+    <div class="container" id="calipers">
+        <div class="content-section" data-content="calipers">
+            <div class="section-header"><span class="icon">📐</span><span class="title">3. Calipers / कैलिपर्स</span><span class="subtitle">— Indirect measurement — types, uses, joint types</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Calipers</strong> are indirect measuring tools used to transfer measurements from a steel rule to the job, and vice versa. They are classified by their <strong>joint type</strong> and <strong>leg shape</strong>.</p>
+                        <p><strong>By Joint:</strong></p>
+                        <ul>
+                            <li><strong>Firm Joint Calipers:</strong> Legs are set by tapping on a wooden surface; once set, they stay in position.</li>
+                            <li><strong>Spring Joint Calipers:</strong> Have a spring and adjusting nut for quick and precise setting.</li>
+                        </ul>
+                        <p><strong>By Leg Shape:</strong></p>
+                        <ul>
+                            <li><strong>Inside Calipers:</strong> For measuring internal dimensions (holes, slots).</li>
+                            <li><strong>Outside Calipers:</strong> For measuring external dimensions (diameters, thicknesses).</li>
+                            <li><strong>Jenny Calipers (Hermaphrodite):</strong> One leg has a point; used for marking parallel lines and finding centres.</li>
+                        </ul>
+                        <p><strong>Advantage of Spring Joint:</strong> Quick setting using the adjusting nut, reducing setup time.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>कैलिपर्स</strong> अप्रत्यक्ष माप उपकरण हैं जो स्टील रूल से माप को जॉब पर स्थानांतरित करते हैं। इन्हें <strong>जोड़ के प्रकार</strong> और <strong>पैर के आकार</strong> द्वारा वर्गीकृत किया जाता है।</p>
+                        <p><strong>जोड़ के अनुसार:</strong></p>
+                        <ul>
+                            <li><strong>फर्म जॉइंट:</strong> पैरों को लकड़ी की सतह पर टैप करके सेट किया जाता है; एक बार सेट होने पर स्थिर रहते हैं।</li>
+                            <li><strong>स्प्रिंग जॉइंट:</strong> स्प्रिंग और समायोजन नट के साथ त्वरित और सटीक सेटिंग के लिए।</li>
+                        </ul>
+                        <p><strong>पैर के आकार:</strong></p>
+                        <ul>
+                            <li><strong>इनसाइड:</strong> आंतरिक आयामों (छेद, स्लॉट) के लिए।</li>
+                            <li><strong>आउटसाइड:</strong> बाहरी आयामों (व्यास, मोटाई) के लिए।</li>
+                            <li><strong>जेनी (हर्माफ्रोडाइट):</strong> एक पैर में बिंदु; समानांतर रेखाओं और केंद्रों को चिह्नित करने के लिए।</li>
+                        </ul>
+                        <p><strong>स्प्रिंग जॉइंट का लाभ:</strong> समायोजन नट से त्वरित सेटिंग, समय की बचत।</p>
+                    </div>
+                </div>
+                <div class="info-card green"><h4>📌 Exam Focus</h4><ul><li>Firm joint calipers are set by <strong>tapping on wood</strong>.</li><li>Spring joint calipers have an <strong>adjusting nut</strong>.</li><li>Jenny calipers are also called <strong>hermaphrodite calipers</strong> or <strong>odd-leg calipers</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    4. MARKING PUNCHES – Full
+    ====================================================================== -->
+    <div class="container" id="punches">
+        <div class="content-section" data-content="punches">
+            <div class="section-header"><span class="icon">🔨</span><span class="title">4. Marking Punches / मार्किंग पंच</span><span class="subtitle">— Centre punch, prick punch, dot punch — angles &amp; uses</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Marking punches</strong> are used to make permanent indentations on workpieces to guide subsequent operations.</p>
+                        <ul>
+                            <li><strong>Centre Punch:</strong> Point angle = <strong>90°</strong>. Used to mark the centre of a hole. The wide mark gives a good seat for the drill to start.</li>
+                            <li><strong>Prick Punch (Dot Punch):</strong> Point angle = <strong>30°</strong> or <strong>60°</strong>. The 30° point is used for locating divider points; the 60° point is used for making witness marks.</li>
+                        </ul>
+                        <p><strong>Difference:</strong> Centre punch marks are wide and shallow; prick punch marks are narrow and deeper.</p>
+                        <p><strong>Use:</strong> Hold the punch perpendicular to the workpiece. Strike with a hammer of appropriate weight (250g for marking).</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>मार्किंग पंच</strong> वर्कपीस पर स्थायी निशान बनाने के लिए उपयोग किए जाते हैं।</p>
+                        <ul>
+                            <li><strong>सेंटर पंच:</strong> बिंदु कोण = <strong>90°</strong>. छेद का केंद्र चिह्नित करने के लिए। चौड़ा निशान ड्रिल शुरू करने के लिए अच्छी सीट देता है।</li>
+                            <li><strong>प्रिक पंच (डॉट पंच):</strong> बिंदु कोण = <strong>30°</strong> या <strong>60°</strong>. 30° बिंदु डिवाइडर स्थान के लिए; 60° बिंदु साक्षी चिह्नों के लिए।</li>
+                        </ul>
+                        <p><strong>अंतर:</strong> सेंटर पंच के निशान चौड़े और उथले; प्रिक पंच के निशान संकीर्ण और गहरे।</p>
+                        <p><strong>उपयोग:</strong> पंच को वर्कपीस पर लंबवत पकड़ें। उपयुक्त वजन के हथौड़े (250g) से प्रहार करें।</p>
+                    </div>
+                </div>
+                <div class="compare-grid">
+                    <div class="compare-card" style="border-color:#003366; background:#f0f5ff;"><h4>🔵 Centre Punch</h4><ul><li>Angle: 90°</li><li>Usage: Hole centres</li><li>Mark: Wide, shallow</li></ul></div>
+                    <div class="compare-card" style="border-color:#ff9900; background:#fff8e1;"><h4>🟠 Prick Punch</h4><ul><li>Angle: 30° or 60°</li><li>Usage: Divider points, witness marks</li><li>Mark: Narrow, deeper</li></ul></div>
+                </div>
+                <div class="important-box"><h4>📌 Exam Focus</h4><ul><li>Centre punch angle: <strong>90°</strong>.</li><li>Prick punch angle: <strong>30°</strong> (for dividers) or <strong>60°</strong> (for witness marks).</li><li>Dot punch is also called <strong>prick punch</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    5. BENCH VICE – Full
+    ====================================================================== -->
+    <div class="container" id="vice">
+        <div class="content-section" data-content="vice">
+            <div class="section-header"><span class="icon">🛠️</span><span class="title">5. Bench Vice / बेंच वाइस</span><span class="subtitle">— Construction, parts, size, care, soft jaws</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A <strong>Bench Vice</strong> (or Engineer's Vice) is used to hold workpieces securely during filing, sawing, threading, and other operations.</p>
+                        <p>It is made of <strong>cast iron</strong> or <strong>cast steel</strong>. The size is specified by the <strong>width of the jaws</strong> (e.g., 150 mm bench vice).</p>
+                        <p><strong>Main Parts:</strong></p>
+                        <ul>
+                            <li><strong>Fixed Jaw</strong> – attached to the body.</li>
+                            <li><strong>Movable Jaw</strong> – slides in the body.</li>
+                            <li><strong>Hardened Steel Jaws</strong> – replaceable inserts for gripping.</li>
+                            <li><strong>Spindle</strong> – threaded shaft that moves the movable jaw.</li>
+                            <li><strong>Handle</strong> – used to turn the spindle.</li>
+                            <li><strong>Box-nut &amp; Spring</strong> – internal parts for smooth operation.</li>
+                        </ul>
+                        <p><strong>Care:</strong> Use <strong>soft jaws (vice clamps)</strong> made of aluminium or copper over the hardened jaws to protect finished surfaces. Never over-tighten the vice. Clean and lubricate regularly.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>बेंच वाइस</strong> (या इंजीनियर का वाइस) फाइलिंग, आरा, थ्रेडिंग और अन्य कार्यों के दौरान वर्कपीस को सुरक्षित रूप से पकड़ने के लिए उपयोग किया जाता है।</p>
+                        <p>यह <strong>कास्ट आयरन</strong> या <strong>कास्ट स्टील</strong> से बना होता है। आकार <strong>जॉ की चौड़ाई</strong> द्वारा निर्दिष्ट (जैसे, 150 mm बेंच वाइस)।</p>
+                        <p><strong>मुख्य भाग:</strong></p>
+                        <ul>
+                            <li><strong>स्थिर जॉ</strong> – शरीर से जुड़ा होता है।</li>
+                            <li><strong>चल जॉ</strong> – शरीर में स्लाइड करता है।</li>
+                            <li><strong>कठोर स्टील जॉ</strong> – बदली जाने योग्य इंसर्ट।</li>
+                            <li><strong>स्पिंडल</strong> – पिरोया हुआ शाफ़्ट जो चल जॉ को चलाता है।</li>
+                            <li><strong>हैंडल</strong> – स्पिंडल को घुमाने के लिए।</li>
+                            <li><strong>बॉक्स-नट और स्प्रिंग</strong> – सुचारू संचालन के लिए आंतरिक भाग।</li>
+                        </ul>
+                        <p><strong>देखभाल:</strong> तैयार सतहों की सुरक्षा के लिए कठोर जॉ के ऊपर <strong>सॉफ्ट जॉ (वाइस क्लैम्प)</strong> का उपयोग करें। अत्यधिक न कसें। नियमित रूप से साफ और चिकनाई करें।</p>
+                    </div>
+                </div>
+                <div class="success-box" style="background:#eef9f1; border-left:5px solid #28a745; padding:16px 22px; border-radius:8px; margin:16px 0;"><h4 style="margin:0 0 6px; color:#1e7e34;">✅ Best Practice</h4><p style="margin:0;">Apply a thin layer of oil on sliding parts and spindle threads regularly to prevent rust and ensure smooth operation. When not in use, keep jaws slightly apart.</p></div>
+                <div class="info-card blue"><h4>📌 Exam Focus</h4><ul><li>Vice size = <strong>jaw width</strong>.</li><li>Soft jaws are made of <strong>aluminium or copper</strong>.</li><li>Never use a hammer on the vice handle to tighten.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    6. TYPES OF VICES – Full
+    ====================================================================== -->
+    <div class="container" id="vice-types">
+        <div class="content-section" data-content="vice-types">
+            <div class="section-header"><span class="icon">🔩</span><span class="title">6. Types of Vices / वाइस के प्रकार</span><span class="subtitle">— Quick releasing, pipe, hand, pin, toolmaker, leg</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>Different types of vices are used for different holding requirements:</p>
+                        <ul>
+                            <li><strong>Quick Releasing Vice:</strong> Has a trigger/lever to release the movable jaw instantly for fast positioning.</li>
+                            <li><strong>Pipe Vice:</strong> Designed for holding pipes and tubes. Jaws work vertically, gripping at four points.</li>
+                            <li><strong>Hand Vice:</strong> Used for holding small parts like taps, rivets, and small drills during filing or threading.</li>
+                            <li><strong>Pin Vice:</strong> For holding very small diameter jobs (like watch parts). Has a collet chuck.</li>
+                            <li><strong>Toolmaker's Vice:</strong> Precision vice for toolroom work; used on surface plates for small jobs.</li>
+                            <li><strong>Leg Vice:</strong> Used in forge shops for bending and forging. Made of mild steel to withstand hammer blows.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p>विभिन्न होल्डिंग आवश्यकताओं के लिए विभिन्न प्रकार के वाइस का उपयोग किया जाता है:</p>
+                        <ul>
+                            <li><strong>क्विक रिलीजिंग वाइस:</strong> त्वरित स्थिति के लिए चल जॉ को तुरंत रिलीज करने के लिए ट्रिगर/लीवर होता है।</li>
+                            <li><strong>पाइप वाइस:</strong> पाइप और ट्यूब पकड़ने के लिए डिज़ाइन किया गया। जॉ लंबवत काम करते हैं, चार बिंदुओं पर पकड़ते हैं।</li>
+                            <li><strong>हैंड वाइस:</strong> फाइलिंग या थ्रेडिंग के दौरान टैप, रिवेट्स, छोटे ड्रिल जैसे छोटे भागों को पकड़ने के लिए।</li>
+                            <li><strong>पिन वाइस:</strong> बहुत छोटे व्यास के जॉब (घड़ी के पुर्जे) के लिए कोलेट चक के साथ।</li>
+                            <li><strong>टूलमेकर का वाइस:</strong> टूलरूम के काम के लिए प्रेसिजन वाइस; छोटे जॉब के लिए सरफेस प्लेट पर।</li>
+                            <li><strong>लेग वाइस:</strong> फोर्ज शॉप में झुकने और फोर्जिंग के लिए। हथौड़े के प्रहार को सहन करने के लिए माइल्ड स्टील से बना।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card purple"><h4>🔍 Selection Tip</h4><p>Choose the vice type based on the <strong>size, shape, and material</strong> of the workpiece, and the operation to be performed (filing, sawing, forging, etc.).</p></div>
+                <div class="important-box"><h4>📌 Exam Focus</h4><ul><li>Pipe vice grips at <strong>four points</strong>.</li><li>Leg vice is used in <strong>forge shops</strong>.</li><li>Pin vice has a <strong>collet chuck</strong>.</li><li>Quick releasing vice has a <strong>trigger/lever</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    7. TRY SQUARE – Full
+    ====================================================================== -->
+    <div class="container" id="trysquare">
+        <div class="content-section" data-content="trysquare">
+            <div class="section-header"><span class="icon">📐</span><span class="title">7. Try Square / ट्राई स्क्वायर</span><span class="subtitle">— Checking and marking 90° angles</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A <strong>Try Square</strong> is a precision tool used to check the squareness (90° angle) of a surface. It consists of a <strong>blade</strong> (steel rule) fixed at exactly 90° to a <strong>stock</strong> (handle).</p>
+                        <p>Accuracy: approximately <strong>0.002 mm per 10 mm</strong> length. Specified by the blade length: 100 mm, 150 mm, 200 mm.</p>
+                        <p><strong>Uses:</strong></p>
+                        <ul>
+                            <li>Checking squareness of surfaces.</li>
+                            <li>Checking flatness of surfaces.</li>
+                            <li>Marking lines at 90° to an edge.</li>
+                            <li>Setting workpieces at right angles on machines.</li>
+                        </ul>
+                        <p><strong>Care:</strong> Keep the blade and stock clean. Avoid dropping or using as a hammer. Apply a thin coat of oil to prevent rust.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>ट्राई स्क्वायर</strong> एक प्रेसिजन टूल है जिसका उपयोग किसी सतह की वर्गाकारता (90° कोण) की जाँच करने के लिए किया जाता है। इसमें एक <strong>ब्लेड</strong> (स्टील रूल) होता है जो <strong>स्टॉक</strong> (हैंडल) से बिल्कुल 90° पर लगा होता है।</p>
+                        <p>सटीकता: लगभग <strong>0.002 mm प्रति 10 mm</strong> लंबाई। ब्लेड लंबाई द्वारा निर्दिष्ट: 100 mm, 150 mm, 200 mm.</p>
+                        <p><strong>उपयोग:</strong></p>
+                        <ul>
+                            <li>सतहों की वर्गाकारता जाँचना।</li>
+                            <li>सतहों की समतलता जाँचना।</li>
+                            <li>किसी किनारे पर 90° पर रेखाएँ अंकित करना।</li>
+                            <li>मशीनों पर वर्कपीस को समकोण पर सेट करना।</li>
+                        </ul>
+                        <p><strong>देखभाल:</strong> ब्लेड और स्टॉक को साफ रखें। गिराने या हथौड़े की तरह उपयोग करने से बचें। जंग रोकने के लिए तेल की पतली परत लगाएं।</p>
+                    </div>
+                </div>
+                <div class="short-notes"><h4>📌 Key Points</h4><ul><li>Try square is used for both <strong>checking</strong> and <strong>marking</strong> right angles.</li><li>Accuracy: 0.002 mm per 10 mm length.</li><li>Specified by blade length: 100, 150, 200 mm.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    8. TYPES OF FILES – Full
+    ====================================================================== -->
+    <div class="container" id="files">
+        <div class="content-section" data-content="files">
+            <div class="section-header"><span class="icon">📁</span><span class="title">8. Types of Files / फाइलों के प्रकार</span><span class="subtitle">— Shapes, cuts, grades, pinning, care</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Files</strong> are cutting tools used to remove excess material from workpieces. They are classified by <strong>shape, cut, and grade</strong>.</p>
+                        <p><strong>File Cuts:</strong></p>
+                        <ul>
+                            <li><strong>Single Cut:</strong> One row of teeth; used for soft metals (brass, aluminium, copper).</li>
+                            <li><strong>Double Cut:</strong> Two rows of teeth; faster material removal.</li>
+                            <li><strong>Rasp Cut:</strong> Individual sharp teeth; used for wood, leather.</li>
+                            <li><strong>Curved Cut:</strong> Deep cutting action; used for soft materials like aluminium, tin, plastic.</li>
+                        </ul>
+                        <p><strong>File Grades (teeth per 10 mm):</strong> Rough → Bastard → Second Cut → Smooth → Dead Smooth.</p>
+                        <p><strong>File Shapes:</strong> Flat, Hand, Square, Round, Half-Round, Triangular, Knife Edge.</p>
+                        <p><strong>Pinning:</strong> When metal chips get stuck between teeth, it's called <strong>pinning</strong>. Clean with a <strong>file card</strong> or brass strip.</p>
+                        <p><strong>Care:</strong> Never use a file without a handle. Store files separately to prevent them from rubbing against each other. Use chalk to reduce pinning.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>फाइलें</strong> काटने के उपकरण हैं जिनका उपयोग वर्कपीस से अतिरिक्त सामग्री निकालने के लिए किया जाता है। इन्हें <strong>आकार, कट, और ग्रेड</strong> द्वारा वर्गीकृत किया जाता है।</p>
+                        <p><strong>फाइल कट:</strong></p>
+                        <ul>
+                            <li><strong>सिंगल कट:</strong> दांतों की एक पंक्ति; नरम धातुओं (पीतल, एल्यूमीनियम, तांबा) के लिए।</li>
+                            <li><strong>डबल कट:</strong> दांतों की दो पंक्तियाँ; तेजी से सामग्री हटाने के लिए।</li>
+                            <li><strong>रास्प कट:</strong> व्यक्तिगत तीक्ष्ण दांत; लकड़ी, चमड़े के लिए।</li>
+                            <li><strong>कर्व्ड कट:</strong> गहरी कटिंग क्रिया; एल्यूमीनियम, टिन, प्लास्टिक जैसी नरम सामग्री के लिए।</li>
+                        </ul>
+                        <p><strong>फाइल ग्रेड (10 mm में दांत):</strong> रफ → बास्टर्ड → सेकेंड कट → स्मूद → डेड स्मूद.</p>
+                        <p><strong>फाइल आकार:</strong> फ्लैट, हैंड, स्क्वायर, राउंड, हाफ-राउंड, ट्राईएंगुलर, नाइफ एज.</p>
+                        <p><strong>पिनिंग:</strong> जब धातु के चिप्स दांतों के बीच फंस जाते हैं। <strong>फाइल कार्ड</strong> या पीतल की पट्टी से साफ करें।</p>
+                        <p><strong>देखभाल:</strong> फाइल को बिना हैंडल के कभी उपयोग न करें। फाइलों को अलग-अलग रखें ताकि वे एक-दूसरे से रगड़ न खाएं। पिनिंग कम करने के लिए चाक का उपयोग करें।</p>
+                    </div>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <caption>File Grades (Teeth per 10 mm) / फाइल ग्रेड (10 mm में दांत)</caption>
+                        <thead><tr><th>Length</th><th>Rough</th><th>Bastard</th><th>Second Cut</th><th>Smooth</th><th>Dead Smooth</th></tr></thead>
+                        <tbody>
+                            <tr><td>150 mm</td><td>8</td><td>13</td><td>17</td><td>24</td><td>33</td></tr>
+                            <tr><td>200 mm</td><td>7</td><td>11</td><td>16</td><td>22</td><td>31</td></tr>
+                            <tr><td>250 mm</td><td>6</td><td>10</td><td>15</td><td>20</td><td>30</td></tr>
+                            <tr><td>300 mm</td><td>5</td><td>9</td><td>14</td><td>19</td><td>28</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="warning-box"><h4>⚠️ Pinning</h4><p>Always clean files with a file card or brass strip to remove pinning. A pinned file scratches the workpiece and cuts poorly.</p></div>
+                <div class="important-box"><h4>📌 Exam Focus</h4><ul><li>Single cut: <strong>soft metals</strong> (brass, aluminium).</li><li>Double cut: <strong>faster material removal</strong>.</li><li>Rasp cut: <strong>wood, leather</strong>.</li><li>Curved cut: <strong>soft materials</strong> (tin, plastic).</li><li>Pinning removed with <strong>file card</strong> or <strong>brass strip</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    9. MEASUREMENT OF ANGLES – Full
+    ====================================================================== -->
+    <div class="container" id="angles">
+        <div class="content-section" data-content="angles">
+            <div class="section-header"><span class="icon">📐</span><span class="title">9. Measurement of Angles / कोणों का मापन</span><span class="subtitle">— Degrees, minutes, seconds, instruments</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A full circle is divided into <strong>360 degrees (°)</strong>. Each degree = <strong>60 minutes (′)</strong>, each minute = <strong>60 seconds (″)</strong>.</p>
+                        <p><strong>Angular measuring instruments:</strong></p>
+                        <ul>
+                            <li><strong>Bevel Gauge:</strong> Indirect measurement; used with a protractor.</li>
+                            <li><strong>Universal Bevel Gauge:</strong> Has an additional blade for measuring angles that a simple bevel gauge cannot.</li>
+                            <li><strong>Bevel Protractor:</strong> Direct measurement; accuracy 1°.</li>
+                            <li><strong>Combination Set:</strong> Includes protractor head, square head, centre head, and rule. Used for layout, measurement, and angle checking.</li>
+                        </ul>
+                        <p><strong>Combination Set Uses:</strong> Measure angles (1° accuracy), check 90° and 45° angles, find centres of cylindrical jobs, measure slot depths, set workpieces on machines.</p>
+                    </div>
+                    <div class="hi">
+                        <p>एक पूर्ण वृत्त <strong>360 डिग्री (°)</strong> में विभाजित होता है। प्रत्येक डिग्री = <strong>60 मिनट (′)</strong>, प्रत्येक मिनट = <strong>60 सेकंड (″)</strong>.</p>
+                        <p><strong>कोणीय माप उपकरण:</strong></p>
+                        <ul>
+                            <li><strong>बेवल गेज:</strong> अप्रत्यक्ष माप; प्रोट्रैक्टर के साथ उपयोग किया जाता है।</li>
+                            <li><strong>यूनिवर्सल बेवल गेज:</strong> अतिरिक्त ब्लेड होता है जो सरल बेवल गेज से न मापे जा सकने वाले कोणों को मापता है।</li>
+                            <li><strong>बेवल प्रोट्रैक्टर:</strong> प्रत्यक्ष माप; सटीकता 1°.</li>
+                            <li><strong>संयोजन सेट:</strong> प्रोट्रैक्टर हेड, स्क्वायर हेड, सेंटर हेड और रूल। लेआउट, माप और कोण जाँच के लिए।</li>
+                        </ul>
+                        <p><strong>संयोजन सेट उपयोग:</strong> कोण मापना (1° सटीकता), 90° और 45° कोण जाँचना, बेलनाकार जॉब के केंद्र खोजना, स्लॉट गहराई मापना, मशीनों पर वर्कपीस सेट करना।</p>
+                    </div>
+                </div>
+                <div class="info-card orange"><h4>📌 Exam Focus</h4><ul><li>1° = 60′, 1′ = 60″.</li><li>Bevel protractor accuracy: <strong>1°</strong>.</li><li>Combination set has: <strong>protractor head, square head, centre head, rule</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    10. SURFACE GAUGES – Full
+    ====================================================================== -->
+    <div class="container" id="surfacegauge">
+        <div class="content-section" data-content="surfacegauge">
+            <div class="section-header"><span class="icon">📏</span><span class="title">10. Surface Gauges / सरफेस गेज</span><span class="subtitle">— Scribing blocks, types, parts, uses</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A <strong>Surface Gauge</strong> (or Scribing Block) is used to draw lines parallel to a datum surface, set jobs on machines, check height, and check parallelism.</p>
+                        <p><strong>Types:</strong></p>
+                        <ul>
+                            <li><strong>Fixed Type:</strong> Heavy flat base, vertical spindle with a scriber clamped on it.</li>
+                            <li><strong>Universal Type:</strong> Spindle adjustable to any position; fine adjustment; can be used on cylindrical surfaces. Has a guide pin for scribing parallel lines from any datum edge.</li>
+                        </ul>
+                        <p><strong>Parts of Universal Surface Gauge:</strong> Base (with V-groove), Rocker arm, Spindle, Scriber, Clamping nut, Guide pin.</p>
+                        <p><strong>Care:</strong> Clean before and after use. Apply a thin layer of oil on the base before use to prevent scratching the surface plate. Keep the scriber point sharp.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>सरफेस गेज</strong> (या स्क्राइबिंग ब्लॉक) डेटम सतह के समानांतर रेखाएँ खींचने, मशीनों पर जॉब सेट करने, ऊँचाई और समानता जाँचने के लिए उपयोग किया जाता है।</p>
+                        <p><strong>प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>फिक्स्ड टाइप:</strong> भारी सपाट आधार, ऊर्ध्वाधर स्पिंडल जिस पर स्क्राइबर क्लैम्प किया जाता है।</li>
+                            <li><strong>यूनिवर्सल टाइप:</strong> स्पिंडल किसी भी स्थिति में समायोज्य; बढ़िया समायोजन; बेलनाकार सतहों पर उपयोग किया जा सकता है। गाइड पिन के साथ किसी भी डेटम किनारे से समानांतर रेखाएँ खींचने के लिए।</li>
+                        </ul>
+                        <p><strong>यूनिवर्सल सरफेस गेज के भाग:</strong> आधार (V-ग्रूव के साथ), रॉकर आर्म, स्पिंडल, स्क्राइबर, क्लैम्पिंग नट, गाइड पिन.</p>
+                        <p><strong>देखभाल:</strong> उपयोग से पहले और बाद में साफ करें। सरफेस प्लेट को खरोंचने से बचाने के लिए आधार पर तेल की पतली परत लगाएं। स्क्राइबर बिंदु को तीक्ष्ण रखें।</p>
+                    </div>
+                </div>
+                <div class="info-card blue"><h4>📌 Exam Focus</h4><ul><li>Universal surface gauge has a <strong>guide pin</strong>.</li><li>Used to scribe lines <strong>parallel to a datum surface</strong>.</li><li>Has a <strong>V-groove</strong> on the base for cylindrical work.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    11. COLD CHISEL – Full
+    ====================================================================== -->
+    <div class="container" id="chisel">
+        <div class="content-section" data-content="chisel">
+            <div class="section-header"><span class="icon">🔪</span><span class="title">11. Cold Chisel / ठंडी छेनी</span><span class="subtitle">— Chipping, types, angles, materials</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A <strong>Cold Chisel</strong> is a hand cutting tool used for chipping and cutting operations. It is made of <strong>high carbon steel</strong> or <strong>chrome vanadium steel</strong>.</p>
+                        <p><strong>Common Types:</strong></p>
+                        <ul>
+                            <li><strong>Flat Chisel:</strong> For large flat surfaces, removing excess metal.</li>
+                            <li><strong>Cross-cut (Cape) Chisel:</strong> For keyways, grooves, and slots.</li>
+                            <li><strong>Half-Round Nose Chisel:</strong> For curved grooves (oil grooves).</li>
+                            <li><strong>Diamond Point Chisel:</strong> For squaring corners.</li>
+                            <li><strong>Web (Punching) Chisel:</strong> For separating metals after chain drilling.</li>
+                        </ul>
+                        <p><strong>Chisel Angles (point angle depends on material):</strong></p>
+                        <ul>
+                            <li>Mild Steel: 55°</li>
+                            <li>Cast Iron: 60°</li>
+                            <li>High Carbon Steel: 65°</li>
+                            <li>Brass: 50°</li>
+                            <li>Copper: 45°</li>
+                            <li>Aluminium: 30°</li>
+                        </ul>
+                        <p><strong>Clearance angle</strong> and <strong>rake angle</strong> must be correct for effective cutting. The cutting edge is hardened and tempered.</p>
+                        <p><strong>Care:</strong> Never use a mushroom-headed chisel. Grind it properly. Wear safety goggles while chipping.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>ठंडी छेनी</strong> एक हाथ काटने का उपकरण है जिसका उपयोग चिपिंग और काटने के संचालन के लिए किया जाता है। यह <strong>उच्च कार्बन स्टील</strong> या <strong>क्रोम वैनेडियम स्टील</strong> से बनी होती है।</p>
+                        <p><strong>सामान्य प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>फ्लैट छेनी:</strong> बड़ी सपाट सतहों, अतिरिक्त धातु हटाने के लिए।</li>
+                            <li><strong>क्रॉस-कट (केप) छेनी:</strong> की-वे, खांचे और स्लॉट के लिए।</li>
+                            <li><strong>हाफ-राउंड नोज़ छेनी:</strong> घुमावदार खांचे (तेल खांचे) के लिए।</li>
+                            <li><strong>डायमंड पॉइंट छेनी:</strong> कोनों को चौकोर करने के लिए।</li>
+                            <li><strong>वेब (पंचिंग) छेनी:</strong> चेन ड्रिलिंग के बाद धातुओं को अलग करने के लिए।</li>
+                        </ul>
+                        <p><strong>छेनी के कोण (बिंदु कोण सामग्री पर निर्भर):</strong></p>
+                        <ul>
+                            <li>माइल्ड स्टील: 55°</li>
+                            <li>कास्ट आयरन: 60°</li>
+                            <li>उच्च कार्बन स्टील: 65°</li>
+                            <li>पीतल: 50°</li>
+                            <li>तांबा: 45°</li>
+                            <li>एल्यूमीनियम: 30°</li>
+                        </ul>
+                        <p><strong>निकासी कोण</strong> और <strong>रेक कोण</strong> प्रभावी कटिंग के लिए सही होने चाहिए। काटने का किनारा कठोर और तड़का लगा होता है।</p>
+                        <p><strong>देखभाल:</strong> मशरूम सिर वाली छेनी का उपयोग न करें। उचित रूप से पीसें। चिपिंग करते समय सुरक्षा चश्मा पहनें।</p>
+                    </div>
+                </div>
+                <div class="warning-box"><h4>⚠️ Safety</h4><p>Never use a mushroom-headed chisel. Grind it properly. Always wear <strong>safety goggles</strong> while chipping.</p></div>
+                <div class="important-box"><h4>📌 Exam Focus</h4><ul><li>Point angle for mild steel: <strong>55°</strong>.</li><li>Point angle for cast iron: <strong>60°</strong>.</li><li>Point angle for high carbon steel: <strong>65°</strong>.</li><li>Cross-cut chisel is used for <strong>keyways and grooves</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    12. MARKING MEDIA – Full
+    ====================================================================== -->
+    <div class="container" id="markingmedia">
+        <div class="content-section" data-content="markingmedia">
+            <div class="section-header"><span class="icon">🎨</span><span class="title">12. Marking Media / मार्किंग मीडिया</span><span class="subtitle">— White wash, marking blue, Prussian blue, copper sulphate</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Marking media</strong> are applied to workpieces to make scribed lines clearly visible. The choice depends on the <strong>surface finish</strong> and <strong>accuracy</strong> required.</p>
+                        <ul>
+                            <li><strong>White Wash:</strong> Chalk powder mixed with water, methylated spirit, or turpentine. Used on rough castings and forgings.</li>
+                            <li><strong>Marking Blue:</strong> Chemical dye mixed with methylated spirit. Used on machined surfaces.</li>
+                            <li><strong>Prussian Blue:</strong> Used on filed or machine-finished surfaces. Gives very clear lines but takes longer to dry.</li>
+                            <li><strong>Copper Sulphate:</strong> Mixed with water and nitric acid. Used on filed or machined surfaces. <strong>Toxic – handle with care</strong>.</li>
+                            <li><strong>Cellulose Lacquer:</strong> Commercially available, quick drying, various colours.</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>मार्किंग मीडिया</strong> को वर्कपीस पर लगाया जाता है ताकि अंकित रेखाएँ स्पष्ट रूप से दिखाई दें। चयन <strong>सतह की फिनिश</strong> और आवश्यक <strong>सटीकता</strong> पर निर्भर करता है।</p>
+                        <ul>
+                            <li><strong>व्हाइट वॉश:</strong> चाक पाउडर पानी, मिथाइलेटेड स्पिरिट या तारपीन के साथ। खुरदरी ढलाई और फोर्जिंग पर।</li>
+                            <li><strong>मार्किंग ब्लू:</strong> रासायनिक डाई मिथाइलेटेड स्पिरिट के साथ। मशीनी सतहों पर।</li>
+                            <li><strong>प्रशियन ब्लू:</strong> फाइल या मशीन से तैयार सतहों पर। बहुत स्पष्ट रेखाएँ देता है लेकिन सूखने में अधिक समय लगता है।</li>
+                            <li><strong>कॉपर सल्फेट:</strong> पानी और नाइट्रिक एसिड के साथ। फाइल या मशीनी सतहों पर। <strong>जहरीला – सावधानी से संभालें</strong>.</li>
+                            <li><strong>सेल्यूलोज लैकर:</strong> व्यावसायिक रूप से उपलब्ध, जल्दी सूखने वाला, विभिन्न रंगों में।</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="warning-box"><h4>⚠️ Safety</h4><p>Copper sulphate is toxic. Handle with gloves and avoid contact with skin. Do not ingest.</p></div>
+                <div class="info-card green"><h4>📌 Exam Focus</h4><ul><li>White wash: <strong>rough castings and forgings</strong>.</li><li>Marking blue: <strong>machined surfaces</strong>.</li><li>Prussian blue: <strong>filed/machine-finished surfaces</strong>.</li><li>Copper sulphate: <strong>toxic – handle with care</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    13. SURFACE PLATE – Full
+    ====================================================================== -->
+    <div class="container" id="surfaceplate">
+        <div class="content-section" data-content="surfaceplate">
+            <div class="section-header"><span class="icon">⬛</span><span class="title">13. Surface Plate / सरफेस प्लेट</span><span class="subtitle">— Datum surface, grades, material, care</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A <strong>Surface Plate</strong> provides a perfectly flat datum surface for accurate marking and inspection. Made of <strong>high-quality cast iron</strong> or <strong>granite</strong>.</p>
+                        <p>Three grades: <strong>Grade 1</strong> (most accurate, for precision work), <strong>Grade 2</strong>, and <strong>Grade 3</strong> (for general shop work).</p>
+                        <p><strong>Care:</strong> Clean before and after use. Apply a thin layer of oil to prevent rust. Never place cutting tools on the surface plate. Use three-point support for stability.</p>
+                        <p><strong>Granite plates:</strong> More durable, maintain accuracy even if scratched, no burrs form on the surface.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>सरफेस प्लेट</strong> सटीक अंकन और निरीक्षण के लिए एक पूरी तरह से सपाट डेटम सतह प्रदान करती है। <strong>उच्च गुणवत्ता वाले कास्ट आयरन</strong> या <strong>ग्रेनाइट</strong> से बना होता है।</p>
+                        <p>तीन ग्रेड: <strong>ग्रेड 1</strong> (सबसे सटीक, प्रेसिजन कार्य के लिए), <strong>ग्रेड 2</strong>, और <strong>ग्रेड 3</strong> (सामान्य शॉप कार्य के लिए).</p>
+                        <p><strong>देखभाल:</strong> उपयोग से पहले और बाद में साफ करें। जंग रोकने के लिए तेल की पतली परत लगाएं। सरफेस प्लेट पर कभी भी काटने के उपकरण न रखें। स्थिरता के लिए तीन-बिंदु समर्थन।</p>
+                        <p><strong>ग्रेनाइट प्लेटें:</strong> अधिक टिकाऊ, खरोंच होने पर भी सटीकता बनाए रखती हैं, सतह पर गड़गड़ाहट नहीं बनती।</p>
+                    </div>
+                </div>
+                <div class="short-notes"><h4>📌 Key Points</h4><ul><li>Surface plates are used as <strong>reference surfaces</strong>.</li><li>Grade 1 is used for <strong>precision work</strong>.</li><li>Granite plates maintain accuracy even if scratched.</li><li>Specification example: Cast Iron Surface Plate 2000×1000 Gr 1 IS 2285.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    14. ANGLE PLATE – Full
+    ====================================================================== -->
+    <div class="container" id="angleplate">
+        <div class="content-section" data-content="angleplate">
+            <div class="section-header"><span class="icon">📐</span><span class="title">14. Angle Plate / एंगल प्लेट</span><span class="subtitle">— Types, grades, uses</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>An <strong>Angle Plate</strong> has two flat surfaces machined perfectly at <strong>90°</strong> to each other. Made of fine-grained cast iron or steel.</p>
+                        <p><strong>Types:</strong></p>
+                        <ul>
+                            <li><strong>Plain Solid Angle Plate:</strong> Most common; two flat surfaces at 90°.</li>
+                            <li><strong>Slotted Type Angle Plate:</strong> Has slots for clamping bolts.</li>
+                            <li><strong>Swivel Type Angle Plate:</strong> Adjustable angle between surfaces.</li>
+                            <li><strong>Box Angle Plate:</strong> All faces square to each other; job can be turned.</li>
+                        </ul>
+                        <p>Grades: <strong>Grade 1</strong> (high precision, toolroom) and <strong>Grade 2</strong> (general shop work).</p>
+                        <p><strong>Parallel Blocks:</strong> Used to set workpieces at a height. Available in solid and adjustable types. Grades: Grade A (precision) and Grade B (general).</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>एंगल प्लेट</strong> में दो सपाट सतहें होती हैं जो एक दूसरे से <strong>90°</strong> पर पूर्ण रूप से मशीनीकृत होती हैं। बारीक दानेदार कास्ट आयरन या स्टील से बनी होती है।</p>
+                        <p><strong>प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>सादा ठोस एंगल प्लेट:</strong> सबसे सामान्य; 90° पर दो सपाट सतहें।</li>
+                            <li><strong>स्लॉटेड टाइप एंगल प्लेट:</strong> क्लैम्पिंग बोल्ट के लिए स्लॉट होते हैं।</li>
+                            <li><strong>स्विवेल टाइप एंगल प्लेट:</strong> सतहों के बीच समायोज्य कोण।</li>
+                            <li><strong>बॉक्स एंगल प्लेट:</strong> सभी फलक एक दूसरे के वर्गाकार; जॉब को घुमाया जा सकता है।</li>
+                        </ul>
+                        <p>ग्रेड: <strong>ग्रेड 1</strong> (उच्च परिशुद्धता, टूलरूम) और <strong>ग्रेड 2</strong> (सामान्य शॉप कार्य).</p>
+                        <p><strong>समानांतर ब्लॉक:</strong> वर्कपीस को ऊंचाई पर सेट करने के लिए। ठोस और समायोज्य प्रकारों में उपलब्ध। ग्रेड: ग्रेड A (प्रेसिजन) और ग्रेड B (सामान्य).</p>
+                    </div>
+                </div>
+                <div class="info-card purple"><h4>🔍 Exam Focus</h4><ul><li>Angle plates have two surfaces at <strong>90°</strong>.</li><li>Swivel type allows <strong>adjustable angle</strong>.</li><li>Box angle plate: <strong>all faces square</strong>.</li><li>Parallel blocks: <strong>solid and adjustable</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    15. PHYSICAL & MECHANICAL PROPERTIES – Full
+    ====================================================================== -->
+    <div class="container" id="properties">
+        <div class="content-section" data-content="properties">
+            <div class="section-header"><span class="icon">⚛️</span><span class="title">15. Physical &amp; Mechanical Properties / भौतिक और यांत्रिक गुण</span><span class="subtitle">— Colour, weight, ductility, hardness, toughness, elasticity</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Physical properties</strong> include colour, weight (specific gravity), structure (fibrous or granular), conductivity (thermal and electrical), magnetic properties, fusibility (melting point).</p>
+                        <p><strong>Mechanical properties</strong> include ductility, malleability, hardness, brittleness, toughness, tenacity, and elasticity.</p>
+                        <ul>
+                            <li><strong>Ductility:</strong> Ability to be drawn into wire (e.g., copper, aluminium).</li>
+                            <li><strong>Malleability:</strong> Ability to be hammered or rolled into sheets (e.g., lead).</li>
+                            <li><strong>Hardness:</strong> Resistance to indentation.</li>
+                            <li><strong>Brittleness:</strong> Breaks without permanent deformation (e.g., cast iron).</li>
+                            <li><strong>Toughness:</strong> Can withstand impact (e.g., wrought iron).</li>
+                            <li><strong>Tenacity:</strong> Resistance to tensile forces (e.g., mild steel).</li>
+                            <li><strong>Elasticity:</strong> Returns to original shape after force removal (e.g., springs).</li>
+                        </ul>
+                    </div>
+                    <div class="hi">
+                        <p><strong>भौतिक गुण</strong> में रंग, वजन (विशिष्ट गुरुत्व), संरचना (रेशेदार या दानेदार), चालकता (तापीय और विद्युत), चुंबकीय गुण, गलनशीलता (गलनांक) शामिल हैं।</p>
+                        <p><strong>यांत्रिक गुण</strong> में लचीलापन, आघातवर्धनीयता, कठोरता, भंगुरता, क्रूरता, दृढ़ता और प्रत्यास्थता शामिल हैं।</p>
+                        <ul>
+                            <li><strong>लचीलापन (Ductility):</strong> तार खींचने की क्षमता (जैसे, तांबा, एल्यूमीनियम).</li>
+                            <li><strong>आघातवर्धनीयता (Malleability):</strong> हथौड़े से पीटकर या रोल करके शीट बनाने की क्षमता (जैसे, सीसा).</li>
+                            <li><strong>कठोरता (Hardness):</strong> इंडेंटेशन का प्रतिरोध।</li>
+                            <li><strong>भंगुरता (Brittleness):</strong> बिना स्थायी विरूपण के टूट जाता है (जैसे, कास्ट आयरन).</li>
+                            <li><strong>क्रूरता (Toughness):</strong> आघात सह सकता है (जैसे, गढ़ा लोहा).</li>
+                            <li><strong>दृढ़ता (Tenacity):</strong> तन्य बलों का प्रतिरोध (जैसे, माइल्ड स्टील).</li>
+                            <li><strong>प्रत्यास्थता (Elasticity):</strong> बल हटने के बाद मूल आकार में लौटने की क्षमता (जैसे, स्प्रिंग्स).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card green"><h4>📌 Exam Focus</h4><ul><li>Ductility: <strong>copper, aluminium</strong> (wire drawing).</li><li>Malleability: <strong>lead</strong> (hammered into sheets).</li><li>Brittleness: <strong>cast iron</strong> (breaks without deformation).</li><li>Toughness: <strong>wrought iron</strong> (withstands impact).</li><li>Elasticity: <strong>springs</strong> (returns to shape).</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    16. METAL-CUTTING SAWS – Full
+    ====================================================================== -->
+    <div class="container" id="saws">
+        <div class="content-section" data-content="saws">
+            <div class="section-header"><span class="icon">🪚</span><span class="title">16. Metal-Cutting Saws / धातु काटने वाली आरी</span><span class="subtitle">— Power saw, band saw, circular saw, contour saw</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Metal-cutting saws</strong> are machine tools used to cut metal stock. Common types:</p>
+                        <ul>
+                            <li><strong>Power Saw:</strong> Most common; reciprocating action. Used for general cutting of metal bars and sections.</li>
+                            <li><strong>Horizontal Band-Saw:</strong> Continuous cutting; faster than power saw. Uses a continuous band blade.</li>
+                            <li><strong>Circular Saw:</strong> For large cross-sections; continuous cutting. Used for heavy-duty production work.</li>
+                            <li><strong>Contour Saw:</strong> For cutting irregular profiles; uses a metal band saw blade. Used in toolrooms for cutting complex shapes.</li>
+                        </ul>
+                        <p><strong>Safety:</strong> Always use cutting fluid. Do not apply excessive cutting pressure. Use a stop gauge for multiple pieces. Keep hands clear of the blade.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>धातु काटने वाली आरी</strong> मशीन उपकरण हैं जिनका उपयोग धातु स्टॉक काटने के लिए किया जाता है। सामान्य प्रकार:</p>
+                        <ul>
+                            <li><strong>पावर आरी:</strong> सबसे सामान्य; प्रत्यागामी क्रिया। धातु बार और सेक्शन के सामान्य कटिंग के लिए।</li>
+                            <li><strong>क्षैतिज बैंड-आरी:</strong> निरंतर काटने; पावर आरी से तेज़। निरंतर बैंड ब्लेड का उपयोग करता है।</li>
+                            <li><strong>वृत्ताकार आरी:</strong> बड़े क्रॉस-सेक्शन के लिए; निरंतर काटने। भारी-शुल्क उत्पादन कार्य के लिए।</li>
+                            <li><strong>कंटूर आरी:</strong> अनियमित प्रोफाइल काटने के लिए; धातु बैंड आरी ब्लेड का उपयोग करता है। जटिल आकार काटने के लिए टूलरूम में उपयोग किया जाता है।</li>
+                        </ul>
+                        <p><strong>सुरक्षा:</strong> हमेशा कटिंग फ्लुइड का उपयोग करें। अत्यधिक काटने का दबाव न लगाएँ। कई टुकड़ों के लिए स्टॉप गेज का उपयोग करें। ब्लेड से हाथ दूर रखें।</p>
+                    </div>
+                </div>
+                <div class="warning-box"><h4>⚠️ Safety</h4><p>Never measure the workpiece while the saw is running. Keep hands clear of the blade. Always use cutting fluid.</p></div>
+                <div class="important-box"><h4>📌 Exam Focus</h4><ul><li>Power saw: <strong>reciprocating action</strong>.</li><li>Band saw: <strong>continuous cutting</strong>.</li><li>Circular saw: <strong>large cross-sections</strong>.</li><li>Contour saw: <strong>irregular profiles</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    17. OUTSIDE MICROMETER – Full
+    ====================================================================== -->
+    <div class="container" id="micrometer">
+        <div class="content-section" data-content="micrometer">
+            <div class="section-header"><span class="icon">🔬</span><span class="title">17. Outside Micrometer / बाह्य माइक्रोमीटर</span><span class="subtitle">— Precision measurement up to 0.01 mm</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>An <strong>Outside Micrometer</strong> is a precision instrument for measuring dimensions with accuracy up to <strong>0.01 mm</strong>.</p>
+                        <p><strong>Parts:</strong> Frame (drop-forged steel), Barrel/Sleeve (fixed to frame, with graduations), Thimble (with graduations), Spindle (moves via screw), Anvil (fixed measuring face), Spindle Lock Nut, Ratchet Stop (ensures uniform pressure).</p>
+                        <p><strong>Least Count (Metric):</strong> Spindle pitch = 0.5 mm. Thimble has 50 divisions. LC = 0.5 / 50 = <strong>0.01 mm</strong>.</p>
+                        <p><strong>Reading:</strong> Barrel reading (mm) + Thimble reading (number of divisions × 0.01).</p>
+                        <p><strong>Ranges:</strong> 0-25 mm, 25-50 mm, 50-75 mm, 75-100 mm, 100-125 mm, 125-150 mm.</p>
+                        <p><strong>Care:</strong> Clean measuring faces before and after use. Check zero error regularly. Use the ratchet stop to apply uniform pressure.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>बाह्य माइक्रोमीटर</strong> एक प्रेसिजन उपकरण है जो <strong>0.01 mm</strong> तक की सटीकता के साथ आयाम मापता है।</p>
+                        <p><strong>भाग:</strong> फ्रेम (ड्रॉप-जाली स्टील), बैरल/स्लीव (फ्रेम पर स्थिर, अंशांकन के साथ), थिम्बल (अंशांकन के साथ), स्पिंडल (स्क्रू के माध्यम से चलता है), एन्विल (स्थिर मापने वाला फेस), स्पिंडल लॉक नट, रैचेट स्टॉप (एकसमान दबाव सुनिश्चित करता है).</p>
+                        <p><strong>अल्पतमांक (मीट्रिक):</strong> स्पिंडल पिच = 0.5 mm. थिम्बल पर 50 विभाजन। LC = 0.5 / 50 = <strong>0.01 mm</strong>.</p>
+                        <p><strong>पठन:</strong> बैरल रीडिंग (mm) + थिम्बल रीडिंग (विभाजनों की संख्या × 0.01).</p>
+                        <p><strong>रेंज:</strong> 0-25 mm, 25-50 mm, 50-75 mm, 75-100 mm, 100-125 mm, 125-150 mm.</p>
+                        <p><strong>देखभाल:</strong> उपयोग से पहले और बाद में मापने वाले फेस साफ करें। शून्य त्रुटि नियमित रूप से जाँचें। एकसमान दबाव के लिए रैचेट स्टॉप का उपयोग करें।</p>
+                    </div>
+                </div>
+                <div class="example-box">
+                    <h4 style="margin:0 0 6px; color:#003366;">📘 Example</h4>
+                    <p><strong>Reading:</strong> Barrel shows 13 mm and 1 half-division (0.5 mm). Thimble aligns at 13th division. Total = 13 + 0.5 + (13 × 0.01) = <strong>13.63 mm</strong>.</p>
+                </div>
+                <div class="short-notes"><h4>📌 Key Points</h4><ul><li>Least count: <strong>0.01 mm</strong>.</li><li>Spindle pitch: <strong>0.5 mm</strong>.</li><li>Thimble divisions: <strong>50</strong>.</li><li>Always use the <strong>ratchet stop</strong> for consistent readings.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    18. DEPTH MICROMETER – Full
+    ====================================================================== -->
+    <div class="container" id="depthmic">
+        <div class="content-section" data-content="depthmic">
+            <div class="section-header"><span class="icon">📏</span><span class="title">18. Depth Micrometer / डेप्थ माइक्रोमीटर</span><span class="subtitle">— Measuring depths of holes, slots, and steps</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A <strong>Depth Micrometer</strong> is used to measure the depth of holes, slots, recesses, and steps.</p>
+                        <p>It consists of a <strong>stock</strong> (base), a <strong>sleeve</strong> with graduations, a <strong>thimble</strong>, and <strong>interchangeable extension rods</strong>.</p>
+                        <p>Least count: <strong>0.01 mm</strong>.</p>
+                        <p><strong>Extension rods:</strong> Available in various sizes to cover different depth ranges (e.g., 0-25 mm, 25-50 mm, 50-75 mm, 75-100 mm, 100-125 mm, 125-150 mm).</p>
+                        <p><strong>Use:</strong> Ensure the extension rod is properly seated. The base must be flat against the workpiece surface. Read the barrel and thimble like an outside micrometer.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>डेप्थ माइक्रोमीटर</strong> का उपयोग छिद्रों, स्लॉट्स, रिसेस और स्टेप्स की गहराई मापने के लिए किया जाता है।</p>
+                        <p>इसमें एक <strong>स्टॉक</strong> (आधार), अंशांकन के साथ एक <strong>स्लीव</strong>, एक <strong>थिम्बल</strong> और <strong>विनिमेय एक्सटेंशन रॉड्स</strong> होते हैं।</p>
+                        <p>अल्पतमांक: <strong>0.01 mm</strong>.</p>
+                        <p><strong>एक्सटेंशन रॉड:</strong> विभिन्न आकारों में उपलब्ध (जैसे, 0-25 mm, 25-50 mm, 50-75 mm, 75-100 mm, 100-125 mm, 125-150 mm).</p>
+                        <p><strong>उपयोग:</strong> सुनिश्चित करें कि एक्सटेंशन रॉड ठीक से बैठा है। आधार वर्कपीस सतह पर सपाट होना चाहिए। बैरल और थिम्बल को बाह्य माइक्रोमीटर की तरह पढ़ें।</p>
+                    </div>
+                </div>
+                <div class="info-card blue"><h4>💡 Tip</h4><p>When measuring, ensure the extension rod is properly seated and the base is flat against the workpiece surface.</p></div>
+                <div class="important-box"><h4>📌 Exam Focus</h4><ul><li>Depth micrometer measures: <strong>depth of holes, slots, steps</strong>.</li><li>Has <strong>interchangeable extension rods</strong>.</li><li>Least count: <strong>0.01 mm</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    19. VERNIER CALIPERS – Full
+    ====================================================================== -->
+    <div class="container" id="vernier">
+        <div class="content-section" data-content="vernier">
+            <div class="section-header"><span class="icon">📐</span><span class="title">19. Vernier Calipers / वर्नियर कैलिपर्स</span><span class="subtitle">— Precision measurement up to 0.02 mm</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A <strong>Vernier Caliper</strong> is a precision measuring instrument with accuracy up to <strong>0.02 mm</strong>.</p>
+                        <p><strong>Parts:</strong> Fixed Jaws (outside &amp; inside), Movable Jaws, Vernier Slide, Beam (Main Scale), Depth Bar, Thumb Lever (for sliding), Vernier Scale (on the slide).</p>
+                        <p><strong>Least Count (50-division vernier):</strong> 50 VSD = 49 mm; 1 MSD = 1 mm; LC = 1 - 49/50 = <strong>0.02 mm</strong>.</p>
+                        <p><strong>Reading:</strong> Main scale reading + (Vernier coincidence × LC).</p>
+                        <p><strong>Sizes:</strong> 150 mm, 200 mm, 250 mm, 300 mm, 600 mm.</p>
+                        <p><strong>Care:</strong> Never use for purposes other than measuring. Clean and store in its box after use. Avoid dropping or jarring.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>वर्नियर कैलिपर</strong> एक प्रेसिजन माप उपकरण है जिसकी सटीकता <strong>0.02 mm</strong> तक होती है।</p>
+                        <p><strong>भाग:</strong> फिक्स्ड जॉ (बाहरी और भीतरी), मूवेबल जॉ, वर्नियर स्लाइड, बीम (मुख्य स्केल), डेप्थ बार, थंब लीवर (स्लाइड करने के लिए), वर्नियर स्केल (स्लाइड पर).</p>
+                        <p><strong>अल्पतमांक (50-विभाजन वर्नियर):</strong> 50 VSD = 49 mm; 1 MSD = 1 mm; LC = 1 - 49/50 = <strong>0.02 mm</strong>.</p>
+                        <p><strong>पठन:</strong> मुख्य स्केल रीडिंग + (वर्नियर संयोग × LC).</p>
+                        <p><strong>आकार:</strong> 150 mm, 200 mm, 250 mm, 300 mm, 600 mm.</p>
+                        <p><strong>देखभाल:</strong> मापने के अलावा किसी अन्य उद्देश्य के लिए कभी उपयोग न करें। उपयोग के बाद साफ करके बॉक्स में रखें। गिराने से बचें।</p>
+                    </div>
+                </div>
+                <div class="example-box">
+                    <h4 style="margin:0 0 6px; color:#003366;">📘 Example</h4>
+                    <p><strong>Reading:</strong> Main scale shows 60 mm. Vernier scale's 28th division aligns with a main scale division. LC = 0.02 mm. Total = 60 + (28 × 0.02) = <strong>60.56 mm</strong>.</p>
+                </div>
+                <div class="short-notes"><h4>📌 Key Points</h4><ul><li>Least count: <strong>0.02 mm</strong> (50-division vernier).</li><li>Reading = Main scale + Vernier coincidence × LC.</li><li>Available sizes: 150 mm to 600 mm.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    20. VERNIER BEVEL PROTRACTOR – Full
+    ====================================================================== -->
+    <div class="container" id="bevel">
+        <div class="content-section" data-content="bevel">
+            <div class="section-header"><span class="icon">📐</span><span class="title">20. Vernier Bevel Protractor / वर्नियर बेवल प्रोट्रैक्टर</span><span class="subtitle">— Angle measurement with 5′ accuracy</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A <strong>Vernier Bevel Protractor</strong> is used for measuring angles with accuracy of <strong>5 minutes (5′)</strong>.</p>
+                        <p><strong>Parts:</strong> Stock (contact surface), Dial (graduated in degrees), Blade (second contact surface, can be extended), Locking Screws (lock dial and blade).</p>
+                        <p><strong>Least Count:</strong> 23 MSD = 12 VSD; 1 MSD = 1°; LC = 2° - (23/12)° = <strong>5′</strong>.</p>
+                        <p><strong>Uses:</strong> Measuring angles (acute and obtuse), setting work-holding devices on machine tools at specific angles.</p>
+                        <p><strong>Reading:</strong> For acute angles, read directly. For obtuse angles, read the scale on the other side and subtract from 180°.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>वर्नियर बेवल प्रोट्रैक्टर</strong> का उपयोग <strong>5 मिनट (5′)</strong> की सटीकता के साथ कोण मापने के लिए किया जाता है।</p>
+                        <p><strong>भाग:</strong> स्टॉक (संपर्क सतह), डायल (डिग्री में अंशांकित), ब्लेड (दूसरी संपर्क सतह, बढ़ाया जा सकता है), लॉकिंग स्क्रू (डायल और ब्लेड को लॉक करते हैं).</p>
+                        <p><strong>अल्पतमांक:</strong> 23 MSD = 12 VSD; 1 MSD = 1°; LC = 2° - (23/12)° = <strong>5′</strong>.</p>
+                        <p><strong>उपयोग:</strong> कोण मापना (न्यून और अधिक), मशीन टूल्स पर वर्क-होल्डिंग डिवाइस को विशिष्ट कोणों पर सेट करना।</p>
+                        <p><strong>पठन:</strong> न्यून कोणों के लिए सीधे पढ़ें। अधिक कोणों के लिए दूसरी तरफ स्केल पढ़ें और 180° से घटाएं।</p>
+                    </div>
+                </div>
+                <div class="info-card orange"><h4>🔍 Exam Focus</h4><ul><li>Least count: <strong>5′</strong> (5 minutes).</li><li>For obtuse angles: read the scale and <strong>subtract from 180°</strong>.</li><li>Parts: Stock, Dial, Blade, Locking Screws.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    21. DIAL CALIPER – Full
+    ====================================================================== -->
+    <div class="container" id="dial">
+        <div class="content-section" data-content="dial">
+            <div class="section-header"><span class="icon">📊</span><span class="title">21. Dial Caliper / डायल कैलिपर</span><span class="subtitle">— Direct-reading alternative to vernier</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p>A <strong>Dial Caliper</strong> is a direct-reading instrument similar to a vernier caliper but faster and easier to read.</p>
+                        <p>The beam scale is graduated in <strong>5 mm</strong> increments. The dial is divided into 100 equal parts. Each dial graduation represents <strong>5/100 = 0.05 mm</strong>.</p>
+                        <p><strong>Reading:</strong> Beam scale reading + Dial reading × 0.05.</p>
+                        <p><strong>Digital Calipers:</strong> Provide even higher accuracy (<strong>0.01 mm</strong>) with LCD display, zero setting, metric/inch conversion, and auto power-off.</p>
+                        <p><strong>Care:</strong> Clean the beam and sliding parts regularly. Apply a small drop of oil to the rack and pinion for smooth sliding.</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>डायल कैलिपर</strong> एक प्रत्यक्ष-पठन उपकरण है जो वर्नियर कैलिपर के समान है लेकिन पढ़ने में तेज़ और आसान है।</p>
+                        <p>बीम स्केल <strong>5 mm</strong> की वृद्धि में अंशांकित है। डायल को 100 बराबर भागों में विभाजित किया गया है। प्रत्येक डायल विभाजन <strong>5/100 = 0.05 mm</strong> का प्रतिनिधित्व करता है।</p>
+                        <p><strong>पठन:</strong> बीम स्केल रीडिंग + डायल रीडिंग × 0.05.</p>
+                        <p><strong>डिजिटल कैलिपर्स:</strong> और भी अधिक सटीकता (<strong>0.01 mm</strong>) प्रदान करते हैं, जिसमें LCD प्रदर्शन, शून्य सेटिंग, मीट्रिक/इंच रूपांतरण और ऑटो पावर-ऑफ होता है।</p>
+                        <p><strong>देखभाल:</strong> बीम और स्लाइडिंग भागों को नियमित रूप से साफ करें। सुचारू स्लाइडिंग के लिए रैक और पिनियन पर तेल की छोटी बूंद लगाएं।</p>
+                    </div>
+                </div>
+                <div class="short-notes"><h4>📌 Key Points</h4><ul><li>Dial caliper: <strong>direct-reading</strong>, faster than vernier.</li><li>Least count: <strong>0.05 mm</strong>.</li><li>Digital caliper: <strong>0.01 mm</strong> accuracy.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    22. DRILLING PROCESSES – Full
+    ====================================================================== -->
+    <div class="container" id="drilling">
+        <div class="content-section" data-content="drilling">
+            <div class="section-header"><span class="icon">🔧</span><span class="title">22. Drilling Processes / ड्रिलिंग प्रक्रियाएँ</span><span class="subtitle">— Drilling machines, types, work-holding, twist drills</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Drilling</strong> is the operation of producing cylindrical holes in a workpiece using a cutting tool called a <strong>drill</strong>.</p>
+                        <p><strong>Drilling Machine Types:</strong></p>
+                        <ul>
+                            <li><strong>Sensitive Bench Drilling Machine:</strong> For light-duty work up to 12.5 mm diameter. Hand-feed.</li>
+                            <li><strong>Pillar Drilling Machine:</strong> Larger version, floor-mounted, more powerful, for heavier work.</li>
+                            <li><strong>Column Drilling Machine:</strong> For heavy work with larger drills.</li>
+                            <li><strong>Radial Drilling Machine:</strong> Arm can swing; drill can cover a large work area. For large and heavy workpieces.</li>
+                            <li><strong>Gang Drilling Machine:</strong> Multiple spindles on a common table for sequential operations.</li>
+                            <li><strong>Multiple Spindle Head Drilling Machine:</strong> Many spindles driven by one head; for mass production.</li>
+                        </ul>
+                        <p><strong>Work-Holding Devices:</strong> Machine vice, clamps and bolts, V-blocks, angle plates.</p>
+                        <p><strong>Drill Parts:</strong> Point (cutting end), Shank (straight or taper), Tang (for taper shank), Body, Flutes (spiral grooves for chip removal), Land/Margin, Web.</p>
+                        <p><strong>Drill Point Angle:</strong> Standard <strong>118°</strong> for general purpose; varies with material (e.g., 90° for brass, 130° for hard steel).</p>
+                        <p><strong>Twist Drill Types:</strong> N-type (normal helix, for mild steel), H-type (hard helix, for hard materials), S-type (slow helix, for soft materials like brass, copper).</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>ड्रिलिंग</strong> एक <strong>ड्रिल</strong> नामक काटने के उपकरण का उपयोग करके वर्कपीस में बेलनाकार छेद बनाने का संचालन है।</p>
+                        <p><strong>ड्रिलिंग मशीन के प्रकार:</strong></p>
+                        <ul>
+                            <li><strong>सेंसिटिव बेंच ड्रिलिंग मशीन:</strong> 12.5 mm व्यास तक हल्के काम के लिए। हाथ-फीड।</li>
+                            <li><strong>पिलर ड्रिलिंग मशीन:</strong> बड़ा संस्करण, फर्श पर लगी, अधिक शक्तिशाली, भारी काम के लिए।</li>
+                            <li><strong>कॉलम ड्रिलिंग मशीन:</strong> बड़े ड्रिल के साथ भारी काम के लिए।</li>
+                            <li><strong>रेडियल ड्रिलिंग मशीन:</strong> आर्म घूम सकता है; ड्रिल बड़े कार्य क्षेत्र को कवर कर सकता है। बड़े और भारी वर्कपीस के लिए।</li>
+                            <li><strong>गैंग ड्रिलिंग मशीन:</strong> अनुक्रमिक संचालन के लिए एक सामान्य टेबल पर कई स्पिंडल।</li>
+                            <li><strong>मल्टीपल स्पिंडल हेड ड्रिलिंग मशीन:</strong> एक हेड द्वारा संचालित कई स्पिंडल; बड़े पैमाने पर उत्पादन के लिए।</li>
+                        </ul>
+                        <p><strong>वर्क-होल्डिंग डिवाइस:</strong> मशीन वाइस, क्लैम्प और बोल्ट, V-ब्लॉक, एंगल प्लेट.</p>
+                        <p><strong>ड्रिल भाग:</strong> बिंदु (काटने का सिरा), शैंक (सीधा या टेपर), टैंग (टेपर शैंक के लिए), बॉडी, फ़्लूट्स (चिप हटाने के लिए सर्पिल खांचे), लैंड/मार्जिन, वेब.</p>
+                        <p><strong>ड्रिल पॉइंट कोण:</strong> सामान्य प्रयोजन के लिए मानक <strong>118°</strong>; सामग्री के अनुसार भिन्न होता है (जैसे, पीतल के लिए 90°, कठोर स्टील के लिए 130°).</p>
+                        <p><strong>ट्विस्ट ड्रिल प्रकार:</strong> N-प्रकार (सामान्य हेलिक्स, माइल्ड स्टील के लिए), H-प्रकार (कठोर हेलिक्स, कठोर सामग्री के लिए), S-प्रकार (धीमी हेलिक्स, पीतल, तांबा जैसी नरम सामग्री के लिए).</p>
+                    </div>
+                </div>
+                <div class="example-box">
+                    <h4 style="margin:0 0 6px; color:#003366;">📘 Tap Drill Size</h4>
+                    <p><strong>For M10 × 1.5:</strong> Tap drill size = Major dia (10) - Pitch (1.5) = <strong>8.5 mm</strong>.</p>
+                </div>
+                <div class="important-box"><h4>📌 Exam Focus</h4><ul><li>Standard drill point angle: <strong>118°</strong>.</li><li>Drill holding devices: <strong>drill chuck, sleeve, socket</strong>.</li><li>Morse taper sizes: <strong>MT1 to MT5</strong>.</li><li>N-type drill: <strong>normal helix</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+    23. HAND TAPS & WRENCHES – Full
+    ====================================================================== -->
+    <div class="container" id="taps">
+        <div class="content-section" data-content="taps">
+            <div class="section-header"><span class="icon">🔩</span><span class="title">23. Hand Taps &amp; Wrenches / हैंड टैप और रिंच</span><span class="subtitle">— Internal threading, types, tap drill size</span></div>
+            <div class="section-body copy-protect">
+                <div class="bilingual">
+                    <div class="en">
+                        <p><strong>Hand Taps</strong> are used to cut internal threads. Made of <strong>high carbon steel</strong> or <strong>HSS (High Speed Steel)</strong>.</p>
+                        <p><strong>Set of Three Taps:</strong></p>
+                        <ul>
+                            <li><strong>Taper Tap (First):</strong> For starting the thread; has a long taper lead (8-10 threads).</li>
+                            <li><strong>Intermediate Tap (Second):</strong> For continuing the thread; shorter taper (3-5 threads).</li>
+                            <li><strong>Bottoming Tap (Plug):</strong> For finishing threads to full depth in blind holes; almost no taper (1-2 threads).</li>
+                        </ul>
+                        <p><strong>Tap Wrenches:</strong> Double-ended adjustable (most common), T-handle (for restricted spaces), Solid type (non-adjustable).</p>
+                        <p><strong>Tap Drill Size (ISO metric):</strong> Tap drill size = Major diameter – Pitch. Example: M10 × 1.5 → 10 - 1.5 = <strong>8.5 mm</strong>.</p>
+                        <p><strong>Care:</strong> Use cutting fluid while tapping. Turn 1/2 turn forward, then 1/4 turn back to break chips. Never force a tap — it may break.</p>
+                        <p><strong>Removing Broken Tap:</strong> Use tap extractor, punch method, annealing and drilling, or spark erosion (EDM).</p>
+                    </div>
+                    <div class="hi">
+                        <p><strong>हैंड टैप</strong> का उपयोग आंतरिक धागे काटने के लिए किया जाता है। <strong>उच्च कार्बन स्टील</strong> या <strong>HSS</strong> से बने होते हैं।</p>
+                        <p><strong>तीन टैप का सेट:</strong></p>
+                        <ul>
+                            <li><strong>टेपर टैप (प्रथम):</strong> धागा शुरू करने के लिए; लंबी टेपर लीड (8-10 धागे).</li>
+                            <li><strong>इंटरमीडिएट टैप (द्वितीय):</strong> धागा जारी रखने के लिए; छोटी टेपर (3-5 धागे).</li>
+                            <li><strong>बॉटमिंग टैप (प्लग):</strong> अंधे छिद्रों में पूर्ण गहराई तक धागा समाप्त करने के लिए; लगभग कोई टेपर नहीं (1-2 धागे).</li>
+                        </ul>
+                        <p><strong>टैप रिंच:</strong> डबल-एंडेड एडजस्टेबल (सबसे सामान्य), टी-हैंडल (प्रतिबंधित स्थानों के लिए), सॉलिड टाइप (गैर-समायोज्य).</p>
+                        <p><strong>टैप ड्रिल आकार (ISO मीट्रिक):</strong> टैप ड्रिल आकार = मुख्य व्यास – पिच। उदाहरण: M10 × 1.5 → 10 - 1.5 = <strong>8.5 mm</strong>.</p>
+                        <p><strong>देखभाल:</strong> टैपिंग करते समय कटिंग फ्लुइड का उपयोग करें। 1/2 चक्कर आगे, फिर 1/4 चक्कर पीछे करें (चिप तोड़ने के लिए). टैप को कभी भी जबरदस्ती न करें — टूट सकता है।</p>
+                        <p><strong>टूटे टैप को हटाना:</strong> टैप एक्सट्रैक्टर, पंच विधि, एनीलिंग और ड्रिलिंग, या स्पार्क इरोज़न (EDM) का उपयोग करें।</p>
+                    </div>
+                </div>
+                <div class="warning-box"><h4>⚠️ Important</h4><p>Always use the correct tap drill size. Too small → tap may break; too large → weak threads. Use cutting fluid (lubricant) while tapping.</p></div>
+                <div class="info-card green"><h4>✅ Best Practice</h4><ul><li>Tap in small steps: <strong>1/2 turn forward, 1/4 turn back</strong> to break chips.</li><li>Use <strong>cutting fluid</strong> to reduce friction and prolong tap life.</li><li>Identify taps by <strong>rings on the shank</strong>: 1 ring = taper, 2 rings = intermediate, 3 rings = bottoming.</li></ul></div>
+                <div class="important-box"><h4>📌 Exam Focus</h4><ul><li>Taper tap: <strong>starts the thread</strong>.</li><li>Intermediate tap: <strong>continues the thread</strong>.</li><li>Bottoming tap: <strong>finishes in blind holes</strong>.</li><li>Tap drill size = <strong>Major dia – Pitch</strong>.</li><li>M10 × 1.5 tap drill = <strong>8.5 mm</strong>.</li></ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================== MCQ & RELATED ============================== -->
+    <div class="container">
+        <div class="content-section" data-content="mcq">
+            <div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+            <div class="section-body">
+                <div class="mcq-link">
+                    <p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+                    <a href="/question-bank/fitter/index.html?mod=2" target="_blank">📝 Go to Question Bank →</a>
+                    <p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content-section" data-content="related">
+            <div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+            <div class="section-body">
+                <div style="display:flex; flex-wrap:wrap; gap:12px;">
+                    <a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
+                    <a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
+                    <a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================== FOOTER ============================== -->
+    <footer>
+        <div class="footer-links">
+            <a href="/disclaimer.html">Disclaimer</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms</a>
+            <a href="/contact.html">Contact</a>
+        </div>
+        <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+    </footer>
+
+    <button id="scrollTop" title="Go to Top">⬆</button>
+
+    <!-- ============================== JAVASCRIPT ============================== -->
+    <script>
+        // ============================== SEARCH ==============================
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        // ============================== SHARE FUNCTIONS ==============================
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('🔧 ' + getPageTitle() + ' - Check out this complete study material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('🔧 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        // ============================== SCROLL TO TOP ==============================
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ============================== FOOTER YEAR ==============================
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        // ============================== COPY PROTECTION ==============================
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Fitter Theory Module 2 – Complete Guide Loaded.');
+        console.log('📚 All 23 topics covered in full detail with bilingual content.');
+    </script>
+</body>
+</html>
