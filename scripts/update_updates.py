@@ -8,7 +8,7 @@ from urllib.parse import urljoin
 
 
 # ==========================================
-# CONFIGURATION
+# CONFIG
 # ==========================================
 
 HEADERS = {
@@ -19,7 +19,6 @@ HEADERS = {
     )
 }
 
-# जितने चाहें उतने updates रख सकते हैं
 MAX_ITEMS = 100
 
 BASE_DIR = os.path.dirname(
@@ -39,7 +38,7 @@ seen = set()
 
 
 # ==========================================
-# COMMON FUNCTIONS
+# COMMON
 # ==========================================
 
 def clean_text(text):
@@ -57,75 +56,11 @@ def normalize_url(base, href):
     if not href:
         return ""
 
-    href = href.strip()
-
-    if not href:
-        return ""
-
     return urljoin(
         base,
-        href
+        href.strip()
     )
 
-
-def is_duplicate(title):
-
-    key = clean_text(
-        title
-    ).lower()
-
-    if not key:
-        return True
-
-    if key in seen:
-        return True
-
-    seen.add(key)
-
-    return False
-
-
-def add_update(
-    source,
-    title,
-    date,
-    url
-):
-
-    title = clean_text(title)
-    date = clean_text(date)
-    url = clean_text(url)
-
-    # --------------------------------------
-    # IMPORTANT:
-    # DGT Details अगर गलती से title में आ जाए
-    # तो उसे हटाएँ
-    # --------------------------------------
-
-    title = re.sub(
-        r"\s*Size\s*:.*$",
-        "",
-        title,
-        flags=re.IGNORECASE
-    ).strip()
-
-    if len(title) < 5:
-        return
-
-    if is_duplicate(title):
-        return
-
-    updates.append({
-        "source": source,
-        "title": title,
-        "date": date,
-        "link": url
-    })
-
-
-# ==========================================
-# DATE EXTRACTION
-# ==========================================
 
 def extract_date(text):
 
@@ -135,13 +70,9 @@ def extract_date(text):
     text = clean_text(text)
 
     patterns = [
-
         r"\b(\d{1,2})-(\d{1,2})-(\d{4})\b",
-
         r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b",
-
         r"\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b"
-
     ]
 
     for pattern in patterns:
@@ -164,9 +95,6 @@ def extract_date(text):
 
 def date_for_sort(value):
 
-    if not value:
-        return datetime.min
-
     try:
 
         return datetime.strptime(
@@ -174,13 +102,42 @@ def date_for_sort(value):
             "%d-%m-%Y"
         )
 
-    except ValueError:
+    except:
 
         return datetime.min
 
 
+def add_update(
+    source,
+    title,
+    date,
+    link
+):
+
+    title = clean_text(title)
+    date = clean_text(date)
+    link = clean_text(link)
+
+    if len(title) < 5:
+        return
+
+    key = title.lower()
+
+    if key in seen:
+        return
+
+    seen.add(key)
+
+    updates.append({
+        "source": source,
+        "title": title,
+        "date": date,
+        "link": link
+    })
+
+
 # ==========================================
-# DGT EXAM CORNER
+# DGT
 # ==========================================
 
 def fetch_dgt():
@@ -201,7 +158,7 @@ def fetch_dgt():
         response = requests.get(
             url,
             headers=HEADERS,
-            timeout=30
+            timeout=40
         )
 
         response.raise_for_status()
@@ -218,7 +175,7 @@ def fetch_dgt():
         if not table:
 
             print(
-                "DGT table not found."
+                "DGT table not found"
             )
 
             return
@@ -229,19 +186,10 @@ def fetch_dgt():
         )
 
         print(
-            "DGT Rows Found:",
+            "DGT rows:",
             len(rows)
         )
 
-
-        # ==================================
-        # ACTUAL DGT STRUCTURE
-        #
-        # 0 = S.No
-        # 1 = Title
-        # 2 = Details
-        # 3 = Attachment
-        # ==================================
 
         for row in rows:
 
@@ -252,7 +200,11 @@ def fetch_dgt():
 
 
             # --------------------------------
-            # ONLY TITLE
+            # DGT:
+            # 0 = S.No
+            # 1 = TITLE
+            # 2 = DETAILS
+            # 3 = DOWNLOAD
             # --------------------------------
 
             title = clean_text(
@@ -263,11 +215,6 @@ def fetch_dgt():
             )
 
 
-            # --------------------------------
-            # DETAILS
-            # केवल DATE निकालने के लिए
-            # --------------------------------
-
             details = clean_text(
                 cols[2].get_text(
                     " ",
@@ -276,58 +223,64 @@ def fetch_dgt():
             )
 
 
+            # Date केवल Details से
             date = extract_date(
                 details
             )
 
 
             # --------------------------------
-            # ATTACHMENT LINK
+            # OFFICIAL DOWNLOAD LINK
             # --------------------------------
 
-            href = ""
+            link_url = ""
+
 
             if len(cols) >= 4:
 
-                attachment = cols[3].find("a")
+                download = cols[3].find("a")
 
-                if attachment:
+                if download:
 
-                    href = normalize_url(
+                    href = download.get(
+                        "href"
+                    )
+
+                    link_url = normalize_url(
                         base,
-                        attachment.get("href")
+                        href
                     )
 
 
-            # Fallback
-            if not href:
+            # अगर attachment column में नहीं मिला
+            if not link_url:
 
-                link = row.find("a")
+                download = row.find(
+                    "a"
+                )
 
-                if link:
+                if download:
 
-                    href = normalize_url(
+                    href = download.get(
+                        "href"
+                    )
+
+                    link_url = normalize_url(
                         base,
-                        link.get("href")
+                        href
                     )
 
 
             # --------------------------------
-            # SAVE
+            # ADD
             # --------------------------------
 
             add_update(
                 "DGT",
                 title,
                 date,
-                href
+                link_url
             )
-
-
-        print(
-            "DGT Updates Collected:",
-            len(updates)
-        )
 
 
     except Exception as e:
@@ -339,7 +292,7 @@ def fetch_dgt():
 
 
 # ==========================================
-# SCVT KEYWORDS
+# SCVT
 # ==========================================
 
 SCVT_KEYWORDS = [
@@ -363,10 +316,6 @@ SCVT_KEYWORDS = [
 
 ]
 
-
-# ==========================================
-# UP SCVT / VPPUP
-# ==========================================
 
 def fetch_scvt():
 
@@ -401,13 +350,6 @@ def fetch_scvt():
             )
 
 
-            found = 0
-
-
-            # ==================================
-            # LINKS
-            # ==================================
-
             for a in soup.find_all("a"):
 
                 title = clean_text(
@@ -417,16 +359,14 @@ def fetch_scvt():
                     )
                 )
 
+
                 if len(title) < 8:
                     continue
 
 
-                title_lower = title.lower()
-
-
                 matched = any(
                     word.lower()
-                    in title_lower
+                    in title.lower()
                     for word in SCVT_KEYWORDS
                 )
 
@@ -435,7 +375,7 @@ def fetch_scvt():
                     continue
 
 
-                href = normalize_url(
+                link = normalize_url(
                     site_url,
                     a.get("href")
                 )
@@ -457,76 +397,8 @@ def fetch_scvt():
                     "UP SCVT",
                     title,
                     date,
-                    href
+                    link
                 )
-
-
-                found += 1
-
-
-                if len(updates) >= MAX_ITEMS:
-
-                    return
-
-
-            # ==================================
-            # BUTTONS
-            # ==================================
-
-            for button in soup.find_all(
-                "button"
-            ):
-
-                title = clean_text(
-                    button.get_text(
-                        " ",
-                        strip=True
-                    )
-                )
-
-
-                if len(title) < 8:
-                    continue
-
-
-                title_lower = title.lower()
-
-
-                matched = any(
-                    word.lower()
-                    in title_lower
-                    for word in SCVT_KEYWORDS
-                )
-
-
-                if not matched:
-                    continue
-
-
-                add_update(
-                    "UP SCVT",
-                    title,
-                    datetime.now().strftime(
-                        "%d-%m-%Y"
-                    ),
-                    site_url
-                )
-
-
-                found += 1
-
-
-                if len(updates) >= MAX_ITEMS:
-
-                    return
-
-
-            print(
-                "SCVT checked:",
-                site_url,
-                "| Found:",
-                found
-            )
 
 
         except Exception as e:
@@ -537,16 +409,12 @@ def fetch_scvt():
                 e
             )
 
-            continue
-
 
 # ==========================================
 # SORT
 # ==========================================
 
 def sort_updates():
-
-    global updates
 
     updates.sort(
         key=lambda item:
@@ -568,11 +436,10 @@ def save_updates():
 
     sort_updates()
 
-
     if not updates:
 
         print(
-            "No updates collected."
+            "No updates found."
         )
 
         return
@@ -586,20 +453,15 @@ def save_updates():
     )
 
 
-    final_updates = updates[
-        :MAX_ITEMS
-    ]
-
-
     with open(
         OUTPUT_FILE,
         "w",
         encoding="utf-8"
-    ) as f:
+    ) as file:
 
         json.dump(
-            final_updates,
-            f,
+            updates[:MAX_ITEMS],
+            file,
             ensure_ascii=False,
             indent=2
         )
@@ -607,13 +469,8 @@ def save_updates():
 
     print(
         "Saved:",
-        len(final_updates),
+        len(updates[:MAX_ITEMS]),
         "updates"
-    )
-
-    print(
-        "Output:",
-        OUTPUT_FILE
     )
 
 
@@ -623,75 +480,49 @@ def save_updates():
 
 if __name__ == "__main__":
 
-    print("=" * 60)
+    print(
+        "=" * 60
+    )
 
     print(
         "ITI STUDY CENTRE"
     )
 
     print(
-        "OFFICIAL UPDATES AUTO UPDATE"
+        "OFFICIAL UPDATES"
     )
 
-    print("=" * 60)
+    print(
+        "=" * 60
+    )
 
-
-    # --------------------------------------
-    # DGT
-    # --------------------------------------
 
     fetch_dgt()
 
-
-    # --------------------------------------
-    # UP SCVT
-    # --------------------------------------
-
     fetch_scvt()
-
-
-    # --------------------------------------
-    # SORT + SAVE
-    # --------------------------------------
 
     sort_updates()
 
     save_updates()
 
 
-    # --------------------------------------
-    # DISPLAY RESULT
-    # --------------------------------------
-
-    print("=" * 60)
-
     print(
-        "ALL UPDATES:"
+        "=" * 60
     )
 
-    print("=" * 60)
-
-
-    for index, item in enumerate(
+    for i, item in enumerate(
         updates[:MAX_ITEMS],
-        start=1
+        1
     ):
 
         print(
-            index,
-            "|",
-            item["source"],
-            "|",
+            i,
             item["date"],
-            "|",
-            item["title"]
+            item["title"],
+            item["link"]
         )
 
 
-    print("=" * 60)
-
     print(
-        "UPDATE PROCESS COMPLETED"
+        "=" * 60
     )
-
-    print("=" * 60)
