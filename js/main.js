@@ -1,7 +1,5 @@
 /* =====================================
    LATEST OFFICIAL UPDATES
-   SHOW ALL
-   NO CACHE
 ===================================== */
 
 async function loadUpdates() {
@@ -52,130 +50,67 @@ async function loadUpdates() {
         }
 
 
-        /* =================================
-           DATE FUNCTION
-        ================================= */
-
-        function getDate(item) {
-
-            const value =
-                String(
-                    item.date || ""
-                ).trim();
+        let html = "";
 
 
-            if (!value) return 0;
-
-
-            /* DD-MM-YYYY */
-
-            let match =
-                value.match(
-                    /^(\d{1,2})-(\d{1,2})-(\d{4})$/
-                );
-
-
-            if (match) {
-
-                return new Date(
-                    Number(match[3]),
-                    Number(match[2]) - 1,
-                    Number(match[1])
-                ).getTime();
-
-            }
-
-
-            /* DD/MM/YYYY */
-
-            match =
-                value.match(
-                    /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/
-                );
-
-
-            if (match) {
-
-                return new Date(
-                    Number(match[3]),
-                    Number(match[2]) - 1,
-                    Number(match[1])
-                ).getTime();
-
-            }
-
-
-            return 0;
-
-        }
-
-
-        /* =================================
-           NEWEST FIRST
-        ================================= */
-
-        const sortedUpdates =
-            [...updates].sort(
-                function(a, b) {
-
-                    return (
-                        getDate(b) -
-                        getDate(a)
-                    );
-
-                }
-            );
-
-
-        /* =================================
-           HTML
-        ================================= */
-
-        let html = "<ul>";
-
-
-        sortedUpdates.forEach(
+        updates.forEach(
             function(item) {
 
-                let title =
-                    item.title || "";
+                const title =
+                    item.title ||
+                    "Official Update";
 
 
                 const link =
-                    item.link || "#";
+                    item.link ||
+                    "https://www.dgt.gov.in/hi/exam-corner";
 
 
-                /*
-                 * पुराने गलत JSON में अगर
-                 * Size आदि title के अंदर हो
-                 * तो यहाँ भी सुरक्षित रूप से हटाएँ
-                 */
-
-                title =
-                    title
-                        .replace(
-                            /\s*Size\s*:.*$/i,
-                            ""
-                        )
-                        .trim();
+                const date =
+                    item.date ||
+                    "";
 
 
-                if (!title) return;
+                const source =
+                    item.source ||
+                    "Official";
 
 
                 html += `
 
-                    <li>
+                    <div class="official-update-item">
 
-                        <a
-                            href="${link}"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                        <div class="official-update-title">
+
                             ${title}
-                        </a>
 
-                    </li>
+                        </div>
+
+
+                        ${
+                            date
+                            ? `
+                                <div class="official-update-date">
+                                    ${date}
+                                </div>
+                              `
+                            : ""
+                        }
+
+
+                        <div class="official-update-link">
+
+                            <a
+                                href="${link}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Official Link →
+                            </a>
+
+                        </div>
+
+                    </div>
 
                 `;
 
@@ -183,23 +118,20 @@ async function loadUpdates() {
         );
 
 
-        html += "</ul>";
-
-
         container.innerHTML =
             html;
 
 
         console.log(
-            "ALL OFFICIAL UPDATES LOADED:",
-            sortedUpdates.length
+            "Official Updates Loaded:",
+            updates.length
         );
 
 
     } catch (error) {
 
         console.error(
-            "Latest Updates Error:",
+            "Official Updates Error:",
             error
         );
 
