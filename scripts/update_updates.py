@@ -19,7 +19,7 @@ HEADERS = {
     )
 }
 
-MAX_ITEMS = 10
+MAX_ITEMS = 50
 
 BASE_DIR = os.path.dirname(
     os.path.dirname(
@@ -95,7 +95,7 @@ def add_update(
     date = clean_text(date)
     url = clean_text(url)
 
-    if len(title) < 10:
+    if len(title) < 5:
         return
 
     if is_duplicate(title):
@@ -110,7 +110,7 @@ def add_update(
 
 
 # ==========================================
-# DATE FUNCTIONS
+# DATE EXTRACTION
 # ==========================================
 
 def extract_date(text):
@@ -239,19 +239,18 @@ def fetch_dgt():
 
             cols = row.find_all("td")
 
-            # Actual DGT structure:
+            if len(cols) < 3:
+                continue
+
+
+            # ==================================
+            # DGT TABLE STRUCTURE
             #
             # 0 = S.No
             # 1 = Title
             # 2 = Details
             # 3 = Attachment
-
-            if len(cols) < 3:
-                continue
-
-            # ------------------------------
-            # TITLE
-            # ------------------------------
+            # ==================================
 
             title = clean_text(
                 cols[1].get_text(
@@ -260,10 +259,6 @@ def fetch_dgt():
                 )
             )
 
-            # ------------------------------
-            # DETAILS
-            # ------------------------------
-
             details = clean_text(
                 cols[2].get_text(
                     " ",
@@ -271,21 +266,19 @@ def fetch_dgt():
                 )
             )
 
-            # ------------------------------
-            # DATE IS INSIDE DETAILS
-            # ------------------------------
 
+            # Date Details में है
             date = extract_date(
                 details
             )
 
-            # ------------------------------
+
+            # ==================================
             # DOWNLOAD LINK
-            # ------------------------------
+            # ==================================
 
             href = ""
 
-            # पहले attachment column
             if len(cols) >= 4:
 
                 link = cols[3].find("a")
@@ -297,7 +290,8 @@ def fetch_dgt():
                         link.get("href")
                     )
 
-            # fallback - पूरे row में link
+
+            # अगर attachment में link नहीं मिला
             if not href:
 
                 link = row.find("a")
@@ -309,9 +303,6 @@ def fetch_dgt():
                         link.get("href")
                     )
 
-            # ------------------------------
-            # ADD
-            # ------------------------------
 
             add_update(
                 "DGT",
@@ -320,10 +311,12 @@ def fetch_dgt():
                 href
             )
 
+
         print(
             "DGT Updates Collected:",
             len(updates)
         )
+
 
     except Exception as e:
 
@@ -334,10 +327,11 @@ def fetch_dgt():
 
 
 # ==========================================
-# UP SCVT / VPPUP
+# SCVT KEYWORDS
 # ==========================================
 
 SCVT_KEYWORDS = [
+
     "admission",
     "registration",
     "merit",
@@ -346,6 +340,7 @@ SCVT_KEYWORDS = [
     "seat",
     "allotment",
     "notice",
+
     "प्रवेश",
     "रजिस्ट्रेशन",
     "पंजीकरण",
@@ -353,8 +348,13 @@ SCVT_KEYWORDS = [
     "काउंसलिंग",
     "सीट",
     "आवंटन"
+
 ]
 
+
+# ==========================================
+# UP SCVT / VPPUP
+# ==========================================
 
 def fetch_scvt():
 
@@ -369,6 +369,7 @@ def fetch_scvt():
         "https://admissionscvtup.in/"
 
     ]
+
 
     for site_url in sites:
 
@@ -387,11 +388,13 @@ def fetch_scvt():
                 "html.parser"
             )
 
+
             found = 0
 
-            # ----------------------------------
+
+            # ==================================
             # LINKS
-            # ----------------------------------
+            # ==================================
 
             for a in soup.find_all("a"):
 
@@ -405,7 +408,9 @@ def fetch_scvt():
                 if len(title) < 8:
                     continue
 
+
                 title_lower = title.lower()
+
 
                 matched = any(
                     word.lower()
@@ -413,23 +418,28 @@ def fetch_scvt():
                     for word in SCVT_KEYWORDS
                 )
 
+
                 if not matched:
                     continue
+
 
                 href = normalize_url(
                     site_url,
                     a.get("href")
                 )
 
+
                 date = extract_date(
                     title
                 )
+
 
                 if not date:
 
                     date = datetime.now().strftime(
                         "%d-%m-%Y"
                     )
+
 
                 add_update(
                     "UP SCVT",
@@ -438,14 +448,17 @@ def fetch_scvt():
                     href
                 )
 
+
                 found += 1
+
 
                 if len(updates) >= MAX_ITEMS:
                     return
 
-            # ----------------------------------
+
+            # ==================================
             # BUTTONS
-            # ----------------------------------
+            # ==================================
 
             for button in soup.find_all(
                 "button"
@@ -458,10 +471,13 @@ def fetch_scvt():
                     )
                 )
 
+
                 if len(title) < 8:
                     continue
 
+
                 title_lower = title.lower()
+
 
                 matched = any(
                     word.lower()
@@ -469,8 +485,10 @@ def fetch_scvt():
                     for word in SCVT_KEYWORDS
                 )
 
+
                 if not matched:
                     continue
+
 
                 add_update(
                     "UP SCVT",
@@ -481,10 +499,13 @@ def fetch_scvt():
                     site_url
                 )
 
+
                 found += 1
+
 
                 if len(updates) >= MAX_ITEMS:
                     return
+
 
             print(
                 "SCVT checked:",
@@ -492,6 +513,7 @@ def fetch_scvt():
                 "| Found:",
                 found
             )
+
 
         except Exception as e:
 
@@ -505,7 +527,7 @@ def fetch_scvt():
 
 
 # ==========================================
-# SORT
+# SORT ALL UPDATES
 # ==========================================
 
 def sort_updates():
@@ -532,16 +554,6 @@ def save_updates():
 
     sort_updates()
 
-    os.makedirs(
-        os.path.dirname(
-            OUTPUT_FILE
-        ),
-        exist_ok=True
-    )
-
-    # --------------------------------------
-    # केवल successful data save करें
-    # --------------------------------------
 
     if not updates:
 
@@ -549,12 +561,21 @@ def save_updates():
             "No updates collected."
         )
 
-        # पुराने JSON को delete नहीं करें
         return
+
+
+    os.makedirs(
+        os.path.dirname(
+            OUTPUT_FILE
+        ),
+        exist_ok=True
+    )
+
 
     final_updates = updates[
         :MAX_ITEMS
     ]
+
 
     with open(
         OUTPUT_FILE,
@@ -569,6 +590,7 @@ def save_updates():
             indent=2
         )
 
+
     print(
         "Saved:",
         len(final_updates),
@@ -576,7 +598,7 @@ def save_updates():
     )
 
     print(
-        "Output:",
+        "File:",
         OUTPUT_FILE
     )
 
@@ -587,9 +609,7 @@ def save_updates():
 
 if __name__ == "__main__":
 
-    print(
-        "=" * 60
-    )
+    print("=" * 60)
 
     print(
         "ITI STUDY CENTRE"
@@ -599,36 +619,36 @@ if __name__ == "__main__":
         "OFFICIAL UPDATES AUTO UPDATE"
     )
 
-    print(
-        "=" * 60
-    )
+    print("=" * 60)
 
-    # DGT first
+
+    # DGT
     fetch_dgt()
 
-    # SCVT second
+
+    # UP SCVT
     fetch_scvt()
+
 
     # Latest first
     sort_updates()
 
-    # Save JSON
+
+    # Save
     save_updates()
 
-    print(
-        "=" * 60
-    )
+
+    print("=" * 60)
 
     print(
-        "LATEST UPDATES:"
+        "ALL UPDATES:"
     )
 
-    print(
-        "=" * 60
-    )
+    print("=" * 60)
+
 
     for index, item in enumerate(
-        updates[:MAX_ITEMS],
+        updates,
         start=1
     ):
 
@@ -642,14 +662,11 @@ if __name__ == "__main__":
             item["title"]
         )
 
-    print(
-        "=" * 60
-    )
+
+    print("=" * 60)
 
     print(
         "UPDATE PROCESS COMPLETED"
     )
 
-    print(
-        "=" * 60
-    )
+    print("=" * 60)
