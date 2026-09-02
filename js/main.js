@@ -4,15 +4,25 @@
 ===================================== */
 
 document.addEventListener("DOMContentLoaded", function() {
+
     initSearch();
+
     loadNews();
+
     loadNotes();
+
     loadEngineering();
+
     loadUpdates();
+
     initScrollTop();
+
     initContentProtection();
 
-    console.log("ITI Study Centre v9.0 Loaded - Header/Footer Safe!");
+    console.log(
+        "ITI Study Centre v9.0 Loaded - Header/Footer Safe!"
+    );
+
 });
 
 
@@ -23,38 +33,56 @@ document.addEventListener("DOMContentLoaded", function() {
 function initSearch() {
 
     const input =
-        document.querySelector(".search-section input");
+        document.querySelector(
+            ".search-section input"
+        );
 
     if (!input) return;
 
-    input.addEventListener("keyup", function () {
 
-        const keyword =
-            this.value.toLowerCase().trim();
+    input.addEventListener(
+        "keyup",
+        function() {
 
-        const cards =
-            document.querySelectorAll(
-                ".card,.result-card,.updates-card,.feature-card"
+            const keyword =
+                this.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const cards =
+                document.querySelectorAll(
+                    ".card,.result-card,.updates-card,.feature-card"
+                );
+
+
+            cards.forEach(
+                card => {
+
+                    const text =
+                        card.innerText
+                            .toLowerCase();
+
+
+                    if (
+                        text.includes(keyword)
+                    ) {
+
+                        card.style.display =
+                            "";
+
+                    } else {
+
+                        card.style.display =
+                            "none";
+
+                    }
+
+                }
             );
 
-        cards.forEach(card => {
-
-            const text =
-                card.innerText.toLowerCase();
-
-            if (text.includes(keyword)) {
-
-                card.style.display = "";
-
-            } else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    });
+        }
+    );
 
 }
 
@@ -75,13 +103,16 @@ async function loadJSON(file) {
                 }
             );
 
+
         if (!response.ok) {
 
             throw new Error(file);
 
         }
 
+
         return await response.json();
+
 
     } catch (error) {
 
@@ -90,6 +121,7 @@ async function loadJSON(file) {
             file,
             error
         );
+
 
         return [];
 
@@ -105,9 +137,13 @@ async function loadJSON(file) {
 async function loadNews() {
 
     const news =
-        await loadJSON("data/news.json");
+        await loadJSON(
+            "data/news.json"
+        );
+
 
     if (!news.length) return;
+
 
     console.log(
         "News Loaded",
@@ -124,9 +160,13 @@ async function loadNews() {
 async function loadNotes() {
 
     const notes =
-        await loadJSON("data/notes.json");
+        await loadJSON(
+            "data/notes.json"
+        );
+
 
     if (!notes.length) return;
+
 
     console.log(
         "Notes Loaded",
@@ -143,9 +183,13 @@ async function loadNotes() {
 async function loadEngineering() {
 
     const engineering =
-        await loadJSON("data/engineering.json");
+        await loadJSON(
+            "data/engineering.json"
+        );
+
 
     if (!engineering.length) return;
+
 
     console.log(
         "Engineering Loaded",
@@ -157,8 +201,8 @@ async function loadEngineering() {
 
 /* =====================================
    LATEST OFFICIAL UPDATES
-   DGT / SCVT
-   SHOW ONLY LATEST 2
+   SHOW ALL
+   AUTO UPDATE DATA
 ===================================== */
 
 async function loadUpdates() {
@@ -168,18 +212,16 @@ async function loadUpdates() {
             "official-updates"
         );
 
+
     if (!container) return;
 
 
     try {
 
-        /* =================================
-           LOAD UPDATES JSON
-        ================================= */
-
         const response =
             await fetch(
-                "data/updates.json?v=" + Date.now(),
+                "data/updates.json?v=" +
+                Date.now(),
                 {
                     cache: "no-store"
                 }
@@ -198,10 +240,6 @@ async function loadUpdates() {
         const updates =
             await response.json();
 
-
-        /* =================================
-           CHECK DATA
-        ================================= */
 
         if (
             !Array.isArray(updates) ||
@@ -238,11 +276,10 @@ async function loadUpdates() {
             }
 
 
-            /* -----------------------------
-               DD-MM-YYYY
+            /* DD-MM-YYYY
                DD/MM/YYYY
                DD.MM.YYYY
-            ----------------------------- */
+            */
 
             let match =
                 value.match(
@@ -261,9 +298,7 @@ async function loadUpdates() {
             }
 
 
-            /* -----------------------------
-               YYYY-MM-DD
-            ----------------------------- */
+            /* YYYY-MM-DD */
 
             match =
                 value.match(
@@ -281,10 +316,6 @@ async function loadUpdates() {
 
             }
 
-
-            /* -----------------------------
-               Browser Date Parser
-            ----------------------------- */
 
             const parsed =
                 Date.parse(value);
@@ -315,81 +346,76 @@ async function loadUpdates() {
 
 
         /* =================================
-           ONLY LATEST 2
+           SHOW ALL
         ================================= */
 
-        const latestTwo =
-            sortedUpdates.slice(0, 2);
+        let html =
+            "<ul>";
 
 
-        /* =================================
-           DISPLAY LATEST 2
-        ================================= */
+        sortedUpdates.forEach(
+            function(item) {
 
-        let html = "";
-
-
-        latestTwo.forEach(function(item) {
-
-            const title =
-                item.title ||
-                item.name ||
-                "Official Update";
+                const title =
+                    item.title ||
+                    item.name ||
+                    "Official Update";
 
 
-            const link =
-                item.link ||
-                item.url ||
-                "#";
+                const link =
+                    item.link ||
+                    item.url ||
+                    "#";
 
 
-            const date =
-                item.date ||
-                item.upload_date ||
-                item.published_date ||
-                "";
+                const date =
+                    item.date ||
+                    item.upload_date ||
+                    item.published_date ||
+                    "";
 
 
-            html += `
+                html += `
 
-                <div class="official-update-item">
+                    <li>
 
-                    ${
-                        date
-                        ? `
-                            <div class="official-update-date">
-                                📅 ${date}
-                            </div>
-                          `
-                        : ""
-                    }
+                        ${
+                            date
+                            ? `
+                                <span class="update-date">
+                                    ${date}
+                                </span>
+                              `
+                            : ""
+                        }
 
-                    <a
-                        href="${link}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        ${title}
-                    </a>
+                        <a
+                            href="${link}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ${title}
+                        </a>
 
-                </div>
+                    </li>
 
-            `;
+                `;
 
-        });
+            }
+        );
 
 
-        /* =================================
-           PUT INTO PAGE
-        ================================= */
+        html +=
+            "</ul>";
+
 
         container.innerHTML =
             html;
 
 
         console.log(
-            "Latest 2 Official Updates Loaded:",
-            latestTwo
+            "All Official Updates Loaded:",
+            sortedUpdates.length
         );
 
 
@@ -420,12 +446,13 @@ function initScrollTop() {
             "scrollTop"
         );
 
+
     if (!btn) return;
 
 
     window.addEventListener(
         "scroll",
-        function() {
+        () => {
 
             if (
                 window.scrollY > 300
@@ -447,7 +474,7 @@ function initScrollTop() {
 
     btn.addEventListener(
         "click",
-        function() {
+        () => {
 
             window.scrollTo({
 
@@ -488,9 +515,7 @@ function initContentProtection() {
     );
 
 
-    /* -----------------------------
-       Right Click
-    ----------------------------- */
+    /* RIGHT CLICK */
 
     document.addEventListener(
         "contextmenu",
@@ -502,9 +527,7 @@ function initContentProtection() {
     );
 
 
-    /* -----------------------------
-       Drag
-    ----------------------------- */
+    /* DRAG */
 
     document.addEventListener(
         "dragstart",
@@ -516,9 +539,7 @@ function initContentProtection() {
     );
 
 
-    /* -----------------------------
-       Copy
-    ----------------------------- */
+    /* COPY */
 
     document.addEventListener(
         "copy",
@@ -534,9 +555,7 @@ function initContentProtection() {
     );
 
 
-    /* -----------------------------
-       Cut
-    ----------------------------- */
+    /* CUT */
 
     document.addEventListener(
         "cut",
@@ -548,9 +567,7 @@ function initContentProtection() {
     );
 
 
-    /* -----------------------------
-       Keyboard Protection
-    ----------------------------- */
+    /* KEYBOARD */
 
     document.addEventListener(
         "keydown",
