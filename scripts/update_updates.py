@@ -1,9 +1,11 @@
 import json
 import os
+import re
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from urllib.parse import urljoin
+
 
 # ==========================================
 # CONFIGURATION
@@ -19,8 +21,14 @@ HEADERS = {
 
 MAX_ITEMS = 10
 
+BASE_DIR = os.path.dirname(
+    os.path.dirname(
+        os.path.abspath(__file__)
+    )
+)
+
 OUTPUT_FILE = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    BASE_DIR,
     "data",
     "updates.json"
 )
@@ -33,27 +41,37 @@ seen = set()
 # COMMON FUNCTIONS
 # ==========================================
 
+def clean_text(text):
+
+    if not text:
+        return ""
+
+    return " ".join(
+        str(text).split()
+    ).strip()
+
+
 def normalize_url(base, href):
+
     if not href:
         return ""
 
     href = href.strip()
 
-    if href.startswith("#"):
+    if not href:
         return ""
 
-    return urljoin(base, href)
-
-
-def clean_text(text):
-    if not text:
-        return ""
-
-    return " ".join(text.split()).strip()
+    return urljoin(
+        base,
+        href
+    )
 
 
 def is_duplicate(title):
-    key = clean_text(title).lower()
+
+    key = clean_text(
+        title
+    ).lower()
 
     if not key:
         return True
@@ -62,10 +80,17 @@ def is_duplicate(title):
         return True
 
     seen.add(key)
+
     return False
 
 
-def add_update(source, title, date, url):
+def add_update(
+    source,
+    title,
+    date,
+    url
+):
+
     title = clean_text(title)
     date = clean_text(date)
     url = clean_text(url)
@@ -85,26 +110,232 @@ def add_update(source, title, date, url):
 
 
 # ==========================================
-# KEYWORDS
+# DATE FUNCTIONS
 # ==========================================
 
-DGT_KEYWORDS = [
-    "exam",
-    "examination",
-    "schedule",
-    "result",
-    "notification",
-    "notice",
-    "cbt",
-    "cts",
-    "aitt",
-    "परीक्षा",
-    "परिणाम",
-    "सूचना",
-    "शेड्यूल",
-    "परीक्षा कार्यक्रम",
-    "संशोधित कार्यक्रम"
-]
+def extract_date(text):
+
+    if not text:
+        return ""
+
+    text = clean_text(text)
+
+    # DD-MM-YYYY
+    match = re.search(
+        r"\b(\d{1,2})-(\d{1,2})-(\d{4})\b",
+        text
+    )
+
+    if match:
+
+        return (
+            f"{int(match.group(1)):02d}-"
+            f"{int(match.group(2)):02d}-"
+            f"{match.group(3)}"
+        )
+
+    # DD/MM/YYYY
+    match = re.search(
+        r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b",
+        text
+    )
+
+    if match:
+
+        return (
+            f"{int(match.group(1)):02d}-"
+            f"{int(match.group(2)):02d}-"
+            f"{match.group(3)}"
+        )
+
+    # DD.MM.YYYY
+    match = re.search(
+        r"\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b",
+        text
+    )
+
+    if match:
+
+        return (
+            f"{int(match.group(1)):02d}-"
+            f"{int(match.group(2)):02d}-"
+            f"{match.group(3)}"
+        )
+
+    return ""
+
+
+def date_for_sort(value):
+
+    if not value:
+        return datetime.min
+
+    try:
+
+        return datetime.strptime(
+            value,
+            "%d-%m-%Y"
+        )
+
+    except ValueError:
+
+        return datetime.min
+
+
+# ==========================================
+# DGT EXAM CORNER
+# ==========================================
+
+def fetch_dgt():
+
+    print(
+        "Checking DGT Exam Corner..."
+    )
+
+    base = "https://www.dgt.gov.in"
+
+    url = (
+        "https://www.dgt.gov.in/"
+        "hi/exam-corner"
+    )
+
+    try:
+
+        response = requests.get(
+            url,
+            headers=HEADERS,
+            timeout=30
+        )
+
+        response.raise_for_status()
+
+        soup = BeautifulSoup(
+            response.text,
+            "html.parser"
+        )
+
+        table = soup.select_one(
+            "table.views-table"
+        )
+
+        if not table:
+
+            print(
+                "DGT table not found."
+            )
+
+            return
+
+        rows = table.select(
+            "tbody tr"
+        )
+
+        print(
+            "DGT Rows Found:",
+            len(rows)
+        )
+
+        for row in rows:
+
+            cols = row.find_all("td")
+
+            # Actual DGT structure:
+            #
+            # 0 = S.No
+            # 1 = Title
+            # 2 = Details
+            # 3 = Attachment
+
+            if len(cols) < 3:
+                continue
+
+            # ------------------------------
+            # TITLE
+            # ------------------------------
+
+            title = clean_text(
+                cols[1].get_text(
+                    " ",
+                    strip=True
+                )
+            )
+
+            # ------------------------------
+            # DETAILS
+            # ------------------------------
+
+            details = clean_text(
+                cols[2].get_text(
+                    " ",
+                    strip=True
+                )
+            )
+
+            # ------------------------------
+            # DATE IS INSIDE DETAILS
+            # ------------------------------
+
+            date = extract_date(
+                details
+            )
+
+            # ------------------------------
+            # DOWNLOAD LINK
+            # ------------------------------
+
+            href = ""
+
+            # पहले attachment column
+            if len(cols) >= 4:
+
+                link = cols[3].find("a")
+
+                if link:
+
+                    href = normalize_url(
+                        base,
+                        link.get("href")
+                    )
+
+            # fallback - पूरे row में link
+            if not href:
+
+                link = row.find("a")
+
+                if link:
+
+                    href = normalize_url(
+                        base,
+                        link.get("href")
+                    )
+
+            # ------------------------------
+            # ADD
+            # ------------------------------
+
+            add_update(
+                "DGT",
+                title,
+                date,
+                href
+            )
+
+        print(
+            "DGT Updates Collected:",
+            len(updates)
+        )
+
+    except Exception as e:
+
+        print(
+            "DGT ERROR:",
+            e
+        )
+
+
+# ==========================================
+# UP SCVT / VPPUP
+# ==========================================
 
 SCVT_KEYWORDS = [
     "admission",
@@ -125,187 +356,300 @@ SCVT_KEYWORDS = [
 ]
 
 
-# ==========================================
-# DATE HELPERS
-# ==========================================
+def fetch_scvt():
 
-def parse_date(value):
-    """
-    Website से मिलने वाली अलग-अलग date formats को
-    datetime object में बदलने की कोशिश करता है।
-    """
+    print(
+        "Checking UP SCVT..."
+    )
 
-    if not value:
-        return None
+    sites = [
 
-    value = clean_text(value)
+        "https://www.vppup.in/",
+        "https://www.scvtup.in/",
+        "https://admissionscvtup.in/"
 
-    formats = [
-        "%d-%m-%Y",
-        "%d/%m/%Y",
-        "%d.%m.%Y",
-        "%d-%m-%y",
-        "%d/%m/%y",
-        "%d %B %Y",
-        "%d %b %Y",
-        "%Y-%m-%d"
     ]
 
-    for fmt in formats:
+    for site_url in sites:
+
         try:
-            return datetime.strptime(value, fmt)
-        except ValueError:
-            pass
 
-    return None
+            response = requests.get(
+                site_url,
+                headers=HEADERS,
+                timeout=30
+            )
 
+            response.raise_for_status()
 
-def date_for_sort(value):
-    parsed = parse_date(value)
+            soup = BeautifulSoup(
+                response.text,
+                "html.parser"
+            )
 
-    if parsed:
-        return parsed
+            found = 0
 
-    return datetime.min
+            # ----------------------------------
+            # LINKS
+            # ----------------------------------
 
-
-# ==========================================
-# DGT EXAM CORNER
-# ==========================================
-
-def fetch_dgt():
-
-    print("Checking DGT Exam Corner...")
-
-    base = "https://dgt.gov.in"
-    url = "https://dgt.gov.in/hi/exam-corner"
-
-    try:
-
-        response = requests.get(
-            url,
-            headers=HEADERS,
-            timeout=30
-        )
-
-        response.raise_for_status()
-
-        soup = BeautifulSoup(
-            response.text,
-            "html.parser"
-        )
-
-        # --------------------------------------
-        # DGT table
-        # --------------------------------------
-
-        table = soup.select_one("table.views-table")
-
-        if table:
-
-            rows = table.select("tbody tr")
-
-            print("DGT Rows Found:", len(rows))
-
-            for row in rows:
-
-                cols = row.find_all("td")
-
-                if len(cols) < 3:
-                    continue
-
-                # सामान्यतः:
-                # Date | Title | Details | Download
-
-                date = clean_text(
-                    cols[0].get_text(" ", strip=True)
-                )
+            for a in soup.find_all("a"):
 
                 title = clean_text(
-                    cols[1].get_text(" ", strip=True)
+                    a.get_text(
+                        " ",
+                        strip=True
+                    )
                 )
 
-                details = ""
+                if len(title) < 8:
+                    continue
 
-                if len(cols) >= 3:
-                    details = clean_text(
-                        cols[2].get_text(" ", strip=True)
-                    )
-
-                link = row.find("a")
-
-                href = ""
-
-                if link:
-                    href = normalize_url(
-                        base,
-                        link.get("href")
-                    )
-
-                # यदि title खाली हो तो details use करें
-                if len(title) < 10:
-                    title = details
-
-                # ----------------------------------
-                # केवल relevant DGT notices
-                # ----------------------------------
-
-                combined = (
-                    title + " " + details
-                ).lower()
+                title_lower = title.lower()
 
                 matched = any(
-                    word.lower() in combined
-                    for word in DGT_KEYWORDS
+                    word.lower()
+                    in title_lower
+                    for word in SCVT_KEYWORDS
+                )
+
+                if not matched:
+                    continue
+
+                href = normalize_url(
+                    site_url,
+                    a.get("href")
+                )
+
+                date = extract_date(
+                    title
+                )
+
+                if not date:
+
+                    date = datetime.now().strftime(
+                        "%d-%m-%Y"
+                    )
+
+                add_update(
+                    "UP SCVT",
+                    title,
+                    date,
+                    href
+                )
+
+                found += 1
+
+                if len(updates) >= MAX_ITEMS:
+                    return
+
+            # ----------------------------------
+            # BUTTONS
+            # ----------------------------------
+
+            for button in soup.find_all(
+                "button"
+            ):
+
+                title = clean_text(
+                    button.get_text(
+                        " ",
+                        strip=True
+                    )
+                )
+
+                if len(title) < 8:
+                    continue
+
+                title_lower = title.lower()
+
+                matched = any(
+                    word.lower()
+                    in title_lower
+                    for word in SCVT_KEYWORDS
                 )
 
                 if not matched:
                     continue
 
                 add_update(
-                    "DGT",
+                    "UP SCVT",
                     title,
-                    date,
-                    href
+                    datetime.now().strftime(
+                        "%d-%m-%Y"
+                    ),
+                    site_url
                 )
 
-        # --------------------------------------
-        # Fallback: यदि table structure बदल जाए
-        # --------------------------------------
+                found += 1
 
-        if not table:
+                if len(updates) >= MAX_ITEMS:
+                    return
 
             print(
-                "DGT table not found - using fallback parser"
+                "SCVT checked:",
+                site_url,
+                "| Found:",
+                found
             )
 
-            for item in soup.find_all(
-                ["article", "li", "tr"]
-            ):
+        except Exception as e:
 
-                text = clean_text(
-                    item.get_text(" ", strip=True)
-                )
+            print(
+                "SCVT ERROR:",
+                site_url,
+                e
+            )
 
-                if len(text) < 15:
-                    continue
+            continue
 
-                matched = any(
-                    word.lower() in text.lower()
-                    for word in DGT_KEYWORDS
-                )
 
-                if not matched:
-                    continue
+# ==========================================
+# SORT
+# ==========================================
 
-                link = item.find("a")
+def sort_updates():
 
-                href = ""
+    global updates
 
-                if link:
-                    href = normalize_url(
-                        base,
-                        link.get("href")
-                    )
+    updates.sort(
+        key=lambda item:
+        date_for_sort(
+            item.get(
+                "date",
+                ""
+            )
+        ),
+        reverse=True
+    )
 
-               
+
+# ==========================================
+# SAVE JSON
+# ==========================================
+
+def save_updates():
+
+    sort_updates()
+
+    os.makedirs(
+        os.path.dirname(
+            OUTPUT_FILE
+        ),
+        exist_ok=True
+    )
+
+    # --------------------------------------
+    # केवल successful data save करें
+    # --------------------------------------
+
+    if not updates:
+
+        print(
+            "No updates collected."
+        )
+
+        # पुराने JSON को delete नहीं करें
+        return
+
+    final_updates = updates[
+        :MAX_ITEMS
+    ]
+
+    with open(
+        OUTPUT_FILE,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
+        json.dump(
+            final_updates,
+            f,
+            ensure_ascii=False,
+            indent=2
+        )
+
+    print(
+        "Saved:",
+        len(final_updates),
+        "updates"
+    )
+
+    print(
+        "Output:",
+        OUTPUT_FILE
+    )
+
+
+# ==========================================
+# MAIN
+# ==========================================
+
+if __name__ == "__main__":
+
+    print(
+        "=" * 60
+    )
+
+    print(
+        "ITI STUDY CENTRE"
+    )
+
+    print(
+        "OFFICIAL UPDATES AUTO UPDATE"
+    )
+
+    print(
+        "=" * 60
+    )
+
+    # DGT first
+    fetch_dgt()
+
+    # SCVT second
+    fetch_scvt()
+
+    # Latest first
+    sort_updates()
+
+    # Save JSON
+    save_updates()
+
+    print(
+        "=" * 60
+    )
+
+    print(
+        "LATEST UPDATES:"
+    )
+
+    print(
+        "=" * 60
+    )
+
+    for index, item in enumerate(
+        updates[:MAX_ITEMS],
+        start=1
+    ):
+
+        print(
+            index,
+            "|",
+            item["source"],
+            "|",
+            item["date"],
+            "|",
+            item["title"]
+        )
+
+    print(
+        "=" * 60
+    )
+
+    print(
+        "UPDATE PROCESS COMPLETED"
+    )
+
+    print(
+        "=" * 60
+    )
