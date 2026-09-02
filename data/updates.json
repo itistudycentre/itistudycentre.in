@@ -1,72 +1,338 @@
 [
-    {
-        "id": 1,
-        "source": "DGT",
-        "title": "केन्द्रीयकृत प्रायोगिक परीक्षा प्रश्न-पत्रों के कार्यान्वयन हेतु दिशा-निर्देश",
-        "date": "Size: 519.41 किलोबाइट | Language: English | Uploading Date: 30-06-2026 | Format: pdf",
-        "link": "https://dgt.gov.in/sites/default/files/2026-06/Guideline-for-Implementation-of-Centralized-Practical-Examination-Question-Papers_0.pdf"
-    },
-    {
-        "id": 2,
-        "source": "DGT",
-        "title": "शिल्पकार प्रशिक्षण योजना (CTS) के प्रशिक्षुओं के लिए आयोजित अखिल भारतीय व्यवसाय परीक्षा (AITT) – जुलाई 2026 मुख्य परीक्षा के संबंध में विस्तृत दिशा-निर्देश।",
-        "date": "Size: 525.77 किलोबाइट | Language: English | Uploading Date: 09-06-2026 | Format: pdf",
-        "link": "https://dgt.gov.in/sites/default/files/2026-06/Detailed-Guidelines-Regarding-All-India-Trade-Test-%28AITT%29-July-2026-Mains-examination-for-CTS-trainees_2.pdf"
-    },
-    {
-        "id": 3,
-        "source": "DGT",
-        "title": "शीर्ष सात (7) ट्रेडों के लिए केंद्रीकृत प्रायोगिक परीक्षा प्रश्नपत्रों के कार्यान्वयन हेतु सीटीएस",
-        "date": "Size: 565.77 किलोबाइट | Language: English | Uploading Date: 25-05-2026 | Format: pdf",
-        "link": "https://dgt.gov.in/sites/default/files/2026-05/CTS_1.pdf"
-    },
-    {
-        "id": 4,
-        "source": "DGT",
-        "title": "सीटीएस मुख्य परीक्षा 2024–26 / 2025–27 का संशोधित परीक्षा कार्यक्रम",
-        "date": "Size: 349.81 किलोबाइट | Language: English | Uploading Date: 15-05-2026 | Format: pdf",
-        "link": "https://dgt.gov.in/sites/default/files/2026-05/CTS-Mains-Schedule-2026-Rev-2_0.pdf"
-    },
-    {
-        "id": 5,
-        "source": "DGT",
-        "title": "विभिन्न सत्रों एवं प्रशिक्षुओं हेतु सीटीएस मुख्य परीक्षा की संभावित समय-सारणी।",
-        "date": "Size: 229.8 किलोबाइट | Language: English | Uploading Date: 07-05-2026 | Format: pdf",
-        "link": "https://dgt.gov.in/sites/default/files/2026-05/CTS-Mains-2026-Schedule_0.pdf"
-    },
-    {
-        "id": 6,
-        "source": "DGT",
-        "title": "सीटीएस हेतु नए ई-प्रमाणपत्र प्रारूपों के कार्यान्वयन तथा परिणाम स्थिति में संशोधन के संबंध में (प्रशिक्षु – प्रवेश वर्ष 2025 से आगे)",
-        "date": "Size: 1.71 मेगा बाइट | Language: English | Uploading Date: 29-04-2026 | Format: pdf",
-        "link": "https://dgt.gov.in/sites/default/files/2026-04/Marksheet-and-Certificate-Changes_CTS_2025-admission-year-onwards_0.pdf"
-    },
-    {
-        "id": 7,
-        "source": "DGT",
-        "title": "अप्रेंटिसशिप प्रशिक्षण योजना के अंतर्गत नामित ट्रेडों में गैर-आईटीआई/फ्रेशर प्रशिक्षुओं के लिए आयोजित 126वीं अखिल भारतीय ट्रेड परीक्षा (AITT) के संचालन हेतु गतिविधियों की समय-सारिणी",
-        "date": "Size: 926.62 किलोबाइट | Language: English | Uploading Date: 07-04-2026 | Format: pdf",
-        "link": "https://dgt.gov.in/sites/default/files/2026-04/126-AITT-for-Apprentice-Schedule_0.pdf"
-    },
-    {
-        "id": 8,
-        "source": "DGT",
-        "title": "सत्यापन हेतु सार्वजनिक सूचना",
-        "date": "Size: 300.7 किलोबाइट | Language: English | Uploading Date: 02-04-2026 | Format: pdf",
-        "link": "https://dgt.gov.in/sites/default/files/2026-04/Public-Notice-for-Verification_1.pdf"
-    },
-    {
-        "id": 9,
-        "source": "DGT",
-        "title": "सीटीएस के 6 माह के पाठ्यक्रम (बैच-I, अगस्त 2025 में प्रवेशित) के प्रशिक्षुओं हेतु अखिल भारतीय ट्रेड टेस्ट (AITT) – अप्रैल 2026 की मुख्य परीक्षा के संबंध में विस्तृत दिशानिर्देश।",
-        "date": "Size: 223.83 किलोबाइट | Language: English | Uploading Date: 02-04-2026 | Format: pdf",
-        "link": "https://dgt.gov.in/sites/default/files/2026-04/Detailed-Guidelines-Regarding-AITT-April-2026-%286-month%29_0.pdf"
-    },
-    {
-        "id": 10,
-        "source": "DGT",
-        "title": "शिल्पकार प्रशिक्षण योजना (सीटीएस) अखिल भारतीय व्यापार परीक्षा -2026 के लिए 6 महीने के पाठ्यक्रमों का संभावित कार्यक्रम बैच I के प्रशिक्षुओं को अगस्त 2025 में प्रवेश दिया गया था।",
-        "date": "Size: 303.15 किलोबाइट | Language: English | Uploading Date: 23-03-2026 | Format: pdf",
-        "link": "https://dgt.gov.in/sites/default/files/2026-03/CTS-6-Month-Batch-I-Examination-Schedule_0.pdf"
-    }
+  {
+    "source": "DGT",
+    "title": "सीआईटीएस (आरपीएल) के अंतर्गत शिल्प प्रशिक्षकों की अखिल भारतीय व्यवसाय परीक्षा (AITT) – सितंबर 2026 (अनुपूरक परीक्षा) हेतु गतिविधियों की समय-सारिणी के संबंध में।",
+    "date": "31-07-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-08/CITS-RPL-Supplementary-Exam-September2026_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस मुख्य परीक्षा का संशोधित (3.0) कार्यक्रम – संबंधी।",
+    "date": "09-07-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-07/Revised-%283.0%29-Schedule-of-CTS-Mains-Examination-2026_1.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "शिल्पकार प्रशिक्षण योजना (CTS) के अंतर्गत जुलाई, 2026 में आयोजित की जाने वाली अखिल भारतीय व्यवसाय परीक्षा (AITT) में सम्मिलित होने वाले प्रशिक्षुओं के ऑन-द-जॉब प्रशिक्षण (OJT)/परियोजना कार्य के मूल्यांकन के संबंध में।",
+    "date": "03-07-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-07/Circular_3.7.2026_OJT_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "केन्द्रीयकृत प्रायोगिक परीक्षा प्रश्न-पत्रों के कार्यान्वयन हेतु दिशा-निर्देश",
+    "date": "30-06-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-06/Guideline-for-Implementation-of-Centralized-Practical-Examination-Question-Papers_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "शिल्पकार प्रशिक्षण योजना (CTS) के प्रशिक्षुओं के लिए आयोजित अखिल भारतीय व्यवसाय परीक्षा (AITT) – जुलाई 2026 मुख्य परीक्षा के संबंध में विस्तृत दिशा-निर्देश।",
+    "date": "09-06-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-06/Detailed-Guidelines-Regarding-All-India-Trade-Test-%28AITT%29-July-2026-Mains-examination-for-CTS-trainees_2.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "शीर्ष सात (7) ट्रेडों के लिए केंद्रीकृत प्रायोगिक परीक्षा प्रश्नपत्रों के कार्यान्वयन हेतु सीटीएस",
+    "date": "25-05-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-05/CTS_1.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस मुख्य परीक्षा 2024–26 / 2025–27 का संशोधित परीक्षा कार्यक्रम",
+    "date": "15-05-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-05/CTS-Mains-Schedule-2026-Rev-2_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "विभिन्न सत्रों एवं प्रशिक्षुओं हेतु सीटीएस मुख्य परीक्षा की संभावित समय-सारणी।",
+    "date": "07-05-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-05/CTS-Mains-2026-Schedule_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस हेतु नए ई-प्रमाणपत्र प्रारूपों के कार्यान्वयन तथा परिणाम स्थिति में संशोधन के संबंध में (प्रशिक्षु – प्रवेश वर्ष 2025 से आगे)",
+    "date": "29-04-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-04/Marksheet-and-Certificate-Changes_CTS_2025-admission-year-onwards_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "अप्रेंटिसशिप प्रशिक्षण योजना के अंतर्गत नामित ट्रेडों में गैर-आईटीआई/फ्रेशर प्रशिक्षुओं के लिए आयोजित 126वीं अखिल भारतीय ट्रेड परीक्षा (AITT) के संचालन हेतु गतिविधियों की समय-सारिणी",
+    "date": "07-04-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-04/126-AITT-for-Apprentice-Schedule_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सत्यापन हेतु सार्वजनिक सूचना",
+    "date": "02-04-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-04/Public-Notice-for-Verification_1.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस के 6 माह के पाठ्यक्रम (बैच-I, अगस्त 2025 में प्रवेशित) के प्रशिक्षुओं हेतु अखिल भारतीय ट्रेड टेस्ट (AITT) – अप्रैल 2026 की मुख्य परीक्षा के संबंध में विस्तृत दिशानिर्देश।",
+    "date": "02-04-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-04/Detailed-Guidelines-Regarding-AITT-April-2026-%286-month%29_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "शिल्पकार प्रशिक्षण योजना (सीटीएस) अखिल भारतीय व्यापार परीक्षा -2026 के लिए 6 महीने के पाठ्यक्रमों का संभावित कार्यक्रम बैच I के प्रशिक्षुओं को अगस्त 2025 में प्रवेश दिया गया था।",
+    "date": "23-03-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-03/CTS-6-Month-Batch-I-Examination-Schedule_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीआईटीएस (आरपीएल) के अंतर्गत क्राफ्ट इंस्ट्रक्टर के लिए अखिल भारतीय ट्रेड टेस्ट (मार्च 2026) (पूरक परीक्षा) हेतु गतिविधि कार्यक्रम — संबंध में।",
+    "date": "06-02-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-02/Activity-schedule-for-AITT-of-CITS-%28RPL%29_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "अप्रेंटिसशिप प्रशिक्षण योजना के अंतर्गत नामित ट्रेडों में नॉन-आईटीआई / फ्रेशर अप्रेंटिसों के लिए 125वीं अखिल भारतीय ट्रेड टेस्ट (AITT) के आयोजन हेतु गतिविधियों की समय-सारणी।",
+    "date": "20-01-2026",
+    "link": "https://www.dgt.gov.in/sites/default/files/2026-01/125-AITT-for-Apprentices-Schedule-of%20Activities_20012026_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "Skill India Digital Hub (SIDH) पर प्रोफ़ाइल सुधार तथा ई-लीगेसी प्रमाणपत्र में संशोधन संबंधी विषय में।",
+    "date": "23-12-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-12/Profile-and-Legacy-Correction-Orders_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "SIDH पोर्टल पर लीगेसी CTS प्रशिक्षुओं के लिए प्रोफ़ाइल ग्रिवेंस मॉड्यूल – संबंध में",
+    "date": "17-12-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-12/Profile-Grievance-Module-for-Legacy-CTS-Trainees-2014-onwards-on-SIDH_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "CTS शेष/पूरक परीक्षा 2025 की समय-सारणी में संशोधन – संबंधी",
+    "date": "17-12-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-12/Revised-Supplementary-Exam-Schedule_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "स्किल इंडिया डिजिटल हब (SIDH) पर प्रोफ़ाइल सुधार और विरासत प्रमाणपत्र निर्माण— संबंध में।",
+    "date": "28-11-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-11/Profile-correction-and-legacy-certificate-on-SIDH-Timeline_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "अवशिष्ट/पूरक परीक्षा 2025 हेतु विस्तृत दिशानिर्देश – संबंधी",
+    "date": "21-11-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-11/Detailed-Guidelines-Supplementary-2025_1.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "CTS अवशिष्ट/पूरक परीक्षा 2025 हेतु पर्यवेक्षकों और फ्लाइंग स्क्वॉड्स की प्रतिनियुक्ति – संबंधी",
+    "date": "19-11-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-11/Deputation-of-observers-flying-Squad-Supplementary-2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "CTS अवशिष्ट/पूरक परीक्षा 2025 का विस्तृत कार्यक्रम – संबंध में।",
+    "date": "14-11-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-11/Supplementary-Exam-2025-Schedule_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "एनसीवीटीएमआईएस पोर्टल का केवल-पढ़ने-योग्य मोड में प्रवेश",
+    "date": "03-11-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-11/Letter-to-States-RDSDEs_03.11.2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीआईटीएस मुख्य परीक्षा 2025 के अंतर्गत ट्रेड वाइज टॉपर्स – संबंध में।",
+    "date": "14-10-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-10/71-CITS-Trade-Wise-Toppers-AITT-2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस मुख्य परीक्षा-2025 के लिए परीक्षा अभ्यावेदन पंजीकरण विंडो पुनः खोलने के संबंध में।",
+    "date": "10-10-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-10/Reopening_of_Examination_Grievance_Registration_Window_CTS_Mains_Examination_2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीआईटीएस (आरपीएल) मुख्य परीक्षा सत्र 2024-25 तथा अनुपूरक परीक्षा सत्र 2023-24 के अंतर्गत शिल्प प्रशिक्षकों की एआईटीटी की कार्यक्रम-सूची के संबंध में।",
+    "date": "01-10-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-10/Programme%2CActivity-Schedule-and-Guidelines-of-AITT-of-Craft-instructor-under-CITS-RPL-November-2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस मुख्य परीक्षा, 2025 के अंतर्गत व्यवसायवार शीर्षस्थ अभ्यर्थियों के संबंध में।",
+    "date": "01-10-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-10/Trade-Wise-Toppers-CTS-Mains-2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "व्यापार नाम में सुधार हेतु परिपत्र – संबंध में",
+    "date": "29-09-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-09/Trade_Name_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "चतुर्थ कौशल दीक्षांत समारोह (दीक्षांत समारोह)-2025 के लिए टॉपर्स का पुलिस सत्यापन",
+    "date": "29-09-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-09/Police-Verification-of-Toppers-Sep-26-2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "4 अक्टूबर 2025 को नई दिल्ली में आयोजित होने वाले चौथे कौशल दीक्षांत समारोह (दीक्षांत समारोह)-2025 में टॉपर्स और राज्य परीक्षा नियंत्रकों को आमंत्रित किया जाएगा।",
+    "date": "27-09-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-09/Invitation-and-Guidelines-of-Convocation-2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "चौथे कौशल दीक्षांत समारोह (दीक्षांत समारोह) - 2025 हेतु शीर्ष विद्यार्थियों की घोषणा संबंधी स्पष्टीकरण",
+    "date": "25-09-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-09/Clarification_KDS_2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "चतुर्थ कौशल दीक्षांत समारोह (दीक्षांत समारोह) – 2025 हेतु मेधावी विद्यार्थियों की घोषणा",
+    "date": "24-09-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-09/KDS_2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "एनसीवीटी एमआईएस डेटा फ्रीजिंग पर सार्वजनिक सूचना",
+    "date": "10-09-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-09/Public-Notice-on-NCVT-MIS-Data-Freezing_2.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "परिणाम घोषणा एवं परीक्षा अभ्यावेदन अनुसूची - सीटीएस मुख्य परीक्षा सत्र 2023-25",
+    "date": "28-08-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-08/CTS-Mains-2025-Result-Declaration-and-Grevance_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "नामांकित व्यवसायों में अप्रेंटिसशिप प्रशिक्षण योजना के अंतर्गत गैर-आईटीआई/फ्रेशर अप्रेंटिसों के लिए 123वीं अखिल भारतीय व्यवसायिक परीक्षा (AITT) के आयोजन की गतिविधियों का कार्यक्रम।",
+    "date": "21-08-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-08/aitt_123_20250821_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "CTS AITT जुलाई 2025 की मुख्य परीक्षाओं के दौरान प्रेक्षकों और उड़न दस्तों की नियुक्ति",
+    "date": "16-07-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-07/Flying-squad-deputation-order_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "नियमित और निजी प्रशिक्षुओं(संशोधन 3.0) के लिए सत्र 2023-25(दो वर्षीय पाठ्यक्रम का दूसरा वर्ष) 2024- 26(दो वर्षीय पाठ्यक्रम के लिए प्रथम वर्ष) और 2024-25(एक वर्षीय पाठ्यक्रम और छह महीने के पाठ्यक्रम (बैच Iऔर II))के लिए सीटीएस मुख्य परीक्षा की अंतिम अनुसूची",
+    "date": "11-07-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-07/Final%20CTS%20Exam%20Schedule%20_11th%20july%202025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस प्रशिक्षुओं के लिए अखिल भारतीय ट्रेड टेस्ट (एआईटीटी)-जुलाई 2025 मुख्य परीक्षा के संबंध में विस्तृत दिशानिर्देश",
+    "date": "11-07-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-07/Guidelines%20_AITT%20July%202025%20CTS%20Exam_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "एआईटीटी-जुलाई 2025 सीबीटी परीक्षा के लिए संशोधित परीक्षा कार्यक्रम - सीटीएस प्रशिक्षु",
+    "date": "07-07-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-07/Revised-Scheduled_7.07.2025%20%281%29.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "विस्तृत सीटीएस परीक्षा दिशानिर्देश मुख्य परीक्षा जुलाई 2025",
+    "date": "20-06-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-07/Detailed-CTS-Exam-Guidelines-Mains-July-2025.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सत्र 2023-25 ​​के लिए सीटीएस मुख्य परीक्षा का संभावित कार्यक्रम",
+    "date": "08-05-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-07/CTS-Mains-Examination-2025-Tentative-Schedule.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस पूरक परीक्षा-2024 के लिए परीक्षा शिकायत",
+    "date": "06-05-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-07/CTS-supplementary-Exam-Grievance.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "पर्यवेक्षकों और उड़न दस्तों की प्रतिनियुक्ति अनुपूरक मार्च 2025",
+    "date": "17-04-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-04/Deputation_2025.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस पूरक परीक्षा 2025 (संशोधन 3.0) के लिए विस्तृत कार्यक्रम -रेग।",
+    "date": "12-03-2025",
+    "link": "https://www.dgt.gov.in/sites/default/files/2025-03/CTS_Supplementary_2025_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सत्र 2022-24 (दो-वर्षीय पाठ्यक्रम का दूसरा वर्ष) 2023-25 ​​(प्रथम वर्ष से दो-वर्षीय पाठ्यक्रम) और 2023-24 (एक-) के लिए सीटीएस मुख्य परीक्षा-2024 के बचे हुए उम्मीदवारों के लिए मुख्य परीक्षा के दूसरे चरण का आयोजन। वर्ष पाठ्यक्रम और छह महीने का पाठ्यक्रम",
+    "date": "21-11-2024",
+    "link": "https://www.dgt.gov.in/sites/default/files/2024-11/Revised%20Leftover%20Exam%20Schedule_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "दिनांक 12.11.2024 का शुद्धिपत्र समसंख्यक कार्यालय आदेश का परिशिष्ट ए'",
+    "date": "18-11-2024",
+    "link": "https://www.dgt.gov.in/sites/default/files/2024-11/Corrigendum%20to%20Office%20order%2068079_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "बची हुई सीटीएस परीक्षा 2024",
+    "date": "14-11-2024",
+    "link": "https://www.dgt.gov.in/sites/default/files/2024-11/Leftover_CTS_Exam_2024_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस मुख्य परीक्षा के लिए हॉल टिकट पर प्रशिक्षु फोटो के गायब या अनुचित होने के संबंध में।",
+    "date": "09-06-2024",
+    "link": "https://www.dgt.gov.in/sites/default/files/2024-11/document-28%20%281%29.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "क्राफ्ट इंस्ट्रक्टर अंडर किट्स (आरपीएल) के अखिल भारतीय ट्रेड टेस्ट के लिए गतिविधि अनुसूची - सितंबर 2024 के संबंध में",
+    "date": "09-04-2024",
+    "link": "https://www.dgt.gov.in/sites/default/files/2024-11/Activity%20Schedule%20%281%29.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "फरवरी 2024 में वर्ष 2022 के लिए सीआईटीएस (आरपीएल) पूरक परीक्षा के तहत क्राफ्ट प्रशिक्षक के एआईटीटी का कार्यक्रम-तत्संबंधी।",
+    "date": "18-01-2024",
+    "link": "https://www.dgt.gov.in/sites/default/files/2024-02/PROGRA_1_0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "दिसंबर 2023 परीक्षाओं के लिए लंबित प्रैक्टिकल और इंजीनियरिंग ड्राइंग अंकों के प्रवेश के लिए समय-सीमा का विस्तार-संबंधित",
+    "date": "05-01-2024",
+    "link": "https://www.dgt.gov.in/sites/default/files/2024-02/Opening%20Portal%20for%20December%202023%20Trainees.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सीटीएस और डीएसटी पूरक और बचे हुए प्रशिक्षु परीक्षा 2023 के लिए विस्तृत दिशानिर्देश",
+    "date": "18-10-2023",
+    "link": "https://www.dgt.gov.in/sites/default/files/2023-11/Detailed%20guidline%20for%20AITT%20Suppementary%20Exam%20-%202023__0.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "एआईटीटी पूरक परीक्षा - 2023 के लिए विस्तृत दिशानिर्देश",
+    "date": "18-10-2023",
+    "link": "https://www.dgt.gov.in/sites/default/files/2023-11/Detailed_guidline_for_AITT_Suppementary_Exam_2023_.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "सेमेस्टर प्रशिक्षुओं के लिए पोर्टल का साप्ताहिक उद्घाटन",
+    "date": "18-10-2023",
+    "link": "https://www.dgt.gov.in/sites/default/files/2023-11/Weekly_Opening_of_Portal_for_Semester_Trainees.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": "वर्ष 2022 के लिए सीआईटीएस (आरपीएल) मुख्य परीक्षा और वर्ष 2019 के लिए पूरक परीक्षा के तहत क्राफ्ट प्रशिक्षकों की एआईटीटी आयोजित करने के लिए अस्थायी गतिविधि कार्यक्रम अगस्त 2023 में -तत्संबंधी",
+    "date": "26-06-2023",
+    "link": "https://www.dgt.gov.in/sites/default/files/2023-11/Tentative.pdf"
+  },
+  {
+    "source": "DGT",
+    "title": ": सीटीएस और डीएसटी अनुपूरक और बैचलर बोर्ड परीक्षा 2023 की अनुसूची के संबंध में।",
+    "date": "",
+    "link": "https://www.dgt.gov.in/sites/default/files/2023-11/document%20%281%29.pdf"
+  }
 ]
