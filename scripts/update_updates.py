@@ -19,7 +19,8 @@ HEADERS = {
     )
 }
 
-MAX_ITEMS = 50
+# जितने चाहें उतने updates रख सकते हैं
+MAX_ITEMS = 100
 
 BASE_DIR = os.path.dirname(
     os.path.dirname(
@@ -95,6 +96,19 @@ def add_update(
     date = clean_text(date)
     url = clean_text(url)
 
+    # --------------------------------------
+    # IMPORTANT:
+    # DGT Details अगर गलती से title में आ जाए
+    # तो उसे हटाएँ
+    # --------------------------------------
+
+    title = re.sub(
+        r"\s*Size\s*:.*$",
+        "",
+        title,
+        flags=re.IGNORECASE
+    ).strip()
+
     if len(title) < 5:
         return
 
@@ -120,47 +134,30 @@ def extract_date(text):
 
     text = clean_text(text)
 
-    # DD-MM-YYYY
-    match = re.search(
+    patterns = [
+
         r"\b(\d{1,2})-(\d{1,2})-(\d{4})\b",
-        text
-    )
 
-    if match:
-
-        return (
-            f"{int(match.group(1)):02d}-"
-            f"{int(match.group(2)):02d}-"
-            f"{match.group(3)}"
-        )
-
-    # DD/MM/YYYY
-    match = re.search(
         r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b",
-        text
-    )
 
-    if match:
+        r"\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b"
 
-        return (
-            f"{int(match.group(1)):02d}-"
-            f"{int(match.group(2)):02d}-"
-            f"{match.group(3)}"
+    ]
+
+    for pattern in patterns:
+
+        match = re.search(
+            pattern,
+            text
         )
 
-    # DD.MM.YYYY
-    match = re.search(
-        r"\b(\d{1,2})\.(\d{1,2})\.(\d{4})\b",
-        text
-    )
+        if match:
 
-    if match:
-
-        return (
-            f"{int(match.group(1)):02d}-"
-            f"{int(match.group(2)):02d}-"
-            f"{match.group(3)}"
-        )
+            return (
+                f"{int(match.group(1)):02d}-"
+                f"{int(match.group(2)):02d}-"
+                f"{match.group(3)}"
+            )
 
     return ""
 
@@ -226,6 +223,7 @@ def fetch_dgt():
 
             return
 
+
         rows = table.select(
             "tbody tr"
         )
@@ -235,6 +233,16 @@ def fetch_dgt():
             len(rows)
         )
 
+
+        # ==================================
+        # ACTUAL DGT STRUCTURE
+        #
+        # 0 = S.No
+        # 1 = Title
+        # 2 = Details
+        # 3 = Attachment
+        # ==================================
+
         for row in rows:
 
             cols = row.find_all("td")
@@ -243,14 +251,9 @@ def fetch_dgt():
                 continue
 
 
-            # ==================================
-            # DGT TABLE STRUCTURE
-            #
-            # 0 = S.No
-            # 1 = Title
-            # 2 = Details
-            # 3 = Attachment
-            # ==================================
+            # --------------------------------
+            # ONLY TITLE
+            # --------------------------------
 
             title = clean_text(
                 cols[1].get_text(
@@ -258,6 +261,12 @@ def fetch_dgt():
                     strip=True
                 )
             )
+
+
+            # --------------------------------
+            # DETAILS
+            # केवल DATE निकालने के लिए
+            # --------------------------------
 
             details = clean_text(
                 cols[2].get_text(
@@ -267,31 +276,30 @@ def fetch_dgt():
             )
 
 
-            # Date Details में है
             date = extract_date(
                 details
             )
 
 
-            # ==================================
-            # DOWNLOAD LINK
-            # ==================================
+            # --------------------------------
+            # ATTACHMENT LINK
+            # --------------------------------
 
             href = ""
 
             if len(cols) >= 4:
 
-                link = cols[3].find("a")
+                attachment = cols[3].find("a")
 
-                if link:
+                if attachment:
 
                     href = normalize_url(
                         base,
-                        link.get("href")
+                        attachment.get("href")
                     )
 
 
-            # अगर attachment में link नहीं मिला
+            # Fallback
             if not href:
 
                 link = row.find("a")
@@ -303,6 +311,10 @@ def fetch_dgt():
                         link.get("href")
                     )
 
+
+            # --------------------------------
+            # SAVE
+            # --------------------------------
 
             add_update(
                 "DGT",
@@ -453,6 +465,7 @@ def fetch_scvt():
 
 
                 if len(updates) >= MAX_ITEMS:
+
                     return
 
 
@@ -504,6 +517,7 @@ def fetch_scvt():
 
 
                 if len(updates) >= MAX_ITEMS:
+
                     return
 
 
@@ -527,7 +541,7 @@ def fetch_scvt():
 
 
 # ==========================================
-# SORT ALL UPDATES
+# SORT
 # ==========================================
 
 def sort_updates():
@@ -547,7 +561,7 @@ def sort_updates():
 
 
 # ==========================================
-# SAVE JSON
+# SAVE
 # ==========================================
 
 def save_updates():
@@ -598,7 +612,7 @@ def save_updates():
     )
 
     print(
-        "File:",
+        "Output:",
         OUTPUT_FILE
     )
 
@@ -622,21 +636,32 @@ if __name__ == "__main__":
     print("=" * 60)
 
 
+    # --------------------------------------
     # DGT
+    # --------------------------------------
+
     fetch_dgt()
 
 
+    # --------------------------------------
     # UP SCVT
+    # --------------------------------------
+
     fetch_scvt()
 
 
-    # Latest first
+    # --------------------------------------
+    # SORT + SAVE
+    # --------------------------------------
+
     sort_updates()
 
-
-    # Save
     save_updates()
 
+
+    # --------------------------------------
+    # DISPLAY RESULT
+    # --------------------------------------
 
     print("=" * 60)
 
@@ -648,7 +673,7 @@ if __name__ == "__main__":
 
 
     for index, item in enumerate(
-        updates,
+        updates[:MAX_ITEMS],
         start=1
     ):
 
