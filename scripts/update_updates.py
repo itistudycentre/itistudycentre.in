@@ -1,4 +1,5 @@
 import json
+import os
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -11,50 +12,63 @@ from urllib.parse import urljoin
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 Chrome/137 Safari/537.36"
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/137.0.0.0 Safari/537.36"
     )
 }
 
 MAX_ITEMS = 10
 
+OUTPUT_FILE = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "data",
+    "updates.json"
+)
+
 updates = []
 seen = set()
+
 
 # ==========================================
 # COMMON FUNCTIONS
 # ==========================================
 
 def normalize_url(base, href):
-
     if not href:
         return ""
 
-    return urljoin(base, href.strip())
+    href = href.strip()
+
+    if href.startswith("#"):
+        return ""
+
+    return urljoin(base, href)
 
 
 def clean_text(text):
-
-    if text is None:
+    if not text:
         return ""
 
     return " ".join(text.split()).strip()
 
 
 def is_duplicate(title):
+    key = clean_text(title).lower()
 
-    key = title.lower()
+    if not key:
+        return True
 
     if key in seen:
         return True
 
     seen.add(key)
-
     return False
 
 
 def add_update(source, title, date, url):
-
     title = clean_text(title)
+    date = clean_text(date)
+    url = clean_text(url)
 
     if len(title) < 10:
         return
@@ -71,7 +85,7 @@ def add_update(source, title, date, url):
 
 
 # ==========================================
-# FILTER KEYWORDS
+# KEYWORDS
 # ==========================================
 
 DGT_KEYWORDS = [
@@ -87,7 +101,9 @@ DGT_KEYWORDS = [
     "परीक्षा",
     "परिणाम",
     "सूचना",
-    "शेड्यूल"
+    "शेड्यूल",
+    "परीक्षा कार्यक्रम",
+    "संशोधित कार्यक्रम"
 ]
 
 SCVT_KEYWORDS = [
@@ -95,15 +111,64 @@ SCVT_KEYWORDS = [
     "registration",
     "merit",
     "counselling",
+    "counseling",
     "seat",
     "allotment",
     "notice",
     "प्रवेश",
     "रजिस्ट्रेशन",
+    "पंजीकरण",
     "मेरिट",
     "काउंसलिंग",
-    "सीट"
+    "सीट",
+    "आवंटन"
 ]
+
+
+# ==========================================
+# DATE HELPERS
+# ==========================================
+
+def parse_date(value):
+    """
+    Website से मिलने वाली अलग-अलग date formats को
+    datetime object में बदलने की कोशिश करता है।
+    """
+
+    if not value:
+        return None
+
+    value = clean_text(value)
+
+    formats = [
+        "%d-%m-%Y",
+        "%d/%m/%Y",
+        "%d.%m.%Y",
+        "%d-%m-%y",
+        "%d/%m/%y",
+        "%d %B %Y",
+        "%d %b %Y",
+        "%Y-%m-%d"
+    ]
+
+    for fmt in formats:
+        try:
+            return datetime.strptime(value, fmt)
+        except ValueError:
+            pass
+
+    return None
+
+
+def date_for_sort(value):
+    parsed = parse_date(value)
+
+    if parsed:
+        return parsed
+
+    return datetime.min
+
+
 # ==========================================
 # DGT EXAM CORNER
 # ==========================================
@@ -127,269 +192,120 @@ def fetch_dgt():
 
         soup = BeautifulSoup(
             response.text,
-            "lxml"
+            "html.parser"
         )
+
+        # --------------------------------------
+        # DGT table
+        # --------------------------------------
 
         table = soup.select_one("table.views-table")
 
-        if table is None:
-            print("DGT table not found")
-            return
+        if table:
 
-        rows = table.select("tbody tr")
+            rows = table.select("tbody tr")
 
-        print("Rows Found :", len(rows))
+            print("DGT Rows Found:", len(rows))
 
-        for row in rows:
+            for row in rows:
 
-            cols = row.find_all("td")
+                cols = row.find_all("td")
 
-            if len(cols) < 4:
-                continue
-
-            title = clean_text(
-                cols[1].get_text(" ", strip=True)
-            )
-
-            details = clean_text(
-                cols[2].get_text(" ", strip=True)
-            )
-
-            link = cols[3].find("a")
-
-            if not link:
-                continue
-
-            href = normalize_url(
-                base,
-                link.get("href")
-            )
-
-            add_update(
-                "DGT",
-                title,
-                details,
-                href
-            )
-
-            if len(updates) >= MAX_ITEMS:
-                return
-
-    except Exception as e:
-
-        print("DGT ERROR :", e)
-        # ==========================================
-# UP SCVT / VPPUP
-# ==========================================
-
-def fetch_scvt():
-
-    print("Checking UP SCVT...")
-
-    sites = [
-
-        "https://www.vppup.in/",
-        "https://www.scvtup.in/",
-        "https://admissionscvtup.in/"
-
-    ]
-
-    try:
-
-        for url in sites:
-
-            response = requests.get(
-                url,
-                headers=HEADERS,
-                timeout=30
-            )
-
-            response.raise_for_status()
-
-            soup = BeautifulSoup(
-                response.text,
-                "lxml"
-            )
-
-            # All Links
-
-            for a in soup.find_all("a"):
-
-                title = clean_text(
-                    a.get_text(" ", strip=True)
-                )
-
-                if len(title) < 8:
+                if len(cols) < 3:
                     continue
 
-                matched = False
+                # सामान्यतः:
+                # Date | Title | Details | Download
 
-                for word in SCVT_KEYWORDS:
+                date = clean_text(
+                    cols[0].get_text(" ", strip=True)
+                )
 
-                    if word.lower() in title.lower():
+                title = clean_text(
+                    cols[1].get_text(" ", strip=True)
+                )
 
-                        matched = True
-                        break
+                details = ""
+
+                if len(cols) >= 3:
+                    details = clean_text(
+                        cols[2].get_text(" ", strip=True)
+                    )
+
+                link = row.find("a")
+
+                href = ""
+
+                if link:
+                    href = normalize_url(
+                        base,
+                        link.get("href")
+                    )
+
+                # यदि title खाली हो तो details use करें
+                if len(title) < 10:
+                    title = details
+
+                # ----------------------------------
+                # केवल relevant DGT notices
+                # ----------------------------------
+
+                combined = (
+                    title + " " + details
+                ).lower()
+
+                matched = any(
+                    word.lower() in combined
+                    for word in DGT_KEYWORDS
+                )
 
                 if not matched:
                     continue
 
-                href = normalize_url(
-                    url,
-                    a.get("href")
-                )
-
                 add_update(
-                    "UP SCVT",
+                    "DGT",
                     title,
-                    datetime.now().strftime("%d-%m-%Y"),
+                    date,
                     href
                 )
 
-                if len(updates) >= MAX_ITEMS:
-                    return
+        # --------------------------------------
+        # Fallback: यदि table structure बदल जाए
+        # --------------------------------------
 
-            # Popup Buttons
+        if not table:
 
-            for btn in soup.find_all("button"):
-
-                title = clean_text(
-                    btn.get_text(" ", strip=True)
-                )
-
-                if len(title) < 8:
-                    continue
-
-                matched = False
-
-                for word in SCVT_KEYWORDS:
-
-                    if word.lower() in title.lower():
-
-                        matched = True
-                        break
-
-                if not matched:
-                    continue
-
-                add_update(
-                    "UP SCVT",
-                    title,
-                    datetime.now().strftime("%d-%m-%Y"),
-                    url
-                )
-
-                if len(updates) >= MAX_ITEMS:
-                    return
-
-    except Exception as e:
-
-        print("SCVT ERROR :", e)
-        # ==========================================
-# UP SCVT / VPPUP
-# ==========================================
-
-def fetch_scvt():
-
-    print("Checking UP SCVT...")
-
-    sites = [
-
-        "https://www.vppup.in/",
-        "https://www.scvtup.in/",
-        "https://admissionscvtup.in/"
-
-    ]
-
-    try:
-
-        for url in sites:
-
-            response = requests.get(
-                url,
-                headers=HEADERS,
-                timeout=30
+            print(
+                "DGT table not found - using fallback parser"
             )
 
-            response.raise_for_status()
+            for item in soup.find_all(
+                ["article", "li", "tr"]
+            ):
 
-            soup = BeautifulSoup(
-                response.text,
-                "lxml"
-            )
-
-            # All Links
-
-            for a in soup.find_all("a"):
-
-                title = clean_text(
-                    a.get_text(" ", strip=True)
+                text = clean_text(
+                    item.get_text(" ", strip=True)
                 )
 
-                if len(title) < 8:
+                if len(text) < 15:
                     continue
 
-                matched = False
-
-                for word in SCVT_KEYWORDS:
-
-                    if word.lower() in title.lower():
-
-                        matched = True
-                        break
+                matched = any(
+                    word.lower() in text.lower()
+                    for word in DGT_KEYWORDS
+                )
 
                 if not matched:
                     continue
 
-                href = normalize_url(
-                    url,
-                    a.get("href")
-                )
+                link = item.find("a")
 
-                add_update(
-                    "UP SCVT",
-                    title,
-                    datetime.now().strftime("%d-%m-%Y"),
-                    href
-                )
+                href = ""
 
-                if len(updates) >= MAX_ITEMS:
-                    return
+                if link:
+                    href = normalize_url(
+                        base,
+                        link.get("href")
+                    )
 
-            # Popup Buttons
-
-            for btn in soup.find_all("button"):
-
-                title = clean_text(
-                    btn.get_text(" ", strip=True)
-                )
-
-                if len(title) < 8:
-                    continue
-
-                matched = False
-
-                for word in SCVT_KEYWORDS:
-
-                    if word.lower() in title.lower():
-
-                        matched = True
-                        break
-
-                if not matched:
-                    continue
-
-                add_update(
-                    "UP SCVT",
-                    title,
-                    datetime.now().strftime("%d-%m-%Y"),
-                    url
-                )
-
-                if len(updates) >= MAX_ITEMS:
-                    return
-
-    except Exception as e:
-
-        print("SCVT ERROR :", e)
-        
+               
