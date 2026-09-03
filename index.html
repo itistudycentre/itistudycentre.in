@@ -312,8 +312,6 @@
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
 
-
-
 <!-- =========================================
     HEADER (बिना "Suggestions")
 ========================================= -->
@@ -351,12 +349,13 @@
 <div class="updates-card">
 <h2>📢 Latest Official Updates</h2>
 <p>यहाँ DGT, Skill India Digital Portal तथा अन्य आधिकारिक संस्थानों द्वारा जारी नवीनतम अपडेट प्रदर्शित किए जाएंगे।</p>
-<!-- ====== यहाँ बदलाव किया गया है ====== -->
-<!-- Hardcoded <ul> हटाया गया, अब JavaScript डायनामिक HTML डालेगा -->
+
+<!-- ====== JavaScript यहाँ DGT की लाइव अपडेट लोड करेगा ====== -->
 <div id="official-updates">
-<!-- JavaScript यहाँ DGT की लाइव अपडेट लोड करेगा -->
+    <!-- Dynamic Content -->
 </div>
 <!-- ====== बदलाव यहाँ तक ====== -->
+
 </div>
 </div>
 </section>
@@ -529,13 +528,13 @@
     if (dynFooter) dynFooter.remove();
   });
 </script>
+
 <!-- =========================================
-    नया JavaScript – DGT Updates Loader
-    (यह पूरी तरह से आपके पुराने main.js को प्रभावित नहीं करेगा)
+    नया JavaScript – DGT Updates Loader (सिर्फ 5 न्यूज़, बिना फालतू मेटाडाटा)
 ========================================= -->
 <script>
 /* =====================================
-   LATEST OFFICIAL UPDATES
+   LATEST OFFICIAL UPDATES (सिर्फ 5 न्यूज़)
 ===================================== */
 async function loadUpdates() {
 
@@ -584,11 +583,33 @@ async function loadUpdates() {
 
         }
 
+        // ----------------------------------------------
+        // 1. फालतू मेटाडेटा (आकार, भाषा, फॉर्मैट) वाली एंट्री हटाएँ
+        // 2. सिर्फ सबसे नई 5 एंट्री दिखाएँ
+        // ----------------------------------------------
+        const filteredUpdates = updates.filter(function(item) {
+            const title = item.title || "";
+            // अगर टाइटल में "आकार:", "किलोबाइट", "मेगा बाइट", "भाषा:", "फ़ॉर्मैट:" है तो उसे निकाल दें
+            return !title.includes("आकार:") && 
+                   !title.includes("किलोबाइट") && 
+                   !title.includes("मेगा बाइट") && 
+                   !title.includes("भाषा:") && 
+                   !title.includes("फ़ॉर्मैट:");
+        });
+
+        // सिर्फ पहले 5 (जो सबसे नई तारीख वाली हैं, क्योंकि JSON सॉर्टेड है)
+        const latestUpdates = filteredUpdates.slice(0, 5);
+
+        // अगर 5 भी न मिले तो जितनी मिलें उतनी दिखाएँ
+        if (latestUpdates.length === 0) {
+            container.innerHTML = "<p>No latest updates available.</p>";
+            return;
+        }
 
         let html = "";
 
 
-        updates.forEach(
+        latestUpdates.forEach(
             function(item) {
 
                 const title =
@@ -604,11 +625,6 @@ async function loadUpdates() {
                 const date =
                     item.date ||
                     "";
-
-
-                const source =
-                    item.source ||
-                    "Official";
 
 
                 html += `
@@ -659,7 +675,8 @@ async function loadUpdates() {
 
         console.log(
             "Official Updates Loaded:",
-            updates.length
+            latestUpdates.length,
+            "(फालतू मेटाडेटा हटाकर सिर्फ टॉप 5)"
         );
 
 
@@ -683,6 +700,7 @@ document.addEventListener("DOMContentLoaded", function() {
     loadUpdates();
 });
 </script>
+
 <!-- =========================================
     SEO SCHEMA
 ========================================= -->
