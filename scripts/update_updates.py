@@ -68,9 +68,6 @@ def normalize_url(base, href):
 
 
 def extract_date(text):
-    """
-    अलग-अलग date formats में से DD-MM-YYYY निकालता है।
-    """
     text = clean_text(text)
     if not text:
         return ""
@@ -106,12 +103,6 @@ def date_for_sort(date_text):
         return datetime.min
 
 
-def is_pdf(url):
-    if not url:
-        return False
-    return ".pdf" in url.lower() or "application/pdf" in url.lower()
-
-
 def is_duplicate(title, link):
     title_key = clean_text(title).lower()
     link_key = clean_text(link).lower()
@@ -142,13 +133,13 @@ def add_update(source, title, date, link):
 
 
 # ==========================================
-# DGT EXAM CORNER (IMPROVED)
+# DGT EXAM CORNER (IMPROVED - DGT LINK PRIORITY)
 # ==========================================
 
 def fetch_dgt():
     print("")
     print("==========================================")
-    print("CHECKING DGT EXAM CORNER (IMPROVED)")
+    print("CHECKING DGT EXAM CORNER")
     print("==========================================")
 
     try:
@@ -158,12 +149,9 @@ def fetch_dgt():
 
         soup = BeautifulSoup(response.text, "html.parser")
 
-        # ---------- सभी संभावित कंटेनरों को इकट्ठा करें ----------
-        # 1. Table rows
+        # सभी संभावित रो/आइटम कलेक्ट करें
         rows = soup.select("table tr")
-        # 2. Drupal views
         rows += soup.select(".views-row, .views-field, article, li, .item-list li")
-        # 3. कोई भी div जिसमें लिंक और टेक्स्ट हो
         rows += soup.select("div:has(a)")
 
         seen_texts = set()
@@ -174,7 +162,7 @@ def fetch_dgt():
             if len(full_text) < 15:
                 continue
 
-            # ---------- टाइटल निकालें ----------
+            # ---------- टाइटल ----------
             title = ""
             for child in element.find_all(["td", "th", "div", "p", "span", "strong"]):
                 txt = clean_text(child.get_text(" ", strip=True))
@@ -184,16 +172,18 @@ def fetch_dgt():
             if not title or len(title) < 5:
                 title = full_text
 
-            # ---------- तारीख निकालें ----------
+            # ---------- तारीख ----------
             date = extract_date(full_text)
             if date:
                 title = re.sub(r"\b\d{1,2}[-/\.]\d{1,2}[-/\.]\d{4}\b", "", title)
                 title = clean_text(title)
 
-            # ---------- लिंक खोजें ----------
+            # ---------- लिंक (DGT प्रायोरिटी के साथ) ----------
             link = ""
-            # (a) Download / PDF वाला लिंक
-            for a in element.find_all("a", href=True):
+            all_links = element.find_all("a", href=True)
+
+            # 1. सबसे पहले "Download" / "PDF" वाला लिंक ढूंढें
+            for a in all_links:
                 href = a.get("href", "").strip()
                 a_text = clean_text(a.get_text(" ", strip=True)).lower()
                 if "download" in a_text or "डाउनलोड" in a_text or "pdf" in a_text:
@@ -201,45 +191,54 @@ def fetch_dgt():
                     if url:
                         link = url
                         break
-                if not link and href.lower().endswith(".pdf"):
-                    url = normalize_url(DGT_BASE, href)
-                    if url:
-                        link = url
 
-            # (b) अगर अब भी लिंक न मिले तो पहला a ले लें
+            # 2. अगर न मिला, तो कोई भी ऐसा लिंक जो .pdf पर खत्म होता हो
             if not link:
-                first_a = element.find("a", href=True)
-                if first_a:
-                    link = normalize_url(DGT_BASE, first_a.get("href"))
+                for a in all_links:
+                    href = a.get("href", "").strip()
+                    if href.lower().endswith(".pdf"):
+                        url = normalize_url(DGT_BASE, href)
+                        if url:
+                            link = url
+                            break
 
-            # ---------- बेकार शीर्षकों को हटाएँ ----------
+            # 3. अगर फिर भी न मिला, तो पहला वाला लिंक (DGT का इंटरनल पेज)
+            if not link and all_links:
+                first_href = all_links[0].get("href", "").strip()
+                link = normalize_url(DGT_BASE, first_href)
+
+            # 4. अगर लिंक DGT_BASE से शुरू नहीं होता, तो उसे छोड़ दें (क्योंकि आपको DGT पर जाना है)
+            if link and not link.startswith(DGT_BASE):
+                link = ""  # बाहरी लिंक को नज़रअंदाज करें
+
+            # ---------- बेकार शीर्षक ----------
             lower_title = title.lower()
             if lower_title in ["title", "subject", "download", "attachment", "date", "s.no", "sr.no", "serial no"]:
                 continue
 
-            # ---------- डुप्लिकेट चेक ----------
+            # ---------- डुप्लिकेट ----------
             key = (title, link) if link else (title, "")
             if key in seen_texts:
                 continue
             seen_texts.add(key)
 
-            # ---------- स्टोर करें ----------
-            if title and len(title) >= 5:
+            # ---------- सेव ----------
+            if title and len(title) >= 5 and link:
                 add_update("DGT", title, date, link)
                 found += 1
-                print(f"  ✓ Added: {title[:60]}...")
+                print(f"  ✓ Added: {title[:60]}... -> {link[:60]}")
 
         print(f"✅ DGT updates collected: {found}")
 
-        # ---------- FALLBACK: अगर कुछ न मिले तो सभी लिंक्स पर जाएँ ----------
+        # ---------- FALLBACK (अगर टेबल/स्ट्रक्चर न मिले) ----------
         if found == 0:
-            print("⚠️  No structured rows found. Trying fallback: all links...")
+            print("⚠️  No structured data found. Trying fallback on all links...")
             for a in soup.find_all("a", href=True):
                 text = clean_text(a.get_text(" ", strip=True))
                 if len(text) < 10:
                     continue
                 link = normalize_url(DGT_BASE, a.get("href"))
-                if not link:
+                if not link or not link.startswith(DGT_BASE):
                     continue
                 date = extract_date(text)
                 if date:
@@ -255,7 +254,7 @@ def fetch_dgt():
 
 
 # ==========================================
-# SCVT
+# SCVT (बिना बदलाव)
 # ==========================================
 
 SCVT_KEYWORDS = [
