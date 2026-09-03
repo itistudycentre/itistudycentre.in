@@ -265,6 +265,47 @@
       width: auto;
       text-align: center;
     }
+
+    /* ----- Extra style for dynamic updates (match your theme) ----- */
+    .official-update-item {
+      background: #fff;
+      padding: 12px 15px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      border-left: 4px solid #003366;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: 0.2s;
+    }
+    .official-update-item:hover {
+      background: #f8f9fa;
+      border-left-color: #ffcc00;
+    }
+    .official-update-title {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #003366;
+      margin-bottom: 4px;
+    }
+    .official-update-date {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 4px;
+    }
+    .official-update-link a {
+      display: inline-block;
+      background: #003366;
+      color: #fff;
+      padding: 4px 16px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .official-update-link a:hover {
+      background: #002244;
+      transform: scale(1.02);
+    }
   </style>
 </head>
 <body>
@@ -310,13 +351,14 @@
 <div class="updates-card">
 <h2>📢 Latest Official Updates</h2>
 <p>यहाँ DGT, Skill India Digital Portal तथा अन्य आधिकारिक संस्थानों द्वारा जारी नवीनतम अपडेट प्रदर्शित किए जाएंगे।</p>
+
+<!-- ====== यहाँ बदलाव किया गया है ====== -->
+<!-- Hardcoded <ul> हटाया गया, अब JavaScript डायनामिक HTML डालेगा -->
 <div id="official-updates">
-<ul>
-<li><strong>📅 28 July 2026:</strong> SCVT Uttar Pradesh Result Link Active</li>
-<li><strong>📅 15 July 2026:</strong> DGT ने CTS Mains 2026 का Schedule जारी किया</li>
-<li><strong>📅 10 July 2026:</strong> Skill India Digital Portal पर नई CBT Notification</li>
-</ul>
+    <!-- JavaScript यहाँ DGT की लाइव अपडेट लोड करेगा -->
 </div>
+<!-- ====== बदलाव यहाँ तक ====== -->
+
 </div>
 </div>
 </section>
@@ -489,6 +531,162 @@
     if (dynFooter) dynFooter.remove();
   });
 </script>
+
+<!-- =========================================
+    नया JavaScript – DGT Updates Loader
+    (यह पूरी तरह से आपके पुराने main.js को प्रभावित नहीं करेगा)
+========================================= -->
+<script>
+/* =====================================
+   LATEST OFFICIAL UPDATES
+===================================== */
+async function loadUpdates() {
+
+    const container =
+        document.getElementById(
+            "official-updates"
+        );
+
+    if (!container) return;
+
+
+    try {
+
+        const response =
+            await fetch(
+                "data/updates.json?v=" +
+                Date.now(),
+                {
+                    cache: "no-store"
+                }
+            );
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "updates.json not found"
+            );
+
+        }
+
+
+        const updates =
+            await response.json();
+
+
+        if (
+            !Array.isArray(updates) ||
+            updates.length === 0
+        ) {
+
+            container.innerHTML =
+                "<p>No latest updates available.</p>";
+
+            return;
+
+        }
+
+
+        let html = "";
+
+
+        updates.forEach(
+            function(item) {
+
+                const title =
+                    item.title ||
+                    "Official Update";
+
+
+                const link =
+                    item.link ||
+                    "https://www.dgt.gov.in/hi/exam-corner";
+
+
+                const date =
+                    item.date ||
+                    "";
+
+
+                const source =
+                    item.source ||
+                    "Official";
+
+
+                html += `
+
+                    <div class="official-update-item">
+
+                        <div class="official-update-title">
+
+                            ${title}
+
+                        </div>
+
+
+                        ${
+                            date
+                            ? `
+                                <div class="official-update-date">
+                                    ${date}
+                                </div>
+                              `
+                            : ""
+                        }
+
+
+                        <div class="official-update-link">
+
+                            <a
+                                href="${link}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Official Link →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+            }
+        );
+
+
+        container.innerHTML =
+            html;
+
+
+        console.log(
+            "Official Updates Loaded:",
+            updates.length
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            "Official Updates Error:",
+            error
+        );
+
+
+        container.innerHTML =
+            "<p>Latest updates अभी उपलब्ध नहीं हैं।</p>";
+
+    }
+
+}
+
+// जब पेज पूरा लोड हो जाए, तो ऊपर वाला फंक्शन चलाएँ
+document.addEventListener("DOMContentLoaded", function() {
+    loadUpdates();
+});
+</script>
+
 <!-- =========================================
     SEO SCHEMA
 ========================================= -->
@@ -508,4 +706,4 @@
 }
 </script>
 </body>
-</html>
+    </html>
