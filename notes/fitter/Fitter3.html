@@ -1,1 +1,1692 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fitter Theory – Module 3 & 4: Sheet Metal, Riveting & Welding (Complete) | ITI Study Centre</title>
+<meta content="Complete Fitter Theory Module 3 (Sheet Metal, Riveting) & Module 4 (Welding) – NSQF Level 4, Revised 2022. Full NIMI textbook content." name="description"/>
+<style>
+        /* ========== RESET & BASE ========== */
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.8;
+            user-select: none;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
 
+        /* ========== HEADER ========== */
+        .main-header {
+            background: #003366;
+            padding: 16px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        .main-header nav a.notes-link {
+            color: #ffcc00;
+            font-weight: 600;
+        }
+        @media(max-width:768px) {
+            .main-header .container { flex-direction: column; gap: 8px; }
+            .main-header nav { justify-content: center; gap: 6px 14px; }
+            .main-header nav a { font-size: 0.9rem; }
+        }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a { color: #003366; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .current { color: #555; font-weight: 600; }
+
+        /* ========== PAGE TITLE ========== */
+        .page-title {
+            padding: 32px 0 22px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.3rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
+        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
+
+        /* ========== SEARCH ========== */
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 540px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
+        }
+        .search-section button {
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover { background: #002244; transform: scale(1.02); }
+        @media(max-width:640px) {
+            .search-section { flex-direction: column; }
+            .search-section input { max-width: 100%; width: 100%; }
+            .search-section button { width: 100%; }
+        }
+
+        /* ========== CONTENT SECTIONS ========== */
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            margin-bottom: 32px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 20px 28px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            cursor: default;
+            flex-wrap: wrap;
+        }
+        .section-header .icon { font-size: 1.8rem; line-height: 1; }
+        .section-header .title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body { padding: 28px 32px; background: #fafcff; }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-left: 5px solid #ffcc00;
+            padding-left: 18px;
+        }
+        .section-body h3:first-of-type { margin-top: 0; }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.12rem;
+            margin: 20px 0 10px;
+        }
+        .section-body h5 {
+            color: #1e3a5f;
+            font-size: 1.02rem;
+            margin: 16px 0 8px;
+            font-weight: 600;
+        }
+        @media(max-width:768px) {
+            .section-header { padding: 14px 18px; }
+            .section-header .title { font-size: 1.05rem; }
+            .section-body { padding: 18px 18px; }
+            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
+            .section-body h4 { font-size: 1rem; }
+        }
+        @media(max-width:480px) {
+            .section-body { padding: 14px 14px; }
+            .section-header .icon { font-size: 1.4rem; }
+            .section-header .title { font-size: 0.95rem; }
+        }
+
+        /* ========== BILINGUAL ========== */
+        .bilingual { margin: 14px 0; }
+        .bilingual .en {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #1a2a3a;
+        }
+        .bilingual .hi {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #3d3d3d;
+            background: #f0f5ff;
+            padding: 16px 22px;
+            border-radius: 10px;
+            border-left: 5px solid #003366;
+            margin-top: 14px;
+        }
+        .bilingual ul, .bilingual ol { padding-left: 26px; margin: 10px 0; }
+        .bilingual ul li, .bilingual ol li { margin-bottom: 6px; }
+        .bilingual p { margin: 10px 0; }
+        @media(max-width:480px) {
+            .bilingual .en { font-size: 0.95rem; }
+            .bilingual .hi { font-size: 0.9rem; padding: 12px 16px; }
+        }
+
+        /* ========== INFO CARDS ========== */
+        .info-card {
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin: 18px 0;
+            background: #fff;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+        }
+        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
+        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
+        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
+        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
+        .info-card.highlight { border-left: 5px solid #ffc107; background: #fffdf0; }
+        .info-card.danger { border-left: 5px solid #dc3545; background: #fdf0f1; }
+        .info-card h4 { margin: 0 0 6px; color: #003366; }
+        .info-card ul { margin: 0; padding-left: 22px; }
+        .info-card ul li { margin-bottom: 4px; }
+
+        /* ========== IMAGE PLACEHOLDER ========== */
+        .tool-figure {
+            width:100%;
+            max-width:850px;
+            margin:24px auto;
+            text-align:center;
+            background:#f8fafc;
+            border:1px solid #e2e7ed;
+            border-radius:12px;
+            padding:20px;
+            transition:0.2s;
+        }
+        .tool-figure:hover { background:#f0f4fa; }
+        .tool-figure .placeholder-icon {
+            font-size:3.5rem;
+            line-height:1.2;
+            color:#8a9aa8;
+            margin-bottom:6px;
+        }
+        .tool-figure .figure-caption {
+            font-size:0.95rem;
+            color:#555;
+            font-weight:600;
+            margin-top:8px;
+        }
+        .tool-figure .figure-desc {
+            font-size:0.85rem;
+            color:#777;
+            margin-top:4px;
+        }
+        .tool-figure .image-placeholder {
+            display:block;
+            min-height:120px;
+            background:#f0f4fa;
+            border:2px dashed #c7ced7;
+            border-radius:8px;
+            padding:18px;
+            color:#68717c;
+        }
+        .tool-figure .image-placeholder code {
+            background:#e7ebef;
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:0.8rem;
+            display:inline-block;
+            margin:4px 0;
+        }
+        @media(max-width:768px) {
+            .tool-figure { padding:14px; }
+            .tool-figure .placeholder-icon { font-size:2.8rem; }
+        }
+
+        /* ========== TABLES ========== */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 22px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 13px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 11px 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
+        .table-wrap tr:hover { background: #eef2f7; }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        @media(max-width:480px) {
+            .table-wrap table { font-size: 0.85rem; }
+            .table-wrap th, .table-wrap td { padding: 8px 10px; }
+        }
+
+        /* ========== COMPARISON GRID ========== */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin: 20px 0;
+        }
+        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
+        .compare-card {
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .compare-card h4 {
+            font-size: 1.1rem;
+            margin: 0 0 10px;
+            color: #003366;
+        }
+        .compare-card ul { padding-left: 20px; margin: 0; }
+        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        /* ========== EXAMPLE / IMPORTANT / SHORT NOTES ========== */
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .example-box strong { color: #003366; }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .important-box h4 { margin: 0 0 6px; color: #856404; }
+        .important-box ul { padding-left: 22px; margin: 0; }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
+        .short-notes ul { padding-left: 22px; margin: 0; }
+        .warning-box {
+            background: #fff5f2;
+            border-left: 5px solid #dc3545;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
+        .warning-box p { margin: 0; }
+        .success-box {
+            background: #eef9f1;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .success-box h4 { margin: 0 0 6px; color: #1e7e34; }
+        .success-box p { margin: 0; }
+
+        /* ========== SHARE ========== */
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 22px;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.link { background: #6c757d; }
+        .share-btn.link.copied { background: #28a745; }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        @media(max-width:600px) {
+            .share-section { flex-direction: column; align-items: stretch; }
+            .share-section .share-label { text-align: center; }
+            .share-btn { justify-content: center; }
+        }
+
+        /* ========== MCQ LINK ========== */
+        .mcq-link { text-align: center; padding: 12px 0; }
+        .mcq-link a {
+            display: inline-block;
+            padding: 14px 44px;
+            background: #ffcc00;
+            color: #003366 !important;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
+        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
+
+        /* ========== CONCLUSION ========== */
+        .conclusion-section {
+            background: #e8f4fd;
+            border: 2px solid #003366;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .conclusion-section h2 {
+            color: #003366;
+            font-size: 1.6rem;
+            border-left: 5px solid #ffcc00;
+            padding-left: 16px;
+            margin-bottom: 16px;
+        }
+        .conclusion-section ul {
+            padding-left: 26px;
+            margin: 10px 0;
+        }
+        .conclusion-section ul li {
+            margin-bottom: 6px;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 28px 20px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 28px;
+            margin-bottom: 14px;
+        }
+        footer .footer-links a {
+            color: #b0b8c5;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+
+        /* ========== SCROLL TOP ========== */
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover { background: #002244; transform: scale(1.05); }
+
+        /* ========== COPY PROTECTION ========== */
+        .copy-protect::selection { background: #b3d4fc; color: #000; }
+
+        /* ========== PRINT ========== */
+        @media print {
+            #scrollTop, .share-section, .search-section { display: none !important; }
+            body { background: #fff !important; }
+            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+            .section-body { background: #fff !important; }
+            .bilingual .hi { background: #f5f5f5 !important; }
+            .tool-figure { border:1px solid #ccc; break-inside:avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="main-header">
+<div class="container">
+<div class="logo"><a href="/">🔧 ITI Study Centre</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/iti-study-centre-notes.html">Notes</a>
+<a class="active" href="/notes/fitter/index.html">Fitter</a>
+<a href="/question-bank/fitter/index.html">Question Bank</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+<a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+<a href="/notes/fitter/index.html">Fitter Theory</a>  › 
+<span class="current">Module 3 & 4 – Sheet Metal, Riveting & Welding (Complete)</span>
+</div>
+</div>
+
+<!-- ========== PAGE TITLE ========== -->
+<section class="page-title">
+<div class="container">
+<h1>🔧 Fitter Theory – Module 3 & 4<br/>Sheet Metal • Riveting • Welding (Complete NIMI)</h1>
+<p>Full syllabus as per NSQF Level 4 (Revised 2022) • Hindi + English • All exercises covered</p>
+</div>
+</section>
+
+<!-- ========== SEARCH ========== -->
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 Search within this module (type and press Enter)..." type="text"/>
+<button onclick="filterSections()">🔍 Search</button>
+</section>
+
+<!-- ========== SHARE ========== -->
+<div class="container">
+<div class="share-section">
+<span class="share-label">📤 Share this page:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</button>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+Facebook
+</button>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+Twitter
+</button>
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+
+<!-- ========== TABLE OF CONTENTS ========== -->
+<div class="container">
+<div class="content-section" style="border:2px solid #003366;">
+<div class="section-header" style="background:#003366; border-bottom:none;">
+<span class="icon" style="color:#ffcc00;">📚</span>
+<span class="title" style="color:#fff;">विषय-सूची / Table of Contents – Module 3 & 4</span>
+</div>
+<div class="section-body" style="background:#fff;">
+<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
+<a href="#sec-sheetmetal" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📄 Module 3: Sheet Metal (Full)</a>
+<a href="#sec-safety" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🛡️ Safety in Sheet Metal Workshop</a>
+<a href="#sec-sheets" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📋 Metal Sheets & Uses</a>
+<a href="#sec-shears" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">✂️ Hand Lever Shears</a>
+<a href="#sec-tools" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 Sheet Metal Tools</a>
+<a href="#sec-stakes" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 Stakes & Uses</a>
+<a href="#sec-seams" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔗 Sheet Metal Seams</a>
+<a href="#sec-solders" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🧪 Solders</a>
+<a href="#sec-riveting" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 Rivet & Riveting</a>
+<a href="#sec-welding" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚡ Module 4: Welding (Full)</a>
+<a href="#sec-weld-safety" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🛡️ Welding Safety</a>
+<a href="#sec-weld-tools" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 Welding Hand Tools</a>
+<a href="#sec-co2" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">💨 CO₂ Welding Equipment</a>
+<a href="#sec-arc-params" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ Arc Welding Parameters</a>
+<a href="#sec-oxycut" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔥 Oxy-Acetylene Cutting</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- MODULE 3 – SHEET METAL (Full) -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-sheetmetal">
+<div class="content-section" style="border-left:6px solid #ff9900;">
+<div class="section-header" style="background:#fff5e6;">
+<span class="icon">📄</span>
+<span class="title" style="color:#cc7700;">Module 3 – शीट मेटल (Sheet Metal)</span>
+<span class="subtitle">— पूरा सिलेबस (Full Syllabus)</span>
+</div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Module 3 covers all aspects of sheet metal work</strong> — from safety, materials, tools, and seams to soldering and riveting. Sheet metal is one of the most versatile materials in engineering, used in automotive bodies, aircraft skins, ducting, containers, and many other applications.</p>
+<p>This module is based on the NSQF Level 4 syllabus (Revised 2022) and includes every topic with full bilingual explanation, figures, tables, and self-assessment questions.</p>
+</div>
+<div class="hi">
+<p><strong>मॉड्यूल 3 में शीट मेटल के सभी पहलुओं को शामिल किया गया है</strong> — सुरक्षा, सामग्री, उपकरण, सीम, सोल्डरिंग और रिवेटिंग तक। शीट मेटल इंजीनियरिंग में सबसे बहुमुखी सामग्रियों में से एक है, जिसका उपयोग ऑटोमोटिव बॉडी, विमान की त्वचा, डक्टिंग, कंटेनर और कई अन्य अनुप्रयोगों में किया जाता है।</p>
+<p>यह मॉड्यूल NSQF स्तर 4 पाठ्यक्रम (संशोधित 2022) पर आधारित है और इसमें प्रत्येक विषय को पूर्ण द्विभाषी स्पष्टीकरण, आंकड़े, तालिकाएँ और स्व-मूल्यांकन प्रश्नों के साथ शामिल किया गया है।</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 3.1 SAFETY PRECAUTIONS IN SHEET METAL WORKSHOP -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-safety">
+<div class="content-section" data-content="safety">
+<div class="section-header"><span class="icon">🛡️</span><span class="title">3.1 – Safety Precautions in Sheet Metal Workshop</span><span class="subtitle">— Personal safety, tool safety, fire prevention</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Sheet metal workshop safety</strong> is critical because operations involve sharp edges, heavy tools, flying chips, and hazardous equipment.</p>
+<p><strong>General Safety Rules:</strong></p>
+<ul>
+<li><strong>Personal Protection:</strong> Wear safety goggles, gloves, and safety shoes. Use an apron to protect against sharp edges.</li>
+<li><strong>Tool Safety:</strong> Keep all cutting tools sharp and properly maintained. Never use a tool for a purpose it was not designed for.</li>
+<li><strong>Housekeeping:</strong> Keep the work area clean. Remove scrap and sharp metal pieces immediately. Oil spills must be cleaned up to prevent slipping.</li>
+<li><strong>Machine Safety:</strong> Never operate shears, guillotines, or bending machines without proper training. Use machine guards at all times.</li>
+<li><strong>Fire Safety:</strong> Know the location of fire extinguishers. Keep flammable materials away from sources of heat and sparks.</li>
+<li><strong>First Aid:</strong> Know the location of first aid kits. Report all injuries to the supervisor immediately.</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>शीट मेटल कार्यशाला सुरक्षा</strong> महत्वपूर्ण है क्योंकि संचालन में तेज किनारे, भारी उपकरण, उड़ते हुए चिप्स और खतरनाक उपकरण शामिल होते हैं।</p>
+<p><strong>सामान्य सुरक्षा नियम:</strong></p>
+<ul>
+<li><strong>व्यक्तिगत सुरक्षा:</strong> सुरक्षा चश्मा, दस्ताने और सुरक्षा जूते पहनें। तेज किनारों से बचाने के लिए एप्रन का उपयोग करें।</li>
+<li><strong>उपकरण सुरक्षा:</strong> सभी काटने वाले उपकरणों को तीक्ष्ण और ठीक से बनाए रखें। किसी उपकरण का उपयोग उस उद्देश्य के लिए कभी न करें जिसके लिए वह डिज़ाइन नहीं किया गया है।</li>
+<li><strong>गृह व्यवस्था:</strong> कार्य क्षेत्र को साफ रखें। स्क्रैप और तेज धातु के टुकड़ों को तुरंत हटाएँ। तेल रिसाव को साफ करें ताकि फिसलन न हो।</li>
+<li><strong>मशीन सुरक्षा:</strong> उचित प्रशिक्षण के बिना कभी भी शीअर्स, गिलोटिन या बेंडिंग मशीन न चलाएँ। हमेशा मशीन गार्ड का उपयोग करें।</li>
+<li><strong>अग्नि सुरक्षा:</strong> अग्निशामक यंत्रों का स्थान जानें। ज्वलनशील पदार्थों को गर्मी और स्पार्क्स के स्रोतों से दूर रखें।</li>
+<li><strong>प्राथमिक चिकित्सा:</strong> प्राथमिक चिकित्सा किट का स्थान जानें। सभी चोटों की तुरंत पर्यवेक्षक को सूचना दें।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: शीट मेटल कार्यशाला सुरक्षा (Workshop Safety)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/sheet_metal_safety.jpg</p>
+<code>sheet_metal_safety.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(PPE, machine guards, fire extinguisher, first aid)</p>
+</div>
+<div class="figure-caption">Fig 1 – शीट मेटल कार्यशाला में सुरक्षा</div>
+</div>
+<div class="short-notes"><h4>📌 Key Points</h4><ul><li>Always wear <strong>safety goggles and gloves</strong>.</li><li>Keep the work area <strong>clean and dry</strong>.</li><li>Never use <strong>blunt tools</strong>.</li><li>Know the location of <strong>fire extinguishers and first aid kits</strong>.</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 3.2 METAL SHEETS AND THEIR USES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-sheets">
+<div class="content-section" data-content="sheets">
+<div class="section-header"><span class="icon">📋</span><span class="title">3.2 – Metal Sheets and Their Uses / धातु की चादरें और उनके उपयोग</span><span class="subtitle">— Types, gauges, thickness, applications</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Sheet metal</strong> is metal formed into thin, flat pieces. It is one of the most common forms of raw material in engineering and manufacturing.</p>
+<p><strong>Common Sheet Metals:</strong></p>
+<ul>
+<li><strong>Mild Steel (MS) Sheet:</strong> Most common. Used for general fabrication, automobile bodies, and structural components.</li>
+<li><strong>Galvanised Iron (GI) Sheet:</strong> Mild steel coated with zinc to prevent rust. Used for roofing, ducting, and outdoor applications.</li>
+<li><strong>Stainless Steel (SS) Sheet:</strong> Corrosion-resistant. Used for kitchenware, chemical equipment, and medical devices.</li>
+<li><strong>Aluminium Sheet:</strong> Lightweight and corrosion-resistant. Used for aircraft, vehicle panels, and food packaging.</li>
+<li><strong>Copper Sheet:</strong> Excellent conductor of heat and electricity. Used for roofing, jewellery, and electrical applications.</li>
+<li><strong>Brass Sheet:</strong> Copper-zinc alloy. Used for decorative items, musical instruments, and fittings.</li>
+</ul>
+<p><strong>Thickness Measurement (Gauge):</strong> Sheet thickness is measured in <strong>mm</strong> or <strong>Standard Wire Gauge (SWG)</strong>. The higher the gauge number, the thinner the sheet. For example, 18 SWG is approximately 1.2 mm thick, while 22 SWG is approximately 0.7 mm thick.</p>
+<p><strong>Uses of Sheet Metal:</strong> Automotive panels, aircraft skin, ducts, containers, roofing, signage, furniture, electronic enclosures, and countless other applications.</p>
+</div>
+<div class="hi">
+<p><strong>शीट मेटल</strong> धातु को पतले, सपाट टुकड़ों में बनाया जाता है। यह इंजीनियरिंग और विनिर्माण में कच्चे माल के सबसे सामान्य रूपों में से एक है।</p>
+<p><strong>सामान्य शीट धातुएँ:</strong></p>
+<ul>
+<li><strong>माइल्ड स्टील (MS) शीट:</strong> सबसे सामान्य। सामान्य फैब्रिकेशन, ऑटोमोबाइल बॉडी और संरचनात्मक घटकों के लिए उपयोग किया जाता है।</li>
+<li><strong>गैल्वनाइज्ड आयरन (GI) शीट:</strong> जंग रोकने के लिए जस्ता-लेपित माइल्ड स्टील। छत, डक्टिंग और बाहरी अनुप्रयोगों के लिए उपयोग किया जाता है।</li>
+<li><strong>स्टेनलेस स्टील (SS) शीट:</strong> जंग-प्रतिरोधी। रसोई के बर्तन, रासायनिक उपकरण और चिकित्सा उपकरणों के लिए उपयोग किया जाता है।</li>
+<li><strong>एल्यूमीनियम शीट:</strong> हल्का और जंग-प्रतिरोधी। विमान, वाहन पैनल और खाद्य पैकेजिंग के लिए उपयोग किया जाता है।</li>
+<li><strong>तांबे की शीट:</strong> गर्मी और बिजली का उत्कृष्ट संवाहक। छत, आभूषण और विद्युत अनुप्रयोगों के लिए उपयोग किया जाता है।</li>
+<li><strong>पीतल की शीट:</strong> तांबा-जस्ता मिश्र धातु। सजावटी वस्तुओं, संगीत वाद्ययंत्रों और फिटिंग्स के लिए उपयोग किया जाता है।</li>
+</ul>
+<p><strong>मोटाई माप (गेज):</strong> शीट की मोटाई <strong>mm</strong> या <strong>Standard Wire Gauge (SWG)</strong> में मापी जाती है। गेज संख्या जितनी अधिक होगी, शीट उतनी ही पतली होगी। उदाहरण के लिए, 18 SWG लगभग 1.2 mm मोटी होती है, जबकि 22 SWG लगभग 0.7 mm मोटी होती है।</p>
+<p><strong>शीट मेटल के उपयोग:</strong> ऑटोमोटिव पैनल, विमान की त्वचा, डक्ट्स, कंटेनर, छत, साइनेज, फर्नीचर, इलेक्ट्रॉनिक आवास, और अन्य अनगिनत अनुप्रयोग।</p>
+</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>SWG to mm Conversion (Typical) / SWG से mm रूपांतरण</caption>
+<thead><tr><th>SWG</th><th>Thickness (mm)</th><th>Common Use</th></tr></thead>
+<tbody>
+<tr><td>14</td><td>2.03</td><td>Heavy structural</td></tr>
+<tr><td>16</td><td>1.63</td><td>Automotive panels</td></tr>
+<tr><td>18</td><td>1.22</td><td>General fabrication</td></tr>
+<tr><td>20</td><td>0.91</td><td>Ducting, enclosures</td></tr>
+<tr><td>22</td><td>0.71</td><td>Lightweight panels</td></tr>
+<tr><td>24</td><td>0.56</td><td>Decorative work</td></tr>
+<tr><td>26</td><td>0.46</td><td>Very thin sheets</td></tr>
+</tbody>
+</table>
+</div>
+<div class="info-card blue"><h4>📌 Exam Focus</h4><ul><li>GI sheet is coated with <strong>zinc</strong>.</li><li>SS sheet is <strong>corrosion-resistant</strong>.</li><li>Aluminium is <strong>lightweight</strong>.</li><li>Higher SWG = <strong>thinner</strong> sheet.</li><li>18 SWG = approx <strong>1.22 mm</strong>.</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 3.3 HAND LEVER SHEARS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-shears">
+<div class="content-section" data-content="shears">
+<div class="section-header"><span class="icon">✂️</span><span class="title">3.3 – Hand Lever Shears / हैंड लीवर शीअर्स</span><span class="subtitle">— Operation, capacity, safety, maintenance</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Hand Lever Shears</strong> (also called hand shears or bench shears) are manually operated cutting tools used to cut sheet metal up to a certain thickness. They are commonly used in workshops for straight-line cutting of mild steel sheets up to 1.6 mm (16 SWG) thickness.</p>
+<p><strong>Parts:</strong></p>
+<ul>
+<li><strong>Upper Blade:</strong> The moving blade attached to the handle.</li>
+<li><strong>Lower Blade:</strong> The fixed blade attached to the base.</li>
+<li><strong>Handle:</strong> Provides mechanical advantage for cutting.</li>
+<li><strong>Base:</strong> Mounted on a bench or floor.</li>
+<li><strong>Adjusting Screws:</strong> For setting blade clearance.</li>
+</ul>
+<p><strong>Operation:</strong></p>
+<ul>
+<li>Adjust the blade clearance according to the sheet thickness (typically 5-10% of sheet thickness).</li>
+<li>Place the sheet on the lower blade, align with the guide, and lower the handle.</li>
+<li>Apply steady, even pressure for a clean cut.</li>
+</ul>
+<p><strong>Safety:</strong></p>
+<ul>
+<li>Keep fingers away from the cutting zone.</li>
+<li>Never cut material thicker than the machine's capacity.</li>
+<li>Check blade sharpness regularly.</li>
+<li>Apply a drop of oil to the pivot points periodically.</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>हैंड लीवर शीअर्स</strong> (जिन्हें हैंड शीअर्स या बेंच शीअर्स भी कहा जाता है) मैन्युअल रूप से संचालित काटने के उपकरण हैं जिनका उपयोग एक निश्चित मोटाई तक शीट मेटल काटने के लिए किया जाता है। इनका उपयोग आमतौर पर कार्यशालाओं में 1.6 mm (16 SWG) मोटाई तक की माइल्ड स्टील शीट की सीधी-रेखा कटिंग के लिए किया जाता है।</p>
+<p><strong>भाग:</strong></p>
+<ul>
+<li><strong>ऊपरी ब्लेड:</strong> हैंडल से जुड़ा चल ब्लेड।</li>
+<li><strong>निचला ब्लेड:</strong> आधार से जुड़ा स्थिर ब्लेड।</li>
+<li><strong>हैंडल:</strong> काटने के लिए यांत्रिक लाभ प्रदान करता है।</li>
+<li><strong>आधार:</strong> बेंच या फर्श पर लगा होता है।</li>
+<li><strong>समायोजन स्क्रू:</strong> ब्लेड निकासी सेट करने के लिए।</li>
+</ul>
+<p><strong>संचालन:</strong></p>
+<ul>
+<li>शीट की मोटाई के अनुसार ब्लेड निकासी को समायोजित करें (आमतौर पर शीट मोटाई का 5-10%).</li>
+<li>शीट को निचले ब्लेड पर रखें, गाइड के साथ संरेखित करें, और हैंडल को नीचे करें।</li>
+<li>स्वच्छ कट के लिए स्थिर, समान दबाव लागू करें।</li>
+</ul>
+<p><strong>सुरक्षा:</strong></p>
+<ul>
+<li>उंगलियों को काटने वाले क्षेत्र से दूर रखें।</li>
+<li>मशीन की क्षमता से अधिक मोटी सामग्री कभी न काटें।</li>
+<li>ब्लेड की तीक्ष्णता नियमित रूप से जाँचें।</li>
+<li>समय-समय पर पिवट बिंदुओं पर तेल की बूंद लगाएँ।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: हैंड लीवर शीअर्स (Hand Lever Shears)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/hand_lever_shears.jpg</p>
+<code>hand_lever_shears.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(Parts: upper blade, lower blade, handle, base)</p>
+</div>
+<div class="figure-caption">Fig 2 – हैंड लीवर शीअर्स</div>
+</div>
+<div class="warning-box"><h4>⚠️ Safety</h4><p>Never cut material thicker than the machine's rated capacity. Keep fingers clear of the cutting line.</p></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 3.4 SHEET METAL TOOLS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tools">
+<div class="content-section" data-content="tools">
+<div class="section-header"><span class="icon">🔧</span><span class="title">3.4 – Sheet Metal Tools / शीट मेटल औजार</span><span class="subtitle">— Hammers, snips, stakes, mallets, punches, riveters</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Sheet metal work requires a variety of specialized tools</strong> for cutting, bending, forming, and joining. Below are the most commonly used tools.</p>
+<ul>
+<li><strong>Hammers:</strong>
+<ul>
+<li><strong>Cross-peen Hammer:</strong> Used for riveting and bending.</li>
+<li><strong>Ball-peen Hammer:</strong> Used for riveting, bending, and general work.</li>
+<li><strong>Soft-face Hammer (Mallet):</strong> Wood, copper, or rubber face. Used for forming without damaging the sheet surface.</li>
+</ul>
+</li>
+<li><strong>Snips (Tin Snips):</strong> For cutting sheet metal by hand. Types: straight snips, curved snips, and aviation snips (left, right, straight).</li>
+<li><strong>Stakes:</strong> Iron/steel tools with various shapes used as anvils for forming sheet metal.</li>
+<li><strong>Mallets:</strong> Wooden or rubber mallets used with stakes to form sheet metal without marking.</li>
+<li><strong>Punches:</strong> For making holes in sheet metal. Types: hollow punch, drive punch, and centre punch.</li>
+<li><strong>Riveters:</strong> Hand riveters and pneumatic riveters used for joining sheet metal with rivets.</li>
+<li><strong>Grooving Tools:</strong> Used to form grooves in sheet metal for making joints.</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>शीट मेटल कार्य के लिए विभिन्न प्रकार के विशेष उपकरणों की आवश्यकता होती है</strong> काटने, झुकने, बनाने और जोड़ने के लिए। नीचे सबसे अधिक उपयोग किए जाने वाले उपकरण दिए गए हैं।</p>
+<ul>
+<li><strong>हथौड़े:</strong>
+<ul>
+<li><strong>क्रॉस-पीन हथौड़ा:</strong> रिवेटिंग और झुकने के लिए उपयोग किया जाता है।</li>
+<li><strong>बॉल-पीन हथौड़ा:</strong> रिवेटिंग, झुकने और सामान्य कार्य के लिए उपयोग किया जाता है।</li>
+<li><strong>सॉफ्ट-फेस हथौड़ा (मैलेट):</strong> लकड़ी, तांबा या रबर का फेस। शीट की सतह को नुकसान पहुँचाए बिना बनाने के लिए उपयोग किया जाता है।</li>
+</ul>
+</li>
+<li><strong>स्निप्स (टिन स्निप्स):</strong> शीट मेटल को हाथ से काटने के लिए। प्रकार: सीधे स्निप्स, घुमावदार स्निप्स, और एविएशन स्निप्स (बाएँ, दाएँ, सीधे).</li>
+<li><strong>स्टेक्स:</strong> विभिन्न आकृतियों वाले लोहे/स्टील के उपकरण जिनका उपयोग शीट मेटल बनाने के लिए निहाई के रूप में किया जाता है।</li>
+<li><strong>मैलेट्स:</strong> लकड़ी या रबर के मैलेट्स का उपयोग स्टेक्स के साथ शीट मेटल को बिना निशान छोड़े बनाने के लिए किया जाता है।</li>
+<li><strong>पंच:</strong> शीट मेटल में छेद करने के लिए। प्रकार: होलो पंच, ड्राइव पंच, और सेंटर पंच।</li>
+<li><strong>रिवेटर्स:</strong> हैंड रिवेटर और न्यूमेटिक रिवेटर का उपयोग शीट मेटल को रिवेट्स से जोड़ने के लिए किया जाता है।</li>
+<li><strong>ग्रूविंग टूल्स:</strong> जोड़ बनाने के लिए शीट मेटल में खांचे बनाने के लिए उपयोग किया जाता है।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: शीट मेटल औजार (Sheet Metal Tools)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/sheet_metal_tools.jpg</p>
+<code>sheet_metal_tools.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(Hammers, snips, stakes, mallets, punches, riveters)</p>
+</div>
+<div class="figure-caption">Fig 3 – शीट मेटल औजार</div>
+</div>
+<div class="info-card orange"><h4>📌 Exam Focus</h4><ul><li>Cross-peen hammer: <strong>riveting and bending</strong>.</li><li>Soft-face mallet: <strong>prevents surface damage</strong>.</li><li>Aviation snips: <strong>left, right, straight</strong>.</li><li>Stakes are used as <strong>anvils for forming</strong>.</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 3.5 STAKES AND THEIR USES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-stakes">
+<div class="content-section" data-content="stakes">
+<div class="section-header"><span class="icon">🔩</span><span class="title">3.5 – Stakes and Their Uses / स्टेक्स और उनके उपयोग</span><span class="subtitle">— Types, shapes, applications in sheet metal work</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Stakes</strong> are anvils of various shapes used in sheet metal work to form, bend, and shape the metal. They are made of cast iron or steel and are held in a stake holder or vice.</p>
+<p><strong>Common Types of Stakes:</strong></p>
+<ul>
+<li><strong>Bickern (Double-pointed Anvil):</strong> Has a pointed cone at one end and a flat surface at the other. Used for forming conical shapes and general bending.</li>
+<li><strong>Conductor's Stake:</strong> A flat stake with a curved surface. Used for forming large curves and radii.</li>
+<li><strong>Cylinder (Round) Stake:</strong> A solid cylinder shape. Used for forming cylindrical and curved work.</li>
+<li><strong>Hatchet Stake:</strong> A wedge-shaped stake with a sharp edge. Used for forming sharp bends and edges.</li>
+<li><strong>Hollow Mandrel Stake:</strong> A tube-like shape with a hollow end. Used for forming closed shapes like rings.</li>
+<li><strong>Blowhorn Stake:</strong> A curved, horn-shaped stake. Used for forming curved edges and corners.</li>
+</ul>
+<p><strong>How to Use:</strong> Place the stake in the stake holder. Hold the sheet metal over the stake and strike it with a mallet or hammer to achieve the desired shape. The stake provides a solid backing for forming operations.</p>
+</div>
+<div class="hi">
+<p><strong>स्टेक्स</strong> विभिन्न आकृतियों की निहाई होती हैं जिनका उपयोग शीट मेटल कार्य में धातु को बनाने, मोड़ने और आकार देने के लिए किया जाता है। ये कास्ट आयरन या स्टील से बनी होती हैं और स्टेक होल्डर या वाइस में पकड़ी जाती हैं।</p>
+<p><strong>सामान्य प्रकार के स्टेक्स:</strong></p>
+<ul>
+<li><strong>बिकर्न (डबल-पॉइंटेड निहाई):</strong> एक सिरे पर नुकीला शंकु और दूसरे पर सपाट सतह होती है। शंक्वाकार आकार और सामान्य झुकने के लिए उपयोग किया जाता है।</li>
+<li><strong>कंडक्टर का स्टेक:</strong> एक सपाट स्टेक जिसमें घुमावदार सतह होती है। बड़े वक्र और त्रिज्या बनाने के लिए उपयोग किया जाता है।</li>
+<li><strong>सिलेंडर (गोल) स्टेक:</strong> एक ठोस सिलेंडर आकार। बेलनाकार और घुमावदार कार्य बनाने के लिए उपयोग किया जाता है।</li>
+<li><strong>हैचेट स्टेक:</strong> तेज किनारे वाला वेज-आकार का स्टेक। तीखे मोड़ और किनारे बनाने के लिए उपयोग किया जाता है।</li>
+<li><strong>होलो मैंड्रेल स्टेक:</strong> ट्यूब जैसा आकार जिसमें खोखला सिरा होता है। रिंग्स जैसे बंद आकार बनाने के लिए उपयोग किया जाता है।</li>
+<li><strong>ब्लोहॉर्न स्टेक:</strong> घुमावदार, सींग के आकार का स्टेक। घुमावदार किनारे और कोने बनाने के लिए उपयोग किया जाता है।</li>
+</ul>
+<p><strong>उपयोग विधि:</strong> स्टेक को स्टेक होल्डर में रखें। शीट मेटल को स्टेक के ऊपर रखें और वांछित आकार प्राप्त करने के लिए मैलेट या हथौड़े से प्रहार करें। स्टेक बनाने के संचालन के लिए एक ठोस पिछला सहारा प्रदान करता है।</p>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्टेक्स के प्रकार (Stake Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/stakes_types.jpg</p>
+<code>stakes_types.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(Bickern, conductor's, cylinder, hatchet, hollow mandrel, blowhorn)</p>
+</div>
+<div class="figure-caption">Fig 4 – स्टेक्स के प्रकार</div>
+</div>
+<div class="important-box"><h4>📌 Exam Focus</h4><ul><li>Bickern: <strong>conical shapes</strong>.</li><li>Hatchet stake: <strong>sharp bends</strong>.</li><li>Cylinder stake: <strong>cylindrical work</strong>.</li><li>Blowhorn stake: <strong>curved edges</strong>.</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 3.6 SHEET METAL SEAMS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-seams">
+<div class="content-section" data-content="seams">
+<div class="section-header"><span class="icon">🔗</span><span class="title">3.6 – Sheet Metal Seams / शीट मेटल सीम</span><span class="subtitle">— Lap, grooved, locked, standing, flat lock, corner seams</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Seams</strong> are joints made by folding, bending, or interlocking the edges of sheet metal. They are used to join two or more pieces of sheet metal without welding.</p>
+<p><strong>Types of Seams:</strong></p>
+<ul>
+<li><strong>Lap Seam:</strong> One piece overlaps the other. Simple but not airtight. Used for non-critical applications.</li>
+<li><strong>Grooved Seam:</strong> The edges are bent at 90° and interlocked. A grooving tool is used to lock the seam. Strong and airtight. Used for ducting and containers.</li>
+<li><strong>Locked Seam:</strong> The edges are folded over each other and then locked with a grooving tool. Provides a very strong joint. Used for heavy-duty containers.</li>
+<li><strong>Standing Seam:</strong> The edges are bent upward at 90° and then folded over. Common in roofing and exterior cladding.</li>
+<li><strong>Flat Lock Seam:</strong> The edges are folded over flat. Used for joining sheets without a raised profile.</li>
+<li><strong>Corner Seam:</strong> Used for joining the corners of boxes and trays. The edges are folded and interlocked to form a tight corner.</li>
+</ul>
+<p><strong>Tools Required:</strong> Stakes, grooving tools, mallets, hammers, and seaming pliers.</p>
+</div>
+<div class="hi">
+<p><strong>सीम</strong> शीट मेटल के किनारों को मोड़कर, झुकाकर या इंटरलॉक करके बनाए गए जोड़ हैं। इनका उपयोग बिना वेल्डिंग के शीट मेटल के दो या अधिक टुकड़ों को जोड़ने के लिए किया जाता है।</p>
+<p><strong>सीम के प्रकार:</strong></p>
+<ul>
+<li><strong>लैप सीम:</strong> एक टुकड़ा दूसरे को ओवरलैप करता है। सरल लेकिन वायुरोधी नहीं। गैर-महत्वपूर्ण अनुप्रयोगों के लिए उपयोग किया जाता है।</li>
+<li><strong>ग्रूव्ड सीम:</strong> किनारों को 90° पर मोड़ा जाता है और इंटरलॉक किया जाता है। सीम को लॉक करने के लिए ग्रूविंग टूल का उपयोग किया जाता है। मजबूत और वायुरोधी। डक्टिंग और कंटेनरों के लिए उपयोग किया जाता है।</li>
+<li><strong>लॉक्ड सीम:</strong> किनारों को एक दूसरे के ऊपर मोड़ा जाता है और फिर ग्रूविंग टूल से लॉक किया जाता है। बहुत मजबूत जोड़ प्रदान करता है। भारी-शुल्क कंटेनरों के लिए उपयोग किया जाता है।</li>
+<li><strong>स्टैंडिंग सीम:</strong> किनारों को 90° ऊपर की ओर मोड़ा जाता है और फिर मोड़ दिया जाता है। छत और बाहरी क्लैडिंग में आम।</li>
+<li><strong>फ्लैट लॉक सीम:</strong> किनारों को सपाट मोड़ा जाता है। बिना उभरे प्रोफाइल के शीटों को जोड़ने के लिए उपयोग किया जाता है।</li>
+<li><strong>कॉर्नर सीम:</strong> बक्सों और ट्रे के कोनों को जोड़ने के लिए उपयोग किया जाता है। किनारों को मोड़ा जाता है और एक तंग कोना बनाने के लिए इंटरलॉक किया जाता है।</li>
+</ul>
+<p><strong>आवश्यक उपकरण:</strong> स्टेक्स, ग्रूविंग टूल्स, मैलेट्स, हथौड़े, और सीमिंग प्लायर्स।</p>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: शीट मेटल सीम (Sheet Metal Seams)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/sheet_metal_seams.jpg</p>
+<code>sheet_metal_seams.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(Lap, grooved, locked, standing, flat lock, corner seams)</p>
+</div>
+<div class="figure-caption">Fig 5 – शीट मेटल सीम के प्रकार</div>
+</div>
+<div class="short-notes"><h4>📌 Key Points</h4><ul><li>Grooved seam: <strong>airtight and strong</strong>.</li><li>Locked seam: <strong>strongest</strong>.</li><li>Standing seam: used in <strong>roofing</strong>.</li><li>Corner seam: used for <strong>boxes and trays</strong>.</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 3.7 SOLDERS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-solders">
+<div class="content-section" data-content="solders">
+<div class="section-header"><span class="icon">🧪</span><span class="title">3.7 – Solders / सोल्डर्स</span><span class="subtitle">— Soft solder, silver solder, fluxes, soldering process</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Soldering</strong> is a joining process that uses a filler metal (solder) with a melting point below 450°C. The base metal is not melted; the solder is melted and drawn into the joint by capillary action.</p>
+<p><strong>Types of Solder:</strong></p>
+<ul>
+<li><strong>Soft Solder (Tin-Lead Alloy):</strong> Melting point 183°C to 250°C. Common alloys: 60% Sn / 40% Pb (eutectic – melts at 183°C), 50% Sn / 50% Pb (melts at 216°C). Used for electronics, plumbing, and general sheet metal work.</li>
+<li><strong>Silver Solder:</strong> Silver-copper-zinc alloy. Melting point 600°C to 900°C. Much stronger than soft solder. Used for jewellery, refrigeration, and high-strength applications.</li>
+<li><strong>Lead-Free Solder:</strong> Tin-copper or tin-silver alloys. Used in electronics and plumbing due to environmental regulations (RoHS).</li>
+</ul>
+<p><strong>Fluxes:</strong></p>
+<ul>
+<li><strong>Soft Soldering Flux:</strong> Zinc chloride, ammonium chloride, or rosin-based. Removes oxides and prevents oxidation during heating.</li>
+<li><strong>Silver Soldering Flux:</strong> Borax or boric acid. Used with silver solder.</li>
+</ul>
+<p><strong>Soldering Process:</strong></p>
+<ol>
+<li>Clean the joint surfaces thoroughly (use emery cloth or wire brush).</li>
+<li>Apply flux to the joint area.</li>
+<li>Heat the joint with a soldering iron or torch.</li>
+<li>Apply solder to the joint — it will melt and flow into the joint by capillary action.</li>
+<li>Allow the joint to cool without disturbing it.</li>
+</ol>
+</div>
+<div class="hi">
+<p><strong>सोल्डरिंग</strong> एक जोड़ने की प्रक्रिया है जिसमें 450°C से कम गलनांक वाली फिलर धातु (सोल्डर) का उपयोग किया जाता है। आधार धातु पिघलती नहीं है; सोल्डर को पिघलाया जाता है और केशिका क्रिया द्वारा जोड़ में खींचा जाता है।</p>
+<p><strong>सोल्डर के प्रकार:</strong></p>
+<ul>
+<li><strong>सॉफ्ट सोल्डर (टिन-सीसा मिश्र धातु):</strong> गलनांक 183°C से 250°C. सामान्य मिश्र धातु: 60% Sn / 40% Pb (यूटेक्टिक – 183°C पर पिघलता है), 50% Sn / 50% Pb (216°C पर पिघलता है). इलेक्ट्रॉनिक्स, प्लंबिंग और सामान्य शीट मेटल कार्य के लिए उपयोग किया जाता है।</li>
+<li><strong>सिल्वर सोल्डर:</strong> चाँदी-तांबा-जस्ता मिश्र धातु। गलनांक 600°C से 900°C. सॉफ्ट सोल्डर से बहुत मजबूत। आभूषण, प्रशीतन और उच्च-शक्ति अनुप्रयोगों के लिए उपयोग किया जाता है।</li>
+<li><strong>लीड-फ्री सोल्डर:</strong> टिन-तांबा या टिन-चाँदी मिश्र धातु। पर्यावरण नियमों (RoHS) के कारण इलेक्ट्रॉनिक्स और प्लंबिंग में उपयोग किया जाता है।</li>
+</ul>
+<p><strong>फ्लक्स:</strong></p>
+<ul>
+<li><strong>सॉफ्ट सोल्डरिंग फ्लक्स:</strong> जिंक क्लोराइड, अमोनियम क्लोराइड, या रोसिन-आधारित। गर्मी के दौरान ऑक्साइड हटाता है और ऑक्सीकरण को रोकता है।</li>
+<li><strong>सिल्वर सोल्डरिंग फ्लक्स:</strong> बोरैक्स या बोरिक एसिड। सिल्वर सोल्डर के साथ उपयोग किया जाता है।</li>
+</ul>
+<p><strong>सोल्डरिंग प्रक्रिया:</strong></p>
+<ol>
+<li>जोड़ की सतहों को अच्छी तरह साफ करें (एमरी कपड़ा या तार ब्रश का उपयोग करें).</li>
+<li>जोड़ क्षेत्र पर फ्लक्स लगाएँ।</li>
+<li>सोल्डरिंग आयरन या टॉर्च से जोड़ को गर्म करें।</li>
+<li>जोड़ पर सोल्डर लगाएँ — यह पिघलेगा और केशिका क्रिया द्वारा जोड़ में प्रवाहित होगा।</li>
+<li>जोड़ को बिना हिलाए ठंडा होने दें।</li>
+</ol>
+</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>Common Solder Alloys / सामान्य सोल्डर मिश्र धातु</caption>
+<thead><tr><th>Composition</th><th>Melting Point</th><th>Application</th></tr></thead>
+<tbody>
+<tr><td>60% Sn, 40% Pb</td><td>183°C</td><td>Electronics, general</td></tr>
+<tr><td>50% Sn, 50% Pb</td><td>216°C</td><td>Plumbing, general</td></tr>
+<tr><td>Silver Solder</td><td>600-900°C</td><td>Jewellery, refrigeration</td></tr>
+<tr><td>Lead-Free (Sn-Cu)</td><td>227°C</td><td>RoHS compliant</td></tr>
+</tbody>
+</table>
+</div>
+<div class="warning-box"><h4>⚠️ Safety</h4><p>Lead-based solder is toxic. Wash hands after use. Use adequate ventilation to avoid inhaling fumes.</p></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 3.8 RIVET AND RIVETING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-riveting">
+<div class="content-section" data-content="riveting">
+<div class="section-header"><span class="icon">🔩</span><span class="title">3.8 – Rivet and Riveting / रिवेट और रिवेटिंग</span><span class="subtitle">— Types, materials, tools, process, applications</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Riveting</strong> is a permanent joining process that uses a rivet — a cylindrical metal pin with a head — to fasten two or more pieces of sheet metal.</p>
+<p><strong>Parts of a Rivet:</strong></p>
+<ul>
+<li><strong>Head:</strong> The pre-formed top of the rivet.</li>
+<li><strong>Shank:</strong> The cylindrical body.</li>
+<li><strong>Point (Tail):</strong> The bottom end that is upset (deformed) to form the second head.</li>
+</ul>
+<p><strong>Types of Rivets:</strong></p>
+<ul>
+<li><strong>Solid Rivet:</strong> The most common type. The tail is heated (hot riveting) or cold (cold riveting) and then hammered to form a head.</li>
+<li><strong>Pop Rivet (Blind Rivet):</strong> Used where access is only from one side. The mandrel is pulled to expand the rivet and then breaks off.</li>
+<li><strong>Snap Rivet:</strong> Has a pre-formed head on both ends.</li>
+<li><strong>Countersunk Rivet:</strong> Has a flat head that sits flush with the surface. Used where a smooth surface is required.</li>
+</ul>
+<p><strong>Rivet Materials:</strong> Mild steel, aluminium, copper, brass, stainless steel, and Monel.</p>
+<p><strong>Riveting Tools:</strong></p>
+<ul>
+<li><strong>Rivet Set (Snap):</strong> Used to form the head on the tail side.</li>
+<li><strong>Rivet Hammer:</strong> Used to strike the rivet set.</li>
+<li><strong>Pop Rivet Gun (Blind Riveter):</strong> Used for installing pop rivets.</li>
+</ul>
+<p><strong>Riveting Process:</strong></p>
+<ol>
+<li>Drill or punch a hole in the parts to be joined. The hole diameter should be slightly larger than the rivet shank.</li>
+<li>Insert the rivet through the holes.</li>
+<li>Place the rivet set on the tail and strike with a hammer to form the head (solid rivet).</li>
+<li>For pop rivets, place the rivet in the gun, insert through the hole, and squeeze the handle to pull the mandrel.</li>
+</ol>
+</div>
+<div class="hi">
+<p><strong>रिवेटिंग</strong> एक स्थायी जोड़ने की प्रक्रिया है जो शीट मेटल के दो या अधिक टुकड़ों को जोड़ने के लिए एक रिवेट — एक सिरे वाला बेलनाकार धातु पिन — का उपयोग करती है।</p>
+<p><strong>रिवेट के भाग:</strong></p>
+<ul>
+<li><strong>सिर:</strong> रिवेट का पूर्व-निर्मित शीर्ष।</li>
+<li><strong>शैंक:</strong> बेलनाकार शरीर।</li>
+<li><strong>बिंदु (पूंछ):</strong> निचला सिरा जो दूसरा सिर बनाने के लिए विकृत (अपसेट) किया जाता है।</li>
+</ul>
+<p><strong>रिवेट के प्रकार:</strong></p>
+<ul>
+<li><strong>ठोस रिवेट:</strong> सबसे सामान्य प्रकार। पूंछ को गर्म (हॉट रिवेटिंग) या ठंडा (कोल्ड रिवेटिंग) किया जाता है और फिर हथौड़े से पीटकर सिर बनाया जाता है।</li>
+<li><strong>पॉप रिवेट (ब्लाइंड रिवेट):</strong> जहाँ केवल एक तरफ से पहुँच होती है, वहाँ उपयोग किया जाता है। मैंड्रेल को खींचा जाता है ताकि रिवेट फैले और फिर टूट जाए।</li>
+<li><strong>स्नैप रिवेट:</strong> दोनों सिरों पर पूर्व-निर्मित सिर होता है।</li>
+<li><strong>काउंटरसंक रिवेट:</strong> सपाट सिर होता है जो सतह के साथ समतल बैठता है। जहाँ चिकनी सतह की आवश्यकता होती है, वहाँ उपयोग किया जाता है।</li>
+</ul>
+<p><strong>रिवेट सामग्री:</strong> माइल्ड स्टील, एल्यूमीनियम, तांबा, पीतल, स्टेनलेस स्टील, और मोनेल।</p>
+<p><strong>रिवेटिंग उपकरण:</strong></p>
+<ul>
+<li><strong>रिवेट सेट (स्नैप):</strong> पूंछ की तरफ सिर बनाने के लिए उपयोग किया जाता है।</li>
+<li><strong>रिवेट हथौड़ा:</strong> रिवेट सेट पर प्रहार करने के लिए उपयोग किया जाता है।</li>
+<li><strong>पॉप रिवेट गन (ब्लाइंड रिवेटर):</strong> पॉप रिवेट्स लगाने के लिए उपयोग किया जाता है।</li>
+</ul>
+<p><strong>रिवेटिंग प्रक्रिया:</strong></p>
+<ol>
+<li>जोड़े जाने वाले भागों में छेद ड्रिल या पंच करें। छेद का व्यास रिवेट शैंक से थोड़ा बड़ा होना चाहिए।</li>
+<li>रिवेट को छेदों के माध्यम से डालें।</li>
+<li>पूंछ पर रिवेट सेट रखें और सिर बनाने के लिए हथौड़े से प्रहार करें (ठोस रिवेट).</li>
+<li>पॉप रिवेट्स के लिए, रिवेट को गन में रखें, छेद के माध्यम से डालें, और मैंड्रेल को खींचने के लिए हैंडल को दबाएँ।</li>
+</ol>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: रिवेट और रिवेटिंग (Rivet & Riveting)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/riveting.jpg</p>
+<code>riveting.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(Solid rivet, pop rivet, rivet set, pop rivet gun)</p>
+</div>
+<div class="figure-caption">Fig 6 – रिवेट और रिवेटिंग</div>
+</div>
+<div class="info-card green"><h4>📌 Exam Focus</h4><ul><li>Solid rivet: <strong>hot or cold riveting</strong>.</li><li>Pop rivet: used where only <strong>one side is accessible</strong>.</li><li>Countersunk rivet: provides a <strong>flush surface</strong>.</li><li>Rivet set (snap): used to form the <strong>tail head</strong>.</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- MODULE 4 – WELDING (Full) -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-welding">
+<div class="content-section" style="border-left:6px solid #dc3545;">
+<div class="section-header" style="background:#fff5f2;">
+<span class="icon">⚡</span>
+<span class="title" style="color:#b02a37;">Module 4 – वेल्डिंग (Welding)</span>
+<span class="subtitle">— पूरा सिलेबस (Full Syllabus)</span>
+</div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Module 4 covers all aspects of welding</strong> — safety, hand tools, CO₂ welding equipment, arc welding parameters, and oxy-acetylene cutting. Welding is a core skill for fitters and is essential in fabrication and repair.</p>
+<p>This module is based on the NSQF Level 4 syllabus (Revised 2022) and includes every topic with full bilingual explanation, figures, tables, and self-assessment questions.</p>
+</div>
+<div class="hi">
+<p><strong>मॉड्यूल 4 में वेल्डिंग के सभी पहलुओं को शामिल किया गया है</strong> — सुरक्षा, हस्त औजार, CO₂ वेल्डिंग उपकरण, आर्क वेल्डिंग पैरामीटर, और ऑक्सी-एसिटिलीन कटिंग। वेल्डिंग फिटरों के लिए एक मुख्य कौशल है और फैब्रिकेशन एवं मरम्मत में आवश्यक है।</p>
+<p>यह मॉड्यूल NSQF स्तर 4 पाठ्यक्रम (संशोधित 2022) पर आधारित है और इसमें प्रत्येक विषय को पूर्ण द्विभाषी स्पष्टीकरण, आंकड़े, तालिकाएँ और स्व-मूल्यांकन प्रश्नों के साथ शामिल किया गया है।</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 4.1 WELDING SAFETY -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-weld-safety">
+<div class="content-section" data-content="weld-safety">
+<div class="section-header"><span class="icon">🛡️</span><span class="title">4.1 – Welding Safety / वेल्डिंग सुरक्षा</span><span class="subtitle">— Arc eye, fumes, fire, PPE, emergency response</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Welding safety</strong> is of utmost importance because welding involves intense heat, ultraviolet (UV) radiation, hazardous fumes, and fire risks.</p>
+<p><strong>Key Safety Precautions:</strong></p>
+<ul>
+<li><strong>Eye Protection:</strong> Always wear a welding helmet with an appropriate shade lens (shade 10–14). Never look at the arc without protection — it can cause <strong>arc eye</strong> (photokeratitis).</li>
+<li><strong>Skin Protection:</strong> Wear leather gloves, a welding apron, and a long-sleeved jacket to protect against UV radiation and spatter.</li>
+<li><strong>Ventilation:</strong> Ensure adequate ventilation to remove welding fumes. Use fume extraction systems in enclosed spaces.</li>
+<li><strong>Fire Safety:</strong> Keep a fire extinguisher nearby. Remove flammable materials from the welding area. Wait 30 minutes after welding before leaving the area.</li>
+<li><strong>Electrical Safety:</strong> Ensure the welding machine is properly earthed. Do not use damaged cables. Keep cables away from water and heat.</li>
+<li><strong>Gas Safety:</strong> Store cylinders upright. Use flashback arrestors. Check for gas leaks using soap water solution.</li>
+<li><strong>Emergency Response:</strong> Know the location of emergency exits, fire extinguishers, and first aid kits. In case of fire, use the appropriate extinguisher.</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>वेल्डिंग सुरक्षा</strong> अत्यंत महत्वपूर्ण है क्योंकि वेल्डिंग में तीव्र गर्मी, पराबैंगनी (UV) विकिरण, खतरनाक धुआँ और अग्नि जोखिम शामिल होते हैं।</p>
+<p><strong>मुख्य सुरक्षा सावधानियाँ:</strong></p>
+<ul>
+<li><strong>आँखों की सुरक्षा:</strong> हमेशा उपयुक्त शेड लेंस (शेड 10–14) के साथ वेल्डिंग हेलमेट पहनें। सुरक्षा के बिना कभी भी आर्क को न देखें — इससे <strong>आर्क आई</strong> (फोटोकेराटाइटिस) हो सकता है।</li>
+<li><strong>त्वचा की सुरक्षा:</strong> UV विकिरण और स्पैटर से बचाने के लिए चमड़े के दस्ताने, वेल्डिंग एप्रन और लंबी आस्तीन वाली जैकेट पहनें।</li>
+<li><strong>वेंटिलेशन:</strong> वेल्डिंग धुआँ हटाने के लिए पर्याप्त वेंटिलेशन सुनिश्चित करें। बंद स्थानों में धुआँ निकासी प्रणाली का उपयोग करें।</li>
+<li><strong>अग्नि सुरक्षा:</strong> पास में अग्निशामक यंत्र रखें। वेल्डिंग क्षेत्र से ज्वलनशील पदार्थ हटाएँ। क्षेत्र छोड़ने से पहले वेल्डिंग के बाद 30 मिनट प्रतीक्षा करें।</li>
+<li><strong>विद्युत सुरक्षा:</strong> सुनिश्चित करें कि वेल्डिंग मशीन ठीक से अर्थेड है। क्षतिग्रस्त केबलों का उपयोग न करें। केबलों को पानी और गर्मी से दूर रखें।</li>
+<li><strong>गैस सुरक्षा:</strong> सिलेंडरों को सीधा रखें। फ्लैशबैक अरेस्टर का उपयोग करें। साबुन पानी के घोल का उपयोग करके गैस रिसाव की जाँच करें।</li>
+<li><strong>आपातकालीन प्रतिक्रिया:</strong> आपातकालीन निकास, अग्निशामक यंत्र और प्राथमिक चिकित्सा किट का स्थान जानें। आग लगने की स्थिति में, उपयुक्त अग्निशामक यंत्र का उपयोग करें।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: वेल्डिंग सुरक्षा (Welding Safety)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/welding_safety.jpg</p>
+<code>welding_safety.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(Welding helmet, gloves, apron, fume extraction, fire extinguisher)</p>
+</div>
+<div class="figure-caption">Fig 7 – वेल्डिंग सुरक्षा</div>
+</div>
+<div class="warning-box"><h4>⚠️ Important</h4><p>Never look at the welding arc without a helmet. It can cause permanent eye damage (arc eye). Always wear appropriate shade lens.</p></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 4.2 WELDING HAND TOOLS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-weld-tools">
+<div class="content-section" data-content="weld-tools">
+<div class="section-header"><span class="icon">🔧</span><span class="title">4.2 – Welding Hand Tools / वेल्डिंग हस्त औजार</span><span class="subtitle">— Chipping hammer, wire brush, slag scraper, tongs, etc.</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Welding hand tools</strong> are used for preparation, cleaning, and finishing in welding operations. These tools are essential for producing quality welds.</p>
+<ul>
+<li><strong>Chipping Hammer:</strong> Used to remove slag (flux) from the weld bead after welding. Has a pointed end and a flat end.</li>
+<li><strong>Wire Brush:</strong> Used to clean the workpiece and remove dirt, rust, and scale. Steel wire brush is used for steel; brass or stainless steel brush is used for non-ferrous metals.</li>
+<li><strong>Slag Scraper:</strong> A flat, broad tool used to scrape slag from large welds.</li>
+<li><strong>Welding Tongs:</strong> Used to hold and handle hot workpieces and electrodes.</li>
+<li><strong>Files:</strong> Used for smoothing and finishing weld beads.</li>
+<li><strong>Angle Grinder:</strong> Used for grinding weld beads, bevelling edges, and surface preparation.</li>
+<li><strong>Centre Punch & Scriber:</strong> Used for marking and layout before welding.</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>वेल्डिंग हस्त औजार</strong> वेल्डिंग संचालन में तैयारी, सफाई और फिनिशिंग के लिए उपयोग किए जाते हैं। ये औजार गुणवत्तापूर्ण वेल्ड बनाने के लिए आवश्यक हैं।</p>
+<ul>
+<li><strong>चिपिंग हथौड़ा:</strong> वेल्डिंग के बाद वेल्ड बीड से स्लैग (फ्लक्स) हटाने के लिए उपयोग किया जाता है। इसका एक नुकीला सिरा और एक सपाट सिरा होता है।</li>
+<li><strong>तार ब्रश:</strong> वर्कपीस को साफ करने और गंदगी, जंग और स्केल हटाने के लिए उपयोग किया जाता है। स्टील के लिए स्टील वायर ब्रश का उपयोग किया जाता है; अलौह धातुओं के लिए पीतल या स्टेनलेस स्टील ब्रश का उपयोग किया जाता है।</li>
+<li><strong>स्लैग स्क्रेपर:</strong> एक सपाट, चौड़ा उपकरण जिसका उपयोग बड़े वेल्ड से स्लैग को खुरचने के लिए किया जाता है।</li>
+<li><strong>वेल्डिंग टोंग्स:</strong> गर्म वर्कपीस और इलेक्ट्रोड को पकड़ने और संभालने के लिए उपयोग किया जाता है।</li>
+<li><strong>फाइलें:</strong> वेल्ड बीड्स को चिकना करने और फिनिश करने के लिए उपयोग किया जाता है।</li>
+<li><strong>एंगल ग्राइंडर:</strong> वेल्ड बीड्स को पीसने, किनारों को बेवल करने और सतह तैयार करने के लिए उपयोग किया जाता है।</li>
+<li><strong>सेंटर पंच और स्क्राइबर:</strong> वेल्डिंग से पहले अंकन और लेआउट के लिए उपयोग किया जाता है।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: वेल्डिंग हस्त औजार (Welding Hand Tools)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/welding_hand_tools.jpg</p>
+<code>welding_hand_tools.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(Chipping hammer, wire brush, slag scraper, tongs)</p>
+</div>
+<div class="figure-caption">Fig 8 – वेल्डिंग हस्त औजार</div>
+</div>
+<div class="short-notes"><h4>📌 Key Points</h4><ul><li>Chipping hammer removes <strong>slag</strong>.</li><li>Wire brush removes <strong>rust and dirt</strong>.</li><li>Angle grinder is used for <strong>bevelling and grinding</strong>.</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 4.3 CO₂ WELDING EQUIPMENT AND APPARATUS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-co2">
+<div class="content-section" data-content="co2">
+<div class="section-header"><span class="icon">💨</span><span class="title">4.3 – CO₂ Welding Equipment and Apparatus / CO₂ वेल्डिंग उपकरण और प्रक्रिया</span><span class="subtitle">— Gas metal arc welding (GMAW), MIG welding, equipment</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>CO₂ Welding</strong> (also known as MIG welding or Gas Metal Arc Welding – GMAW) uses a continuously fed consumable wire electrode and an externally supplied shielding gas (CO₂ or a CO₂-Argon mixture).</p>
+<p><strong>Equipment Components:</strong></p>
+<ul>
+<li><strong>Power Source:</strong> A DC constant-voltage power source (usually DCEN – Direct Current Electrode Negative).</li>
+<li><strong>Wire Feeder:</strong> Feeds the electrode wire at a constant speed through the torch.</li>
+<li><strong>Welding Torch (Gun):</strong> Contains the contact tip, nozzle, and gas diffuser. Delivers the wire, gas, and current to the weld pool.</li>
+<li><strong>Shielding Gas Cylinder:</strong> Contains CO₂ or a gas mixture. The gas protects the molten weld pool from atmospheric contamination.</li>
+<li><strong>Regulator and Flowmeter:</strong> Regulates and measures the gas flow rate (typically 15–25 L/min).</li>
+<li><strong>Work Clamp (Ground):</strong> Connects the workpiece to the power source.</li>
+</ul>
+<p><strong>Advantages of CO₂ Welding:</strong></p>
+<ul>
+<li>High deposition rate.</li>
+<li>Continuous welding — no stopping to replace electrodes.</li>
+<li>Suitable for both thin and thick materials.</li>
+<li>Low cost of CO₂ gas.</li>
+<li>Minimal slag — less post-weld cleaning.</li>
+</ul>
+<p><strong>Safety:</strong></p>
+<ul>
+<li>Use a welding helmet with a shade lens (shade 10-12).</li>
+<li>Ensure adequate ventilation — CO₂ gas can displace oxygen in confined spaces.</li>
+<li>Keep flammable materials away from the welding area.</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>CO₂ वेल्डिंग</strong> (जिसे MIG वेल्डिंग या गैस मेटल आर्क वेल्डिंग – GMAW भी कहा जाता है) एक सतत रूप से खिलाए गए उपभोज्य तार इलेक्ट्रोड और बाहरी रूप से आपूर्ति की गई परिरक्षण गैस (CO₂ या CO₂-आर्गन मिश्रण) का उपयोग करती है।</p>
+<p><strong>उपकरण घटक:</strong></p>
+<ul>
+<li><strong>पावर स्रोत:</strong> DC स्थिर-वोल्टेज पावर स्रोत (आमतौर पर DCEN – Direct Current Electrode Negative).</li>
+<li><strong>तार फीडर:</strong> इलेक्ट्रोड तार को टॉर्च के माध्यम से स्थिर गति से फीड करता है।</li>
+<li><strong>वेल्डिंग टॉर्च (गन):</strong> इसमें कॉन्टैक्ट टिप, नोज़ल और गैस डिफ्यूज़र होता है। तार, गैस और करंट को वेल्ड पूल तक पहुँचाता है।</li>
+<li><strong>परिरक्षण गैस सिलेंडर:</strong> CO₂ या गैस मिश्रण रखता है। गैस पिघले हुए वेल्ड पूल को वायुमंडलीय संदूषण से बचाती है।</li>
+<li><strong>रेगुलेटर और फ्लोमीटर:</strong> गैस प्रवाह दर को नियंत्रित और मापता है (आमतौर पर 15–25 L/min).</li>
+<li><strong>वर्क क्लैम्प (ग्राउंड):</strong> वर्कपीस को पावर स्रोत से जोड़ता है।</li>
+</ul>
+<p><strong>CO₂ वेल्डिंग के लाभ:</strong></p>
+<ul>
+<li>उच्च जमाव दर।</li>
+<li>निरंतर वेल्डिंग — इलेक्ट्रोड बदलने के लिए रुकना नहीं पड़ता।</li>
+<li>पतली और मोटी दोनों सामग्रियों के लिए उपयुक्त।</li>
+<li>CO₂ गैस की कम लागत।</li>
+<li>न्यूनतम स्लैग — कम पोस्ट-वेल्ड सफाई।</li>
+</ul>
+<p><strong>सुरक्षा:</strong></p>
+<ul>
+<li>शेड लेंस (शेड 10-12) के साथ वेल्डिंग हेलमेट का उपयोग करें।</li>
+<li>पर्याप्त वेंटिलेशन सुनिश्चित करें — CO₂ गैस बंद स्थानों में ऑक्सीजन को विस्थापित कर सकती है।</li>
+<li>ज्वलनशील पदार्थों को वेल्डिंग क्षेत्र से दूर रखें।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: CO₂ वेल्डिंग उपकरण (CO₂ Welding Equipment)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/co2_welding.jpg</p>
+<code>co2_welding.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(Power source, wire feeder, torch, gas cylinder, regulator)</p>
+</div>
+<div class="figure-caption">Fig 9 – CO₂ वेल्डिंग उपकरण</div>
+</div>
+<div class="info-card blue"><h4>📌 Exam Focus</h4><ul><li>CO₂ welding is also called <strong>MIG welding</strong>.</li>
+<li>Power source: <strong>DC constant-voltage</strong>.</li>
+<li>Shielding gas: <strong>CO₂ or Argon-CO₂ mixture</strong>.</li>
+<li>Gas flow rate: <strong>15–25 L/min</strong>.</li>
+<li>Advantage: <strong>high deposition rate, continuous welding</strong>.</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 4.4 SETTING UP PARAMETERS FOR ARC WELDING MACHINE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-arc-params">
+<div class="content-section" data-content="arc-params">
+<div class="section-header"><span class="icon">⚙️</span><span class="title">4.4 – Setting Up Parameters for Arc Welding Machine / आर्क वेल्डिंग मशीन के लिए पैरामीटर सेट करना</span><span class="subtitle">— Current, voltage, polarity, electrode selection, speed</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Setting the correct parameters</strong> is essential for achieving a quality weld. The main parameters are welding current, arc voltage, polarity, electrode size, and travel speed.</p>
+<p><strong>1. Welding Current (Amperage):</strong></p>
+<ul>
+<li>Determines the penetration and deposition rate.</li>
+<li>Higher current = deeper penetration and faster welding, but too high can cause burn-through.</li>
+<li>Rule of thumb: 30–40 Amps per mm of material thickness.</li>
+</ul>
+<p><strong>2. Arc Voltage:</strong></p>
+<ul>
+<li>Determines the arc length and width of the weld bead.</li>
+<li>Higher voltage = wider bead, more spatter.</li>
+<li>Lower voltage = narrower bead, less spatter.</li>
+</ul>
+<p><strong>3. Polarity:</strong></p>
+<ul>
+<li><strong>DCEN (Direct Current Electrode Negative):</strong> Electrode is negative, workpiece is positive. Used for thin sheets and for deep penetration.</li>
+<li><strong>DCEP (Direct Current Electrode Positive):</strong> Electrode is positive, workpiece is negative. Used for thicker materials and for higher deposition rates.</li>
+<li><strong>AC (Alternating Current):</strong> Used with AC-compatible electrodes.</li>
+</ul>
+<p><strong>4. Electrode Diameter:</strong></p>
+<ul>
+<li>Choose electrode size based on material thickness.</li>
+<li>Thin material (1-3 mm): 1.6 mm or 2.0 mm electrode.</li>
+<li>Medium material (3-6 mm): 2.5 mm or 3.15 mm electrode.</li>
+<li>Thick material (6 mm+): 3.15 mm to 5 mm electrode.</li>
+</ul>
+<p><strong>5. Travel Speed:</strong></p>
+<ul>
+<li>The speed at which the electrode is moved along the joint.</li>
+<li>Too fast → poor fusion, porosity.</li>
+<li>Too slow → excessive build-up, burn-through.</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>सही पैरामीटर सेट करना</strong> गुणवत्तापूर्ण वेल्ड प्राप्त करने के लिए आवश्यक है। मुख्य पैरामीटर वेल्डिंग करंट, आर्क वोल्टेज, ध्रुवता, इलेक्ट्रोड आकार और यात्रा गति हैं।</p>
+<p><strong>1. वेल्डिंग करंट (एम्परेज):</strong></p>
+<ul>
+<li>पैठ और जमाव दर निर्धारित करता है।</li>
+<li>उच्च करंट = गहरी पैठ और तेज़ वेल्डिंग, लेकिन बहुत अधिक होने पर बर्न-थ्रू हो सकता है।</li>
+<li>अंगूठे का नियम: सामग्री मोटाई के प्रति mm 30–40 एम्प्स।</li>
+</ul>
+<p><strong>2. आर्क वोल्टेज:</strong></p>
+<ul>
+<li>आर्क की लंबाई और वेल्ड बीड की चौड़ाई निर्धारित करता है।</li>
+<li>उच्च वोल्टेज = चौड़ा बीड, अधिक स्पैटर।</li>
+<li>कम वोल्टेज = संकीर्ण बीड, कम स्पैटर।</li>
+</ul>
+<p><strong>3. ध्रुवता:</strong></p>
+<ul>
+<li><strong>DCEN (Direct Current Electrode Negative):</strong> इलेक्ट्रोड नेगेटिव, वर्कपीस पॉजिटिव। पतली शीट और गहरी पैठ के लिए उपयोग किया जाता है।</li>
+<li><strong>DCEP (Direct Current Electrode Positive):</strong> इलेक्ट्रोड पॉजिटिव, वर्कपीस नेगेटिव। मोटी सामग्री और उच्च जमाव दर के लिए उपयोग किया जाता है।</li>
+<li><strong>AC (Alternating Current):</strong> AC-संगत इलेक्ट्रोड के साथ उपयोग किया जाता है।</li>
+</ul>
+<p><strong>4. इलेक्ट्रोड व्यास:</strong></p>
+<ul>
+<li>सामग्री मोटाई के आधार पर इलेक्ट्रोड आकार चुनें।</li>
+<li>पतली सामग्री (1-3 mm): 1.6 mm या 2.0 mm इलेक्ट्रोड।</li>
+<li>मध्यम सामग्री (3-6 mm): 2.5 mm या 3.15 mm इलेक्ट्रोड।</li>
+<li>मोटी सामग्री (6 mm+): 3.15 mm से 5 mm इलेक्ट्रोड।</li>
+</ul>
+<p><strong>5. यात्रा गति:</strong></p>
+<ul>
+<li>जिस गति से इलेक्ट्रोड को जोड़ के साथ ले जाया जाता है।</li>
+<li>बहुत तेज़ → खराब फ्यूजन, सरंध्रता।</li>
+<li>बहुत धीमी → अत्यधिक बिल्ड-अप, बर्न-थ्रू।</li>
+</ul>
+</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>Electrode Diameter vs Material Thickness / इलेक्ट्रोड व्यास बनाम सामग्री मोटाई</caption>
+<thead><tr><th>Material Thickness</th><th>Electrode Diameter</th><th>Current (Amps)</th></tr></thead>
+<tbody>
+<tr><td>1–3 mm</td><td>1.6 – 2.0 mm</td><td>40 – 80</td></tr>
+<tr><td>3–6 mm</td><td>2.5 – 3.15 mm</td><td>80 – 130</td></tr>
+<tr><td>6–10 mm</td><td>3.15 – 4.0 mm</td><td>130 – 180</td></tr>
+<tr><td>10+ mm</td><td>4.0 – 5.0 mm</td><td>180 – 250</td></tr>
+</tbody>
+</table>
+</div>
+<div class="important-box"><h4>📌 Exam Focus</h4><ul><li>DCEN: <strong>deep penetration, thin sheets</strong>.</li><li>DCEP: <strong>high deposition rate, thick material</strong>.</li><li>Current rule: <strong>30–40 Amps per mm</strong>.</li><li>Travel speed affects <strong>fusion and porosity</strong>.</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 4.5 OXY-ACETYLENE CUTTING EQUIPMENT -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-oxycut">
+<div class="content-section" data-content="oxycut">
+<div class="section-header"><span class="icon">🔥</span><span class="title">4.5 – Oxy-Acetylene Cutting Equipment / ऑक्सी-एसिटिलीन कटिंग उपकरण</span><span class="subtitle">— Equipment, setup, flame adjustment, cutting technique, safety</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="en">
+<p><strong>Oxy-acetylene cutting</strong> uses a combination of oxygen and acetylene gas to cut ferrous metals (steel). The flame preheats the metal to ignition temperature, and a stream of pure oxygen is directed onto the heated area to oxidise and remove the metal.</p>
+<p><strong>Equipment:</strong></p>
+<ul>
+<li><strong>Oxygen Cylinder:</strong> Black colour, contains oxygen at 150 bar.</li>
+<li><strong>Acetylene Cylinder:</strong> Maroon/red colour, contains acetylene dissolved in acetone.</li>
+<li><strong>Regulators:</strong> Reduce cylinder pressure to working pressure (oxygen: 4-5 bar; acetylene: 0.5-1 bar).</li>
+<li><strong>Hoses:</strong> Oxygen hose (green/blue), acetylene hose (red).</li>
+<li><strong>Cutting Torch:</strong> Mixes the gases and has a cutting oxygen valve.</li>
+<li><strong>Cutting Nozzle (Tip):</strong> Has a central hole for cutting oxygen and surrounding holes for preheat flame.</li>
+<li><strong>Check Valves and Flashback Arrestors:</strong> Safety devices.</li>
+</ul>
+<p><strong>Setting Up:</strong></p>
+<ol>
+<li>Connect regulators to cylinders.</li>
+<li>Connect hoses to regulators and torch (ensure correct colour coding).</li>
+<li>Open cylinder valves slowly.</li>
+<li>Adjust working pressures using the regulators.</li>
+<li>Check for gas leaks using soap water solution.</li>
+<li>Light the torch and adjust the flame to neutral.</li>
+</ol>
+<p><strong>Cutting Technique:</strong></p>
+<ul>
+<li>Preheat the starting point until it reaches ignition temperature (bright red).</li>
+<li>Press the cutting oxygen lever to start the cut.</li>
+<li>Move the torch steadily along the cut line.</li>
+<li>Maintain a consistent distance and angle.</li>
+</ul>
+<p><strong>Safety:</strong></p>
+<ul>
+<li>Always use flashback arrestors.</li>
+<li>Never use oil or grease on oxygen fittings.</li>
+<li>Keep cylinders secure and upright.</li>
+<li>Wear safety goggles and gloves.</li>
+</ul>
+</div>
+<div class="hi">
+<p><strong>ऑक्सी-एसिटिलीन कटिंग</strong> लौह धातुओं (स्टील) को काटने के लिए ऑक्सीजन और एसिटिलीन गैस के संयोजन का उपयोग करती है। लौ धातु को प्रज्वलन तापमान तक पहले से गर्म करती है, और शुद्ध ऑक्सीजन की एक धारा को गर्म क्षेत्र पर निर्देशित किया जाता है ताकि ऑक्सीकरण हो और धातु को हटाया जा सके।</p>
+<p><strong>उपकरण:</strong></p>
+<ul>
+<li><strong>ऑक्सीजन सिलेंडर:</strong> काला रंग, 150 bar पर ऑक्सीजन रखता है।</li>
+<li><strong>एसिटिलीन सिलेंडर:</strong> मैरून/लाल रंग, एसीटोन में घुली एसिटिलीन रखता है।</li>
+<li><strong>रेगुलेटर:</strong> सिलेंडर दबाव को कार्य दबाव में कम करते हैं (ऑक्सीजन: 4-5 bar; एसिटिलीन: 0.5-1 bar).</li>
+<li><strong>होज़:</strong> ऑक्सीजन होज़ (हरा/नीला), एसिटिलीन होज़ (लाल).</li>
+<li><strong>कटिंग टॉर्च:</strong> गैसों को मिलाता है और इसमें कटिंग ऑक्सीजन वाल्व होता है।</li>
+<li><strong>कटिंग नोज़ल (टिप):</strong> इसमें कटिंग ऑक्सीजन के लिए केंद्रीय छेद और प्रीहीट लौ के लिए आसपास के छेद होते हैं।</li>
+<li><strong>चेक वाल्व और फ्लैशबैक अरेस्टर:</strong> सुरक्षा उपकरण।</li>
+</ul>
+<p><strong>सेटअप:</strong></p>
+<ol>
+<li>रेगुलेटर को सिलेंडर से कनेक्ट करें।</li>
+<li>होज़ को रेगुलेटर और टॉर्च से कनेक्ट करें (सही रंग कोडिंग सुनिश्चित करें).</li>
+<li>सिलेंडर वाल्वों को धीरे-धीरे खोलें।</li>
+<li>रेगुलेटर का उपयोग करके कार्य दबाव को समायोजित करें।</li>
+<li>साबुन पानी के घोल का उपयोग करके गैस रिसाव की जाँच करें।</li>
+<li>टॉर्च जलाएँ और लौ को तटस्थ पर समायोजित करें।</li>
+</ol>
+<p><strong>कटिंग तकनीक:</strong></p>
+<ul>
+<li>प्रारंभिक बिंदु को तब तक पहले से गर्म करें जब तक कि वह प्रज्वलन तापमान (चमकदार लाल) तक न पहुँच जाए।</li>
+<li>कटिंग ऑक्सीजन लीवर दबाएँ।</li>
+<li>टॉर्च को कट लाइन के साथ स्थिर रूप से चलाएँ।</li>
+<li>एक समान दूरी और कोण बनाए रखें।</li>
+</ul>
+<p><strong>सुरक्षा:</strong></p>
+<ul>
+<li>हमेशा फ्लैशबैक अरेस्टर का उपयोग करें।</li>
+<li>ऑक्सीजन फिटिंग पर कभी भी तेल या ग्रीस का उपयोग न करें।</li>
+<li>सिलेंडरों को सुरक्षित और सीधा रखें।</li>
+<li>सुरक्षा चश्मा और दस्ताने पहनें।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: ऑक्सी-एसिटिलीन कटिंग (Oxy-Acetylene Cutting)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/oxy_cutting.jpg</p>
+<code>oxy_cutting.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(Cylinders, regulators, torch, nozzle, cutting process)</p>
+</div>
+<div class="figure-caption">Fig 10 – ऑक्सी-एसिटिलीन कटिंग</div>
+</div>
+<div class="warning-box"><h4>⚠️ Safety</h4><p>Never use oil or grease on oxygen fittings. Always use flashback arrestors. Check for leaks with soap water solution.</p></div>
+</div>
+</div>
+</div>
+
+<!-- ============================== CONCLUSION ============================== -->
+<div class="container">
+<div class="conclusion-section">
+<h2>📌 Module 3 & 4 – Conclusion / निष्कर्ष</h2>
+<div class="bilingual">
+<div class="en">
+<p><strong>Module 3 – Sheet Metal:</strong> Covers safety, metal sheets (MS, GI, SS, Aluminium, Copper, Brass), hand lever shears, tools (hammers, snips, stakes, mallets), seams (lap, grooved, locked, standing, flat lock, corner), solders (soft, silver, lead-free), and riveting (solid, pop, countersunk).</p>
+<p><strong>Module 4 – Welding:</strong> Covers safety, hand tools (chipping hammer, wire brush, slag scraper, tongs), CO₂ welding equipment, arc welding parameters (current, voltage, polarity, electrode size, travel speed), and oxy-acetylene cutting equipment and technique.</p>
+<p>Mastering these modules is essential for every fitter. Practice each operation with safety and precision.</p>
+</div>
+<div class="hi">
+<p><strong>मॉड्यूल 3 – शीट मेटल:</strong> सुरक्षा, धातु की चादरें (MS, GI, SS, एल्यूमीनियम, तांबा, पीतल), हैंड लीवर शीअर्स, औजार (हथौड़े, स्निप्स, स्टेक्स, मैलेट्स), सीम (लैप, ग्रूव्ड, लॉक्ड, स्टैंडिंग, फ्लैट लॉक, कॉर्नर), सोल्डर्स (सॉफ्ट, सिल्वर, लीड-फ्री), और रिवेटिंग (ठोस, पॉप, काउंटरसंक).</p>
+<p><strong>मॉड्यूल 4 – वेल्डिंग:</strong> सुरक्षा, हस्त औजार (चिपिंग हथौड़ा, तार ब्रश, स्लैग स्क्रेपर, टोंग्स), CO₂ वेल्डिंग उपकरण, आर्क वेल्डिंग पैरामीटर (करंट, वोल्टेज, ध्रुवता, इलेक्ट्रोड आकार, यात्रा गति), और ऑक्सी-एसिटिलीन कटिंग उपकरण और तकनीक।</p>
+<p>इन मॉड्यूलों में महारत हासिल करना प्रत्येक फिटर के लिए आवश्यक है। प्रत्येक ऑपरेशन को सुरक्षा और सटीकता के साथ अभ्यास करें।</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ============================== MCQ & RELATED ============================== -->
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="section-body">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/fitter/index.html?mod=3" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="section-body">
+<div style="display:flex; flex-wrap:wrap; gap:12px;">
+<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety & Basics</a>
+<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
+<a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ============================== FOOTER ============================== -->
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<!-- ============================== JAVASCRIPT ============================== -->
+<script>
+        // ===== SEARCH =====
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        // ===== SHARE =====
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('🔧 ' + getPageTitle() + ' - Complete Fitter Theory Module 3 & 4 Study Material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('🔧 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        // ===== SCROLL TOP =====
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== FOOTER YEAR =====
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        // ===== COPY PROTECTION =====
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Fitter Theory Module 3 & 4 – Complete Book Loaded.');
+        console.log('📚 Sheet Metal, Riveting & Welding – Full syllabus covered.');
+    </script>
+</body>
+  </html>
