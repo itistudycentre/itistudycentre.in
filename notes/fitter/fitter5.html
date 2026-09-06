@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 5 – Machine Tools & Assembly (पूर्ण) | Fitter Theory | ITI Study Centre</title>
+<meta content="Complete Fitter Theory Module 5 – Lathe, Milling, Grinding, Fits & Tolerances, Assembly, Surface Finish. Full NIMI syllabus pages 200-249." name="description"/>
+<style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.8;
+            user-select: none;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+
+        .main-header {
+            background: #003366;
+            padding: 16px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        @media(max-width:768px) {
+            .main-header .container { flex-direction: column; gap: 8px; }
+            .main-header nav { justify-content: center; gap: 6px 14px; }
+            .main-header nav a { font-size: 0.9rem; }
+        }
+
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a { color: #003366; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .current { color: #555; font-weight: 600; }
+
+        .page-title {
+            padding: 32px 0 22px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.3rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
+        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
+
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 540px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
+        }
+        .search-section button {
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover { background: #002244; transform: scale(1.02); }
+        @media(max-width:640px) {
+            .search-section { flex-direction: column; }
+            .search-section input { max-width: 100%; width: 100%; }
+            .search-section button { width: 100%; }
+        }
+
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            margin-bottom: 32px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 20px 28px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .section-header .icon { font-size: 1.8rem; line-height: 1; }
+        .section-header .title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body { padding: 28px 32px; background: #fafcff; }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-left: 5px solid #ffcc00;
+            padding-left: 18px;
+        }
+        .section-body h3:first-of-type { margin-top: 0; }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.12rem;
+            margin: 20px 0 10px;
+        }
+        @media(max-width:768px) {
+            .section-header { padding: 14px 18px; }
+            .section-header .title { font-size: 1.05rem; }
+            .section-body { padding: 18px 18px; }
+            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
+        }
+        @media(max-width:480px) {
+            .section-body { padding: 14px 14px; }
+            .section-header .icon { font-size: 1.4rem; }
+            .section-header .title { font-size: 0.95rem; }
+        }
+
+        .bilingual { margin: 14px 0; }
+        .bilingual .content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #1a2a3a;
+        }
+        .bilingual .content ul, .bilingual .content ol { padding-left: 26px; margin: 10px 0; }
+        .bilingual .content ul li, .bilingual .content ol li { margin-bottom: 6px; }
+        .bilingual .content p { margin: 10px 0; }
+        @media(max-width:480px) {
+            .bilingual .content { font-size: 0.95rem; }
+        }
+
+        .info-card {
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin: 18px 0;
+            background: #fff;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+        }
+        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
+        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
+        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
+        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
+        .info-card.red { border-left: 5px solid #dc3545; background: #fdf0f1; }
+        .info-card h4 { margin: 0 0 6px; color: #003366; }
+        .info-card ul { margin: 0; padding-left: 22px; }
+        .info-card ul li { margin-bottom: 4px; }
+
+        .tool-figure {
+            width:100%;
+            max-width:850px;
+            margin:24px auto;
+            text-align:center;
+            background:#f8fafc;
+            border:1px solid #e2e7ed;
+            border-radius:12px;
+            padding:20px;
+            transition:0.2s;
+        }
+        .tool-figure:hover { background:#f0f4fa; }
+        .tool-figure .placeholder-icon { font-size:3.5rem; line-height:1.2; color:#8a9aa8; margin-bottom:6px; }
+        .tool-figure .figure-caption { font-size:0.95rem; color:#555; font-weight:600; margin-top:8px; }
+        .tool-figure .image-placeholder {
+            display:block;
+            min-height:120px;
+            background:#f0f4fa;
+            border:2px dashed #c7ced7;
+            border-radius:8px;
+            padding:18px;
+            color:#68717c;
+        }
+        .tool-figure .image-placeholder code {
+            background:#e7ebef;
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:0.8rem;
+            display:inline-block;
+            margin:4px 0;
+        }
+        @media(max-width:768px) {
+            .tool-figure { padding:14px; }
+            .tool-figure .placeholder-icon { font-size:2.8rem; }
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 22px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 13px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 11px 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
+        .table-wrap tr:hover { background: #eef2f7; }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        @media(max-width:480px) {
+            .table-wrap table { font-size: 0.85rem; }
+            .table-wrap th, .table-wrap td { padding: 8px 10px; }
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin: 20px 0;
+        }
+        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
+        .compare-card {
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .compare-card h4 { font-size: 1.1rem; margin: 0 0 10px; color: #003366; }
+        .compare-card ul { padding-left: 20px; margin: 0; }
+        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .example-box strong { color: #003366; }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .important-box h4 { margin: 0 0 6px; color: #856404; }
+        .important-box ul { padding-left: 22px; margin: 0; }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
+        .short-notes ul { padding-left: 22px; margin: 0; }
+        .warning-box {
+            background: #fff5f2;
+            border-left: 5px solid #dc3545;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
+        .warning-box p { margin: 0; }
+
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 22px;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.link { background: #6c757d; }
+        .share-btn.link.copied { background: #28a745; }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        @media(max-width:600px) {
+            .share-section { flex-direction: column; align-items: stretch; }
+            .share-section .share-label { text-align: center; }
+            .share-btn { justify-content: center; }
+        }
+
+        .mcq-link { text-align: center; padding: 12px 0; }
+        .mcq-link a {
+            display: inline-block;
+            padding: 14px 44px;
+            background: #ffcc00;
+            color: #003366 !important;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
+        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
+
+        .conclusion-section {
+            background: #e8f4fd;
+            border: 2px solid #003366;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .conclusion-section h2 {
+            color: #003366;
+            font-size: 1.6rem;
+            border-left: 5px solid #ffcc00;
+            padding-left: 16px;
+            margin-bottom: 16px;
+        }
+        .conclusion-section ul {
+            padding-left: 26px;
+            margin: 10px 0;
+        }
+        .conclusion-section ul li { margin-bottom: 6px; }
+
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 28px 20px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 28px;
+            margin-bottom: 14px;
+        }
+        footer .footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover { background: #002244; transform: scale(1.05); }
+
+        .copy-protect::selection { background: #b3d4fc; color: #000; }
+
+        @media print {
+            #scrollTop, .share-section, .search-section { display: none !important; }
+            body { background: #fff !important; }
+            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+            .section-body { background: #fff !important; }
+            .tool-figure { border:1px solid #ccc; break-inside:avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+<div class="container">
+<div class="logo"><a href="/">🔧 ITI Study Centre</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/iti-study-centre-notes.html">Notes</a>
+<a class="active" href="/notes/fitter/index.html">Fitter</a>
+<a href="/question-bank/fitter/index.html">Question Bank</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+<a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+<a href="/notes/fitter/index.html">Fitter Theory</a>  › 
+<span class="current">Module 5 – Machine Tools & Assembly (पूर्ण)</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>⚙️ Module 5 – Machine Tools & Assembly (पूर्ण)</h1>
+<p>लेथ मशीन · मिलिंग · ग्राइंडिंग · फिट और टॉलरेंस · असेंबली · सरफेस फिनिश</p>
+</div>
+</section>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()">🔍 Search</button>
+</section>
+
+<div class="container">
+<div class="share-section">
+<span class="share-label">📤 Share:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</button>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+Facebook
+</button>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+Twitter
+</button>
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div class="container">
+<div class="content-section" style="border:2px solid #003366;">
+<div class="section-header" style="background:#003366; border-bottom:none;">
+<span class="icon" style="color:#ffcc00;">📚</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 5 (Machine Tools & Assembly)</span>
+</div>
+<div class="section-body" style="background:#fff;">
+<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
+<a href="#sec-lathe" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ 5.1 – लेथ मशीन (Lathe Machine)</a>
+<a href="#sec-lathe-ops" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 5.2 – लेथ संचालन (Lathe Operations)</a>
+<a href="#sec-threading" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 5.3 – थ्रेडिंग (Threading on Lathe)</a>
+<a href="#sec-taper" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 5.4 – टेपर टर्निंग (Taper Turning)</a>
+<a href="#sec-boring" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🕳️ 5.5 – बोरिंग (Boring on Lathe)</a>
+<a href="#sec-milling" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ 5.6 – मिलिंग मशीन (Milling Machine)</a>
+<a href="#sec-grinding" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔄 5.7 – ग्राइंडिंग मशीन (Grinding Machine)</a>
+<a href="#sec-fits" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📏 5.8 – फिट और टॉलरेंस (Fits & Tolerances)</a>
+<a href="#sec-surface" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📊 5.9 – सरफेस फिनिश (Surface Finish)</a>
+<a href="#sec-assembly" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔗 5.10 – असेंबली और रखरखाव (Assembly & Maintenance)</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.1 LATHE MACHINE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-lathe">
+<div class="content-section" data-content="lathe">
+<div class="section-header"><span class="icon">⚙️</span><span class="title">5.1 – लेथ मशीन (Lathe Machine)</span><span class="subtitle">— भाग, प्रकार, सुरक्षा, रखरखाव</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>लेथ मशीन (Lathe Machine)</strong> सबसे पुरानी और सबसे महत्वपूर्ण मशीन टूल्स में से एक है। इसमें <strong>वर्कपीस (workpiece)</strong> घूमता है और <strong>काटने का उपकरण (cutting tool)</strong> स्थिर रहकर उसमें से सामग्री हटाता है।</p>
+
+<p><strong>लेथ के मुख्य भाग (Main Parts of Lathe):</strong></p>
+<ul>
+<li><strong>बेड (Bed):</strong> लेथ का <strong>आधार (base)</strong> – भारी, कठोर कास्ट आयरन (cast iron) से बना। सभी भागों को <strong>सहारा (support)</strong> देता है।</li>
+<li><strong>हेडस्टॉक (Headstock):</strong> बेड के <strong>बाएँ (left)</strong> सिरे पर स्थित। इसमें <strong>मुख्य स्पिंडल (main spindle)</strong>, <strong>गियर बॉक्स (gearbox)</strong> और <strong>चक (chuck)</strong> होते हैं। स्पिंडल को <strong>घुमाता (rotates)</strong> है।</li>
+<li><strong>टेलस्टॉक (Tailstock):</strong> बेड के <strong>दाएँ (right)</strong> सिरे पर स्थित। इसमें <strong>टेलस्टॉक स्पिंडल (tailstock spindle)</strong> होता है जो <strong>सेंटर (centre)</strong> या <strong>ड्रिल चक (drill chuck)</strong> धारण कर सकता है। <strong>बेड पर स्लाइड (slide)</strong> कर सकता है।</li>
+<li><strong>कैरिज (Carriage):</strong> बेड पर <strong>बाएँ-दाएँ (left-right)</strong> चलता है। इसमें <strong>एप्रन (apron)</strong>, <strong>सैडल (saddle)</strong> और <strong>क्रॉस स्लाइड (cross slide)</strong> शामिल हैं। <strong>कटिंग टूल (cutting tool)</strong> को धारण करता है और <strong>फीड (feed)</strong> देता है।</li>
+<li><strong>कम्पाउंड रेस्ट (Compound Rest):</strong> क्रॉस स्लाइड पर स्थित। <strong>टूल पोस्ट (tool post)</strong> को <strong>कोण (angle)</strong> पर <strong>घुमा (swivel)</strong> सकता है – <strong>टेपर टर्निंग (taper turning)</strong> के लिए।</li>
+<li><strong>टूल पोस्ट (Tool Post):</strong> <strong>कटिंग टूल (cutting tool)</strong> को <strong>क्लैंप (clamp)</strong> करता है।</li>
+<li><strong>लीड स्क्रू (Lead Screw):</strong> <strong>थ्रेड काटने (thread cutting)</strong> के लिए <strong>सटीक (precise)</strong> फीड प्रदान करता है।</li>
+<li><strong>फीड रॉड (Feed Rod):</strong> <strong>सामान्य फीड (normal feed)</strong> के लिए।</li>
+</ul>
+
+<p><strong>लेथ के प्रकार (Types of Lathe):</strong></p>
+<ul>
+<li><strong>बेंच लेथ (Bench Lathe):</strong> छोटा, बेंच पर रखा जाता है। छोटे जॉब (jobs) के लिए।</li>
+<li><strong>इंजन लेथ (Engine Lathe):</strong> सबसे सामान्य प्रकार। सभी प्रकार के सामान्य कार्यों के लिए।</li>
+<li><strong>टूलरूम लेथ (Toolroom Lathe):</strong> उच्च परिशुद्धता (high precision) – टूलरूम कार्य के लिए।</li>
+<li><strong>कैप्स्टन लेथ (Capstan Lathe) और टरेट लेथ (Turret Lathe):</strong> <strong>उत्पादन (production)</strong> के लिए, कई टूल्स के साथ।</li>
+<li><strong>स्वचालित लेथ (Automatic Lathe):</strong> पूर्णतः स्वचालित (fully automatic) – बड़े पैमाने पर उत्पादन (mass production) के लिए।</li>
+<li><strong>CNC लेथ (CNC Lathe):</strong> <strong>कंप्यूटर नियंत्रित (computer-controlled)</strong> – उच्च सटीकता और जटिल आकृतियों के लिए।</li>
+</ul>
+
+<p><strong>लेथ सुरक्षा (Lathe Safety):</strong></p>
+<ul>
+<li>हमेशा <strong>सुरक्षा चश्मा (safety goggles)</strong> पहनें।</li>
+<li><strong>ढीले कपड़े (loose clothes)</strong> न पहनें – स्पिंडल में फँस सकते हैं।</li>
+<li><strong>चक (chuck)</strong> को ठीक से <strong>कसें (tighten)</strong>।</li>
+<li>लेथ चलते समय <strong>वर्कपीस (workpiece)</strong> को कभी <strong>मापें (measure)</strong> नहीं।</li>
+<li><strong>चिप्स (chips)</strong> को हाथ से न हटाएँ – <strong>ब्रश (brush)</strong> का उपयोग करें।</li>
+<li>मशीन को <strong>नियमित रूप से लुब्रिकेट (regularly lubricate)</strong> करें।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: लेथ मशीन के भाग (Lathe Machine Parts)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/lathe_parts.jpg</p>
+<code>lathe_parts.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बेड, हेडस्टॉक, टेलस्टॉक, कैरिज, कम्पाउंड रेस्ट, टूल पोस्ट, लीड स्क्रू)</p>
+</div>
+<div class="figure-caption">Fig 1 – लेथ मशीन के भाग</div>
+</div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>लेथ में <strong>वर्कपीस (workpiece)</strong> घूमता है, <strong>टूल (tool)</strong> स्थिर रहता है।</li><li>बेड (bed) <strong>कास्ट आयरन (cast iron)</strong> का बना होता है।</li><li>हेडस्टॉक (headstock) में <strong>स्पिंडल (spindle)</strong> होता है।</li><li>टेलस्टॉक (tailstock) <strong>सेंटर (centre)</strong> या <strong>ड्रिल (drill)</strong> धारण करता है।</li><li>लीड स्क्रू (lead screw) – <strong>थ्रेड कटिंग (thread cutting)</strong> के लिए।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.2 LATHE OPERATIONS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-lathe-ops">
+<div class="content-section" data-content="lathe-ops">
+<div class="section-header"><span class="icon">🔧</span><span class="title">5.2 – लेथ संचालन (Lathe Operations)</span><span class="subtitle">— फेसिंग, टर्निंग, स्टेप टर्निंग, ग्रूविंग, पार्टिंग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>लेथ पर विभिन्न प्रकार के संचालन (operations)</strong> किए जा सकते हैं। प्रत्येक संचालन की अपनी विशेषताएँ और उपयोग होते हैं।</p>
+
+<p><strong>मुख्य लेथ संचालन (Main Lathe Operations):</strong></p>
+
+<p><strong>1. फेसिंग (Facing):</strong></p>
+<ul>
+<li>वर्कपीस के <strong>सिरे (end)</strong> को <strong>सपाट (flat)</strong> बनाना और <strong>अतिरिक्त लंबाई (excess length)</strong> हटाना।</li>
+<li>टूल को <strong>वर्कपीस के केंद्र (centre)</strong> से <strong>बाहर (outward)</strong> की ओर चलाया जाता है।</li>
+<li><strong>टूल कोण (tool angle):</strong> 5°–10° साइड रेक (side rake) के साथ।</li>
+</ul>
+
+<p><strong>2. बाहरी टर्निंग (Plain / Straight Turning – Outside Turning):</strong></p>
+<ul>
+<li>वर्कपीस के <strong>बाहरी व्यास (outside diameter)</strong> को <strong>कम (reduce)</strong> करना।</li>
+<li>टूल को <strong>वर्कपीस की लंबाई (length)</strong> के साथ <strong>समानांतर (parallel)</strong> चलाया जाता है।</li>
+<li><strong>रफ टर्निंग (Rough turning):</strong> तेज़ी से सामग्री हटाने के लिए – <strong>उच्च फीड (high feed)</strong> और <strong>गहरा कट (deep cut)</strong>।</li>
+<li><strong>फिनिश टर्निंग (Finish turning):</strong> अच्छी <strong>सतह फिनिश (surface finish)</strong> के लिए – <strong>कम फीड (low feed)</strong> और <strong>हल्का कट (light cut)</strong>।</li>
+</ul>
+
+<p><strong>3. स्टेप टर्निंग (Step Turning):</strong></p>
+<ul>
+<li>वर्कपीस पर <strong>विभिन्न व्यास (different diameters)</strong> बनाना – <strong>स्टेप्स (steps)</strong> या <strong>शोल्डर (shoulders)</strong>।</li>
+<li>प्रत्येक व्यास को <strong>अलग-अलग (separately)</strong> टर्न किया जाता है।</li>
+</ul>
+
+<p><strong>4. ग्रूविंग (Grooving – Necking):</strong></p>
+<ul>
+<li>वर्कपीस पर <strong>संकीर्ण खांचे (narrow grooves)</strong> बनाना – <strong>ग्रूव (groove)</strong> या <strong>नेक (neck)</strong>।</li>
+<li><strong>ग्रूविंग टूल (grooving tool)</strong> का उपयोग – टूल की चौड़ाई = खांचे की चौड़ाई।</li>
+<li>उपयोग: <strong>थ्रेड रिलीफ (thread relief)</strong>, <strong>ई-रिंग (E-ring)</strong> ग्रूव, आदि।</li>
+</ul>
+
+<p><strong>5. पार्टिंग (Parting – Cut-off):</strong></p>
+<ul>
+<li>तैयार वर्कपीस को <strong>बार (bar)</strong> से <strong>अलग (cut off)</strong> करना।</li>
+<li><strong>पार्टिंग टूल (parting tool)</strong> – पतला (thin) और चौड़ा (wide) टूल।</li>
+<li><strong>सावधानी (caution):</strong> टूल को <strong>वर्कपीस के केंद्र (centre)</strong> से थोड़ा <strong>नीचे (below)</strong> रखें – ताकि टूल टूटे (break) नहीं।</li>
+<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – गर्मी कम करने के लिए।</li>
+</ul>
+
+<p><strong>6. स्लिप लाइन (Slip Lining / Step Turning with shoulder):</strong></p>
+<ul>
+<li>वर्कपीस पर <strong>सटीक शोल्डर (accurate shoulder)</strong> बनाना।</li>
+<li>टूल को <strong>सटीक स्थिति (precise position)</strong> पर रोकना आवश्यक है।</li>
+<li><strong>शोल्डर (shoulder)</strong> – <strong>90°</strong> या <strong>कोणीय (angular)</strong> हो सकता है।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: लेथ संचालन (Lathe Operations)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/lathe_operations.jpg</p>
+<code>lathe_operations.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(फेसिंग, टर्निंग, स्टेप टर्निंग, ग्रूविंग, पार्टिंग)</p>
+</div>
+<div class="figure-caption">Fig 2 – लेथ संचालन</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>लेथ संचालन पैरामीटर (Lathe Operation Parameters)</caption>
+<thead><tr><th>संचालन (Operation)</th><th>कट गहराई (Cut Depth)</th><th>फीड (Feed mm/rev)</th><th>गति (Speed RPM)</th></tr></thead>
+<tbody>
+<tr><td>रफ टर्निंग (Rough Turning)</td><td>2–4 mm</td><td>0.2–0.4</td><td>200–400</td></tr>
+<tr><td>फिनिश टर्निंग (Finish Turning)</td><td>0.5–1 mm</td><td>0.05–0.15</td><td>400–800</td></tr>
+<tr><td>फेसिंग (Facing)</td><td>1–3 mm</td><td>0.1–0.25</td><td>300–600</td></tr>
+<tr><td>ग्रूविंग (Grooving)</td><td>2–5 mm</td><td>0.05–0.1</td><td>200–400</td></tr>
+<tr><td>पार्टिंग (Parting)</td><td>–</td><td>0.05–0.08</td><td>150–300</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>फेसिंग: <strong>सिरा (end)</strong> सपाट करना।</li><li>टर्निंग: <strong>बाहरी व्यास (outside diameter)</strong> कम करना।</li><li>स्टेप टर्निंग: <strong>विभिन्न व्यास (different diameters)</strong> बनाना।</li><li>ग्रूविंग: <strong>संकीर्ण खांचे (narrow grooves)</strong> बनाना।</li><li>पार्टिंग: <strong>अलग करना (cut-off)</strong>।</li></ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फेसिंग: <strong>टूल</strong> को केंद्र से बाहर की ओर चलाया जाता है।</li><li>रफ टर्निंग: <strong>तेज़</strong> सामग्री हटाना।</li><li>फिनिश टर्निंग: <strong>अच्छी फिनिश</strong> के लिए।</li><li>पार्टिंग टूल: <strong>केंद्र से थोड़ा नीचे</strong> रखें।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.3 THREADING ON LATHE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-threading">
+<div class="content-section" data-content="threading">
+<div class="section-header"><span class="icon">🔩</span><span class="title">5.3 – थ्रेडिंग (Threading on Lathe)</span><span class="subtitle">— बाहरी V-थ्रेड, कटिंग पैरामीटर, चेंज गियर्स</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>लेथ पर थ्रेड कटिंग (Thread cutting on lathe)</strong> सबसे महत्वपूर्ण संचालनों में से एक है। <strong>लीड स्क्रू (lead screw)</strong> और <strong>चेंज गियर्स (change gears)</strong> का उपयोग करके <strong>सटीक पिच (accurate pitch)</strong> के थ्रेड काटे जाते हैं।</p>
+
+<p><strong>थ्रेड कटिंग की मूल आवश्यकताएँ (Basic Requirements for Thread Cutting):</strong></p>
+<ul>
+<li><strong>लीड स्क्रू (Lead Screw):</strong> सटीक पिच वाला लंबा स्क्रू।</li>
+<li><strong>चेंज गियर्स (Change Gears):</strong> स्पिंडल से लीड स्क्रू तक <strong>गति (speed)</strong> स्थानांतरित करने के लिए।</li>
+<li><strong>हाफ नट (Half Nut):</strong> सैडल (saddle) को लीड स्क्रू से <strong>जोड़ने (engage)</strong> और <strong>अलग (disengage)</strong> करने के लिए।</li>
+<li><strong>थ्रेडिंग टूल (Threading Tool):</strong> <strong>V-आकार (V-shaped)</strong> का काटने का उपकरण – <strong>60°</strong> कोण (मीट्रिक थ्रेड के लिए)।</li>
+</ul>
+
+<p><strong>बाहरी V-थ्रेड कटिंग की प्रक्रिया (External V-Thread Cutting Process):</strong></p>
+<ol>
+<li>वर्कपीस को <strong>सेंटर (centres)</strong> या <strong>चक (chuck)</strong> में लगाएँ।</li>
+<li><strong>थ्रेडिंग टूल (threading tool)</strong> को वर्कपीस के <strong>सटीक 90°</strong> पर सेट करें – <strong>टूल गेज (tool gauge)</strong> का उपयोग करें।</li>
+<li><strong>स्पिंडल गति (spindle speed)</strong> को धीमी (slow) रखें – सामान्य टर्निंग से <strong>50% कम (50% less)</strong>।</li>
+<li><strong>चेंज गियर्स (change gears)</strong> को वांछित <strong>पिच (pitch)</strong> के अनुसार सेट करें।</li>
+<li><strong>हाफ नट (half nut)</strong> को लीड स्क्रू के साथ <strong>एंगेज (engage)</strong> करें।</li>
+<li>टूल को <strong>पहली कट (first cut)</strong> के लिए <strong>0.2–0.3 मिमी (mm)</strong> गहराई पर सेट करें।</li>
+<li>कट पूरा होने पर, <strong>हाफ नट (half nut)</strong> को <strong>डिसएंगेज (disengage)</strong> करें और <strong>टूल को वापस (return tool)</strong> लाएँ।</li>
+<li>प्रत्येक कट के लिए <strong>कम्पाउंड रेस्ट (compound rest)</strong> को <strong>29.5°</strong> (या <strong>30°</strong>) पर सेट करके <strong>फीड (feed)</strong> दें – यह <strong>चिप तोड़ने (chip breaking)</strong> और <strong>अच्छी फिनिश (good finish)</strong> के लिए आवश्यक है।</li>
+<li>जब तक <strong>आवश्यक गहराई (required depth)</strong> प्राप्त न हो जाए, कट को <strong>दोहराएँ (repeat)</strong>।</li>
+</ol>
+
+<p><strong>थ्रेड पिच और चेंज गियर्स (Thread Pitch and Change Gears):</strong></p>
+<ul>
+<li>पिच (Pitch) = <strong>1 / थ्रेड प्रति इंच (TPI – Threads Per Inch)</strong> (ब्रिटिश) या <strong>मिलीमीटर (mm)</strong> (मीट्रिक).</li>
+<li>चेंज गियर्स का अनुपात (gear ratio) = <strong>लीड स्क्रू पिच / आवश्यक पिच (Lead screw pitch / Required pitch)</strong>।</li>
+<li>आमतौर पर लीड स्क्रू पिच = <strong>6 मिमी (mm)</strong> या <strong>4 TPI</strong>।</li>
+</ul>
+
+<p><strong>थ्रेड कटिंग में सावधानियाँ (Precautions in Thread Cutting):</strong></p>
+<ul>
+<li>टूल को वर्कपीस के <strong>केंद्र (centre)</strong> पर <strong>सटीक (exactly)</strong> रखें।</li>
+<li>हर कट के बाद <strong>डायल (dial)</strong> से <strong>गहराई (depth)</strong> मापें।</li>
+<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – गर्मी और घर्षण (friction) कम करने के लिए।</li>
+<li>थ्रेड की <strong>फिनिश (finish)</strong> जाँचने के लिए <strong>थ्रेड प्लग गेज (thread plug gauge)</strong> या <strong>थ्रेड रिंग गेज (thread ring gauge)</strong> का उपयोग करें।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: लेथ पर थ्रेड कटिंग (Thread Cutting on Lathe)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/thread_cutting.jpg</p>
+<code>thread_cutting.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(थ्रेडिंग टूल, चेंज गियर्स, हाफ नट, कटिंग प्रक्रिया)</p>
+</div>
+<div class="figure-caption">Fig 3 – लेथ पर थ्रेड कटिंग</div>
+</div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>थ्रेड कटिंग में <strong>लीड स्क्रू (lead screw)</strong> का उपयोग होता है।</li><li>कम्पाउंड रेस्ट को <strong>29.5° या 30°</strong> पर सेट करें।</li><li>थ्रेडिंग टूल का कोण: <strong>60°</strong> (मीट्रिक) या <strong>55°</strong> (ब्रिटिश).</li><li>स्पिंडल गति: सामान्य से <strong>50% कम</strong>।</li><li>हाफ नट (half nut) – <strong>सैडल (saddle)</strong> को लीड स्क्रू से जोड़ता है।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.4 TAPER TURNING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-taper">
+<div class="content-section" data-content="taper">
+<div class="section-header"><span class="icon">📐</span><span class="title">5.4 – टेपर टर्निंग (Taper Turning)</span><span class="subtitle">— विधियाँ, कोण, संचालन, अनुप्रयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>टेपर टर्निंग (Taper Turning)</strong> वह संचालन है जिसमें वर्कपीस का <strong>व्यास (diameter)</strong> उसकी लंबाई के साथ <strong>समान रूप से (uniformly)</strong> <strong>घटता (decreases)</strong> या <strong>बढ़ता (increases)</strong> है।</p>
+
+<p><strong>टेपर टर्निंग की विधियाँ (Methods of Taper Turning):</strong></p>
+
+<p><strong>1. कम्पाउंड रेस्ट विधि (Compound Rest Method):</strong></p>
+<ul>
+<li><strong>कम्पाउंड रेस्ट (compound rest)</strong> को वांछित <strong>टेपर कोण (taper angle)</strong> पर <strong>घुमाएँ (swivel)</strong>।</li>
+<li>टूल को कम्पाउंड रेस्ट के <strong>हैंडल (handle)</strong> द्वारा <strong>मैन्युअल (manual)</strong> फीड दिया जाता है।</li>
+<li><strong>छोटे (short)</strong> और <strong>खड़े (steep)</strong> टेपरों के लिए उपयुक्त।</li>
+<li><strong>सटीकता (accuracy):</strong> अच्छी, लेकिन <strong>समय लेने वाली (time-consuming)</strong>।</li>
+</ul>
+
+<p><strong>2. टेलस्टॉक सेटओवर विधि (Tailstock Setover Method):</strong></p>
+<ul>
+<li>टेलस्टॉक (tailstock) को <strong>बेड (bed)</strong> पर <strong>थोड़ा सा (slightly)</strong> ऑफसेट (offset) करें।</li>
+<li>वर्कपीस को <strong>सेंटर (centres)</strong> के बीच रखा जाता है।</li>
+<li><strong>लंबे (long)</strong> और <strong>हल्के (shallow)</strong> टेपरों के लिए उपयुक्त।</li>
+<li><strong>टेलस्टॉक सेटओवर (setover)</strong> = <strong>(व्यास अंतर / 2) × (कार्य की लंबाई / टेपर की लंबाई)</strong>।</li>
+</ul>
+
+<p><strong>3. टेपर टर्निंग अटैचमेंट विधि (Taper Turning Attachment Method):</strong></p>
+<ul>
+<li><strong>टेपर टर्निंग अटैचमेंट (taper turning attachment)</strong> – बेड के <strong>पीछे (rear)</strong> लगा होता है।</li>
+<li>टूल को <strong>गाइड (guide)</strong> के साथ <strong>स्वचालित (automatic)</strong> फीड दिया जाता है।</li>
+<li><strong>लंबे (long)</strong> और <strong>सटीक (accurate)</strong> टेपरों के लिए – <strong>उत्पादन (production)</strong> के लिए।</li>
+<li>सबसे <strong>अच्छी (best)</strong> विधि – <strong>सटीक (accurate)</strong> और <strong>तेज़ (fast)</strong>।</li>
+</ul>
+
+<p><strong>4. फॉर्म टूल विधि (Form Tool Method):</strong></p>
+<ul>
+<li>एक <strong>विशेष आकार (special shape)</strong> का टूल – <strong>टेपर आकार (taper shape)</strong> में पीसा हुआ (ground).</li>
+<li><strong>छोटे (short)</strong> टेपरों के लिए उपयुक्त।</li>
+<li><strong>उत्पादन (production)</strong> के लिए – <strong>तेज़ (fast)</strong> लेकिन <strong>कम सटीक (less accurate)</strong>।</li>
+</ul>
+
+<p><strong>टेपर कोण (Taper Angle) की गणना:</strong></p>
+<ul>
+<li><strong>टेपर प्रति फुट (Taper per foot – TPF)</strong> या <strong>टेपर प्रति इंच (Taper per inch – TPI)</strong>।</li>
+<li>कोण = <strong>tan⁻¹ ( (D – d) / (2 × L) )</strong>, जहाँ D = बड़ा व्यास, d = छोटा व्यास, L = टेपर की लंबाई।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टेपर टर्निंग विधियाँ (Taper Turning Methods)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/taper_turning.jpg</p>
+<code>taper_turning.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(कम्पाउंड रेस्ट, टेलस्टॉक सेटओवर, अटैचमेंट, फॉर्म टूल)</p>
+</div>
+<div class="figure-caption">Fig 4 – टेपर टर्निंग विधियाँ</div>
+</div>
+<div class="compare-grid">
+<div class="compare-card" style="border-color:#003366; background:#f0f5ff;"><h4>🔵 कम्पाउंड रेस्ट विधि</h4><ul><li><strong>छोटे (short)</strong> टेपर</li><li><strong>मैन्युअल (manual)</strong> फीड</li><li>अच्छी सटीकता (accuracy)</li><li>समय लेने वाली (time-consuming)</li></ul></div>
+<div class="compare-card" style="border-color:#28a745; background:#f0faf2;"><h4>🟢 अटैचमेंट विधि</h4><ul><li><strong>लंबे (long)</strong> टेपर</li><li><strong>स्वचालित (automatic)</strong> फीड</li><li>सबसे सटीक (most accurate)</li><li>उत्पादन (production) के लिए</li></ul></div>
+</div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>टेपर टर्निंग में <strong>व्यास (diameter)</strong> समान रूप से घटता/बढ़ता है।</li><li>कम्पाउंड रेस्ट विधि – <strong>छोटे (short)</strong> टेपरों के लिए।</li><li>टेलस्टॉक सेटओवर – <strong>लंबे (long)</strong>, <strong>हल्के (shallow)</strong> टेपरों के लिए।</li><li>अटैचमेंट विधि – सबसे <strong>सटीक (accurate)</strong> और <strong>तेज़ (fast)</strong>।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.5 BORING ON LATHE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-boring">
+<div class="content-section" data-content="boring">
+<div class="section-header"><span class="icon">🕳️</span><span class="title">5.5 – बोरिंग (Boring on Lathe)</span><span class="subtitle">— आंतरिक व्यास बढ़ाना, बोरिंग बार, सटीकता</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>बोरिंग (Boring)</strong> लेथ पर किया जाने वाला एक संचालन है जिसमें <strong>पहले से ड्रिल (drill)</strong> किए गए छेद के <strong>व्यास (diameter)</strong> को <strong>बढ़ाया (enlarged)</strong> और <strong>सटीक (accurately)</strong> किया जाता है।</p>
+
+<p><strong>बोरिंग के लिए आवश्यक उपकरण (Tools Required for Boring):</strong></p>
+<ul>
+<li><strong>बोरिंग बार (Boring Bar):</strong> एक लंबा, पतला (long, thin) उपकरण जो <strong>हेडस्टॉक (headstock)</strong> या <strong>टेलस्टॉक (tailstock)</strong> में लगा होता है।</li>
+<li><strong>बोरिंग टूल (Boring Tool):</strong> बोरिंग बार के सिरे पर <strong>काटने का किनारा (cutting edge)</strong>।</li>
+<li><strong>चक (Chuck) या फेसप्लेट (Faceplate):</strong> वर्कपीस को पकड़ने के लिए।</li>
+</ul>
+
+<p><strong>बोरिंग की प्रक्रिया (Boring Process):</strong></p>
+<ol>
+<li>वर्कपीस को <strong>चक (chuck)</strong> या <strong>फेसप्लेट (faceplate)</strong> पर <strong>क्लैंप (clamp)</strong> करें।</li>
+<li><strong>बोरिंग बार (boring bar)</strong> को <strong>टूल पोस्ट (tool post)</strong> या <strong>टेलस्टॉक (tailstock)</strong> में लगाएँ।</li>
+<li>बोरिंग बार को वर्कपीस के <strong>छेद (hole)</strong> के अंदर <strong>फीड (feed)</strong> करें।</li>
+<li>वांछित <strong>व्यास (diameter)</strong> प्राप्त होने तक <strong>कई कट (multiple cuts)</strong> लें।</li>
+<li>छेद की <strong>सटीकता (accuracy)</strong> – <strong>डायल गेज (dial gauge)</strong> या <strong>टेलिस्कोपिंग गेज (telescoping gauge)</strong> से जाँचें।</li>
+</ol>
+
+<p><strong>बोरिंग और ड्रिलिंग में अंतर (Difference between Boring and Drilling):</strong></p>
+<ul>
+<li><strong>ड्रिलिंग (Drilling):</strong> <strong>नया छेद (new hole)</strong> बनाना।</li>
+<li><strong>बोरिंग (Boring):</strong> <strong>मौजूदा छेद (existing hole)</strong> को <strong>बड़ा (larger)</strong> और <strong>सटीक (accurate)</strong> करना।</li>
+</ul>
+
+<p><strong>बोरिंग की सावधानियाँ (Precautions in Boring):</strong></p>
+<ul>
+<li>बोरिंग बार को <strong>मजबूती से (firmly)</strong> क्लैंप करें – <strong>कंपन (vibration)</strong> से बचने के लिए।</li>
+<li>बोरिंग बार का <strong>व्यास (diameter)</strong> जितना <strong>बड़ा (larger)</strong> होगा, उतना <strong>कठोर (rigid)</strong> होगा।</li>
+<li><strong>धीमी गति (slow speed)</strong> और <strong>कम फीड (low feed)</strong> – अच्छी फिनिश (finish) के लिए।</li>
+<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – गर्मी कम करने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: बोरिंग संचालन (Boring Operation)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/boring_operation.jpg</p>
+<code>boring_operation.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बोरिंग बार, बोरिंग टूल, वर्कपीस, चक)</p>
+</div>
+<div class="figure-caption">Fig 5 – बोरिंग संचालन</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बोरिंग: <strong>मौजूदा छेद (existing hole)</strong> को <strong>बड़ा (larger)</strong> और <strong>सटीक (accurate)</strong> करना।</li><li>बोरिंग बार: <strong>लंबा, पतला (long, thin)</strong> उपकरण।</li><li>ड्रिलिंग: <strong>नया छेद (new hole)</strong> बनाना।</li><li>बोरिंग में <strong>कंपन (vibration)</strong> से बचना महत्वपूर्ण है।</li></ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बोरिंग – <strong>व्यास (diameter)</strong> बढ़ाना।</li><li>बोरिंग बार – <strong>टूल पोस्ट</strong> या <strong>टेलस्टॉक</strong> में लगता है।</li><li>ड्रिलिंग vs बोरिंग – <strong>नया</strong> vs <strong>मौजूदा</strong> छेद।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.6 MILLING MACHINE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-milling">
+<div class="content-section" data-content="milling">
+<div class="section-header"><span class="icon">⚙️</span><span class="title">5.6 – मिलिंग मशीन (Milling Machine)</span><span class="subtitle">— प्रकार, भाग, संचालन, कटर, सुरक्षा</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>मिलिंग मशीन (Milling Machine)</strong> एक बहुमुखी मशीन टूल है जिसमें <strong>कटर (cutter)</strong> घूमता है और <strong>वर्कपीस (workpiece)</strong> स्थिर रहता है (या फीड किया जाता है)। यह <strong>समतल (flat)</strong>, <strong>कोणीय (angular)</strong>, <strong>खांचेदार (grooved)</strong> और <strong>जटिल (complex)</strong> सतहों को बनाने के लिए उपयोग होती है।</p>
+
+<p><strong>मिलिंग मशीन के मुख्य भाग (Main Parts of Milling Machine):</strong></p>
+<ul>
+<li><strong>बेस (Base):</strong> मशीन का <strong>आधार (foundation)</strong> – कास्ट आयरन (cast iron).</li>
+<li><strong>कॉलम (Column):</strong> बेस पर <strong>ऊर्ध्वाधर (vertical)</strong> खड़ा भाग – सभी अन्य भागों को सहारा देता है।</li>
+<li><strong>नी (Knee):</strong> कॉलम पर <strong>ऊपर-नीचे (up-down)</strong> चलता है – <strong>वर्टिकल फीड (vertical feed)</strong>।</li>
+<li><strong>सैडल (Saddle):</strong> नी (knee) पर <strong>आगे-पीछे (in-out)</strong> चलता है – <strong>क्रॉस फीड (cross feed)</strong>।</li>
+<li><strong>टेबल (Table):</strong> सैडल पर <strong>बाएँ-दाएँ (left-right)</strong> चलता है – <strong>लॉन्गिट्यूडिनल फीड (longitudinal feed)</strong>।</li>
+<li><strong>स्पिंडल (Spindle):</strong> <strong>कटर (cutter)</strong> को घुमाता है – <strong>मोटर (motor)</strong> द्वारा संचालित।</li>
+<li><strong>आर्बर (Arbor):</strong> <strong>कटर (cutter)</strong> को धारण करने के लिए <strong>शाफ़्ट (shaft)</strong>।</li>
+<li><strong>ओवरआर्म (Overarm):</strong> आर्बर (arbor) को <strong>सहारा (support)</strong> देता है।</li>
+</ul>
+
+<p><strong>मिलिंग मशीन के प्रकार (Types of Milling Machines):</strong></p>
+<ul>
+<li><strong>कॉलम और नी मिलिंग मशीन (Column &amp; Knee Milling Machine):</strong> सबसे सामान्य प्रकार।</li>
+<li><strong>बेड टाइप मिलिंग मशीन (Bed Type):</strong> टेबल बेड पर स्लाइड करती है – भारी कार्य के लिए।</li>
+<li><strong>प्लेनर मिलिंग मशीन (Planer Type):</strong> बहुत बड़ी – बड़ी वर्कपीस के लिए।</li>
+<li><strong>सीएनसी मिलिंग मशीन (CNC Milling Machine):</strong> कंप्यूटर नियंत्रित – जटिल आकृतियों के लिए।</li>
+</ul>
+
+<p><strong>मिलिंग कटर के प्रकार (Types of Milling Cutters):</strong></p>
+<ul>
+<li><strong>सादा मिलिंग कटर (Plain Milling Cutter):</strong> <strong>समतल सतह (flat surface)</strong> बनाने के लिए।</li>
+<li><strong>साइड मिलिंग कटर (Side Milling Cutter):</strong> <strong>किनारे (edges)</strong> पर मिलिंग के लिए।</li>
+<li><strong>फेस मिलिंग कटर (Face Milling Cutter):</strong> <strong>बड़ी समतल सतह (large flat surface)</strong> के लिए।</li>
+<li><strong>एंड मिल (End Mill):</strong> <strong>खांचे (slots)</strong> और <strong>पॉकेट्स (pockets)</strong> के लिए।</li>
+<li><strong>फॉर्म कटर (Form Cutter):</strong> <strong>जटिल आकृतियाँ (complex shapes)</strong> के लिए।</li>
+<li><strong>टी-स्लॉट कटर (T-Slot Cutter):</strong> <strong>T-स्लॉट्स</strong> बनाने के लिए – मशीन टेबल्स के लिए।</li>
+</ul>
+
+<p><strong>मिलिंग संचालन (Milling Operations):</strong></p>
+<ul>
+<li><strong>प्लेन मिलिंग (Plain Milling):</strong> समतल सतह बनाना।</li>
+<li><strong>फेस मिलिंग (Face Milling):</strong> बड़ी सतहों को <strong>फिनिश (finish)</strong> करना।</li>
+<li><strong>एंगल मिलिंग (Angle Milling):</strong> <strong>कोणीय (angular)</strong> सतह बनाना।</li>
+<li><strong>ग्रूव मिलिंग (Groove Milling):</strong> <strong>खांचे (grooves)</strong> और <strong>स्लॉट्स (slots)</strong> बनाना।</li>
+<li><strong>गियर मिलिंग (Gear Milling):</strong> <strong>गियर (gears)</strong> के दाँत (teeth) बनाना।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: मिलिंग मशीन और कटर (Milling Machine &amp; Cutters)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/milling_machine.jpg</p>
+<code>milling_machine.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(कॉलम, नी, सैडल, टेबल, स्पिंडल, आर्बर, कटर)</p>
+</div>
+<div class="figure-caption">Fig 6 – मिलिंग मशीन और कटर</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>मिलिंग में <strong>कटर (cutter)</strong> घूमता है, <strong>वर्कपीस (workpiece)</strong> फीड होता है।</li><li>कॉलम और नी मिलिंग – <strong>सबसे सामान्य (most common)</strong>।</li><li>एंड मिल – <strong>खांचे (slots)</strong> और <strong>पॉकेट्स (pockets)</strong> के लिए।</li><li>गियर मिलिंग – <strong>गियर (gears)</strong> बनाने के लिए।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.7 GRINDING MACHINE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-grinding">
+<div class="content-section" data-content="grinding">
+<div class="section-header"><span class="icon">🔄</span><span class="title">5.7 – ग्राइंडिंग मशीन (Grinding Machine)</span><span class="subtitle">— प्रकार, एब्रासिव व्हील, सुरक्षा, ड्रेसिंग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>ग्राइंडिंग मशीन (Grinding Machine)</strong> का उपयोग <strong>उच्च परिशुद्धता (high precision)</strong> और <strong>चिकनी सतह (smooth surface finish)</strong> प्राप्त करने के लिए किया जाता है। इसमें <strong>एब्रासिव व्हील (abrasive wheel)</strong> घूमता है और वर्कपीस से <strong>बहुत महीन (very fine)</strong> चिप्स हटाता है।</p>
+
+<p><strong>ग्राइंडिंग मशीन के प्रकार (Types of Grinding Machines):</strong></p>
+<ul>
+<li><strong>बेंच ग्राइंडर (Bench Grinder):</strong> छोटा, बेंच पर रखा जाता है। <strong>उपकरण तीक्ष्ण करने (tool sharpening)</strong> के लिए।</li>
+<li><strong>पेडस्टल ग्राइंडर (Pedestal Grinder):</strong> फर्श पर स्थित, बेंच ग्राइंडर से बड़ा।</li>
+<li><strong>सरफेस ग्राइंडर (Surface Grinder):</strong> <strong>समतल सतह (flat surface)</strong> ग्राइंडिंग के लिए।</li>
+<li><strong>सिलिंड्रिकल ग्राइंडर (Cylindrical Grinder):</strong> <strong>बाहरी (external)</strong> और <strong>आंतरिक (internal)</strong> बेलनाकार सतहों के लिए।</li>
+<li><strong>टूल और कटर ग्राइंडर (Tool &amp; Cutter Grinder):</strong> <strong>काटने के उपकरण (cutting tools)</strong> को तीक्ष्ण (sharpen) करने के लिए।</li>
+<li><strong>सेंटरलेस ग्राइंडर (Centerless Grinder):</strong> बिना सेंटर (centres) के – <strong>उच्च उत्पादन (high production)</strong> के लिए।</li>
+</ul>
+
+<p><strong>ग्राइंडिंग व्हील (Grinding Wheel) के भाग:</strong></p>
+<ul>
+<li><strong>एब्रासिव (Abrasive):</strong> काटने वाले कण – <strong>एल्यूमीनियम ऑक्साइड (Al₂O₃)</strong> या <strong>सिलिकॉन कार्बाइड (SiC)</strong>।</li>
+<li><strong>बॉन्ड (Bond):</strong> एब्रासिव कणों को <strong>बाँधने (binding)</strong> वाला पदार्थ – <strong>विट्रिफाइड (vitrified)</strong>, <strong>रबर (rubber)</strong>, <strong>राल (resinoid)</strong>।</li>
+<li><strong>ग्रेन साइज (Grain Size):</strong> एब्रासिव कणों का आकार – <strong>बड़ा (coarse)</strong> = रफ ग्राइंडिंग, <strong>छोटा (fine)</strong> = फिनिश ग्राइंडिंग।</li>
+<li><strong>ग्रेड (Grade):</strong> व्हील की <strong>कठोरता (hardness)</strong> – <strong>सॉफ्ट (soft)</strong> से <strong>हार्ड (hard)</strong> तक।</li>
+</ul>
+
+<p><strong>ग्राइंडिंग व्हील का चयन (Selection of Grinding Wheel):</strong></p>
+<ul>
+<li><strong>सामग्री (Material) के अनुसार:</strong> कठोर सामग्री के लिए <strong>नरम (soft)</strong> व्हील; नरम सामग्री के लिए <strong>कठोर (hard)</strong> व्हील।</li>
+<li><strong>संचालन (Operation) के अनुसार:</strong> रफ ग्राइंडिंग के लिए <strong>मोटा (coarse)</strong> ग्रेन; फिनिश के लिए <strong>महीन (fine)</strong> ग्रेन।</li>
+<li><strong>व्हील की गति (Wheel Speed):</strong> व्हील पर <strong>अधिकतम RPM</strong> अंकित होता है – इससे <strong>अधिक (exceed)</strong> न करें।</li>
+</ul>
+
+<p><strong>ग्राइंडिंग व्हील की ड्रेसिंग (Dressing of Grinding Wheel):</strong></p>
+<ul>
+<li><strong>ड्रेसिंग (Dressing):</strong> व्हील की <strong>सतह (surface)</strong> को <strong>साफ (clean)</strong> और <strong>तीक्ष्ण (sharp)</strong> बनाना।</li>
+<li><strong>ड्रेसर (Dresser):</strong> <strong>डायमंड ड्रेसर (diamond dresser)</strong> या <strong>स्टार ड्रेसर (star dresser)</strong>।</li>
+<li><strong>ट्रूइंग (Truing):</strong> व्हील को <strong>सटीक आकार (accurate shape)</strong> में लाना – <strong>डायमंड (diamond)</strong> टूल से।</li>
+<li>नियमित ड्रेसिंग – <strong>व्हील की कटिंग क्षमता (cutting capacity)</strong> बनाए रखने के लिए।</li>
+</ul>
+
+<p><strong>ग्राइंडिंग सुरक्षा (Grinding Safety):</strong></p>
+<ul>
+<li>हमेशा <strong>सुरक्षा चश्मा (safety goggles)</strong> पहनें।</li>
+<li>व्हील को <strong>सही तरीके से (properly)</strong> <strong>माउंट (mount)</strong> करें – <strong>ब्लोटर (blotter)</strong> का उपयोग करें।</li>
+<li>व्हील पर <strong>अधिकतम गति (maximum speed)</strong> से अधिक कभी न चलाएँ।</li>
+<li>व्हील <strong>चलते (running)</strong> समय <strong>टूल रेस्ट (tool rest)</strong> को व्हील के बहुत <strong>पास (close)</strong> न रखें – 3 मिमी (mm) से अधिक नहीं।</li>
+<li>व्हील के <strong>चेहरे (face)</strong> पर ग्राइंडिंग करें – <strong>किनारे (side)</strong> पर नहीं (जब तक स्पेशल व्हील न हो)।</li>
+<li><strong>शोर (noise)</strong> या <strong>कंपन (vibration)</strong> होने पर तुरंत <strong>बंद (stop)</strong> करें – व्हील में दरार (crack) हो सकती है।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: ग्राइंडिंग मशीन और व्हील (Grinding Machine &amp; Wheel)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/grinding_machine.jpg</p>
+<code>grinding_machine.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बेंच ग्राइंडर, सरफेस ग्राइंडर, सिलिंड्रिकल ग्राइंडर, ड्रेसिंग)</p>
+</div>
+<div class="figure-caption">Fig 7 – ग्राइंडिंग मशीन और व्हील</div>
+</div>
+<div class="warning-box"><h4>⚠️ सुरक्षा</h4><p>ग्राइंडिंग व्हील को <strong>अधिकतम RPM</strong> से अधिक कभी न चलाएँ। व्हील के <strong>साइड (side)</strong> पर ग्राइंडिंग न करें। <strong>सुरक्षा चश्मा (safety goggles)</strong> पहनना अनिवार्य है।</p></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बेंच ग्राइंडर: <strong>उपकरण तीक्ष्ण (tool sharpening)</strong> के लिए।</li><li>सरफेस ग्राइंडर: <strong>समतल सतह (flat surface)</strong> के लिए।</li><li>सिलिंड्रिकल ग्राइंडर: <strong>बेलनाकार (cylindrical)</strong> सतहों के लिए।</li><li>ड्रेसिंग: व्हील को <strong>तीक्ष्ण (sharp)</strong> बनाना।</li><li>ट्रूइंग: व्हील को <strong>सटीक आकार (accurate shape)</strong> में लाना।</li><li>व्हील की <strong>सतह (face)</strong> पर ग्राइंडिंग करें – <strong>किनारे (side)</strong> पर नहीं।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.8 FITS AND TOLERANCES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-fits">
+<div class="content-section" data-content="fits">
+<div class="section-header"><span class="icon">📏</span><span class="title">5.8 – फिट और टॉलरेंस (Fits and Tolerances)</span><span class="subtitle">— लिमिट्स, फिट के प्रकार, होल बेसिस, शाफ्ट बेसिस</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>फिट (Fit)</strong> दो भागों (जैसे <strong>शाफ्ट (shaft)</strong> और <strong>होल (hole)</strong>) के बीच का <strong>संबंध (relationship)</strong> है जो <strong>असेंबली (assembly)</strong> के बाद <strong>निकासी (clearance)</strong> या <strong>हस्तक्षेप (interference)</strong> को दर्शाता है।</p>
+
+<p><strong>टॉलरेंस (Tolerance)</strong> <strong>अनुमेय विचलन (allowable deviation)</strong> है – अधिकतम और न्यूनतम सीमाओं (limits) के बीच का अंतर।</p>
+
+<p><strong>लिमिट्स (Limits):</strong></p>
+<ul>
+<li><strong>ऊपरी सीमा (Upper Limit):</strong> अधिकतम अनुमेय आकार (maximum permissible size).</li>
+<li><strong>निचली सीमा (Lower Limit):</strong> न्यूनतम अनुमेय आकार (minimum permissible size).</li>
+<li><strong>टॉलरेंस (Tolerance):</strong> ऊपरी सीमा – निचली सीमा।</li>
+</ul>
+
+<p><strong>फिट के प्रकार (Types of Fits):</strong></p>
+
+<p><strong>1. निकासी फिट (Clearance Fit):</strong></p>
+<ul>
+<li><strong>शाफ्ट (shaft)</strong> हमेशा <strong>होल (hole)</strong> से <strong>छोटा (smaller)</strong> होता है।</li>
+<li><strong>सकारात्मक निकासी (positive clearance)</strong> – शाफ्ट होल में <strong>घूम (rotate)</strong> या <strong>स्लाइड (slide)</strong> कर सकता है।</li>
+<li>उदाहरण: <strong>बेयरिंग (bearing)</strong> फिट, <strong>पिस्टन (piston)</strong> और <strong>सिलेंडर (cylinder)</strong>।</li>
+<li><strong>सबसे अधिक उपयोग (most commonly used)</strong> फिट प्रकार।</li>
+</ul>
+
+<p><strong>2. हस्तक्षेप फिट (Interference Fit – Press Fit / Force Fit):</strong></p>
+<ul>
+<li><strong>शाफ्ट (shaft)</strong> हमेशा <strong>होल (hole)</strong> से <strong>बड़ा (larger)</strong> होता है।</li>
+<li><strong>नकारात्मक निकासी (negative clearance)</strong> – शाफ्ट को <strong>दबाकर (pressed)</strong> या <strong>गर्म करके (heated)</strong> डाला जाता है।</li>
+<li>उदाहरण: <strong>गियर (gear)</strong> का <strong>शाफ्ट (shaft)</strong> पर फिट, <strong>बियरिंग रेस (bearing race)</strong>।</li>
+<li><strong>बिना ब्रेक (without breaking)</strong> हटाया नहीं जा सकता।</li>
+</ul>
+
+<p><strong>3. संक्रमण फिट (Transition Fit):</strong></p>
+<ul>
+<li>निकासी (clearance) और हस्तक्षेप (interference) के <strong>बीच (between)</strong> का फिट।</li>
+<li>कभी <strong>निकासी (clearance)</strong>, कभी <strong>हस्तक्षेप (interference)</strong> – फिट पर निर्भर करता है।</li>
+<li>उदाहरण: <strong>सटीक स्थिति (precise location)</strong> के लिए – <strong>डॉवेल (dowel)</strong> फिट।</li>
+</ul>
+
+<p><strong>फिट सिस्टम (Fit Systems):</strong></p>
+<ul>
+<li><strong>होल बेसिस सिस्टम (Hole Basis System):</strong> <strong>होल (hole)</strong> का आकार <strong>स्थिर (constant)</strong> रखा जाता है, <strong>शाफ्ट (shaft)</strong> का आकार <strong>बदला (varied)</strong> जाता है – <strong>अधिक व्यावहारिक (more practical)</strong>।</li>
+<li><strong>शाफ्ट बेसिस सिस्टम (Shaft Basis System):</strong> <strong>शाफ्ट (shaft)</strong> का आकार <strong>स्थिर (constant)</strong> रखा जाता है, <strong>होल (hole)</strong> का आकार <strong>बदला (varied)</strong> जाता है।</li>
+<li><strong>IS (भारतीय मानक – Indian Standard)</strong> होल बेसिस सिस्टम का <strong>अनुशंसा (recommendation)</strong> करता है।</li>
+</ul>
+
+<p><strong>टॉलरेंस ग्रेड (Tolerance Grades – IT Grades):</strong></p>
+<ul>
+<li><strong>IT01 से IT16</strong> तक – <strong>IT (International Tolerance)</strong> ग्रेड।</li>
+<li><strong>IT01–IT4:</strong> <strong>गेज (gauges)</strong> और <strong>उच्च-परिशुद्धता (high-precision)</strong> कार्य के लिए।</li>
+<li><strong>IT5–IT7:</strong> <strong>फिट (fits)</strong> के लिए – सबसे अधिक उपयोग।</li>
+<li><strong>IT8–IT11:</strong> <strong>सामान्य (general)</strong> कार्य के लिए।</li>
+<li><strong>IT12–IT16:</strong> <strong>रफ (rough)</strong> कार्य के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>फिट के प्रकार (Types of Fits)</caption>
+<thead><tr><th>फिट प्रकार (Fit Type)</th><th>निकासी (Clearance)</th><th>हस्तक्षेप (Interference)</th><th>उदाहरण (Example)</th></tr></thead>
+<tbody>
+<tr><td>निकासी फिट (Clearance Fit)</td><td>✅ हाँ (Yes)</td><td>❌ नहीं (No)</td><td>बेयरिंग, पिस्टन</td></tr>
+<tr><td>हस्तक्षेप फिट (Interference Fit)</td><td>❌ नहीं (No)</td><td>✅ हाँ (Yes)</td><td>गियर on शाफ्ट</td></tr>
+<tr><td>संक्रमण फिट (Transition Fit)</td><td>कभी-कभी</td><td>कभी-कभी</td><td>डॉवेल फिट</td></tr>
+</tbody>
+</table>
+</div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>निकासी फिट (Clearance Fit): <strong>शाफ्ट (shaft) &lt; होल (hole)</strong> – सकारात्मक निकासी (positive clearance).</li><li>हस्तक्षेप फिट (Interference Fit): <strong>शाफ्ट (shaft) &gt; होल (hole)</strong> – नकारात्मक निकासी (negative clearance).</li><li>संक्रमण फिट (Transition Fit): <strong>निकासी और हस्तक्षेप के बीच (between clearance and interference)</strong>।</li>
+<li>होल बेसिस सिस्टम – <strong>होल (hole) स्थिर</strong>।</li>
+<li>शाफ्ट बेसिस सिस्टम – <strong>शाफ्ट (shaft) स्थिर</strong>।</li>
+<li>IS – <strong>होल बेसिस (Hole Basis)</strong> की अनुशंसा करता है।</li>
+<li>IT ग्रेड – <strong>IT5 से IT7</strong> फिट्स के लिए सबसे अधिक उपयोग।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.9 SURFACE FINISH -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-surface">
+<div class="content-section" data-content="surface">
+<div class="section-header"><span class="icon">📊</span><span class="title">5.9 – सरफेस फिनिश (Surface Finish)</span><span class="subtitle">— सतह खुरदरापन, मापन, उपकरण, मानक</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>सरफेस फिनिश (Surface Finish)</strong> किसी मशीनी सतह की <strong>गुणवत्ता (quality)</strong> और <strong>चिकनाई (smoothness)</strong> को दर्शाती है। यह <strong>घर्षण (friction)</strong>, <strong>घिसाव (wear)</strong> और <strong>उपस्थिति (appearance)</strong> को प्रभावित करती है।</p>
+
+<p><strong>सतह खुरदरापन (Surface Roughness):</strong></p>
+<ul>
+<li><strong>खुरदरापन (Roughness):</strong> सतह पर <strong>महीन असमानताएँ (fine irregularities)</strong> – <strong>मशीनिंग (machining)</strong> के कारण।</li>
+<li><strong>तरंग (Waviness):</strong> सतह पर <strong>बड़ी असमानताएँ (larger irregularities)</strong> – <strong>कंपन (vibration)</strong> के कारण।</li>
+<li><strong>ले (Lay):</strong> सतह पर <strong>प्रमुख खांचों (dominant grooves)</strong> की दिशा।</li>
+</ul>
+
+<p><strong>सतह खुरदरापन मापने के पैरामीटर (Surface Roughness Parameters):</strong></p>
+<ul>
+<li><strong>Ra (Arithmetic Average):</strong> सतह की <strong>औसत (average)</strong> खुरदरापन – <strong>सबसे सामान्य (most common)</strong> पैरामीटर।</li>
+<li><strong>Rz (Average Maximum Height):</strong> सबसे <strong>ऊँचे (highest)</strong> और <strong>निचले (lowest)</strong> बिंदुओं के बीच <strong>औसत (average)</strong> अंतर।</li>
+<li><strong>RMS (Root Mean Square):</strong> Ra का <strong>RMS मान (RMS value)</strong> – Ra से लगभग <strong>11% अधिक (11% higher)</strong>।</li>
+</ul>
+
+<p><strong>सतह खुरदरापन मापने के उपकरण (Surface Roughness Measuring Instruments):</strong></p>
+<ul>
+<li><strong>खुरदरापन तुलनित्र (Roughness Comparator):</strong> मानक नमूनों (standard samples) से <strong>दृश्य (visual)</strong> और <strong>स्पर्श (tactile)</strong> तुलना।</li>
+<li><strong>सतह खुरदरापन मीटर (Surface Roughness Tester / Profilometer):</strong> <strong>इलेक्ट्रॉनिक (electronic)</strong> उपकरण – <strong>सटीक (accurate)</strong> मापन।</li>
+<li><strong>टेलर-हॉबसन टैलीसर्फ (Taylor-Hobson Talysurf):</strong> उच्च-परिशुद्धता (high-precision) खुरदरापन मीटर।</li>
+</ul>
+
+<p><strong>सतह फिनिश को प्रभावित करने वाले कारक (Factors Affecting Surface Finish):</strong></p>
+<ul>
+<li><strong>कटिंग पैरामीटर (Cutting Parameters):</strong> गति (speed), फीड (feed), कट गहराई (depth of cut).</li>
+<li><strong>टूल ज्यामिति (Tool Geometry):</strong> टूल कोण (tool angles), त्रिज्या (radius).</li>
+<li><strong>टूल सामग्री (Tool Material):</strong> कार्बाइड (carbide), HSS, सिरेमिक (ceramic).</li>
+<li><strong>कटिंग फ्लुइड (Cutting Fluid):</strong> गर्मी और घर्षण (friction) कम करके फिनिश में सुधार करता है।</li>
+<li><strong>मशीन की स्थिति (Machine Condition):</strong> कंपन (vibration), कठोरता (rigidity).</li>
+</ul>
+
+<p><strong>विभिन्न प्रक्रियाओं के लिए Ra मान (Ra Values for Different Processes):</strong></p>
+<ul>
+<li><strong>रफ टर्निंग (Rough Turning):</strong> 6.3 – 12.5 µm</li>
+<li><strong>फिनिश टर्निंग (Finish Turning):</strong> 1.6 – 3.2 µm</li>
+<li><strong>ग्राइंडिंग (Grinding):</strong> 0.2 – 0.8 µm</li>
+<li><strong>लैपिंग (Lapping):</strong> 0.025 – 0.1 µm</li>
+<li><strong>पॉलिशिंग (Polishing):</strong> 0.012 – 0.05 µm</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: सतह खुरदरापन मापन (Surface Roughness Measurement)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/surface_roughness.jpg</p>
+<code>surface_roughness.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(प्रोफिलोमीटर, तुलनित्र, खुरदरापन पैरामीटर)</p>
+</div>
+<div class="figure-caption">Fig 8 – सतह खुरदरापन मापन</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>Ra – <strong>औसत (average)</strong> खुरदरापन – <strong>सबसे सामान्य (most common)</strong>।</li><li>Rz – <strong>उच्चतम-निम्नतम (highest-lowest)</strong> का औसत।</li><li>प्रोफिलोमीटर (Profilometer) – <strong>इलेक्ट्रॉनिक (electronic)</strong> मापन उपकरण।</li><li>ग्राइंडिंग – <strong>Ra 0.2–0.8 µm</strong>।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.10 ASSEMBLY AND MAINTENANCE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-assembly">
+<div class="content-section" data-content="assembly">
+<div class="section-header"><span class="icon">🔗</span><span class="title">5.10 – असेंबली और रखरखाव (Assembly & Maintenance)</span><span class="subtitle">— बियरिंग्स, गियर्स, शाफ्ट्स, लुब्रिकेशन, टूल्स</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>असेंबली (Assembly)</strong> विभिन्न भागों को <strong>एक साथ जोड़ने (joining together)</strong> की प्रक्रिया है – एक <strong>पूर्ण उत्पाद (complete product)</strong> या <strong>उप-असेंबली (sub-assembly)</strong> बनाने के लिए।</p>
+
+<p><strong>असेंबली के प्रकार (Types of Assembly):</strong></p>
+<ul>
+<li><strong>मैन्युअल असेंबली (Manual Assembly):</strong> हाथ के उपकरणों (hand tools) का उपयोग – <strong>छोटे उत्पादन (small production)</strong> के लिए।</li>
+<li><strong>मशीनी असेंबली (Mechanical Assembly):</strong> <strong>उत्पादन मशीनें (production machines)</strong> – <strong>बड़े पैमाने (mass production)</strong> के लिए।</li>
+<li><strong>फिक्स्ड असेंबली (Fixed Assembly):</strong> भागों को <strong>स्थायी रूप से (permanently)</strong> जोड़ा जाता है – <strong>वेल्डिंग (welding)</strong>, <strong>रिवेटिंग (riveting)</strong>।</li>
+<li><strong>मूवेबल असेंबली (Movable Assembly):</strong> भागों को <strong>चल (move)</strong> करने की अनुमति देता है – <strong>बियरिंग्स (bearings)</strong>, <strong>गियर्स (gears)</strong>।</li>
+</ul>
+
+<p><strong>असेंबली के लिए आवश्यक उपकरण (Tools Required for Assembly):</strong></p>
+<ul>
+<li><strong>रिंच (Wrenches):</strong> <strong>नट (nuts)</strong> और <strong>बोल्ट (bolts)</strong> कसने के लिए – <strong>ओपन-एंड (open-end)</strong>, <strong>बॉक्स (box)</strong>, <strong>कंबिनेशन (combination)</strong>, <strong>एलन (Allen)</strong>।</li>
+<li><strong>स्क्रूड्राइवर (Screwdrivers):</strong> <strong>स्क्रू (screws)</strong> कसने और खोलने के लिए – <strong>फ्लैट (flat)</strong>, <strong>फिलिप्स (Phillips)</strong>।</li>
+<li><strong>प्लायर्स (Pliers):</strong> <strong>पकड़ने (gripping)</strong>, <strong>मोड़ने (bending)</strong>, <strong>काटने (cutting)</strong> के लिए।</li>
+<li><strong>हथौड़े (Hammers):</strong> <strong>टैप करने (tapping)</strong> और <strong>सेट करने (setting)</strong> के लिए – <strong>सॉफ्ट-फेस (soft-face)</strong>, <strong>बॉल-पीन (ball-peen)</strong>।</li>
+<li><strong>पंच (Punches):</strong> <strong>अंकन (marking)</strong> और <strong>ड्राइविंग (driving)</strong> के लिए।</li>
+<li><strong>गेज (Gauges):</strong> <strong>फिट (fit)</strong> और <strong>अंतर (clearance)</strong> जाँचने के लिए – <strong>फीलर गेज (feeler gauge)</strong>, <strong>स्नैप गेज (snap gauge)</strong>।</li>
+</ul>
+
+<p><strong>मशीनों का रखरखाव (Machine Maintenance):</strong></p>
+<ul>
+<li><strong>लुब्रिकेशन (Lubrication):</strong> <strong>तेल (oil)</strong> और <strong>ग्रीस (grease)</strong> का उपयोग – <strong>घर्षण (friction)</strong> और <strong>घिसाव (wear)</strong> कम करने के लिए।</li>
+<li><strong>सफाई (Cleaning):</strong> <strong>चिप्स (chips)</strong> और <strong>गंदगी (dirt)</strong> हटाना।</li>
+<li><strong>निरीक्षण (Inspection):</strong> <strong>घिसाव (wear)</strong> और <strong>क्षति (damage)</strong> के लिए नियमित जाँच।</li>
+<li><strong>समायोजन (Adjustment):</strong> <strong>बेल्ट (belts)</strong>, <strong>चेन (chains)</strong>, <strong>क्लैंप (clamps)</strong> को सही करना।</li>
+<li><strong>प्रतिस्थापन (Replacement):</strong> <strong>क्षतिग्रस्त (damaged)</strong> या <strong>घिसे हुए (worn)</strong> भागों को <strong>बदलना (replacing)</strong>।</li>
+</ul>
+
+<p><strong>रखरखाव के प्रकार (Types of Maintenance):</strong></p>
+<ul>
+<li><strong>निवारक रखरखाव (Preventive Maintenance):</strong> <strong>नियोजित (scheduled)</strong> – खराब होने से पहले (before breakdown).</li>
+<li><strong>सुधारात्मक रखरखाव (Corrective Maintenance):</strong> <strong>खराब होने के बाद (after breakdown)</strong> – मरम्मत (repair).</li>
+<li><strong>पूर्वानुमानित रखरखाव (Predictive Maintenance):</strong> <strong>स्थिति की निगरानी (condition monitoring)</strong> – खराब होने की भविष्यवाणी (predicting failure).</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: असेंबली उपकरण और रखरखाव (Assembly Tools &amp; Maintenance)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/assembly_tools.jpg</p>
+<code>assembly_tools.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(रिंच, स्क्रूड्राइवर, प्लायर्स, गेज, लुब्रिकेशन)</p>
+</div>
+<div class="figure-caption">Fig 9 – असेंबली उपकरण और रखरखाव</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>असेंबली – <strong>भागों को जोड़ना (joining parts)</strong>।</li><li>निवारक रखरखाव (Preventive) – <strong>खराब होने से पहले (before failure)</strong>।</li><li>सुधारात्मक रखरखाव (Corrective) – <strong>खराब होने के बाद (after failure)</strong>।</li><li>लुब्रिकेशन – <strong>घर्षण (friction)</strong> और <strong>घिसाव (wear)</strong> कम करता है।</li></ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फिक्स्ड असेंबली – <strong>स्थायी (permanent)</strong> – वेल्डिंग, रिवेटिंग।</li><li>मूवेबल असेंबली – <strong>चल (movable)</strong> – बियरिंग्स, गियर्स।</li><li>निवारक रखरखाव (Preventive Maintenance) – <strong>नियोजित (scheduled)</strong>।</li><li>सुधारात्मक रखरखाव (Corrective Maintenance) – <strong>मरम्मत (repair)</strong>।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ============================== CONCLUSION ============================== -->
+<div class="container">
+<div class="conclusion-section">
+<h2>📌 Module 5 – निष्कर्ष (Conclusion)</h2>
+<div class="bilingual">
+<div class="content">
+<p><strong>Module 5 – Machine Tools &amp; Assembly</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<ul>
+<li><strong>लेथ मशीन (Lathe Machine):</strong> भाग, प्रकार, सुरक्षा, रखरखाव।</li>
+<li><strong>लेथ संचालन (Lathe Operations):</strong> फेसिंग, टर्निंग (रफ और फिनिश), स्टेप टर्निंग, ग्रूविंग, पार्टिंग, स्लिप लाइन।</li>
+<li><strong>थ्रेडिंग (Threading):</strong> बाहरी V-थ्रेड, चेंज गियर्स, कटिंग पैरामीटर, सुरक्षा।</li>
+<li><strong>टेपर टर्निंग (Taper Turning):</strong> कम्पाउंड रेस्ट, टेलस्टॉक सेटओवर, अटैचमेंट, फॉर्म टूल विधियाँ।</li>
+<li><strong>बोरिंग (Boring):</strong> मौजूदा छेद को बड़ा और सटीक करना।</li>
+<li><strong>मिलिंग मशीन (Milling Machine):</strong> भाग, प्रकार, कटर, संचालन।</li>
+<li><strong>ग्राइंडिंग मशीन (Grinding Machine):</strong> प्रकार, एब्रासिव व्हील, ड्रेसिंग, सुरक्षा।</li>
+<li><strong>फिट और टॉलरेंस (Fits &amp; Tolerances):</strong> निकासी, हस्तक्षेप, संक्रमण फिट, होल बेसिस, शाफ्ट बेसिस, IT ग्रेड।</li>
+<li><strong>सरफेस फिनिश (Surface Finish):</strong> खुरदरापन पैरामीटर (Ra, Rz), मापन उपकरण, प्रभावित करने वाले कारक।</li>
+<li><strong>असेंबली और रखरखाव (Assembly &amp; Maintenance):</strong> उपकरण, प्रकार (फिक्स्ड, मूवेबल), लुब्रिकेशन, निवारक और सुधारात्मक रखरखाव।</li>
+</ul>
+<p>इन सभी विषयों में महारत हासिल करना हर <strong>फिटर (fitter)</strong> के लिए आवश्यक है। प्रत्येक संचालन को <strong>सटीकता (precision)</strong> और <strong>सुरक्षा (safety)</strong> के साथ अभ्यास करें।</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ============================== MCQ ============================== -->
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="section-body">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/fitter/index.html?mod=5" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="section-body">
+<div style="display:flex; flex-wrap:wrap; gap:12px;">
+<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
+<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
+<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
+<a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('⚙️ ' + getPageTitle() + ' - Complete Fitter Theory Module 5 Study Material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('⚙️ ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Fitter Theory Module 5 – Complete Book Loaded.');
+        console.log('📚 Machine Tools & Assembly – Lathe, Milling, Grinding, Fits, Surface Finish, Assembly.');
+    </script>
+</body>
+  </html>
