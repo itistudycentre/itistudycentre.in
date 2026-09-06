@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 4 – Welding (पूर्ण) | Fitter Theory | ITI Study Centre</title>
+<meta content="Complete Fitter Theory Module 4 – Welding. Safety, hand tools, CO₂ welding equipment, arc welding parameters, oxy-acetylene cutting. Full NIMI syllabus pages 165-196." name="description"/>
+<style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.8;
+            user-select: none;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+
+        .main-header {
+            background: #003366;
+            padding: 16px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        @media(max-width:768px) {
+            .main-header .container { flex-direction: column; gap: 8px; }
+            .main-header nav { justify-content: center; gap: 6px 14px; }
+            .main-header nav a { font-size: 0.9rem; }
+        }
+
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a { color: #003366; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .current { color: #555; font-weight: 600; }
+
+        .page-title {
+            padding: 32px 0 22px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.3rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
+        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
+
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 540px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
+        }
+        .search-section button {
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover { background: #002244; transform: scale(1.02); }
+        @media(max-width:640px) {
+            .search-section { flex-direction: column; }
+            .search-section input { max-width: 100%; width: 100%; }
+            .search-section button { width: 100%; }
+        }
+
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            margin-bottom: 32px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 20px 28px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .section-header .icon { font-size: 1.8rem; line-height: 1; }
+        .section-header .title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body { padding: 28px 32px; background: #fafcff; }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-left: 5px solid #ffcc00;
+            padding-left: 18px;
+        }
+        .section-body h3:first-of-type { margin-top: 0; }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.12rem;
+            margin: 20px 0 10px;
+        }
+        @media(max-width:768px) {
+            .section-header { padding: 14px 18px; }
+            .section-header .title { font-size: 1.05rem; }
+            .section-body { padding: 18px 18px; }
+            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
+        }
+        @media(max-width:480px) {
+            .section-body { padding: 14px 14px; }
+            .section-header .icon { font-size: 1.4rem; }
+            .section-header .title { font-size: 0.95rem; }
+        }
+
+        .bilingual { margin: 14px 0; }
+        .bilingual .content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #1a2a3a;
+        }
+        .bilingual .content ul, .bilingual .content ol { padding-left: 26px; margin: 10px 0; }
+        .bilingual .content ul li, .bilingual .content ol li { margin-bottom: 6px; }
+        .bilingual .content p { margin: 10px 0; }
+        @media(max-width:480px) {
+            .bilingual .content { font-size: 0.95rem; }
+        }
+
+        .info-card {
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin: 18px 0;
+            background: #fff;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+        }
+        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
+        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
+        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
+        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
+        .info-card.red { border-left: 5px solid #dc3545; background: #fdf0f1; }
+        .info-card h4 { margin: 0 0 6px; color: #003366; }
+        .info-card ul { margin: 0; padding-left: 22px; }
+        .info-card ul li { margin-bottom: 4px; }
+
+        .tool-figure {
+            width:100%;
+            max-width:850px;
+            margin:24px auto;
+            text-align:center;
+            background:#f8fafc;
+            border:1px solid #e2e7ed;
+            border-radius:12px;
+            padding:20px;
+            transition:0.2s;
+        }
+        .tool-figure:hover { background:#f0f4fa; }
+        .tool-figure .placeholder-icon { font-size:3.5rem; line-height:1.2; color:#8a9aa8; margin-bottom:6px; }
+        .tool-figure .figure-caption { font-size:0.95rem; color:#555; font-weight:600; margin-top:8px; }
+        .tool-figure .image-placeholder {
+            display:block;
+            min-height:120px;
+            background:#f0f4fa;
+            border:2px dashed #c7ced7;
+            border-radius:8px;
+            padding:18px;
+            color:#68717c;
+        }
+        .tool-figure .image-placeholder code {
+            background:#e7ebef;
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:0.8rem;
+            display:inline-block;
+            margin:4px 0;
+        }
+        @media(max-width:768px) {
+            .tool-figure { padding:14px; }
+            .tool-figure .placeholder-icon { font-size:2.8rem; }
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 22px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 13px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 11px 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
+        .table-wrap tr:hover { background: #eef2f7; }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        @media(max-width:480px) {
+            .table-wrap table { font-size: 0.85rem; }
+            .table-wrap th, .table-wrap td { padding: 8px 10px; }
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin: 20px 0;
+        }
+        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
+        .compare-card {
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .compare-card h4 { font-size: 1.1rem; margin: 0 0 10px; color: #003366; }
+        .compare-card ul { padding-left: 20px; margin: 0; }
+        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .example-box strong { color: #003366; }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .important-box h4 { margin: 0 0 6px; color: #856404; }
+        .important-box ul { padding-left: 22px; margin: 0; }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
+        .short-notes ul { padding-left: 22px; margin: 0; }
+        .warning-box {
+            background: #fff5f2;
+            border-left: 5px solid #dc3545;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
+        .warning-box p { margin: 0; }
+
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 22px;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.link { background: #6c757d; }
+        .share-btn.link.copied { background: #28a745; }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        @media(max-width:600px) {
+            .share-section { flex-direction: column; align-items: stretch; }
+            .share-section .share-label { text-align: center; }
+            .share-btn { justify-content: center; }
+        }
+
+        .mcq-link { text-align: center; padding: 12px 0; }
+        .mcq-link a {
+            display: inline-block;
+            padding: 14px 44px;
+            background: #ffcc00;
+            color: #003366 !important;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
+        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
+
+        .conclusion-section {
+            background: #e8f4fd;
+            border: 2px solid #003366;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .conclusion-section h2 {
+            color: #003366;
+            font-size: 1.6rem;
+            border-left: 5px solid #ffcc00;
+            padding-left: 16px;
+            margin-bottom: 16px;
+        }
+        .conclusion-section ul {
+            padding-left: 26px;
+            margin: 10px 0;
+        }
+        .conclusion-section ul li { margin-bottom: 6px; }
+
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 28px 20px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 28px;
+            margin-bottom: 14px;
+        }
+        footer .footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover { background: #002244; transform: scale(1.05); }
+
+        .copy-protect::selection { background: #b3d4fc; color: #000; }
+
+        @media print {
+            #scrollTop, .share-section, .search-section { display: none !important; }
+            body { background: #fff !important; }
+            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+            .section-body { background: #fff !important; }
+            .tool-figure { border:1px solid #ccc; break-inside:avoid; }
+        }
+    </style>
+</head>
+<body>
+<div id="header-container"></div>
+<script defer="" src="/js/header-loader.js"></script>
+
+
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+<a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+<a href="/notes/fitter/index.html">Fitter Theory</a>  › 
+<span class="current">Module 4 – Welding (पूर्ण)</span>
+</div>
+</div>
+<section class="page-title">
+<div class="container">
+<h1>⚡ Module 4 – Welding (पूर्ण)</h1>
+<p>सुरक्षा · वेल्डिंग हस्त औजार · CO₂ वेल्डिंग · आर्क वेल्डिंग पैरामीटर · ऑक्सी-एसिटिलीन कटिंग</p>
+</div>
+</section>
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()">🔍 Search</button>
+</section>
+<div class="container">
+<div class="share-section">
+<span class="share-label">📤 Share:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</button>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+Facebook
+</button>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+Twitter
+</button>
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div class="container">
+<div class="content-section" style="border:2px solid #003366;">
+<div class="section-header" style="background:#003366; border-bottom:none;">
+<span class="icon" style="color:#ffcc00;">📚</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 4 (Welding)</span>
+</div>
+<div class="section-body" style="background:#fff;">
+<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
+<a href="#sec-weld-safety" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🛡️ वेल्डिंग सुरक्षा (Safety)</a>
+<a href="#sec-weld-tools" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 वेल्डिंग हस्त औजार (Hand Tools)</a>
+<a href="#sec-co2" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">💨 CO₂ वेल्डिंग उपकरण (Equipment)</a>
+<a href="#sec-arc-params" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ आर्क वेल्डिंग पैरामीटर (Parameters)</a>
+<a href="#sec-oxycut" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔥 ऑक्सी-एसिटिलीन कटिंग (Oxy-Cutting)</a>
+</div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 4.1 WELDING SAFETY -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-weld-safety">
+<div class="content-section" data-content="weld-safety">
+<div class="section-header"><span class="icon">🛡️</span><span class="title">वेल्डिंग सुरक्षा (Welding Safety)</span><span class="subtitle">— आर्क आई, धुआँ, आग, PPE, आपातकालीन प्रतिक्रिया</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>वेल्डिंग सुरक्षा (Welding safety)</strong> अत्यंत महत्वपूर्ण है क्योंकि वेल्डिंग में <strong>तीव्र गर्मी (intense heat)</strong>, <strong>पराबैंगनी (UV) विकिरण</strong>, <strong>खतरनाक धुआँ (hazardous fumes)</strong> और <strong>अग्नि जोखिम (fire risks)</strong> शामिल होते हैं।</p>
+<p><strong>मुख्य सुरक्षा सावधानियाँ (Key Safety Precautions):</strong></p>
+<ul>
+<li><strong>आँखों की सुरक्षा (Eye Protection):</strong> हमेशा उपयुक्त <strong>शेड लेंस (shade lens – शेड 10–14)</strong> के साथ <strong>वेल्डिंग हेलमेट (welding helmet)</strong> पहनें। सुरक्षा के बिना कभी भी <strong>आर्क (arc)</strong> को न देखें — इससे <strong>आर्क आई (arc eye – photokeratitis)</strong> हो सकता है, जो आँखों के लिए स्थायी क्षति का कारण बन सकता है।</li>
+<li><strong>त्वचा की सुरक्षा (Skin Protection):</strong> UV विकिरण और <strong>स्पैटर (spatter)</strong> से बचाने के लिए <strong>चमड़े के दस्ताने (leather gloves)</strong>, <strong>वेल्डिंग एप्रन (welding apron)</strong> और <strong>लंबी आस्तीन वाली जैकेट (long-sleeved jacket)</strong> पहनें।</li>
+<li><strong>वेंटिलेशन (Ventilation):</strong> वेल्डिंग <strong>धुआँ (fumes)</strong> हटाने के लिए <strong>पर्याप्त वेंटिलेशन (adequate ventilation)</strong> सुनिश्चित करें। <strong>बंद स्थानों (enclosed spaces)</strong> में <strong>धुआँ निकासी प्रणाली (fume extraction systems)</strong> का उपयोग करें।</li>
+<li><strong>अग्नि सुरक्षा (Fire Safety):</strong> पास में <strong>अग्निशामक यंत्र (fire extinguisher)</strong> रखें। वेल्डिंग क्षेत्र से <strong>ज्वलनशील पदार्थ (flammable materials)</strong> हटाएँ। क्षेत्र छोड़ने से पहले वेल्डिंग के बाद <strong>30 मिनट (30 minutes)</strong> प्रतीक्षा करें।</li>
+<li><strong>विद्युत सुरक्षा (Electrical Safety):</strong> सुनिश्चित करें कि वेल्डिंग मशीन ठीक से <strong>अर्थेड (earthed)</strong> है। <strong>क्षतिग्रस्त केबल (damaged cables)</strong> का उपयोग न करें। केबलों को <strong>पानी (water)</strong> और <strong>गर्मी (heat)</strong> से दूर रखें।</li>
+<li><strong>गैस सुरक्षा (Gas Safety):</strong> <strong>सिलेंडर (cylinders)</strong> को <strong>सीधा (upright)</strong> रखें। <strong>फ्लैशबैक अरेस्टर (flashback arrestors)</strong> का उपयोग करें। <strong>साबुन पानी के घोल (soap water solution)</strong> का उपयोग करके गैस <strong>रिसाव (leaks)</strong> की जाँच करें।</li>
+<li><strong>आपातकालीन प्रतिक्रिया (Emergency Response):</strong> <strong>आपातकालीन निकास (emergency exits)</strong>, <strong>अग्निशामक यंत्र (fire extinguishers)</strong> और <strong>प्राथमिक चिकित्सा किट (first aid kits)</strong> का स्थान जानें। आग लगने की स्थिति में, <strong>उपयुक्त अग्निशामक यंत्र (appropriate extinguisher)</strong> का उपयोग करें।</li>
+</ul>
+<p><strong>वेल्डिंग से संबंधित खतरे (Hazards in Welding):</strong></p>
+<ul>
+<li><strong>आर्क आई (Arc Eye):</strong> UV विकिरण के कारण आँखों में जलन, दर्द और अस्थायी अंधापन।</li>
+<li><strong>धुआँ और गैसें (Fumes &amp; Gases):</strong> धातु के वाष्प (metal vapours) और ओजोन (ozone) श्वसन तंत्र को नुकसान पहुँचा सकते हैं।</li>
+<li><strong>आग और विस्फोट (Fire &amp; Explosion):</strong> स्पार्क्स (sparks) और गर्मी ज्वलनशील पदार्थों को प्रज्वलित कर सकते हैं।</li>
+<li><strong>विद्युत आघात (Electric Shock):</strong> गलत वायरिंग या क्षतिग्रस्त केबल के कारण।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: वेल्डिंग सुरक्षा (Welding Safety)</strong></p>
+<p>स्थान: /images/notes/fitter/module-4/welding_safety.jpg</p>
+<code>welding_safety.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(वेल्डिंग हेलमेट, दस्ताने, एप्रन, धुआँ निकासी, अग्निशामक)</p>
+</div>
+<div class="figure-caption">Fig 1 – वेल्डिंग सुरक्षा</div>
+</div>
+<div class="warning-box"><h4>⚠️ महत्वपूर्ण</h4><p>हेलमेट के बिना कभी भी वेल्डिंग आर्क को न देखें। इससे आँखों को <strong>स्थायी क्षति (permanent eye damage – arc eye)</strong> हो सकती है। हमेशा उपयुक्त <strong>शेड लेंस (shade lens)</strong> पहनें।</p></div>
+<div class="info-card red"><h4>📌 परीक्षा फोकस</h4><ul><li>वेल्डिंग हेलमेट का <strong>शेड (shade)</strong>: <strong>10–14</strong>।</li><li>आर्क आई (arc eye) <strong>UV विकिरण (UV radiation)</strong> के कारण होता है।</li><li>वेल्डिंग क्षेत्र में <strong>धुआँ निकासी (fume extraction)</strong> आवश्यक है।</li><li>वेल्डिंग के बाद क्षेत्र छोड़ने से पहले <strong>30 मिनट (30 min)</strong> प्रतीक्षा करें।</li><li><strong>फ्लैशबैक अरेस्टर (flashback arrestors)</strong> गैस वेल्डिंग में अनिवार्य हैं।</li></ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 4.2 WELDING HAND TOOLS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-weld-tools">
+<div class="content-section" data-content="weld-tools">
+<div class="section-header"><span class="icon">🔧</span><span class="title">वेल्डिंग हस्त औजार (Welding Hand Tools)</span><span class="subtitle">— चिपिंग हथौड़ा, तार ब्रश, स्लैग स्क्रेपर, टोंग्स, आदि</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>वेल्डिंग हस्त औजार (Welding hand tools)</strong> वेल्डिंग संचालन में <strong>तैयारी (preparation)</strong>, <strong>सफाई (cleaning)</strong> और <strong>फिनिशिंग (finishing)</strong> के लिए उपयोग किए जाते हैं। ये औजार <strong>गुणवत्तापूर्ण वेल्ड (quality welds)</strong> बनाने के लिए आवश्यक हैं।</p>
+<p><strong>मुख्य वेल्डिंग हस्त औजार (Main Welding Hand Tools):</strong></p>
+<ul>
+<li><strong>चिपिंग हथौड़ा (Chipping Hammer):</strong> वेल्डिंग के बाद <strong>वेल्ड बीड (weld bead)</strong> से <strong>स्लैग (slag – flux)</strong> हटाने के लिए उपयोग किया जाता है। इसका एक <strong>नुकीला सिरा (pointed end)</strong> और एक <strong>सपाट सिरा (flat end)</strong> होता है।</li>
+<li><strong>तार ब्रश (Wire Brush):</strong> <strong>वर्कपीस (workpiece)</strong> को साफ करने और <strong>गंदगी (dirt)</strong>, <strong>जंग (rust)</strong> और <strong>स्केल (scale)</strong> हटाने के लिए। <strong>स्टील (steel)</strong> के लिए <strong>स्टील वायर ब्रश (steel wire brush)</strong>; <strong>अलौह धातुओं (non-ferrous metals)</strong> के लिए <strong>पीतल (brass)</strong> या <strong>स्टेनलेस स्टील ब्रश (stainless steel brush)</strong> का उपयोग करें।</li>
+<li><strong>स्लैग स्क्रेपर (Slag Scraper):</strong> एक <strong>सपाट, चौड़ा (flat, broad)</strong> उपकरण जिसका उपयोग <strong>बड़े वेल्ड (large welds)</strong> से <strong>स्लैग (slag)</strong> को <strong>खुरचने (scraping)</strong> के लिए किया जाता है।</li>
+<li><strong>वेल्डिंग टोंग्स (Welding Tongs):</strong> <strong>गर्म वर्कपीस (hot workpieces)</strong> और <strong>इलेक्ट्रोड (electrodes)</strong> को <strong>पकड़ने (holding)</strong> और <strong>संभालने (handling)</strong> के लिए उपयोग किया जाता है।</li>
+<li><strong>फाइलें (Files):</strong> <strong>वेल्ड बीड्स (weld beads)</strong> को <strong>चिकना (smoothing)</strong> और <strong>फिनिश (finishing)</strong> करने के लिए उपयोग किया जाता है।</li>
+<li><strong>एंगल ग्राइंडर (Angle Grinder):</strong> <strong>वेल्ड बीड्स (weld beads)</strong> को <strong>पीसने (grinding)</strong>, <strong>किनारों को बेवल (bevelling edges)</strong> करने और <strong>सतह तैयार (surface preparation)</strong> करने के लिए उपयोग किया जाता है।</li>
+<li><strong>सेंटर पंच (Centre Punch) और स्क्राइबर (Scriber):</strong> वेल्डिंग से पहले <strong>अंकन (marking)</strong> और <strong>लेआउट (layout)</strong> के लिए उपयोग किया जाता है।</li>
+<li><strong>वायर फीडर (Wire Feeder – MIG के लिए):</strong> <strong>उपभोज्य तार (consumable wire)</strong> को <strong>टॉर्च (torch)</strong> तक <strong>निरंतर (continuously)</strong> पहुँचाता है।</li>
+</ul>
+<p><strong>इन औजारों की देखभाल (Care of These Tools):</strong></p>
+<ul>
+<li>उपयोग के बाद औजारों को <strong>साफ (clean)</strong> करें।</li>
+<li><strong>चिपिंग हथौड़ा (chipping hammer)</strong> और <strong>स्लैग स्क्रेपर (slag scraper)</strong> को <strong>तीक्ष्ण (sharp)</strong> बनाए रखें।</li>
+<li><strong>तार ब्रश (wire brush)</strong> को <strong>सूखा (dry)</strong> रखें – जंग से बचने के लिए।</li>
+<li><strong>एंगल ग्राइंडर (angle grinder)</strong> में <strong>ग्राइंडिंग व्हील (grinding wheel)</strong> को सुरक्षा कवर के साथ उपयोग करें।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: वेल्डिंग हस्त औजार (Welding Hand Tools)</strong></p>
+<p>स्थान: /images/notes/fitter/module-4/welding_hand_tools.jpg</p>
+<code>welding_hand_tools.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(चिपिंग हथौड़ा, तार ब्रश, स्लैग स्क्रेपर, टोंग्स, एंगल ग्राइंडर)</p>
+</div>
+<div class="figure-caption">Fig 2 – वेल्डिंग हस्त औजार</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>चिपिंग हथौड़ा <strong>स्लैग (slag)</strong> हटाता है।</li><li>तार ब्रश <strong>जंग (rust)</strong> और <strong>गंदगी (dirt)</strong> हटाता है।</li><li>एंगल ग्राइंडर <strong>बेवलिंग (bevelling)</strong> और <strong>पीसने (grinding)</strong> के लिए।</li><li>टोंग्स <strong>गर्म (hot)</strong> सामग्री को पकड़ने के लिए।</li></ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>चिपिंग हथौड़ा: <strong>स्लैग (slag)</strong> हटाने के लिए।</li><li>स्टील वायर ब्रश: <strong>स्टील (steel)</strong> के लिए।</li><li>पीतल ब्रश: <strong>अलौह धातु (non-ferrous)</strong> के लिए।</li><li>एंगल ग्राइंडर: <strong>ग्राइंडिंग (grinding)</strong> और <strong>बेवलिंग (bevelling)</strong> के लिए।</li></ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 4.3 CO₂ WELDING EQUIPMENT AND APPARATUS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-co2">
+<div class="content-section" data-content="co2">
+<div class="section-header"><span class="icon">💨</span><span class="title">CO₂ वेल्डिंग उपकरण और प्रक्रिया (CO₂ Welding Equipment)</span><span class="subtitle">— गैस मेटल आर्क वेल्डिंग (GMAW/MIG), उपकरण, संचालन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>CO₂ वेल्डिंग</strong> (जिसे <strong>MIG वेल्डिंग (MIG welding)</strong> या <strong>गैस मेटल आर्क वेल्डिंग – GMAW (Gas Metal Arc Welding)</strong> भी कहा जाता है) एक <strong>निरंतर फीड (continuous feed)</strong> वाली <strong>उपभोज्य तार इलेक्ट्रोड (consumable wire electrode)</strong> और <strong>बाहरी रूप से आपूर्ति (externally supplied)</strong> की गई <strong>परिरक्षण गैस (shielding gas – CO₂ या CO₂-आर्गन मिश्रण)</strong> का उपयोग करती है।</p>
+<p><strong>उपकरण घटक (Equipment Components):</strong></p>
+<ul>
+<li><strong>पावर स्रोत (Power Source):</strong> एक <strong>DC स्थिर-वोल्टेज (DC constant-voltage)</strong> पावर स्रोत (आमतौर पर <strong>DCEN – Direct Current Electrode Negative</strong>).</li>
+<li><strong>तार फीडर (Wire Feeder):</strong> इलेक्ट्रोड <strong>तार (wire)</strong> को <strong>टॉर्च (torch)</strong> के माध्यम से <strong>स्थिर गति (constant speed)</strong> से फीड करता है।</li>
+<li><strong>वेल्डिंग टॉर्च (Welding Torch – Gun):</strong> इसमें <strong>कॉन्टैक्ट टिप (contact tip)</strong>, <strong>नोज़ल (nozzle)</strong> और <strong>गैस डिफ्यूज़र (gas diffuser)</strong> होते हैं। तार, गैस और करंट को <strong>वेल्ड पूल (weld pool)</strong> तक पहुँचाता है।</li>
+<li><strong>परिरक्षण गैस सिलेंडर (Shielding Gas Cylinder):</strong> <strong>CO₂</strong> या गैस मिश्रण (Argon-CO₂) रखता है। गैस पिघले हुए <strong>वेल्ड पूल (weld pool)</strong> को <strong>वायुमंडलीय संदूषण (atmospheric contamination – ऑक्सीजन और नाइट्रोजन)</strong> से बचाती है।</li>
+<li><strong>रेगुलेटर और फ्लोमीटर (Regulator &amp; Flowmeter):</strong> गैस <strong>प्रवाह दर (flow rate)</strong> को नियंत्रित और मापता है (आमतौर पर <strong>15–25 L/min</strong>).</li>
+<li><strong>वर्क क्लैम्प (Work Clamp – Ground):</strong> <strong>वर्कपीस (workpiece)</strong> को पावर स्रोत से जोड़ता है।</li>
+</ul>
+<p><strong>CO₂ वेल्डिंग के लाभ (Advantages of CO₂ Welding):</strong></p>
+<ul>
+<li><strong>उच्च जमाव दर (High deposition rate)</strong> – तेज़ वेल्डिंग।</li>
+<li><strong>निरंतर वेल्डिंग (Continuous welding)</strong> – इलेक्ट्रोड बदलने के लिए रुकना नहीं पड़ता।</li>
+<li><strong>पतली और मोटी दोनों सामग्रियों (Thin and thick materials)</strong> के लिए उपयुक्त।</li>
+<li><strong>CO₂ गैस की कम लागत (Low cost of CO₂ gas)</strong>।</li>
+<li><strong>न्यूनतम स्लैग (Minimal slag)</strong> – कम पोस्ट-वेल्ड सफाई (post-weld cleaning).</li>
+<li><strong>सभी स्थितियों में (All positions)</strong> वेल्डिंग संभव – फ्लैट, क्षैतिज, ऊर्ध्वाधर, ओवरहेड।</li>
+</ul>
+<p><strong>CO₂ वेल्डिंग की सीमाएँ (Limitations):</strong></p>
+<ul>
+<li><strong>हवा (Wind)</strong> के कारण परिरक्षण गैस उड़ सकती है – बाहरी वेल्डिंग के लिए उपयुक्त नहीं।</li>
+<li><strong>स्पैटर (Spatter)</strong> – DCEN की तुलना में DCEP में अधिक।</li>
+<li><strong>उपकरण (Equipment)</strong> – AC वेल्डिंग की तुलना में अधिक महंगा और जटिल।</li>
+</ul>
+<p><strong>संचालन (Operation):</strong></p>
+<ol>
+<li>गैस <strong>प्रवाह दर (flow rate)</strong> सेट करें (15-25 L/min).</li>
+<li><strong>वोल्टेज (Voltage)</strong> और <strong>वायर फीड गति (wire feed speed)</strong> को सामग्री की मोटाई के अनुसार सेट करें।</li>
+<li><strong>टॉर्च (torch)</strong> को वर्कपीस के पास रखें और <strong>ट्रिगर (trigger)</strong> दबाएँ – आर्क स्टार्ट हो जाता है।</li>
+<li>टॉर्च को <strong>वेल्डिंग दिशा (welding direction)</strong> में <strong>स्थिर गति (steady speed)</strong> से चलाएँ।</li>
+<li>वेल्डिंग के बाद, <strong>गैस पोस्ट-फ्लो (gas post-flow)</strong> की अनुमति दें – वेल्ड पूल को ऑक्सीकरण से बचाने के लिए।</li>
+</ol>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: CO₂ वेल्डिंग उपकरण (CO₂ Welding Equipment)</strong></p>
+<p>स्थान: /images/notes/fitter/module-4/co2_welding.jpg</p>
+<code>co2_welding.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(पावर स्रोत, तार फीडर, टॉर्च, गैस सिलेंडर, रेगुलेटर)</p>
+</div>
+<div class="figure-caption">Fig 3 – CO₂ वेल्डिंग उपकरण</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>CO₂ वेल्डिंग पैरामीटर (CO₂ Welding Parameters)</caption>
+<thead><tr><th>सामग्री मोटाई (mm)</th><th>वायर व्यास (mm)</th><th>करंट (Amps)</th><th>वोल्टेज (Volts)</th><th>गैस प्रवाह (L/min)</th></tr></thead>
+<tbody>
+<tr><td>1.0 – 2.0</td><td>0.8</td><td>50 – 100</td><td>16 – 20</td><td>15</td></tr>
+<tr><td>2.0 – 4.0</td><td>1.0</td><td>100 – 180</td><td>20 – 24</td><td>18</td></tr>
+<tr><td>4.0 – 6.0</td><td>1.2</td><td>180 – 250</td><td>24 – 28</td><td>20</td></tr>
+<tr><td>6.0 – 10.0</td><td>1.6</td><td>250 – 350</td><td>28 – 32</td><td>25</td></tr>
+</tbody>
+</table>
+</div>
+<div class="info-card blue"><h4>📌 परीक्षा फोकस</h4><ul><li>CO₂ वेल्डिंग को <strong>MIG वेल्डिंग (MIG welding)</strong> भी कहा जाता है।</li><li>पावर स्रोत: <strong>DC स्थिर-वोल्टेज (DC constant-voltage)</strong>।</li><li>परिरक्षण गैस: <strong>CO₂ या आर्गन-CO₂ मिश्रण (Argon-CO₂ mixture)</strong>।</li><li>गैस प्रवाह दर: <strong>15–25 L/min</strong>।</li><li>लाभ: <strong>उच्च जमाव दर (high deposition rate)</strong>, <strong>निरंतर वेल्डिंग (continuous welding)</strong>।</li></ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 4.4 SETTING UP PARAMETERS FOR ARC WELDING MACHINE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-arc-params">
+<div class="content-section" data-content="arc-params">
+<div class="section-header"><span class="icon">⚙️</span><span class="title">आर्क वेल्डिंग मशीन के लिए पैरामीटर सेट करना (Setting Up Parameters)</span><span class="subtitle">— करंट, वोल्टेज, ध्रुवता, इलेक्ट्रोड आकार, गति</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>सही पैरामीटर सेट करना (Setting the correct parameters)</strong> <strong>गुणवत्तापूर्ण वेल्ड (quality weld)</strong> प्राप्त करने के लिए आवश्यक है। मुख्य पैरामीटर हैं – <strong>वेल्डिंग करंट (welding current)</strong>, <strong>आर्क वोल्टेज (arc voltage)</strong>, <strong>ध्रुवता (polarity)</strong>, <strong>इलेक्ट्रोड आकार (electrode size)</strong>, और <strong>यात्रा गति (travel speed)</strong>।</p>
+<p><strong>1. वेल्डिंग करंट (Welding Current – Amperage):</strong></p>
+<ul>
+<li><strong>पैठ (penetration)</strong> और <strong>जमाव दर (deposition rate)</strong> निर्धारित करता है।</li>
+<li><strong>उच्च करंट (Higher current)</strong> = <strong>गहरी पैठ (deeper penetration)</strong> और <strong>तेज़ वेल्डिंग (faster welding)</strong>, लेकिन बहुत अधिक होने पर <strong>बर्न-थ्रू (burn-through)</strong> हो सकता है।</li>
+<li><strong>अंगूठे का नियम (Rule of thumb):</strong> सामग्री मोटाई के प्रति मिलीमीटर <strong>30–40 एम्प्स (30–40 Amps per mm)</strong>।</li>
+</ul>
+<p><strong>2. आर्क वोल्टेज (Arc Voltage):</strong></p>
+<ul>
+<li><strong>आर्क की लंबाई (arc length)</strong> और <strong>वेल्ड बीड की चौड़ाई (weld bead width)</strong> निर्धारित करता है।</li>
+<li><strong>उच्च वोल्टेज (Higher voltage)</strong> = <strong>चौड़ा बीड (wider bead)</strong>, अधिक <strong>स्पैटर (spatter)</strong>।</li>
+<li><strong>कम वोल्टेज (Lower voltage)</strong> = <strong>संकीर्ण बीड (narrower bead)</strong>, कम <strong>स्पैटर (spatter)</strong>।</li>
+</ul>
+<p><strong>3. ध्रुवता (Polarity):</strong></p>
+<ul>
+<li><strong>DCEN (Direct Current Electrode Negative):</strong> इलेक्ट्रोड <strong>नेगेटिव (negative)</strong>, वर्कपीस <strong>पॉजिटिव (positive)</strong>। <strong>पतली शीट (thin sheets)</strong> और <strong>गहरी पैठ (deep penetration)</strong> के लिए।</li>
+<li><strong>DCEP (Direct Current Electrode Positive):</strong> इलेक्ट्रोड <strong>पॉजिटिव (positive)</strong>, वर्कपीस <strong>नेगेटिव (negative)</strong>। <strong>मोटी सामग्री (thick materials)</strong> और <strong>उच्च जमाव दर (high deposition rate)</strong> के लिए।</li>
+<li><strong>AC (Alternating Current):</strong> <strong>AC-संगत इलेक्ट्रोड (AC-compatible electrodes)</strong> के साथ उपयोग किया जाता है।</li>
+</ul>
+<p><strong>4. इलेक्ट्रोड व्यास (Electrode Diameter):</strong></p>
+<ul>
+<li>सामग्री मोटाई के आधार पर <strong>इलेक्ट्रोड आकार (electrode size)</strong> चुनें:</li>
+<li><strong>पतली सामग्री (1-3 mm):</strong> 1.6 मिमी या 2.0 मिमी इलेक्ट्रोड।</li>
+<li><strong>मध्यम सामग्री (3-6 mm):</strong> 2.5 मिमी या 3.15 मिमी इलेक्ट्रोड।</li>
+<li><strong>मोटी सामग्री (6 mm+):</strong> 3.15 मिमी से 5 मिमी इलेक्ट्रोड।</li>
+</ul>
+<p><strong>5. यात्रा गति (Travel Speed):</strong></p>
+<ul>
+<li>जिस <strong>गति (speed)</strong> से इलेक्ट्रोड को <strong>जोड़ (joint)</strong> के साथ ले जाया जाता है।</li>
+<li><strong>बहुत तेज़ (Too fast)</strong> → <strong>खराब फ्यूजन (poor fusion)</strong>, <strong>सरंध्रता (porosity)</strong>।</li>
+<li><strong>बहुत धीमी (Too slow)</strong> → <strong>अत्यधिक बिल्ड-अप (excessive build-up)</strong>, <strong>बर्न-थ्रू (burn-through)</strong>।</li>
+</ul>
+<p><strong>6. इलेक्ट्रोड कोण (Electrode Angle):</strong></p>
+<ul>
+<li><strong>ड्रैग कोण (Drag Angle – पीछे की ओर झुकाव):</strong> 5°–15° – फ्लैट और क्षैतिज वेल्डिंग के लिए।</li>
+<li><strong>पुश कोण (Push Angle – आगे की ओर झुकाव):</strong> 10°–20° – ऊर्ध्वाधर नीचे (vertical down) वेल्डिंग के लिए।</li>
+<li><strong>सामान्य नियम (General rule):</strong> इलेक्ट्रोड को 70°–80° पर यात्रा दिशा (travel direction) में झुकाएँ।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: आर्क वेल्डिंग पैरामीटर (Arc Welding Parameters)</strong></p>
+<p>स्थान: /images/notes/fitter/module-4/arc_parameters.jpg</p>
+<code>arc_parameters.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(करंट, वोल्टेज, ध्रुवता, इलेक्ट्रोड कोण, यात्रा गति)</p>
+</div>
+<div class="figure-caption">Fig 4 – आर्क वेल्डिंग पैरामीटर</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>इलेक्ट्रोड व्यास बनाम सामग्री मोटाई (Electrode Diameter vs Material Thickness)</caption>
+<thead><tr><th>सामग्री मोटाई (mm)</th><th>इलेक्ट्रोड व्यास (mm)</th><th>करंट (Amps)</th></tr></thead>
+<tbody>
+<tr><td>1 – 3</td><td>1.6 – 2.0</td><td>40 – 80</td></tr>
+<tr><td>3 – 6</td><td>2.5 – 3.15</td><td>80 – 130</td></tr>
+<tr><td>6 – 10</td><td>3.15 – 4.0</td><td>130 – 180</td></tr>
+<tr><td>10+</td><td>4.0 – 5.0</td><td>180 – 250</td></tr>
+</tbody>
+</table>
+</div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>DCEN: <strong>गहरी पैठ (deep penetration)</strong>, <strong>पतली शीट (thin sheets)</strong> के लिए।</li><li>DCEP: <strong>उच्च जमाव दर (high deposition rate)</strong>, <strong>मोटी सामग्री (thick material)</strong> के लिए।</li><li>करंट का नियम: <strong>30–40 एम्प्स प्रति मिलीमीटर (Amps per mm)</strong>।</li><li>यात्रा गति: <strong>फ्यूजन (fusion)</strong> और <strong>सरंध्रता (porosity)</strong> को प्रभावित करती है।</li><li>इलेक्ट्रोड कोण: <strong>70°–80°</strong> यात्रा दिशा में।</li></ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 4.5 OXY-ACETYLENE CUTTING EQUIPMENT -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-oxycut">
+<div class="content-section" data-content="oxycut">
+<div class="section-header"><span class="icon">🔥</span><span class="title">ऑक्सी-एसिटिलीन कटिंग उपकरण (Oxy-Acetylene Cutting Equipment)</span><span class="subtitle">— उपकरण, सेटअप, लौ समायोजन, कटिंग तकनीक, सुरक्षा</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>ऑक्सी-एसिटिलीन कटिंग (Oxy-Acetylene Cutting)</strong> <strong>ऑक्सीजन (oxygen)</strong> और <strong>एसिटिलीन (acetylene)</strong> गैस के संयोजन का उपयोग करके <strong>लौह धातुओं (ferrous metals – स्टील)</strong> को काटने की प्रक्रिया है। लौ धातु को <strong>प्रज्वलन तापमान (ignition temperature)</strong> तक <strong>पहले से गर्म (preheats)</strong> करती है, और <strong>शुद्ध ऑक्सीजन (pure oxygen)</strong> की एक धारा को गर्म क्षेत्र पर निर्देशित किया जाता है ताकि <strong>ऑक्सीकरण (oxidation)</strong> हो और धातु को <strong>हटाया (remove)</strong> जा सके।</p>
+<p><strong>उपकरण (Equipment):</strong></p>
+<ul>
+<li><strong>ऑक्सीजन सिलेंडर (Oxygen Cylinder):</strong> <strong>काला (black)</strong> रंग, <strong>150 bar</strong> पर ऑक्सीजन रखता है।</li>
+<li><strong>एसिटिलीन सिलेंडर (Acetylene Cylinder):</strong> <strong>मैरून/लाल (maroon/red)</strong> रंग, <strong>एसीटोन (acetone)</strong> में घुली एसिटिलीन रखता है।</li>
+<li><strong>रेगुलेटर (Regulators):</strong> सिलेंडर के <strong>दबाव (pressure)</strong> को <strong>कार्य दबाव (working pressure)</strong> में कम करते हैं (ऑक्सीजन: <strong>4-5 bar</strong>; एसिटिलीन: <strong>0.5-1 bar</strong>).</li>
+<li><strong>होज़ (Hoses):</strong> <strong>ऑक्सीजन होज़ (oxygen hose – हरा/नीला)</strong>, <strong>एसिटिलीन होज़ (acetylene hose – लाल)</strong>। <strong>इन्हें आपस में नहीं बदलना चाहिए (must not be interchanged)</strong>।</li>
+<li><strong>कटिंग टॉर्च (Cutting Torch):</strong> गैसों को <strong>मिलाता (mixes)</strong> है और इसमें <strong>कटिंग ऑक्सीजन वाल्व (cutting oxygen valve)</strong> होता है।</li>
+<li><strong>कटिंग नोज़ल (Cutting Nozzle – Tip):</strong> इसमें <strong>कटिंग ऑक्सीजन (cutting oxygen)</strong> के लिए <strong>केंद्रीय छेद (central hole)</strong> और <strong>प्रीहीट लौ (preheat flame)</strong> के लिए <strong>आसपास के छेद (surrounding holes)</strong> होते हैं।</li>
+<li><strong>चेक वाल्व (Check Valves) और फ्लैशबैक अरेस्टर (Flashback Arrestors):</strong> <strong>सुरक्षा उपकरण (safety devices)</strong> – <strong>बैकफायर (backfire)</strong> और <strong>फ्लैशबैक (flashback)</strong> को रोकते हैं।</li>
+</ul>
+<p><strong>सेटअप (Setting Up):</strong></p>
+<ol>
+<li><strong>रेगुलेटर (regulators)</strong> को सिलेंडर से <strong>कनेक्ट (connect)</strong> करें।</li>
+<li><strong>होज़ (hoses)</strong> को रेगुलेटर और <strong>टॉर्च (torch)</strong> से कनेक्ट करें – <strong>सही रंग कोडिंग (correct colour coding)</strong> सुनिश्चित करें।</li>
+<li>सिलेंडर <strong>वाल्व (valves)</strong> को <strong>धीरे-धीरे (slowly)</strong> खोलें।</li>
+<li>रेगुलेटर का उपयोग करके <strong>कार्य दबाव (working pressures)</strong> को समायोजित करें।</li>
+<li><strong>साबुन पानी के घोल (soap water solution)</strong> का उपयोग करके गैस <strong>रिसाव (leaks)</strong> की जाँच करें।</li>
+<li>टॉर्च <strong>जलाएँ (light)</strong> और लौ को <strong>तटस्थ (neutral)</strong> पर समायोजित करें।</li>
+</ol>
+<p><strong>कटिंग तकनीक (Cutting Technique):</strong></p>
+<ul>
+<li>प्रारंभिक बिंदु को <strong>प्रज्वलन तापमान (ignition temperature – चमकदार लाल / bright red)</strong> तक <strong>पहले से गर्म (preheat)</strong> करें।</li>
+<li><strong>कटिंग ऑक्सीजन लीवर (cutting oxygen lever)</strong> दबाएँ – कटिंग शुरू हो जाती है।</li>
+<li>टॉर्च को <strong>कट लाइन (cut line)</strong> के साथ <strong>स्थिर (steady)</strong> रूप से चलाएँ।</li>
+<li><strong>एक समान दूरी (consistent distance)</strong> और <strong>कोण (angle)</strong> बनाए रखें।</li>
+<li>कटिंग के बाद, <strong>कटिंग ऑक्सीजन (cutting oxygen)</strong> बंद करें, फिर <strong>प्रीहीट (preheat)</strong> बंद करें।</li>
+</ul>
+<p><strong>सुरक्षा (Safety):</strong></p>
+<ul>
+<li>हमेशा <strong>फ्लैशबैक अरेस्टर (flashback arrestors)</strong> का उपयोग करें।</li>
+<li><strong>ऑक्सीजन फिटिंग (oxygen fittings)</strong> पर कभी भी <strong>तेल (oil)</strong> या <strong>ग्रीस (grease)</strong> का उपयोग न करें – <strong>विस्फोट (explosion)</strong> हो सकता है।</li>
+<li>सिलेंडरों को <strong>सुरक्षित (secure)</strong> और <strong>सीधा (upright)</strong> रखें।</li>
+<li><strong>सुरक्षा चश्मा (safety goggles)</strong> और <strong>दस्ताने (gloves)</strong> पहनें।</li>
+<li><strong>एसिटिलीन सिलेंडर (acetylene cylinder)</strong> को <strong>कभी भी पूरा (fully)</strong> न खोलें – केवल <strong>आधा से एक चक्कर (half to one turn)</strong> खोलें।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: ऑक्सी-एसिटिलीन कटिंग (Oxy-Acetylene Cutting)</strong></p>
+<p>स्थान: /images/notes/fitter/module-4/oxy_cutting.jpg</p>
+<code>oxy_cutting.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(सिलेंडर, रेगुलेटर, टॉर्च, नोज़ल, कटिंग प्रक्रिया)</p>
+</div>
+<div class="figure-caption">Fig 5 – ऑक्सी-एसिटिलीन कटिंग</div>
+</div>
+<div class="compare-grid">
+<div class="compare-card" style="border-color:#003366; background:#f0f5ff;"><h4>🔵 लौ के प्रकार (Flame Types)</h4><ul><li><strong>तटस्थ (Neutral):</strong> O₂ = C₂H₂, 3200°C, स्टील के लिए</li><li><strong>कार्ब्यूराइजिंग (Carburising):</strong> O₂ &lt; C₂H₂, 3000°C, एल्यूमीनियम, उच्च-कार्बन स्टील</li><li><strong>ऑक्सीडाइजिंग (Oxidising):</strong> O₂ &gt; C₂H₂, 3400°C, पीतल, कांस्य</li></ul></div>
+<div class="compare-card" style="border-color:#ff9900; background:#fff8e1;"><h4>🟠 कटिंग पैरामीटर</h4><ul><li><strong>ऑक्सीजन दबाव:</strong> 4-5 bar</li><li><strong>एसिटिलीन दबाव:</strong> 0.5-1 bar</li><li><strong>नोज़ल आकार:</strong> सामग्री मोटाई पर निर्भर</li><li><strong>कटिंग गति:</strong> सामग्री मोटाई पर निर्भर</li></ul></div>
+</div>
+<div class="warning-box"><h4>⚠️ सुरक्षा</h4><p>ऑक्सीजन फिटिंग पर कभी भी <strong>तेल (oil)</strong> या <strong>ग्रीस (grease)</strong> का उपयोग न करें – <strong>विस्फोट (explosion)</strong> हो सकता है। हमेशा <strong>फ्लैशबैक अरेस्टर (flashback arrestors)</strong> का उपयोग करें। <strong>साबुन पानी (soap water)</strong> से रिसाव की जाँच करें।</p></div>
+<div class="info-card orange"><h4>📌 परीक्षा फोकस</h4><ul><li>ऑक्सीजन सिलेंडर: <strong>काला (black)</strong>।</li><li>एसिटिलीन सिलेंडर: <strong>लाल/मैरून (red/maroon)</strong>।</li><li>ऑक्सीजन दबाव: <strong>4-5 bar</strong>; एसिटिलीन दबाव: <strong>0.5-1 bar</strong>।</li><li>फ्लैशबैक अरेस्टर (flashback arrestors) <strong>अनिवार्य (mandatory)</strong> हैं।</li><li>तेल/ग्रीस – <strong>ऑक्सीजन फिटिंग (oxygen fittings)</strong> पर कभी नहीं।</li><li>तटस्थ लौ (neutral flame) – <strong>सबसे अधिक उपयोग (most commonly used)</strong>।</li></ul></div>
+</div>
+</div>
+</div>
+<!-- ============================== CONCLUSION ============================== -->
+<div class="container">
+<div class="conclusion-section">
+<h2>📌 Module 4 – निष्कर्ष (Conclusion)</h2>
+<div class="bilingual">
+<div class="content">
+<p><strong>Module 4 – Welding</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<ul>
+<li><strong>सुरक्षा (Safety):</strong> वेल्डिंग में आर्क आई (arc eye), धुआँ (fumes), आग (fire), PPE, विद्युत सुरक्षा (electrical safety), गैस सुरक्षा (gas safety), आपातकालीन प्रतिक्रिया (emergency response).</li>
+<li><strong>हस्त औजार (Hand Tools):</strong> चिपिंग हथौड़ा (chipping hammer), तार ब्रश (wire brush), स्लैग स्क्रेपर (slag scraper), टोंग्स (tongs), फाइलें (files), एंगल ग्राइंडर (angle grinder), सेंटर पंच (centre punch), स्क्राइबर (scriber).</li>
+<li><strong>CO₂ वेल्डिंग (CO₂ Welding):</strong> उपकरण (equipment), घटक (components – पावर स्रोत, तार फीडर, टॉर्च, गैस सिलेंडर, रेगुलेटर), लाभ (advantages), सीमाएँ (limitations), संचालन (operation).</li>
+<li><strong>आर्क वेल्डिंग पैरामीटर (Arc Welding Parameters):</strong> करंट (current), वोल्टेज (voltage), ध्रुवता (polarity – DCEN, DCEP, AC), इलेक्ट्रोड व्यास (electrode diameter), यात्रा गति (travel speed), इलेक्ट्रोड कोण (electrode angle).</li>
+<li><strong>ऑक्सी-एसिटिलीन कटिंग (Oxy-Acetylene Cutting):</strong> उपकरण (सिलेंडर, रेगुलेटर, होज़, टॉर्च, नोज़ल, फ्लैशबैक अरेस्टर), सेटअप (setup), लौ समायोजन (flame adjustment – तटस्थ, कार्ब्यूराइजिंग, ऑक्सीडाइजिंग), कटिंग तकनीक (cutting technique), सुरक्षा (safety).</li>
+</ul>
+<p>इन सभी विषयों में महारत हासिल करना हर <strong>फिटर (fitter)</strong> के लिए आवश्यक है। प्रत्येक संचालन को <strong>सटीकता (precision)</strong> और <strong>सुरक्षा (safety)</strong> के साथ अभ्यास करें।</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ============================== MCQ ============================== -->
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="section-body">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/fitter/index.html?mod=4" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="section-body">
+<div style="display:flex; flex-wrap:wrap; gap:12px;">
+<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
+<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
+<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+<button id="scrollTop" title="Go to Top">⬆</button>
+<script>
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('⚡ ' + getPageTitle() + ' - Complete Fitter Theory Module 4 Study Material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('⚡ ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Fitter Theory Module 4 – Complete Book Loaded.');
+        console.log('📚 Welding – Safety, Hand Tools, CO₂ Welding, Arc Parameters, Oxy-Cutting.');
+    </script>
+</body>
+</html>
