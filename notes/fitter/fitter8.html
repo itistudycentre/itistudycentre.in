@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 8 – Basic Maintenance (पूर्ण) | Fitter Theory | ITI Study Centre</title>
+<meta content="Complete Fitter Theory Module 8 – Basic Maintenance. Total Productive Maintenance, Routine Maintenance, Preventive Maintenance, Inspection Types, Installation & Overhaul. Full NIMI syllabus." name="description"/>
+<style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.8;
+            user-select: none;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+
+        .main-header {
+            background: #003366;
+            padding: 16px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        @media(max-width:768px) {
+            .main-header .container { flex-direction: column; gap: 8px; }
+            .main-header nav { justify-content: center; gap: 6px 14px; }
+            .main-header nav a { font-size: 0.9rem; }
+        }
+
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a { color: #003366; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .current { color: #555; font-weight: 600; }
+
+        .page-title {
+            padding: 32px 0 22px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.3rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
+        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
+
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 540px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
+        }
+        .search-section button {
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover { background: #002244; transform: scale(1.02); }
+        @media(max-width:640px) {
+            .search-section { flex-direction: column; }
+            .search-section input { max-width: 100%; width: 100%; }
+            .search-section button { width: 100%; }
+        }
+
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            margin-bottom: 32px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 20px 28px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .section-header .icon { font-size: 1.8rem; line-height: 1; }
+        .section-header .title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body { padding: 28px 32px; background: #fafcff; }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-left: 5px solid #ffcc00;
+            padding-left: 18px;
+        }
+        .section-body h3:first-of-type { margin-top: 0; }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.12rem;
+            margin: 20px 0 10px;
+        }
+        @media(max-width:768px) {
+            .section-header { padding: 14px 18px; }
+            .section-header .title { font-size: 1.05rem; }
+            .section-body { padding: 18px 18px; }
+            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
+        }
+        @media(max-width:480px) {
+            .section-body { padding: 14px 14px; }
+            .section-header .icon { font-size: 1.4rem; }
+            .section-header .title { font-size: 0.95rem; }
+        }
+
+        .bilingual { margin: 14px 0; }
+        .bilingual .content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #1a2a3a;
+        }
+        .bilingual .content ul, .bilingual .content ol { padding-left: 26px; margin: 10px 0; }
+        .bilingual .content ul li, .bilingual .content ol li { margin-bottom: 6px; }
+        .bilingual .content p { margin: 10px 0; }
+        @media(max-width:480px) {
+            .bilingual .content { font-size: 0.95rem; }
+        }
+
+        .info-card {
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin: 18px 0;
+            background: #fff;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+        }
+        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
+        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
+        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
+        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
+        .info-card h4 { margin: 0 0 6px; color: #003366; }
+        .info-card ul { margin: 0; padding-left: 22px; }
+        .info-card ul li { margin-bottom: 4px; }
+
+        .tool-figure {
+            width:100%;
+            max-width:850px;
+            margin:24px auto;
+            text-align:center;
+            background:#f8fafc;
+            border:1px solid #e2e7ed;
+            border-radius:12px;
+            padding:20px;
+            transition:0.2s;
+        }
+        .tool-figure:hover { background:#f0f4fa; }
+        .tool-figure .placeholder-icon { font-size:3.5rem; line-height:1.2; color:#8a9aa8; margin-bottom:6px; }
+        .tool-figure .figure-caption { font-size:0.95rem; color:#555; font-weight:600; margin-top:8px; }
+        .tool-figure .image-placeholder {
+            display:block;
+            min-height:120px;
+            background:#f0f4fa;
+            border:2px dashed #c7ced7;
+            border-radius:8px;
+            padding:18px;
+            color:#68717c;
+        }
+        .tool-figure .image-placeholder code {
+            background:#e7ebef;
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:0.8rem;
+            display:inline-block;
+            margin:4px 0;
+        }
+        @media(max-width:768px) {
+            .tool-figure { padding:14px; }
+            .tool-figure .placeholder-icon { font-size:2.8rem; }
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 22px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 13px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 11px 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
+        .table-wrap tr:hover { background: #eef2f7; }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        @media(max-width:480px) {
+            .table-wrap table { font-size: 0.85rem; }
+            .table-wrap th, .table-wrap td { padding: 8px 10px; }
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin: 20px 0;
+        }
+        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
+        .compare-card {
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .compare-card h4 { font-size: 1.1rem; margin: 0 0 10px; color: #003366; }
+        .compare-card ul { padding-left: 20px; margin: 0; }
+        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .example-box strong { color: #003366; }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .important-box h4 { margin: 0 0 6px; color: #856404; }
+        .important-box ul { padding-left: 22px; margin: 0; }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
+        .short-notes ul { padding-left: 22px; margin: 0; }
+        .warning-box {
+            background: #fff5f2;
+            border-left: 5px solid #dc3545;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
+        .warning-box p { margin: 0; }
+        .success-box {
+            background: #eef9f1;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .success-box h4 { margin: 0 0 6px; color: #1e7e34; }
+        .success-box p { margin: 0; }
+
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 22px;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.link { background: #6c757d; }
+        .share-btn.link.copied { background: #28a745; }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        @media(max-width:600px) {
+            .share-section { flex-direction: column; align-items: stretch; }
+            .share-section .share-label { text-align: center; }
+            .share-btn { justify-content: center; }
+        }
+
+        .mcq-link { text-align: center; padding: 12px 0; }
+        .mcq-link a {
+            display: inline-block;
+            padding: 14px 44px;
+            background: #ffcc00;
+            color: #003366 !important;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
+        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
+
+        .conclusion-section {
+            background: #e8f4fd;
+            border: 2px solid #003366;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .conclusion-section h2 {
+            color: #003366;
+            font-size: 1.6rem;
+            border-left: 5px solid #ffcc00;
+            padding-left: 16px;
+            margin-bottom: 16px;
+        }
+        .conclusion-section ul {
+            padding-left: 26px;
+            margin: 10px 0;
+        }
+        .conclusion-section ul li { margin-bottom: 6px; }
+
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 28px 20px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 28px;
+            margin-bottom: 14px;
+        }
+        footer .footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover { background: #002244; transform: scale(1.05); }
+
+        .copy-protect::selection { background: #b3d4fc; color: #000; }
+
+        @media print {
+            #scrollTop, .share-section, .search-section { display: none !important; }
+            body { background: #fff !important; }
+            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+            .section-body { background: #fff !important; }
+            .tool-figure { border:1px solid #ccc; break-inside:avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+<div class="container">
+<div class="logo"><a href="/">🔧 ITI Study Centre</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/iti-study-centre-notes.html">Notes</a>
+<a class="active" href="/notes/fitter/index.html">Fitter</a>
+<a href="/question-bank/fitter/index.html">Question Bank</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+<a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+<a href="/notes/fitter/index.html">Fitter Theory</a>  › 
+<span class="current">Module 8 – Basic Maintenance (पूर्ण)</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>🔧 Module 8 – Basic Maintenance (पूर्ण)</h1>
+<p>कुल उत्पादक रखरखाव · नियमित रखरखाव · निवारक रखरखाव · निरीक्षण · स्थापना और ओवरहॉल</p>
+</div>
+</section>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()">🔍 Search</button>
+</section>
+
+<div class="container">
+<div class="share-section">
+<span class="share-label">📤 Share:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</button>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+Facebook
+</button>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+Twitter
+</button>
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div class="container">
+<div class="content-section" style="border:2px solid #003366;">
+<div class="section-header" style="background:#003366; border-bottom:none;">
+<span class="icon" style="color:#ffcc00;">📚</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 8 (Basic Maintenance)</span>
+</div>
+<div class="section-body" style="background:#fff;">
+<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
+<a href="#sec-tpm" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔄 8.1 – कुल उत्पादक रखरखाव (TPM)</a>
+<a href="#sec-routine" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📋 8.2 – नियमित रखरखाव (Routine Maintenance)</a>
+<a href="#sec-preventive" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🛡️ 8.3 – निवारक रखरखाव (Preventive Maintenance)</a>
+<a href="#sec-inspection" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔍 8.4 – निरीक्षण और गैजेंट्स (Inspection &amp; Gadgets)</a>
+<a href="#sec-installation" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 8.5 – स्थापना और ओवरहॉल (Installation &amp; Overhaul)</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 8.1 TOTAL PRODUCTIVE MAINTENANCE (TPM) -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tpm">
+<div class="content-section" data-content="tpm">
+<div class="section-header"><span class="icon">🔄</span><span class="title">8.1 – कुल उत्पादक रखरखाव (Total Productive Maintenance – TPM)</span><span class="subtitle">— अर्थ, स्तंभ, लाभ, कार्यान्वयन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>कुल उत्पादक रखरखाव (Total Productive Maintenance – TPM)</strong> एक <strong>समग्र (comprehensive)</strong> दृष्टिकोण (approach) है जो <strong>मशीनरी (machinery)</strong> और <strong>उपकरणों (equipment)</strong> की <strong>दक्षता (efficiency)</strong> को <strong>अधिकतम (maximize)</strong> करने के लिए <strong>सभी (all)</strong> कर्मचारियों (employees) को <strong>रखरखाव (maintenance)</strong> में <strong>शामिल (involve)</strong> करता है।</p>
+
+<p><strong>TPM की परिभाषा (Definition of TPM):</strong></p>
+<ul>
+<li><strong>TPM</strong> – <strong>जापानी (Japanese)</strong> मूल (origin) – <strong>Nippon Denso</strong> द्वारा विकसित (developed).</li>
+<li><strong>उद्देश्य (Objective):</strong> <strong>शून्य (zero)</strong> <strong>डाउनटाइम (downtime)</strong>, <strong>शून्य (zero)</strong> <strong>दोष (defects)</strong>, <strong>शून्य (zero)</strong> <strong>दुर्घटनाएँ (accidents)</strong> – <strong>उत्पादकता (productivity)</strong> बढ़ाना (increase).</li>
+</ul>
+
+<p><strong>TPM के 8 स्तंभ (8 Pillars of TPM):</strong></p>
+<ul>
+<li><strong>1. स्वायत्त रखरखाव (Autonomous Maintenance – Jishu Hozen):</strong> ऑपरेटर (operators) अपनी मशीनों का <strong>दैनिक (daily)</strong> रखरखाव (maintenance) करते हैं – <strong>सफाई (cleaning)</strong>, <strong>स्नेहन (lubrication)</strong>, <strong>निरीक्षण (inspection)</strong>।</li>
+<li><strong>2. नियोजित रखरखाव (Planned Maintenance – Keikaku Hozen):</strong> <strong>अनुसूचित (scheduled)</strong> रखरखाव – <strong>निवारक (preventive)</strong> और <strong>सुधारात्मक (corrective)</strong> रखरखाव।</li>
+<li><strong>3. गुणवत्ता रखरखाव (Quality Maintenance – Hinshitsu Hozen):</strong> <strong>शून्य दोष (zero defects)</strong> के लिए – <strong>प्रक्रिया (process)</strong> को <strong>नियंत्रित (control)</strong> करना।</li>
+<li><strong>4. फोकस्ड सुधार (Focused Improvement – Kobetsu Kaizen):</strong> <strong>निरंतर (continuous)</strong> सुधार – <strong>क्षति (losses)</strong> को <strong>कम (reduce)</strong> करना।</li>
+<li><strong>5. प्रारंभिक प्रबंधन (Early Management – Shoki Kanri):</strong> <strong>नई (new)</strong> मशीनों और उत्पादों (products) का <strong>प्रारंभिक (initial)</strong> प्रबंधन (management).</li>
+<li><strong>6. प्रशिक्षण और शिक्षा (Training &amp; Education – Kyoiku Kunren):</strong> कर्मचारियों (employees) को <strong>कौशल (skills)</strong> और <strong>ज्ञान (knowledge)</strong> प्रदान करना।</li>
+<li><strong>7. सुरक्षा, स्वास्थ्य और पर्यावरण (Safety, Health &amp; Environment – Anzen Eisei):</strong> <strong>सुरक्षित (safe)</strong> और <strong>स्वच्छ (clean)</strong> कार्य वातावरण (work environment) सुनिश्चित करना।</li>
+<li><strong>8. प्रशासनिक रखरखाव (Administrative Maintenance – Kanri Hozen):</strong> <strong>गैर-उत्पादन (non-production)</strong> क्षेत्रों (areas) का रखरखाव।</li>
+</ul>
+
+<p><strong>TPM के 5 S (5S – Foundation of TPM):</strong></p>
+<ul>
+<li><strong>सेरी (Seiri – Sort / छँटाई):</strong> <strong>आवश्यक (necessary)</strong> और <strong>अनावश्यक (unnecessary)</strong> वस्तुओं (items) को <strong>अलग (separate)</strong> करना – <strong>अनावश्यक (unnecessary)</strong> को <strong>हटाना (remove)</strong>।</li>
+<li><strong>सेटन (Seiton – Set in Order / व्यवस्था):</strong> <strong>आवश्यक (necessary)</strong> वस्तुओं को <strong>सही (proper)</strong> स्थान (place) पर <strong>व्यवस्थित (organize)</strong> करना – <strong>लेबल (label)</strong> और <strong>चिह्न (mark)</strong> के साथ।</li>
+<li><strong>सीसो (Seiso – Shine / सफाई):</strong> <strong>कार्य (work)</strong> क्षेत्र को <strong>स्वच्छ (clean)</strong> रखना – <strong>नियमित (regular)</strong> सफाई (cleaning).</li>
+<li><strong>सीकेत्सु (Seiketsu – Standardize / मानकीकरण):</strong> <strong>मानक (standard)</strong> प्रक्रियाएँ (procedures) बनाना – <strong>सभी (all)</strong> के लिए <strong>समान (uniform)</strong>।</li>
+<li><strong>शित्सुके (Shitsuke – Sustain / अनुशासन):</strong> <strong>अनुशासन (discipline)</strong> बनाए रखना – <strong>नियमों (rules)</strong> का <strong>पालन (follow)</strong> करना – <strong>निरंतर (continuous)</strong> सुधार (improvement).</li>
+</ul>
+
+<p><strong>TPM के लाभ (Benefits of TPM):</strong></p>
+<ul>
+<li><strong>उत्पादकता (Productivity) में वृद्धि (increase):</strong> <strong>डाउनटाइम (downtime)</strong> कम (reduce).</li>
+<li><strong>गुणवत्ता (Quality) में सुधार (improvement):</strong> <strong>दोष (defects)</strong> कम (reduce).</li>
+<li><strong>लागत (Cost) में कमी (reduction):</strong> <strong>रखरखाव (maintenance)</strong> लागत (cost) कम (reduce).</li>
+<li><strong>कर्मचारी (Employee) संतुष्टि (satisfaction):</strong> <strong>स्वायत्तता (autonomy)</strong> और <strong>भागीदारी (participation)</strong>।</li>
+<li><strong>सुरक्षा (Safety) में सुधार (improvement):</strong> <strong>दुर्घटनाएँ (accidents)</strong> कम (reduce).</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: TPM के 8 स्तंभ और 5S (TPM Pillars &amp; 5S)</strong></p>
+<p>स्थान: /images/notes/fitter/module-8/tpm_pillars.jpg</p>
+<code>tpm_pillars.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(8 स्तंभ, 5S – सेरी, सेटन, सीसो, सीकेत्सु, शित्सुके)</p>
+</div>
+<div class="figure-caption">Fig 1 – TPM के 8 स्तंभ और 5S</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>TPM के 8 स्तंभ (8 Pillars of TPM)</caption>
+<thead><tr><th>स्तंभ (Pillar)</th><th>विवरण (Description)</th></tr></thead>
+<tbody>
+<tr><td>स्वायत्त रखरखाव (Autonomous)</td><td>ऑपरेटर द्वारा दैनिक रखरखाव</td></tr>
+<tr><td>नियोजित रखरखाव (Planned)</td><td>अनुसूचित निवारक रखरखाव</td></tr>
+<tr><td>गुणवत्ता रखरखाव (Quality)</td><td>शून्य दोष के लिए प्रक्रिया नियंत्रण</td></tr>
+<tr><td>फोकस्ड सुधार (Focused)</td><td>निरंतर सुधार – काइज़ेन (Kaizen)</td></tr>
+<tr><td>प्रारंभिक प्रबंधन (Early)</td><td>नई मशीनों का प्रारंभिक प्रबंधन</td></tr>
+<tr><td>प्रशिक्षण और शिक्षा (Training)</td><td>कर्मचारी कौशल विकास</td></tr>
+<tr><td>सुरक्षा, स्वास्थ्य (Safety)</td><td>सुरक्षित और स्वच्छ कार्य वातावरण</td></tr>
+<tr><td>प्रशासनिक रखरखाव (Administrative)</td><td>गैर-उत्पादन क्षेत्रों का रखरखाव</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>TPM – <strong>सभी (all)</strong> कर्मचारियों को <strong>रखरखाव (maintenance)</strong> में <strong>शामिल (involve)</strong> करता है।</li>
+<li>5S – <strong>TPM का आधार (foundation)</strong> – <strong>संगठन (organization)</strong> और <strong>स्वच्छता (cleanliness)</strong> के लिए।</li>
+<li>स्वायत्त रखरखाव – <strong>ऑपरेटर (operator)</strong> अपनी मशीन का <strong>खुद (own)</strong> रखरखाव करता है।</li>
+<li>लाभ – <strong>उत्पादकता (productivity)</strong> बढ़ती है – <strong>लागत (cost)</strong> घटती है – <strong>गुणवत्ता (quality)</strong> सुधरती है।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>TPM – <strong>Total Productive Maintenance</strong> – <strong>जापानी (Japanese)</strong> मूल।</li>
+<li>5S – <strong>सेरी (Sort)</strong>, <strong>सेटन (Set in Order)</strong>, <strong>सीसो (Shine)</strong>, <strong>सीकेत्सु (Standardize)</strong>, <strong>शित्सुके (Sustain)</strong>।</li>
+<li>8 स्तंभ (8 Pillars) – <strong>स्वायत्त (Autonomous)</strong>, <strong>नियोजित (Planned)</strong>, <strong>गुणवत्ता (Quality)</strong>, <strong>फोकस्ड सुधार (Focused)</strong>, <strong>प्रारंभिक (Early)</strong>, <strong>प्रशिक्षण (Training)</strong>, <strong>सुरक्षा (Safety)</strong>, <strong>प्रशासनिक (Administrative)</strong>।</li>
+<li>लाभ – <strong>शून्य (zero)</strong> डाउनटाइम (downtime) – <strong>शून्य (zero)</strong> दोष (defects) – <strong>शून्य (zero)</strong> दुर्घटनाएँ (accidents).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 8.2 ROUTINE MAINTENANCE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-routine">
+<div class="content-section" data-content="routine">
+<div class="section-header"><span class="icon">📋</span><span class="title">8.2 – नियमित रखरखाव (Routine Maintenance)</span><span class="subtitle">— दैनिक, साप्ताहिक, मासिक कार्य, चेकलिस्ट</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>नियमित रखरखाव (Routine Maintenance)</strong> – <strong>दैनिक (daily)</strong> या <strong>साप्ताहिक (weekly)</strong> आधार पर किए जाने वाले <strong>रखरखाव (maintenance)</strong> कार्य – <strong>मशीनों (machines)</strong> को <strong>सुचारू (smoothly)</strong> चलाने के लिए – <strong>बड़ी (major)</strong> खराबी (breakdown) को <strong>रोकने (prevent)</strong> के लिए।</p>
+
+<p><strong>दैनिक रखरखाव (Daily Maintenance – हर दिन / Everyday):</strong></p>
+<ul>
+<li><strong>सफाई (Cleaning):</strong> मशीन (machine) की <strong>सतह (surface)</strong>, <strong>स्लाइड्स (slides)</strong>, <strong>गाइड्स (guides)</strong> को <strong>साफ (clean)</strong> करना – <strong>चिप्स (chips)</strong>, <strong>धूल (dust)</strong> और <strong>गंदगी (dirt)</strong> हटाना।</li>
+<li><strong>स्नेहन (Lubrication):</strong> <strong>तेल (oil)</strong> और <strong>ग्रीस (grease)</strong> के स्तर (levels) की <strong>जाँच (check)</strong> – <strong>आवश्यक (required)</strong> स्थानों पर <strong>तेल (oil)</strong> डालना – <strong>लुब्रिकेशन चार्ट (lubrication chart)</strong> के अनुसार।</li>
+<li><strong>निरीक्षण (Inspection):</strong> <strong>बेल्ट (belts)</strong>, <strong>चेन (chains)</strong>, <strong>फास्टनर्स (fasteners)</strong> – <strong>ढीला (loose)</strong> या <strong>क्षतिग्रस्त (damaged)</strong> तो <strong>नहीं (not)</strong> हैं।</li>
+<li><strong>सुरक्षा (Safety):</strong> <strong>गार्ड (guards)</strong>, <strong>आपातकालीन स्टॉप (emergency stop)</strong> – <strong>कार्यशील (functional)</strong> हैं या <strong>नहीं (not)</strong>।</li>
+<li><strong>तापमान (Temperature) और ध्वनि (Sound):</strong> <strong>असामान्य (abnormal)</strong> गर्मी (heat) या <strong>शोर (noise)</strong> – <strong>संभावित (potential)</strong> समस्या (problem) का <strong>संकेत (indication)</strong>।</li>
+</ul>
+
+<p><strong>साप्ताहिक रखरखाव (Weekly Maintenance – हर सप्ताह / Every Week):</strong></p>
+<ul>
+<li><strong>विस्तृत (detailed)</strong> निरीक्षण (inspection) – <strong>सभी (all)</strong> भागों (parts) की <strong>जाँच (check)</strong>।</li>
+<li><strong>हाइड्रोलिक (hydraulic)</strong> और <strong>न्यूमेटिक (pneumatic)</strong> प्रणालियों (systems) की <strong>जाँच (check)</strong> – <strong>दबाव (pressure)</strong>, <strong>रिसाव (leakage)</strong>।</li>
+<li><strong>फिल्टर (filters)</strong> – <strong>साफ (clean)</strong> या <strong>बदलें (replace)</strong> – <strong>आवश्यक (required)</strong> हो तो।</li>
+<li><strong>इलेक्ट्रिकल (electrical)</strong> कनेक्शन (connections) – <strong>तार (wires)</strong>, <strong>केबल (cables)</strong> – <strong>क्षतिग्रस्त (damaged)</strong> तो <strong>नहीं (not)</strong> हैं।</li>
+<li><strong>स्नेहन (lubrication)</strong> – <strong>सप्ताहिक (weekly)</strong> आधार पर – <strong>ग्रीस (grease)</strong> निपल्स (nipples) – <strong>ग्रीस (grease)</strong> लगाना।</li>
+</ul>
+
+<p><strong>मासिक रखरखाव (Monthly Maintenance – हर महीने / Every Month):</strong></p>
+<ul>
+<li><strong>पूर्ण (full)</strong> मशीन (machine) <strong>निरीक्षण (inspection)</strong> – <strong>प्रमुख (major)</strong> घटकों (components) की <strong>जाँच (check)</strong>।</li>
+<li><strong>सटीकता (accuracy)</strong> जाँच – <strong>अंशांकन (calibration)</strong> – <strong>गेज (gauges)</strong>, <strong>माइक्रोमीटर (micrometers)</strong>।</li>
+<li><strong>बेल्ट (belts)</strong> तनाव (tension) – <strong>समायोजन (adjustment)</strong> – <strong>आवश्यक (required)</strong> हो तो।</li>
+<li><strong>शीतलक (coolant)</strong> और <strong>हाइड्रोलिक तेल (hydraulic oil)</strong> – <strong>स्तर (levels)</strong> और <strong>गुणवत्ता (quality)</strong> – <strong>बदलें (replace)</strong> यदि <strong>आवश्यक (required)</strong> हो।</li>
+<li><strong>रखरखाव लॉग (maintenance log)</strong> – <strong>रिकॉर्ड (record)</strong> बनाए रखना – <strong>भविष्य (future)</strong> संदर्भ (reference) के लिए।</li>
+</ul>
+
+<p><strong>नियमित रखरखाव के लाभ (Benefits of Routine Maintenance):</strong></p>
+<ul>
+<li><strong>मशीन (machine) का जीवन (life) बढ़ाना (increase)</strong> – <strong>समय से पहले (premature)</strong> खराबी (failure) को <strong>रोकना (prevent)</strong>।</li>
+<li><strong>डाउनटाइम (downtime) कम (reduce)</strong> – <strong>उत्पादन (production)</strong> निरंतर (continuous) बना रहता है।</li>
+<li><strong>गुणवत्ता (quality) बनाए रखना (maintain)</strong> – <strong>मशीन (machine)</strong> की <strong>सटीकता (accuracy)</strong> बनी रहती है।</li>
+<li><strong>सुरक्षा (safety) में सुधार (improve)</strong> – <strong>दुर्घटनाएँ (accidents)</strong> कम (reduce).</li>
+<li><strong>रखरखाव लागत (maintenance cost) कम (reduce)</strong> – <strong>बड़ी (major)</strong> मरम्मत (repair) से बचना।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: नियमित रखरखाव चेकलिस्ट (Routine Maintenance Checklist)</strong></p>
+<p>स्थान: /images/notes/fitter/module-8/routine_maintenance.jpg</p>
+<code>routine_maintenance.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(दैनिक, साप्ताहिक, मासिक चेकलिस्ट)</p>
+</div>
+<div class="figure-caption">Fig 2 – नियमित रखरखाव चेकलिस्ट</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>नियमित रखरखाव चेकलिस्ट (Routine Maintenance Checklist)</caption>
+<thead><tr><th>आवृत्ति (Frequency)</th><th>कार्य (Task)</th><th>जिम्मेदारी (Responsibility)</th></tr></thead>
+<tbody>
+<tr><td>दैनिक (Daily)</td><td>सफाई, स्नेहन, निरीक्षण, सुरक्षा जाँच</td><td>ऑपरेटर (Operator)</td></tr>
+<tr><td>साप्ताहिक (Weekly)</td><td>विस्तृत निरीक्षण, फिल्टर सफाई, ग्रीसिंग</td><td>ऑपरेटर + तकनीशियन (Technician)</td></tr>
+<tr><td>मासिक (Monthly)</td><td>पूर्ण निरीक्षण, अंशांकन, तेल परिवर्तन</td><td>रखरखाव विभाग (Maintenance Dept.)</td></tr>
+<tr><td>त्रैमासिक (Quarterly)</td><td>प्रमुख घटकों का निरीक्षण, प्रतिस्थापन</td><td>रखरखाव विभाग (Maintenance Dept.)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>नियमित रखरखाव – <strong>दैनिक (daily)</strong>, <strong>साप्ताहिक (weekly)</strong>, <strong>मासिक (monthly)</strong>।</li>
+<li>सफाई (Cleaning) – <strong>चिप्स (chips)</strong> और <strong>गंदगी (dirt)</strong> हटाना – <strong>मशीन (machine)</strong> के <strong>जीवन (life)</strong> के लिए।</li>
+<li>स्नेहन (Lubrication) – <strong>तेल (oil)</strong> और <strong>ग्रीस (grease)</strong> – <strong>घर्षण (friction)</strong> कम (reduce) करने के लिए।</li>
+<li>निरीक्षण (Inspection) – <strong>ढीला (loose)</strong> या <strong>क्षतिग्रस्त (damaged)</strong> भागों (parts) की <strong>जाँच (check)</strong>।</li>
+<li>रखरखाव लॉग (maintenance log) – <strong>रिकॉर्ड (record)</strong> बनाए रखना – <strong>महत्वपूर्ण (important)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>दैनिक (Daily) – <strong>सफाई (cleaning)</strong>, <strong>स्नेहन (lubrication)</strong>, <strong>निरीक्षण (inspection)</strong>।</li>
+<li>साप्ताहिक (Weekly) – <strong>विस्तृत (detailed)</strong> निरीक्षण – <strong>फिल्टर (filters)</strong> सफाई।</li>
+<li>मासिक (Monthly) – <strong>पूर्ण (full)</strong> निरीक्षण – <strong>अंशांकन (calibration)</strong> – <strong>तेल (oil)</strong> परिवर्तन।</li>
+<li>नियमित रखरखाव – <strong>बड़ी (major)</strong> खराबी (breakdown) को <strong>रोकता (prevents)</strong> है।</li>
+<li>रखरखाव लॉग (log) – <strong>सभी (all)</strong> कार्यों का <strong>रिकॉर्ड (record)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 8.3 PREVENTIVE MAINTENANCE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-preventive">
+<div class="content-section" data-content="preventive">
+<div class="section-header"><span class="icon">🛡️</span><span class="title">8.3 – निवारक रखरखाव (Preventive Maintenance – PM)</span><span class="subtitle">— अर्थ, प्रकार, लाभ, कार्यक्रम</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>निवारक रखरखाव (Preventive Maintenance – PM)</strong> – <strong>मशीन (machine)</strong> के <strong>खराब (breakdown)</strong> होने से <strong>पहले (before)</strong> किया जाने वाला <strong>रखरखाव (maintenance)</strong> – <strong>नियोजित (planned)</strong> और <strong>अनुसूचित (scheduled)</strong>।</p>
+
+<p><strong>निवारक रखरखाव का उद्देश्य (Purpose of Preventive Maintenance):</strong></p>
+<ul>
+<li><strong>अचानक (sudden)</strong> खराबी (breakdown) को <strong>रोकना (prevent)</strong> – <strong>उत्पादन (production)</strong> में <strong>रुकावट (interruption)</strong> से बचना।</li>
+<li><strong>मशीन (machine) का जीवन (life)</strong> बढ़ाना (increase) – <strong>घिसाव (wear)</strong> और <strong>क्षति (damage)</strong> को <strong>कम (reduce)</strong> करना।</li>
+<li><strong>मरम्मत (repair) लागत (cost) कम (reduce)</strong> – <strong>छोटी (small)</strong> समस्याओं (problems) को <strong>बड़ी (major)</strong> समस्या बनने से <strong>पहले (before)</strong> <strong>ठीक (fix)</strong> करना।</li>
+<li><strong>सुरक्षा (safety) में सुधार (improve)</strong> – <strong>मशीन (machine)</strong> की <strong>विश्वसनीयता (reliability)</strong> बढ़ाना (increase).</li>
+<li><strong>गुणवत्ता (quality) बनाए रखना (maintain)</strong> – <strong>मशीन (machine)</strong> की <strong>सटीकता (accuracy)</strong> बनी रहती है।</li>
+</ul>
+
+<p><strong>निवारक रखरखाव के प्रकार (Types of Preventive Maintenance):</strong></p>
+<ul>
+<li><strong>समय-आधारित (Time-Based – TBM):</strong> <strong>निश्चित (fixed)</strong> अंतराल (intervals) पर – <strong>दैनिक (daily)</strong>, <strong>साप्ताहिक (weekly)</strong>, <strong>मासिक (monthly)</strong>, <strong>वार्षिक (yearly)</strong> – <strong>घिसाव (wear)</strong> के <strong>अनुमान (estimation)</strong> पर आधारित।</li>
+<li><strong>उपयोग-आधारित (Usage-Based – UBM):</strong> मशीन (machine) के <strong>संचालन (operation) घंटे (hours)</strong> या <strong>चक्र (cycles)</strong> पर आधारित – <strong>उदाहरण (example):</strong> 1000 घंटे (hours) के बाद <strong>तेल (oil)</strong> बदलना।</li>
+<li><strong>स्थिति-आधारित (Condition-Based – CBM):</strong> मशीन (machine) की <strong>वास्तविक (actual)</strong> <strong>स्थिति (condition)</strong> पर आधारित – <strong>कंपन (vibration)</strong>, <strong>तापमान (temperature)</strong>, <strong>ध्वनि (sound)</strong> की <strong>निगरानी (monitoring)</strong> – <strong>जब (when)</strong> आवश्यक (required) हो तब <strong>रखरखाव (maintenance)</strong>।</li>
+<li><strong>पूर्वानुमानित (Predictive – PdM):</strong> <strong>डेटा (data)</strong> और <strong>विश्लेषण (analysis)</strong> के आधार पर <strong>भविष्यवाणी (prediction)</strong> – <strong>कब (when)</strong> मशीन (machine) <strong>खराब (fail)</strong> हो सकती है – <strong>उच्च (high)</strong> तकनीक (technology) की आवश्यकता – <strong>सेंसर (sensors)</strong> और <strong>सॉफ्टवेयर (software)</strong>।</li>
+</ul>
+
+<p><strong>निवारक रखरखाव कार्यक्रम (Preventive Maintenance Schedule):</strong></p>
+<ul>
+<li><strong>दैनिक (Daily):</strong> सफाई (cleaning), स्नेहन (lubrication), दृश्य (visual) निरीक्षण (inspection).</li>
+<li><strong>साप्ताहिक (Weekly):</strong> विस्तृत (detailed) निरीक्षण, फिल्टर (filters) सफाई, बेल्ट (belts) जाँच।</li>
+<li><strong>मासिक (Monthly):</strong> पूर्ण (full) निरीक्षण, अंशांकन (calibration), तेल (oil) परिवर्तन।</li>
+<li><strong>त्रैमासिक (Quarterly):</strong> प्रमुख (major) घटकों (components) का निरीक्षण, स्नेहन (lubrication) प्रणाली (system) की जाँच।</li>
+<li><strong>वार्षिक (Yearly):</strong> पूर्ण (complete) ओवरहॉल (overhaul), प्रमुख (major) भागों (parts) का प्रतिस्थापन (replacement).</li>
+</ul>
+
+<p><strong>निवारक रखरखाव के लाभ (Benefits of Preventive Maintenance):</strong></p>
+<ul>
+<li><strong>डाउनटाइम (downtime) कम (reduce)</strong> – <strong>उत्पादन (production)</strong> बढ़ता (increase) है।</li>
+<li><strong>मरम्मत (repair) लागत (cost) कम (reduce)</strong> – <strong>बड़ी (major)</strong> खराबी (breakdown) से बचना।</li>
+<li><strong>मशीन (machine) का जीवन (life) बढ़ाना (increase)</strong> – <strong>पूंजीगत (capital)</strong> व्यय (expenditure) कम (reduce).</li>
+<li><strong>सुरक्षा (safety) में सुधार (improve)</strong> – <strong>दुर्घटनाएँ (accidents)</strong> कम (reduce).</li>
+<li><strong>उत्पाद (product) गुणवत्ता (quality) बनाए रखना (maintain)</strong> – <strong>ग्राहक (customer)</strong> संतुष्टि (satisfaction).</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: निवारक रखरखाव प्रकार (Preventive Maintenance Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-8/preventive_maintenance.jpg</p>
+<code>preventive_maintenance.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(समय-आधारित, उपयोग-आधारित, स्थिति-आधारित, पूर्वानुमानित)</p>
+</div>
+<div class="figure-caption">Fig 3 – निवारक रखरखाव के प्रकार</div>
+</div>
+<div class="compare-grid">
+<div class="compare-card" style="border-color:#003366; background:#f0f5ff;"><h4>🔵 निवारक (Preventive)</h4><ul><li><strong>खराबी (breakdown) से पहले (before)</strong></li><li><strong>नियोजित (planned)</strong> और <strong>अनुसूचित (scheduled)</strong></li><li><strong>लागत (cost)</strong> – कम (low) – <strong>बड़ी (major)</strong> मरम्मत से बचाता है</li><li><strong>उपयोग (use)</strong> – सामान्य (general) उद्योग (industry)</li></ul></div>
+<div class="compare-card" style="border-color:#28a745; background:#f0faf2;"><h4>🟢 सुधारात्मक (Corrective)</h4><ul><li><strong>खराबी (breakdown) के बाद (after)</strong></li><li><strong>अनियोजित (unplanned)</strong> – मरम्मत (repair)</li><li><strong>लागत (cost)</strong> – उच्च (high) – <strong>डाउनटाइम (downtime)</strong> अधिक (more)</li>
+<li><strong>उपयोग (use)</strong> – जब <strong>आवश्यक (required)</strong> हो</li></ul></div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>निवारक रखरखाव – <strong>खराबी (breakdown) से पहले (before)</strong> – <strong>नियोजित (planned)</strong>।</li>
+<li>समय-आधारित (Time-Based) – <strong>निश्चित (fixed)</strong> अंतराल (intervals).</li>
+<li>उपयोग-आधारित (Usage-Based) – <strong>घंटे (hours)</strong> या <strong>चक्र (cycles)</strong> पर।</li>
+<li>स्थिति-आधारित (Condition-Based) – <strong>वास्तविक (actual)</strong> स्थिति (condition) पर।</li>
+<li>पूर्वानुमानित (Predictive) – <strong>डेटा (data)</strong> और <strong>विश्लेषण (analysis)</strong> – <strong>उच्च (high)</strong> तकनीक।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>निवारक रखरखाव – <strong>खराबी (breakdown) से पहले (before)</strong> – <strong>नियोजित (planned)</strong>।</li>
+<li>समय-आधारित (Time-Based) – <strong>दैनिक (daily)</strong>, <strong>साप्ताहिक (weekly)</strong>, <strong>मासिक (monthly)</strong>।</li>
+<li>उपयोग-आधारित (Usage-Based) – <strong>1000 घंटे (hours)</strong> के बाद <strong>तेल (oil)</strong> बदलना।</li>
+<li>स्थिति-आधारित (Condition-Based) – <strong>कंपन (vibration)</strong>, <strong>तापमान (temperature)</strong> की <strong>निगरानी (monitoring)</strong>।</li>
+<li>पूर्वानुमानित (Predictive) – <strong>उच्च (high)</strong> तकनीक – <strong>सेंसर (sensors)</strong> और <strong>सॉफ्टवेयर (software)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 8.4 INSPECTION AND GADGETS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-inspection">
+<div class="content-section" data-content="inspection">
+<div class="section-header"><span class="icon">🔍</span><span class="title">8.4 – निरीक्षण और गैजेंट्स (Inspection &amp; Gadgets)</span><span class="subtitle">— निरीक्षण के प्रकार, उपकरण, गेज, विधियाँ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>निरीक्षण (Inspection)</strong> – <strong>उत्पाद (product)</strong>, <strong>भाग (part)</strong> या <strong>सामग्री (material)</strong> की <strong>जाँच (checking)</strong> – यह <strong>सुनिश्चित (ensure)</strong> करने के लिए कि यह <strong>निर्दिष्ट (specified)</strong> <strong>मानकों (standards)</strong> को <strong>पूरा (meet)</strong> करता है।</p>
+
+<p><strong>निरीक्षण के प्रकार (Types of Inspection):</strong></p>
+
+<p><strong>1. प्रक्रिया के अनुसार (By Process):</strong></p>
+<ul>
+<li><strong>प्रवेश निरीक्षण (Incoming Inspection – कच्चा माल / Raw Material):</strong> <strong>कच्चे माल (raw materials)</strong> और <strong>घटकों (components)</strong> की जाँच – <strong>उत्पादन (production)</strong> में <strong>प्रवेश (entry)</strong> से पहले।</li>
+<li><strong>प्रक्रिया निरीक्षण (In-process Inspection – उत्पादन के दौरान / During Production):</strong> <strong>उत्पादन (production)</strong> के <strong>दौरान (during)</strong> – <strong>समय-समय (periodically)</strong> पर – <strong>गुणवत्ता (quality)</strong> <strong>नियंत्रण (control)</strong> के लिए – <strong>प्रारंभिक (initial)</strong>, <strong>मध्य (intermediate)</strong>, <strong>अंतिम (final)</strong>।</li>
+<li><strong>अंतिम निरीक्षण (Final Inspection – तैयार उत्पाद / Finished Product):</strong> <strong>तैयार (finished)</strong> उत्पाद (product) की <strong>जाँच (checking)</strong> – <strong>शिपमेंट (shipment)</strong> से <strong>पहले (before)</strong> – <strong>ग्राहक (customer)</strong> को <strong>भेजने (dispatch)</strong> से पहले।</li>
+</ul>
+
+<p><strong>2. नमूने के अनुसार (By Sampling):</strong></p>
+<ul>
+<li><strong>100% निरीक्षण (100% Inspection – पूर्ण / Full):</strong> <strong>प्रत्येक (every)</strong> भाग (part) की <strong>जाँच (checking)</strong> – <strong>छोटे (small)</strong> उत्पादन (production) के लिए – <strong>महत्वपूर्ण (critical)</strong> अनुप्रयोगों (applications) के लिए – <strong>समय (time)</strong> और <strong>लागत (cost)</strong> अधिक (high).</li>
+<li><strong>नमूना निरीक्षण (Sampling Inspection – चयनित / Selected):</strong> <strong>बैच (batch)</strong> से <strong>कुछ (some)</strong> नमूनों (samples) की <strong>जाँच (checking)</strong> – <strong>बड़े (large)</strong> उत्पादन (production) के लिए – <strong>समय (time)</strong> और <strong>लागत (cost)</strong> कम (low) – <strong>सांख्यिकीय (statistical)</strong> विधियाँ (methods) – <strong>स्वीकृति (acceptance)</strong> या <strong>अस्वीकृति (rejection)</strong>।</li>
+</ul>
+
+<p><strong>3. स्थान के अनुसार (By Location):</strong></p>
+<ul>
+<li><strong>केंद्रीय (Centralized) निरीक्षण:</strong> <strong>एक (one)</strong> स्थान (location) पर – <strong>सभी (all)</strong> भागों (parts) को <strong>वहाँ (there)</strong> लाया जाता है – <strong>बड़े (large)</strong> संगठनों (organizations) में।</li>
+<li><strong>विकेंद्रीकृत (Decentralized) निरीक्षण:</strong> <strong>प्रत्येक (each)</strong> मशीन (machine) या <strong>कार्य (work)</strong> स्टेशन (station) पर – <strong>त्वरित (quick)</strong> फीडबैक (feedback) – <strong>छोटे (small)</strong> संगठनों (organizations) में।</li>
+</ul>
+
+<p><strong>निरीक्षण के लिए गैजेंट्स (Gadgets for Inspection):</strong></p>
+<ul>
+<li><strong>मापन (Measuring) उपकरण (Instruments):</strong>
+    <ul>
+        <li><strong>स्टील रूल (Steel Rule):</strong> <strong>लंबाई (length)</strong> मापने के लिए – <strong>सटीकता (accuracy):</strong> 0.5 मिमी (mm).</li>
+        <li><strong>वर्नियर कैलिपर (Vernier Caliper):</strong> <strong>बाहरी (external)</strong>, <strong>आंतरिक (internal)</strong> और <strong>गहराई (depth)</strong> माप – <strong>सटीकता:</strong> 0.02 मिमी (mm).</li>
+        <li><strong>माइक्रोमीटर (Micrometer):</strong> <strong>बाहरी (external)</strong> आयाम (dimensions) – <strong>सटीकता:</strong> 0.01 मिमी (mm).</li>
+        <li><strong>डायल गेज (Dial Gauge):</strong> <strong>विक्षेपण (deflection)</strong> और <strong>सतह समतलता (flatness)</strong> – <strong>सटीकता:</strong> 0.01 मिमी (mm).</li>
+    </ul>
+</li>
+<li><strong>गेज (Gauges):</strong>
+    <ul>
+        <li><strong>फीलर गेज (Feeler Gauge):</strong> <strong>अंतर (clearance)</strong> मापने के लिए – <strong>पतली (thin)</strong> धातु (metal) पट्टियाँ (strips).</li>
+        <li><strong>स्नैप गेज (Snap Gauge):</strong> <strong>बाहरी (external)</strong> व्यास (diameter) की <strong>त्वरित (quick)</strong> जाँच – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
+        <li><strong>प्लग गेज (Plug Gauge):</strong> <strong>आंतरिक (internal)</strong> व्यास (hole) की जाँच – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
+        <li><strong>थ्रेड गेज (Thread Gauge):</strong> <strong>थ्रेड (thread)</strong> पिच (pitch) और <strong>व्यास (diameter)</strong> की जाँच – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
+        <li><strong>रेडियस गेज (Radius Gauge):</strong> <strong>त्रिज्या (radius)</strong> मापने के लिए – <strong>उत्तल (convex)</strong> और <strong>अवतल (concave)</strong>।</li>
+    </ul>
+</li>
+<li><strong>सतह (Surface) निरीक्षण:</strong>
+    <ul>
+        <li><strong>सरफेस प्लेट (Surface Plate):</strong> <strong>समतलता (flatness)</strong> जाँचने के लिए – <strong>संदर्भ (reference)</strong> सतह (surface).</li>
+        <li><strong>स्क्राइबर (Scriber) और प्रशियन ब्लू (Prussian Blue):</strong> <strong>संपर्क (contact)</strong> बिंदुओं (points) की <strong>पहचान (identification)</strong> के लिए।</li>
+    </ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: निरीक्षण गैजेंट्स (Inspection Gadgets)</strong></p>
+<p>स्थान: /images/notes/fitter/module-8/inspection_gadgets.jpg</p>
+<code>inspection_gadgets.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(वर्नियर, माइक्रोमीटर, डायल गेज, फीलर गेज, स्नैप गेज, थ्रेड गेज)</p>
+</div>
+<div class="figure-caption">Fig 4 – निरीक्षण गैजेंट्स</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>निरीक्षण उपकरण और उनके उपयोग (Inspection Tools &amp; Uses)</caption>
+<thead><tr><th>उपकरण (Tool)</th><th>उपयोग (Use)</th><th>सटीकता (Accuracy)</th></tr></thead>
+<tbody>
+<tr><td>स्टील रूल (Steel Rule)</td><td>लंबाई (Length) मापन</td><td>0.5 मिमी</td></tr>
+<tr><td>वर्नियर कैलिपर (Vernier Caliper)</td><td>बाहरी, आंतरिक, गहराई</td><td>0.02 मिमी</td></tr>
+<tr><td>माइक्रोमीटर (Micrometer)</td><td>बाहरी आयाम (External Dimensions)</td><td>0.01 मिमी</td></tr>
+<tr><td>डायल गेज (Dial Gauge)</td><td>विक्षेपण, समतलता, गोलाई</td><td>0.01 मिमी</td></tr>
+<tr><td>फीलर गेज (Feeler Gauge)</td><td>अंतर (Clearance) मापन</td><td>0.03–1.0 मिमी</td></tr>
+<tr><td>स्नैप गेज (Snap Gauge)</td><td>बाहरी व्यास – गो/नो-गो</td><td>±0.01 मिमी</td></tr>
+<tr><td>प्लग गेज (Plug Gauge)</td><td>आंतरिक व्यास – गो/नो-गो</td><td>±0.01 मिमी</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>निरीक्षण (Inspection) – <strong>गुणवत्ता (quality)</strong> <strong>नियंत्रण (control)</strong> के लिए।</li>
+<li>100% निरीक्षण – <strong>प्रत्येक (every)</strong> भाग (part) – <strong>छोटे (small)</strong> उत्पादन (production) के लिए।</li>
+<li>नमूना निरीक्षण – <strong>कुछ (some)</strong> नमूने (samples) – <strong>बड़े (large)</strong> उत्पादन के लिए।</li>
+<li>गो/नो-गो गेज (Go/No-Go Gauges) – <strong>त्वरित (quick)</strong> जाँच – <strong>सीमाओं (limits)</strong> के भीतर (within) हैं या नहीं।</li>
+<li>डायल गेज – <strong>विक्षेपण (deflection)</strong> और <strong>सतह समतलता (flatness)</strong> – <strong>0.01 मिमी</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>100% निरीक्षण – <strong>प्रत्येक (every)</strong> भाग – <strong>छोटे (small)</strong> उत्पादन (production) के लिए।</li>
+<li>नमूना निरीक्षण – <strong>कुछ (some)</strong> नमूने – <strong>बड़े (large)</strong> उत्पादन के लिए।</li>
+<li>गो/नो-गो (Go/No-Go) – <strong>स्वीकार्य (acceptable)</strong> आकार (size) जाँचने के लिए।</li>
+<li>डायल गेज – <strong>विक्षेपण (deflection)</strong> – <strong>0.01 मिमी</strong> – <strong>सतह समतलता (flatness)</strong> के लिए।</li>
+<li>फीलर गेज – <strong>अंतर (clearance)</strong> – <strong>0.03–1.0 मिमी</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 8.5 INSTALLATION AND OVERHAUL -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-installation">
+<div class="content-section" data-content="installation">
+<div class="section-header"><span class="icon">🔧</span><span class="title">8.5 – स्थापना, रखरखाव और ओवरहॉल (Installation, Maintenance &amp; Overhaul)</span><span class="subtitle">— स्थापना प्रक्रिया, रखरखाव, ओवरहॉल, सुरक्षा</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>स्थापना (Installation)</strong> – <strong>मशीन (machine)</strong> या <strong>उपकरण (equipment)</strong> को <strong>सही (proper)</strong> स्थान (location) पर <strong>लगाना (set up)</strong> – <strong>संचालन (operation)</strong> के लिए <strong>तैयार (ready)</strong> करना।</p>
+
+<p><strong>स्थापना प्रक्रिया (Installation Procedure):</strong></p>
+<ul>
+<li><strong>योजना (Planning):</strong> <strong>स्थान (location)</strong>, <strong>नींव (foundation)</strong>, <strong>बिजली (power)</strong>, <strong>पानी (water)</strong>, <strong>वेंटिलेशन (ventilation)</strong> – <strong>आवश्यकताएँ (requirements)</strong> – <strong>लेआउट (layout)</strong> और <strong>ड्राइंग (drawing)</strong>।</li>
+<li><strong>नींव (Foundation):</strong> <strong>कंक्रीट (concrete)</strong> नींव (foundation) – <strong>भारी (heavy)</strong> मशीनों (machines) के लिए – <strong>कंपन (vibration)</strong> को <strong>अवशोषित (absorb)</strong> करने के लिए – <strong>एंकर बोल्ट (anchor bolts)</strong>।</li>
+<li><strong>अनपैकिंग (Unpacking) और निरीक्षण (Inspection):</strong> <strong>क्षति (damage)</strong> के लिए <strong>जाँच (check)</strong> – <strong>सभी (all)</strong> भागों (parts) की <strong>गणना (count)</strong> – <strong>सूची (list)</strong> के अनुसार।</li>
+<li><strong>स्तरीकरण (Leveling):</strong> <strong>स्पिरिट लेवल (spirit level)</strong> का उपयोग – <strong>शिम्स (shims)</strong> के साथ – <strong>मशीन (machine)</strong> को <strong>समतल (level)</strong> करना – <strong>सटीकता (accuracy)</strong> के लिए।</li>
+<li><strong>एलाइनमेंट (Alignment):</strong> <strong>ड्राइव (drive)</strong> – <strong>मोटर (motor)</strong> और <strong>मशीन (machine)</strong> के <strong>बीच (between)</strong> – <strong>बेल्ट (belts)</strong> या <strong>कपलिंग (coupling)</strong> – <strong>संरेखण (alignment)</strong> – <strong>डायल गेज (dial gauge)</strong> का उपयोग।</li>
+<li><strong>कनेक्शन (Connections):</strong> <strong>बिजली (electrical)</strong> – <strong>पाइपिंग (piping)</strong> – <strong>न्यूमेटिक (pneumatic)</strong> – <strong>हाइड्रोलिक (hydraulic)</strong> – <strong>सभी (all)</strong> कनेक्शन (connections) – <strong>सुरक्षित (secure)</strong> और <strong>सही (correct)</strong>।</li>
+<li><strong>ट्रायल रन (Trial Run – परीक्षण चलाना):</strong> <strong>खाली (no-load)</strong> चलाना – <strong>गति (speed)</strong>, <strong>तापमान (temperature)</strong>, <strong>ध्वनि (sound)</strong> – <strong>जाँच (check)</strong> – <strong>समायोजन (adjustments)</strong> करना – <strong>लोड (load)</strong> पर चलाना।</li>
+</ul>
+
+<p><strong>रखरखाव (Maintenance) – संचालन के दौरान (During Operation):</strong></p>
+<ul>
+<li><strong>नियमित (Routine) रखरखाव:</strong> <strong>दैनिक (daily)</strong> और <strong>साप्ताहिक (weekly)</strong> कार्य – <strong>सफाई (cleaning)</strong>, <strong>स्नेहन (lubrication)</strong>, <strong>निरीक्षण (inspection)</strong>।</li>
+<li><strong>निवारक (Preventive) रखरखाव:</strong> <strong>अनुसूचित (scheduled)</strong> – <strong>खराबी (breakdown)</strong> को <strong>रोकने (prevent)</strong> के लिए।</li>
+<li><strong>मरम्मत (Repair):</strong> <strong>क्षतिग्रस्त (damaged)</strong> या <strong>घिसे (worn)</strong> भागों (parts) को <strong>बदलना (replace)</strong> या <strong>ठीक (fix)</strong> करना।</li>
+</ul>
+
+<p><strong>ओवरहॉल (Overhaul – पूर्ण मरम्मत / Complete Repair):</strong></p>
+<ul>
+<li><strong>ओवरहॉल (Overhaul)</strong> – <strong>मशीन (machine)</strong> को <strong>पूरी तरह (completely)</strong> से <strong>अलग (disassemble)</strong> करना – <strong>प्रत्येक (each)</strong> भाग (part) का <strong>निरीक्षण (inspection)</strong> – <strong>क्षतिग्रस्त (damaged)</strong> भागों (parts) को <strong>बदलना (replace)</strong> – <strong>फिर से (re-assemble)</strong> जोड़ना – <strong>मशीन (machine)</strong> को <strong>नई (new)</strong> जैसी स्थिति (condition) में <strong>लाना (restore)</strong>।</li>
+<li><strong>ओवरहॉल की आवश्यकता (Need for Overhaul):</strong>
+    <ul>
+        <li><strong>निर्धारित (scheduled)</strong> अंतराल (intervals) पर – <strong>उदाहरण (example):</strong> 5 वर्ष (years).</li>
+        <li><strong>बड़ी (major)</strong> खराबी (breakdown) के बाद (after).</li>
+        <li><strong>प्रदर्शन (performance)</strong> में <strong>गिरावट (degradation)</strong> – <strong>सटीकता (accuracy)</strong> कम (less) होना।</li>
+        <li><strong>सुरक्षा (safety)</strong> चिंताएँ (concerns).</li>
+    </ul>
+</li>
+<li><strong>ओवरहॉल प्रक्रिया (Overhaul Procedure):</strong>
+    <ol>
+        <li><strong>डिसअसेंबली (Disassembly – अलग करना):</strong> मशीन (machine) को <strong>भागों (parts)</strong> में <strong>अलग (separate)</strong> करना – <strong>प्रत्येक (each)</strong> भाग (part) को <strong>चिह्नित (mark)</strong> करना।</li>
+        <li><strong>सफाई (Cleaning):</strong> <strong>सभी (all)</strong> भागों (parts) को <strong>साफ (clean)</strong> करना – <strong>गंदगी (dirt)</strong>, <strong>ग्रीस (grease)</strong>, <strong>जंग (rust)</strong> हटाना।</li>
+        <li><strong>निरीक्षण (Inspection):</strong> <strong>प्रत्येक (each)</strong> भाग (part) की <strong>जाँच (check)</strong> – <strong>घिसाव (wear)</strong>, <strong>दरार (cracks)</strong>, <strong>क्षति (damage)</strong> – <strong>माप (measurements)</strong> लेना।</li>
+        <li><strong>मरम्मत/प्रतिस्थापन (Repair/Replacement):</strong> <strong>क्षतिग्रस्त (damaged)</strong> भागों (parts) को <strong>ठीक (repair)</strong> करना या <strong>बदलना (replace)</strong>।</li>
+        <li><strong>पुनः असेंबली (Re-assembly – फिर से जोड़ना):</strong> <strong>सभी (all)</strong> भागों (parts) को <strong>पुनः (re-assemble)</strong> जोड़ना – <strong>सही (correct)</strong> क्रम (order) में – <strong>टोर्क (torque)</strong> विनिर्देशों (specifications) के अनुसार।</li>
+        <li><strong>समायोजन (Adjustment) और अंशांकन (Calibration):</strong> <strong>मशीन (machine)</strong> को <strong>सटीक (accurate)</strong> बनाने के लिए – <strong>सेटिंग्स (settings)</strong> को <strong>समायोजित (adjust)</strong> करना।</li>
+        <li><strong>ट्रायल रन (Trial Run – परीक्षण चलाना):</strong> <strong>खाली (no-load)</strong> और <strong>लोड (load)</strong> पर – <strong>प्रदर्शन (performance)</strong> की <strong>जाँच (check)</strong>।</li>
+        <li><strong>प्रलेखन (Documentation – दस्तावेज़ीकरण):</strong> <strong>सभी (all)</strong> कार्यों (activities) का <strong>रिकॉर्ड (record)</strong> – <strong>भविष्य (future)</strong> संदर्भ (reference) के लिए।</li>
+    </ol>
+</li>
+</ul>
+
+<p><strong>ओवरहॉल के दौरान सुरक्षा (Safety during Overhaul):</strong></p>
+<ul>
+<li><strong>लॉकआउट/टैगआउट (Lockout/Tagout – LOTO):</strong> <strong>बिजली (power)</strong> <strong>बंद (disconnect)</strong> और <strong>ताला (lock)</strong> लगाना – <strong>दुर्घटना (accident)</strong> से बचने के लिए।</li>
+<li><strong>सुरक्षा उपकरण (Safety Equipment):</strong> <strong>सुरक्षा चश्मा (safety goggles)</strong>, <strong>दस्ताने (gloves)</strong>, <strong>सुरक्षा जूते (safety shoes)</strong>।</li>
+<li><strong>भारी (heavy) भागों (parts) को उठाना (lifting):</strong> <strong>क्रेन (crane)</strong> या <strong>होइस्ट (hoist)</strong> – <strong>सुरक्षित (safe)</strong> उठाने (lifting) की <strong>प्रक्रिया (procedure)</strong>।</li>
+<li><strong>कार्य क्षेत्र (Work Area):</strong> <strong>स्वच्छ (clean)</strong> और <strong>व्यवस्थित (organized)</strong> – <strong>आग (fire)</strong> से बचाव (prevention).</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्थापना, रखरखाव और ओवरहॉल (Installation, Maintenance &amp; Overhaul)</strong></p>
+<p>स्थान: /images/notes/fitter/module-8/installation_overhaul.jpg</p>
+<code>installation_overhaul.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(स्तरीकरण, एलाइनमेंट, डिसअसेंबली, पुनः असेंबली, ट्रायल रन)</p>
+</div>
+<div class="figure-caption">Fig 5 – स्थापना, रखरखाव और ओवरहॉल</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>स्थापना (Installation) – <strong>नींव (foundation)</strong>, <strong>स्तरीकरण (leveling)</strong>, <strong>एलाइनमेंट (alignment)</strong>।</li>
+<li>रखरखाव (Maintenance) – <strong>नियमित (routine)</strong>, <strong>निवारक (preventive)</strong>, <strong>सुधारात्मक (corrective)</strong>।</li>
+<li>ओवरहॉल (Overhaul) – <strong>पूर्ण (complete)</strong> मरम्मत – <strong>मशीन (machine)</strong> को <strong>नई (new)</strong> जैसी स्थिति में <strong>लाना (restore)</strong>।</li>
+<li>लॉकआउट/टैगआउट (LOTO) – <strong>सुरक्षा (safety)</strong> के लिए – <strong>बिजली (power)</strong> <strong>बंद (disconnect)</strong> करना।</li>
+<li>प्रलेखन (Documentation) – <strong>सभी (all)</strong> कार्यों का <strong>रिकॉर्ड (record)</strong> – <strong>महत्वपूर्ण (important)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>स्थापना – <strong>नींव (foundation)</strong> – <strong>कंक्रीट (concrete)</strong> – <strong>एंकर बोल्ट (anchor bolts)</strong>।</li>
+<li>स्तरीकरण (Leveling) – <strong>स्पिरिट लेवल (spirit level)</strong> – <strong>शिम्स (shims)</strong>।</li>
+<li>एलाइनमेंट (Alignment) – <strong>डायल गेज (dial gauge)</strong> – <strong>मोटर (motor)</strong> और <strong>मशीन (machine)</strong> के <strong>बीच (between)</strong>।</li>
+<li>ओवरहॉल (Overhaul) – <strong>डिसअसेंबली (disassembly)</strong>, <strong>सफाई (cleaning)</strong>, <strong>निरीक्षण (inspection)</strong>, <strong>मरम्मत/प्रतिस्थापन (repair/replacement)</strong>, <strong>पुनः असेंबली (re-assembly)</strong>, <strong>समायोजन (adjustment)</strong>, <strong>ट्रायल रन (trial run)</strong>।</li>
+<li>लॉकआउट/टैगआउट (LOTO) – <strong>सुरक्षा (safety)</strong> – <strong>बिजली (power)</strong> <strong>बंद (disconnect)</strong> – <strong>ताला (lock)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ============================== CONCLUSION ============================== -->
+<div class="container">
+<div class="conclusion-section">
+<h2>📌 Module 8 – निष्कर्ष (Conclusion)</h2>
+<div class="bilingual">
+<div class="content">
+<p><strong>Module 8 – Basic Maintenance</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<ul>
+<li><strong>कुल उत्पादक रखरखाव (TPM):</strong> अर्थ, 8 स्तंभ (Pillars), 5S, लाभ, कार्यान्वयन (implementation).</li>
+<li><strong>नियमित रखरखाव (Routine Maintenance):</strong> दैनिक (daily), साप्ताहिक (weekly), मासिक (monthly) कार्य – चेकलिस्ट (checklist), सफाई (cleaning), स्नेहन (lubrication), निरीक्षण (inspection).</li>
+<li><strong>निवारक रखरखाव (Preventive Maintenance):</strong> अर्थ, प्रकार (समय-आधारित, उपयोग-आधारित, स्थिति-आधारित, पूर्वानुमानित), लाभ, कार्यक्रम (schedule).</li>
+<li><strong>निरीक्षण और गैजेंट्स (Inspection &amp; Gadgets):</strong> निरीक्षण के प्रकार (100%, नमूना, प्रक्रिया, अंतिम), मापन उपकरण (वर्नियर, माइक्रोमीटर, डायल गेज), गेज (फीलर, स्नैप, प्लग, थ्रेड, रेडियस), सतह निरीक्षण (सरफेस प्लेट, प्रशियन ब्लू).</li>
+<li><strong>स्थापना, रखरखाव और ओवरहॉल (Installation, Maintenance &amp; Overhaul):</strong> स्थापना प्रक्रिया (नींव, स्तरीकरण, एलाइनमेंट, ट्रायल रन), ओवरहॉल प्रक्रिया (डिसअसेंबली, सफाई, निरीक्षण, मरम्मत/प्रतिस्थापन, पुनः असेंबली, समायोजन, ट्रायल रन), लॉकआउट/टैगआउट (LOTO), सुरक्षा, प्रलेखन (documentation).</li>
+</ul>
+<p>इन सभी विषयों में महारत हासिल करना हर <strong>फिटर (fitter)</strong> के लिए आवश्यक है। प्रत्येक संचालन को <strong>सटीकता (precision)</strong> और <strong>सुरक्षा (safety)</strong> के साथ अभ्यास करें।</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ============================== MCQ ============================== -->
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="section-body">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/fitter/index.html?mod=8" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="section-body">
+<div style="display:flex; flex-wrap:wrap; gap:12px;">
+<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
+<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
+<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
+<a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
+<a href="module-5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 5: Drilling</a>
+<a href="module-6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 6: Assembly</a>
+<a href="module-7.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 7: Turning</a>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('🔧 ' + getPageTitle() + ' - Complete Fitter Theory Module 8 Study Material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('🔧 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Fitter Theory Module 8 – Basic Maintenance (Complete) Loaded.');
+        console.log('📚 TPM, Routine, Preventive, Inspection, Installation & Overhaul.');
+    </script>
+</body>
+  </html>
