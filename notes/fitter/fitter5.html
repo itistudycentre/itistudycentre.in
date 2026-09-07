@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Module 5 – Machine Tools &amp; Assembly (पूर्ण) | Fitter Theory | ITI Study Centre</title>
-<meta content="Complete Fitter Theory Module 5 – Lathe, Milling, Grinding, Fits &amp; Tolerances, Assembly, Surface Finish. Full NIMI syllabus pages 200-249." name="description"/>
+<title>Module 5 – Drilling (पूर्ण) | Fitter Theory | ITI Study Centre</title>
+<meta content="Complete Fitter Theory Module 5 – Drilling. Drills, drill angles, cutting speed, feed, RPM, counter sinking, reamers, screw threads, taps, dies, grinding wheels, gauges. Full NIMI syllabus." name="description"/>
 <style>
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
@@ -466,28 +465,41 @@
     </style>
 </head>
 <body>
-<div id="header-container"></div>
-<script defer="" src="/js/header-loader.js"></script>
 
+<header class="main-header">
+<div class="container">
+<div class="logo"><a href="/">🔧 ITI Study Centre</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/iti-study-centre-notes.html">Notes</a>
+<a class="active" href="/notes/fitter/index.html">Fitter</a>
+<a href="/question-bank/fitter/index.html">Question Bank</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
 
 <div class="breadcrumb">
 <div class="container">
 <a href="/">🏠 Home</a>  › 
 <a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
 <a href="/notes/fitter/index.html">Fitter Theory</a>  › 
-<span class="current">Module 5 – Machine Tools &amp; Assembly (पूर्ण)</span>
+<span class="current">Module 5 – Drilling (पूर्ण)</span>
 </div>
 </div>
+
 <section class="page-title">
 <div class="container">
-<h1>⚙️ Module 5 – Machine Tools &amp; Assembly (पूर्ण)</h1>
-<p>लेथ मशीन · मिलिंग · ग्राइंडिंग · फिट और टॉलरेंस · असेंबली · सरफेस फिनिश</p>
+<h1>🔧 Module 5 – Drilling (पूर्ण)</h1>
+<p>ड्रिल्स · ड्रिल कोण · कटिंग स्पीड · फीड · RPM · काउंटर सिंकिंग · रीमर · स्क्रू थ्रेड · टैप · डाई · ग्राइंडिंग व्हील · गेज</p>
 </div>
 </section>
+
 <section class="search-section container">
 <input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
 <button onclick="filterSections()">🔍 Search</button>
 </section>
+
 <div class="container">
 <div class="share-section">
 <span class="share-label">📤 Share:</span>
@@ -509,677 +521,922 @@ Twitter
 </button>
 </div>
 </div>
+
 <!-- ===== TABLE OF CONTENTS ===== -->
 <div class="container">
 <div class="content-section" style="border:2px solid #003366;">
 <div class="section-header" style="background:#003366; border-bottom:none;">
 <span class="icon" style="color:#ffcc00;">📚</span>
-<span class="title" style="color:#fff;">विषय-सूची – Module 5 (Machine Tools &amp; Assembly)</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 5 (Drilling)</span>
 </div>
 <div class="section-body" style="background:#fff;">
 <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
-<a href="#sec-lathe" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ 5.1 – लेथ मशीन (Lathe Machine)</a>
-<a href="#sec-lathe-ops" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 5.2 – लेथ संचालन (Lathe Operations)</a>
-<a href="#sec-threading" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 5.3 – थ्रेडिंग (Threading on Lathe)</a>
-<a href="#sec-taper" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 5.4 – टेपर टर्निंग (Taper Turning)</a>
-<a href="#sec-boring" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🕳️ 5.5 – बोरिंग (Boring on Lathe)</a>
-<a href="#sec-milling" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ 5.6 – मिलिंग मशीन (Milling Machine)</a>
-<a href="#sec-grinding" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔄 5.7 – ग्राइंडिंग मशीन (Grinding Machine)</a>
-<a href="#sec-fits" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📏 5.8 – फिट और टॉलरेंस (Fits &amp; Tolerances)</a>
-<a href="#sec-surface" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📊 5.9 – सरफेस फिनिश (Surface Finish)</a>
-<a href="#sec-assembly" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔗 5.10 – असेंबली और रखरखाव (Assembly &amp; Maintenance)</a>
+<a href="#sec-drills" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 5.1 – ड्रिल्स (Drills)</a>
+<a href="#sec-drill-angles" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 5.2 – ड्रिल कोण (Drill Angles)</a>
+<a href="#sec-drill-params" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ 5.3 – कटिंग स्पीड, फीड, RPM, होल्डिंग डिवाइस</a>
+<a href="#sec-countersink" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🕳️ 5.4 – काउंटर सिंकिंग (Counter Sinking)</a>
+<a href="#sec-reamers" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 5.5 – रीमर (Reamers)</a>
+<a href="#sec-screw-thread" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🧵 5.6 – स्क्रू थ्रेड और एलीमेंट्स</a>
+<a href="#sec-taps" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 5.7 – टैप रिंच, टूटे टैप को हटाना, स्टड</a>
+<a href="#sec-dies" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 5.8 – डाई और डाई स्टॉक (Dies &amp; Die Stock)</a>
+<a href="#sec-drill-troubles" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚠️ 5.9 – ड्रिल की परेशानी-कारण और उपाय</a>
+<a href="#sec-grinding-wheel" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔄 5.10 – ग्राइंडिंग व्हील मार्किंग सिस्टम</a>
+<a href="#sec-gauges" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📏 5.11 – गेज और गेज के प्रकार (Gauges &amp; Types)</a>
 </div>
 </div>
 </div>
 </div>
+
 <!-- ====================================================================== -->
-<!-- 5.1 LATHE MACHINE -->
+<!-- 5.1 DRILLS -->
 <!-- ====================================================================== -->
-<div class="container" id="sec-lathe">
-<div class="content-section" data-content="lathe">
-<div class="section-header"><span class="icon">⚙️</span><span class="title">5.1 – लेथ मशीन (Lathe Machine)</span><span class="subtitle">— भाग, प्रकार, सुरक्षा, रखरखाव</span></div>
+<div class="container" id="sec-drills">
+<div class="content-section" data-content="drills">
+<div class="section-header"><span class="icon">🔧</span><span class="title">5.1 – ड्रिल्स (Drills)</span><span class="subtitle">— प्रकार, भाग, सामग्री, उपयोग, चयन</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>लेथ मशीन (Lathe Machine)</strong> सबसे पुरानी और सबसे महत्वपूर्ण मशीन टूल्स में से एक है। इसमें <strong>वर्कपीस (workpiece)</strong> घूमता है और <strong>काटने का उपकरण (cutting tool)</strong> स्थिर रहकर उसमें से सामग्री हटाता है।</p>
-<p><strong>लेथ के मुख्य भाग (Main Parts of Lathe):</strong></p>
+<p><strong>ड्रिल (Drill)</strong> एक काटने का उपकरण (cutting tool) है जिसका उपयोग <strong>बेलनाकार छेद (cylindrical holes)</strong> बनाने के लिए किया जाता है। <strong>ट्विस्ट ड्रिल (twist drill)</strong> सबसे सामान्य प्रकार है।</p>
+
+<p><strong>ड्रिल के भाग (Parts of a Twist Drill):</strong></p>
 <ul>
-<li><strong>बेड (Bed):</strong> लेथ का <strong>आधार (base)</strong> – भारी, कठोर कास्ट आयरन (cast iron) से बना। सभी भागों को <strong>सहारा (support)</strong> देता है।</li>
-<li><strong>हेडस्टॉक (Headstock):</strong> बेड के <strong>बाएँ (left)</strong> सिरे पर स्थित। इसमें <strong>मुख्य स्पिंडल (main spindle)</strong>, <strong>गियर बॉक्स (gearbox)</strong> और <strong>चक (chuck)</strong> होते हैं। स्पिंडल को <strong>घुमाता (rotates)</strong> है।</li>
-<li><strong>टेलस्टॉक (Tailstock):</strong> बेड के <strong>दाएँ (right)</strong> सिरे पर स्थित। इसमें <strong>टेलस्टॉक स्पिंडल (tailstock spindle)</strong> होता है जो <strong>सेंटर (centre)</strong> या <strong>ड्रिल चक (drill chuck)</strong> धारण कर सकता है। <strong>बेड पर स्लाइड (slide)</strong> कर सकता है।</li>
-<li><strong>कैरिज (Carriage):</strong> बेड पर <strong>बाएँ-दाएँ (left-right)</strong> चलता है। इसमें <strong>एप्रन (apron)</strong>, <strong>सैडल (saddle)</strong> और <strong>क्रॉस स्लाइड (cross slide)</strong> शामिल हैं। <strong>कटिंग टूल (cutting tool)</strong> को धारण करता है और <strong>फीड (feed)</strong> देता है।</li>
-<li><strong>कम्पाउंड रेस्ट (Compound Rest):</strong> क्रॉस स्लाइड पर स्थित। <strong>टूल पोस्ट (tool post)</strong> को <strong>कोण (angle)</strong> पर <strong>घुमा (swivel)</strong> सकता है – <strong>टेपर टर्निंग (taper turning)</strong> के लिए।</li>
-<li><strong>टूल पोस्ट (Tool Post):</strong> <strong>कटिंग टूल (cutting tool)</strong> को <strong>क्लैंप (clamp)</strong> करता है।</li>
-<li><strong>लीड स्क्रू (Lead Screw):</strong> <strong>थ्रेड काटने (thread cutting)</strong> के लिए <strong>सटीक (precise)</strong> फीड प्रदान करता है।</li>
-<li><strong>फीड रॉड (Feed Rod):</strong> <strong>सामान्य फीड (normal feed)</strong> के लिए।</li>
+<li><strong>बिंदु (Point – Cutting End):</strong> काटने वाला सिरा (cutting end) – <strong>ड्रिल बिंदु (drill point)</strong>।</li>
+<li><strong>शैंक (Shank):</strong> ड्रिल का <strong>पकड़ने वाला (holding)</strong> भाग – <strong>सीधा (straight)</strong> या <strong>टेपर (taper – Morse taper)</strong> शैंक।</li>
+<li><strong>टैंग (Tang):</strong> टेपर शैंक के <strong>अंत (end)</strong> पर – <strong>ड्रिल को मोड़ने (turning)</strong> के लिए।</li>
+<li><strong>बॉडी (Body):</strong> शैंक और बिंदु के बीच का <strong>मुख्य भाग (main part)</strong>।</li>
+<li><strong>फ़्लूट्स (Flutes):</strong> बॉडी पर <strong>सर्पिल खांचे (spiral grooves)</strong> – <strong>चिप्स (chips)</strong> को <strong>बाहर निकालने (removing)</strong> और <strong>कटिंग फ्लुइड (cutting fluid)</strong> को पहुँचाने के लिए।</li>
+<li><strong>लैंड (Land – Margin):</strong> फ़्लूट्स के बीच की <strong>ठोस (solid)</strong> सतह – <strong>ड्रिल को मार्गदर्शन (guide)</strong> देती है।</li>
+<li><strong>वेब (Web):</strong> फ़्लूट्स के बीच का <strong>मध्य भाग (central portion)</strong> – <strong>कठोरता (rigidity)</strong> प्रदान करता है।</li>
+<li><strong>कटिंग किनारा (Cutting Edge – Lip):</strong> बिंदु पर <strong>मुख्य काटने वाला किनारा (main cutting edge)</strong>।</li>
+<li><strong>हील (Heel):</strong> कटिंग किनारे के <strong>पीछे (behind)</strong> का भाग – <strong>निकासी कोण (clearance angle)</strong> प्रदान करता है।</li>
 </ul>
-<p><strong>लेथ के प्रकार (Types of Lathe):</strong></p>
+
+<p><strong>ड्रिल की सामग्री (Drill Materials):</strong></p>
 <ul>
-<li><strong>बेंच लेथ (Bench Lathe):</strong> छोटा, बेंच पर रखा जाता है। छोटे जॉब (jobs) के लिए।</li>
-<li><strong>इंजन लेथ (Engine Lathe):</strong> सबसे सामान्य प्रकार। सभी प्रकार के सामान्य कार्यों के लिए।</li>
-<li><strong>टूलरूम लेथ (Toolroom Lathe):</strong> उच्च परिशुद्धता (high precision) – टूलरूम कार्य के लिए।</li>
-<li><strong>कैप्स्टन लेथ (Capstan Lathe) और टरेट लेथ (Turret Lathe):</strong> <strong>उत्पादन (production)</strong> के लिए, कई टूल्स के साथ।</li>
-<li><strong>स्वचालित लेथ (Automatic Lathe):</strong> पूर्णतः स्वचालित (fully automatic) – बड़े पैमाने पर उत्पादन (mass production) के लिए।</li>
-<li><strong>CNC लेथ (CNC Lathe):</strong> <strong>कंप्यूटर नियंत्रित (computer-controlled)</strong> – उच्च सटीकता और जटिल आकृतियों के लिए।</li>
+<li><strong>हाई-स्पीड स्टील (High-Speed Steel – HSS):</strong> सबसे सामान्य – <strong>स्टील (steel)</strong>, <strong>कास्ट आयरन (cast iron)</strong>, <strong>एल्यूमीनियम (aluminium)</strong> के लिए।</li>
+<li><strong>कार्बाइड-टिप्ड (Carbide-Tipped):</strong> <strong>कठोर सामग्री (hard materials)</strong> – <strong>स्टेनलेस स्टील (stainless steel)</strong>, <strong>टाइटेनियम (titanium)</strong> के लिए।</li>
+<li><strong>हीरा-लेपित (Diamond-Coated):</strong> <strong>बहुत कठोर (very hard)</strong> सामग्री – <strong>सिरेमिक (ceramic)</strong>, <strong>कांच (glass)</strong> के लिए।</li>
+<li><strong>कार्बन स्टील (Carbon Steel):</strong> <strong>नरम सामग्री (soft materials)</strong> – <strong>लकड़ी (wood)</strong>, <strong>प्लास्टिक (plastic)</strong> के लिए।</li>
 </ul>
-<p><strong>लेथ सुरक्षा (Lathe Safety):</strong></p>
+
+<p><strong>ड्रिल के प्रकार (Types of Drills):</strong></p>
 <ul>
-<li>हमेशा <strong>सुरक्षा चश्मा (safety goggles)</strong> पहनें।</li>
-<li><strong>ढीले कपड़े (loose clothes)</strong> न पहनें – स्पिंडल में फँस सकते हैं।</li>
-<li><strong>चक (chuck)</strong> को ठीक से <strong>कसें (tighten)</strong>।</li>
-<li>लेथ चलते समय <strong>वर्कपीस (workpiece)</strong> को कभी <strong>मापें (measure)</strong> नहीं।</li>
-<li><strong>चिप्स (chips)</strong> को हाथ से न हटाएँ – <strong>ब्रश (brush)</strong> का उपयोग करें।</li>
-<li>मशीन को <strong>नियमित रूप से लुब्रिकेट (regularly lubricate)</strong> करें।</li>
+<li><strong>ट्विस्ट ड्रिल (Twist Drill):</strong> सबसे सामान्य – <strong>सर्पिल फ़्लूट्स (spiral flutes)</strong> के साथ।</li>
+<li><strong>सेंटर ड्रिल (Centre Drill):</strong> <strong>सेंटर छेद (centre hole)</strong> बनाने के लिए – <strong>लेथ (lathe)</strong> कार्य के लिए।</li>
+<li><strong>स्टेप ड्रिल (Step Drill):</strong> <strong>विभिन्न व्यास (different diameters)</strong> – <strong>शीट मेटल (sheet metal)</strong> के लिए।</li>
+<li><strong>स्पॉटिंग ड्रिल (Spotting Drill):</strong> <strong>सटीक शुरुआत (accurate start)</strong> के लिए – <strong>बहुत कठोर (very rigid)</strong>।</li>
+<li><strong>काउंटरबोर (Counterbore):</strong> <strong>मौजूदा छेद (existing hole)</strong> को <strong>बड़ा (enlarge)</strong> करना – <strong>स्क्रू हेड (screw head)</strong> बैठाने के लिए।</li>
+<li><strong>काउंटरसिंक (Countersink):</strong> <strong>कोणीय (angled)</strong> छेद – <strong>स्क्रू (screw)</strong> के सिर को <strong>समतल (flush)</strong> बैठाने के लिए – <strong>82°</strong> या <strong>90°</strong>।</li>
+</ul>
+
+<p><strong>ड्रिल चयन (Drill Selection):</strong></p>
+<ul>
+<li><strong>सामग्री (Material):</strong> ड्रिल सामग्री <strong>वर्कपीस सामग्री (workpiece material)</strong> के अनुसार।</li>
+<li><strong>व्यास (Diameter):</strong> आवश्यक <strong>छेद का आकार (hole size)</strong>।</li>
+<li><strong>लंबाई (Length):</strong> <strong>छेद की गहराई (hole depth)</strong> – <strong>मानक (standard)</strong>, <strong>लंबी (long)</strong>, <strong>अतिरिक्त लंबी (extra-long)</strong>।</li>
+<li><strong>शैंक (Shank):</strong> <strong>ड्रिल चक (drill chuck)</strong> या <strong>मोर्स टेपर (Morse taper)</strong> के अनुसार।</li>
 </ul>
 </div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: लेथ मशीन के भाग (Lathe Machine Parts)</strong></p>
-<p>स्थान: /images/notes/fitter/module-5/lathe_parts.jpg</p>
-<code>lathe_parts.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(बेड, हेडस्टॉक, टेलस्टॉक, कैरिज, कम्पाउंड रेस्ट, टूल पोस्ट, लीड स्क्रू)</p>
+<p><strong>चित्र: ट्विस्ट ड्रिल के भाग (Twist Drill Parts)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/twist_drill_parts.jpg</p>
+<code>twist_drill_parts.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बिंदु, शैंक, टैंग, बॉडी, फ़्लूट्स, लैंड, वेब, कटिंग एज)</p>
 </div>
-<div class="figure-caption">Fig 1 – लेथ मशीन के भाग</div>
-</div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>लेथ में <strong>वर्कपीस (workpiece)</strong> घूमता है, <strong>टूल (tool)</strong> स्थिर रहता है।</li><li>बेड (bed) <strong>कास्ट आयरन (cast iron)</strong> का बना होता है।</li><li>हेडस्टॉक (headstock) में <strong>स्पिंडल (spindle)</strong> होता है।</li><li>टेलस्टॉक (tailstock) <strong>सेंटर (centre)</strong> या <strong>ड्रिल (drill)</strong> धारण करता है।</li><li>लीड स्क्रू (lead screw) – <strong>थ्रेड कटिंग (thread cutting)</strong> के लिए।</li></ul></div>
-</div>
-</div>
-</div>
-<!-- ====================================================================== -->
-<!-- 5.2 LATHE OPERATIONS -->
-<!-- ====================================================================== -->
-<div class="container" id="sec-lathe-ops">
-<div class="content-section" data-content="lathe-ops">
-<div class="section-header"><span class="icon">🔧</span><span class="title">5.2 – लेथ संचालन (Lathe Operations)</span><span class="subtitle">— फेसिंग, टर्निंग, स्टेप टर्निंग, ग्रूविंग, पार्टिंग</span></div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="content">
-<p><strong>लेथ पर विभिन्न प्रकार के संचालन (operations)</strong> किए जा सकते हैं। प्रत्येक संचालन की अपनी विशेषताएँ और उपयोग होते हैं।</p>
-<p><strong>मुख्य लेथ संचालन (Main Lathe Operations):</strong></p>
-<p><strong>1. फेसिंग (Facing):</strong></p>
-<ul>
-<li>वर्कपीस के <strong>सिरे (end)</strong> को <strong>सपाट (flat)</strong> बनाना और <strong>अतिरिक्त लंबाई (excess length)</strong> हटाना।</li>
-<li>टूल को <strong>वर्कपीस के केंद्र (centre)</strong> से <strong>बाहर (outward)</strong> की ओर चलाया जाता है।</li>
-<li><strong>टूल कोण (tool angle):</strong> 5°–10° साइड रेक (side rake) के साथ।</li>
-</ul>
-<p><strong>2. बाहरी टर्निंग (Plain / Straight Turning – Outside Turning):</strong></p>
-<ul>
-<li>वर्कपीस के <strong>बाहरी व्यास (outside diameter)</strong> को <strong>कम (reduce)</strong> करना।</li>
-<li>टूल को <strong>वर्कपीस की लंबाई (length)</strong> के साथ <strong>समानांतर (parallel)</strong> चलाया जाता है।</li>
-<li><strong>रफ टर्निंग (Rough turning):</strong> तेज़ी से सामग्री हटाने के लिए – <strong>उच्च फीड (high feed)</strong> और <strong>गहरा कट (deep cut)</strong>।</li>
-<li><strong>फिनिश टर्निंग (Finish turning):</strong> अच्छी <strong>सतह फिनिश (surface finish)</strong> के लिए – <strong>कम फीड (low feed)</strong> और <strong>हल्का कट (light cut)</strong>।</li>
-</ul>
-<p><strong>3. स्टेप टर्निंग (Step Turning):</strong></p>
-<ul>
-<li>वर्कपीस पर <strong>विभिन्न व्यास (different diameters)</strong> बनाना – <strong>स्टेप्स (steps)</strong> या <strong>शोल्डर (shoulders)</strong>।</li>
-<li>प्रत्येक व्यास को <strong>अलग-अलग (separately)</strong> टर्न किया जाता है।</li>
-</ul>
-<p><strong>4. ग्रूविंग (Grooving – Necking):</strong></p>
-<ul>
-<li>वर्कपीस पर <strong>संकीर्ण खांचे (narrow grooves)</strong> बनाना – <strong>ग्रूव (groove)</strong> या <strong>नेक (neck)</strong>।</li>
-<li><strong>ग्रूविंग टूल (grooving tool)</strong> का उपयोग – टूल की चौड़ाई = खांचे की चौड़ाई।</li>
-<li>उपयोग: <strong>थ्रेड रिलीफ (thread relief)</strong>, <strong>ई-रिंग (E-ring)</strong> ग्रूव, आदि।</li>
-</ul>
-<p><strong>5. पार्टिंग (Parting – Cut-off):</strong></p>
-<ul>
-<li>तैयार वर्कपीस को <strong>बार (bar)</strong> से <strong>अलग (cut off)</strong> करना।</li>
-<li><strong>पार्टिंग टूल (parting tool)</strong> – पतला (thin) और चौड़ा (wide) टूल।</li>
-<li><strong>सावधानी (caution):</strong> टूल को <strong>वर्कपीस के केंद्र (centre)</strong> से थोड़ा <strong>नीचे (below)</strong> रखें – ताकि टूल टूटे (break) नहीं।</li>
-<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – गर्मी कम करने के लिए।</li>
-</ul>
-<p><strong>6. स्लिप लाइन (Slip Lining / Step Turning with shoulder):</strong></p>
-<ul>
-<li>वर्कपीस पर <strong>सटीक शोल्डर (accurate shoulder)</strong> बनाना।</li>
-<li>टूल को <strong>सटीक स्थिति (precise position)</strong> पर रोकना आवश्यक है।</li>
-<li><strong>शोल्डर (shoulder)</strong> – <strong>90°</strong> या <strong>कोणीय (angular)</strong> हो सकता है।</li>
-</ul>
-</div>
-</div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: लेथ संचालन (Lathe Operations)</strong></p>
-<p>स्थान: /images/notes/fitter/module-5/lathe_operations.jpg</p>
-<code>lathe_operations.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(फेसिंग, टर्निंग, स्टेप टर्निंग, ग्रूविंग, पार्टिंग)</p>
-</div>
-<div class="figure-caption">Fig 2 – लेथ संचालन</div>
+<div class="figure-caption">Fig 1 – ट्विस्ट ड्रिल के भाग</div>
 </div>
 <div class="table-wrap">
 <table>
-<caption>लेथ संचालन पैरामीटर (Lathe Operation Parameters)</caption>
-<thead><tr><th>संचालन (Operation)</th><th>कट गहराई (Cut Depth)</th><th>फीड (Feed mm/rev)</th><th>गति (Speed RPM)</th></tr></thead>
+<caption>ड्रिल प्रकार और उनके उपयोग (Drill Types &amp; Uses)</caption>
+<thead><tr><th>ड्रिल प्रकार</th><th>उपयोग (Use)</th></tr></thead>
 <tbody>
-<tr><td>रफ टर्निंग (Rough Turning)</td><td>2–4 mm</td><td>0.2–0.4</td><td>200–400</td></tr>
-<tr><td>फिनिश टर्निंग (Finish Turning)</td><td>0.5–1 mm</td><td>0.05–0.15</td><td>400–800</td></tr>
-<tr><td>फेसिंग (Facing)</td><td>1–3 mm</td><td>0.1–0.25</td><td>300–600</td></tr>
-<tr><td>ग्रूविंग (Grooving)</td><td>2–5 mm</td><td>0.05–0.1</td><td>200–400</td></tr>
-<tr><td>पार्टिंग (Parting)</td><td>–</td><td>0.05–0.08</td><td>150–300</td></tr>
+<tr><td>ट्विस्ट ड्रिल (Twist Drill)</td><td>सामान्य छेद (general holes)</td></tr>
+<tr><td>सेंटर ड्रिल (Centre Drill)</td><td>लेथ सेंटर छेद (lathe centre hole)</td></tr>
+<tr><td>स्टेप ड्रिल (Step Drill)</td><td>शीट मेटल (sheet metal) – विभिन्न व्यास</td></tr>
+<tr><td>स्पॉटिंग ड्रिल (Spotting Drill)</td><td>सटीक शुरुआत (accurate start)</td></tr>
+<tr><td>काउंटरबोर (Counterbore)</td><td>स्क्रू हेड (screw head) के लिए</td></tr>
+<tr><td>काउंटरसिंक (Countersink)</td><td>फ्लश स्क्रू (flush screw) के लिए – 82°/90°</td></tr>
 </tbody>
 </table>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>फेसिंग: <strong>सिरा (end)</strong> सपाट करना।</li><li>टर्निंग: <strong>बाहरी व्यास (outside diameter)</strong> कम करना।</li><li>स्टेप टर्निंग: <strong>विभिन्न व्यास (different diameters)</strong> बनाना।</li><li>ग्रूविंग: <strong>संकीर्ण खांचे (narrow grooves)</strong> बनाना।</li><li>पार्टिंग: <strong>अलग करना (cut-off)</strong>।</li></ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फेसिंग: <strong>टूल</strong> को केंद्र से बाहर की ओर चलाया जाता है।</li><li>रफ टर्निंग: <strong>तेज़</strong> सामग्री हटाना।</li><li>फिनिश टर्निंग: <strong>अच्छी फिनिश</strong> के लिए।</li><li>पार्टिंग टूल: <strong>केंद्र से थोड़ा नीचे</strong> रखें।</li></ul></div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>ड्रिल – <strong>बेलनाकार छेद (cylindrical holes)</strong> बनाता है।</li><li>HSS – <strong>सबसे सामान्य (most common)</strong> ड्रिल सामग्री।</li><li>फ़्लूट्स – <strong>चिप्स (chips)</strong> को बाहर निकालते हैं।</li><li>मोर्स टेपर (Morse taper) – <strong>टेपर शैंक (taper shank)</strong> ड्रिल के लिए।</li></ul></div>
 </div>
 </div>
 </div>
+
 <!-- ====================================================================== -->
-<!-- 5.3 THREADING ON LATHE -->
+<!-- 5.2 DRILL ANGLES -->
 <!-- ====================================================================== -->
-<div class="container" id="sec-threading">
-<div class="content-section" data-content="threading">
-<div class="section-header"><span class="icon">🔩</span><span class="title">5.3 – थ्रेडिंग (Threading on Lathe)</span><span class="subtitle">— बाहरी V-थ्रेड, कटिंग पैरामीटर, चेंज गियर्स</span></div>
+<div class="container" id="sec-drill-angles">
+<div class="content-section" data-content="drill-angles">
+<div class="section-header"><span class="icon">📐</span><span class="title">5.2 – ड्रिल कोण (Drill Angles)</span><span class="subtitle">— बिंदु कोण, रेक कोण, निकासी कोण, हील कोण</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>लेथ पर थ्रेड कटिंग (Thread cutting on lathe)</strong> सबसे महत्वपूर्ण संचालनों में से एक है। <strong>लीड स्क्रू (lead screw)</strong> और <strong>चेंज गियर्स (change gears)</strong> का उपयोग करके <strong>सटीक पिच (accurate pitch)</strong> के थ्रेड काटे जाते हैं।</p>
-<p><strong>थ्रेड कटिंग की मूल आवश्यकताएँ (Basic Requirements for Thread Cutting):</strong></p>
+<p><strong>ड्रिल के कोण (Drill Angles)</strong> ड्रिल की <strong>कटिंग क्षमता (cutting performance)</strong> और <strong>जीवन (life)</strong> को <strong>प्रभावित (affect)</strong> करते हैं।</p>
+
+<p><strong>मुख्य ड्रिल कोण (Main Drill Angles):</strong></p>
+
+<p><strong>1. बिंदु कोण (Point Angle – Included Angle):</strong></p>
 <ul>
-<li><strong>लीड स्क्रू (Lead Screw):</strong> सटीक पिच वाला लंबा स्क्रू।</li>
-<li><strong>चेंज गियर्स (Change Gears):</strong> स्पिंडल से लीड स्क्रू तक <strong>गति (speed)</strong> स्थानांतरित करने के लिए।</li>
-<li><strong>हाफ नट (Half Nut):</strong> सैडल (saddle) को लीड स्क्रू से <strong>जोड़ने (engage)</strong> और <strong>अलग (disengage)</strong> करने के लिए।</li>
-<li><strong>थ्रेडिंग टूल (Threading Tool):</strong> <strong>V-आकार (V-shaped)</strong> का काटने का उपकरण – <strong>60°</strong> कोण (मीट्रिक थ्रेड के लिए)।</li>
+<li>ड्रिल बिंदु (drill point) पर <strong>दो कटिंग किनारों (two cutting edges)</strong> के बीच का <strong>कोण (angle)</strong>।</li>
+<li><strong>मानक (Standard):</strong> <strong>118°</strong> – <strong>सामान्य प्रयोजन (general purpose)</strong> – स्टील, कास्ट आयरन के लिए।</li>
+<li><strong>नरम सामग्री (Soft materials – एल्यूमीनियम, तांबा):</strong> <strong>90°–100°</strong> – <strong>कम कटिंग दबाव (less cutting pressure)</strong>।</li>
+<li><strong>कठोर सामग्री (Hard materials – कठोर स्टील):</strong> <strong>130°–140°</strong> – <strong>अधिक कठोरता (more rigidity)</strong>।</li>
+<li><strong>पीतल (Brass):</strong> <strong>90°</strong> – <strong>खींचने (grabbing)</strong> को रोकने के लिए।</li>
+<li><strong>ग्रेफाइट / ब्रेक सामग्री:</strong> <strong>60°–80°</strong> – <strong>बहुत नरम (very soft)</strong>।</li>
 </ul>
-<p><strong>बाहरी V-थ्रेड कटिंग की प्रक्रिया (External V-Thread Cutting Process):</strong></p>
-<ol>
-<li>वर्कपीस को <strong>सेंटर (centres)</strong> या <strong>चक (chuck)</strong> में लगाएँ।</li>
-<li><strong>थ्रेडिंग टूल (threading tool)</strong> को वर्कपीस के <strong>सटीक 90°</strong> पर सेट करें – <strong>टूल गेज (tool gauge)</strong> का उपयोग करें।</li>
-<li><strong>स्पिंडल गति (spindle speed)</strong> को धीमी (slow) रखें – सामान्य टर्निंग से <strong>50% कम (50% less)</strong>।</li>
-<li><strong>चेंज गियर्स (change gears)</strong> को वांछित <strong>पिच (pitch)</strong> के अनुसार सेट करें।</li>
-<li><strong>हाफ नट (half nut)</strong> को लीड स्क्रू के साथ <strong>एंगेज (engage)</strong> करें।</li>
-<li>टूल को <strong>पहली कट (first cut)</strong> के लिए <strong>0.2–0.3 मिमी (mm)</strong> गहराई पर सेट करें।</li>
-<li>कट पूरा होने पर, <strong>हाफ नट (half nut)</strong> को <strong>डिसएंगेज (disengage)</strong> करें और <strong>टूल को वापस (return tool)</strong> लाएँ।</li>
-<li>प्रत्येक कट के लिए <strong>कम्पाउंड रेस्ट (compound rest)</strong> को <strong>29.5°</strong> (या <strong>30°</strong>) पर सेट करके <strong>फीड (feed)</strong> दें – यह <strong>चिप तोड़ने (chip breaking)</strong> और <strong>अच्छी फिनिश (good finish)</strong> के लिए आवश्यक है।</li>
-<li>जब तक <strong>आवश्यक गहराई (required depth)</strong> प्राप्त न हो जाए, कट को <strong>दोहराएँ (repeat)</strong>।</li>
-</ol>
-<p><strong>थ्रेड पिच और चेंज गियर्स (Thread Pitch and Change Gears):</strong></p>
+
+<p><strong>2. निकासी कोण (Clearance Angle – Relief Angle):</strong></p>
 <ul>
-<li>पिच (Pitch) = <strong>1 / थ्रेड प्रति इंच (TPI – Threads Per Inch)</strong> (ब्रिटिश) या <strong>मिलीमीटर (mm)</strong> (मीट्रिक).</li>
-<li>चेंज गियर्स का अनुपात (gear ratio) = <strong>लीड स्क्रू पिच / आवश्यक पिच (Lead screw pitch / Required pitch)</strong>।</li>
-<li>आमतौर पर लीड स्क्रू पिच = <strong>6 मिमी (mm)</strong> या <strong>4 TPI</strong>।</li>
+<li>कटिंग किनारे (cutting edge) के <strong>पीछे (behind)</strong> – ड्रिल को <strong>वर्कपीस से रगड़ने (rubbing)</strong> से <strong>बचाता (prevents)</strong> है।</li>
+<li><strong>मानक (Standard):</strong> <strong>6°–12°</strong> – सामग्री पर निर्भर करता है।</li>
+<li><strong>नरम सामग्री (Soft):</strong> <strong>12°–15°</strong> – अधिक निकासी (more clearance).</li>
+<li><strong>कठोर सामग्री (Hard):</strong> <strong>6°–8°</strong> – कम निकासी (less clearance) – <strong>किनारे (edge)</strong> को टूटने से बचाने के लिए।</li>
 </ul>
-<p><strong>थ्रेड कटिंग में सावधानियाँ (Precautions in Thread Cutting):</strong></p>
+
+<p><strong>3. रेक कोण (Rake Angle – Helix Angle):</strong></p>
 <ul>
-<li>टूल को वर्कपीस के <strong>केंद्र (centre)</strong> पर <strong>सटीक (exactly)</strong> रखें।</li>
-<li>हर कट के बाद <strong>डायल (dial)</strong> से <strong>गहराई (depth)</strong> मापें।</li>
-<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – गर्मी और घर्षण (friction) कम करने के लिए।</li>
-<li>थ्रेड की <strong>फिनिश (finish)</strong> जाँचने के लिए <strong>थ्रेड प्लग गेज (thread plug gauge)</strong> या <strong>थ्रेड रिंग गेज (thread ring gauge)</strong> का उपयोग करें।</li>
+<li>फ़्लूट्स (flutes) के <strong>सर्पिल (spiral)</strong> का कोण – <strong>फ़्लूट्स (flutes)</strong> की दिशा।</li>
+<li><strong>मानक (Standard):</strong> <strong>24°–30°</strong> – <strong>स्टील (steel)</strong> के लिए।</li>
+<li><strong>नरम सामग्री (Soft – एल्यूमीनियम):</strong> <strong>35°–45°</strong> – <strong>तेज़ चिप प्रवाह (fast chip flow)</strong>।</li>
+<li><strong>कठोर सामग्री (Hard – कास्ट आयरन):</strong> <strong>12°–18°</strong> – <strong>धीमा चिप प्रवाह (slow chip flow)</strong> – कठोर चिप्स (hard chips) के लिए।</li>
+<li><strong>पीतल (Brass):</strong> <strong>0°–5°</strong> – <strong>कोई रेक (no rake)</strong> – <strong>खींचने (grabbing)</strong> को रोकने के लिए।</li>
+</ul>
+
+<p><strong>4. हील कोण (Heel Angle – Lip Relief Angle):</strong></p>
+<ul>
+<li>कटिंग किनारे (cutting edge) और <strong>हील (heel)</strong> के बीच का कोण।</li>
+<li><strong>6°–10°</strong> – <strong>निकासी (clearance)</strong> प्रदान करता है।</li>
+</ul>
+
+<p><strong>5. चिज़ल एज कोण (Chisel Edge Angle):</strong></p>
+<ul>
+<li>ड्रिल के <strong>केंद्र (centre)</strong> पर <strong>चिज़ल किनारा (chisel edge)</strong> का कोण।</li>
+<li><strong>120°–135°</strong> – ड्रिल के <strong>केंद्र (centre)</strong> पर कटिंग।</li>
 </ul>
 </div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: लेथ पर थ्रेड कटिंग (Thread Cutting on Lathe)</strong></p>
-<p>स्थान: /images/notes/fitter/module-5/thread_cutting.jpg</p>
-<code>thread_cutting.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(थ्रेडिंग टूल, चेंज गियर्स, हाफ नट, कटिंग प्रक्रिया)</p>
+<p><strong>चित्र: ड्रिल कोण (Drill Angles)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/drill_angles.jpg</p>
+<code>drill_angles.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बिंदु कोण, निकासी कोण, रेक कोण, हील कोण, चिज़ल एज)</p>
 </div>
-<div class="figure-caption">Fig 3 – लेथ पर थ्रेड कटिंग</div>
-</div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>थ्रेड कटिंग में <strong>लीड स्क्रू (lead screw)</strong> का उपयोग होता है।</li><li>कम्पाउंड रेस्ट को <strong>29.5° या 30°</strong> पर सेट करें।</li><li>थ्रेडिंग टूल का कोण: <strong>60°</strong> (मीट्रिक) या <strong>55°</strong> (ब्रिटिश).</li><li>स्पिंडल गति: सामान्य से <strong>50% कम</strong>।</li><li>हाफ नट (half nut) – <strong>सैडल (saddle)</strong> को लीड स्क्रू से जोड़ता है।</li></ul></div>
-</div>
-</div>
-</div>
-<!-- ====================================================================== -->
-<!-- 5.4 TAPER TURNING -->
-<!-- ====================================================================== -->
-<div class="container" id="sec-taper">
-<div class="content-section" data-content="taper">
-<div class="section-header"><span class="icon">📐</span><span class="title">5.4 – टेपर टर्निंग (Taper Turning)</span><span class="subtitle">— विधियाँ, कोण, संचालन, अनुप्रयोग</span></div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="content">
-<p><strong>टेपर टर्निंग (Taper Turning)</strong> वह संचालन है जिसमें वर्कपीस का <strong>व्यास (diameter)</strong> उसकी लंबाई के साथ <strong>समान रूप से (uniformly)</strong> <strong>घटता (decreases)</strong> या <strong>बढ़ता (increases)</strong> है।</p>
-<p><strong>टेपर टर्निंग की विधियाँ (Methods of Taper Turning):</strong></p>
-<p><strong>1. कम्पाउंड रेस्ट विधि (Compound Rest Method):</strong></p>
-<ul>
-<li><strong>कम्पाउंड रेस्ट (compound rest)</strong> को वांछित <strong>टेपर कोण (taper angle)</strong> पर <strong>घुमाएँ (swivel)</strong>।</li>
-<li>टूल को कम्पाउंड रेस्ट के <strong>हैंडल (handle)</strong> द्वारा <strong>मैन्युअल (manual)</strong> फीड दिया जाता है।</li>
-<li><strong>छोटे (short)</strong> और <strong>खड़े (steep)</strong> टेपरों के लिए उपयुक्त।</li>
-<li><strong>सटीकता (accuracy):</strong> अच्छी, लेकिन <strong>समय लेने वाली (time-consuming)</strong>।</li>
-</ul>
-<p><strong>2. टेलस्टॉक सेटओवर विधि (Tailstock Setover Method):</strong></p>
-<ul>
-<li>टेलस्टॉक (tailstock) को <strong>बेड (bed)</strong> पर <strong>थोड़ा सा (slightly)</strong> ऑफसेट (offset) करें।</li>
-<li>वर्कपीस को <strong>सेंटर (centres)</strong> के बीच रखा जाता है।</li>
-<li><strong>लंबे (long)</strong> और <strong>हल्के (shallow)</strong> टेपरों के लिए उपयुक्त।</li>
-<li><strong>टेलस्टॉक सेटओवर (setover)</strong> = <strong>(व्यास अंतर / 2) × (कार्य की लंबाई / टेपर की लंबाई)</strong>।</li>
-</ul>
-<p><strong>3. टेपर टर्निंग अटैचमेंट विधि (Taper Turning Attachment Method):</strong></p>
-<ul>
-<li><strong>टेपर टर्निंग अटैचमेंट (taper turning attachment)</strong> – बेड के <strong>पीछे (rear)</strong> लगा होता है।</li>
-<li>टूल को <strong>गाइड (guide)</strong> के साथ <strong>स्वचालित (automatic)</strong> फीड दिया जाता है।</li>
-<li><strong>लंबे (long)</strong> और <strong>सटीक (accurate)</strong> टेपरों के लिए – <strong>उत्पादन (production)</strong> के लिए।</li>
-<li>सबसे <strong>अच्छी (best)</strong> विधि – <strong>सटीक (accurate)</strong> और <strong>तेज़ (fast)</strong>।</li>
-</ul>
-<p><strong>4. फॉर्म टूल विधि (Form Tool Method):</strong></p>
-<ul>
-<li>एक <strong>विशेष आकार (special shape)</strong> का टूल – <strong>टेपर आकार (taper shape)</strong> में पीसा हुआ (ground).</li>
-<li><strong>छोटे (short)</strong> टेपरों के लिए उपयुक्त।</li>
-<li><strong>उत्पादन (production)</strong> के लिए – <strong>तेज़ (fast)</strong> लेकिन <strong>कम सटीक (less accurate)</strong>।</li>
-</ul>
-<p><strong>टेपर कोण (Taper Angle) की गणना:</strong></p>
-<ul>
-<li><strong>टेपर प्रति फुट (Taper per foot – TPF)</strong> या <strong>टेपर प्रति इंच (Taper per inch – TPI)</strong>।</li>
-<li>कोण = <strong>tan⁻¹ ( (D – d) / (2 × L) )</strong>, जहाँ D = बड़ा व्यास, d = छोटा व्यास, L = टेपर की लंबाई।</li>
-</ul>
-</div>
-</div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: टेपर टर्निंग विधियाँ (Taper Turning Methods)</strong></p>
-<p>स्थान: /images/notes/fitter/module-5/taper_turning.jpg</p>
-<code>taper_turning.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(कम्पाउंड रेस्ट, टेलस्टॉक सेटओवर, अटैचमेंट, फॉर्म टूल)</p>
-</div>
-<div class="figure-caption">Fig 4 – टेपर टर्निंग विधियाँ</div>
-</div>
-<div class="compare-grid">
-<div class="compare-card" style="border-color:#003366; background:#f0f5ff;"><h4>🔵 कम्पाउंड रेस्ट विधि</h4><ul><li><strong>छोटे (short)</strong> टेपर</li><li><strong>मैन्युअल (manual)</strong> फीड</li><li>अच्छी सटीकता (accuracy)</li><li>समय लेने वाली (time-consuming)</li></ul></div>
-<div class="compare-card" style="border-color:#28a745; background:#f0faf2;"><h4>🟢 अटैचमेंट विधि</h4><ul><li><strong>लंबे (long)</strong> टेपर</li><li><strong>स्वचालित (automatic)</strong> फीड</li><li>सबसे सटीक (most accurate)</li><li>उत्पादन (production) के लिए</li></ul></div>
-</div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>टेपर टर्निंग में <strong>व्यास (diameter)</strong> समान रूप से घटता/बढ़ता है।</li><li>कम्पाउंड रेस्ट विधि – <strong>छोटे (short)</strong> टेपरों के लिए।</li><li>टेलस्टॉक सेटओवर – <strong>लंबे (long)</strong>, <strong>हल्के (shallow)</strong> टेपरों के लिए।</li><li>अटैचमेंट विधि – सबसे <strong>सटीक (accurate)</strong> और <strong>तेज़ (fast)</strong>।</li></ul></div>
-</div>
-</div>
-</div>
-<!-- ====================================================================== -->
-<!-- 5.5 BORING ON LATHE -->
-<!-- ====================================================================== -->
-<div class="container" id="sec-boring">
-<div class="content-section" data-content="boring">
-<div class="section-header"><span class="icon">🕳️</span><span class="title">5.5 – बोरिंग (Boring on Lathe)</span><span class="subtitle">— आंतरिक व्यास बढ़ाना, बोरिंग बार, सटीकता</span></div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="content">
-<p><strong>बोरिंग (Boring)</strong> लेथ पर किया जाने वाला एक संचालन है जिसमें <strong>पहले से ड्रिल (drill)</strong> किए गए छेद के <strong>व्यास (diameter)</strong> को <strong>बढ़ाया (enlarged)</strong> और <strong>सटीक (accurately)</strong> किया जाता है।</p>
-<p><strong>बोरिंग के लिए आवश्यक उपकरण (Tools Required for Boring):</strong></p>
-<ul>
-<li><strong>बोरिंग बार (Boring Bar):</strong> एक लंबा, पतला (long, thin) उपकरण जो <strong>हेडस्टॉक (headstock)</strong> या <strong>टेलस्टॉक (tailstock)</strong> में लगा होता है।</li>
-<li><strong>बोरिंग टूल (Boring Tool):</strong> बोरिंग बार के सिरे पर <strong>काटने का किनारा (cutting edge)</strong>।</li>
-<li><strong>चक (Chuck) या फेसप्लेट (Faceplate):</strong> वर्कपीस को पकड़ने के लिए।</li>
-</ul>
-<p><strong>बोरिंग की प्रक्रिया (Boring Process):</strong></p>
-<ol>
-<li>वर्कपीस को <strong>चक (chuck)</strong> या <strong>फेसप्लेट (faceplate)</strong> पर <strong>क्लैंप (clamp)</strong> करें।</li>
-<li><strong>बोरिंग बार (boring bar)</strong> को <strong>टूल पोस्ट (tool post)</strong> या <strong>टेलस्टॉक (tailstock)</strong> में लगाएँ।</li>
-<li>बोरिंग बार को वर्कपीस के <strong>छेद (hole)</strong> के अंदर <strong>फीड (feed)</strong> करें।</li>
-<li>वांछित <strong>व्यास (diameter)</strong> प्राप्त होने तक <strong>कई कट (multiple cuts)</strong> लें।</li>
-<li>छेद की <strong>सटीकता (accuracy)</strong> – <strong>डायल गेज (dial gauge)</strong> या <strong>टेलिस्कोपिंग गेज (telescoping gauge)</strong> से जाँचें।</li>
-</ol>
-<p><strong>बोरिंग और ड्रिलिंग में अंतर (Difference between Boring and Drilling):</strong></p>
-<ul>
-<li><strong>ड्रिलिंग (Drilling):</strong> <strong>नया छेद (new hole)</strong> बनाना।</li>
-<li><strong>बोरिंग (Boring):</strong> <strong>मौजूदा छेद (existing hole)</strong> को <strong>बड़ा (larger)</strong> और <strong>सटीक (accurate)</strong> करना।</li>
-</ul>
-<p><strong>बोरिंग की सावधानियाँ (Precautions in Boring):</strong></p>
-<ul>
-<li>बोरिंग बार को <strong>मजबूती से (firmly)</strong> क्लैंप करें – <strong>कंपन (vibration)</strong> से बचने के लिए।</li>
-<li>बोरिंग बार का <strong>व्यास (diameter)</strong> जितना <strong>बड़ा (larger)</strong> होगा, उतना <strong>कठोर (rigid)</strong> होगा।</li>
-<li><strong>धीमी गति (slow speed)</strong> और <strong>कम फीड (low feed)</strong> – अच्छी फिनिश (finish) के लिए।</li>
-<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – गर्मी कम करने के लिए।</li>
-</ul>
-</div>
-</div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: बोरिंग संचालन (Boring Operation)</strong></p>
-<p>स्थान: /images/notes/fitter/module-5/boring_operation.jpg</p>
-<code>boring_operation.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(बोरिंग बार, बोरिंग टूल, वर्कपीस, चक)</p>
-</div>
-<div class="figure-caption">Fig 5 – बोरिंग संचालन</div>
-</div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बोरिंग: <strong>मौजूदा छेद (existing hole)</strong> को <strong>बड़ा (larger)</strong> और <strong>सटीक (accurate)</strong> करना।</li><li>बोरिंग बार: <strong>लंबा, पतला (long, thin)</strong> उपकरण।</li><li>ड्रिलिंग: <strong>नया छेद (new hole)</strong> बनाना।</li><li>बोरिंग में <strong>कंपन (vibration)</strong> से बचना महत्वपूर्ण है।</li></ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बोरिंग – <strong>व्यास (diameter)</strong> बढ़ाना।</li><li>बोरिंग बार – <strong>टूल पोस्ट</strong> या <strong>टेलस्टॉक</strong> में लगता है।</li><li>ड्रिलिंग vs बोरिंग – <strong>नया</strong> vs <strong>मौजूदा</strong> छेद।</li></ul></div>
-</div>
-</div>
-</div>
-<!-- ====================================================================== -->
-<!-- 5.6 MILLING MACHINE -->
-<!-- ====================================================================== -->
-<div class="container" id="sec-milling">
-<div class="content-section" data-content="milling">
-<div class="section-header"><span class="icon">⚙️</span><span class="title">5.6 – मिलिंग मशीन (Milling Machine)</span><span class="subtitle">— प्रकार, भाग, संचालन, कटर, सुरक्षा</span></div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="content">
-<p><strong>मिलिंग मशीन (Milling Machine)</strong> एक बहुमुखी मशीन टूल है जिसमें <strong>कटर (cutter)</strong> घूमता है और <strong>वर्कपीस (workpiece)</strong> स्थिर रहता है (या फीड किया जाता है)। यह <strong>समतल (flat)</strong>, <strong>कोणीय (angular)</strong>, <strong>खांचेदार (grooved)</strong> और <strong>जटिल (complex)</strong> सतहों को बनाने के लिए उपयोग होती है।</p>
-<p><strong>मिलिंग मशीन के मुख्य भाग (Main Parts of Milling Machine):</strong></p>
-<ul>
-<li><strong>बेस (Base):</strong> मशीन का <strong>आधार (foundation)</strong> – कास्ट आयरन (cast iron).</li>
-<li><strong>कॉलम (Column):</strong> बेस पर <strong>ऊर्ध्वाधर (vertical)</strong> खड़ा भाग – सभी अन्य भागों को सहारा देता है।</li>
-<li><strong>नी (Knee):</strong> कॉलम पर <strong>ऊपर-नीचे (up-down)</strong> चलता है – <strong>वर्टिकल फीड (vertical feed)</strong>।</li>
-<li><strong>सैडल (Saddle):</strong> नी (knee) पर <strong>आगे-पीछे (in-out)</strong> चलता है – <strong>क्रॉस फीड (cross feed)</strong>।</li>
-<li><strong>टेबल (Table):</strong> सैडल पर <strong>बाएँ-दाएँ (left-right)</strong> चलता है – <strong>लॉन्गिट्यूडिनल फीड (longitudinal feed)</strong>।</li>
-<li><strong>स्पिंडल (Spindle):</strong> <strong>कटर (cutter)</strong> को घुमाता है – <strong>मोटर (motor)</strong> द्वारा संचालित।</li>
-<li><strong>आर्बर (Arbor):</strong> <strong>कटर (cutter)</strong> को धारण करने के लिए <strong>शाफ़्ट (shaft)</strong>।</li>
-<li><strong>ओवरआर्म (Overarm):</strong> आर्बर (arbor) को <strong>सहारा (support)</strong> देता है।</li>
-</ul>
-<p><strong>मिलिंग मशीन के प्रकार (Types of Milling Machines):</strong></p>
-<ul>
-<li><strong>कॉलम और नी मिलिंग मशीन (Column &amp; Knee Milling Machine):</strong> सबसे सामान्य प्रकार।</li>
-<li><strong>बेड टाइप मिलिंग मशीन (Bed Type):</strong> टेबल बेड पर स्लाइड करती है – भारी कार्य के लिए।</li>
-<li><strong>प्लेनर मिलिंग मशीन (Planer Type):</strong> बहुत बड़ी – बड़ी वर्कपीस के लिए।</li>
-<li><strong>सीएनसी मिलिंग मशीन (CNC Milling Machine):</strong> कंप्यूटर नियंत्रित – जटिल आकृतियों के लिए।</li>
-</ul>
-<p><strong>मिलिंग कटर के प्रकार (Types of Milling Cutters):</strong></p>
-<ul>
-<li><strong>सादा मिलिंग कटर (Plain Milling Cutter):</strong> <strong>समतल सतह (flat surface)</strong> बनाने के लिए।</li>
-<li><strong>साइड मिलिंग कटर (Side Milling Cutter):</strong> <strong>किनारे (edges)</strong> पर मिलिंग के लिए।</li>
-<li><strong>फेस मिलिंग कटर (Face Milling Cutter):</strong> <strong>बड़ी समतल सतह (large flat surface)</strong> के लिए।</li>
-<li><strong>एंड मिल (End Mill):</strong> <strong>खांचे (slots)</strong> और <strong>पॉकेट्स (pockets)</strong> के लिए।</li>
-<li><strong>फॉर्म कटर (Form Cutter):</strong> <strong>जटिल आकृतियाँ (complex shapes)</strong> के लिए।</li>
-<li><strong>टी-स्लॉट कटर (T-Slot Cutter):</strong> <strong>T-स्लॉट्स</strong> बनाने के लिए – मशीन टेबल्स के लिए।</li>
-</ul>
-<p><strong>मिलिंग संचालन (Milling Operations):</strong></p>
-<ul>
-<li><strong>प्लेन मिलिंग (Plain Milling):</strong> समतल सतह बनाना।</li>
-<li><strong>फेस मिलिंग (Face Milling):</strong> बड़ी सतहों को <strong>फिनिश (finish)</strong> करना।</li>
-<li><strong>एंगल मिलिंग (Angle Milling):</strong> <strong>कोणीय (angular)</strong> सतह बनाना।</li>
-<li><strong>ग्रूव मिलिंग (Groove Milling):</strong> <strong>खांचे (grooves)</strong> और <strong>स्लॉट्स (slots)</strong> बनाना।</li>
-<li><strong>गियर मिलिंग (Gear Milling):</strong> <strong>गियर (gears)</strong> के दाँत (teeth) बनाना।</li>
-</ul>
-</div>
-</div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: मिलिंग मशीन और कटर (Milling Machine &amp; Cutters)</strong></p>
-<p>स्थान: /images/notes/fitter/module-5/milling_machine.jpg</p>
-<code>milling_machine.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(कॉलम, नी, सैडल, टेबल, स्पिंडल, आर्बर, कटर)</p>
-</div>
-<div class="figure-caption">Fig 6 – मिलिंग मशीन और कटर</div>
-</div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>मिलिंग में <strong>कटर (cutter)</strong> घूमता है, <strong>वर्कपीस (workpiece)</strong> फीड होता है।</li><li>कॉलम और नी मिलिंग – <strong>सबसे सामान्य (most common)</strong>।</li><li>एंड मिल – <strong>खांचे (slots)</strong> और <strong>पॉकेट्स (pockets)</strong> के लिए।</li><li>गियर मिलिंग – <strong>गियर (gears)</strong> बनाने के लिए।</li></ul></div>
-</div>
-</div>
-</div>
-<!-- ====================================================================== -->
-<!-- 5.7 GRINDING MACHINE -->
-<!-- ====================================================================== -->
-<div class="container" id="sec-grinding">
-<div class="content-section" data-content="grinding">
-<div class="section-header"><span class="icon">🔄</span><span class="title">5.7 – ग्राइंडिंग मशीन (Grinding Machine)</span><span class="subtitle">— प्रकार, एब्रासिव व्हील, सुरक्षा, ड्रेसिंग</span></div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="content">
-<p><strong>ग्राइंडिंग मशीन (Grinding Machine)</strong> का उपयोग <strong>उच्च परिशुद्धता (high precision)</strong> और <strong>चिकनी सतह (smooth surface finish)</strong> प्राप्त करने के लिए किया जाता है। इसमें <strong>एब्रासिव व्हील (abrasive wheel)</strong> घूमता है और वर्कपीस से <strong>बहुत महीन (very fine)</strong> चिप्स हटाता है।</p>
-<p><strong>ग्राइंडिंग मशीन के प्रकार (Types of Grinding Machines):</strong></p>
-<ul>
-<li><strong>बेंच ग्राइंडर (Bench Grinder):</strong> छोटा, बेंच पर रखा जाता है। <strong>उपकरण तीक्ष्ण करने (tool sharpening)</strong> के लिए।</li>
-<li><strong>पेडस्टल ग्राइंडर (Pedestal Grinder):</strong> फर्श पर स्थित, बेंच ग्राइंडर से बड़ा।</li>
-<li><strong>सरफेस ग्राइंडर (Surface Grinder):</strong> <strong>समतल सतह (flat surface)</strong> ग्राइंडिंग के लिए।</li>
-<li><strong>सिलिंड्रिकल ग्राइंडर (Cylindrical Grinder):</strong> <strong>बाहरी (external)</strong> और <strong>आंतरिक (internal)</strong> बेलनाकार सतहों के लिए।</li>
-<li><strong>टूल और कटर ग्राइंडर (Tool &amp; Cutter Grinder):</strong> <strong>काटने के उपकरण (cutting tools)</strong> को तीक्ष्ण (sharpen) करने के लिए।</li>
-<li><strong>सेंटरलेस ग्राइंडर (Centerless Grinder):</strong> बिना सेंटर (centres) के – <strong>उच्च उत्पादन (high production)</strong> के लिए।</li>
-</ul>
-<p><strong>ग्राइंडिंग व्हील (Grinding Wheel) के भाग:</strong></p>
-<ul>
-<li><strong>एब्रासिव (Abrasive):</strong> काटने वाले कण – <strong>एल्यूमीनियम ऑक्साइड (Al₂O₃)</strong> या <strong>सिलिकॉन कार्बाइड (SiC)</strong>।</li>
-<li><strong>बॉन्ड (Bond):</strong> एब्रासिव कणों को <strong>बाँधने (binding)</strong> वाला पदार्थ – <strong>विट्रिफाइड (vitrified)</strong>, <strong>रबर (rubber)</strong>, <strong>राल (resinoid)</strong>।</li>
-<li><strong>ग्रेन साइज (Grain Size):</strong> एब्रासिव कणों का आकार – <strong>बड़ा (coarse)</strong> = रफ ग्राइंडिंग, <strong>छोटा (fine)</strong> = फिनिश ग्राइंडिंग।</li>
-<li><strong>ग्रेड (Grade):</strong> व्हील की <strong>कठोरता (hardness)</strong> – <strong>सॉफ्ट (soft)</strong> से <strong>हार्ड (hard)</strong> तक।</li>
-</ul>
-<p><strong>ग्राइंडिंग व्हील का चयन (Selection of Grinding Wheel):</strong></p>
-<ul>
-<li><strong>सामग्री (Material) के अनुसार:</strong> कठोर सामग्री के लिए <strong>नरम (soft)</strong> व्हील; नरम सामग्री के लिए <strong>कठोर (hard)</strong> व्हील।</li>
-<li><strong>संचालन (Operation) के अनुसार:</strong> रफ ग्राइंडिंग के लिए <strong>मोटा (coarse)</strong> ग्रेन; फिनिश के लिए <strong>महीन (fine)</strong> ग्रेन।</li>
-<li><strong>व्हील की गति (Wheel Speed):</strong> व्हील पर <strong>अधिकतम RPM</strong> अंकित होता है – इससे <strong>अधिक (exceed)</strong> न करें।</li>
-</ul>
-<p><strong>ग्राइंडिंग व्हील की ड्रेसिंग (Dressing of Grinding Wheel):</strong></p>
-<ul>
-<li><strong>ड्रेसिंग (Dressing):</strong> व्हील की <strong>सतह (surface)</strong> को <strong>साफ (clean)</strong> और <strong>तीक्ष्ण (sharp)</strong> बनाना।</li>
-<li><strong>ड्रेसर (Dresser):</strong> <strong>डायमंड ड्रेसर (diamond dresser)</strong> या <strong>स्टार ड्रेसर (star dresser)</strong>।</li>
-<li><strong>ट्रूइंग (Truing):</strong> व्हील को <strong>सटीक आकार (accurate shape)</strong> में लाना – <strong>डायमंड (diamond)</strong> टूल से।</li>
-<li>नियमित ड्रेसिंग – <strong>व्हील की कटिंग क्षमता (cutting capacity)</strong> बनाए रखने के लिए।</li>
-</ul>
-<p><strong>ग्राइंडिंग सुरक्षा (Grinding Safety):</strong></p>
-<ul>
-<li>हमेशा <strong>सुरक्षा चश्मा (safety goggles)</strong> पहनें।</li>
-<li>व्हील को <strong>सही तरीके से (properly)</strong> <strong>माउंट (mount)</strong> करें – <strong>ब्लोटर (blotter)</strong> का उपयोग करें।</li>
-<li>व्हील पर <strong>अधिकतम गति (maximum speed)</strong> से अधिक कभी न चलाएँ।</li>
-<li>व्हील <strong>चलते (running)</strong> समय <strong>टूल रेस्ट (tool rest)</strong> को व्हील के बहुत <strong>पास (close)</strong> न रखें – 3 मिमी (mm) से अधिक नहीं।</li>
-<li>व्हील के <strong>चेहरे (face)</strong> पर ग्राइंडिंग करें – <strong>किनारे (side)</strong> पर नहीं (जब तक स्पेशल व्हील न हो)।</li>
-<li><strong>शोर (noise)</strong> या <strong>कंपन (vibration)</strong> होने पर तुरंत <strong>बंद (stop)</strong> करें – व्हील में दरार (crack) हो सकती है।</li>
-</ul>
-</div>
-</div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: ग्राइंडिंग मशीन और व्हील (Grinding Machine &amp; Wheel)</strong></p>
-<p>स्थान: /images/notes/fitter/module-5/grinding_machine.jpg</p>
-<code>grinding_machine.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(बेंच ग्राइंडर, सरफेस ग्राइंडर, सिलिंड्रिकल ग्राइंडर, ड्रेसिंग)</p>
-</div>
-<div class="figure-caption">Fig 7 – ग्राइंडिंग मशीन और व्हील</div>
-</div>
-<div class="warning-box"><h4>⚠️ सुरक्षा</h4><p>ग्राइंडिंग व्हील को <strong>अधिकतम RPM</strong> से अधिक कभी न चलाएँ। व्हील के <strong>साइड (side)</strong> पर ग्राइंडिंग न करें। <strong>सुरक्षा चश्मा (safety goggles)</strong> पहनना अनिवार्य है।</p></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बेंच ग्राइंडर: <strong>उपकरण तीक्ष्ण (tool sharpening)</strong> के लिए।</li><li>सरफेस ग्राइंडर: <strong>समतल सतह (flat surface)</strong> के लिए।</li><li>सिलिंड्रिकल ग्राइंडर: <strong>बेलनाकार (cylindrical)</strong> सतहों के लिए।</li><li>ड्रेसिंग: व्हील को <strong>तीक्ष्ण (sharp)</strong> बनाना।</li><li>ट्रूइंग: व्हील को <strong>सटीक आकार (accurate shape)</strong> में लाना।</li><li>व्हील की <strong>सतह (face)</strong> पर ग्राइंडिंग करें – <strong>किनारे (side)</strong> पर नहीं।</li></ul></div>
-</div>
-</div>
-</div>
-<!-- ====================================================================== -->
-<!-- 5.8 FITS AND TOLERANCES -->
-<!-- ====================================================================== -->
-<div class="container" id="sec-fits">
-<div class="content-section" data-content="fits">
-<div class="section-header"><span class="icon">📏</span><span class="title">5.8 – फिट और टॉलरेंस (Fits and Tolerances)</span><span class="subtitle">— लिमिट्स, फिट के प्रकार, होल बेसिस, शाफ्ट बेसिस</span></div>
-<div class="section-body copy-protect">
-<div class="bilingual">
-<div class="content">
-<p><strong>फिट (Fit)</strong> दो भागों (जैसे <strong>शाफ्ट (shaft)</strong> और <strong>होल (hole)</strong>) के बीच का <strong>संबंध (relationship)</strong> है जो <strong>असेंबली (assembly)</strong> के बाद <strong>निकासी (clearance)</strong> या <strong>हस्तक्षेप (interference)</strong> को दर्शाता है।</p>
-<p><strong>टॉलरेंस (Tolerance)</strong> <strong>अनुमेय विचलन (allowable deviation)</strong> है – अधिकतम और न्यूनतम सीमाओं (limits) के बीच का अंतर।</p>
-<p><strong>लिमिट्स (Limits):</strong></p>
-<ul>
-<li><strong>ऊपरी सीमा (Upper Limit):</strong> अधिकतम अनुमेय आकार (maximum permissible size).</li>
-<li><strong>निचली सीमा (Lower Limit):</strong> न्यूनतम अनुमेय आकार (minimum permissible size).</li>
-<li><strong>टॉलरेंस (Tolerance):</strong> ऊपरी सीमा – निचली सीमा।</li>
-</ul>
-<p><strong>फिट के प्रकार (Types of Fits):</strong></p>
-<p><strong>1. निकासी फिट (Clearance Fit):</strong></p>
-<ul>
-<li><strong>शाफ्ट (shaft)</strong> हमेशा <strong>होल (hole)</strong> से <strong>छोटा (smaller)</strong> होता है।</li>
-<li><strong>सकारात्मक निकासी (positive clearance)</strong> – शाफ्ट होल में <strong>घूम (rotate)</strong> या <strong>स्लाइड (slide)</strong> कर सकता है।</li>
-<li>उदाहरण: <strong>बेयरिंग (bearing)</strong> फिट, <strong>पिस्टन (piston)</strong> और <strong>सिलेंडर (cylinder)</strong>।</li>
-<li><strong>सबसे अधिक उपयोग (most commonly used)</strong> फिट प्रकार।</li>
-</ul>
-<p><strong>2. हस्तक्षेप फिट (Interference Fit – Press Fit / Force Fit):</strong></p>
-<ul>
-<li><strong>शाफ्ट (shaft)</strong> हमेशा <strong>होल (hole)</strong> से <strong>बड़ा (larger)</strong> होता है।</li>
-<li><strong>नकारात्मक निकासी (negative clearance)</strong> – शाफ्ट को <strong>दबाकर (pressed)</strong> या <strong>गर्म करके (heated)</strong> डाला जाता है।</li>
-<li>उदाहरण: <strong>गियर (gear)</strong> का <strong>शाफ्ट (shaft)</strong> पर फिट, <strong>बियरिंग रेस (bearing race)</strong>।</li>
-<li><strong>बिना ब्रेक (without breaking)</strong> हटाया नहीं जा सकता।</li>
-</ul>
-<p><strong>3. संक्रमण फिट (Transition Fit):</strong></p>
-<ul>
-<li>निकासी (clearance) और हस्तक्षेप (interference) के <strong>बीच (between)</strong> का फिट।</li>
-<li>कभी <strong>निकासी (clearance)</strong>, कभी <strong>हस्तक्षेप (interference)</strong> – फिट पर निर्भर करता है।</li>
-<li>उदाहरण: <strong>सटीक स्थिति (precise location)</strong> के लिए – <strong>डॉवेल (dowel)</strong> फिट।</li>
-</ul>
-<p><strong>फिट सिस्टम (Fit Systems):</strong></p>
-<ul>
-<li><strong>होल बेसिस सिस्टम (Hole Basis System):</strong> <strong>होल (hole)</strong> का आकार <strong>स्थिर (constant)</strong> रखा जाता है, <strong>शाफ्ट (shaft)</strong> का आकार <strong>बदला (varied)</strong> जाता है – <strong>अधिक व्यावहारिक (more practical)</strong>।</li>
-<li><strong>शाफ्ट बेसिस सिस्टम (Shaft Basis System):</strong> <strong>शाफ्ट (shaft)</strong> का आकार <strong>स्थिर (constant)</strong> रखा जाता है, <strong>होल (hole)</strong> का आकार <strong>बदला (varied)</strong> जाता है।</li>
-<li><strong>IS (भारतीय मानक – Indian Standard)</strong> होल बेसिस सिस्टम का <strong>अनुशंसा (recommendation)</strong> करता है।</li>
-</ul>
-<p><strong>टॉलरेंस ग्रेड (Tolerance Grades – IT Grades):</strong></p>
-<ul>
-<li><strong>IT01 से IT16</strong> तक – <strong>IT (International Tolerance)</strong> ग्रेड।</li>
-<li><strong>IT01–IT4:</strong> <strong>गेज (gauges)</strong> और <strong>उच्च-परिशुद्धता (high-precision)</strong> कार्य के लिए।</li>
-<li><strong>IT5–IT7:</strong> <strong>फिट (fits)</strong> के लिए – सबसे अधिक उपयोग।</li>
-<li><strong>IT8–IT11:</strong> <strong>सामान्य (general)</strong> कार्य के लिए।</li>
-<li><strong>IT12–IT16:</strong> <strong>रफ (rough)</strong> कार्य के लिए।</li>
-</ul>
-</div>
+<div class="figure-caption">Fig 2 – ड्रिल कोण</div>
 </div>
 <div class="table-wrap">
 <table>
-<caption>फिट के प्रकार (Types of Fits)</caption>
-<thead><tr><th>फिट प्रकार (Fit Type)</th><th>निकासी (Clearance)</th><th>हस्तक्षेप (Interference)</th><th>उदाहरण (Example)</th></tr></thead>
+<caption>सामग्री के अनुसार ड्रिल बिंदु कोण (Drill Point Angle by Material)</caption>
+<thead><tr><th>सामग्री (Material)</th><th>बिंदु कोण (Point Angle)</th></tr></thead>
 <tbody>
-<tr><td>निकासी फिट (Clearance Fit)</td><td>✅ हाँ (Yes)</td><td>❌ नहीं (No)</td><td>बेयरिंग, पिस्टन</td></tr>
-<tr><td>हस्तक्षेप फिट (Interference Fit)</td><td>❌ नहीं (No)</td><td>✅ हाँ (Yes)</td><td>गियर on शाफ्ट</td></tr>
-<tr><td>संक्रमण फिट (Transition Fit)</td><td>कभी-कभी</td><td>कभी-कभी</td><td>डॉवेल फिट</td></tr>
+<tr><td>सामान्य स्टील (General Steel)</td><td>118°</td></tr>
+<tr><td>कठोर स्टील (Hard Steel)</td><td>130°–140°</td></tr>
+<tr><td>कास्ट आयरन (Cast Iron)</td><td>118°–120°</td></tr>
+<tr><td>एल्यूमीनियम (Aluminium)</td><td>90°–100°</td></tr>
+<tr><td>तांबा (Copper)</td><td>90°–100°</td></tr>
+<tr><td>पीतल (Brass)</td><td>90°</td></tr>
+<tr><td>ग्रेफाइट (Graphite)</td><td>60°–80°</td></tr>
 </tbody>
 </table>
 </div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>निकासी फिट (Clearance Fit): <strong>शाफ्ट (shaft) &lt; होल (hole)</strong> – सकारात्मक निकासी (positive clearance).</li><li>हस्तक्षेप फिट (Interference Fit): <strong>शाफ्ट (shaft) &gt; होल (hole)</strong> – नकारात्मक निकासी (negative clearance).</li><li>संक्रमण फिट (Transition Fit): <strong>निकासी और हस्तक्षेप के बीच (between clearance and interference)</strong>।</li>
-<li>होल बेसिस सिस्टम – <strong>होल (hole) स्थिर</strong>।</li>
-<li>शाफ्ट बेसिस सिस्टम – <strong>शाफ्ट (shaft) स्थिर</strong>।</li>
-<li>IS – <strong>होल बेसिस (Hole Basis)</strong> की अनुशंसा करता है।</li>
-<li>IT ग्रेड – <strong>IT5 से IT7</strong> फिट्स के लिए सबसे अधिक उपयोग।</li>
-</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>मानक ड्रिल बिंदु कोण: <strong>118°</strong> (सामान्य स्टील के लिए).</li><li>कठोर स्टील के लिए: <strong>130°–140°</strong>.</li><li>एल्यूमीनियम के लिए: <strong>90°–100°</strong>.</li><li>पीतल के लिए: <strong>90°</strong> – खींचने (grabbing) से बचने के लिए।</li><li>निकासी कोण (Clearance Angle): <strong>6°–12°</strong>.</li><li>रेक कोण (Rake Angle): <strong>24°–30°</strong> (स्टील के लिए).</li></ul></div>
 </div>
 </div>
 </div>
+
 <!-- ====================================================================== -->
-<!-- 5.9 SURFACE FINISH -->
+<!-- 5.3 CUTTING SPEED, FEED, RPM, HOLDING DEVICES -->
 <!-- ====================================================================== -->
-<div class="container" id="sec-surface">
-<div class="content-section" data-content="surface">
-<div class="section-header"><span class="icon">📊</span><span class="title">5.9 – सरफेस फिनिश (Surface Finish)</span><span class="subtitle">— सतह खुरदरापन, मापन, उपकरण, मानक</span></div>
+<div class="container" id="sec-drill-params">
+<div class="content-section" data-content="drill-params">
+<div class="section-header"><span class="icon">⚙️</span><span class="title">5.3 – कटिंग स्पीड, फीड, RPM, ड्रिल होल्डिंग डिवाइस</span><span class="subtitle">— गणना, चयन, उपकरण, सुरक्षा</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>सरफेस फिनिश (Surface Finish)</strong> किसी मशीनी सतह की <strong>गुणवत्ता (quality)</strong> और <strong>चिकनाई (smoothness)</strong> को दर्शाती है। यह <strong>घर्षण (friction)</strong>, <strong>घिसाव (wear)</strong> और <strong>उपस्थिति (appearance)</strong> को प्रभावित करती है।</p>
-<p><strong>सतह खुरदरापन (Surface Roughness):</strong></p>
+<p><strong>ड्रिलिंग पैरामीटर (Drilling Parameters)</strong> – <strong>कटिंग स्पीड (cutting speed)</strong>, <strong>फीड (feed)</strong>, और <strong>RPM (spindle speed)</strong> – ड्रिल के <strong>जीवन (life)</strong> और <strong>छेद की गुणवत्ता (hole quality)</strong> को <strong>निर्धारित (determine)</strong> करते हैं।</p>
+
+<p><strong>1. कटिंग स्पीड (Cutting Speed – CS / V):</strong></p>
 <ul>
-<li><strong>खुरदरापन (Roughness):</strong> सतह पर <strong>महीन असमानताएँ (fine irregularities)</strong> – <strong>मशीनिंग (machining)</strong> के कारण।</li>
-<li><strong>तरंग (Waviness):</strong> सतह पर <strong>बड़ी असमानताएँ (larger irregularities)</strong> – <strong>कंपन (vibration)</strong> के कारण।</li>
-<li><strong>ले (Lay):</strong> सतह पर <strong>प्रमुख खांचों (dominant grooves)</strong> की दिशा।</li>
+<li><strong>ड्रिल (drill)</strong> की परिधि (circumference) की <strong>रेखीय गति (linear speed)</strong> – <strong>मीटर/मिनट (m/min)</strong> या <strong>फीट/मिनट (ft/min)</strong> में।</li>
+<li>ड्रिल की <strong>सामग्री (material)</strong> और <strong>वर्कपीस सामग्री (workpiece material)</strong> पर <strong>निर्भर (depends)</strong> करती है।</li>
+<li><strong>HSS ड्रिल (HSS drill)</strong> के लिए कटिंग स्पीड:
+    <ul>
+        <li><strong>माइल्ड स्टील (Mild Steel):</strong> 25–35 m/min</li>
+        <li><strong>कास्ट आयरन (Cast Iron):</strong> 15–25 m/min</li>
+        <li><strong>एल्यूमीनियम (Aluminium):</strong> 60–100 m/min</li>
+        <li><strong>पीतल (Brass):</strong> 40–70 m/min</li>
+        <li><strong>तांबा (Copper):</strong> 30–50 m/min</li>
+        <li><strong>स्टेनलेस स्टील (Stainless Steel):</strong> 10–18 m/min</li>
+    </ul>
+</li>
+<li><strong>कार्बाइड ड्रिल (Carbide drill)</strong> – 2-3 गुना अधिक (2-3 times higher) गति।</li>
 </ul>
-<p><strong>सतह खुरदरापन मापने के पैरामीटर (Surface Roughness Parameters):</strong></p>
+
+<p><strong>2. RPM (Revolutions Per Minute – स्पिंडल गति):</strong></p>
 <ul>
-<li><strong>Ra (Arithmetic Average):</strong> सतह की <strong>औसत (average)</strong> खुरदरापन – <strong>सबसे सामान्य (most common)</strong> पैरामीटर।</li>
-<li><strong>Rz (Average Maximum Height):</strong> सबसे <strong>ऊँचे (highest)</strong> और <strong>निचले (lowest)</strong> बिंदुओं के बीच <strong>औसत (average)</strong> अंतर।</li>
-<li><strong>RMS (Root Mean Square):</strong> Ra का <strong>RMS मान (RMS value)</strong> – Ra से लगभग <strong>11% अधिक (11% higher)</strong>।</li>
+<li><strong>RPM = (CS × 1000) / (π × D)</strong> – जहाँ D = ड्रिल व्यास (mm) में।</li>
+<li>या <strong>RPM = (CS × 12) / (π × D)</strong> – D इंच (inch) में।</li>
+<li><strong>उदाहरण (Example):</strong> 10 मिमी (mm) HSS ड्रिल, माइल्ड स्टील (CS = 30 m/min) के लिए: RPM = (30 × 1000) / (3.14 × 10) = <strong>955 RPM</strong>.</li>
 </ul>
-<p><strong>सतह खुरदरापन मापने के उपकरण (Surface Roughness Measuring Instruments):</strong></p>
+
+<p><strong>3. फीड (Feed – f):</strong></p>
 <ul>
-<li><strong>खुरदरापन तुलनित्र (Roughness Comparator):</strong> मानक नमूनों (standard samples) से <strong>दृश्य (visual)</strong> और <strong>स्पर्श (tactile)</strong> तुलना।</li>
-<li><strong>सतह खुरदरापन मीटर (Surface Roughness Tester / Profilometer):</strong> <strong>इलेक्ट्रॉनिक (electronic)</strong> उपकरण – <strong>सटीक (accurate)</strong> मापन।</li>
-<li><strong>टेलर-हॉबसन टैलीसर्फ (Taylor-Hobson Talysurf):</strong> उच्च-परिशुद्धता (high-precision) खुरदरापन मीटर।</li>
+<li>ड्रिल के <strong>प्रति चक्कर (per revolution)</strong> <strong>अंदर की ओर (into the workpiece)</strong> जाने की <strong>दूरी (distance)</strong> – <strong>मिमी/चक्कर (mm/rev)</strong>।</li>
+<li><strong>सामान्य फीड (General feed):</strong> 0.05–0.30 mm/rev – ड्रिल व्यास (drill diameter) पर निर्भर करता है।</li>
+<li><strong>नियम (Rule):</strong> ड्रिल व्यास (drill diameter) जितना <strong>बड़ा (larger)</strong> होगा, फीड उतना <strong>अधिक (higher)</strong> होगा।</li>
+<li>फीड – <strong>मैन्युअल (manual)</strong> या <strong>स्वचालित (automatic)</strong> हो सकता है।</li>
 </ul>
-<p><strong>सतह फिनिश को प्रभावित करने वाले कारक (Factors Affecting Surface Finish):</strong></p>
+
+<p><strong>4. ड्रिल होल्डिंग डिवाइस (Drill Holding Devices):</strong></p>
 <ul>
-<li><strong>कटिंग पैरामीटर (Cutting Parameters):</strong> गति (speed), फीड (feed), कट गहराई (depth of cut).</li>
-<li><strong>टूल ज्यामिति (Tool Geometry):</strong> टूल कोण (tool angles), त्रिज्या (radius).</li>
-<li><strong>टूल सामग्री (Tool Material):</strong> कार्बाइड (carbide), HSS, सिरेमिक (ceramic).</li>
-<li><strong>कटिंग फ्लुइड (Cutting Fluid):</strong> गर्मी और घर्षण (friction) कम करके फिनिश में सुधार करता है।</li>
-<li><strong>मशीन की स्थिति (Machine Condition):</strong> कंपन (vibration), कठोरता (rigidity).</li>
+<li><strong>ड्रिल चक (Drill Chuck):</strong> <strong>सीधा शैंक (straight shank)</strong> ड्रिल पकड़ने के लिए – <strong>तीन-जबड़ा (three-jaw)</strong> चक।</li>
+<li><strong>स्लीव (Sleeve – Socket):</strong> <strong>टेपर शैंक (taper shank)</strong> ड्रिल के लिए – <strong>मोर्स टेपर (Morse taper)</strong>।</li>
+<li><strong>ड्रिल चक कुंजी (Chuck Key):</strong> चक को <strong>कसने (tighten)</strong> और <strong>ढीला (loosen)</strong> करने के लिए।</li>
+<li><strong>चक रिसेस (Chuck Recess):</strong> चक को <strong>स्पिंडल (spindle)</strong> से <strong>जोड़ने (attach)</strong> के लिए।</li>
+<li><strong>कोलेट चक (Collet Chuck):</strong> <strong>उच्च परिशुद्धता (high precision)</strong> – <strong>बहुत छोटे (very small)</strong> ड्रिल के लिए।</li>
 </ul>
-<p><strong>विभिन्न प्रक्रियाओं के लिए Ra मान (Ra Values for Different Processes):</strong></p>
+
+<p><strong>5. वर्क होल्डिंग डिवाइस (Work Holding Devices):</strong></p>
 <ul>
-<li><strong>रफ टर्निंग (Rough Turning):</strong> 6.3 – 12.5 µm</li>
-<li><strong>फिनिश टर्निंग (Finish Turning):</strong> 1.6 – 3.2 µm</li>
-<li><strong>ग्राइंडिंग (Grinding):</strong> 0.2 – 0.8 µm</li>
-<li><strong>लैपिंग (Lapping):</strong> 0.025 – 0.1 µm</li>
-<li><strong>पॉलिशिंग (Polishing):</strong> 0.012 – 0.05 µm</li>
+<li><strong>मशीन वाइस (Machine Vice):</strong> सबसे सामान्य – <strong>ड्रिलिंग मशीन (drilling machine)</strong> पर।</li>
+<li><strong>V-ब्लॉक (V-Block):</strong> <strong>बेलनाकार (cylindrical)</strong> वर्कपीस के लिए।</li>
+<li><strong>क्लैंप (Clamps) और बोल्ट (Bolts):</strong> बड़े (large) वर्कपीस के लिए।</li>
+<li><strong>एंगल प्लेट (Angle Plate):</strong> <strong>कोणीय (angled)</strong> ड्रिलिंग के लिए।</li>
 </ul>
 </div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: सतह खुरदरापन मापन (Surface Roughness Measurement)</strong></p>
-<p>स्थान: /images/notes/fitter/module-5/surface_roughness.jpg</p>
-<code>surface_roughness.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(प्रोफिलोमीटर, तुलनित्र, खुरदरापन पैरामीटर)</p>
+<p><strong>चित्र: ड्रिल होल्डिंग डिवाइस (Drill Holding Devices)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/drill_holding.jpg</p>
+<code>drill_holding.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(ड्रिल चक, स्लीव, कोलेट, चक कुंजी)</p>
 </div>
-<div class="figure-caption">Fig 8 – सतह खुरदरापन मापन</div>
+<div class="figure-caption">Fig 3 – ड्रिल होल्डिंग डिवाइस</div>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>Ra – <strong>औसत (average)</strong> खुरदरापन – <strong>सबसे सामान्य (most common)</strong>।</li><li>Rz – <strong>उच्चतम-निम्नतम (highest-lowest)</strong> का औसत।</li><li>प्रोफिलोमीटर (Profilometer) – <strong>इलेक्ट्रॉनिक (electronic)</strong> मापन उपकरण।</li><li>ग्राइंडिंग – <strong>Ra 0.2–0.8 µm</strong>।</li></ul></div>
+<div class="example-box">
+<h4 style="margin:0 0 6px; color:#003366;">📘 उदाहरण (Example)</h4>
+<p><strong>RPM गणना:</strong> 12 मिमी (mm) HSS ड्रिल, स्टील (CS = 30 m/min):<br/>
+RPM = (30 × 1000) / (3.14 × 12) = <strong>796 RPM</strong>.</p>
+</div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>कटिंग स्पीड (CS) – <strong>m/min</strong> में।</li><li>RPM = (CS × 1000) / (π × D).</li><li>फीड (Feed) – <strong>mm/rev</strong> में – 0.05–0.30 mm/rev.</li><li>ड्रिल चक – <strong>सीधा शैंक (straight shank)</strong> के लिए।</li><li>स्लीव (Sleeve) – <strong>टेपर शैंक (taper shank)</strong> के लिए (Morse taper).</li><li>HSS ड्रिल के लिए CS (माइल्ड स्टील): <strong>25–35 m/min</strong>.</li></ul></div>
 </div>
 </div>
 </div>
+
 <!-- ====================================================================== -->
-<!-- 5.10 ASSEMBLY AND MAINTENANCE -->
+<!-- 5.4 COUNTER SINKING -->
 <!-- ====================================================================== -->
-<div class="container" id="sec-assembly">
-<div class="content-section" data-content="assembly">
-<div class="section-header"><span class="icon">🔗</span><span class="title">5.10 – असेंबली और रखरखाव (Assembly &amp; Maintenance)</span><span class="subtitle">— बियरिंग्स, गियर्स, शाफ्ट्स, लुब्रिकेशन, टूल्स</span></div>
+<div class="container" id="sec-countersink">
+<div class="content-section" data-content="countersink">
+<div class="section-header"><span class="icon">🕳️</span><span class="title">5.4 – काउंटर सिंकिंग (Counter Sinking)</span><span class="subtitle">— उद्देश्य, कोण, उपकरण, संचालन</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>असेंबली (Assembly)</strong> विभिन्न भागों को <strong>एक साथ जोड़ने (joining together)</strong> की प्रक्रिया है – एक <strong>पूर्ण उत्पाद (complete product)</strong> या <strong>उप-असेंबली (sub-assembly)</strong> बनाने के लिए।</p>
-<p><strong>असेंबली के प्रकार (Types of Assembly):</strong></p>
+<p><strong>काउंटर सिंकिंग (Counter Sinking)</strong> वह संचालन है जिसमें <strong>मौजूदा छेद (existing hole)</strong> के <strong>सिरे (top)</strong> पर एक <strong>शंक्वाकार अवकाश (conical recess)</strong> बनाया जाता है – ताकि <strong>स्क्रू (screw)</strong> या <strong>रिवेट (rivet)</strong> का सिर <strong>सतह के साथ समतल (flush with the surface)</strong> बैठ सके।</p>
+
+<p><strong>उद्देश्य (Purpose):</strong></p>
 <ul>
-<li><strong>मैन्युअल असेंबली (Manual Assembly):</strong> हाथ के उपकरणों (hand tools) का उपयोग – <strong>छोटे उत्पादन (small production)</strong> के लिए।</li>
-<li><strong>मशीनी असेंबली (Mechanical Assembly):</strong> <strong>उत्पादन मशीनें (production machines)</strong> – <strong>बड़े पैमाने (mass production)</strong> के लिए।</li>
-<li><strong>फिक्स्ड असेंबली (Fixed Assembly):</strong> भागों को <strong>स्थायी रूप से (permanently)</strong> जोड़ा जाता है – <strong>वेल्डिंग (welding)</strong>, <strong>रिवेटिंग (riveting)</strong>।</li>
-<li><strong>मूवेबल असेंबली (Movable Assembly):</strong> भागों को <strong>चल (move)</strong> करने की अनुमति देता है – <strong>बियरिंग्स (bearings)</strong>, <strong>गियर्स (gears)</strong>।</li>
+<li><strong>स्क्रू हेड (screw head)</strong> को <strong>सतह के नीचे (below the surface)</strong> या <strong>समतल (flush)</strong> बैठाना।</li>
+<li><strong>सौंदर्यशास्त्र (Aesthetics)</strong> – <strong>चिकनी (smooth)</strong> सतह।</li>
+<li><strong>सुरक्षा (Safety)</strong> – <strong>उभरे हुए (protruding)</strong> हेड से बचना।</li>
+<li><strong>रिवेटिंग (Riveting)</strong> – <strong>रिवेट (rivet)</strong> को <strong>समतल (flush)</strong> बैठाना।</li>
 </ul>
-<p><strong>असेंबली के लिए आवश्यक उपकरण (Tools Required for Assembly):</strong></p>
+
+<p><strong>काउंटरसिंक कोण (Countersink Angles):</strong></p>
 <ul>
-<li><strong>रिंच (Wrenches):</strong> <strong>नट (nuts)</strong> और <strong>बोल्ट (bolts)</strong> कसने के लिए – <strong>ओपन-एंड (open-end)</strong>, <strong>बॉक्स (box)</strong>, <strong>कंबिनेशन (combination)</strong>, <strong>एलन (Allen)</strong>।</li>
-<li><strong>स्क्रूड्राइवर (Screwdrivers):</strong> <strong>स्क्रू (screws)</strong> कसने और खोलने के लिए – <strong>फ्लैट (flat)</strong>, <strong>फिलिप्स (Phillips)</strong>।</li>
-<li><strong>प्लायर्स (Pliers):</strong> <strong>पकड़ने (gripping)</strong>, <strong>मोड़ने (bending)</strong>, <strong>काटने (cutting)</strong> के लिए।</li>
-<li><strong>हथौड़े (Hammers):</strong> <strong>टैप करने (tapping)</strong> और <strong>सेट करने (setting)</strong> के लिए – <strong>सॉफ्ट-फेस (soft-face)</strong>, <strong>बॉल-पीन (ball-peen)</strong>।</li>
-<li><strong>पंच (Punches):</strong> <strong>अंकन (marking)</strong> और <strong>ड्राइविंग (driving)</strong> के लिए।</li>
-<li><strong>गेज (Gauges):</strong> <strong>फिट (fit)</strong> और <strong>अंतर (clearance)</strong> जाँचने के लिए – <strong>फीलर गेज (feeler gauge)</strong>, <strong>स्नैप गेज (snap gauge)</strong>।</li>
+<li><strong>82°</strong> – <strong>अमेरिकी मानक (US Standard)</strong> – <strong>फ्लैट हेड स्क्रू (flat head screws)</strong> के लिए।</li>
+<li><strong>90°</strong> – <strong>मीट्रिक मानक (Metric Standard)</strong> – <strong>सबसे सामान्य (most common)</strong>।</li>
+<li><strong>100°</strong> – <strong>एयरोस्पेस (Aerospace)</strong> अनुप्रयोगों के लिए – <strong>पतली शीट (thin sheets)</strong>।</li>
+<li><strong>120°</strong> – <strong>बहुत पतली (very thin)</strong> शीट के लिए।</li>
 </ul>
-<p><strong>मशीनों का रखरखाव (Machine Maintenance):</strong></p>
+
+<p><strong>काउंटरसिंक टूल (Countersink Tools):</strong></p>
 <ul>
-<li><strong>लुब्रिकेशन (Lubrication):</strong> <strong>तेल (oil)</strong> और <strong>ग्रीस (grease)</strong> का उपयोग – <strong>घर्षण (friction)</strong> और <strong>घिसाव (wear)</strong> कम करने के लिए।</li>
-<li><strong>सफाई (Cleaning):</strong> <strong>चिप्स (chips)</strong> और <strong>गंदगी (dirt)</strong> हटाना।</li>
-<li><strong>निरीक्षण (Inspection):</strong> <strong>घिसाव (wear)</strong> और <strong>क्षति (damage)</strong> के लिए नियमित जाँच।</li>
-<li><strong>समायोजन (Adjustment):</strong> <strong>बेल्ट (belts)</strong>, <strong>चेन (chains)</strong>, <strong>क्लैंप (clamps)</strong> को सही करना।</li>
-<li><strong>प्रतिस्थापन (Replacement):</strong> <strong>क्षतिग्रस्त (damaged)</strong> या <strong>घिसे हुए (worn)</strong> भागों को <strong>बदलना (replacing)</strong>।</li>
+<li><strong>काउंटरसिंक ड्रिल (Countersink Drill – रोजबड / Rosebud):</strong> <strong>एक टुकड़ा (one-piece)</strong> उपकरण – <strong>ड्रिल (drill)</strong> और <strong>काउंटरसिंक (countersink)</strong> दोनों।</li>
+<li><strong>काउंटरसिंक कटर (Countersink Cutter):</strong> <strong>अलग (separate)</strong> कटर – <strong>उच्च गति (high speed)</strong> पर।</li>
+<li><strong>कोणीय काउंटरसिंक (Angular Countersink):</strong> <strong>निश्चित कोण (fixed angle)</strong> – 82°, 90°, आदि।</li>
+<li><strong>समायोज्य काउंटरसिंक (Adjustable Countersink):</strong> <strong>विभिन्न कोण (different angles)</strong> के लिए।</li>
 </ul>
-<p><strong>रखरखाव के प्रकार (Types of Maintenance):</strong></p>
+
+<p><strong>संचालन (Operation):</strong></p>
+<ol>
+<li>छेद (hole) को <strong>सटीक (accurately)</strong> <strong>ड्रिल (drill)</strong> करें।</li>
+<li>छेद के <strong>केंद्र (centre)</strong> पर <strong>काउंटरसिंक टूल (countersink tool)</strong> को <strong>संरेखित (align)</strong> करें।</li>
+<li>टूल को <strong>धीमी गति (slow speed)</strong> पर <strong>घुमाएँ (rotate)</strong> – 200–500 RPM (HSS) या 800–1500 RPM (कार्बाइड).</li>
+<li>टूल को <strong>छेद (hole)</strong> में <strong>फीड (feed)</strong> करें – वांछित (desired) <strong>गहराई (depth)</strong> तक।</li>
+<li>छेद की <strong>गहराई (depth)</strong> और <strong>कोण (angle)</strong> की <strong>जाँच (check)</strong> करें – <strong>गेज (gauge)</strong> के साथ।</li>
+</ol>
+
+<p><strong>सावधानियाँ (Precautions):</strong></p>
 <ul>
-<li><strong>निवारक रखरखाव (Preventive Maintenance):</strong> <strong>नियोजित (scheduled)</strong> – खराब होने से पहले (before breakdown).</li>
-<li><strong>सुधारात्मक रखरखाव (Corrective Maintenance):</strong> <strong>खराब होने के बाद (after breakdown)</strong> – मरम्मत (repair).</li>
-<li><strong>पूर्वानुमानित रखरखाव (Predictive Maintenance):</strong> <strong>स्थिति की निगरानी (condition monitoring)</strong> – खराब होने की भविष्यवाणी (predicting failure).</li>
+<li><strong>टूल (tool)</strong> को छेद के <strong>केंद्र (centre)</strong> पर <strong>सटीक (exactly)</strong> रखें।</li>
+<li><strong>गति (speed)</strong> बहुत <strong>अधिक (high)</strong> न रखें – <strong>टूल (tool)</strong> को <strong>गर्म (heat)</strong> और <strong>घिस (wear)</strong> सकता है।</li>
+<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – <strong>गर्मी (heat)</strong> कम करने के लिए।</li>
+<li>स्क्रू हेड (screw head) के <strong>कोण (angle)</strong> से <strong>मेल (match)</strong> करें।</li>
 </ul>
 </div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: असेंबली उपकरण और रखरखाव (Assembly Tools &amp; Maintenance)</strong></p>
-<p>स्थान: /images/notes/fitter/module-5/assembly_tools.jpg</p>
-<code>assembly_tools.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(रिंच, स्क्रूड्राइवर, प्लायर्स, गेज, लुब्रिकेशन)</p>
+<p><strong>चित्र: काउंटर सिंकिंग (Counter Sinking)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/countersinking.jpg</p>
+<code>countersinking.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(काउंटरसिंक टूल, 82°, 90°, 100°, 120° कोण)</p>
 </div>
-<div class="figure-caption">Fig 9 – असेंबली उपकरण और रखरखाव</div>
+<div class="figure-caption">Fig 4 – काउंटर सिंकिंग</div>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>असेंबली – <strong>भागों को जोड़ना (joining parts)</strong>।</li><li>निवारक रखरखाव (Preventive) – <strong>खराब होने से पहले (before failure)</strong>।</li><li>सुधारात्मक रखरखाव (Corrective) – <strong>खराब होने के बाद (after failure)</strong>।</li><li>लुब्रिकेशन – <strong>घर्षण (friction)</strong> और <strong>घिसाव (wear)</strong> कम करता है।</li></ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फिक्स्ड असेंबली – <strong>स्थायी (permanent)</strong> – वेल्डिंग, रिवेटिंग।</li><li>मूवेबल असेंबली – <strong>चल (movable)</strong> – बियरिंग्स, गियर्स।</li><li>निवारक रखरखाव (Preventive Maintenance) – <strong>नियोजित (scheduled)</strong>।</li><li>सुधारात्मक रखरखाव (Corrective Maintenance) – <strong>मरम्मत (repair)</strong>।</li></ul></div>
-</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>काउंटरसिंक – <strong>शंक्वाकार अवकाश (conical recess)</strong> – <strong>स्क्रू हेड (screw head)</strong> के लिए।</li><li>मानक कोण: <strong>82°</strong> (US) और <strong>90°</strong> (मीट्रिक – most common).</li><li>टूल को <strong>केंद्र (centre)</strong> पर संरेखित (align) करें।</li><li>गति: <strong>200–500 RPM</strong> (HSS) या <strong>800–1500 RPM</strong> (कार्बाइड).</li></ul></div>
 </div>
 </div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.5 REAMERS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-reamers">
+<div class="content-section" data-content="reamers">
+<div class="section-header"><span class="icon">🔩</span><span class="title">5.5 – रीमर (Reamers)</span><span class="subtitle">— प्रकार, उपयोग, सटीकता, देखभाल</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>रीमर (Reamer)</strong> एक <strong>बहु-धार (multi-edge)</strong> काटने का उपकरण है जिसका उपयोग <strong>मौजूदा छेद (existing hole)</strong> को <strong>सटीक (accurately)</strong> <strong>बड़ा (enlarge)</strong> और <strong>चिकना (smooth)</strong> करने के लिए किया जाता है। <strong>रीमिंग (Reaming)</strong> <strong>बहुत सटीक (very accurate)</strong> आकार और <strong>अच्छी सतह फिनिश (good surface finish)</strong> देता है।</p>
+
+<p><strong>रीमिंग का उद्देश्य (Purpose of Reaming):</strong></p>
+<ul>
+<li><strong>सटीक व्यास (Accurate diameter)</strong> – <strong>IT6–IT8</strong> सटीकता।</li>
+<li><strong>अच्छी सतह फिनिश (Good surface finish)</strong> – Ra 0.8–1.6 µm.</li>
+<li><strong>वास्तविक स्थिति (True position)</strong> – छेद का <strong>सीधा (straight)</strong> और <strong>गोल (round)</strong> होना।</li>
+</ul>
+
+<p><strong>रीमर के प्रकार (Types of Reamers):</strong></p>
+
+<p><strong>1. हाथ रीमर (Hand Reamer):</strong></p>
+<ul>
+<li><strong>टेपर (taper)</strong> की ओर <strong>लीड (lead)</strong> के साथ – <strong>हाथ (hand)</strong> से घुमाने के लिए।</li>
+<li><strong>चौकोर (square)</strong> अंत (end) – <strong>टैप रिंच (tap wrench)</strong> या <strong>स्टिलसन (Stillson)</strong> रिंच के लिए।</li>
+<li><strong>हाथ रीमर (Hand reamer)</strong> – <strong>ड्रिलिंग मशीन (drilling machine)</strong> पर नहीं – <strong>हाथ (hand)</strong> से।</li>
+<li><strong>सटीकता (Accuracy):</strong> ±0.005 mm तक।</li>
+</ul>
+
+<p><strong>2. मशीन रीमर (Machine Reamer):</strong></p>
+<ul>
+<li><strong>सीधा (straight)</strong> या <strong>टेपर (taper)</strong> शैंक (shank) – <strong>ड्रिलिंग मशीन (drilling machine)</strong> या <strong>लेथ (lathe)</strong> पर उपयोग के लिए।</li>
+<li><strong>कोई टेपर लीड (no taper lead)</strong> – <strong>मशीन (machine)</strong> द्वारा फीड (feed) किया जाता है।</li>
+<li><strong>उच्च गति (High speed)</strong> पर उपयोग के लिए – <strong>HSS</strong> या <strong>कार्बाइड (carbide)</strong>।</li>
+</ul>
+
+<p><strong>3. चक रीमर (Chucking Reamer):</strong></p>
+<ul>
+<li><strong>पीतल (brass)</strong> और <strong>एल्यूमीनियम (aluminium)</strong> जैसी <strong>नरम (soft)</strong> सामग्री के लिए – <strong>सीधा (straight)</strong> फ़्लूट्स (flutes).</li>
+<li><strong>ड्रिलिंग मशीन (drilling machine)</strong> पर उपयोग – <strong>ड्रिल चक (drill chuck)</strong> में।</li>
+</ul>
+
+<p><strong>4. टेपर रीमर (Taper Reamer):</strong></p>
+<ul>
+<li><strong>टेपर छेद (taper hole)</strong> बनाने के लिए – <strong>मोर्स टेपर (Morse taper)</strong> या <strong>ब्राउन और शार्प (Brown &amp; Sharpe)</strong>।</li>
+<li><strong>टेपर पिन (taper pin)</strong> के लिए।</li>
+</ul>
+
+<p><strong>5. विस्तार योग्य रीमर (Expanding Reamer):</strong></p>
+<ul>
+<li><strong>समायोज्य (adjustable)</strong> व्यास (diameter) – <strong>घिसाव (wear)</strong> की भरपाई के लिए।</li>
+<li>रीमर के <strong>जीवन (life)</strong> को <strong>बढ़ाता (extends)</strong> है।</li>
+</ul>
+
+<p><strong>रीमिंग पैरामीटर (Reaming Parameters):</strong></p>
+<ul>
+<li><strong>स्पीड (Speed):</strong> ड्रिलिंग (drilling) की तुलना में <strong>1/3–1/2</strong>।</li>
+<li><strong>फीड (Feed):</strong> ड्रिलिंग से <strong>2–3 गुना (times)</strong> अधिक (higher).</li>
+<li><strong>रीमर व्यास (Reamer Diameter):</strong> छेद के <strong>नाममात्र व्यास (nominal diameter)</strong> + <strong>0.01–0.02 मिमी (mm)</strong> (निकासी के लिए).</li>
+<li><strong>कटिंग फ्लुइड (Cutting Fluid):</strong> <strong>स्नेहन (lubrication)</strong> आवश्यक है – <strong>सॉल्यूबल ऑयल (soluble oil)</strong> या <strong>कटिंग ऑयल (cutting oil)</strong>।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: रीमर के प्रकार (Reamer Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/reamers.jpg</p>
+<code>reamers.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(हाथ रीमर, मशीन रीमर, चक रीमर, टेपर रीमर, विस्तार योग्य रीमर)</p>
+</div>
+<div class="figure-caption">Fig 5 – रीमर के प्रकार</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>रीमर – <strong>मौजूदा छेद (existing hole)</strong> को <strong>सटीक (accurate)</strong> और <strong>चिकना (smooth)</strong> करता है।</li><li>हाथ रीमर – <strong>हाथ (hand)</strong> से – <strong>टैप रिंच (tap wrench)</strong> के साथ।</li><li>मशीन रीमर – <strong>ड्रिलिंग मशीन (drilling machine)</strong> या <strong>लेथ (lathe)</strong> पर।</li><li>रीमिंग स्पीड – ड्रिलिंग का <strong>1/3–1/2</strong>।</li><li>रीमिंग फीड – ड्रिलिंग का <strong>2–3 गुना</strong>।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.6 SCREW THREAD AND ELEMENTS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-screw-thread">
+<div class="content-section" data-content="screw-thread">
+<div class="section-header"><span class="icon">🧵</span><span class="title">5.6 – स्क्रू थ्रेड और एलीमेंट्स (Screw Thread &amp; Elements)</span><span class="subtitle">— प्रकार, भाग, मानक, पिच, कोण</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>स्क्रू थ्रेड (Screw Thread)</strong> एक <strong>निरंतर (continuous)</strong> <strong>उभार (ridge)</strong> है जो एक <strong>सिलेंडर (cylinder)</strong> या <strong>शंकु (cone)</strong> के चारों ओर <strong>घूमता (helical)</strong> है। थ्रेड का उपयोग <strong>जोड़ने (fastening)</strong>, <strong>गति (motion)</strong> संचारित करने, और <strong>माप (measurement)</strong> के लिए किया जाता है।</p>
+
+<p><strong>थ्रेड के मुख्य एलीमेंट्स (Main Thread Elements):</strong></p>
+<ul>
+<li><strong>मुख्य व्यास (Major Diameter – D):</strong> थ्रेड का <strong>सबसे बड़ा (largest)</strong> व्यास।</li>
+<li><strong>लघु व्यास (Minor Diameter – d):</strong> थ्रेड का <strong>सबसे छोटा (smallest)</strong> व्यास – <strong>जड़ (root)</strong> पर।</li>
+<li><strong>पिच व्यास (Pitch Diameter – Dp):</strong> मुख्य और लघु व्यास के <strong>बीच (between)</strong> का व्यास – <strong>थ्रेड गेज (thread gauge)</strong> द्वारा मापा जाता है।</li>
+<li><strong>पिच (Pitch – P):</strong> दो <strong>आसन्न (adjacent)</strong> थ्रेड्स के <strong>सामान्य बिंदुओं (corresponding points)</strong> के बीच की <strong>दूरी (distance)</strong> – <strong>मिलीमीटर (mm)</strong> में।</li>
+<li><strong>थ्रेड प्रति इंच (Threads Per Inch – TPI):</strong> 1 इंच (inch) लंबाई में थ्रेड्स की <strong>संख्या (number)</strong> – <strong>ब्रिटिश (British)</strong> प्रणाली में।</li>
+<li><strong>थ्रेड कोण (Thread Angle):</strong> थ्रेड के <strong>फ्लैंक्स (flanks)</strong> के बीच का <strong>कोण (angle)</strong>।
+    <ul>
+        <li><strong>मीट्रिक (Metric – ISO):</strong> <strong>60°</strong></li>
+        <li><strong>ब्रिटिश व्हिटवर्थ (British Whitworth – BSW):</strong> <strong>55°</strong></li>
+        <li><strong>यूनिफाइड (Unified – UNC / UNF):</strong> <strong>60°</strong></li>
+    </ul>
+</li>
+<li><strong>थ्रेड गहराई (Thread Depth):</strong> मुख्य और लघु व्यास के बीच की <strong>दूरी (distance)</strong> – 0.5 × P × tan(θ/2).</li>
+<li><strong>लीड (Lead):</strong> स्क्रू के <strong>एक चक्कर (one revolution)</strong> में <strong>अक्षीय (axial)</strong> दूरी – <strong>एकल शुरुआत (single start)</strong> के लिए Lead = Pitch, <strong>बहु-शुरुआत (multi-start)</strong> के लिए Lead = Pitch × Number of starts.</li>
+<li><strong>फ्लैंक (Flank):</strong> थ्रेड की <strong>पार्श्व (side)</strong> सतह।</li>
+<li><strong>क्रेस्ट (Crest):</strong> थ्रेड का <strong>ऊपरी (top)</strong> भाग (मुख्य व्यास पर).</li>
+<li><strong>रूट (Root):</strong> थ्रेड का <strong>निचला (bottom)</strong> भाग (लघु व्यास पर).</li>
+</ul>
+
+<p><strong>थ्रेड के प्रकार (Thread Types):</strong></p>
+<ul>
+<li><strong>V-थ्रेड (V-Thread):</strong> <strong>60°</strong> (मीट्रिक) और <strong>55°</strong> (व्हिटवर्थ) – <strong>फास्टनिंग (fastening)</strong> के लिए।</li>
+<li><strong>वर्गाकार थ्रेड (Square Thread):</strong> <strong>बल (force)</strong> संचारित करने के लिए – <strong>स्क्रू जैक (screw jacks)</strong>, <strong>वाइस (vices)</strong>।</li>
+<li><strong>ट्रैपेज़ॉइडल थ्रेड (Trapezoidal / Acme Thread):</strong> <strong>29°</strong> कोण – <strong>गति (motion)</strong> संचारित करने के लिए – <strong>लेथ (lathe)</strong> लीड स्क्रू (lead screw).</li>
+<li><strong>बट्रेस थ्रेड (Buttress Thread):</strong> <strong>एकतरफा (one-sided)</strong> – <strong>उच्च (high)</strong> अक्षीय भार के लिए – <strong>आर्टिलरी (artillery)</strong>, <strong>वाइस (vices)</strong>।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्क्रू थ्रेड एलीमेंट्स (Screw Thread Elements)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/screw_thread.jpg</p>
+<code>screw_thread.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(मुख्य व्यास, लघु व्यास, पिच व्यास, पिच, कोण, फ्लैंक, क्रेस्ट, रूट)</p>
+</div>
+<div class="figure-caption">Fig 6 – स्क्रू थ्रेड एलीमेंट्स</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>थ्रेड प्रकार और उनके उपयोग (Thread Types &amp; Uses)</caption>
+<thead><tr><th>थ्रेड प्रकार</th><th>कोण</th><th>उपयोग (Use)</th></tr></thead>
+<tbody>
+<tr><td>V-थ्रेड (मीट्रिक – ISO)</td><td>60°</td><td>फास्टनिंग (Fastening) – सबसे सामान्य</td></tr>
+<tr><td>V-थ्रेड (व्हिटवर्थ – BSW)</td><td>55°</td><td>ब्रिटिश फास्टनिंग</td></tr>
+<tr><td>वर्गाकार (Square Thread)</td><td>–</td><td>बल संचारण (जैक, वाइस)</td></tr>
+<tr><td>ट्रैपेज़ॉइडल (Acme)</td><td>29°</td><td>गति संचारण (लीड स्क्रू)</td></tr>
+<tr><td>बट्रेस (Buttress)</td><td>–</td><td>उच्च अक्षीय भार (आर्टिलरी)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>मीट्रिक थ्रेड कोण: <strong>60°</strong>.</li><li>व्हिटवर्थ थ्रेड कोण: <strong>55°</strong>.</li><li>पिच (Pitch) – <strong>mm</strong> में।</li><li>TPI (Threads Per Inch) – <strong>ब्रिटिश (British)</strong> प्रणाली में।</li><li>वर्गाकार थ्रेड – <strong>बल (force)</strong> संचारण के लिए।</li><li>ट्रैपेज़ॉइडल (Acme) – <strong>गति (motion)</strong> संचारण के लिए – लीड स्क्रू (lead screw).</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.7 TAP WRENCHES, REMOVAL OF BROKEN TAP, STUDS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-taps">
+<div class="content-section" data-content="taps">
+<div class="section-header"><span class="icon">🔩</span><span class="title">5.7 – टैप रिंच, टूटे टैप को हटाना, स्टड (Tap Wrenches, Removal of Broken Tap, Studs)</span><span class="subtitle">— उपकरण, विधियाँ, सावधानियाँ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>टैप (Tap)</strong> एक काटने का उपकरण है जिसका उपयोग <strong>आंतरिक धागे (internal threads)</strong> काटने के लिए किया जाता है। <strong>टैप रिंच (tap wrench)</strong> टैप को <strong>मोड़ने (turning)</strong> के लिए उपयोग किया जाता है।</p>
+
+<p><strong>टैप रिंच के प्रकार (Types of Tap Wrenches):</strong></p>
+<ul>
+<li><strong>डबल-एंडेड एडजस्टेबल टैप रिंच (Double-Ended Adjustable Tap Wrench):</strong> <strong>सबसे सामान्य (most common)</strong> – <strong>विभिन्न (various)</strong> टैप आकारों के लिए <strong>समायोज्य (adjustable)</strong>।</li>
+<li><strong>T-हैंडल टैप रिंच (T-Handle Tap Wrench):</strong> <strong>प्रतिबंधित स्थानों (restricted spaces)</strong> के लिए – <strong>एक हाथ (one hand)</strong> से उपयोग।</li>
+<li><strong>सॉलिड टाइप टैप रिंच (Solid Type Tap Wrench):</strong> <strong>निश्चित (fixed)</strong> आकार – <strong>एक विशेष (specific)</strong> टैप आकार के लिए।</li>
+<li><strong>रैचेट टैप रिंच (Ratchet Tap Wrench):</strong> <strong>रैचेट (ratchet)</strong> तंत्र – <strong>निरंतर (continuous)</strong> मोड़ने के लिए – <strong>उत्पादन (production)</strong> कार्य के लिए।</li>
+</ul>
+
+<p><strong>टूटे हुए टैप को हटाना (Removal of Broken Tap):</strong></p>
+<ul>
+<li><strong>टैप एक्सट्रैक्टर (Tap Extractor – E-Z Out):</strong> टूटे टैप के <strong>फ़्लूट्स (flutes)</strong> में <strong>फँसता (grips)</strong> है और उसे <strong>बाहर (out)</strong> निकालता है।</li>
+<li><strong>पंच विधि (Punch Method):</strong> टूटे टैप को <strong>पंच (punch)</strong> और <strong>हथौड़े (hammer)</strong> से <strong>तोड़कर (breaking)</strong> हटाना – <strong>सावधानी (caution)</strong> के साथ।</li>
+<li><strong>एनीलिंग और ड्रिलिंग (Annealing &amp; Drilling):</strong> टूटे टैप को <strong>गर्म (heat)</strong> करके <strong>नरम (soften)</strong> करना, फिर <strong>ड्रिल (drill)</strong> करना – <strong>समय लेने वाली (time-consuming)</strong>।</li>
+<li><strong>स्पार्क इरोज़न (Spark Erosion – EDM):</strong> <strong>विद्युत निर्वहन (electrical discharge)</strong> द्वारा टूटे टैप को <strong>हटाना (remove)</strong> – <strong>सबसे प्रभावी (most effective)</strong> लेकिन <strong>महंगी (expensive)</strong>।</li>
+<li><strong>रासायनिक विधि (Chemical Method):</strong> <strong>एसिड (acid)</strong> का उपयोग – <strong>सावधानी (caution)</strong> – <strong>वर्कपीस (workpiece)</strong> को नुकसान हो सकता है।</li>
+</ul>
+
+<p><strong>स्टड (Studs):</strong></p>
+<ul>
+<li><strong>स्टड (Stud)</strong> एक <strong>बिना सिर (headless)</strong> का <strong>थ्रेडेड (threaded)</strong> छड़ (rod) है – <strong>दोनों (both)</strong> सिरों पर <strong>थ्रेड (threads)</strong> होते हैं।</li>
+<li><strong>उपयोग (Use):</strong> <strong>फ्लैंग्स (flanges)</strong>, <strong>सिलेंडर हेड (cylinder heads)</strong>, <strong>पाइप फिटिंग (pipe fittings)</strong> को <strong>जोड़ने (joining)</strong> के लिए।</li>
+<li><strong>एक सिरा (one end)</strong> – <strong>होल (hole)</strong> में <strong>स्थायी (permanent)</strong> फिट (fit) – <strong>दूसरा (other)</strong> – <strong>नट (nut)</strong> के लिए।</li>
+<li><strong>स्टड रिंच (Stud Wrench – Stud Driver):</strong> स्टड को <strong>कसने (tighten)</strong> और <strong>ढीला (loosen)</strong> करने के लिए।</li>
+</ul>
+
+<p><strong>स्टड निकालना (Removing Studs):</strong></p>
+<ul>
+<li><strong>स्टड एक्सट्रैक्टर (Stud Extractor):</strong> <strong>कैम (cam)</strong> प्रकार – स्टड पर <strong>पकड़ (grip)</strong> बनाता है।</li>
+<li><strong>डबल-नट विधि (Double-Nut Method):</strong> स्टड पर <strong>दो नट (two nuts)</strong> कसना – फिर निचले नट (lower nut) को <strong>घुमाना (turn)</strong> – स्टड को <strong>बाहर (out)</strong> निकालना।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टैप रिंच और टूटे टैप को हटाना (Tap Wrenches &amp; Broken Tap Removal)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/tap_wrenches.jpg</p>
+<code>tap_wrenches.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(एडजस्टेबल, T-हैंडल, सॉलिड, रैचेट, एक्सट्रैक्टर, डबल-नट विधि)</p>
+</div>
+<div class="figure-caption">Fig 7 – टैप रिंच और टूटे टैप को हटाना</div>
+</div>
+<div class="warning-box"><h4>⚠️ टूटे टैप को हटाते समय सावधानी</h4><p>टूटे टैप को हटाने के लिए <strong>उचित एक्सट्रैक्टर (proper extractor)</strong> का उपयोग करें। <strong>बल (force)</strong> का उपयोग करने से <strong>वर्कपीस (workpiece)</strong> को नुकसान हो सकता है।</p></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>टैप रिंच – टैप को <strong>मोड़ने (turning)</strong> के लिए।</li>
+<li>टूटे टैप को हटाना – <strong>एक्सट्रैक्टर (extractor)</strong> सबसे अच्छा।</li>
+<li>डबल-नट विधि (Double-Nut Method) – <strong>स्टड (studs)</strong> निकालने के लिए।</li>
+<li>स्टड – <strong>बिना सिर (headless)</strong> थ्रेडेड छड़ (rod).</li>
+<li>स्टड रिंच (Stud Wrench) – स्टड को <strong>कसने (tighten)</strong> के लिए।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.8 DIES AND DIE STOCK -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-dies">
+<div class="content-section" data-content="dies">
+<div class="section-header"><span class="icon">🔧</span><span class="title">5.8 – डाई और डाई स्टॉक (Dies &amp; Die Stock)</span><span class="subtitle">— बाहरी धागा काटना, प्रकार, उपयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>डाई (Die)</strong> एक काटने का उपकरण है जिसका उपयोग <strong>बाहरी धागे (external threads)</strong> काटने के लिए किया जाता है – <strong>रॉड (rod)</strong> या <strong>पाइप (pipe)</strong> पर। <strong>डाई स्टॉक (Die Stock – Die Holder)</strong> डाई को <strong>पकड़ने (holding)</strong> और <strong>घुमाने (turning)</strong> के लिए उपयोग किया जाता है।</p>
+
+<p><strong>डाई के प्रकार (Types of Dies):</strong></p>
+
+<p><strong>1. ठोस डाई (Solid Die – एक-टुकड़ा / One-Piece):</strong></p>
+<ul>
+<li><strong>एक टुकड़ा (one-piece)</strong> – <strong>निश्चित (fixed)</strong> आकार – <strong>समायोज्य (adjustable)</strong> नहीं।</li>
+<li><strong>HSS</strong> या <strong>कार्बन स्टील (carbon steel)</strong> से बना।</li>
+<li><strong>सटीकता (Accuracy):</strong> अच्छी – लेकिन <strong>घिसाव (wear)</strong> की भरपाई नहीं होती।</li>
+<li><strong>उपयोग (Use):</strong> <strong>स्टेनलेस स्टील (stainless steel)</strong>, <strong>स्टील (steel)</strong>, <strong>पीतल (brass)</strong> पर – <strong>सामान्य (general)</strong> कार्य के लिए।</li>
+</ul>
+
+<p><strong>2. समायोज्य डाई (Adjustable Die – दो-टुकड़ा / Two-Piece):</strong></p>
+<ul>
+<li><strong>दो टुकड़ों (two pieces)</strong> में – <strong>समायोजन स्क्रू (adjusting screws)</strong> के साथ – <strong>व्यास (diameter)</strong> को <strong>समायोजित (adjust)</strong> किया जा सकता है।</li>
+<li><strong>घिसाव (wear)</strong> की भरपाई की जा सकती है – <strong>लंबा जीवन (longer life)</strong>।</li>
+<li><strong>उपयोग (Use):</strong> <strong>उत्पादन (production)</strong> कार्य के लिए – <strong>नरम (soft)</strong> और <strong>कठोर (hard)</strong> दोनों सामग्रियों के लिए।</li>
+</ul>
+
+<p><strong>3. स्प्लिट डाई (Split Die – बटरफ्लाई / Butterfly Die):</strong></p>
+<ul>
+<li><strong>फ्रेम (frame)</strong> के साथ – <strong>डाई (die)</strong> को <strong>खोलकर (opening)</strong> रखा जा सकता है – <strong>त्वरित (quick)</strong> समायोजन के लिए।</li>
+<li><strong>पाइप (pipe)</strong> पर <strong>धागा (thread)</strong> काटने के लिए।</li>
+</ul>
+
+<p><strong>4. पाइप डाई (Pipe Die – कटिंग डाई / Cutting Die):</strong></p>
+<ul>
+<li><strong>पाइप (pipe)</strong> पर <strong>धागा (thread)</strong> काटने के लिए – <strong>मोटे (coarse)</strong> थ्रेड्स के साथ।</li>
+<li>प्लंबिंग (plumbing) और <strong>गैस (gas)</strong> पाइपिंग में उपयोग।</li>
+</ul>
+
+<p><strong>डाई स्टॉक (Die Stock – Die Holder):</strong></p>
+<ul>
+<li><strong>टी-हैंडल (T-handle)</strong> या <strong>बार-हैंडल (bar-handle)</strong> – डाई को <strong>पकड़ने (hold)</strong> और <strong>घुमाने (turn)</strong> के लिए।</li>
+<li>डाई को <strong>मजबूती से (firmly)</strong> पकड़ता है।</li>
+<li>विभिन्न (various) डाई आकारों के लिए <strong>समायोज्य (adjustable)</strong> स्टॉक।</li>
+</ul>
+
+<p><strong>बाहरी धागा काटने की प्रक्रिया (External Thread Cutting Process):</strong></p>
+<ol>
+<li>रॉड (rod) के <strong>सिरे (end)</strong> को <strong>बेवल (bevel)</strong> करें – <strong>30°–45°</strong>।</li>
+<li>रॉड पर <strong>कटिंग ऑयल (cutting oil)</strong> लगाएँ।</li>
+<li>डाई को <strong>डाई स्टॉक (die stock)</strong> में रखें।</li>
+<li>डाई को रॉड के <strong>सिरे (end)</strong> पर <strong>रखें (place)</strong> और <strong>दबाव (pressure)</strong> के साथ <strong>घुमाएँ (turn)</strong>।</li>
+<li><strong>1/2 चक्कर (turn)</strong> आगे (forward) और <strong>1/4 चक्कर (turn)</strong> पीछे (back) – <strong>चिप्स (chips)</strong> तोड़ने के लिए।</li>
+<li>वांछित (desired) <strong>लंबाई (length)</strong> तक <strong>धागा (thread)</strong> काटें।</li>
+<li>डाई को <strong>वापस (back)</strong> घुमाकर <strong>हटाएँ (remove)</strong>।</li>
+</ol>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: डाई और डाई स्टॉक (Dies &amp; Die Stock)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/dies.jpg</p>
+<code>dies.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(ठोस डाई, समायोज्य डाई, स्प्लिट डाई, पाइप डाई, डाई स्टॉक)</p>
+</div>
+<div class="figure-caption">Fig 8 – डाई और डाई स्टॉक</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>डाई – <strong>बाहरी धागा (external thread)</strong> काटती है।</li>
+<li>ठोस डाई (Solid Die) – <strong>निश्चित (fixed)</strong> आकार – <strong>गैर-समायोज्य (non-adjustable)</strong>।</li>
+<li>समायोज्य डाई (Adjustable Die) – <strong>व्यास (diameter)</strong> समायोजित किया जा सकता है – <strong>घिसाव (wear)</strong> की भरपाई।</li>
+<li>डाई स्टॉक (Die Stock) – डाई को <strong>पकड़ने (hold)</strong> के लिए।</li>
+<li>1/2 आगे (forward) – 1/4 पीछे (back) – <strong>चिप्स (chips)</strong> तोड़ने के लिए।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.9 DRILL TROUBLES – CAUSES AND REMEDY -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-drill-troubles">
+<div class="content-section" data-content="drill-troubles">
+<div class="section-header"><span class="icon">⚠️</span><span class="title">5.9 – ड्रिल की परेशानी-कारण और उपाय (Drill Troubles – Causes &amp; Remedy)</span><span class="subtitle">— सामान्य समस्याएँ, कारण, समाधान</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>ड्रिलिंग (Drilling)</strong> में कई समस्याएँ (problems) हो सकती हैं – <strong>ड्रिल (drill)</strong>, <strong>सामग्री (material)</strong>, <strong>पैरामीटर (parameters)</strong>, या <strong>मशीन (machine)</strong> के कारण।</p>
+
+<p><strong>सामान्य ड्रिल समस्याएँ और उनके समाधान (Common Drill Problems and Their Solutions):</strong></p>
+
+<p><strong>1. ड्रिल का तेज़ी से घिसना (Rapid Wear of Drill – अत्यधिक घिसाव / Excessive Wear):</strong></p>
+<ul>
+<li><strong>कारण (Cause):</strong> बहुत <strong>अधिक गति (high speed)</strong> – बहुत <strong>अधिक फीड (high feed)</strong> – <strong>कटिंग फ्लुइड (cutting fluid)</strong> की कमी – <strong>गलत (wrong)</strong> ड्रिल सामग्री।</li>
+<li><strong>उपाय (Remedy):</strong> <strong>गति (speed)</strong> कम करें – <strong>फीड (feed)</strong> कम करें – <strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – <strong>सही (correct)</strong> ड्रिल सामग्री का उपयोग करें।</li>
+</ul>
+
+<p><strong>2. ड्रिल का टूटना (Drill Breakage – ड्रिल भंग / Breakage):</strong></p>
+<ul>
+<li><strong>कारण (Cause):</strong> बहुत <strong>अधिक फीड (high feed)</strong> – <strong>गलत (wrong)</strong> कोण (angle) – <strong>ड्रिल (drill)</strong> का <strong>विक्षेपण (deflection)</strong> – <strong>चिप (chip)</strong> जाम (jamming).</li>
+<li><strong>उपाय (Remedy):</strong> <strong>फीड (feed)</strong> कम करें – <strong>सही (correct)</strong> कोण (angle) पीसें (grind) – <strong>पायलट छेद (pilot hole)</strong> का उपयोग करें – <strong>चिप्स (chips)</strong> को नियमित (regularly) हटाएँ।</li>
+</ul>
+
+<p><strong>3. छेद का अंडाकार होना (Oval Hole – छेद अंडाकार / Out-of-Round):</strong></p>
+<ul>
+<li><strong>कारण (Cause):</strong> <strong>ड्रिल (drill)</strong> का <strong>विक्षेपण (deflection)</strong> – <strong>गलत (wrong)</strong> कोण (angle) – <strong>चक (chuck)</strong> में <strong>ड्रिल (drill)</strong> का <strong>ढीला (loose)</strong> होना।</li>
+<li><strong>उपाय (Remedy):</strong> <strong>ड्रिल (drill)</strong> को <strong>सही (correctly)</strong> पीसें (grind) – <strong>चक (chuck)</strong> को <strong>कसें (tighten)</strong> – <strong>पायलट छेद (pilot hole)</strong> का उपयोग करें।</li>
+</ul>
+
+<p><strong>4. छेद का बड़ा होना (Oversize Hole – छेद बड़ा / Over Size):</strong></p>
+<ul>
+<li><strong>कारण (Cause):</strong> <strong>ड्रिल (drill)</strong> का <strong>विक्षेपण (deflection)</strong> – <strong>गलत (wrong)</strong> पीसना (grinding) – <strong>चक (chuck)</strong> में <strong>ड्रिल (drill)</strong> का <strong>ढीला (loose)</strong> होना – <strong>ड्रिल (drill)</strong> का <strong>बहुत तेज़ (too fast)</strong> घूमना।</li>
+<li><strong>उपाय (Remedy):</strong> <strong>ड्रिल (drill)</strong> को <strong>सही (correctly)</strong> पीसें (grind) – <strong>चक (chuck)</strong> को <strong>कसें (tighten)</strong> – <strong>फीड (feed)</strong> कम करें।</li>
+</ul>
+
+<p><strong>5. छेद का खुरदरा होना (Rough Hole – खुरदरा छेद / Rough Surface):</strong></p>
+<ul>
+<li><strong>कारण (Cause):</strong> <strong>गलत (wrong)</strong> कोण (angle) – <strong>कटिंग फ्लुइड (cutting fluid)</strong> की कमी – <strong>ड्रिल (drill)</strong> <strong>नींद (dull)</strong> – बहुत <strong>अधिक फीड (high feed)</strong>।</li>
+<li><strong>उपाय (Remedy):</strong> <strong>ड्रिल (drill)</strong> को <strong>पीसें (grind)</strong> – <strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – <strong>फीड (feed)</strong> कम करें।</li>
+</ul>
+
+<p><strong>6. चिप्स का जाम होना (Chip Jamming – चिप जाम / Chip Clogging):</strong></p>
+<ul>
+<li><strong>कारण (Cause):</strong> <strong>गलत (wrong)</strong> रेक कोण (rake angle) – <strong>ड्रिल (drill)</strong> <strong>नींद (dull)</strong> – <strong>फीड (feed)</strong> बहुत <strong>अधिक (high)</strong>।</li>
+<li><strong>उपाय (Remedy):</strong> <strong>ड्रिल (drill)</strong> को <strong>पीसें (grind)</strong> – <strong>फीड (feed)</strong> कम करें – <strong>पीछे (back)</strong> हटकर <strong>चिप्स (chips)</strong> हटाएँ।</li>
+</ul>
+
+<p><strong>7. ड्रिल का अत्यधिक गर्म होना (Excessive Heat – अत्यधिक गर्मी / Overheating):</strong></p>
+<ul>
+<li><strong>कारण (Cause):</strong> बहुत <strong>अधिक गति (high speed)</strong> – <strong>कटिंग फ्लुइड (cutting fluid)</strong> की कमी – <strong>गलत (wrong)</strong> कोण (angle).</li>
+<li><strong>उपाय (Remedy):</strong> <strong>गति (speed)</strong> कम करें – <strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – <strong>सही (correct)</strong> कोण (angle) पीसें (grind).</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: ड्रिल समस्याएँ और समाधान (Drill Troubles &amp; Remedies)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/drill_troubles.jpg</p>
+<code>drill_troubles.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(घिसाव, टूटना, अंडाकार, बड़ा, खुरदरा, चिप जाम, गर्मी)</p>
+</div>
+<div class="figure-caption">Fig 9 – ड्रिल समस्याएँ और समाधान</div>
+</div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>तेज़ घिसाव – <strong>गति (speed)</strong> या <strong>फीड (feed)</strong> बहुत अधिक।</li>
+<li>ड्रिल टूटना – <strong>फीड (feed)</strong> बहुत अधिक – <strong>चिप (chip)</strong> जाम।</li>
+<li>अंडाकार छेद (Oval hole) – <strong>ड्रिल (drill)</strong> <strong>विक्षेपण (deflection)</strong> – <strong>ढीला (loose)</strong> चक (chuck).</li>
+<li>बड़ा छेद (Oversize) – <strong>गलत (wrong)</strong> पीसना (grinding) – <strong>ढीला (loose)</strong> चक (chuck).</li>
+<li>खुरदरा छेद (Rough hole) – <strong>नींद (dull)</strong> ड्रिल – <strong>कटिंग फ्लुइड (cutting fluid)</strong> की कमी।</li>
+<li>अत्यधिक गर्मी (Overheating) – बहुत <strong>अधिक गति (high speed)</strong>।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.10 STANDARD MARKING SYSTEM FOR GRINDING WHEELS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-grinding-wheel">
+<div class="content-section" data-content="grinding-wheel">
+<div class="section-header"><span class="icon">🔄</span><span class="title">5.10 – ग्राइंडिंग व्हील्स के लिए मानक मार्किंग प्रणाली (Standard Marking System for Grinding Wheels)</span><span class="subtitle">— IS / ISO कोड, अर्थ, चयन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>ग्राइंडिंग व्हील (Grinding Wheel)</strong> की <strong>मार्किंग (marking)</strong> व्हील के <strong>प्रकार (type)</strong>, <strong>गुण (properties)</strong>, और <strong>अनुप्रयोग (application)</strong> के बारे में <strong>जानकारी (information)</strong> प्रदान करती है। <strong>IS (Indian Standard)</strong> और <strong>ISO (International Standard)</strong> मार्किंग सिस्टम का उपयोग किया जाता है।</p>
+
+<p><strong>IS / ISO मार्किंग सिस्टम (IS / ISO Marking System – 6-भाग / 6-Part Code):</strong></p>
+<p><strong>फॉर्मेट (Format):</strong> <strong>51A 60 K 5 V 23</strong> (उदाहरण – example)</p>
+
+<p><strong>भाग 1 – एब्रासिव प्रकार (Part 1 – Abrasive Type):</strong></p>
+<ul>
+<li><strong>A – एल्यूमीनियम ऑक्साइड (Aluminium Oxide – Al₂O₃):</strong> <strong>कठोर स्टील (hard steel)</strong>, <strong>मिश्र धातु (alloy steel)</strong> के लिए।</li>
+<li><strong>C – सिलिकॉन कार्बाइड (Silicon Carbide – SiC):</strong> <strong>कास्ट आयरन (cast iron)</strong>, <strong>पीतल (brass)</strong>, <strong>अलौह (non-ferrous)</strong> के लिए।</li>
+<li><strong>D – डायमंड (Diamond):</strong> <strong>बहुत कठोर (very hard)</strong> सामग्री के लिए – <strong>सिरेमिक (ceramic)</strong>, <strong>कार्बाइड (carbide)</strong>।</li>
+</ul>
+
+<p><strong>भाग 2 – कण आकार (Part 2 – Grain Size – Grit):</strong></p>
+<ul>
+<li><strong>8–24:</strong> <strong>बहुत मोटा (Very Coarse)</strong> – रफ (rough) ग्राइंडिंग।</li>
+<li><strong>30–60:</strong> <strong>मोटा (Coarse)</strong> – सामान्य (general) ग्राइंडिंग।</li>
+<li><strong>70–120:</strong> <strong>मध्यम (Medium)</strong> – फिनिश (finish) ग्राइंडिंग।</li>
+<li><strong>150–240:</strong> <strong>महीन (Fine)</strong> – बारीक (fine) फिनिश।</li>
+<li><strong>280–1200:</strong> <strong>बहुत महीन (Very Fine)</strong> – परिशुद्ध (precision) फिनिश।</li>
+</ul>
+
+<p><strong>भाग 3 – ग्रेड (Part 3 – Grade – Hardness):</strong></p>
+<ul>
+<li><strong>A से H:</strong> <strong>नरम (Soft)</strong> – <strong>कठोर सामग्री (hard materials)</strong> के लिए।</li>
+<li><strong>I से P:</strong> <strong>मध्यम (Medium)</strong> – सामान्य (general) कार्य के लिए।</li>
+<li><strong>Q से Z:</strong> <strong>कठोर (Hard)</strong> – <strong>नरम सामग्री (soft materials)</strong> के लिए।</li>
+</ul>
+
+<p><strong>भाग 4 – संरचना (Part 4 – Structure – चाल / Porosity):</strong></p>
+<ul>
+<li><strong>1–4:</strong> <strong>सघन (Dense)</strong> – <strong>कठोर सामग्री (hard materials)</strong> के लिए।</li>
+<li><strong>5–8:</strong> <strong>मध्यम (Medium)</strong> – सामान्य (general) कार्य के लिए।</li>
+<li><strong>9–15:</strong> <strong>खुला (Open)</strong> – <strong>नरम सामग्री (soft materials)</strong> – <strong>चिप्स (chips)</strong> के लिए जगह।</li>
+</ul>
+
+<p><strong>भाग 5 – बॉन्ड प्रकार (Part 5 – Bond Type):</strong></p>
+<ul>
+<li><strong>V – विट्रिफाइड (Vitrified):</strong> <strong>सबसे सामान्य (most common)</strong> – <strong>कठोर (hard)</strong> – सभी प्रकार के लिए।</li>
+<li><strong>B – रेजिनॉइड (Resinoid – Resin):</strong> <strong>लचीला (flexible)</strong> – <strong>उच्च गति (high speed)</strong> – <strong>पॉलिशिंग (polishing)</strong> के लिए।</li>
+<li><strong>R – रबर (Rubber):</strong> <strong>बहुत लचीला (very flexible)</strong> – <strong>पतला (thin)</strong> व्हील – <strong>स्लिटिंग (slitting)</strong> के लिए।</li>
+<li><strong>E – शेलैक (Shellac):</strong> <strong>चिकनी (smooth)</strong> फिनिश के लिए।</li>
+<li><strong>M – धातु (Metal):</strong> <strong>डायमंड (diamond)</strong> व्हील के लिए।</li>
+</ul>
+
+<p><strong>भाग 6 – निर्माता कोड (Part 6 – Manufacturer's Code):</strong></p>
+<ul>
+<li>निर्माता (manufacturer) द्वारा <strong>आंतरिक (internal)</strong> कोड – <strong>अतिरिक्त (additional)</strong> जानकारी।</li>
+</ul>
+
+<p><strong>उदाहरण (Example): 51A 60 K 5 V 23</strong></p>
+<ul>
+<li><strong>51A:</strong> एल्यूमीनियम ऑक्साइड (Aluminium Oxide) – विशेष (special) प्रकार।</li>
+<li><strong>60:</strong> कण आकार (Grain Size) – 60 – मध्यम (medium).</li>
+<li><strong>K:</strong> ग्रेड (Grade) – मध्यम-कठोर (medium-hard).</li>
+<li><strong>5:</strong> संरचना (Structure) – मध्यम (medium).</li>
+<li><strong>V:</strong> बॉन्ड (Bond) – विट्रिफाइड (vitrified).</li>
+<li><strong>23:</strong> निर्माता कोड (Manufacturer's Code).</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: ग्राइंडिंग व्हील मार्किंग सिस्टम (Grinding Wheel Marking System)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/grinding_wheel_marking.jpg</p>
+<code>grinding_wheel_marking.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(IS/ISO कोड, भाग 1-6, एब्रासिव, ग्रिट, ग्रेड, स्ट्रक्चर, बॉन्ड)</p>
+</div>
+<div class="figure-caption">Fig 10 – ग्राइंडिंग व्हील मार्किंग सिस्टम</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>ग्राइंडिंग व्हील मार्किंग – IS/ISO कोड (Grinding Wheel Marking – IS/ISO Code)</caption>
+<thead><tr><th>भाग (Part)</th><th>प्रतीक (Symbol)</th><th>अर्थ (Meaning)</th></tr></thead>
+<tbody>
+<tr><td>एब्रासिव (Abrasive)</td><td>A, C, D</td><td>Al₂O₃, SiC, डायमंड</td></tr>
+<tr><td>कण आकार (Grit)</td><td>8–1200</td><td>मोटा से महीन (Coarse to Fine)</td></tr>
+<tr><td>ग्रेड (Grade)</td><td>A–Z</td><td>नरम से कठोर (Soft to Hard)</td></tr>
+<tr><td>संरचना (Structure)</td><td>1–15</td><td>सघन से खुला (Dense to Open)</td></tr>
+<tr><td>बॉन्ड (Bond)</td><td>V, B, R, E, M</td><td>विट्रिफाइड, रेजिनॉइड, रबर, शेलैक, धातु</td></tr>
+</tbody>
+</table>
+</div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>एल्यूमीनियम ऑक्साइड (A) – <strong>कठोर स्टील (hard steel)</strong> के लिए।</li>
+<li>सिलिकॉन कार्बाइड (C) – <strong>कास्ट आयरन (cast iron)</strong> और <strong>अलौह (non-ferrous)</strong> के लिए।</li>
+<li>विट्रिफाइड बॉन्ड (V) – <strong>सबसे सामान्य (most common)</strong>।</li>
+<li>ग्रेड (Grade) – <strong>कठोर सामग्री (hard material)</strong> के लिए <strong>नरम (soft)</strong> व्हील।</li>
+<li>ग्रिट (Grit) – <strong>फिनिश (finish)</strong> के लिए <strong>महीन (fine)</strong> ग्रिट।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 5.11 GAUGES AND TYPES OF GAUGES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-gauges">
+<div class="content-section" data-content="gauges">
+<div class="section-header"><span class="icon">📏</span><span class="title">5.11 – गेज और गेज के प्रकार (Gauges and Types of Gauges)</span><span class="subtitle">— सीमा गेज, प्लग गेज, स्नैप गेज, फीलर गेज, थ्रेड गेज</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>गेज (Gauge)</strong> एक ऐसा उपकरण है जिसका उपयोग <strong>आयाम (dimensions)</strong>, <strong>कोण (angles)</strong>, या <strong>सतह की स्थिति (surface condition)</strong> की <strong>जाँच (checking)</strong> के लिए किया जाता है – बिना कोई <strong>संख्यात्मक मान (numerical value)</strong> दिए।</p>
+
+<p><strong>गेज के मुख्य प्रकार (Main Types of Gauges):</strong></p>
+
+<p><strong>1. सीमा गेज (Limit Gauges – गो/नो-गो / Go/No-Go):</strong></p>
+<ul>
+<li><strong>गो (Go – पास):</strong> वर्कपीस में <strong>सुचारू रूप से (smoothly)</strong> जाना चाहिए – <strong>न्यूनतम (minimum)</strong> आकार जाँच।</li>
+<li><strong>नो-गो (No-Go – अस्वीकार):</strong> वर्कपीस में <strong>नहीं (not)</strong> जाना चाहिए – <strong>अधिकतम (maximum)</strong> आकार जाँच।</li>
+<li><strong>गो (Go) जाता है, नो-गो (No-Go) नहीं जाता – वर्कपीस <strong>स्वीकार्य (acceptable)</strong> है।</li>
+</ul>
+
+<p><strong>2. प्लग गेज (Plug Gauge – छेद गेज / Hole Gauge):</strong></p>
+<ul>
+<li><strong>छेद (holes)</strong> की <strong>जाँच (checking)</strong> के लिए – <strong>सिलेंडर (cylinder)</strong> के आकार में।</li>
+<li><strong>गो (Go) – छेद में <strong>जाना चाहिए (should go)</strong>।</li>
+<li><strong>नो-गो (No-Go) – छेद में <strong>नहीं जाना चाहिए (should not go)</strong>।</li>
+</ul>
+
+<p><strong>3. स्नैप गेज (Snap Gauge – बाहरी व्यास गेज / External Diameter Gauge):</strong></p>
+<ul>
+<li><strong>बाहरी व्यास (external diameters)</strong> – <strong>शाफ्ट (shafts)</strong> की जाँच के लिए।</li>
+<li><strong>C-आकार (C-shaped)</strong> – <strong>गो (Go)</strong> और <strong>नो-गो (No-Go)</strong> दोनों सिरों पर।</li>
+<li><strong>त्वरित (quick)</strong> जाँच के लिए – <strong>उत्पादन (production)</strong> में।</li>
+</ul>
+
+<p><strong>4. फीलर गेज (Feeler Gauge – अंतर गेज / Clearance Gauge):</strong></p>
+<ul>
+<li><strong>अंतर (clearance – gap)</strong> मापने के लिए – <strong>पतली (thin)</strong> धातु की पट्टियाँ (strips).</li>
+<li>विभिन्न (various) <strong>मोटाई (thicknesses)</strong> – 0.03 मिमी से 1.0 मिमी तक।</li>
+<li>उदाहरण: <strong>वाल्व निकासी (valve clearance)</strong>, <strong>बियरिंग निकासी (bearing clearance)</strong>।</li>
+</ul>
+
+<p><strong>5. थ्रेड गेज (Thread Gauge – स्क्रू पिच गेज / Screw Pitch Gauge):</strong></p>
+<ul>
+<li><strong>थ्रेड (thread)</strong> की <strong>पिच (pitch)</strong> या <strong>टीपीआई (TPI)</strong> की <strong>जाँच (checking)</strong> के लिए।</li>
+<li><strong>पत्ती (leaf)</strong> प्रकार – <strong>विभिन्न (various)</strong> पिच (pitch) आकार।</li>
+<li><strong>थ्रेड रिंग गेज (Thread Ring Gauge):</strong> बाहरी थ्रेड्स (external threads) के लिए – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
+<li><strong>थ्रेड प्लग गेज (Thread Plug Gauge):</strong> आंतरिक थ्रेड्स (internal threads) के लिए – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
+</ul>
+
+<p><strong>6. रेडियस गेज (Radius Gauge – त्रिज्या गेज):</strong></p>
+<ul>
+<li><strong>त्रिज्या (radius)</strong> मापने के लिए – <strong>उत्तल (convex)</strong> और <strong>अवतल (concave)</strong>।</li>
+<li>विभिन्न (various) <strong>त्रिज्या (radius)</strong> आकार – 0.5 मिमी से 25 मिमी तक।</li>
+</ul>
+
+<p><strong>7. कोण गेज (Angle Gauge – कोण मापने वाला गेज):</strong></p>
+<ul>
+<li><strong>कोण (angles)</strong> मापने और जाँचने के लिए – <strong>बेवल प्रोट्रैक्टर (bevel protractor)</strong> के साथ।</li>
+<li><strong>कोणीय माप (angular measurement)</strong> के लिए।</li>
+</ul>
+
+<p><strong>8. डायल गेज (Dial Gauge – विक्षेपण गेज / Deflection Gauge):</strong></p>
+<ul>
+<li><strong>विक्षेपण (deflection)</strong> मापने के लिए – <strong>0.01 मिमी</strong> सटीकता।</li>
+<li><strong>सतह समतलता (flatness)</strong>, <strong>गोलाई (roundness)</strong>, <strong>समानता (parallelism)</strong> जाँचने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: गेज के प्रकार (Types of Gauges)</strong></p>
+<p>स्थान: /images/notes/fitter/module-5/gauges.jpg</p>
+<code>gauges.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(प्लग गेज, स्नैप गेज, फीलर गेज, थ्रेड गेज, रेडियस गेज, डायल गेज)</p>
+</div>
+<div class="figure-caption">Fig 11 – गेज के प्रकार</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>गेज – <strong>आयाम (dimensions)</strong> जाँचने के लिए – <strong>कोई संख्यात्मक मान (no numerical value)</strong> नहीं।</li>
+<li>गो/नो-गो (Go/No-Go) – <strong>स्वीकार्य (acceptable)</strong> आकार जाँचने के लिए।</li>
+<li>प्लग गेज – <strong>छेद (holes)</strong> के लिए।</li>
+<li>स्नैप गेज – <strong>बाहरी व्यास (external diameters)</strong> के लिए।</li>
+<li>फीलर गेज – <strong>अंतर (clearance – gap)</strong> के लिए।</li>
+<li>थ्रेड गेज – <strong>थ्रेड (thread)</strong> की <strong>पिच (pitch)</strong> जाँचने के लिए।</li></ul></div>
+</div>
+</div>
+</div>
+
 <!-- ============================== CONCLUSION ============================== -->
 <div class="container">
 <div class="conclusion-section">
 <h2>📌 Module 5 – निष्कर्ष (Conclusion)</h2>
 <div class="bilingual">
 <div class="content">
-<p><strong>Module 5 – Machine Tools &amp; Assembly</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<p><strong>Module 5 – Drilling</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
 <ul>
-<li><strong>लेथ मशीन (Lathe Machine):</strong> भाग, प्रकार, सुरक्षा, रखरखाव।</li>
-<li><strong>लेथ संचालन (Lathe Operations):</strong> फेसिंग, टर्निंग (रफ और फिनिश), स्टेप टर्निंग, ग्रूविंग, पार्टिंग, स्लिप लाइन।</li>
-<li><strong>थ्रेडिंग (Threading):</strong> बाहरी V-थ्रेड, चेंज गियर्स, कटिंग पैरामीटर, सुरक्षा।</li>
-<li><strong>टेपर टर्निंग (Taper Turning):</strong> कम्पाउंड रेस्ट, टेलस्टॉक सेटओवर, अटैचमेंट, फॉर्म टूल विधियाँ।</li>
-<li><strong>बोरिंग (Boring):</strong> मौजूदा छेद को बड़ा और सटीक करना।</li>
-<li><strong>मिलिंग मशीन (Milling Machine):</strong> भाग, प्रकार, कटर, संचालन।</li>
-<li><strong>ग्राइंडिंग मशीन (Grinding Machine):</strong> प्रकार, एब्रासिव व्हील, ड्रेसिंग, सुरक्षा।</li>
-<li><strong>फिट और टॉलरेंस (Fits &amp; Tolerances):</strong> निकासी, हस्तक्षेप, संक्रमण फिट, होल बेसिस, शाफ्ट बेसिस, IT ग्रेड।</li>
-<li><strong>सरफेस फिनिश (Surface Finish):</strong> खुरदरापन पैरामीटर (Ra, Rz), मापन उपकरण, प्रभावित करने वाले कारक।</li>
-<li><strong>असेंबली और रखरखाव (Assembly &amp; Maintenance):</strong> उपकरण, प्रकार (फिक्स्ड, मूवेबल), लुब्रिकेशन, निवारक और सुधारात्मक रखरखाव।</li>
+<li><strong>ड्रिल्स (Drills):</strong> ट्विस्ट ड्रिल, भाग (बिंदु, शैंक, फ़्लूट्स, लैंड, वेब), सामग्री (HSS, कार्बाइड), प्रकार, चयन।</li>
+<li><strong>ड्रिल कोण (Drill Angles):</strong> बिंदु कोण (118°, 90°, 130°–140°), निकासी कोण (6°–12°), रेक कोण (24°–30°), हील कोण, चिज़ल एज कोण।</li>
+<li><strong>कटिंग स्पीड, फीड, RPM, होल्डिंग डिवाइस:</strong> CS (m/min), RPM = (CS × 1000) / (π × D), फीड (mm/rev), ड्रिल चक, स्लीव, कोलेट, मशीन वाइस, V-ब्लॉक।</li>
+<li><strong>काउंटर सिंकिंग (Counter Sinking):</strong> शंक्वाकार अवकाश, 82° (US), 90° (मीट्रिक – सबसे सामान्य), टूल, संचालन, सावधानियाँ।</li>
+<li><strong>रीमर (Reamers):</strong> हाथ रीमर, मशीन रीमर, चक रीमर, टेपर रीमर, विस्तार योग्य रीमर – उपयोग, पैरामीटर।</li>
+<li><strong>स्क्रू थ्रेड और एलीमेंट्स:</strong> मुख्य व्यास, लघु व्यास, पिच व्यास, पिच, TPI, थ्रेड कोण (60° मीट्रिक, 55° व्हिटवर्थ), वर्गाकार, ट्रैपेज़ॉइडल, बट्रेस।</li>
+<li><strong>टैप रिंच, टूटे टैप को हटाना, स्टड:</strong> टैप रिंच के प्रकार, टूटे टैप को हटाने की विधियाँ (एक्सट्रैक्टर, पंच, एनीलिंग, EDM), स्टड, डबल-नट विधि।</li>
+<li><strong>डाई और डाई स्टॉक:</strong> ठोस डाई, समायोज्य डाई, स्प्लिट डाई, पाइप डाई, डाई स्टॉक, बाहरी धागा काटने की प्रक्रिया।</li>
+<li><strong>ड्रिल की परेशानी-कारण और उपाय:</strong> घिसाव, टूटना, अंडाकार, बड़ा, खुरदरा, चिप जाम, गर्मी – कारण और समाधान।</li>
+<li><strong>ग्राइंडिंग व्हील मार्किंग सिस्टम:</strong> IS/ISO 6-भाग कोड – एब्रासिव, ग्रिट, ग्रेड, स्ट्रक्चर, बॉन्ड, निर्माता कोड।</li>
+<li><strong>गेज और गेज के प्रकार:</strong> प्लग गेज, स्नैप गेज, फीलर गेज, थ्रेड गेज, रेडियस गेज, कोण गेज, डायल गेज – गो/नो-गो सिद्धांत।</li>
 </ul>
 <p>इन सभी विषयों में महारत हासिल करना हर <strong>फिटर (fitter)</strong> के लिए आवश्यक है। प्रत्येक संचालन को <strong>सटीकता (precision)</strong> और <strong>सुरक्षा (safety)</strong> के साथ अभ्यास करें।</p>
 </div>
 </div>
 </div>
 </div>
+
 <!-- ============================== MCQ ============================== -->
 <div class="container">
 <div class="content-section" data-content="mcq">
@@ -1193,6 +1450,7 @@ Twitter
 </div>
 </div>
 </div>
+
 <div class="container">
 <div class="content-section" data-content="related">
 <div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
@@ -1206,6 +1464,7 @@ Twitter
 </div>
 </div>
 </div>
+
 <footer>
 <div class="footer-links">
 <a href="/disclaimer.html">Disclaimer</a>
@@ -1215,7 +1474,9 @@ Twitter
 </div>
 <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
 </footer>
+
 <button id="scrollTop" title="Go to Top">⬆</button>
+
 <script>
         function filterSections() {
             const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
@@ -1233,14 +1494,14 @@ Twitter
         function getPageTitle() { return document.querySelector('title').textContent; }
         function shareWhatsApp() {
             const url = getPageUrl();
-            const text = encodeURIComponent('⚙️ ' + getPageTitle() + ' - Complete Fitter Theory Module 5 Study Material!');
+            const text = encodeURIComponent('🔧 ' + getPageTitle() + ' - Complete Fitter Theory Module 5 Study Material!');
             window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
         }
         function shareFacebook() {
             window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
         }
         function shareTwitter() {
-            const text = encodeURIComponent('⚙️ ' + getPageTitle());
+            const text = encodeURIComponent('🔧 ' + getPageTitle());
             window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
         }
         function copyPageLink() {
@@ -1291,8 +1552,8 @@ Twitter
             }
         });
 
-        console.log('✅ Fitter Theory Module 5 – Complete Book Loaded.');
-        console.log('📚 Machine Tools & Assembly – Lathe, Milling, Grinding, Fits, Surface Finish, Assembly.');
+        console.log('✅ Fitter Theory Module 5 – Drilling (Complete) Loaded.');
+        console.log('📚 Drills, Angles, Speeds, Counter Sinking, Reamers, Threads, Taps, Dies, Troubles, Grinding Wheels, Gauges.');
     </script>
 </body>
-</html>
+       </html>
