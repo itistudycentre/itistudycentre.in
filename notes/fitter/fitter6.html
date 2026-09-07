@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 6 – Fitting Assembly (पूर्ण) | Fitter Theory | ITI Study Centre</title>
+<meta content="Complete Fitter Theory Module 6 – Fitting Assembly. Interchangeability, Metals, Scrapers, Vernier Micrometer, Thread Micrometer, Dial Indicators. Full NIMI syllabus pages 80-89." name="description"/>
+<style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.8;
+            user-select: none;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+
+        .main-header {
+            background: #003366;
+            padding: 16px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        @media(max-width:768px) {
+            .main-header .container { flex-direction: column; gap: 8px; }
+            .main-header nav { justify-content: center; gap: 6px 14px; }
+            .main-header nav a { font-size: 0.9rem; }
+        }
+
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a { color: #003366; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .current { color: #555; font-weight: 600; }
+
+        .page-title {
+            padding: 32px 0 22px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.3rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
+        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
+
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 540px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
+        }
+        .search-section button {
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover { background: #002244; transform: scale(1.02); }
+        @media(max-width:640px) {
+            .search-section { flex-direction: column; }
+            .search-section input { max-width: 100%; width: 100%; }
+            .search-section button { width: 100%; }
+        }
+
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            margin-bottom: 32px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 20px 28px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .section-header .icon { font-size: 1.8rem; line-height: 1; }
+        .section-header .title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body { padding: 28px 32px; background: #fafcff; }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-left: 5px solid #ffcc00;
+            padding-left: 18px;
+        }
+        .section-body h3:first-of-type { margin-top: 0; }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.12rem;
+            margin: 20px 0 10px;
+        }
+        @media(max-width:768px) {
+            .section-header { padding: 14px 18px; }
+            .section-header .title { font-size: 1.05rem; }
+            .section-body { padding: 18px 18px; }
+            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
+        }
+        @media(max-width:480px) {
+            .section-body { padding: 14px 14px; }
+            .section-header .icon { font-size: 1.4rem; }
+            .section-header .title { font-size: 0.95rem; }
+        }
+
+        .bilingual { margin: 14px 0; }
+        .bilingual .content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #1a2a3a;
+        }
+        .bilingual .content ul, .bilingual .content ol { padding-left: 26px; margin: 10px 0; }
+        .bilingual .content ul li, .bilingual .content ol li { margin-bottom: 6px; }
+        .bilingual .content p { margin: 10px 0; }
+        @media(max-width:480px) {
+            .bilingual .content { font-size: 0.95rem; }
+        }
+
+        .info-card {
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin: 18px 0;
+            background: #fff;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+        }
+        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
+        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
+        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
+        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
+        .info-card h4 { margin: 0 0 6px; color: #003366; }
+        .info-card ul { margin: 0; padding-left: 22px; }
+        .info-card ul li { margin-bottom: 4px; }
+
+        .tool-figure {
+            width:100%;
+            max-width:850px;
+            margin:24px auto;
+            text-align:center;
+            background:#f8fafc;
+            border:1px solid #e2e7ed;
+            border-radius:12px;
+            padding:20px;
+            transition:0.2s;
+        }
+        .tool-figure:hover { background:#f0f4fa; }
+        .tool-figure .placeholder-icon { font-size:3.5rem; line-height:1.2; color:#8a9aa8; margin-bottom:6px; }
+        .tool-figure .figure-caption { font-size:0.95rem; color:#555; font-weight:600; margin-top:8px; }
+        .tool-figure .image-placeholder {
+            display:block;
+            min-height:120px;
+            background:#f0f4fa;
+            border:2px dashed #c7ced7;
+            border-radius:8px;
+            padding:18px;
+            color:#68717c;
+        }
+        .tool-figure .image-placeholder code {
+            background:#e7ebef;
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:0.8rem;
+            display:inline-block;
+            margin:4px 0;
+        }
+        @media(max-width:768px) {
+            .tool-figure { padding:14px; }
+            .tool-figure .placeholder-icon { font-size:2.8rem; }
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 22px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 13px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 11px 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
+        .table-wrap tr:hover { background: #eef2f7; }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        @media(max-width:480px) {
+            .table-wrap table { font-size: 0.85rem; }
+            .table-wrap th, .table-wrap td { padding: 8px 10px; }
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin: 20px 0;
+        }
+        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
+        .compare-card {
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .compare-card h4 { font-size: 1.1rem; margin: 0 0 10px; color: #003366; }
+        .compare-card ul { padding-left: 20px; margin: 0; }
+        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .example-box strong { color: #003366; }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .important-box h4 { margin: 0 0 6px; color: #856404; }
+        .important-box ul { padding-left: 22px; margin: 0; }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
+        .short-notes ul { padding-left: 22px; margin: 0; }
+        .warning-box {
+            background: #fff5f2;
+            border-left: 5px solid #dc3545;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
+        .warning-box p { margin: 0; }
+        .success-box {
+            background: #eef9f1;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .success-box h4 { margin: 0 0 6px; color: #1e7e34; }
+        .success-box p { margin: 0; }
+
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 22px;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.link { background: #6c757d; }
+        .share-btn.link.copied { background: #28a745; }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        @media(max-width:600px) {
+            .share-section { flex-direction: column; align-items: stretch; }
+            .share-section .share-label { text-align: center; }
+            .share-btn { justify-content: center; }
+        }
+
+        .mcq-link { text-align: center; padding: 12px 0; }
+        .mcq-link a {
+            display: inline-block;
+            padding: 14px 44px;
+            background: #ffcc00;
+            color: #003366 !important;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
+        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
+
+        .conclusion-section {
+            background: #e8f4fd;
+            border: 2px solid #003366;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .conclusion-section h2 {
+            color: #003366;
+            font-size: 1.6rem;
+            border-left: 5px solid #ffcc00;
+            padding-left: 16px;
+            margin-bottom: 16px;
+        }
+        .conclusion-section ul {
+            padding-left: 26px;
+            margin: 10px 0;
+        }
+        .conclusion-section ul li { margin-bottom: 6px; }
+
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 28px 20px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 28px;
+            margin-bottom: 14px;
+        }
+        footer .footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover { background: #002244; transform: scale(1.05); }
+
+        .copy-protect::selection { background: #b3d4fc; color: #000; }
+
+        @media print {
+            #scrollTop, .share-section, .search-section { display: none !important; }
+            body { background: #fff !important; }
+            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+            .section-body { background: #fff !important; }
+            .tool-figure { border:1px solid #ccc; break-inside:avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+<div class="container">
+<div class="logo"><a href="/">🔧 ITI Study Centre</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/iti-study-centre-notes.html">Notes</a>
+<a class="active" href="/notes/fitter/index.html">Fitter</a>
+<a href="/question-bank/fitter/index.html">Question Bank</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+<a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+<a href="/notes/fitter/index.html">Fitter Theory</a>  › 
+<span class="current">Module 6 – Fitting Assembly (पूर्ण)</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>🔧 Module 6 – Fitting Assembly (पूर्ण)</h1>
+<p>विनिमयता · धातुओं के गुण · स्क्रैपर्स · वर्नियर माइक्रोमीटर · थ्रेड माइक्रोमीटर · डायल इंडिकेटर · कम्पेरेटर</p>
+</div>
+</section>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()">🔍 Search</button>
+</section>
+
+<div class="container">
+<div class="share-section">
+<span class="share-label">📤 Share:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</button>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+Facebook
+</button>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+Twitter
+</button>
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div class="container">
+<div class="content-section" style="border:2px solid #003366;">
+<div class="section-header" style="background:#003366; border-bottom:none;">
+<span class="icon" style="color:#ffcc00;">📚</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 6 (Fitting Assembly)</span>
+</div>
+<div class="section-body" style="background:#fff;">
+<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
+<a href="#sec-interchange" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔄 6.1 – विनिमयता (Interchangeability)</a>
+<a href="#sec-metals" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚛️ 6.2 – धातुओं के गुण (Metals)</a>
+<a href="#sec-scrapers" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 6.3 – स्क्रैपर्स और स्क्रैपिंग (Scrapers &amp; Scraping)</a>
+<a href="#sec-vernier-mic" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📏 6.4 – वर्नियर माइक्रोमीटर (Vernier Micrometer)</a>
+<a href="#sec-thread-mic" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🧵 6.5 – स्क्रू थ्रेड माइक्रोमीटर</a>
+<a href="#sec-dial-indicator" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📊 6.6 – डायल इंडिकेटर और कम्पेरेटर</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 6.1 INTERCHANGEABILITY -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-interchange">
+<div class="content-section" data-content="interchange">
+<div class="section-header"><span class="icon">🔄</span><span class="title">6.1 – विनिमयता (Interchangeability)</span><span class="subtitle">— अर्थ, आवश्यकता, लाभ, सहनशीलता, IS मानक</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>विनिमयता (Interchangeability)</strong> इंजीनियरिंग उत्पादन का एक महत्वपूर्ण सिद्धांत है। इसका अर्थ है कि किसी मशीन या उपकरण के भागों (parts) को <strong>बिना किसी मशीनिंग (machining)</strong> या <strong>फिटिंग (fitting)</strong> के <strong>आपस में बदला (interchanged)</strong> जा सकता है।</p>
+
+<p><strong>विनिमयता की आवश्यकता (Necessity of Interchangeability):</strong></p>
+<ul>
+<li><strong>मरम्मत (Repair):</strong> जब कोई भाग खराब (failed) हो जाए तो उसे <strong>नए (new)</strong> भाग से <strong>बदला (replaced)</strong> जा सकता है – बिना किसी अतिरिक्त कार्य के।</li>
+<li><strong>उत्पादन (Production):</strong> <strong>बड़े पैमाने (mass production)</strong> पर उत्पादन में – <strong>समय (time)</strong> और <strong>लागत (cost)</strong> की बचत।</li>
+<li><strong>गुणवत्ता (Quality):</strong> <strong>समान (uniform)</strong> गुणवत्ता – सभी भाग <strong>एक जैसे (identical)</strong> होते हैं।</li>
+<li><strong>आसान असेंबली (Easy Assembly):</strong> <strong>त्वरित (quick)</strong> और <strong>सरल (simple)</strong> असेंबली।</li>
+<li><strong>सेवा (Service):</strong> <strong>फील्ड (field)</strong> में मरम्मत आसान हो जाती है – <strong>स्पेयर पार्ट्स (spare parts)</strong> उपलब्ध हैं।</li>
+</ul>
+
+<p><strong>विनिमयता प्राप्त करने के लिए शर्तें (Conditions for Achieving Interchangeability):</strong></p>
+<ul>
+<li><strong>सटीक आयाम (Accurate Dimensions):</strong> सभी भागों को <strong>निर्दिष्ट (specified)</strong> आयामों पर <strong>मशीन (machine)</strong> किया जाना चाहिए।</li>
+<li><strong>सहनशीलता (Tolerance):</strong> <strong>अनुमेय विचलन (permissible deviation)</strong> को <strong>नियंत्रित (controlled)</strong> किया जाना चाहिए – <strong>बहुत अधिक (too large)</strong> नहीं और <strong>बहुत कम (too small)</strong> नहीं।</li>
+<li><strong>मानकीकरण (Standardization):</strong> <strong>मानक (standard)</strong> आकार, <strong>थ्रेड (threads)</strong>, और <strong>फिट (fits)</strong> का उपयोग – <strong>IS (Indian Standard)</strong> और <strong>ISO (International Standard)</strong> के अनुसार।</li>
+<li><strong>गुणवत्ता नियंत्रण (Quality Control):</strong> प्रत्येक भाग की <strong>जाँच (inspection)</strong> – <strong>निर्दिष्ट (specified)</strong> सीमाओं (limits) के भीतर सुनिश्चित करना।</li>
+<li><strong>उपयुक्त मापन उपकरण (Proper Measuring Instruments):</strong> <strong>सटीक (accurate)</strong> मापन उपकरणों का उपयोग – <strong>माइक्रोमीटर (micrometers)</strong>, <strong>वर्नियर (verniers)</strong>, <strong>गेज (gauges)</strong>।</li>
+</ul>
+
+<p><strong>विनिमयता के लाभ (Advantages of Interchangeability):</strong></p>
+<ul>
+<li><strong>समय की बचत (Time Saving):</strong> <strong>फिटिंग (fitting)</strong> और <strong>फाइलिंग (filing)</strong> की कोई आवश्यकता नहीं – <strong>सीधे असेंबली (direct assembly)</strong>।</li>
+<li><strong>लागत में कमी (Cost Reduction):</strong> <strong>कुशल (skilled)</strong> श्रम की कम आवश्यकता – <strong>अकुशल (unskilled)</strong> श्रमिक भी असेंबली कर सकते हैं।</li>
+<li><strong>स्पेयर पार्ट्स (Spare Parts):</strong> <strong>आसानी से (easily)</strong> उपलब्ध – <strong>कम (reduced)</strong> डाउनटाइम (downtime).</li>
+<li><strong>गुणवत्ता (Quality):</strong> <strong>एकसमान (uniform)</strong> गुणवत्ता – <strong>ग्राहक (customer)</strong> संतुष्टि।</li>
+<li><strong>मानकीकरण (Standardization):</strong> <strong>विभिन्न (different)</strong> निर्माताओं (manufacturers) के भाग <strong>आपस में (mutually)</strong> विनिमय योग्य (interchangeable) होते हैं।</li>
+</ul>
+
+<p><strong>IS मानक (Indian Standards – IS) और ISO:</strong></p>
+<ul>
+<li><strong>IS 919:</strong> लिमिट्स और फिट्स (Limits and Fits) – <strong>होल बेसिस (hole basis)</strong> और <strong>शाफ्ट बेसिस (shaft basis)</strong>।</li>
+<li><strong>IS 2709:</strong> <strong>स्क्रू थ्रेड्स (screw threads)</strong> – मीट्रिक (metric) और व्हिटवर्थ (Whitworth).</li>
+<li><strong>ISO 9000:</strong> <strong>गुणवत्ता प्रबंधन (quality management)</strong> मानक।</li>
+<li><strong>ISO 2768:</strong> <strong>सामान्य सहनशीलता (general tolerances)</strong> – <strong>फाइन (fine)</strong>, <strong>मध्यम (medium)</strong>, <strong>रफ (coarse)</strong>, <strong>बहुत रफ (very coarse)</strong>।</li>
+</ul>
+
+<p><strong>निष्कर्ष (Conclusion):</strong> विनिमयता (interchangeability) <strong>आधुनिक विनिर्माण (modern manufacturing)</strong> का आधार है – <strong>बड़े पैमाने पर उत्पादन (mass production)</strong>, <strong>मरम्मत (repair)</strong>, और <strong>सेवा (service)</strong> को <strong>कुशल (efficient)</strong> और <strong>लागत-प्रभावी (cost-effective)</strong> बनाता है।</p>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: विनिमयता (Interchangeability) – सहनशीलता और फिट</strong></p>
+<p>स्थान: /images/notes/fitter/module-6/interchangeability.jpg</p>
+<code>interchangeability.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(होल बेसिस, शाफ्ट बेसिस, IS 919, सहनशीलता ग्रेड)</p>
+</div>
+<div class="figure-caption">Fig 1 – विनिमयता और सहनशीलता</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>IS 919 – लिमिट्स और फिट्स (Limits and Fits)</caption>
+<thead><tr><th>फिट प्रकार</th><th>प्रतीक</th><th>विवरण</th></tr></thead>
+<tbody>
+<tr><td>क्लियरेंस फिट (Clearance Fit)</td><td>H7/g6</td><td>निकासी (clearance) – शाफ्ट छोटा, होल बड़ा</td></tr>
+<tr><td>ट्रांज़िशन फिट (Transition Fit)</td><td>H7/k6</td><td>निकासी या हस्तक्षेप (interference) – मध्यम</td></tr>
+<tr><td>इंटरफेरेंस फिट (Interference Fit)</td><td>H7/p6</td><td>हस्तक्षेप (interference) – शाफ्ट बड़ा, होल छोटा</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>विनिमयता – <strong>बिना फिटिंग (fitting)</strong> के भागों को <strong>बदलना (interchange)</strong>।</li>
+<li>सहनशीलता (Tolerance) – <strong>अनुमेय विचलन (permissible deviation)</strong>।</li>
+<li>IS 919 – <strong>लिमिट्स और फिट्स (Limits and Fits)</strong>।</li>
+<li>IS 2709 – <strong>स्क्रू थ्रेड्स (Screw Threads)</strong>।</li>
+<li>ISO 2768 – <strong>सामान्य सहनशीलता (General Tolerances)</strong> – <strong>f, m, c, v</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>विनिमयता – <strong>बिना मशीनिंग (machining)</strong> के भाग बदलना।</li>
+<li>सहनशीलता (Tolerance) – <strong>अनुमेय विचलन (allowable deviation)</strong>।</li>
+<li>IS 919 – <strong>लिमिट्स और फिट्स (Limits and Fits)</strong> – <strong>होल बेसिस (hole basis)</strong> सिस्टम।</li>
+<li>ISO 2768 – <strong>सामान्य सहनशीलता (General Tolerances)</strong> – <strong>f (fine)</strong>, <strong>m (medium)</strong>, <strong>c (coarse)</strong>, <strong>v (very coarse)</strong>।</li>
+<li>मानकीकरण (Standardization) – <strong>IS</strong> और <strong>ISO</strong> मानक।</li></ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 6.2 METALS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-metals">
+<div class="content-section" data-content="metals">
+<div class="section-header"><span class="icon">⚛️</span><span class="title">6.2 – धातुओं के गुण (Metals)</span><span class="subtitle">— भौतिक और यांत्रिक गुण, लौह-अलौह, मिश्र धातुएँ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>धातुओं (Metals)</strong> के गुण (properties) उनके <strong>चयन (selection)</strong> और <strong>अनुप्रयोग (application)</strong> के लिए महत्वपूर्ण हैं। धातुओं को दो मुख्य श्रेणियों में बाँटा गया है – <strong>लौह धातुएँ (Ferrous metals)</strong> और <strong>अलौह धातुएँ (Non-ferrous metals)</strong>।</p>
+
+<p><strong>भौतिक गुण (Physical Properties):</strong></p>
+<ul>
+<li><strong>रंग (Colour):</strong> धातु की <strong>उपस्थिति (appearance)</strong> – उदाहरण: तांबा (copper) लाल-भूरा (red-brown), एल्यूमीनियम (aluminium) चाँदी-सफेद (silver-white).</li>
+<li><strong>घनत्व (Density – Specific Gravity):</strong> प्रति इकाई आयतन (volume) का <strong>वजन (weight)</strong> – उदाहरण: स्टील (steel) 7.85 g/cm³, एल्यूमीनियम 2.7 g/cm³.</li>
+<li><strong>गलनांक (Melting Point):</strong> धातु के <strong>पिघलने (melt)</strong> का तापमान – उदाहरण: लोहा (iron) 1538°C, एल्यूमीनियम 660°C.</li>
+<li><strong>तापीय चालकता (Thermal Conductivity):</strong> <strong>गर्मी (heat)</strong> संचारित (conduct) करने की क्षमता – उदाहरण: तांबा (copper) उच्च (high), स्टील (steel) मध्यम (medium).</li>
+<li><strong>विद्युत चालकता (Electrical Conductivity):</strong> <strong>बिजली (electricity)</strong> संचारित करने की क्षमता – उदाहरण: तांबा (copper) और एल्यूमीनियम (aluminium) उच्च (high).</li>
+<li><strong>चुंबकीय गुण (Magnetic Properties):</strong> <strong>चुंबक (magnet)</strong> द्वारा <strong>आकर्षित (attracted)</strong> होने की क्षमता – <strong>लौह (ferrous)</strong> धातुएँ चुंबकीय (magnetic) होती हैं।</li>
+</ul>
+
+<p><strong>यांत्रिक गुण (Mechanical Properties):</strong></p>
+<ul>
+<li><strong>तन्यता (Ductility):</strong> <strong>तार (wire)</strong> खींचने की क्षमता – उदाहरण: तांबा (copper), एल्यूमीनियम (aluminium).</li>
+<li><strong>आघातवर्धनीयता (Malleability):</strong> <strong>हथौड़े (hammer)</strong> से पीटकर <strong>शीट (sheet)</strong> बनाने की क्षमता – उदाहरण: सीसा (lead), सोना (gold).</li>
+<li><strong>कठोरता (Hardness):</strong> <strong>इंडेंटेशन (indentation)</strong> या <strong>खरोंच (scratch)</strong> का <strong>प्रतिरोध (resistance)</strong> – उदाहरण: कठोर स्टील (hard steel) उच्च (high), एल्यूमीनियम निम्न (low).</li>
+<li><strong>भंगुरता (Brittleness):</strong> <strong>बिना (without)</strong> विरूपण (deformation) के <strong>टूटना (breaking)</strong> – उदाहरण: कास्ट आयरन (cast iron) भंगुर (brittle).</li>
+<li><strong>क्रूरता (Toughness):</strong> <strong>आघात (impact)</strong> को <strong>सहन (withstand)</strong> करने की क्षमता – उदाहरण: गढ़ा लोहा (wrought iron).</li>
+<li><strong>दृढ़ता (Tenacity – Tensile Strength):</strong> <strong>तन्य बल (tensile force)</strong> का प्रतिरोध – उदाहरण: माइल्ड स्टील (mild steel).</li>
+<li><strong>प्रत्यास्थता (Elasticity):</strong> <strong>बल (force)</strong> हटने पर <strong>मूल आकार (original shape)</strong> में लौटने की क्षमता – उदाहरण: स्प्रिंग स्टील (spring steel).</li>
+<li><strong>थकान (Fatigue):</strong> <strong>बार-बार (repeated)</strong> भार (load) के तहत <strong>टूटना (failure)</strong> – <strong>प्रतिरोध (resistance)</strong> महत्वपूर्ण है।</li>
+<li><strong>रेंगना (Creep):</strong> <strong>लंबे (long)</strong> समय तक <strong>निरंतर (constant)</strong> भार के तहत <strong>विकृति (deformation)</strong> – <strong>उच्च तापमान (high temperature)</strong> पर महत्वपूर्ण।</li>
+</ul>
+
+<p><strong>लौह धातुएँ (Ferrous Metals):</strong></p>
+<ul>
+<li><strong>कास्ट आयरन (Cast Iron):</strong> <strong>2-4%</strong> कार्बन (carbon) – <strong>भंगुर (brittle)</strong> लेकिन <strong>दबाव (compression)</strong> में मजबूत – मशीन बेस (machine bases), इंजन ब्लॉक (engine blocks).</li>
+<li><strong>गढ़ा लोहा (Wrought Iron):</strong> <strong>0.1%</strong> कार्बन – <strong>तन्य (ductile)</strong> और <strong>क्रूर (tough)</strong> – चेन (chains), हुक (hooks).</li>
+<li><strong>माइल्ड स्टील (Mild Steel – Low Carbon Steel):</strong> <strong>0.1-0.3%</strong> कार्बन – <strong>सबसे सामान्य (most common)</strong> – फैब्रिकेशन (fabrication), संरचनात्मक (structural).</li>
+<li><strong>मध्यम कार्बन स्टील (Medium Carbon Steel):</strong> <strong>0.3-0.6%</strong> कार्बन – <strong>उच्च शक्ति (higher strength)</strong> – गियर्स (gears), शाफ्ट्स (shafts).</li>
+<li><strong>उच्च कार्बन स्टील (High Carbon Steel):</strong> <strong>0.6-1.4%</strong> कार्बन – <strong>कठोर (hard)</strong> – <strong>काटने के उपकरण (cutting tools)</strong>, स्प्रिंग्स (springs).</li>
+<li><strong>स्टेनलेस स्टील (Stainless Steel):</strong> <strong>11-18%</strong> क्रोमियम (chromium) – <strong>जंग-प्रतिरोधी (corrosion-resistant)</strong> – रसोई के बर्तन (kitchenware), मेडिकल उपकरण (medical).</li>
+</ul>
+
+<p><strong>अलौह धातुएँ (Non-Ferrous Metals):</strong></p>
+<ul>
+<li><strong>एल्यूमीनियम (Aluminium):</strong> <strong>हल्का (lightweight)</strong> – <strong>जंग-प्रतिरोधी (corrosion-resistant)</strong> – विमान (aircraft), ऑटोमोटिव (automotive).</li>
+<li><strong>तांबा (Copper):</strong> <strong>उच्च चालकता (high conductivity)</strong> – <strong>विद्युत (electrical)</strong> तार (wires), पाइप (pipes).</li>
+<li><strong>पीतल (Brass):</strong> तांबा (copper) + जस्ता (zinc) – <strong>मशीनेबिलिटी (machinability)</strong> अच्छी – फिटिंग्स (fittings), वाल्व (valves).</li>
+<li><strong>कांस्य (Bronze):</strong> तांबा (copper) + टिन (tin) – <strong>घिसाव-प्रतिरोधी (wear-resistant)</strong> – बियरिंग्स (bearings), बुश (bushes).</li>
+<li><strong>सीसा (Lead):</strong> <strong>घना (dense)</strong> – <strong>विकिरण परिरक्षण (radiation shielding)</strong>, बैटरियाँ (batteries).</li>
+<li><strong>जस्ता (Zinc):</strong> <strong>गैल्वनाइजिंग (galvanizing)</strong> – जंग (rust) से बचाने के लिए।</li>
+<li><strong>टिन (Tin):</strong> <strong>सोल्डरिंग (soldering)</strong> – <strong>कोटिंग (coating)</strong> के लिए।</li>
+</ul>
+
+<p><strong>मिश्र धातुएँ (Alloys):</strong> दो या अधिक धातुओं को <strong>मिलाकर (mixing)</strong> बेहतर गुण (properties) प्राप्त करना।</p>
+<ul>
+<li><strong>स्टील (Steel):</strong> लोहा (iron) + कार्बन (carbon) + अन्य तत्व (other elements).</li>
+<li><strong>पीतल (Brass):</strong> तांबा (copper) + जस्ता (zinc).</li>
+<li><strong>कांस्य (Bronze):</strong> तांबा (copper) + टिन (tin).</li>
+<li><strong>ड्यूरालुमिन (Duralumin):</strong> एल्यूमीनियम (aluminium) + तांबा (copper) + मैंगनीज (manganese) – <strong>विमान (aircraft)</strong> के लिए।</li>
+<li><strong>मोनेल (Monel):</strong> निकल (nickel) + तांबा (copper) – <strong>जंग-प्रतिरोधी (corrosion-resistant)</strong> – समुद्री (marine) अनुप्रयोग।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: धातुओं के गुण (Metals Properties)</strong></p>
+<p>स्थान: /images/notes/fitter/module-6/metals_properties.jpg</p>
+<code>metals_properties.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(तन्यता, आघातवर्धनीयता, कठोरता, भंगुरता, क्रूरता, प्रत्यास्थता)</p>
+</div>
+<div class="figure-caption">Fig 2 – धातुओं के भौतिक और यांत्रिक गुण</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>धातुओं के गुण (Properties of Metals)</caption>
+<thead><tr><th>धातु</th><th>घनत्व (g/cm³)</th><th>गलनांक (°C)</th><th>प्रकार</th></tr></thead>
+<tbody>
+<tr><td>कास्ट आयरन (Cast Iron)</td><td>7.2</td><td>1200–1300</td><td>लौह (Ferrous)</td></tr>
+<tr><td>माइल्ड स्टील (Mild Steel)</td><td>7.85</td><td>1450–1500</td><td>लौह (Ferrous)</td></tr>
+<tr><td>स्टेनलेस स्टील (SS)</td><td>8.0</td><td>1400–1450</td><td>लौह (Ferrous)</td></tr>
+<tr><td>एल्यूमीनियम (Aluminium)</td><td>2.7</td><td>660</td><td>अलौह (Non-ferrous)</td></tr>
+<tr><td>तांबा (Copper)</td><td>8.9</td><td>1085</td><td>अलौह (Non-ferrous)</td></tr>
+<tr><td>पीतल (Brass)</td><td>8.4–8.7</td><td>900–1000</td><td>अलौह (Non-ferrous)</td></tr>
+<tr><td>कांस्य (Bronze)</td><td>8.8–8.9</td><td>950–1050</td><td>अलौह (Non-ferrous)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>लौह धातुएँ (Ferrous) – <strong>लोहा (iron)</strong> मुख्य घटक।</li><li>अलौह धातुएँ (Non-ferrous) – <strong>लोहा (iron)</strong> नहीं होता।</li><li>तन्यता (Ductility) – <strong>तार (wire)</strong> खींचना।</li><li>आघातवर्धनीयता (Malleability) – <strong>शीट (sheet)</strong> बनाना।</li>
+<li>स्टेनलेस स्टील – <strong>11-18% क्रोमियम (chromium)</strong>।</li>
+<li>पीतल (Brass) – <strong>तांबा (copper) + जस्ता (zinc)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>लौह धातुएँ (Ferrous) – <strong>लोहा (iron)</strong> होता है।</li><li>अलौह धातुएँ (Non-ferrous) – <strong>लोहा (iron)</strong> नहीं होता।</li><li>तन्यता (Ductility) – <strong>तांबा (copper)</strong>, <strong>एल्यूमीनियम (aluminium)</strong>।</li><li>आघातवर्धनीयता (Malleability) – <strong>सीसा (lead)</strong>, <strong>सोना (gold)</strong>।</li>
+<li>भंगुरता (Brittleness) – <strong>कास्ट आयरन (cast iron)</strong>।</li>
+<li>स्टेनलेस स्टील – <strong>जंग-प्रतिरोधी (corrosion-resistant)</strong> – <strong>क्रोमियम (chromium)</strong>।</li>
+<li>पीतल (Brass) – <strong>तांबा (copper) + जस्ता (zinc)</strong> – अच्छी मशीनेबिलिटी (machinability).</li>
+<li>कांस्य (Bronze) – <strong>तांबा (copper) + टिन (tin)</strong> – घिसाव-प्रतिरोधी (wear-resistant).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 6.3 SCRAPERS AND SCRAPING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-scrapers">
+<div class="content-section" data-content="scrapers">
+<div class="section-header"><span class="icon">🔧</span><span class="title">6.3 – स्क्रैपर्स और स्क्रैपिंग (Scrapers &amp; Scraping)</span><span class="subtitle">— प्रकार, उपयोग, स्क्रैपिंग प्रक्रिया, अनुप्रयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>स्क्रैपिंग (Scraping)</strong> एक <strong>परिशुद्धता (precision)</strong> फिनिशिंग (finishing) प्रक्रिया है जिसमें <strong>स्क्रैपर (scraper)</strong> नामक उपकरण का उपयोग करके सतह से <strong>बहुत महीन (very fine)</strong> चिप्स (chips) हटाए जाते हैं। इसका उपयोग <strong>सतह की समतलता (flatness)</strong>, <strong>वर्गाकारता (squareness)</strong>, और <strong>असेंबली (assembly)</strong> के लिए <strong>बेहतर संपर्क (better contact)</strong> प्राप्त करने के लिए किया जाता है।</p>
+
+<p><strong>स्क्रैपिंग का उद्देश्य (Purpose of Scraping):</strong></p>
+<ul>
+<li><strong>सतह समतलता (Surface Flatness):</strong> <strong>अत्यंत (extremely)</strong> सपाट (flat) सतह प्राप्त करना – <strong>सरफेस प्लेट (surface plate)</strong>, <strong>मशीन बेड (machine bed)</strong>।</li>
+<li><strong>बेहतर संपर्क (Better Contact):</strong> दो सतहों के बीच <strong>अधिकतम (maximum)</strong> संपर्क क्षेत्र (contact area) – <strong>बियरिंग्स (bearings)</strong>, <strong>स्लाइड्स (slides)</strong>।</li>
+<li><strong>तेल धारण (Oil Retention):</strong> खुरदरी (rough) सतहें <strong>तेल (oil)</strong> को <strong>बनाए रखती (retain)</strong> हैं – <strong>स्नेहन (lubrication)</strong> के लिए।</li>
+<li><strong>सटीकता (Accuracy):</strong> <strong>उच्च परिशुद्धता (high precision)</strong> प्राप्त करना – <strong>गेज (gauges)</strong>, <strong>टूलरूम (toolroom)</strong> कार्य।</li>
+</ul>
+
+<p><strong>स्क्रैपर्स के प्रकार (Types of Scrapers):</strong></p>
+
+<p><strong>1. फ्लैट स्क्रैपर (Flat Scraper – सपाट / Straight):</strong></p>
+<ul>
+<li><strong>सपाट (flat)</strong> काटने का किनारा (cutting edge) – <strong>सपाट सतहों (flat surfaces)</strong> के लिए।</li>
+<li><strong>दो-हाथ (two-handed)</strong> या <strong>एक-हाथ (one-handed)</strong>।</li>
+<li><strong>सामग्री (material):</strong> <strong>उच्च कार्बन स्टील (high carbon steel)</strong> या <strong>टंगस्टन कार्बाइड (tungsten carbide)</strong>।</li>
+<li>उदाहरण: <strong>सरफेस प्लेट (surface plate)</strong> स्क्रैपिंग।</li>
+</ul>
+
+<p><strong>2. त्रिकोणीय स्क्रैपर (Triangular Scraper – तीन-धार / Three-edge):</strong></p>
+<ul>
+<li><strong>त्रिकोणीय (triangular)</strong> क्रॉस-सेक्शन (cross-section) – <strong>तीन (three)</strong> काटने वाले किनारे (edges).</li>
+<li><strong>खांचे (grooves)</strong> और <strong>आंतरिक सतहों (internal surfaces)</strong> के लिए।</li>
+<li>उदाहरण: <strong>बियरिंग (bearing)</strong> स्क्रैपिंग, <strong>बुश (bush)</strong> स्क्रैपिंग।</li>
+</ul>
+
+<p><strong>3. हुक स्क्रैपर (Hook Scraper – अंकुश / Curved):</strong></p>
+<ul>
+<li><strong>घुमावदार (curved)</strong> या <strong>हुक (hook)</strong> के आकार का – <strong>दुर्गम (inaccessible)</strong> स्थानों के लिए।</li>
+<li><strong>अंडरकट (undercut)</strong> और <strong>आंतरिक (internal)</strong> सतहों के लिए।</li>
+<li>उदाहरण: <strong>सिलेंडर (cylinder)</strong> बोर (bore) स्क्रैपिंग।</li>
+</ul>
+
+<p><strong>4. गोल स्क्रैपर (Round Scraper – बेलनाकार / Cylindrical):</strong></p>
+<ul>
+<li><strong>गोल (round)</strong> काटने का किनारा – <strong>गोल (round)</strong> सतहों के लिए।</li>
+<li><strong>पाइप (pipe)</strong> और <strong>शाफ्ट (shaft)</strong> स्क्रैपिंग।</li>
+</ul>
+
+<p><strong>स्क्रैपिंग प्रक्रिया (Scraping Process):</strong></p>
+<ol>
+<li><strong>सतह की जाँच (Surface Inspection):</strong> <strong>प्रशियन ब्लू (Prussian blue)</strong> या <strong>मार्किंग ब्लू (marking blue)</strong> लगाएँ।</li>
+<li><strong>संपर्क बिंदु (Contact Points):</strong> सतह को <strong>सरफेस प्लेट (surface plate)</strong> पर <strong>रगड़ें (rub)</strong> – <strong>उभरे (high)</strong> बिंदुओं पर <strong>नीला (blue)</strong> चिपकता है।</li>
+<li><strong>स्क्रैपिंग (Scraping):</strong> <strong>नीले (blue)</strong> बिंदुओं को <strong>स्क्रैपर (scraper)</strong> से <strong>हटाएँ (remove)</strong> – <strong>बहुत महीन (very fine)</strong> चिप्स।</li>
+<li><strong>दोहराना (Repeat):</strong> जब तक <strong>वांछित (desired)</strong> संख्या में <strong>नीले (blue)</strong> बिंदु <strong>समान रूप (uniformly)</strong> वितरित (distributed) न हो जाएँ।</li>
+<li><strong>फिनिश (Finish):</strong> <strong>चिकनी (smooth)</strong> और <strong>समतल (flat)</strong> सतह – <strong>सटीकता (accuracy)</strong> ±0.005 मिमी (mm) तक।</li>
+</ol>
+
+<p><strong>स्क्रैपिंग के लाभ (Advantages of Scraping):</strong></p>
+<ul>
+<li><strong>उच्च परिशुद्धता (High Precision):</strong> <strong>ग्राइंडिंग (grinding)</strong> से भी <strong>अधिक सटीक (more accurate)</strong>।</li>
+<li><strong>बेहतर स्नेहन (Better Lubrication):</strong> खुरदरी (rough) सतहें <strong>तेल (oil)</strong> बनाए रखती हैं।</li>
+<li><strong>लंबा जीवन (Longer Life):</strong> <strong>घिसाव (wear)</strong> प्रतिरोधी (resistant) सतह।</li>
+<li><strong>सुचारू संचालन (Smooth Operation):</strong> <strong>कम (less)</strong> घर्षण (friction) – <strong>कम (less)</strong> गर्मी (heat).</li>
+</ul>
+
+<p><strong>स्क्रैपिंग की सीमाएँ (Limitations of Scraping):</strong></p>
+<ul>
+<li><strong>समय लेने वाली (Time-consuming):</strong> <strong>धीमी (slow)</strong> प्रक्रिया – <strong>कुशल (skilled)</strong> श्रम की आवश्यकता।</li>
+<li><strong>कुशलता (Skill):</strong> <strong>उच्च कुशलता (high skill)</strong> की आवश्यकता – <strong>प्रशिक्षण (training)</strong>।</li>
+<li><strong>छोटे उत्पादन (Small Production):</strong> <strong>छोटे (small)</strong> बैच (batch) के लिए उपयुक्त – <strong>बड़े पैमाने (mass production)</strong> के लिए नहीं।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्क्रैपर्स के प्रकार (Scraper Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-6/scrapers.jpg</p>
+<code>scrapers.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(फ्लैट, त्रिकोणीय, हुक, गोल – काटने का किनारा)</p>
+</div>
+<div class="figure-caption">Fig 3 – स्क्रैपर्स के प्रकार</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>स्क्रैपिंग – <strong>बहुत महीन (very fine)</strong> चिप्स हटाना – <strong>सटीक (precise)</strong> फिनिश।</li>
+<li>फ्लैट स्क्रैपर – <strong>सपाट सतह (flat surfaces)</strong> के लिए।</li>
+<li>त्रिकोणीय स्क्रैपर – <strong>खांचे (grooves)</strong> और <strong>आंतरिक सतह (internal surfaces)</strong> के लिए।</li>
+<li>प्रशियन ब्लू (Prussian blue) – <strong>उभरे (high)</strong> बिंदुओं को <strong>चिह्नित (mark)</strong> करने के लिए।</li>
+<li>स्क्रैपिंग – <strong>ग्राइंडिंग (grinding)</strong> से भी <strong>अधिक सटीक (more accurate)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>स्क्रैपिंग – <strong>फिनिशिंग (finishing)</strong> प्रक्रिया – <strong>सटीकता (precision)</strong> के लिए।</li>
+<li>फ्लैट स्क्रैपर – <strong>सपाट (flat)</strong> सतहों के लिए।</li>
+<li>त्रिकोणीय स्क्रैपर – <strong>तीन (three)</strong> काटने वाले किनारे (edges).</li>
+<li>हुक स्क्रैपर – <strong>दुर्गम (inaccessible)</strong> स्थानों के लिए।</li>
+<li>प्रशियन ब्लू (Prussian blue) – <strong>संपर्क बिंदु (contact points)</strong> की पहचान के लिए।</li>
+<li>स्क्रैपिंग – <strong>धीमी (slow)</strong> लेकिन <strong>बहुत सटीक (very accurate)</strong> – ±0.005 मिमी (mm).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 6.4 VERNIER MICROMETER -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-vernier-mic">
+<div class="content-section" data-content="vernier-mic">
+<div class="section-header"><span class="icon">📏</span><span class="title">6.4 – वर्नियर माइक्रोमीटर (Vernier Micrometer)</span><span class="subtitle">— अल्पतमांक, पठन, अंशांकन, उपयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>वर्नियर माइक्रोमीटर (Vernier Micrometer)</strong> एक <strong>उच्च-परिशुद्धता (high-precision)</strong> माप उपकरण है जो <strong>मानक माइक्रोमीटर (standard micrometer)</strong> से <strong>अधिक सटीक (more accurate)</strong> माप प्रदान करता है। इसमें <strong>मुख्य स्केल (main scale)</strong>, <strong>थिम्बल (thimble)</strong>, और <strong>वर्नियर स्केल (vernier scale)</strong> होता है।</p>
+
+<p><strong>अल्पतमांक (Least Count – LC) की गणना:</strong></p>
+<ul>
+<li><strong>थिम्बल (thimble)</strong> पर <strong>50 विभाजन (divisions)</strong> – 1 विभाजन = <strong>0.01 मिमी (mm)</strong>।</li>
+<li><strong>वर्नियर (vernier)</strong> पर <strong>10 विभाजन (divisions)</strong> – 10 विभाजन = <strong>0.09 मिमी (mm)</strong> (थिम्बल के 9 विभाजन = 0.09 मिमी).</li>
+<li><strong>वर्नियर अल्पतमांक (Vernier LC):</strong> <strong>0.01 / 10 = 0.001 मिमी (mm)</strong>.</li>
+<li><strong>कुल अल्पतमांक (Total LC):</strong> <strong>0.001 मिमी (mm)</strong> – <strong>1 माइक्रोमीटर (µm)</strong>.</li>
+</ul>
+
+<p><strong>वर्नियर माइक्रोमीटर का पठन (Reading a Vernier Micrometer):</strong></p>
+<ol>
+<li><strong>मुख्य स्केल (Main Scale):</strong> <strong>स्लीव (sleeve)</strong> पर मिलीमीटर (mm) और <strong>आधा मिलीमीटर (0.5 mm)</strong> रीडिंग।</li>
+<li><strong>थिम्बल (Thimble):</strong> थिम्बल पर <strong>0.01 मिमी (mm)</strong> विभाजन – <strong>संरेखित (aligned)</strong> रेखा।</li>
+<li><strong>वर्नियर (Vernier):</strong> वर्नियर पर <strong>संरेखित (aligned)</strong> विभाजन – <strong>0.001 मिमी (mm)</strong> जोड़ें।</li>
+<li><strong>कुल (Total):</strong> मुख्य स्केल + थिम्बल + वर्नियर = <strong>सटीक (accurate)</strong> माप।</li>
+</ol>
+
+<p><strong>उदाहरण (Example):</strong></p>
+<ul>
+<li>मुख्य स्केल: <strong>12.5 मिमी (mm)</strong></li>
+<li>थिम्बल: <strong>13वाँ (13th)</strong> विभाजन = 13 × 0.01 = <strong>0.13 मिमी (mm)</strong></li>
+<li>वर्नियर: <strong>5वाँ (5th)</strong> विभाजन संरेखित = 5 × 0.001 = <strong>0.005 मिमी (mm)</strong></li>
+<li><strong>कुल (Total):</strong> 12.5 + 0.13 + 0.005 = <strong>12.635 मिमी (mm)</strong></li>
+</ul>
+
+<p><strong>वर्नियर माइक्रोमीटर के लाभ (Advantages):</strong></p>
+<ul>
+<li><strong>0.001 मिमी (mm)</strong> सटीकता (accuracy) – <strong>बहुत सटीक (very precise)</strong> मापन।</li>
+<li><strong>वर्नियर स्केल (vernier scale)</strong> – <strong>अनुमान (estimation)</strong> की आवश्यकता नहीं – <strong>सीधा पठन (direct reading)</strong>।</li>
+<li><strong>मानक माइक्रोमीटर (standard micrometer)</strong> के समान <strong>आकार (size)</strong> और <strong>उपयोग (use)</strong> – <strong>आसान (easy)</strong> हैंडलिंग।</li>
+</ul>
+
+<p><strong>ध्यान रखने योग्य बातें (Precautions):</strong></p>
+<ul>
+<li><strong>शून्य त्रुटि (Zero Error):</strong> माप से पहले <strong>शून्य (zero)</strong> की जाँच (check) करें – <strong>त्रुटि (error)</strong> को <strong>सुधारें (correct)</strong>।</li>
+<li><strong>रैचेट स्टॉप (Ratchet Stop):</strong> <strong>एकसमान (uniform)</strong> दबाव (pressure) के लिए – <strong>अधिक (excessive)</strong> बल न लगाएँ।</li>
+<li><strong>सफाई (Cleaning):</strong> मापने से पहले <strong>मापने वाले फलक (measuring faces)</strong> को <strong>साफ (clean)</strong> करें।</li>
+<li><strong>तापमान (Temperature):</strong> <strong>तापीय विस्तार (thermal expansion)</strong> को <strong>ध्यान (consider)</strong> में रखें – <strong>कमरे के तापमान (room temperature)</strong> पर मापें।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: वर्नियर माइक्रोमीटर (Vernier Micrometer)</strong></p>
+<p>स्थान: /images/notes/fitter/module-6/vernier_micrometer.jpg</p>
+<code>vernier_micrometer.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(मुख्य स्केल, थिम्बल, वर्नियर स्केल, अल्पतमांक 0.001 मिमी)</p>
+</div>
+<div class="figure-caption">Fig 4 – वर्नियर माइक्रोमीटर</div>
+</div>
+<div class="example-box">
+<h4 style="margin:0 0 6px; color:#003366;">📘 उदाहरण (Example)</h4>
+<p><strong>पठन (Reading):</strong> मुख्य स्केल = 12.5 मिमी, थिम्बल = 13 × 0.01 = 0.13 मिमी, वर्नियर = 5 × 0.001 = 0.005 मिमी. <strong>कुल = 12.635 मिमी</strong>.</p>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>वर्नियर माइक्रोमीटर – <strong>0.001 मिमी (mm)</strong> सटीकता (accuracy).</li>
+<li>थिम्बल (Thimble) – <strong>0.01 मिमी (mm)</strong> विभाजन।</li>
+<li>वर्नियर (Vernier) – <strong>0.001 मिमी (mm)</strong> विभाजन – <strong>10 विभाजन</strong>।</li>
+<li>शून्य त्रुटि (Zero Error) – <strong>जाँच (check)</strong> और <strong>सुधार (correct)</strong> आवश्यक है।</li>
+<li>रैचेट स्टॉप (Ratchet Stop) – <strong>एकसमान (uniform)</strong> दबाव (pressure) के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>वर्नियर माइक्रोमीटर – <strong>0.001 मिमी (mm)</strong> अल्पतमांक (least count).</li>
+<li>थिम्बल विभाजन: <strong>50</strong> – 1 विभाजन = <strong>0.01 मिमी</strong>।</li>
+<li>वर्नियर विभाजन: <strong>10</strong> – 1 विभाजन = <strong>0.001 मिमी</strong>।</li>
+<li>वर्नियर माइक्रोमीटर – <strong>मानक माइक्रोमीटर (standard micrometer)</strong> से अधिक सटीक (more accurate).</li>
+<li>शून्य त्रुटि (Zero Error) – <strong>हर (every)</strong> उपयोग से पहले <strong>जाँच (check)</strong> करें।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 6.5 SCREW THREAD MICROMETER -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-thread-mic">
+<div class="content-section" data-content="thread-mic">
+<div class="section-header"><span class="icon">🧵</span><span class="title">6.5 – स्क्रू थ्रेड माइक्रोमीटर (Screw Thread Micrometer)</span><span class="subtitle">— पिच व्यास मापन, संरचना, उपयोग, सटीकता</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>स्क्रू थ्रेड माइक्रोमीटर (Screw Thread Micrometer)</strong> एक <strong>विशेष (special)</strong> प्रकार का माइक्रोमीटर है जिसका उपयोग <strong>स्क्रू थ्रेड्स (screw threads)</strong> के <strong>पिच व्यास (pitch diameter)</strong> को <strong>सीधे (directly)</strong> मापने के लिए किया जाता है।</p>
+
+<p><strong>संरचना (Construction):</strong></p>
+<ul>
+<li><strong>एन्विल (Anvil – स्थिर (fixed) फलक):</strong> <strong>V-आकार (V-shaped)</strong> – थ्रेड के <strong>फ्लैंक्स (flanks)</strong> पर <strong>फिट (fit)</strong> होता है।</li>
+<li><strong>स्पिंडल (Spindle – चल (movable) फलक):</strong> <strong>शंक्वाकार (conical)</strong> या <strong>गोल (round)</strong> – थ्रेड के <strong>विपरीत (opposite)</strong> फ्लैंक पर <strong>संपर्क (contact)</strong> करता है।</li>
+<li><strong>विभिन्न (different)</strong> <strong>पिच (pitch)</strong> के लिए <strong>बदली (interchangeable)</strong> एन्विल (anvils) और स्पिंडल (spindles) – <strong>सेट (set)</strong> के रूप में उपलब्ध।</li>
+<li><strong>बैरल (Barrel) / स्लीव (Sleeve):</strong> <strong>मुख्य स्केल (main scale)</strong> – मिलीमीटर (mm) और आधा मिलीमीटर (0.5 mm) में अंशांकित (graduated).</li>
+<li><strong>थिम्बल (Thimble):</strong> <strong>50 विभाजन (divisions)</strong> – 1 विभाजन = <strong>0.01 मिमी (mm)</strong>।</li>
+<li><strong>रैचेट स्टॉप (Ratchet Stop):</strong> <strong>एकसमान (uniform)</strong> दबाव (pressure) के लिए।</li>
+</ul>
+
+<p><strong>पिच व्यास (Pitch Diameter) की परिभाषा (Definition):</strong></p>
+<ul>
+<li><strong>पिच व्यास (Pitch Diameter):</strong> वह <strong>काल्पनिक (imaginary)</strong> सिलेंडर (cylinder) का व्यास जो <strong>थ्रेड (thread)</strong> को <strong>दो बराबर (equal)</strong> भागों में <strong>विभाजित (divides)</strong> करता है – <strong>थ्रेड (thread)</strong> के <strong>फ्लैंक्स (flanks)</strong> के <strong>मध्य (middle)</strong> पर।</li>
+<li><strong>पिच व्यास (Pitch Diameter) = (मुख्य व्यास + लघु व्यास) / 2</strong> – लगभग (approximately).</li>
+</ul>
+
+<p><strong>मापन प्रक्रिया (Measurement Process):</strong></p>
+<ol>
+<li>उपयुक्त (appropriate) <strong>एन्विल (anvil)</strong> और <strong>स्पिंडल (spindle)</strong> का चयन – <strong>थ्रेड की पिच (thread pitch)</strong> के अनुसार।</li>
+<li>थ्रेड के <strong>फ्लैंक्स (flanks)</strong> पर एन्विल (anvil) और स्पिंडल (spindle) को <strong>संरेखित (align)</strong> करें।</li>
+<li><strong>रैचेट स्टॉप (ratchet stop)</strong> का उपयोग करके <strong>स्पिंडल (spindle)</strong> को <strong>घुमाएँ (turn)</strong> – जब तक <strong>संपर्क (contact)</strong> न हो जाए।</li>
+<li><strong>रीडिंग (reading)</strong> लें – <strong>पिच व्यास (pitch diameter)</strong> का <strong>सटीक (accurate)</strong> माप।</li>
+</ol>
+
+<p><strong>स्क्रू थ्रेड माइक्रोमीटर के लाभ (Advantages):</strong></p>
+<ul>
+<li><strong>सीधा (direct)</strong> पिच व्यास (pitch diameter) मापन – <strong>कोई गणना (no calculation)</strong> आवश्यक नहीं।</li>
+<li><strong>उच्च सटीकता (High Accuracy):</strong> <strong>0.01 मिमी (mm)</strong> तक – <strong>बहुत सटीक (very precise)</strong>।</li>
+<li><strong>सरल (simple)</strong> और <strong>तेज़ (fast)</strong> – <strong>उत्पादन (production)</strong> और <strong>निरीक्षण (inspection)</strong> के लिए।</li>
+</ul>
+
+<p><strong>सीमाएँ (Limitations):</strong></p>
+<ul>
+<li><strong>विभिन्न (different)</strong> <strong>पिच (pitch)</strong> के लिए <strong>अलग (separate)</strong> एन्विल (anvils) की आवश्यकता – <strong>सेट (set)</strong> महंगा (expensive).</li>
+<li><strong>छोटे (small)</strong> थ्रेड्स (threads) के लिए <strong>उपयुक्त (suitable)</strong> नहीं – <strong>बहुत छोटे (very small)</strong> पिच (pitch) के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्क्रू थ्रेड माइक्रोमीटर (Screw Thread Micrometer)</strong></p>
+<p>स्थान: /images/notes/fitter/module-6/thread_micrometer.jpg</p>
+<code>thread_micrometer.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(V-एन्विल, स्पिंडल, बैरल, थिम्बल, पिच व्यास मापन)</p>
+</div>
+<div class="figure-caption">Fig 5 – स्क्रू थ्रेड माइक्रोमीटर</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>स्क्रू थ्रेड माइक्रोमीटर – <strong>पिच व्यास (pitch diameter)</strong> मापने के लिए।</li>
+<li>एन्विल (Anvil) – <strong>V-आकार (V-shaped)</strong> – थ्रेड फ्लैंक्स (thread flanks) पर फिट (fit).</li>
+<li>पिच व्यास (Pitch Diameter) – <strong>मुख्य व्यास (major) और लघु व्यास (minor) के बीच (between)</strong>।</li>
+<li>सटीकता (Accuracy) – <strong>0.01 मिमी (mm)</strong>।</li>
+<li>विभिन्न पिच (pitch) के लिए – <strong>बदली (interchangeable)</strong> एन्विल (anvils).</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>स्क्रू थ्रेड माइक्रोमीटर – <strong>पिच व्यास (pitch diameter)</strong> मापता है।</li>
+<li>एन्विल (Anvil) – <strong>V-आकार (V-shaped)</strong> – थ्रेड के <strong>फ्लैंक्स (flanks)</strong> पर।</li>
+<li>स्पिंडल (Spindle) – <strong>शंक्वाकार (conical)</strong> या <strong>गोल (round)</strong>।</li>
+<li>पिच व्यास (Pitch Diameter) – <strong>थ्रेड (thread)</strong> के <strong>मध्य (middle)</strong> का व्यास।</li>
+<li>स्क्रू थ्रेड माइक्रोमीटर – <strong>0.01 मिमी (mm)</strong> सटीकता (accuracy).</li>
+<li>विभिन्न पिच (pitch) – <strong>बदली (interchangeable)</strong> एन्विल (anvils) की आवश्यकता।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 6.6 DIAL INDICATOR AND COMPARATORS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-dial-indicator">
+<div class="content-section" data-content="dial-indicator">
+<div class="section-header"><span class="icon">📊</span><span class="title">6.6 – डायल इंडिकेटर और कम्पेरेटर (Dial Indicator &amp; Comparators)</span><span class="subtitle">— डायल टेस्ट इंडिकेटर, कम्पेरेटर, डिजिटल डायल इंडिकेटर</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>डायल इंडिकेटर (Dial Indicator – Dial Test Indicator – DTI)</strong> एक <strong>परिशुद्धता (precision)</strong> माप उपकरण है जो <strong>छोटे (small)</strong> <strong>रैखिक (linear)</strong> विस्थापन (displacement) को <strong>मापता (measures)</strong> है – और इसे <strong>डायल (dial)</strong> पर <strong>पॉइंटर (pointer)</strong> के <strong>घूर्णी (rotary)</strong> गति में <strong>परिवर्तित (converts)</strong> करता है।</p>
+
+<p><strong>डायल इंडिकेटर के भाग (Parts of Dial Indicator):</strong></p>
+<ul>
+<li><strong>स्पिंडल (Spindle – प्रोब / Probe):</strong> <strong>संपर्क (contact)</strong> बिंदु – <strong>वर्कपीस (workpiece)</strong> के संपर्क में आता है।</li>
+<li><strong>प्लंजर (Plunger):</strong> <strong>स्पिंडल (spindle)</strong> को <strong>अंदर (in)</strong> धकेलता (pushes) है।</li>
+<li><strong>गियर तंत्र (Gear Mechanism – रैक और पिनियन / Rack &amp; Pinion):</strong> <strong>रैखिक (linear)</strong> गति को <strong>घूर्णी (rotary)</strong> गति में <strong>परिवर्तित (converts)</strong> करता है।</li>
+<li><strong>डायल (Dial – फेस / Face):</strong> <strong>अंशांकित (graduated)</strong> – 100 विभाजन (divisions) – 1 विभाजन = <strong>0.01 मिमी (mm)</strong>।</li>
+<li><strong>पॉइंटर (Pointer – सुई / Needle):</strong> डायल (dial) पर <strong>विस्थापन (displacement)</strong> को <strong>इंगित (indicate)</strong> करता है।</li>
+<li><strong>रीवाइंड स्प्रिंग (Rewind Spring):</strong> <strong>प्लंजर (plunger)</strong> को <strong>वापस (return)</strong> करने के लिए – <strong>शून्य (zero)</strong> स्थिति (position).</li>
+<li><strong>लग्स (Lugs) / माउंटिंग (Mounting):</strong> <strong>स्टैंड (stand)</strong> या <strong>मशीन (machine)</strong> पर <strong>फिट (fit)</strong> करने के लिए।</li>
+</ul>
+
+<p><strong>डायल इंडिकेटर के प्रकार (Types of Dial Indicators):</strong></p>
+<ul>
+<li><strong>डायल टेस्ट इंडिकेटर (Dial Test Indicator – DTI):</strong> <strong>लेवर (lever)</strong> प्रकार – <strong>छोटे (small)</strong> विस्थापन के लिए – <strong>कोणीय (angular)</strong> मापन।</li>
+<li><strong>डायल गेज (Dial Gauge – Plunger प्रकार):</strong> <strong>रैखिक (linear)</strong> विस्थापन के लिए – <strong>स्टैंड (stand)</strong> पर माउंट (mount) किया जाता है।</li>
+<li><strong>डिजिटल डायल इंडिकेटर (Digital Dial Indicator):</strong> <strong>इलेक्ट्रॉनिक (electronic)</strong> – <strong>LCD</strong> प्रदर्शन – <strong>अधिक सटीक (more accurate)</strong> – 0.001 मिमी (mm) तक।</li>
+</ul>
+
+<p><strong>कम्पेरेटर (Comparator):</strong></p>
+<ul>
+<li><strong>कम्पेरेटर (Comparator)</strong> एक ऐसा उपकरण है जो <strong>माप (measurement)</strong> को <strong>मानक (standard)</strong> (सेटिंग मास्टर – setting master) से <strong>तुलना (compare)</strong> करता है – <strong>निरपेक्ष (absolute)</strong> माप नहीं देता, बल्कि <strong>विचलन (deviation)</strong> को मापता है।</li>
+<li><strong>प्रकार (Types):</strong>
+    <ul>
+        <li><strong>मैकेनिकल कम्पेरेटर (Mechanical Comparator):</strong> गियर (gear) और लीवर (lever) तंत्र – उदाहरण: <strong>डायल इंडिकेटर (dial indicator)</strong>।</li>
+        <li><strong>न्यूमेटिक कम्पेरेटर (Pneumatic Comparator):</strong> <strong>वायु (air)</strong> का उपयोग – <strong>प्रवाह (flow)</strong> या <strong>दबाव (pressure)</strong> में परिवर्तन (change).</li>
+        <li><strong>ऑप्टिकल कम्पेरेटर (Optical Comparator):</strong> <strong>प्रकाश (light)</strong> का उपयोग – <strong>प्रोफ़ाइल (profile)</strong> तुलना (comparison).</li>
+        <li><strong>इलेक्ट्रॉनिक कम्पेरेटर (Electronic Comparator):</strong> <strong>LVDT</strong> (Linear Variable Differential Transformer) – <strong>बहुत सटीक (very accurate)</strong> – 0.001 मिमी (mm) से भी <strong>कम (less)</strong>।</li>
+    </ul>
+</li>
+</ul>
+
+<p><strong>डायल इंडिकेटर के उपयोग (Uses of Dial Indicator):</strong></p>
+<ul>
+<li><strong>सतह समतलता (Surface Flatness):</strong> सरफेस प्लेट (surface plate) पर <strong>वर्कपीस (workpiece)</strong> की समतलता (flatness) जाँचना।</li>
+<li><strong>गोलाई (Roundness):</strong> शाफ्ट (shaft) या छेद (hole) की <strong>गोलाई (roundness)</strong> जाँचना – <strong>वी-ब्लॉक (V-block)</strong> पर।</li>
+<li><strong>समानता (Parallelism):</strong> दो सतहों की <strong>समानता (parallelism)</strong> जाँचना।</li>
+<li><strong>संकेंद्रता (Concentricity):</strong> <strong>केंद्र (centre)</strong> की <strong>संरेखता (alignment)</strong> जाँचना।</li>
+<li><strong>विक्षेपण (Deflection):</strong> भार (load) के तहत <strong>विक्षेपण (deflection)</strong> मापना।</li>
+<li><strong>असेंबली (Assembly):</strong> <strong>बियरिंग (bearing)</strong> निकासी (clearance), <strong>गियर (gear)</strong> बैकलैश (backlash) जाँचना।</li>
+</ul>
+
+<p><strong>डायल इंडिकेटर का उपयोग करने के लिए सावधानियाँ (Precautions):</strong></p>
+<ul>
+<li><strong>अंशांकन (Calibration):</strong> उपयोग से पहले <strong>शून्य (zero)</strong> पर <strong>सेट (set)</strong> करें – <strong>मानक (standard)</strong> (गेज ब्लॉक – gauge block) के साथ।</li>
+<li><strong>उचित दबाव (Proper Pressure):</strong> <strong>अत्यधिक (excessive)</strong> दबाव (pressure) – <strong>त्रुटि (error)</strong> उत्पन्न कर सकता है।</li>
+<li><strong>सफाई (Cleaning):</strong> संपर्क (contact) बिंदु और वर्कपीस (workpiece) को <strong>साफ (clean)</strong> रखें – <strong>धूल (dust)</strong> त्रुटि (error) पैदा कर सकती है।</li>
+<li><strong>स्टैंड (Stand):</strong> <strong>स्थिर (stable)</strong> और <strong>सुरक्षित (secure)</strong> स्टैंड (stand) का उपयोग करें – <strong>कंपन (vibration)</strong> से बचने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: डायल इंडिकेटर और कम्पेरेटर (Dial Indicator &amp; Comparators)</strong></p>
+<p>स्थान: /images/notes/fitter/module-6/dial_indicator.jpg</p>
+<code>dial_indicator.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(प्लंजर, डायल, पॉइंटर, स्पिंडल, स्टैंड, कम्पेरेटर)</p>
+</div>
+<div class="figure-caption">Fig 6 – डायल इंडिकेटर और कम्पेरेटर</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>मापन उपकरणों की सटीकता (Accuracy of Measuring Instruments)</caption>
+<thead><tr><th>उपकरण (Instrument)</th><th>सटीकता (Accuracy)</th></tr></thead>
+<tbody>
+<tr><td>स्टील रूल (Steel Rule)</td><td>0.5 मिमी (mm)</td></tr>
+<tr><td>वर्नियर कैलिपर (Vernier Caliper)</td><td>0.02 मिमी (mm)</td></tr>
+<tr><td>माइक्रोमीटर (Micrometer)</td><td>0.01 मिमी (mm)</td></tr>
+<tr><td>वर्नियर माइक्रोमीटर (Vernier Micrometer)</td><td>0.001 मिमी (mm)</td></tr>
+<tr><td>डायल इंडिकेटर (Dial Indicator)</td><td>0.01 मिमी (mm)</td></tr>
+<tr><td>इलेक्ट्रॉनिक कम्पेरेटर (Electronic Comparator)</td><td>0.001 मिमी (mm) या कम</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>डायल इंडिकेटर – <strong>छोटे (small)</strong> विस्थापन (displacement) मापता है – <strong>0.01 मिमी</strong>।</li>
+<li>डायल टेस्ट इंडिकेटर (DTI) – <strong>लेवर (lever)</strong> प्रकार – <strong>कोणीय (angular)</strong> मापन।</li>
+<li>कम्पेरेटर (Comparator) – <strong>मानक (standard)</strong> से <strong>तुलना (compare)</strong> करता है।</li>
+<li>इलेक्ट्रॉनिक कम्पेरेटर – <strong>बहुत सटीक (very accurate)</strong> – 0.001 मिमी (mm).</li>
+<li>उपयोग: <strong>समतलता (flatness)</strong>, <strong>गोलाई (roundness)</strong>, <strong>समानता (parallelism)</strong> जाँचना।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>डायल इंडिकेटर – <strong>0.01 मिमी (mm)</strong> सटीकता (accuracy).</li>
+<li>डायल टेस्ट इंडिकेटर (DTI) – <strong>लेवर (lever)</strong> प्रकार – <strong>स्पिंडल (spindle)</strong> का उपयोग।</li>
+<li>कम्पेरेटर (Comparator) – <strong>मानक (standard)</strong> से <strong>तुलना (compare)</strong> – <strong>विचलन (deviation)</strong> मापन।</li>
+<li>इलेक्ट्रॉनिक कम्पेरेटर – <strong>LVDT</strong> – <strong>0.001 मिमी (mm)</strong> से <strong>अधिक सटीक (more accurate)</strong>।</li>
+<li>डायल इंडिकेटर – <strong>समतलता (flatness)</strong>, <strong>गोलाई (roundness)</strong>, <strong>समानता (parallelism)</strong> जाँचने के लिए।</li>
+<li>डिजिटल डायल इंडिकेटर – <strong>LCD</strong> प्रदर्शन – <strong>उच्च सटीकता (high accuracy)</strong> – 0.001 मिमी (mm).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ============================== CONCLUSION ============================== -->
+<div class="container">
+<div class="conclusion-section">
+<h2>📌 Module 6 – निष्कर्ष (Conclusion)</h2>
+<div class="bilingual">
+<div class="content">
+<p><strong>Module 6 – Fitting Assembly</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<ul>
+<li><strong>विनिमयता (Interchangeability):</strong> अर्थ, आवश्यकता, लाभ, सहनशीलता (tolerance), IS और ISO मानक (standards).</li>
+<li><strong>धातुओं के गुण (Metals Properties):</strong> भौतिक (physical) और यांत्रिक (mechanical) गुण – लौह (ferrous) और अलौह (non-ferrous) धातुएँ – मिश्र धातुएँ (alloys).</li>
+<li><strong>स्क्रैपर्स और स्क्रैपिंग (Scrapers &amp; Scraping):</strong> प्रकार (फ्लैट, त्रिकोणीय, हुक, गोल), प्रक्रिया, लाभ, सीमाएँ, Prussian blue का उपयोग।</li>
+<li><strong>वर्नियर माइक्रोमीटर (Vernier Micrometer):</strong> अल्पतमांक (least count – 0.001 मिमी), पठन, अंशांकन, शून्य त्रुटि (zero error).</li>
+<li><strong>स्क्रू थ्रेड माइक्रोमीटर (Screw Thread Micrometer):</strong> पिच व्यास (pitch diameter) मापन, V-एन्विल (V-anvil), बदली (interchangeable) एन्विल (anvils).</li>
+<li><strong>डायल इंडिकेटर और कम्पेरेटर (Dial Indicator &amp; Comparators):</strong> डायल टेस्ट इंडिकेटर (DTI), प्लंजर प्रकार, डिजिटल डायल इंडिकेटर, कम्पेरेटर (मैकेनिकल, न्यूमेटिक, ऑप्टिकल, इलेक्ट्रॉनिक), उपयोग और सावधानियाँ।</li>
+</ul>
+<p>इन सभी विषयों में महारत हासिल करना हर <strong>फिटर (fitter)</strong> के लिए आवश्यक है। प्रत्येक संचालन को <strong>सटीकता (precision)</strong> और <strong>सुरक्षा (safety)</strong> के साथ अभ्यास करें।</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ============================== MCQ ============================== -->
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="section-body">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/fitter/index.html?mod=6" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="section-body">
+<div style="display:flex; flex-wrap:wrap; gap:12px;">
+<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
+<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
+<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
+<a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
+<a href="module-5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 5: Drilling</a>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('🔧 ' + getPageTitle() + ' - Complete Fitter Theory Module 6 Study Material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('🔧 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Fitter Theory Module 6 – Fitting Assembly (Complete) Loaded.');
+        console.log('📚 Interchangeability, Metals, Scrapers, Vernier Micrometer, Thread Micrometer, Dial Indicators.');
+    </script>
+</body>
+  </html>
