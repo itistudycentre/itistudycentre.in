@@ -1,0 +1,2100 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 7 – Turning (पूर्ण) | Fitter Theory | ITI Study Centre</title>
+<meta content="Complete Fitter Theory Module 7 – Turning. Lathe safety, parts, feed mechanism, work holding, cutting tools, tool angles, speeds, chucks, boring, knurling, tapers, screw threads. Full NIMI syllabus." name="description"/>
+<style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.8;
+            user-select: none;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+
+        .main-header {
+            background: #003366;
+            padding: 16px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        @media(max-width:768px) {
+            .main-header .container { flex-direction: column; gap: 8px; }
+            .main-header nav { justify-content: center; gap: 6px 14px; }
+            .main-header nav a { font-size: 0.9rem; }
+        }
+
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a { color: #003366; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .current { color: #555; font-weight: 600; }
+
+        .page-title {
+            padding: 32px 0 22px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.3rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
+        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
+
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 540px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
+        }
+        .search-section button {
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover { background: #002244; transform: scale(1.02); }
+        @media(max-width:640px) {
+            .search-section { flex-direction: column; }
+            .search-section input { max-width: 100%; width: 100%; }
+            .search-section button { width: 100%; }
+        }
+
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            margin-bottom: 32px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 20px 28px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .section-header .icon { font-size: 1.8rem; line-height: 1; }
+        .section-header .title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body { padding: 28px 32px; background: #fafcff; }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-left: 5px solid #ffcc00;
+            padding-left: 18px;
+        }
+        .section-body h3:first-of-type { margin-top: 0; }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.12rem;
+            margin: 20px 0 10px;
+        }
+        @media(max-width:768px) {
+            .section-header { padding: 14px 18px; }
+            .section-header .title { font-size: 1.05rem; }
+            .section-body { padding: 18px 18px; }
+            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
+        }
+        @media(max-width:480px) {
+            .section-body { padding: 14px 14px; }
+            .section-header .icon { font-size: 1.4rem; }
+            .section-header .title { font-size: 0.95rem; }
+        }
+
+        .bilingual { margin: 14px 0; }
+        .bilingual .content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #1a2a3a;
+        }
+        .bilingual .content ul, .bilingual .content ol { padding-left: 26px; margin: 10px 0; }
+        .bilingual .content ul li, .bilingual .content ol li { margin-bottom: 6px; }
+        .bilingual .content p { margin: 10px 0; }
+        @media(max-width:480px) {
+            .bilingual .content { font-size: 0.95rem; }
+        }
+
+        .info-card {
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin: 18px 0;
+            background: #fff;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+        }
+        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
+        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
+        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
+        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
+        .info-card h4 { margin: 0 0 6px; color: #003366; }
+        .info-card ul { margin: 0; padding-left: 22px; }
+        .info-card ul li { margin-bottom: 4px; }
+
+        .tool-figure {
+            width:100%;
+            max-width:850px;
+            margin:24px auto;
+            text-align:center;
+            background:#f8fafc;
+            border:1px solid #e2e7ed;
+            border-radius:12px;
+            padding:20px;
+            transition:0.2s;
+        }
+        .tool-figure:hover { background:#f0f4fa; }
+        .tool-figure .placeholder-icon { font-size:3.5rem; line-height:1.2; color:#8a9aa8; margin-bottom:6px; }
+        .tool-figure .figure-caption { font-size:0.95rem; color:#555; font-weight:600; margin-top:8px; }
+        .tool-figure .image-placeholder {
+            display:block;
+            min-height:120px;
+            background:#f0f4fa;
+            border:2px dashed #c7ced7;
+            border-radius:8px;
+            padding:18px;
+            color:#68717c;
+        }
+        .tool-figure .image-placeholder code {
+            background:#e7ebef;
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:0.8rem;
+            display:inline-block;
+            margin:4px 0;
+        }
+        @media(max-width:768px) {
+            .tool-figure { padding:14px; }
+            .tool-figure .placeholder-icon { font-size:2.8rem; }
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 22px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 13px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 11px 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
+        .table-wrap tr:hover { background: #eef2f7; }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        @media(max-width:480px) {
+            .table-wrap table { font-size: 0.85rem; }
+            .table-wrap th, .table-wrap td { padding: 8px 10px; }
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin: 20px 0;
+        }
+        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
+        .compare-card {
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .compare-card h4 { font-size: 1.1rem; margin: 0 0 10px; color: #003366; }
+        .compare-card ul { padding-left: 20px; margin: 0; }
+        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .example-box strong { color: #003366; }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .important-box h4 { margin: 0 0 6px; color: #856404; }
+        .important-box ul { padding-left: 22px; margin: 0; }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
+        .short-notes ul { padding-left: 22px; margin: 0; }
+        .warning-box {
+            background: #fff5f2;
+            border-left: 5px solid #dc3545;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
+        .warning-box p { margin: 0; }
+        .success-box {
+            background: #eef9f1;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .success-box h4 { margin: 0 0 6px; color: #1e7e34; }
+        .success-box p { margin: 0; }
+
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 22px;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.link { background: #6c757d; }
+        .share-btn.link.copied { background: #28a745; }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        @media(max-width:600px) {
+            .share-section { flex-direction: column; align-items: stretch; }
+            .share-section .share-label { text-align: center; }
+            .share-btn { justify-content: center; }
+        }
+
+        .mcq-link { text-align: center; padding: 12px 0; }
+        .mcq-link a {
+            display: inline-block;
+            padding: 14px 44px;
+            background: #ffcc00;
+            color: #003366 !important;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
+        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
+
+        .conclusion-section {
+            background: #e8f4fd;
+            border: 2px solid #003366;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .conclusion-section h2 {
+            color: #003366;
+            font-size: 1.6rem;
+            border-left: 5px solid #ffcc00;
+            padding-left: 16px;
+            margin-bottom: 16px;
+        }
+        .conclusion-section ul {
+            padding-left: 26px;
+            margin: 10px 0;
+        }
+        .conclusion-section ul li { margin-bottom: 6px; }
+
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 28px 20px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 28px;
+            margin-bottom: 14px;
+        }
+        footer .footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover { background: #002244; transform: scale(1.05); }
+
+        .copy-protect::selection { background: #b3d4fc; color: #000; }
+
+        @media print {
+            #scrollTop, .share-section, .search-section { display: none !important; }
+            body { background: #fff !important; }
+            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+            .section-body { background: #fff !important; }
+            .tool-figure { border:1px solid #ccc; break-inside:avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+<div class="container">
+<div class="logo"><a href="/">🔧 ITI Study Centre</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/iti-study-centre-notes.html">Notes</a>
+<a class="active" href="/notes/fitter/index.html">Fitter</a>
+<a href="/question-bank/fitter/index.html">Question Bank</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+<a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+<a href="/notes/fitter/index.html">Fitter Theory</a>  › 
+<span class="current">Module 7 – Turning (पूर्ण)</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>⚙️ Module 7 – Turning (पूर्ण)</h1>
+<p>लेथ सुरक्षा · लेथ भाग · फीड तंत्र · कैच प्लेट · कटिंग टूल नामकरण · टूल कोण · चक · बोरिंग · नरलिंग · टेपर · स्क्रू थ्रेड</p>
+</div>
+</section>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()">🔍 Search</button>
+</section>
+
+<div class="container">
+<div class="share-section">
+<span class="share-label">📤 Share:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</button>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+Facebook
+</button>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+Twitter
+</button>
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div class="container">
+<div class="content-section" style="border:2px solid #003366;">
+<div class="section-header" style="background:#003366; border-bottom:none;">
+<span class="icon" style="color:#ffcc00;">📚</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 7 (Turning)</span>
+</div>
+<div class="section-body" style="background:#fff;">
+<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
+<a href="#sec-lathe-safety" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🛡️ 7.1 – लेथ सुरक्षा (Lathe Safety)</a>
+<a href="#sec-lathe-parts" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ 7.2 – लेथ मुख्य भाग (Lathe Main Parts)</a>
+<a href="#sec-feed-mech" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 7.3 – फीड और थ्रेड कटिंग तंत्र</a>
+<a href="#sec-catch-plate" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔗 7.4 – कैच प्लेट और डॉग के साथ कार्य</a>
+<a href="#sec-facing-rough" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 7.5 – फेसिंग और रफिंग टूल</a>
+<a href="#sec-tool-nom" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 7.6 – सिंगल पॉइंट टूल नामकरण</a>
+<a href="#sec-tool-select" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔎 7.7 – टूल चयन</a>
+<a href="#sec-tool-angles" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 7.8 – टूल कोणों की आवश्यकता</a>
+<a href="#sec-speed-feed" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚡ 7.9 – कटिंग स्पीड, फीड, कूलेंट</a>
+<a href="#sec-chucks" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 7.10 – चक – स्वतंत्र 4-जॉ चक</a>
+<a href="#sec-faceplate" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⬛ 7.11 – फेस प्लेट (Face Plate)</a>
+<a href="#sec-drilling" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🕳️ 7.12 – लेथ पर ड्रिलिंग</a>
+<a href="#sec-boring" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔄 7.13 – बोरिंग और बोरिंग टूल</a>
+<a href="#sec-tool-setting" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 7.14 – टूल सेटिंग (Tool Setting)</a>
+<a href="#sec-tool-post" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 7.15 – टूल पोस्ट (Tool Post)</a>
+<a href="#sec-knurling" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔲 7.16 – नरलिंग (Knurling)</a>
+<a href="#sec-tapers" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 7.17 – मानक टेपर (Standard Tapers)</a>
+<a href="#sec-threads" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🧵 7.18 – स्क्रू थ्रेड (Screw Thread)</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.1 LATHE SAFETY -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-lathe-safety">
+<div class="content-section" data-content="lathe-safety">
+<div class="section-header"><span class="icon">🛡️</span><span class="title">7.1 – लेथ पर सुरक्षा (Safety on Lathe)</span><span class="subtitle">— व्यक्तिगत सुरक्षा, मशीन सुरक्षा, संचालन सावधानियाँ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>लेथ (Lathe)</strong> पर काम करते समय <strong>सुरक्षा (safety)</strong> अत्यंत महत्वपूर्ण है क्योंकि लेथ में <strong>घूर्णी (rotating)</strong> भाग, <strong>तीव्र गति (high speed)</strong>, और <strong>गर्मी (heat)</strong> शामिल होती है।</p>
+
+<p><strong>सामान्य सुरक्षा सावधानियाँ (General Safety Precautions):</strong></p>
+<ul>
+<li><strong>व्यक्तिगत सुरक्षा (Personal Safety):</strong>
+    <ul>
+        <li>हमेशा <strong>सुरक्षा चश्मा (safety goggles)</strong> पहनें – <strong>चिप्स (chips)</strong> से आँखों की सुरक्षा के लिए।</li>
+        <li><strong>ढीले कपड़े (loose clothes)</strong>, <strong>टाई (tie)</strong>, <strong>दस्ताने (gloves)</strong> न पहनें – ये <strong>स्पिंडल (spindle)</strong> में <strong>फँस (entangled)</strong> सकते हैं।</li>
+        <li><strong>सुरक्षा जूते (safety shoes)</strong> पहनें – <strong>गिरने (falling)</strong> वाली वस्तुओं से बचाव।</li>
+        <li>लंबे <strong>बाल (long hair)</strong> को <strong>बाँध (tie back)</strong> करें – स्पिंडल में <strong>फँसने (catching)</strong> से बचने के लिए।</li>
+    </ul>
+</li>
+<li><strong>मशीन सुरक्षा (Machine Safety):</strong>
+    <ul>
+        <li>लेथ शुरू करने से पहले <strong>चक (chuck)</strong> को <strong>ठीक से (properly)</strong> <strong>कसें (tighten)</strong>।</li>
+        <li><strong>चक कुंजी (chuck key)</strong> को <strong>हटाएँ (remove)</strong> – <strong>शुरू (start)</strong> करने से पहले – <strong>कुंजी (key)</strong> बाहर (out) उड़ सकती है।</li>
+        <li><strong>टूल (tool)</strong> को <strong>टूल पोस्ट (tool post)</strong> में <strong>मजबूती से (firmly)</strong> <strong>क्लैंप (clamp)</strong> करें।</li>
+        <li><strong>वर्कपीस (workpiece)</strong> को <strong>सुरक्षित (secure)</strong> रूप से <strong>पकड़ें (hold)</strong> – <strong>फेंकने (throwing)</strong> से बचने के लिए।</li>
+        <li><strong>स्पिंडल गार्ड (spindle guard)</strong> और <strong>चिप गार्ड (chip guard)</strong> का उपयोग करें।</li>
+    </ul>
+</li>
+<li><strong>संचालन सावधानियाँ (Operational Precautions):</strong>
+    <ul>
+        <li>लेथ <strong>चलते (running)</strong> समय <strong>वर्कपीस (workpiece)</strong> को कभी <strong>मापें (measure)</strong> नहीं – <strong>मशीन बंद (stop)</strong> करें।</li>
+        <li><strong>चिप्स (chips)</strong> को <strong>हाथ (hand)</strong> से न हटाएँ – <strong>ब्रश (brush)</strong> या <strong>हुक (hook)</strong> का उपयोग करें – <strong>चिप्स (chips)</strong> तीक्ष्ण (sharp) होते हैं।</li>
+        <li><strong>चक (chuck)</strong> या <strong>वर्कपीस (workpiece)</strong> के <strong>घूमने (rotating)</strong> के दौरान <strong>स्पिंडल (spindle)</strong> को <strong>हाथ (hand)</strong> से <strong>रोकें (stop)</strong> नहीं – <strong>चोट (injury)</strong> हो सकती है।</li>
+        <li><strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – <strong>गर्मी (heat)</strong> और <strong>घर्षण (friction)</strong> कम करने के लिए।</li>
+        <li><strong>गति (speed)</strong> और <strong>फीड (feed)</strong> को <strong>सामग्री (material)</strong> और <strong>संचालन (operation)</strong> के अनुसार <strong>सेट (set)</strong> करें – <strong>अत्यधिक (excessive)</strong> गति से <strong>उपकरण (tool)</strong> टूट सकता है।</li>
+    </ul>
+</li>
+<li><strong>आपातकालीन (Emergency):</strong>
+    <ul>
+        <li><strong>आपातकालीन स्टॉप (emergency stop)</strong> का स्थान (location) जानें – <strong>पैनल (panel)</strong> पर।</li>
+        <li><strong>अग्निशामक यंत्र (fire extinguisher)</strong> का स्थान जानें – <strong>तेल (oil)</strong> आग (fire) पकड़ सकता है।</li>
+        <li>किसी भी <strong>दुर्घटना (accident)</strong> की <strong>तुरंत (immediately)</strong> सूचना (report) दें।</li>
+    </ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: लेथ सुरक्षा (Lathe Safety)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/lathe_safety.jpg</p>
+<code>lathe_safety.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(सुरक्षा चश्मा, चक कुंजी हटाना, गार्ड, चिप हटाना)</p>
+</div>
+<div class="figure-caption">Fig 1 – लेथ सुरक्षा</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>सुरक्षा चश्मा (safety goggles) – <strong>अनिवार्य (mandatory)</strong>।</li>
+<li>चक कुंजी (chuck key) – <strong>शुरू करने से पहले हटाएँ (remove before start)</strong>।</li>
+<li>चिप्स (chips) – <strong>ब्रश (brush)</strong> से हटाएँ – <strong>हाथ (hand)</strong> से नहीं।</li>
+<li>ढीले कपड़े (loose clothes) – <strong>न पहनें (do not wear)</strong>।</li>
+<li>कटिंग फ्लुइड (cutting fluid) – <strong>गर्मी (heat)</strong> कम करता है।</li></ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>लेथ पर <strong>सबसे (most)</strong> महत्वपूर्ण सुरक्षा: <strong>चक कुंजी (chuck key) हटाना</strong>।</li>
+<li>लेथ चलते समय <strong>कभी (never)</strong> वर्कपीस को <strong>मापें (measure)</strong> नहीं।</li>
+<li>चिप्स (chips) को <strong>हाथ (hand)</strong> से न हटाएँ – <strong>ब्रश (brush)</strong> का उपयोग करें।</li>
+<li>ढीले कपड़े (loose clothes) – <strong>स्पिंडल (spindle)</strong> में <strong>फँस (entangled)</strong> सकते हैं।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.2 LATHE MAIN PARTS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-lathe-parts">
+<div class="content-section" data-content="lathe-parts">
+<div class="section-header"><span class="icon">⚙️</span><span class="title">7.2 – लेथ मुख्य भाग (Lathe Main Parts)</span><span class="subtitle">— बेड, हेडस्टॉक, टेलस्टॉक, कैरिज, कम्पाउंड रेस्ट, टूल पोस्ट</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>लेथ (Lathe)</strong> एक मशीन है जिसमें <strong>वर्कपीस (workpiece)</strong> घूमता है और <strong>काटने का उपकरण (cutting tool)</strong> स्थिर (stationary) रहकर सामग्री हटाता है।</p>
+
+<p><strong>लेथ के मुख्य भाग (Main Parts of Lathe):</strong></p>
+<ul>
+<li><strong>बेड (Bed):</strong> लेथ का <strong>आधार (base)</strong> – <strong>भारी कास्ट आयरन (heavy cast iron)</strong> से बना – सभी भागों को <strong>सहारा (support)</strong> देता है – <strong>सटीक (precise)</strong> मार्गदर्शन (guidance) के लिए <strong>समतल (flat)</strong> और <strong>सीधा (straight)</strong>।</li>
+<li><strong>हेडस्टॉक (Headstock):</strong> बेड के <strong>बाएँ (left)</strong> सिरे (end) पर स्थित – इसमें <strong>मुख्य स्पिंडल (main spindle)</strong>, <strong>गियर बॉक्स (gearbox)</strong>, और <strong>चक (chuck)</strong> होते हैं – स्पिंडल को <strong>घुमाता (rotates)</strong> है।</li>
+<li><strong>टेलस्टॉक (Tailstock):</strong> बेड के <strong>दाएँ (right)</strong> सिरे (end) पर स्थित – इसमें <strong>टेलस्टॉक स्पिंडल (tailstock spindle)</strong> होता है जो <strong>सेंटर (centre)</strong> या <strong>ड्रिल चक (drill chuck)</strong> धारण कर सकता है – <strong>बेड (bed)</strong> पर <strong>स्लाइड (slide)</strong> कर सकता है।</li>
+<li><strong>कैरिज (Carriage):</strong> बेड पर <strong>बाएँ-दाएँ (left-right)</strong> चलता है – इसमें <strong>एप्रन (apron)</strong>, <strong>सैडल (saddle)</strong>, और <strong>क्रॉस स्लाइड (cross slide)</strong> शामिल हैं – <strong>कटिंग टूल (cutting tool)</strong> को धारण करता है और <strong>फीड (feed)</strong> देता है।</li>
+<li><strong>कम्पाउंड रेस्ट (Compound Rest):</strong> क्रॉस स्लाइड (cross slide) पर स्थित – <strong>टूल पोस्ट (tool post)</strong> को <strong>कोण (angle)</strong> पर <strong>घुमा (swivel)</strong> सकता है – <strong>टेपर टर्निंग (taper turning)</strong> के लिए – <strong>पूर्ण (360°)</strong> घूर्णन (rotation) नहीं, लेकिन <strong>±60°</strong> तक।</li>
+<li><strong>टूल पोस्ट (Tool Post):</strong> <strong>कटिंग टूल (cutting tool)</strong> को <strong>क्लैंप (clamp)</strong> करता है – <strong>रिंग (ring)</strong> या <strong>स्क्रू (screw)</strong> द्वारा।</li>
+<li><strong>लीड स्क्रू (Lead Screw):</strong> <strong>थ्रेड काटने (thread cutting)</strong> के लिए <strong>सटीक (precise)</strong> फीड प्रदान करता है – <strong>पिच (pitch)</strong> सटीक (accurate) होती है।</li>
+<li><strong>फीड रॉड (Feed Rod):</strong> <strong>सामान्य फीड (normal feed)</strong> के लिए – <strong>चिकनी (smooth)</strong> सतह (turning, facing) के लिए।</li>
+<li><strong>स्पिंडल (Spindle):</strong> <strong>चक (chuck)</strong> को <strong>घुमाता (rotates)</strong> है – <strong>खोखला (hollow)</strong> – <strong>बार (bar)</strong> सामग्री को <strong>पास (pass)</strong> करने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: लेथ मुख्य भाग (Lathe Main Parts)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/lathe_parts.jpg</p>
+<code>lathe_parts.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बेड, हेडस्टॉक, टेलस्टॉक, कैरिज, कम्पाउंड रेस्ट, टूल पोस्ट, लीड स्क्रू)</p>
+</div>
+<div class="figure-caption">Fig 2 – लेथ मुख्य भाग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बेड (Bed) – <strong>आधार (base)</strong> – कास्ट आयरन (cast iron).</li>
+<li>हेडस्टॉक (Headstock) – <strong>स्पिंडल (spindle)</strong> और <strong>चक (chuck)</strong> को घुमाता है।</li>
+<li>टेलस्टॉक (Tailstock) – <strong>सेंटर (centre)</strong> या <strong>ड्रिल (drill)</strong> धारण करता है।</li>
+<li>कैरिज (Carriage) – <strong>टूल (tool)</strong> को <strong>फीड (feed)</strong> देता है।</li>
+<li>लीड स्क्रू (Lead Screw) – <strong>थ्रेड कटिंग (thread cutting)</strong> के लिए।</li>
+<li>फीड रॉड (Feed Rod) – <strong>सामान्य टर्निंग (turning)</strong> के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बेड (Bed) – <strong>कास्ट आयरन (cast iron)</strong> – <strong>भारी (heavy)</strong> और <strong>कठोर (rigid)</strong>।</li>
+<li>हेडस्टॉक (Headstock) – <strong>स्पिंडल (spindle)</strong> को घुमाता है – <strong>बिजली (motor)</strong> और <strong>गियर (gears)</strong> द्वारा।</li>
+<li>टेलस्टॉक (Tailstock) – <strong>बेड (bed)</strong> पर <strong>स्लाइड (slide)</strong> कर सकता है – <strong>क्लैंप (clamp)</strong> करके <strong>लॉक (lock)</strong> किया जाता है।</li>
+<li>कम्पाउंड रेस्ट (Compound Rest) – <strong>±60°</strong> तक <strong>घुमा (swivel)</strong> सकता है – <strong>टेपर (taper)</strong> के लिए।</li>
+<li>लीड स्क्रू (Lead Screw) – <strong>थ्रेड (thread)</strong> के लिए – <strong>फीड रॉड (feed rod)</strong> – सामान्य के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.3 FEED AND THREAD CUTTING MECHANISM -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-feed-mech">
+<div class="content-section" data-content="feed-mech">
+<div class="section-header"><span class="icon">🔩</span><span class="title">7.3 – फीड और थ्रेड कटिंग तंत्र (Feed &amp; Thread Cutting Mechanism)</span><span class="subtitle">— फीड प्रकार, चेंज गियर्स, लीड स्क्रू, हाफ नट</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>लेथ (Lathe)</strong> पर <strong>फीड (feed)</strong> वह गति है जिससे <strong>काटने का उपकरण (cutting tool)</strong> <strong>वर्कपीस (workpiece)</strong> के <strong>अक्ष (axis)</strong> के साथ <strong>चलता (moves)</strong> है। <strong>फीड (feed)</strong> और <strong>थ्रेड कटिंग (thread cutting)</strong> तंत्र <strong>लीड स्क्रू (lead screw)</strong>, <strong>चेंज गियर्स (change gears)</strong>, और <strong>हाफ नट (half nut)</strong> द्वारा संचालित होता है।</p>
+
+<p><strong>फीड के प्रकार (Types of Feed):</strong></p>
+<ul>
+<li><strong>लॉन्गिट्यूडिनल फीड (Longitudinal Feed – अनुदैर्ध्य):</strong> टूल <strong>वर्कपीस (workpiece)</strong> की <strong>लंबाई (length)</strong> के <strong>समानांतर (parallel)</strong> चलता है – <strong>टर्निंग (turning)</strong> के लिए।</li>
+<li><strong>क्रॉस फीड (Cross Feed – अनुप्रस्थ):</strong> टूल <strong>वर्कपीस (workpiece)</strong> के <strong>अक्ष (axis)</strong> के <strong>लंबवत (perpendicular)</strong> चलता है – <strong>फेसिंग (facing)</strong>, <strong>ग्रूविंग (grooving)</strong> के लिए।</li>
+<li><strong>एंगुलर फीड (Angular Feed – कोणीय):</strong> टूल <strong>कोण (angle)</strong> पर चलता है – <strong>टेपर टर्निंग (taper turning)</strong> के लिए – <strong>कम्पाउंड रेस्ट (compound rest)</strong> द्वारा।</li>
+</ul>
+
+<p><strong>फीड तंत्र के घटक (Components of Feed Mechanism):</strong></p>
+<ul>
+<li><strong>चेंज गियर्स (Change Gears):</strong> <strong>स्पिंडल (spindle)</strong> से <strong>लीड स्क्रू (lead screw)</strong> तक <strong>गति (speed)</strong> स्थानांतरित (transfer) करते हैं – <strong>विभिन्न (various)</strong> <strong>पिच (pitch)</strong> प्राप्त करने के लिए – <strong>ट्रेन (train)</strong> के रूप में व्यवस्थित (arranged).</li>
+<li><strong>लीड स्क्रू (Lead Screw):</strong> <strong>सटीक (accurate)</strong> पिच (pitch) वाला <strong>लंबा (long)</strong> स्क्रू – <strong>थ्रेड कटिंग (thread cutting)</strong> के लिए – <strong>सटीकता (accuracy)</strong> ±0.01 मिमी (mm).</li>
+<li><strong>फीड रॉड (Feed Rod):</strong> <strong>सामान्य (normal)</strong> फीड के लिए – <strong>चिकनी (smooth)</strong> सतह के लिए – <strong>गियर (gear)</strong> और <strong>रैक (rack)</strong> द्वारा।</li>
+<li><strong>हाफ नट (Half Nut):</strong> <strong>लीड स्क्रू (lead screw)</strong> के साथ <strong>जोड़ (engage)</strong> और <strong>अलग (disengage)</strong> करने के लिए – <strong>कैरिज (carriage)</strong> को <strong>चलाने (move)</strong> के लिए – <strong>थ्रेड कटिंग (thread cutting)</strong> के दौरान।</li>
+<li><strong>एप्रन (Apron):</strong> कैरिज (carriage) का <strong>अगला (front)</strong> भाग – इसमें <strong>हाफ नट (half nut)</strong>, <strong>फीड (feed)</strong> नियंत्रण (controls), और <strong>क्लच (clutch)</strong> होते हैं।</li>
+</ul>
+
+<p><strong>थ्रेड कटिंग तंत्र (Thread Cutting Mechanism):</strong></p>
+<ol>
+<li><strong>चेंज गियर्स (change gears)</strong> को वांछित (desired) <strong>पिच (pitch)</strong> के अनुसार <strong>सेट (set)</strong> करें – <strong>चार्ट (chart)</strong> के अनुसार।</li>
+<li><strong>हाफ नट (half nut)</strong> को <strong>लीड स्क्रू (lead screw)</strong> के साथ <strong>एंगेज (engage)</strong> करें।</li>
+<li><strong>टूल (tool)</strong> को <strong>वर्कपीस (workpiece)</strong> के <strong>अंत (end)</strong> पर <strong>रखें (position)</strong> – <strong>पहला कट (first cut)</strong> के लिए।</li>
+<li><strong>स्पिंडल (spindle)</strong> को <strong>चालू (start)</strong> करें – <strong>कैरिज (carriage)</strong> स्वचालित (automatically) <strong>लीड स्क्रू (lead screw)</strong> द्वारा <strong>चलता (moves)</strong> है।</li>
+<li>कट (cut) पूरा होने पर, <strong>हाफ नट (half nut)</strong> को <strong>अलग (disengage)</strong> करें – <strong>टूल (tool)</strong> को <strong>वापस (return)</strong> करें – <strong>अगला कट (next cut)</strong> के लिए – जब तक <strong>वांछित गहराई (desired depth)</strong> प्राप्त न हो जाए।</li>
+<li><strong>कम्पाउंड रेस्ट (compound rest)</strong> को <strong>29.5°</strong> पर सेट करें – <strong>प्रत्येक कट (each cut)</strong> को <strong>फीड (feed)</strong> करने के लिए – <strong>चिप (chip)</strong> को <strong>तोड़ने (breaking)</strong> और <strong>अच्छी फिनिश (good finish)</strong> के लिए।</li>
+</ol>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: फीड और थ्रेड कटिंग तंत्र (Feed &amp; Thread Cutting Mechanism)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/feed_mechanism.jpg</p>
+<code>feed_mechanism.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(चेंज गियर्स, लीड स्क्रू, हाफ नट, एप्रन, फीड रॉड)</p>
+</div>
+<div class="figure-caption">Fig 3 – फीड और थ्रेड कटिंग तंत्र</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>फीड (Feed) – <strong>टूल (tool)</strong> की <strong>गति (movement)</strong> – लॉन्गिट्यूडिनल, क्रॉस, एंगुलर।</li>
+<li>लीड स्क्रू (Lead Screw) – <strong>थ्रेड कटिंग (thread cutting)</strong> के लिए।</li>
+<li>हाफ नट (Half Nut) – लीड स्क्रू को <strong>जोड़/अलग (engage/disengage)</strong> करता है।</li>
+<li>चेंज गियर्स (Change Gears) – <strong>पिच (pitch)</strong> बदलने के लिए।</li>
+<li>कम्पाउंड रेस्ट – <strong>29.5°</strong> पर सेट – <strong>थ्रेड कटिंग (thread cutting)</strong> के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फीड (Feed) – <strong>लॉन्गिट्यूडिनल (longitudinal)</strong>, <strong>क्रॉस (cross)</strong>, <strong>एंगुलर (angular)</strong>।</li>
+<li>लीड स्क्रू (Lead Screw) – <strong>थ्रेड (thread)</strong> काटने के लिए – <strong>सटीक (accurate)</strong> पिच।</li>
+<li>हाफ नट (Half Nut) – <strong>कैरिज (carriage)</strong> को <strong>लीड स्क्रू (lead screw)</strong> से <strong>जोड़ता (connects)</strong> है।</li>
+<li>चेंज गियर्स (Change Gears) – <strong>विभिन्न (different)</strong> पिच (pitch) प्राप्त करने के लिए।</li>
+<li>कम्पाउंड रेस्ट – <strong>29.5°</strong> – <strong>थ्रेड कटिंग (thread cutting)</strong> में <strong>चिप (chip)</strong> तोड़ने के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.4 HOLDING JOB BETWEEN CENTRES, CATCH PLATE & DOG -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-catch-plate">
+<div class="content-section" data-content="catch-plate">
+<div class="section-header"><span class="icon">🔗</span><span class="title">7.4 – सेंटर के बीच जॉब पकड़ना और कैच प्लेट एवं डॉग के साथ कार्य</span><span class="subtitle">— कैच प्लेट, डॉग, सेंटर, कार्यप्रणाली</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>लेथ (Lathe)</strong> पर <strong>लंबी (long)</strong> और <strong>बेलनाकार (cylindrical)</strong> वर्कपीस (workpieces) को <strong>सेंटर (centres)</strong> के बीच <strong>पकड़ा (held)</strong> जाता है। <strong>कैच प्लेट (catch plate)</strong> और <strong>डॉग (dog)</strong> का उपयोग <strong>वर्कपीस (workpiece)</strong> को <strong>स्पिंडल (spindle)</strong> से <strong>जोड़ने (drive)</strong> के लिए किया जाता है।</p>
+
+<p><strong>सेंटर के प्रकार (Types of Centres):</strong></p>
+<ul>
+<li><strong>लाइव सेंटर (Live Centre – चल / Rotating):</strong> <strong>हेडस्टॉक (headstock)</strong> में – <strong>स्पिंडल (spindle)</strong> के साथ <strong>घूमता (rotates)</strong> है – <strong>चक (chuck)</strong> के साथ।</li>
+<li><strong>डेड सेंटर (Dead Centre – स्थिर / Stationary):</strong> <strong>टेलस्टॉक (tailstock)</strong> में – <strong>स्थिर (stationary)</strong> रहता है – <strong>स्नेहन (lubrication)</strong> की आवश्यकता होती है – <strong>घर्षण (friction)</strong> और <strong>गर्मी (heat)</strong> उत्पन्न करता है।</li>
+<li><strong>हाफ-सेंटर (Half Centre):</strong> डेड सेंटर (dead centre) का <strong>आधा (half)</strong> कटा (cut) हुआ – <strong>फेसिंग (facing)</strong> के लिए – <strong>टूल (tool)</strong> को <strong>केंद्र (centre)</strong> तक <strong>पहुँच (reach)</strong> की अनुमति देता है।</li>
+<li><strong>ट्यूब सेंटर (Tube Centre – पाइप सेंटर):</strong> <strong>खोखले (hollow)</strong> वर्कपीस (pipe) के लिए – <strong>बाहरी (outer)</strong> और <strong>आंतरिक (inner)</strong> सेंटर।</li>
+</ul>
+
+<p><strong>कैच प्लेट (Catch Plate – ड्राइव प्लेट / Drive Plate):</strong></p>
+<ul>
+<li>हेडस्टॉक (headstock) <strong>स्पिंडल (spindle)</strong> पर <strong>फिट (fit)</strong> होता है – <strong>चक (chuck)</strong> की <strong>जगह (instead)</strong>।</li>
+<li>इसमें <strong>स्लॉट्स (slots)</strong> या <strong>छेद (holes)</strong> होते हैं – <strong>डॉग (dog)</strong> को <strong>पकड़ने (hold)</strong> के लिए।</li>
+<li><strong>घूर्णन (rotation)</strong> को <strong>वर्कपीस (workpiece)</strong> तक <strong>संचारित (transmit)</strong> करता है – <strong>डॉग (dog)</strong> के माध्यम से।</li>
+</ul>
+
+<p><strong>डॉग (Dog – कैरियर / Carrier):</strong></p>
+<ul>
+<li>एक <strong>क्लैंप (clamp)</strong> जो <strong>वर्कपीस (workpiece)</strong> पर <strong>फिट (fit)</strong> होता है – <strong>एक सिरे (end)</strong> पर।</li>
+<li>इसमें एक <strong>पिन (pin)</strong> या <strong>टेल (tail)</strong> होता है जो <strong>कैच प्लेट (catch plate)</strong> के <strong>स्लॉट (slot)</strong> में <strong>फिट (fit)</strong> होता है – <strong>ड्राइव (drive)</strong> प्रदान करता है।</li>
+<li><strong>प्रकार (Types):</strong> <strong>स्ट्रेट-टेल (straight-tail)</strong> और <strong>बेंट-टेल (bent-tail)</strong> डॉग – <strong>स्ट्रेट (straight)</strong> – आमतौर पर सामान्य (common) के लिए, <strong>बेंट (bent)</strong> – <strong>बड़े (large)</strong> व्यास (diameter) के लिए।</li>
+</ul>
+
+<p><strong>सेंटर के बीच जॉब पकड़ने की प्रक्रिया (Process of Holding Job Between Centres):</strong></p>
+<ol>
+<li>वर्कपीस (workpiece) के <strong>दोनों (both)</strong> सिरों (ends) पर <strong>सेंटर ड्रिल (centre drill)</strong> से <strong>सेंटर छेद (centre holes)</strong> बनाएँ – <strong>डेड सेंटर (dead centre)</strong> और <strong>लाइव सेंटर (live centre)</strong> के लिए।</li>
+<li><strong>कैच प्लेट (catch plate)</strong> को <strong>स्पिंडल (spindle)</strong> पर <strong>फिट (fit)</strong> करें।</li>
+<li><strong>डॉग (dog)</strong> को वर्कपीस (workpiece) के <strong>एक (one)</strong> सिरे (end) पर <strong>क्लैंप (clamp)</strong> करें – <strong>टेल (tail)</strong> को <strong>कैच प्लेट (catch plate)</strong> के <strong>स्लॉट (slot)</strong> में <strong>लगाएँ (insert)</strong>।</li>
+<li>वर्कपीस (workpiece) को <strong>लाइव सेंटर (live centre)</strong> और <strong>डेड सेंटर (dead centre)</strong> के <strong>बीच (between)</strong> <strong>रखें (place)</strong> – <strong>डेड सेंटर (dead centre)</strong> को <strong>टेलस्टॉक (tailstock)</strong> द्वारा <strong>आगे (advance)</strong> करें – <strong>हल्का (light)</strong> दबाव (pressure) – <strong>अधिक (excessive)</strong> दबाव से <strong>गर्मी (heat)</strong> और <strong>घिसाव (wear)</strong> होता है।</li>
+<li><strong>लुब्रिकेशन (Lubrication):</strong> <strong>डेड सेंटर (dead centre)</strong> पर <strong>तेल (oil)</strong> या <strong>ग्रीस (grease)</strong> लगाएँ – <strong>घर्षण (friction)</strong> कम करने के लिए।</li>
+<li>स्पिंडल (spindle) को <strong>चालू (start)</strong> करें – <strong>वर्कपीस (workpiece)</strong> <strong>घूमता (rotates)</strong> है – <strong>डॉग (dog)</strong> और <strong>कैच प्लेट (catch plate)</strong> द्वारा संचालित (driven).</li>
+<li><strong>टर्निंग (turning)</strong> या <strong>अन्य (other)</strong> संचालन (operations) करें – <strong>सेंटर (centres)</strong> के बीच।</li>
+</ol>
+
+<p><strong>सावधानियाँ (Precautions):</strong></p>
+<ul>
+<li><strong>डेड सेंटर (dead centre)</strong> पर <strong>नियमित (regular)</strong> रूप से <strong>तेल (oil)</strong> डालें – <strong>गर्मी (heat)</strong> और <strong>घिसाव (wear)</strong> को रोकने के लिए।</li>
+<li><strong>डॉग (dog)</strong> को <strong>मजबूती से (firmly)</strong> क्लैंप (clamp) करें – <strong>स्लिप (slip)</strong> से बचने के लिए।</li>
+<li><strong>सेंटर (centre)</strong> के <strong>कोण (angle)</strong> (60°) को <strong>बनाए रखें (maintain)</strong> – <strong>सटीक (accurate)</strong> स्थिति (positioning) के लिए।</li>
+<li><strong>टेलस्टॉक (tailstock)</strong> को <strong>लॉक (lock)</strong> करें – <strong>बेड (bed)</strong> पर – <strong>चलने (moving)</strong> से रोकने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: सेंटर के बीच जॉब, कैच प्लेट और डॉग</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/catch_plate_dog.jpg</p>
+<code>catch_plate_dog.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(लाइव सेंटर, डेड सेंटर, कैच प्लेट, डॉग, ड्राइव व्यवस्था)</p>
+</div>
+<div class="figure-caption">Fig 4 – कैच प्लेट और डॉग के साथ सेंटर के बीच जॉब</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>लाइव सेंटर (Live Centre) – <strong>हेडस्टॉक</strong> में – <strong>घूमता (rotates)</strong> है।</li>
+<li>डेड सेंटर (Dead Centre) – <strong>टेलस्टॉक</strong> में – <strong>स्थिर (stationary)</strong> – <strong>स्नेहन (lubrication)</strong> आवश्यक।</li>
+<li>कैच प्लेट (Catch Plate) – <strong>स्पिंडल (spindle)</strong> पर – <strong>डॉग (dog)</strong> को <strong>चलाता (drives)</strong> है।</li>
+<li>डॉग (Dog) – <strong>वर्कपीस (workpiece)</strong> पर क्लैंप (clamp) – <strong>टेल (tail)</strong> कैच प्लेट (catch plate) में।</li>
+<li>सेंटर ड्रिल (Centre Drill) – <strong>सेंटर छेद (centre holes)</strong> बनाने के लिए – <strong>60°</strong> कोण।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>लाइव सेंटर (Live Centre) – <strong>घूमता (rotating)</strong> – हेडस्टॉक (headstock) में।</li>
+<li>डेड सेंटर (Dead Centre) – <strong>स्थिर (stationary)</strong> – टेलस्टॉक (tailstock) में – <strong>तेल (oil)</strong> की आवश्यकता।</li>
+<li>कैच प्लेट (Catch Plate) – <strong>ड्राइव (drive)</strong> प्रदान करता है – <strong>स्पिंडल (spindle)</strong> से <strong>वर्कपीस (workpiece)</strong> तक।</li>
+<li>डॉग (Dog) – <strong>वर्कपीस (workpiece)</strong> को <strong>पकड़ता (grips)</strong> है – <strong>कैच प्लेट (catch plate)</strong> के स्लॉट (slot) में।</li>
+<li>सेंटर ड्रिल (Centre Drill) – <strong>60°</strong> कोण (angle) वाला।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.5 FACING AND ROUGHING TOOL -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-facing-rough">
+<div class="content-section" data-content="facing-rough">
+<div class="section-header"><span class="icon">🔧</span><span class="title">7.5 – फेसिंग और रफिंग टूल (Facing &amp; Roughing Tool)</span><span class="subtitle">— विवरण, ज्यामिति, उपयोग, अंतर</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>फेसिंग (Facing)</strong> और <strong>रफिंग (Roughing)</strong> लेथ (lathe) के <strong>बुनियादी (basic)</strong> संचालन (operations) हैं। इनके लिए <strong>अलग (different)</strong> प्रकार के <strong>काटने के उपकरण (cutting tools)</strong> का उपयोग किया जाता है।</p>
+
+<p><strong>फेसिंग टूल (Facing Tool):</strong></p>
+<ul>
+<li><strong>उपयोग (Use):</strong> वर्कपीस (workpiece) के <strong>सिरे (end)</strong> को <strong>सपाट (flat)</strong> बनाने के लिए – <strong>लंबाई (length)</strong> को <strong>सटीक (accurate)</strong> करने के लिए।</li>
+<li><strong>ज्यामिति (Geometry):</strong>
+    <ul>
+        <li><strong>एंड कटिंग (end cutting)</strong> – <strong>कटिंग एज (cutting edge)</strong> – <strong>वर्कपीस (workpiece)</strong> के <strong>अक्ष (axis)</strong> के <strong>लंबवत (perpendicular)</strong>।</li>
+        <li><strong>साइड रेक (side rake)</strong> – <strong>5°–10°</strong> – <strong>चिप (chip)</strong> प्रवाह (flow) के लिए।</li>
+        <li><strong>निकासी कोण (clearance angle)</strong> – <strong>6°–8°</strong> – <strong>रगड़ (rubbing)</strong> से बचने के लिए।</li>
+        <li><strong>नोज़ त्रिज्या (nose radius)</strong> – <strong>0.5–1.0 मिमी (mm)</strong> – <strong>फिनिश (finish)</strong> के लिए।</li>
+    </ul>
+</li>
+<li><strong>टूल होल्डर (Tool Holder):</strong> <strong>बाएँ-हाथ (left-hand)</strong> या <strong>दाएँ-हाथ (right-hand)</strong> – <strong>हेडस्टॉक (headstock)</strong> की ओर <strong>फीड (feed)</strong> करने के लिए।</li>
+</ul>
+
+<p><strong>रफिंग टूल (Roughing Tool):</strong></p>
+<ul>
+<li><strong>उपयोग (Use):</strong> <strong>बड़ी मात्रा (large amount)</strong> में <strong>सामग्री (material)</strong> को <strong>तेज़ी से (quickly)</strong> हटाने के लिए – <strong>फिनिश (finish)</strong> का ध्यान नहीं।</li>
+<li><strong>ज्यामिति (Geometry):</strong>
+    <ul>
+        <li><strong>कटिंग एज (cutting edge)</strong> – <strong>मजबूत (strong)</strong> – <strong>बड़ा (large)</strong> नोज़ त्रिज्या (nose radius) – <strong>1.5–2.5 मिमी (mm)</strong>।</li>
+        <li><strong>रेक कोण (rake angle)</strong> – <strong>8°–12°</strong> – <strong>चिप (chip)</strong> को <strong>तोड़ने (breaking)</strong> के लिए।</li>
+        <li><strong>निकासी कोण (clearance angle)</strong> – <strong>6°–8°</strong> – <strong>रगड़ (rubbing)</strong> से बचने के लिए।</li>
+        <li><strong>टूल की कठोरता (tool rigidity)</strong> – <strong>उच्च (high)</strong> – <strong>भारी (heavy)</strong> कट (cut) के लिए।</li>
+        <li><strong>साइड रेक (side rake)</strong> – <strong>12°–18°</strong> – <strong>चिप (chip)</strong> प्रवाह के लिए।</li>
+    </ul>
+</li>
+<li><strong>फीड (Feed):</strong> <strong>उच्च (high)</strong> – <strong>0.2–0.5 मिमी/चक्कर (mm/rev)</strong>।</li>
+<li><strong>गति (Speed):</strong> <strong>कम (low)</strong> – <strong>फिनिश टर्निंग (finish turning)</strong> की तुलना में।</li>
+</ul>
+
+<p><strong>फेसिंग टूल और रफिंग टूल के बीच अंतर (Difference):</strong></p>
+<table style="width:100%; border-collapse:collapse; margin:14px 0;">
+<tr style="background:#003366; color:#fff;"><th style="padding:10px; text-align:left;">फेसिंग टूल (Facing Tool)</th><th style="padding:10px; text-align:left;">रफिंग टूल (Roughing Tool)</th></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">सिरा (end) सपाट (flat) करता है</td><td style="padding:10px; border:1px solid #ddd;">बड़ी मात्रा में सामग्री हटाता है</td></tr>
+<tr><td style="padding:10px; border:1px solid #ddd;">नोज़ त्रिज्या (nose radius) छोटी – 0.5–1.0 मिमी</td><td style="padding:10px; border:1px solid #ddd;">नोज़ त्रिज्या बड़ी – 1.5–2.5 मिमी</td></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">कम फीड (low feed) – 0.05–0.15 मिमी/चक्कर</td><td style="padding:10px; border:1px solid #ddd;">उच्च फीड (high feed) – 0.2–0.5 मिमी/चक्कर</td></tr>
+<tr><td style="padding:10px; border:1px solid #ddd;">अच्छी फिनिश (finish) – Ra 1.6–3.2 µm</td><td style="padding:10px; border:1px solid #ddd;">खुरदरी (rough) सतह – Ra 6.3–12.5 µm</td></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">टूल क्रॉस-सेक्शन (cross-section) पतला</td><td style="padding:10px; border:1px solid #ddd;">टूल क्रॉस-सेक्शन (cross-section) मोटा</td></tr>
+</table>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: फेसिंग और रफिंग टूल (Facing &amp; Roughing Tools)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/facing_roughing_tools.jpg</p>
+<code>facing_roughing_tools.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(फेसिंग टूल, रफिंग टूल, ज्यामिति अंतर)</p>
+</div>
+<div class="figure-caption">Fig 5 – फेसिंग और रफिंग टूल</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>फेसिंग – <strong>सिरा (end)</strong> सपाट (flat) – <strong>सटीक लंबाई (accurate length)</strong>।</li>
+<li>रफिंग – <strong>बड़ी मात्रा (large amount)</strong> सामग्री हटाना – <strong>तेज़ (fast)</strong>।</li>
+<li>रफिंग टूल – <strong>बड़ा (large)</strong> नोज़ त्रिज्या (nose radius) – <strong>मजबूत (strong)</strong>।</li>
+<li>फेसिंग टूल – <strong>छोटी (small)</strong> नोज़ त्रिज्या – <strong>अच्छी फिनिश (good finish)</strong>।</li>
+<li>फीड (Feed) – रफिंग के लिए <strong>उच्च (high)</strong> – फेसिंग के लिए <strong>कम (low)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फेसिंग टूल – <strong>सिरा (end)</strong> सपाट करता है – <strong>लंबवत (perpendicular)</strong> कटिंग एज।</li>
+<li>रफिंग टूल – <strong>मोटा (thick)</strong> चिप (chip) हटाता है – <strong>उच्च फीड (high feed)</strong>।</li>
+<li>फेसिंग टूल – <strong>कम (low)</strong> फीड – <strong>अच्छी (good)</strong> सतह फिनिश (surface finish).</li>
+<li>रफिंग टूल – <strong>बड़ा (large)</strong> नोज़ त्रिज्या – <strong>उच्च (high)</strong> कठोरता (rigidity).</li>
+<li>फेसिंग – <strong>टूल (tool)</strong> को <strong>केंद्र (centre)</strong> से <strong>बाहर (outward)</strong> की ओर फीड (feed) किया जाता है।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.6 NOMENCLATURE OF SINGLE POINT AND MULTI POINT TOOLS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tool-nom">
+<div class="content-section" data-content="tool-nom">
+<div class="section-header"><span class="icon">📐</span><span class="title">7.6 – सिंगल पॉइंट और मल्टी पॉइंट कटिंग टूल का नामकरण (Nomenclature)</span><span class="subtitle">— कोण, सतहें, किनारे, प्रकार</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>कटिंग टूल (Cutting Tool)</strong> के <strong>नामकरण (nomenclature)</strong> में <strong>टूल (tool)</strong> के <strong>विभिन्न (various)</strong> भागों और <strong>कोणों (angles)</strong> के नाम (names) शामिल होते हैं।</p>
+
+<p><strong>सिंगल पॉइंट कटिंग टूल (Single Point Cutting Tool – SPCT):</strong></p>
+<ul>
+<li><strong>शैंक (Shank):</strong> टूल का <strong>मुख्य (main)</strong> भाग – <strong>टूल पोस्ट (tool post)</strong> में <strong>क्लैंप (clamp)</strong> किया जाता है।</li>
+<li><strong>फेस (Face):</strong> वह <strong>सतह (surface)</strong> जिस पर <strong>चिप (chip)</strong> <strong>प्रवाहित (flows)</strong> होती है – <strong>ऊपरी (top)</strong> सतह।</li>
+<li><strong>फ्लैंक (Flank – पार्श्व):</strong> वह <strong>सतह (surface)</strong> जो <strong>वर्कपीस (workpiece)</strong> के <strong>सामने (facing)</strong> होती है – <strong>किनारे (side)</strong> पर।</li>
+<li><strong>हेलिक्स (Helix – नोज़ / Tip):</strong> वह <strong>बिंदु (point)</strong> जहाँ <strong>फेस (face)</strong> और <strong>फ्लैंक (flank)</strong> <strong>मिलते (meet)</strong> हैं – <strong>काटने का किनारा (cutting edge)</strong>।</li>
+<li><strong>कटिंग एज (Cutting Edge):</strong> वह <strong>किनारा (edge)</strong> जो <strong>वास्तविक (actual)</strong> काटने का कार्य करता है – <strong>मुख्य (main)</strong> और <strong>सहायक (auxiliary)</strong> कटिंग एज।</li>
+<li><strong>नोज़ (Nose):</strong> मुख्य (main) और सहायक (auxiliary) कटिंग एज के <strong>बीच (between)</strong> का <strong>गोल (rounded)</strong> भाग – <strong>नोज़ त्रिज्या (nose radius)</strong>।</li>
+</ul>
+
+<p><strong>सिंगल पॉइंट टूल के कोण (Angles of Single Point Tool):</strong></p>
+<ul>
+<li><strong>रेक कोण (Rake Angle – ऊपरी / Top):</strong> <strong>फेस (face)</strong> और <strong>आधार (base)</strong> के <strong>लंबवत (perpendicular)</strong> रेखा (line) के बीच का कोण – <strong>सकारात्मक (positive)</strong> या <strong>नकारात्मक (negative)</strong>।</li>
+<li><strong>निकासी कोण (Clearance Angle – रिलीफ / Relief):</strong> <strong>फ्लैंक (flank)</strong> और <strong>वर्कपीस (workpiece)</strong> सतह के <strong>बीच (between)</strong> का कोण – <strong>रगड़ (rubbing)</strong> से बचाता है।</li>
+<li><strong>साइड रेक कोण (Side Rake Angle – पार्श्व):</strong> <strong>फेस (face)</strong> का <strong>साइड (side)</strong> से झुकाव (inclination) – <strong>चिप (chip)</strong> प्रवाह (flow) के लिए।</li>
+<li><strong>बैक रेक कोण (Back Rake Angle – पीछे):</strong> <strong>फेस (face)</strong> का <strong>पीछे (back)</strong> से झुकाव – <strong>चिप (chip)</strong> प्रवाह के लिए – <strong>HSS</strong> टूल के लिए <strong>8°–12°</strong>।</li>
+<li><strong>एंड निकासी कोण (End Clearance Angle – अंत):</strong> <strong>एंड (end)</strong> फ्लैंक (flank) का <strong>निकासी (clearance)</strong> – <strong>6°–8°</strong>।</li>
+<li><strong>साइड निकासी कोण (Side Clearance Angle – पार्श्व):</strong> <strong>साइड (side)</strong> फ्लैंक (flank) का <strong>निकासी (clearance)</strong> – <strong>6°–8°</strong>।</li>
+<li><strong>कटिंग एज कोण (Cutting Edge Angle – मुख्य):</strong> <strong>मुख्य (main)</strong> कटिंग एज और <strong>फीड (feed)</strong> दिशा (direction) के बीच का कोण – <strong>60°–75°</strong>।</li>
+</ul>
+
+<p><strong>मल्टी पॉइंट कटिंग टूल (Multi Point Cutting Tool – MPCT):</strong></p>
+<ul>
+<li><strong>परिभाषा (Definition):</strong> <strong>एक से अधिक (more than one)</strong> कटिंग एज (edges) वाला टूल – उदाहरण: <strong>ड्रिल (drill)</strong>, <strong>रीमर (reamer)</strong>, <strong>मिलिंग कटर (milling cutter)</strong>, <strong>टैप (tap)</strong>।</li>
+<li><strong>विशेषताएँ (Characteristics):</strong>
+    <ul>
+        <li><strong>उत्पादन (production)</strong> दर <strong>उच्च (high)</strong> – क्योंकि कई किनारे (edges) काटते हैं।</li>
+        <li><strong>अधिक जटिल (complex)</strong> ज्यामिति (geometry).</li>
+        <li><strong>सटीकता (accuracy)</strong> – सिंगल पॉइंट से <strong>अधिक (more)</strong> – क्योंकि कई किनारे (edges) <strong>संतुलित (balanced)</strong> होते हैं।</li>
+        <li><strong>नामकरण (Nomenclature):</strong> <strong>प्रत्येक (each)</strong> कटिंग एज (cutting edge) का <strong>स्वयं (own)</strong> रेक (rake), निकासी (clearance), आदि – <strong>सामान्य (common)</strong> नामकरण (nomenclature) <strong>सिंगल पॉइंट (single point)</strong> के समान।</li>
+    </ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: सिंगल पॉइंट टूल नामकरण (Single Point Tool Nomenclature)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/single_point_tool.jpg</p>
+<code>single_point_tool.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(शैंक, फेस, फ्लैंक, नोज़, कटिंग एज, कोण)</p>
+</div>
+<div class="figure-caption">Fig 6 – सिंगल पॉइंट कटिंग टूल नामकरण</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>सिंगल पॉइंट टूल कोण (Single Point Tool Angles)</caption>
+<thead><tr><th>कोण (Angle)</th><th>मान (Value) – HSS</th><th>उद्देश्य (Purpose)</th></tr></thead>
+<tbody>
+<tr><td>बैक रेक (Back Rake)</td><td>8°–12°</td><td>चिप (chip) प्रवाह (flow)</td></tr>
+<tr><td>साइड रेक (Side Rake)</td><td>12°–18°</td><td>चिप (chip) प्रवाह</td></tr>
+<tr><td>एंड निकासी (End Clearance)</td><td>6°–8°</td><td>रगड़ (rubbing) से बचना</td></tr>
+<tr><td>साइड निकासी (Side Clearance)</td><td>6°–8°</td><td>रगड़ (rubbing) से बचना</td></tr>
+<tr><td>कटिंग एज (Cutting Edge)</td><td>60°–75°</td><td>मजबूती (strength) के लिए</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>सिंगल पॉइंट – <strong>एक (one)</strong> कटिंग एज – टर्निंग, फेसिंग, थ्रेडिंग।</li>
+<li>मल्टी पॉइंट – <strong>एक से अधिक (multiple)</strong> कटिंग एज – ड्रिल, रीमर, मिलिंग कटर।</li>
+<li>रेक कोण (Rake Angle) – <strong>चिप (chip)</strong> प्रवाह (flow) और <strong>कटिंग (cutting)</strong> दक्षता (efficiency).</li>
+<li>निकासी कोण (Clearance Angle) – <strong>रगड़ (rubbing)</strong> से बचाता है – <strong>6°–8°</strong>।</li>
+<li>नोज़ त्रिज्या (Nose Radius) – <strong>फिनिश (finish)</strong> और <strong>मजबूती (strength)</strong> को प्रभावित (affect) करती है।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>सिंगल पॉइंट टूल – <strong>एक (one)</strong> कटिंग एज – <strong>टर्निंग (turning)</strong> के लिए।</li>
+<li>मल्टी पॉइंट टूल – <strong>एक से अधिक (multiple)</strong> कटिंग एज – <strong>ड्रिल (drill)</strong>, <strong>रीमर (reamer)</strong>।</li>
+<li>रेक कोण (Rake Angle) – <strong>चिप (chip)</strong> प्रवाह (flow) – <strong>सकारात्मक (positive)</strong> – बेहतर (better) कटिंग।</li>
+<li>निकासी कोण (Clearance Angle) – <strong>रगड़ (rubbing)</strong> से बचता है – <strong>6°–8°</strong>।</li>
+<li>नोज़ (Nose) – <strong>गोल (rounded)</strong> – <strong>नोज़ त्रिज्या (nose radius)</strong> – <strong>फिनिश (finish)</strong> को प्रभावित (affects).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.7 TOOL SELECTION -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tool-select">
+<div class="content-section" data-content="tool-select">
+<div class="section-header"><span class="icon">🔎</span><span class="title">7.7 – विभिन्न आवश्यकताओं के आधार पर औजार का चयन (Tool Selection)</span><span class="subtitle">— सामग्री, संचालन, सटीकता, लागत</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>काटने के उपकरण (cutting tool)</strong> का चयन (selection) <strong>विभिन्न (various)</strong> कारकों (factors) पर निर्भर करता है – <strong>सामग्री (material)</strong>, <strong>संचालन (operation)</strong>, <strong>सटीकता (accuracy)</strong>, <strong>लागत (cost)</strong>, आदि।</p>
+
+<p><strong>टूल चयन के कारक (Factors for Tool Selection):</strong></p>
+
+<p><strong>1. वर्कपीस सामग्री (Workpiece Material):</strong></p>
+<ul>
+<li><strong>माइल्ड स्टील (Mild Steel):</strong> <strong>HSS</strong> या <strong>कार्बाइड (carbide)</strong> – <strong>मध्यम (medium)</strong> गति (speed) – <strong>सकारात्मक रेक (positive rake)</strong>।</li>
+<li><strong>कास्ट आयरन (Cast Iron):</strong> <strong>कार्बाइड (carbide)</strong> – <strong>उच्च (high)</strong> गति – <strong>नकारात्मक रेक (negative rake)</strong> – <strong>घिसाव (wear)</strong> प्रतिरोधी (resistant).</li>
+<li><strong>एल्यूमीनियम (Aluminium):</strong> <strong>HSS</strong> या <strong>कार्बाइड (carbide)</strong> – <strong>उच्च (high)</strong> गति – <strong>बड़ा (large)</strong> रेक कोण – <strong>तीक्ष्ण (sharp)</strong> किनारा (edge).</li>
+<li><strong>स्टेनलेस स्टील (Stainless Steel):</strong> <strong>कार्बाइड (carbide)</strong> – <strong>मध्यम (medium)</strong> गति – <strong>मजबूत (strong)</strong> टूल – <strong>सकारात्मक रेक (positive rake)</strong> – <strong>कूलेंट (coolant)</strong> आवश्यक।</li>
+<li><strong>कठोर स्टील (Hard Steel):</strong> <strong>कार्बाइड (carbide)</strong> या <strong>सिरेमिक (ceramic)</strong> – <strong>कम (low)</strong> गति – <strong>नकारात्मक रेक (negative rake)</strong>।</li>
+</ul>
+
+<p><strong>2. संचालन (Operation):</strong></p>
+<ul>
+<li><strong>रफिंग (Roughing):</strong> <strong>बड़ा (large)</strong> नोज़ त्रिज्या (nose radius) – <strong>मजबूत (strong)</strong> टूल – <strong>उच्च (high)</strong> फीड (feed) – <strong>कम (low)</strong> गति (speed).</li>
+<li><strong>फिनिश टर्निंग (Finish Turning):</strong> <strong>छोटी (small)</strong> नोज़ त्रिज्या – <strong>तीक्ष्ण (sharp)</strong> किनारा – <strong>कम (low)</strong> फीड – <strong>उच्च (high)</strong> गति – <strong>अच्छी (good)</strong> सतह फिनिश (surface finish).</li>
+<li><strong>फेसिंग (Facing):</strong> <strong>फेसिंग टूल (facing tool)</strong> – <strong>एंड (end)</strong> कटिंग – <strong>केंद्र (centre)</strong> से बाहर की ओर फीड।</li>
+<li><strong>थ्रेड कटिंग (Thread Cutting):</strong> <strong>थ्रेडिंग टूल (threading tool)</strong> – <strong>V-आकार (V-shaped)</strong> – <strong>60°</strong> (मीट्रिक) – <strong>सटीक (accurate)</strong> पिच।</li>
+</ul>
+
+<p><strong>3. टूल सामग्री (Tool Material):</strong></p>
+<ul>
+<li><strong>HSS (हाई-स्पीड स्टील):</strong> <strong>सबसे सामान्य (most common)</strong> – <strong>सस्ता (cheap)</strong> – <strong>सभी (all)</strong> प्रकार के कार्यों के लिए – <strong>गति (speed):</strong> 20–50 m/min.</li>
+<li><strong>कार्बाइड (Carbide – सीमेंटेड / Cemented):</strong> <strong>कठोर (hard)</strong> – <strong>अधिक (higher)</strong> गति – <strong>घिसाव (wear)</strong> प्रतिरोधी – <strong>गति:</strong> 80–200 m/min – <strong>महंगा (expensive)</strong>।</li>
+<li><strong>सिरेमिक (Ceramic):</strong> <strong>बहुत कठोर (very hard)</strong> – <strong>उच्च (very high)</strong> गति – <strong>100–500 m/min</strong> – <strong>भंगुर (brittle)</strong> – <strong>नकारात्मक रेक (negative rake)</strong>।</li>
+<li><strong>हीरा (Diamond):</strong> <strong>बहुत (very)</strong> कठोर – <strong>अलौह (non-ferrous)</strong> सामग्री के लिए – <strong>अत्यंत (extremely)</strong> उच्च गति – <strong>बहुत महंगा (very expensive)</strong>।</li>
+</ul>
+
+<p><strong>4. सटीकता (Accuracy):</strong></p>
+<ul>
+<li><strong>उच्च सटीकता (High Accuracy):</strong> <strong>कार्बाइड (carbide)</strong> या <strong>सिरेमिक (ceramic)</strong> – <strong>सटीक (precise)</strong> टूल शार्पनिंग (sharpening).</li>
+<li><strong>सामान्य (General):</strong> <strong>HSS</strong> – <strong>पर्याप्त (adequate)</strong> सटीकता।</li>
+</ul>
+
+<p><strong>5. लागत (Cost):</strong></p>
+<ul>
+<li><strong>कम लागत (Low Cost):</strong> <strong>HSS</strong> – <strong>आर्थिक (economical)</strong> – <strong>छोटे (small)</strong> उत्पादन (production) के लिए।</li>
+<li><strong>उच्च लागत (High Cost):</strong> <strong>कार्बाइड (carbide)</strong> – <strong>बड़े (large)</strong> उत्पादन के लिए – <strong>दीर्घकालिक (long-term)</strong> लाभ (benefit).</li>
+</ul>
+
+<p><strong>6. कटिंग द्रव (Cutting Fluid):</strong></p>
+<ul>
+<li><strong>स्टील (Steel):</strong> <strong>सॉल्यूबल ऑयल (soluble oil)</strong> या <strong>कटिंग ऑयल (cutting oil)</strong>।</li>
+<li><strong>एल्यूमीनियम (Aluminium):</strong> <strong>केरोसिन (kerosene)</strong> या <strong>सॉल्यूबल (soluble)</strong>।</li>
+<li><strong>कास्ट आयरन (Cast Iron):</strong> <strong>सूखा (dry)</strong> – <strong>कोई (no)</strong> कटिंग फ्लुइड (cutting fluid) – क्योंकि <strong>चिप्स (chips)</strong> <strong>पाउडर (powder)</strong> के रूप में होते हैं।</li>
+<li><strong>कठोर सामग्री (Hard Materials):</strong> <strong>कटिंग ऑयल (cutting oil)</strong> – <strong>गर्मी (heat)</strong> कम करने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टूल चयन (Tool Selection) – सामग्री, संचालन, सामग्री</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/tool_selection.jpg</p>
+<code>tool_selection.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(HSS, कार्बाइड, सिरेमिक, रेक कोण, फीड)</p>
+</div>
+<div class="figure-caption">Fig 7 – टूल चयन के कारक</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>वर्कपीस सामग्री – <strong>टूल सामग्री (tool material)</strong> का चयन।</li>
+<li>रफिंग – <strong>बड़ा (large)</strong> नोज़ त्रिज्या – <strong>उच्च फीड (high feed)</strong>।</li>
+<li>फिनिशिंग – <strong>छोटी (small)</strong> नोज़ त्रिज्या – <strong>कम फीड (low feed)</strong>।</li>
+<li>HSS – <strong>सबसे सामान्य (most common)</strong> – <strong>सस्ता (cheap)</strong>।</li>
+<li>कार्बाइड – <strong>उच्च गति (high speed)</strong> – <strong>घिसाव (wear)</strong> प्रतिरोधी।</li>
+<li>कास्ट आयरन – <strong>सूखा (dry)</strong> कटिंग – <strong>कोई (no)</strong> कटिंग फ्लुइड।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>माइल्ड स्टील – <strong>HSS</strong> या <strong>कार्बाइड</strong> – <strong>सकारात्मक रेक (positive rake)</strong>।</li>
+<li>कास्ट आयरन – <strong>कार्बाइड</strong> – <strong>नकारात्मक रेक (negative rake)</strong> – <strong>सूखा (dry)</strong>।</li>
+<li>रफिंग – <strong>बड़ा (large)</strong> नोज़ त्रिज्या – <strong>उच्च फीड (high feed)</strong>।</li>
+<li>फिनिशिंग – <strong>छोटी (small)</strong> नोज़ त्रिज्या – <strong>कम फीड (low feed)</strong> – <strong>उच्च गति (high speed)</strong>।</li>
+<li>एल्यूमीनियम – <strong>केरोसिन (kerosene)</strong> कटिंग फ्लुइड – <strong>बड़ा रेक (large rake)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.8 NECESSITY OF TOOL ANGLES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tool-angles">
+<div class="content-section" data-content="tool-angles">
+<div class="section-header"><span class="icon">📐</span><span class="title">7.8 – औजार कोणों की आवश्यकता (Necessity of Tool Angles)</span><span class="subtitle">— कटिंग क्षमता, चिप नियंत्रण, घिसाव, गर्मी</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>कटिंग टूल (cutting tool)</strong> के <strong>कोण (angles)</strong> <strong>कटिंग प्रदर्शन (cutting performance)</strong>, <strong>उपकरण जीवन (tool life)</strong>, और <strong>सतह फिनिश (surface finish)</strong> को <strong>निर्धारित (determine)</strong> करते हैं।</p>
+
+<p><strong>विभिन्न कोणों की आवश्यकता (Necessity of Different Angles):</strong></p>
+
+<p><strong>1. रेक कोण (Rake Angle) की आवश्यकता:</strong></p>
+<ul>
+<li><strong>चिप (chip) प्रवाह (flow):</strong> <strong>सकारात्मक रेक (positive rake)</strong> – चिप (chip) को <strong>आसानी (easily)</strong> बहने (flow) देता है – <strong>कटिंग बल (cutting force)</strong> कम (reduce) करता है।</li>
+<li><strong>नकारात्मक रेक (negative rake)</strong> – <strong>कठोर (hard)</strong> सामग्री के लिए – <strong>कटिंग बल (cutting force)</strong> अधिक (higher) – लेकिन <strong>टूल (tool)</strong> <strong>मजबूत (stronger)</strong>।</li>
+<li><strong>शून्य रेक (zero rake)</strong> – <strong>पीतल (brass)</strong> और <strong>कास्ट आयरन (cast iron)</strong> के लिए – <strong>खींचने (grabbing)</strong> से बचने के लिए।</li>
+</ul>
+
+<p><strong>2. निकासी कोण (Clearance Angle) की आवश्यकता:</strong></p>
+<ul>
+<li><strong>रगड़ (rubbing) को रोकना:</strong> टूल (tool) और वर्कपीस (workpiece) के <strong>बीच (between)</strong> <strong>निकासी (clearance)</strong> – <strong>घर्षण (friction)</strong> कम (reduce) करता है – <strong>गर्मी (heat)</strong> कम (reduce) करता है।</li>
+<li><strong>बहुत अधिक (too much)</strong> निकासी – <strong>टूल (tool)</strong> को <strong>कमजोर (weak)</strong> करता है – <strong>चिप (chip)</strong> <strong>टूट (break)</strong> सकता है।</li>
+<li><strong>बहुत कम (too little)</strong> निकासी – <strong>रगड़ (rubbing)</strong> – <strong>गर्मी (heat)</strong> – <strong>टूल (tool)</strong> <strong>घिस (wear)</strong> जाता है।</li>
+</ul>
+
+<p><strong>3. कटिंग एज कोण (Cutting Edge Angle) की आवश्यकता:</strong></p>
+<ul>
+<li><strong>टूल की मजबूती (strength):</strong> <strong>बड़ा (larger)</strong> कोण – <strong>मजबूत (stronger)</strong> टूल – <strong>रफिंग (roughing)</strong> के लिए।</li>
+<li><strong>छोटा (smaller)</strong> कोण – <strong>पतला (thin)</strong> चिप (chip) – <strong>फिनिशिंग (finishing)</strong> के लिए – <strong>अच्छी (good)</strong> सतह फिनिश (surface finish).</li>
+<li><strong>टूल (tool)</strong> को <strong>वर्कपीस (workpiece)</strong> से <strong>संपर्क (contact)</strong> से <strong>बचाता (prevents)</strong> है – <strong>कंपन (vibration)</strong> कम (reduce) करता है।</li>
+</ul>
+
+<p><strong>4. नोज़ त्रिज्या (Nose Radius) की आवश्यकता:</strong></p>
+<ul>
+<li><strong>सतह फिनिश (Surface Finish):</strong> <strong>बड़ा (larger)</strong> त्रिज्या – <strong>चिकनी (smoother)</strong> सतह – <strong>घर्षण (friction)</strong> कम (reduce).</li>
+<li><strong>टूल की मजबूती (Strength):</strong> <strong>बड़ा (larger)</strong> त्रिज्या – <strong>टूल (tool)</strong> <strong>मजबूत (stronger)</strong> – <strong>चिपिंग (chipping)</strong> से बचाता है।</li>
+<li><strong>बहुत बड़ा (too large)</strong> त्रिज्या – <strong>कंपन (vibration)</strong> – <strong>खराब (poor)</strong> फिनिश (finish).</li>
+<li><strong>बहुत छोटा (too small)</strong> त्रिज्या – <strong>कमजोर (weak)</strong> टूल – <strong>टूट (break)</strong> सकता है।</li>
+</ul>
+
+<p><strong>5. टूल कोणों का सारांश (Summary):</strong></p>
+<ul>
+<li><strong>रेक कोण (Rake Angle):</strong> <strong>चिप (chip)</strong> प्रवाह (flow) और <strong>कटिंग बल (cutting force)</strong>।</li>
+<li><strong>निकासी कोण (Clearance Angle):</strong> <strong>रगड़ (rubbing)</strong> और <strong>गर्मी (heat)</strong> कम (reduce).</li>
+<li><strong>कटिंग एज कोण (Cutting Edge Angle):</strong> <strong>टूल की मजबूती (tool strength)</strong> और <strong>फिनिश (finish)</strong>।</li>
+<li><strong>नोज़ त्रिज्या (Nose Radius):</strong> <strong>फिनिश (finish)</strong> और <strong>टूल की मजबूती (tool strength)</strong>।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टूल कोणों का प्रभाव (Effect of Tool Angles)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/tool_angles.jpg</p>
+<code>tool_angles.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(रेक, निकासी, कटिंग एज, नोज़ त्रिज्या – प्रभाव)</p>
+</div>
+<div class="figure-caption">Fig 8 – टूल कोणों की आवश्यकता</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>रेक कोण – <strong>चिप (chip)</strong> प्रवाह (flow) – <strong>सकारात्मक (positive)</strong> – बेहतर (better) कटिंग।</li>
+<li>निकासी कोण – <strong>रगड़ (rubbing)</strong> से बचाता है – <strong>6°–8°</strong>।</li>
+<li>कटिंग एज कोण – <strong>मजबूती (strength)</strong> और <strong>फिनिश (finish)</strong>।</li>
+<li>नोज़ त्रिज्या – <strong>बड़ा (larger)</strong> – <strong>चिकनी (smoother)</strong> सतह – <strong>मजबूत (stronger)</strong> टूल।</li>
+<li>कोण (angles) – <strong>टूल जीवन (tool life)</strong> और <strong>गुणवत्ता (quality)</strong> को प्रभावित (affect) करते हैं।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>रेक कोण (Rake Angle) – <strong>चिप (chip)</strong> प्रवाह – <strong>कटिंग बल (cutting force)</strong> को कम (reduce) करता है।</li>
+<li>निकासी कोण (Clearance Angle) – <strong>रगड़ (rubbing)</strong> को रोकता है – <strong>गर्मी (heat)</strong> कम (reduce).</li>
+<li>कटिंग एज कोण (Cutting Edge Angle) – <strong>टूल (tool)</strong> को <strong>मजबूत (strong)</strong> बनाता है।</li>
+<li>नोज़ त्रिज्या (Nose Radius) – <strong>सतह फिनिश (surface finish)</strong> को <strong>सुधार (improve)</strong> करती है।</li>
+<li>सही कोण (correct angles) – <strong>टूल जीवन (tool life)</strong> बढ़ाता है – <strong>उत्पादन (production)</strong> बढ़ाता है।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.9 CUTTING SPEED, FEED, COOLANTS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-speed-feed">
+<div class="content-section" data-content="speed-feed">
+<div class="section-header"><span class="icon">⚡</span><span class="title">7.9 – कटिंग स्पीड, फीड, कूलेंट (Cutting Speed, Feed, Coolants)</span><span class="subtitle">— गणना, चयन, स्नेहक, शीतलक</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>कटिंग स्पीड (Cutting Speed – CS)</strong>, <strong>फीड (Feed – f)</strong>, और <strong>शीतलक (Coolant)</strong> – ये <strong>तीनों (three)</strong> <strong>महत्वपूर्ण (important)</strong> पैरामीटर (parameters) हैं जो <strong>टूल जीवन (tool life)</strong>, <strong>सतह फिनिश (surface finish)</strong>, और <strong>उत्पादन दर (production rate)</strong> को <strong>प्रभावित (affect)</strong> करते हैं।</p>
+
+<p><strong>कटिंग स्पीड (Cutting Speed – V):</strong></p>
+<ul>
+<li>वर्कपीस (workpiece) की <strong>सतह (surface)</strong> की <strong>रेखीय गति (linear speed)</strong> – <strong>मीटर/मिनट (m/min)</strong> या <strong>फीट/मिनट (ft/min)</strong>।</li>
+<li><strong>सूत्र (Formula):</strong> V = (π × D × N) / 1000 – (D = व्यास (mm), N = RPM).</li>
+<li><strong>या (Or):</strong> N = (V × 1000) / (π × D).</li>
+<li><strong>HSS टूल (Tool) के लिए CS (m/min):</strong>
+    <ul>
+        <li>माइल्ड स्टील (Mild Steel): 20–30 m/min</li>
+        <li>कास्ट आयरन (Cast Iron): 15–25 m/min</li>
+        <li>एल्यूमीनियम (Aluminium): 60–100 m/min</li>
+        <li>पीतल (Brass): 40–60 m/min</li>
+        <li>स्टेनलेस स्टील (Stainless Steel): 10–18 m/min</li>
+        <li>कठोर स्टील (Hard Steel): 5–10 m/min</li>
+    </ul>
+</li>
+<li><strong>कार्बाइड (Carbide) टूल</strong> – 2-3 गुना (times) अधिक (higher) CS – 50–200 m/min.</li>
+</ul>
+
+<p><strong>फीड (Feed – f):</strong></p>
+<ul>
+<li>टूल (tool) के <strong>प्रति चक्कर (per revolution)</strong> <strong>अंदर (into)</strong> जाने की <strong>दूरी (distance)</strong> – <strong>मिमी/चक्कर (mm/rev)</strong>।</li>
+<li><strong>रफिंग (Roughing):</strong> 0.2–0.5 mm/rev – <strong>उच्च (high)</strong> फीड।</li>
+<li><strong>फिनिशिंग (Finishing):</strong> 0.05–0.15 mm/rev – <strong>कम (low)</strong> फीड।</li>
+<li><strong>थ्रेड कटिंग (Thread Cutting):</strong> <strong>पिच (pitch)</strong> के बराबर (equal) – उदाहरण: M10 × 1.5 – फीड = 1.5 mm/rev.</li>
+</ul>
+
+<p><strong>शीतलक और स्नेहक (Coolants &amp; Lubricants – कटिंग फ्लुइड / Cutting Fluid):</strong></p>
+<ul>
+<li><strong>उद्देश्य (Purpose):</strong>
+    <ul>
+        <li><strong>गर्मी (Heat)</strong> को <strong>कम (reduce)</strong> करना – <strong>टूल (tool)</strong> और <strong>वर्कपीस (workpiece)</strong> के <strong>अत्यधिक (excessive)</strong> गर्म होने (overheating) से बचाने के लिए।</li>
+        <li><strong>घर्षण (Friction)</strong> को <strong>कम (reduce)</strong> करना – <strong>टूल (tool)</strong> और <strong>चिप (chip)</strong> के बीच।</li>
+        <li><strong>चिप्स (chips)</strong> को <strong>हटाना (remove)</strong> – कटिंग क्षेत्र (cutting zone) से।</li>
+        <li><strong>सतह फिनिश (surface finish)</strong> में <strong>सुधार (improve)</strong> करना।</li>
+        <li><strong>टूल जीवन (tool life)</strong> बढ़ाना (increase).</li>
+    </ul>
+</li>
+<li><strong>शीतलक के प्रकार (Types of Cutting Fluids):</strong>
+    <ul>
+        <li><strong>सॉल्यूबल ऑयल (Soluble Oil – पानी में घुलनशील):</strong> <strong>स्टील (steel)</strong> और <strong>एल्यूमीनियम (aluminium)</strong> के लिए – <strong>गर्मी (heat)</strong> को <strong>अवशोषित (absorb)</strong> करता है।</li>
+        <li><strong>कटिंग ऑयल (Cutting Oil – खनिज तेल / Mineral Oil):</strong> <strong>कम (low)</strong> गति (speed) और <strong>भारी (heavy)</strong> कट (cut) के लिए – <strong>स्नेहन (lubrication)</strong> के लिए – <strong>थ्रेड कटिंग (thread cutting)</strong> में।</li>
+        <li><strong>केरोसिन (Kerosene):</strong> <strong>एल्यूमीनियम (aluminium)</strong> और <strong>पीतल (brass)</strong> के लिए – <strong>अच्छी (good)</strong> फिनिश (finish) के लिए।</li>
+        <li><strong>संपीड़ित वायु (Compressed Air):</strong> <strong>सूखा (dry)</strong> कटिंग के लिए – <strong>चिप्स (chips)</strong> हटाने के लिए – <strong>न्यूमेटिक (pneumatic)</strong>।</li>
+        <li><strong>कार्बन टेट्राक्लोराइड (Carbon Tetrachloride – CCl₄):</strong> <strong>उच्च (high)</strong> स्नेहन (lubrication) – <strong>अब (now)</strong> उपयोग नहीं (not used) – <strong>विषाक्त (toxic)</strong>।</li>
+    </ul>
+</li>
+<li><strong>शीतलक का चयन (Selection of Cutting Fluid):</strong>
+    <ul>
+        <li><strong>माइल्ड स्टील (Mild Steel):</strong> सॉल्यूबल ऑयल (soluble oil).</li>
+        <li><strong>कास्ट आयरन (Cast Iron):</strong> <strong>सूखा (dry)</strong> – <strong>कोई (no)</strong> शीतलक – क्योंकि <strong>चिप्स (chips)</strong> <strong>पाउडर (powder)</strong> के रूप में होते हैं।</li>
+        <li><strong>एल्यूमीनियम (Aluminium):</strong> केरोसिन (kerosene) या सॉल्यूबल (soluble).</li>
+        <li><strong>स्टेनलेस स्टील (Stainless Steel):</strong> कटिंग ऑयल (cutting oil) या सॉल्यूबल (soluble) – <strong>अधिक (high)</strong> दबाव (pressure) पर।</li>
+        <li><strong>पीतल (Brass):</strong> <strong>सूखा (dry)</strong> या <strong>सॉल्यूबल (soluble)</strong> – <strong>कम (low)</strong>।</li>
+    </ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: कटिंग स्पीड, फीड और कटिंग फ्लुइड</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/speed_feed_coolant.jpg</p>
+<code>speed_feed_coolant.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(CS चार्ट, फीड चार्ट, कटिंग फ्लुइड अनुप्रयोग)</p>
+</div>
+<div class="figure-caption">Fig 9 – कटिंग स्पीड, फीड और कटिंग फ्लुइड</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>HSS टूल के लिए अनुशंसित CS (m/min) और फीड (mm/rev)</caption>
+<thead><tr><th>सामग्री (Material)</th><th>CS (m/min) – रफिंग</th><th>CS (m/min) – फिनिशिंग</th><th>फीड (mm/rev) – रफिंग</th><th>फीड (mm/rev) – फिनिशिंग</th></tr></thead>
+<tbody>
+<tr><td>माइल्ड स्टील (Mild Steel)</td><td>20–25</td><td>25–30</td><td>0.3–0.5</td><td>0.05–0.15</td></tr>
+<tr><td>कास्ट आयरन (Cast Iron)</td><td>15–20</td><td>20–25</td><td>0.2–0.4</td><td>0.05–0.12</td></tr>
+<tr><td>एल्यूमीनियम (Aluminium)</td><td>60–80</td><td>80–100</td><td>0.3–0.6</td><td>0.05–0.15</td></tr>
+<tr><td>पीतल (Brass)</td><td>40–50</td><td>50–60</td><td>0.2–0.4</td><td>0.05–0.12</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>कटिंग स्पीड (CS) – <strong>m/min</strong> – सामग्री (material) और टूल (tool) पर निर्भर।</li>
+<li>RPM = (CS × 1000) / (π × D) – <strong>D (mm)</strong>।</li>
+<li>फीड (Feed) – <strong>mm/rev</strong> – रफिंग के लिए <strong>उच्च (high)</strong> – फिनिशिंग के लिए <strong>कम (low)</strong>।</li>
+<li>कटिंग फ्लुइड – <strong>गर्मी (heat)</strong> कम (reduce) करता है – <strong>टूल जीवन (tool life)</strong> बढ़ाता है।</li>
+<li>कास्ट आयरन – <strong>सूखा (dry)</strong> – <strong>कोई (no)</strong> कटिंग फ्लुइड।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>CS = <strong>π × D × N / 1000</strong> (m/min).</li>
+<li>RPM = <strong>(CS × 1000) / (π × D)</strong> – <strong>D (mm)</strong> में।</li>
+<li>फीड (Feed) – <strong>mm/rev</strong> – <strong>टूल (tool)</strong> की <strong>प्रति चक्कर (per revolution)</strong> गति (movement).</li>
+<li>कटिंग फ्लुइड – <strong>गर्मी (heat)</strong> और <strong>घर्षण (friction)</strong> कम (reduce) करता है – <strong>सतह फिनिश (surface finish)</strong> में सुधार (improve).</li>
+<li>कास्ट आयरन – <strong>सूखा (dry)</strong> कटिंग – <strong>कोई (no)</strong> शीतलक (coolant).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.10 CHUCKS – INDEPENDENT 4-JAW CHUCK -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-chucks">
+<div class="content-section" data-content="chucks">
+<div class="section-header"><span class="icon">🔩</span><span class="title">7.10 – चक – स्वतंत्र 4-जॉ चक (Independent 4-Jaw Chuck)</span><span class="subtitle">— संरचना, उपयोग, संचालन, लाभ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>चक (Chuck)</strong> <strong>वर्कपीस (workpiece)</strong> को <strong>लेथ (lathe)</strong> पर <strong>पकड़ने (holding)</strong> के लिए एक उपकरण है। <strong>स्वतंत्र 4-जॉ चक (Independent 4-Jaw Chuck)</strong> में <strong>चार (four)</strong> जॉ (jaws) होते हैं – प्रत्येक <strong>जॉ (jaw)</strong> <strong>स्वतंत्र (independently)</strong> रूप से <strong>समायोजित (adjusted)</strong> किया जा सकता है।</p>
+
+<p><strong>संरचना (Construction):</strong></p>
+<ul>
+<li><strong>चार (4)</strong> जॉ (jaws) – <strong>प्रत्येक (each)</strong> का अपना <strong>समायोजन स्क्रू (adjusting screw)</strong> – <strong>स्वतंत्र (independent)</strong>।</li>
+<li><strong>जॉ (jaws)</strong> – <strong>कठोर (hardened)</strong> स्टील – <strong>दाँतेदार (serrated)</strong> फलक (faces) – <strong>पकड़ (grip)</strong> के लिए – या <strong>चिकना (smooth)</strong> – <strong>तैयार (finished)</strong> सतहों के लिए।</li>
+<li><strong>चक बॉडी (chuck body):</strong> <strong>कास्ट आयरन (cast iron)</strong> या <strong>स्टील (steel)</strong> – <strong>स्पिंडल (spindle)</strong> पर <strong>फिट (fit)</strong> होता है – <strong>थ्रेड (thread)</strong> या <strong>टेपर (taper)</strong> द्वारा।</li>
+<li><strong>समायोजन कुंजी (adjusting key – चक कुंजी / chuck key):</strong> <strong>जॉ (jaws)</strong> को <strong>कसने (tighten)</strong> और <strong>ढीला (loosen)</strong> करने के लिए।</li>
+</ul>
+
+<p><strong>उपयोग (Uses):</strong></p>
+<ul>
+<li><strong>अनियमित (irregular)</strong> आकार के वर्कपीस (workpieces) को <strong>पकड़ना (hold)</strong> – जो <strong>3-जॉ चक (3-jaw chuck)</strong> में <strong>नहीं (not)</strong> पकड़े जा सकते।</li>
+<li><strong>वर्गाकार (square)</strong> या <strong>आयताकार (rectangular)</strong> वर्कपीस – <strong>ऑफसेट (offset)</strong> कार्य (eccentric turning) के लिए।</li>
+<li><strong>बड़े (large)</strong> व्यास (diameter) वाले वर्कपीस – <strong>भारी (heavy)</strong> कट (cut) के लिए – <strong>मजबूत (strong)</strong> पकड़ (grip).</li>
+<li><strong>सटीक (accurate)</strong> केंद्र (centring) – <strong>प्रत्येक (each)</strong> जॉ (jaw) को <strong>अलग (separately)</strong> समायोजित (adjust) करके – <strong>बेहतर (better)</strong> संकेंद्रता (concentricity).</li>
+</ul>
+
+<p><strong>संचालन (Operation):</strong></p>
+<ol>
+<li>वर्कपीस (workpiece) को <strong>चारों (four)</strong> जॉ (jaws) के <strong>बीच (between)</strong> <strong>रखें (place)</strong>।</li>
+<li><strong>एक-एक (one by one)</strong> करके <strong>जॉ (jaws)</strong> को <strong>हाथ (hand)</strong> से <strong>ढीला (loosen)</strong> करें – ताकि वर्कपीस <strong>आसानी (easily)</strong> से <strong>फिट (fit)</strong> हो सके।</li>
+<li><strong>डायल गेज (dial gauge)</strong> या <strong>स्क्राइबर (scriber)</strong> का उपयोग करके वर्कपीस (workpiece) को <strong>केंद्र (centre)</strong> पर <strong>संरेखित (align)</strong> करें – <strong>सभी (all)</strong> जॉ (jaws) को <strong>समान (equal)</strong> दूरी पर।</li>
+<li><strong>चक कुंजी (chuck key)</strong> से <strong>जॉ (jaws)</strong> को <strong>कसें (tighten)</strong> – <strong>क्रॉस (cross)</strong> क्रम (sequence) में – <strong>1-3-2-4</strong> – <strong>समान (uniform)</strong> दबाव (pressure) के लिए।</li>
+<li><strong>स्पिंडल (spindle)</strong> को <strong>धीरे (slowly)</strong> घुमाएँ – <strong>जाँच (check)</strong> करें कि वर्कपीस <strong>केंद्र (centre)</strong> पर <strong>फिट (fit)</strong> है – यदि <strong>नहीं (not)</strong> तो <strong>पुनः (re-adjust)</strong> करें।</li>
+</ol>
+
+<p><strong>3-जॉ चक (3-Jaw Chuck) और 4-जॉ चक (4-Jaw Chuck) के बीच अंतर (Difference):</strong></p>
+<table style="width:100%; border-collapse:collapse; margin:14px 0;">
+<tr style="background:#003366; color:#fff;"><th style="padding:10px; text-align:left;">3-जॉ चक (3-Jaw Chuck)</th><th style="padding:10px; text-align:left;">4-जॉ चक (4-Jaw Chuck)</th></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">स्व-केंद्रित (self-centring) – सभी जॉ एक साथ (simultaneously) चलते हैं</td><td style="padding:10px; border:1px solid #ddd;">स्वतंत्र (independent) – प्रत्येक जॉ अलग (separately) चलता है</td></tr>
+<tr><td style="padding:10px; border:1px solid #ddd;">गोल (round) वर्कपीस (workpieces) के लिए</td><td style="padding:10px; border:1px solid #ddd;">अनियमित (irregular) आकार के लिए – वर्गाकार, आयताकार, ऑफसेट (eccentric)</td></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">तेज़ (fast) – आसान (easy) केंद्र स्थापना (centring)</td><td style="padding:10px; border:1px solid #ddd;">समय लेने वाली (time-consuming) – केंद्र स्थापना (centring)</td></tr>
+<tr><td style="padding:10px; border:1px solid #ddd;">कम सटीक (less accurate) – ±0.05 मिमी</td><td style="padding:10px; border:1px solid #ddd;">अधिक सटीक (more accurate) – ±0.01 मिमी</td></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">भारी (heavy) कट के लिए कम (less) उपयुक्त</td><td style="padding:10px; border:1px solid #ddd;">भारी (heavy) कट के लिए अधिक (more) उपयुक्त</td></tr>
+</table>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्वतंत्र 4-जॉ चक (Independent 4-Jaw Chuck)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/4_jaw_chuck.jpg</p>
+<code>4_jaw_chuck.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(जॉ, स्क्रू, चक बॉडी, चक कुंजी, संरेखण)</p>
+</div>
+<div class="figure-caption">Fig 10 – स्वतंत्र 4-जॉ चक</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>4-जॉ चक – <strong>स्वतंत्र (independent)</strong> जॉ – <strong>अनियमित (irregular)</strong> और <strong>वर्गाकार (square)</strong> वर्कपीस के लिए।</li>
+<li>3-जॉ चक – <strong>स्व-केंद्रित (self-centring)</strong> – <strong>गोल (round)</strong> वर्कपीस के लिए – <strong>तेज़ (fast)</strong>।</li>
+<li>4-जॉ चक – <strong>अधिक सटीक (more accurate)</strong> – ±0.01 मिमी – <strong>समायोजन (adjustment)</strong> समय लेता है।</li>
+<li>केंद्र स्थापना (centring) – <strong>डायल गेज (dial gauge)</strong> का उपयोग करें।</li>
+<li>जॉ (jaws) को <strong>क्रॉस (cross)</strong> क्रम (sequence) में <strong>कसें (tighten)</strong> – <strong>समान (uniform)</strong> दबाव के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>4-जॉ चक – <strong>स्वतंत्र (independent)</strong> जॉ – <strong>अनियमित (irregular)</strong> आकार के लिए।</li>
+<li>3-जॉ चक – <strong>स्व-केंद्रित (self-centring)</strong> – <strong>गोल (round)</strong> वर्कपीस के लिए।</li>
+<li>4-जॉ चक – <strong>अधिक सटीक (more accurate)</strong> – <strong>भारी (heavy)</strong> कट (cut) के लिए।</li>
+<li>केंद्र स्थापना (centring) – <strong>डायल गेज (dial gauge)</strong> या <strong>स्क्राइबर (scriber)</strong> – <strong>सटीक (accurate)</strong> सेटिंग के लिए।</li>
+<li>जॉ (jaws) को <strong>क्रॉस (cross)</strong> क्रम (1-3-2-4) में <strong>कसें (tighten)</strong> – <strong>विकृति (distortion)</strong> से बचने के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.11 FACE PLATE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-faceplate">
+<div class="content-section" data-content="faceplate">
+<div class="section-header"><span class="icon">⬛</span><span class="title">7.11 – फेस प्लेट (Face Plate)</span><span class="subtitle">— संरचना, उपयोग, कार्यप्रणाली</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>फेस प्लेट (Face Plate)</strong> एक <strong>गोल (round)</strong> धातु (metal) डिस्क (disc) है जो <strong>लेथ (lathe)</strong> के <strong>स्पिंडल (spindle)</strong> पर <strong>फिट (fit)</strong> होती है – <strong>चक (chuck)</strong> की <strong>जगह (instead)</strong>। इसका उपयोग <strong>बड़े (large)</strong> और <strong>अनियमित (irregular)</strong> आकार के वर्कपीस (workpieces) को <strong>पकड़ने (hold)</strong> के लिए किया जाता है – जिन्हें <strong>चक (chuck)</strong> में <strong>नहीं (not)</strong> पकड़ा जा सकता।</p>
+
+<p><strong>संरचना (Construction):</strong></p>
+<ul>
+<li><strong>गोल (round)</strong> डिस्क (disc) – <strong>कास्ट आयरन (cast iron)</strong> या <strong>स्टील (steel)</strong>।</li>
+<li><strong>स्लॉट्स (slots)</strong> – <strong>T-स्लॉट (T-slots)</strong> या <strong>छेद (holes)</strong> – <strong>क्लैंप (clamps)</strong> और <strong>बोल्ट (bolts)</strong> लगाने के लिए।</li>
+<li><strong>केंद्र (centre)</strong> में <strong>छेद (hole)</strong> – <strong>सेंटर (centre)</strong> या <strong>डेड सेंटर (dead centre)</strong> को <strong>समायोजित (accommodate)</strong> करने के लिए।</li>
+<li><strong>स्पिंडल (spindle)</strong> से <strong>जोड़ने (attach)</strong> के लिए – <strong>थ्रेड (thread)</strong> या <strong>टेपर (taper)</strong>।</li>
+</ul>
+
+<p><strong>उपयोग (Uses):</strong></p>
+<ul>
+<li><strong>बड़े (large)</strong> व्यास (diameter) वाले वर्कपीस – <strong>चक (chuck)</strong> में <strong>फिट (fit)</strong> नहीं होते।</li>
+<li><strong>अनियमित (irregular)</strong> आकार – <strong>कास्टिंग (castings)</strong>, <strong>फोर्जिंग (forgings)</strong>, <strong>प्लेट (plates)</strong>।</li>
+<li><strong>ई-सेंट्रिक (eccentric)</strong> कार्य – <strong>ऑफसेट (offset)</strong> मशीनिंग (machining).</li>
+<li><strong>कोणीय (angular)</strong> सतहें – <strong>एंगल प्लेट (angle plate)</strong> के साथ – <strong>फेस प्लेट (face plate)</strong> पर <strong>माउंट (mount)</strong> करके।</li>
+</ul>
+
+<p><strong>कार्यप्रणाली (Working Procedure):</strong></p>
+<ol>
+<li>फेस प्लेट (face plate) को <strong>स्पिंडल (spindle)</strong> पर <strong>फिट (fit)</strong> करें – <strong>कसें (tighten)</strong>।</li>
+<li>वर्कपीस (workpiece) को फेस प्लेट (face plate) पर <strong>रखें (place)</strong> – <strong>स्लॉट्स (slots)</strong> और <strong>छेद (holes)</strong> का उपयोग करके – <strong>क्लैंप (clamps)</strong> और <strong>बोल्ट (bolts)</strong> के साथ <strong>पकड़ें (clamp)</strong>।</li>
+<li>वर्कपीस (workpiece) को <strong>संरेखित (align)</strong> करें – <strong>स्क्राइबर (scriber)</strong> या <strong>डायल गेज (dial gauge)</strong> के साथ – <strong>केंद्र (centre)</strong> पर।</li>
+<li><strong>टेलस्टॉक (tailstock)</strong> सेंटर (centre) – <strong>अतिरिक्त (additional)</strong> सहारा (support) के लिए – यदि <strong>आवश्यक (required)</strong> हो।</li>
+<li><strong>कटिंग (cutting)</strong> ऑपरेशन (operations) करें – <strong>फेसिंग (facing)</strong>, <strong>टर्निंग (turning)</strong>, <strong>बोरिंग (boring)</strong>, आदि।</li>
+</ol>
+
+<p><strong>सावधानियाँ (Precautions):</strong></p>
+<ul>
+<li><strong>सभी (all)</strong> क्लैंप्स (clamps) और बोल्ट्स (bolts) को <strong>मजबूती (firmly)</strong> से <strong>कसें (tighten)</strong> – <strong>ढीला (loose)</strong> होने से <strong>दुर्घटना (accident)</strong> हो सकती है।</li>
+<li>वर्कपीस (workpiece) को <strong>संतुलित (balanced)</strong> रखें – <strong>असंतुलन (unbalance)</strong> – <strong>कंपन (vibration)</strong> – <strong>खराब (poor)</strong> फिनिश (finish).</li>
+<li><strong>अधिकतम (maximum)</strong> गति (speed) – <strong>सुरक्षा (safety)</strong> के लिए – <strong>फेस प्लेट (face plate)</strong> पर <strong>सीमा (limit)</strong> अंकित (marked) होती है।</li>
+<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग – <strong>गर्मी (heat)</strong> कम (reduce) करने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: फेस प्लेट (Face Plate)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/face_plate.jpg</p>
+<code>face_plate.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(T-स्लॉट, क्लैंप, बोल्ट, सेंटर होल, वर्कपीस माउंट)</p>
+</div>
+<div class="figure-caption">Fig 11 – फेस प्लेट</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>फेस प्लेट – <strong>बड़े (large)</strong> और <strong>अनियमित (irregular)</strong> वर्कपीस के लिए।</li>
+<li>T-स्लॉट (T-slots) – <strong>क्लैंप (clamps)</strong> और <strong>बोल्ट (bolts)</strong> लगाने के लिए।</li>
+<li>सेंटर होल (centre hole) – <strong>टेलस्टॉक (tailstock)</strong> सेंटर (centre) के लिए।</li>
+<li>क्लैंप्स (clamps) – <strong>मजबूती (firmly)</strong> से <strong>कसें (tighten)</strong> – <strong>सुरक्षा (safety)</strong> के लिए।</li>
+<li>वर्कपीस (workpiece) को <strong>संतुलित (balanced)</strong> रखें – <strong>कंपन (vibration)</strong> से बचने के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फेस प्लेट – <strong>बड़े (large)</strong> और <strong>अनियमित (irregular)</strong> वर्कपीस के लिए – <strong>चक (chuck)</strong> के विकल्प (alternative).</li>
+<li>T-स्लॉट (T-slots) – <strong>क्लैंप (clamps)</strong> लगाने के लिए – <strong>वर्कपीस (workpiece)</strong> को <strong>पकड़ने (hold)</strong> के लिए।</li>
+<li>सेंटर (centre) – <strong>टेलस्टॉक (tailstock)</strong> सेंटर (centre) – <strong>अतिरिक्त (additional)</strong> सहारा (support).</li>
+<li>सावधानी: <strong>सभी (all)</strong> क्लैंप्स (clamps) को <strong>कसें (tighten)</strong> – <strong>ढीला (loose)</strong> होने से <strong>चोट (injury)</strong>।</li>
+<li>संतुलन (balance) – <strong>महत्वपूर्ण (important)</strong> – <strong>कंपन (vibration)</strong> से बचने के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.12 DRILLING ON LATHE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-drilling">
+<div class="content-section" data-content="drilling-lathe">
+<div class="section-header"><span class="icon">🕳️</span><span class="title">7.12 – लेथ पर ड्रिलिंग (Drilling on Lathe)</span><span class="subtitle">— प्रक्रिया, ड्रिल होल्डिंग, सावधानियाँ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>लेथ (Lathe)</strong> पर <strong>ड्रिलिंग (Drilling)</strong> – <strong>टेलस्टॉक (tailstock)</strong> में <strong>ड्रिल चक (drill chuck)</strong> लगाकर <strong>ड्रिल (drill)</strong> को <strong>वर्कपीस (workpiece)</strong> में <strong>फीड (feed)</strong> करके <strong>छेद (hole)</strong> बनाना।</p>
+
+<p><strong>ड्रिलिंग की प्रक्रिया (Drilling Process):</strong></p>
+<ol>
+<li>वर्कपीस (workpiece) को <strong>चक (chuck)</strong> में <strong>कसें (tighten)</strong> – या <strong>सेंटर (centres)</strong> के बीच।</li>
+<li><strong>ड्रिल (drill)</strong> को <strong>ड्रिल चक (drill chuck)</strong> में <strong>लगाएँ (mount)</strong> – <strong>ड्रिल चक (drill chuck)</strong> को <strong>टेलस्टॉक (tailstock)</strong> स्पिंडल (spindle) में <strong>फिट (fit)</strong> करें – <strong>मोर्स टेपर (Morse taper)</strong> या <strong>सीधा (straight)</strong> शैंक (shank).</li>
+<li><strong>ड्रिल (drill)</strong> को <strong>केंद्र (centre)</strong> पर <strong>संरेखित (align)</strong> करें – <strong>टेलस्टॉक (tailstock)</strong> को <strong>आगे (advance)</strong> करके – <strong>सटीक (accurate)</strong> स्थिति (position) के लिए – <strong>डायल गेज (dial gauge)</strong> का उपयोग करें।</li>
+<li><strong>स्पिंडल (spindle)</strong> को <strong>चालू (start)</strong> करें – <strong>सही (correct)</strong> <strong>RPM</strong> सेट करें – <strong>सामग्री (material)</strong> के अनुसार।</li>
+<li><strong>टेलस्टॉक (tailstock)</strong> <strong>हैंडव्हील (handwheel)</strong> को <strong>घुमाएँ (turn)</strong> – <strong>ड्रिल (drill)</strong> को <strong>फीड (feed)</strong> करें – <strong>नियमित (regular)</strong> रूप से <strong>वापस (retract)</strong> करके <strong>चिप्स (chips)</strong> हटाएँ।</li>
+<li>वांछित (desired) <strong>गहराई (depth)</strong> तक <strong>ड्रिल (drill)</strong> करें – <strong>गहराई (depth)</strong> को <strong>टेलस्टॉक (tailstock)</strong> स्केल (scale) से <strong>मापें (measure)</strong>।</li>
+<li><strong>ड्रिल (drill)</strong> को <strong>वापस (retract)</strong> करें – <strong>स्पिंडल (spindle)</strong> को <strong>बंद (stop)</strong> करें – वर्कपीस (workpiece) को <strong>हटाएँ (remove)</strong>।</li>
+</ol>
+
+<p><strong>ड्रिल होल्डिंग (Drill Holding on Lathe):</strong></p>
+<ul>
+<li><strong>ड्रिल चक (Drill Chuck):</strong> <strong>सीधा (straight)</strong> शैंक (shank) ड्रिल (drills) के लिए – <strong>टेलस्टॉक (tailstock)</strong> में <strong>फिट (fit)</strong> – <strong>तीन-जबड़ा (three-jaw)</strong> चक।</li>
+<li><strong>स्लीव (Sleeve – सॉकेट / Socket):</strong> <strong>टेपर (taper)</strong> शैंक (shank) ड्रिल (drills) के लिए – <strong>मोर्स टेपर (Morse taper)</strong> – <strong>सीधे (directly)</strong> टेलस्टॉक (tailstock) स्पिंडल (spindle) में।</li>
+<li><strong>ड्रिल चक कुंजी (Chuck Key):</strong> <strong>कसने (tighten)</strong> और <strong>ढीला (loosen)</strong> करने के लिए – <strong>उपयोग (use)</strong> के बाद <strong>हटाएँ (remove)</strong>।</li>
+</ul>
+
+<p><strong>सावधानियाँ (Precautions):</strong></p>
+<ul>
+<li><strong>टेलस्टॉक (tailstock)</strong> को <strong>बेड (bed)</strong> पर <strong>लॉक (lock)</strong> करें – <strong>ड्रिल (drill)</strong> <strong>विक्षेप (deflect)</strong> न हो।</li>
+<li><strong>ड्रिल (drill)</strong> को <strong>केंद्र (centre)</strong> पर <strong>सटीक (accurately)</strong> संरेखित (align) करें – <strong>छेद (hole)</strong> <strong>बड़ा (oversize)</strong> न हो।</li>
+<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – <strong>गर्मी (heat)</strong> कम (reduce) करने के लिए – <strong>ड्रिल (drill)</strong> का <strong>जीवन (life)</strong> बढ़ाने के लिए।</li>
+<li><strong>ड्रिल (drill)</strong> को <strong>बार-बार (frequently)</strong> वापस (retract) करें – <strong>चिप्स (chips)</strong> <strong>हटाने (remove)</strong> के लिए – <strong>जाम (clogging)</strong> से बचने के लिए।</li>
+<li><strong>गति (speed)</strong> – <strong>बहुत अधिक (too high)</strong> न रखें – <strong>ड्रिल (drill)</strong> <strong>टूट (break)</strong> सकता है – <strong>बहुत कम (too low)</strong> – <strong>समय (time)</strong> लगेगा।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: लेथ पर ड्रिलिंग (Drilling on Lathe)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/drilling_lathe.jpg</p>
+<code>drilling_lathe.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(ड्रिल चक, टेलस्टॉक, वर्कपीस, ड्रिल फीड)</p>
+</div>
+<div class="figure-caption">Fig 12 – लेथ पर ड्रिलिंग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>ड्रिल – <strong>टेलस्टॉक (tailstock)</strong> में <strong>ड्रिल चक (drill chuck)</strong> में।</li>
+<li>ड्रिलिंग – <strong>छेद (hole)</strong> बनाना – <strong>सरल (simple)</strong> संचालन (operation).</li>
+<li>फीड (Feed) – <strong>टेलस्टॉक (tailstock)</strong> <strong>हैंडव्हील (handwheel)</strong> द्वारा – <strong>मैन्युअल (manual)</strong>।</li>
+<li>चिप्स (chips) – <strong>नियमित (regularly)</strong> हटाएँ – <strong>जाम (clogging)</strong> से बचने के लिए।</li>
+<li>कटिंग फ्लुइड – <strong>अनुशंसित (recommended)</strong> – <strong>गर्मी (heat)</strong> कम (reduce) करने के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>लेथ पर ड्रिलिंग – <strong>टेलस्टॉक (tailstock)</strong> में <strong>ड्रिल (drill)</strong> लगाकर।</li>
+<li>ड्रिल चक – <strong>सीधा (straight)</strong> शैंक के लिए।</li>
+<li>स्लीव (Sleeve) – <strong>टेपर (taper)</strong> शैंक के लिए – <strong>मोर्स टेपर (Morse taper)</strong>।</li>
+<li>चिप्स (chips) – <strong>बार-बार (frequently)</strong> हटाएँ – <strong>ब्रश (brush)</strong> या <strong>हुक (hook)</strong> से।</li>
+<li>ड्रिल (drill) को <strong>केंद्र (centre)</strong> पर <strong>सटीक (accurately)</strong> संरेखित (align) करें – <strong>छेद (hole)</strong> <strong>बड़ा (oversize)</strong> न हो।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.13 BORING AND BORING TOOLS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-boring">
+<div class="content-section" data-content="boring-lathe">
+<div class="section-header"><span class="icon">🔄</span><span class="title">7.13 – बोरिंग और बोरिंग टूल (Boring &amp; Boring Tools)</span><span class="subtitle">— बोरिंग बार, प्रकार, संचालन, सटीकता</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>बोरिंग (Boring)</strong> – किसी <strong>मौजूदा (existing)</strong> छेद (hole) को <strong>बड़ा (enlarge)</strong> करना और <strong>सटीक (accurately)</strong> बनाना – <strong>बोरिंग बार (boring bar)</strong> का उपयोग करके।</p>
+
+<p><strong>बोरिंग टूल (Boring Tools):</strong></p>
+<ul>
+<li><strong>बोरिंग बार (Boring Bar):</strong> एक <strong>लंबा (long)</strong>, <strong>पतला (thin)</strong> उपकरण – <strong>सिरे (end)</strong> पर <strong>काटने का किनारा (cutting edge)</strong> – <strong>टूल पोस्ट (tool post)</strong> में <strong>क्लैंप (clamp)</strong> किया जाता है – <strong>वर्कपीस (workpiece)</strong> के <strong>छेद (hole)</strong> के <strong>अंदर (inside)</strong> <strong>फीड (feed)</strong> किया जाता है।</li>
+<li><strong>प्रकार (Types):</strong>
+    <ul>
+        <li><strong>ठोस (Solid)</strong> बोरिंग बार – <strong>एक (one)</strong> टुकड़ा (piece) – <strong>छोटे (small)</strong> छेद (holes) के लिए।</li>
+        <li><strong>समायोज्य (Adjustable)</strong> बोरिंग बार – <strong>व्यास (diameter)</strong> <strong>समायोजित (adjust)</strong> किया जा सकता है – <strong>विभिन्न (various)</strong> आकारों के लिए।</li>
+        <li><strong>कार्बाइड-टिप्ड (Carbide-tipped)</strong> – <strong>कठोर (hard)</strong> सामग्री के लिए – <strong>उच्च (high)</strong> गति (speed) पर।</li>
+    </ul>
+</li>
+</ul>
+
+<p><strong>बोरिंग प्रक्रिया (Boring Process):</strong></p>
+<ol>
+<li>वर्कपीस (workpiece) को <strong>चक (chuck)</strong> में <strong>कसें (tighten)</strong> – या <strong>फेस प्लेट (face plate)</strong> पर।</li>
+<li>वर्कपीस में <strong>पहले (already)</strong> से <strong>ड्रिल (drill)</strong> किया हुआ <strong>छेद (hole)</strong> होना चाहिए – <strong>बोरिंग (boring)</strong> के लिए।</li>
+<li><strong>बोरिंग बार (boring bar)</strong> को <strong>टूल पोस्ट (tool post)</strong> में <strong>लगाएँ (mount)</strong> – <strong>उचित (proper)</strong> ऊँचाई (height) पर – <strong>केंद्र (centre)</strong> से <strong>0.5–1 मिमी (mm)</strong> <strong>ऊपर (above)</strong>।</li>
+<li><strong>स्पिंडल (spindle)</strong> को <strong>चालू (start)</strong> करें – <strong>धीमी (low)</strong> गति (speed) – <strong>0.01–0.05 मिमी (mm)</strong> कट (cut) गहराई (depth) – <strong>सटीकता (accuracy)</strong> के लिए।</li>
+<li><strong>टूल (tool)</strong> को <strong>छेद (hole)</strong> में <strong>फीड (feed)</strong> करें – <strong>लॉन्गिट्यूडिनल फीड (longitudinal feed)</strong> – <strong>आवश्यक (required)</strong> व्यास (diameter) तक।</li>
+<li><strong>छेद (hole)</strong> को <strong>डायल गेज (dial gauge)</strong> या <strong>टेलिस्कोपिंग गेज (telescoping gauge)</strong> से <strong>जाँच (check)</strong> करें – <strong>सटीक (accurate)</strong> आकार (size) के लिए।</li>
+</ol>
+
+<p><strong>बोरिंग की सावधानियाँ (Precautions for Boring):</strong></p>
+<ul>
+<li><strong>बोरिंग बार (boring bar)</strong> को <strong>मजबूती (firmly)</strong> से <strong>क्लैंप (clamp)</strong> करें – <strong>कंपन (vibration)</strong> से बचने के लिए – <strong>कंपन (vibration)</strong> – <strong>खराब (poor)</strong> फिनिश (finish).</li>
+<li><strong>बार (bar)</strong> का <strong>व्यास (diameter)</strong> – <strong>जितना (as)</strong> <strong>बड़ा (larger)</strong> <strong>संभव (possible)</strong> – <strong>कठोरता (rigidity)</strong> के लिए – <strong>बार (bar)</strong> <strong>झुक (bend)</strong> नहीं।</li>
+<li><strong>कट (cut)</strong> गहराई (depth) – <strong>कम (small)</strong> – <strong>0.05–0.2 मिमी (mm)</strong> – <strong>सटीकता (accuracy)</strong> के लिए – <strong>कई (multiple)</strong> कट (cuts) लें।</li>
+<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> – <strong>अनुशंसित (recommended)</strong> – <strong>गर्मी (heat)</strong> कम (reduce) करने के लिए – <strong>बोरिंग बार (boring bar)</strong> <strong>घिस (wear)</strong> न हो।</li>
+<li><strong>टूल (tool)</strong> को <strong>केंद्र (centre)</strong> पर <strong>सटीक (accurately)</strong> रखें – <strong>छेद (hole)</strong> <strong>शंक्वाकार (tapered)</strong> न हो।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: बोरिंग और बोरिंग टूल (Boring &amp; Boring Tools)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/boring_tools.jpg</p>
+<code>boring_tools.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बोरिंग बार, टूल पोस्ट माउंटिंग, कटिंग एक्शन)</p>
+</div>
+<div class="figure-caption">Fig 13 – बोरिंग और बोरिंग टूल</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बोरिंग – <strong>मौजूदा (existing)</strong> छेद (hole) को <strong>बड़ा (enlarge)</strong> करना और <strong>सटीक (accurate)</strong> बनाना।</li>
+<li>बोरिंग बार – <strong>टूल पोस्ट (tool post)</strong> में – <strong>छेद (hole)</strong> के अंदर (inside) – <strong>कटिंग (cutting)</strong>।</li>
+<li>टूल (tool) – <strong>केंद्र (centre)</strong> से <strong>0.5–1 मिमी (mm)</strong> <strong>ऊपर (above)</strong> – <strong>उचित (proper)</strong> ऊँचाई (height).</li>
+<li>कट (cut) गहराई – <strong>कम (small)</strong> – <strong>0.05–0.2 मिमी (mm)</strong> – <strong>सटीकता (accuracy)</strong> के लिए।</li>
+<li>कंपन (vibration) – <strong>खराब (poor)</strong> फिनिश (finish) – <strong>बोरिंग बार (boring bar)</strong> को <strong>मजबूती (firmly)</strong> से <strong>क्लैंप (clamp)</strong> करें।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बोरिंग – <strong>छेद (hole)</strong> को <strong>बड़ा (enlarge)</strong> करना – <strong>ड्रिलिंग (drilling)</strong> के बाद।</li>
+<li>बोरिंग बार – <strong>टूल पोस्ट (tool post)</strong> में – <strong>वर्कपीस (workpiece)</strong> के <strong>अंदर (inside)</strong>।</li>
+<li>बोरिंग बार का <strong>व्यास (diameter)</strong> – <strong>जितना (as)</strong> <strong>बड़ा (larger)</strong> <strong>संभव (possible)</strong> – <strong>कठोरता (rigidity)</strong> के लिए।</li>
+<li>कट (cut) गहराई – <strong>0.05–0.2 मिमी (mm)</strong> – <strong>सटीकता (accuracy)</strong> के लिए।</li>
+<li>कटिंग फ्लुइड – <strong>गर्मी (heat)</strong> कम (reduce) करता है – <strong>टूल (tool)</strong> जीवन (life) बढ़ाता है।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.14 TOOL SETTING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tool-setting">
+<div class="content-section" data-content="tool-setting">
+<div class="section-header"><span class="icon">🔧</span><span class="title">7.14 – टूल सेटिंग (Tool Setting)</span><span class="subtitle">— ऊँचाई, कोण, संरेखण, सटीकता</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>टूल सेटिंग (Tool Setting)</strong> – <strong>कटिंग टूल (cutting tool)</strong> को <strong>लेथ (lathe)</strong> पर <strong>सही (correct)</strong> स्थिति (position) में <strong>लगाना (setting)</strong> – <strong>सटीक (accurate)</strong> मशीनिंग (machining) के लिए।</p>
+
+<p><strong>टूल सेटिंग के मुख्य पहलू (Main Aspects of Tool Setting):</strong></p>
+
+<p><strong>1. ऊँचाई (Height):</strong></p>
+<ul>
+<li>टूल (tool) का <strong>काटने का किनारा (cutting edge)</strong> <strong>वर्कपीस (workpiece)</strong> के <strong>केंद्र (centre)</strong> के <strong>समान (same)</strong> ऊँचाई (height) पर होना चाहिए – <strong>सटीक (accurate)</strong> कटिंग (cutting) के लिए।</li>
+<li><strong>केंद्र (centre)</strong> से <strong>ऊपर (above)</strong> – <strong>रफिंग (roughing)</strong> के लिए – <strong>0.5–1 मिमी (mm)</strong> – <strong>टूल (tool)</strong> को <strong>टूटने (break)</strong> से बचाता है।</li>
+<li><strong>केंद्र (centre)</strong> से <strong>नीचे (below)</strong> – <strong>फिनिशिंग (finishing)</strong> के लिए – <strong>अच्छी (good)</strong> सतह फिनिश (surface finish) – लेकिन <strong>चिप (chip)</strong> प्रवाह (flow) <strong>खराब (poor)</strong>।</li>
+<li><strong>ऊँचाई (height)</strong> को <strong>टूल पोस्ट (tool post)</strong> में <strong>शिम्स (shims)</strong> डालकर <strong>समायोजित (adjust)</strong> किया जाता है – या <strong>टूल पोस्ट (tool post)</strong> के <strong>समायोजन (adjustment)</strong> द्वारा।</li>
+</ul>
+
+<p><strong>2. कोण (Angle):</strong></p>
+<ul>
+<li><strong>टूल (tool)</strong> का <strong>कटिंग एज (cutting edge)</strong> <strong>वर्कपीस (workpiece)</strong> के <strong>अक्ष (axis)</strong> के <strong>समानांतर (parallel)</strong> या <strong>कोण (angle)</strong> पर – <strong>आवश्यकता (requirement)</strong> के अनुसार।</li>
+<li><strong>फेसिंग (facing)</strong> – <strong>कटिंग एज (cutting edge)</strong> – <strong>अक्ष (axis)</strong> के <strong>लंबवत (perpendicular)</strong>।</li>
+<li><strong>टर्निंग (turning)</strong> – <strong>कटिंग एज (cutting edge)</strong> – <strong>अक्ष (axis)</strong> के <strong>समानांतर (parallel)</strong>।</li>
+<li><strong>थ्रेड कटिंग (thread cutting)</strong> – <strong>टूल (tool)</strong> को <strong>60°</strong> (मीट्रिक) या <strong>55°</strong> (व्हिटवर्थ) पर <strong>सेट (set)</strong> करें – <strong>टूल गेज (tool gauge)</strong> का उपयोग करें।</li>
+</ul>
+
+<p><strong>3. संरेखण (Alignment):</strong></p>
+<ul>
+<li><strong>टूल (tool)</strong> को <strong>वर्कपीस (workpiece)</strong> के <strong>केंद्र (centre)</strong> पर <strong>संरेखित (align)</strong> करें – <strong>कंपन (vibration)</strong> और <strong>असमान (uneven)</strong> कट (cut) से बचने के लिए।</li>
+<li><strong>डायल गेज (dial gauge)</strong> या <strong>स्क्राइबर (scriber)</strong> का उपयोग – <strong>सटीक (accurate)</strong> संरेखण (alignment) के लिए।</li>
+</ul>
+
+<p><strong>4. टूल पोस्ट (Tool Post) सेटिंग:</strong></p>
+<ul>
+<li>टूल पोस्ट (tool post) को <strong>ठीक (proper)</strong> से <strong>कसें (tighten)</strong> – <strong>टूल (tool)</strong> को <strong>हिलने (move)</strong> से रोकने के लिए – <strong>कंपन (vibration)</strong> कम (reduce) करने के लिए।</li>
+<li><strong>टूल (tool)</strong> को <strong>अधिक (excessive)</strong> <strong>लंबा (long)</strong> न रखें – <strong>कंपन (vibration)</strong> – <strong>खराब (poor)</strong> फिनिश (finish).</li>
+</ul>
+
+<p><strong>5. टूल ओवरहैंग (Tool Overhang):</strong></p>
+<ul>
+<li>टूल पोस्ट (tool post) से <strong>टूल (tool)</strong> के <strong>बाहर (outside)</strong> निकले हुए <strong>भाग (portion)</strong> – <strong>ओवरहैंग (overhang)</strong> – <strong>जितना (as)</strong> <strong>कम (little)</strong> <strong>संभव (possible)</strong> – <strong>कंपन (vibration)</strong> कम (reduce) करने के लिए।</li>
+<li><strong>अधिकतम (maximum)</strong> ओवरहैंग (overhang) – <strong>टूल (tool)</strong> के <strong>क्रॉस-सेक्शन (cross-section)</strong> के <strong>1.5–2 गुना (times)</strong> – <strong>HSS</strong> टूल के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टूल सेटिंग (Tool Setting) – ऊँचाई, कोण, संरेखण</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/tool_setting.jpg</p>
+<code>tool_setting.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(शिम्स, टूल पोस्ट, संरेखण, ओवरहैंग)</p>
+</div>
+<div class="figure-caption">Fig 14 – टूल सेटिंग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>टूल केंद्र (centre) – <strong>वर्कपीस केंद्र (workpiece centre)</strong> के <strong>समान (same)</strong> ऊँचाई (height).</li>
+<li>शिम्स (Shims) – <strong>ऊँचाई (height)</strong> समायोजित (adjust) करने के लिए।</li>
+<li>टूल कोण (tool angle) – <strong>संचालन (operation)</strong> के अनुसार – फेसिंग, टर्निंग, थ्रेडिंग।</li>
+<li>ओवरहैंग (Overhang) – <strong>कम (short)</strong> – <strong>कंपन (vibration)</strong> कम (reduce) करने के लिए।</li>
+<li>टूल पोस्ट – <strong>मजबूती (firmly)</strong> से <strong>कसें (tighten)</strong> – <strong>टूल (tool)</strong> को <strong>हिलने (move)</strong> से रोकने के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>टूल केंद्र – <strong>वर्कपीस केंद्र (workpiece centre)</strong> के <strong>समान (same)</strong> ऊँचाई (height) – <strong>सटीकता (accuracy)</strong> के लिए।</li>
+<li>शिम्स (Shims) – <strong>टूल (tool)</strong> की <strong>ऊँचाई (height)</strong> को <strong>समायोजित (adjust)</strong> करने के लिए।</li>
+<li>टूल कोण (tool angle) – <strong>फेसिंग (facing)</strong> – <strong>लंबवत (perpendicular)</strong> – <strong>टर्निंग (turning)</strong> – <strong>समानांतर (parallel)</strong>।</li>
+<li>ओवरहैंग (Overhang) – <strong>जितना (as)</strong> <strong>कम (little)</strong> <strong>संभव (possible)</strong> – <strong>कंपन (vibration)</strong> कम (reduce).</li>
+<li>टूल पोस्ट – <strong>मजबूती (firmly)</strong> से <strong>कसें (tighten)</strong> – <strong>सुरक्षा (safety)</strong> के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.15 TOOL POST -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tool-post">
+<div class="content-section" data-content="tool-post">
+<div class="section-header"><span class="icon">🔩</span><span class="title">7.15 – टूल पोस्ट (Tool Post)</span><span class="subtitle">— प्रकार, कार्य, चयन, रखरखाव</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>टूल पोस्ट (Tool Post)</strong> – <strong>कटिंग टूल (cutting tool)</strong> को <strong>लेथ (lathe)</strong> पर <strong>धारण (hold)</strong> करने वाला उपकरण – <strong>कैरिज (carriage)</strong> के <strong>कम्पाउंड रेस्ट (compound rest)</strong> पर <strong>फिट (fit)</strong> होता है।</p>
+
+<p><strong>टूल पोस्ट के प्रकार (Types of Tool Posts):</strong></p>
+
+<p><strong>1. रॉकर टूल पोस्ट (Rocker Tool Post – रॉकिंग / Rocking):</strong></p>
+<ul>
+<li><strong>पुराना (old)</strong> प्रकार – <strong>आज (now)</strong> कम (less) उपयोग – <strong>टूल (tool)</strong> को <strong>झुकाया (tilted)</strong> जा सकता है – <strong>ऊँचाई (height)</strong> समायोजन (adjustment) के लिए – <strong>सरल (simple)</strong> लेकिन <strong>कम (less)</strong> कठोर (rigid).</li>
+</ul>
+
+<p><strong>2. चार-तरफा टूल पोस्ट (Four-Way Tool Post – क्विक-चेंज / Quick-Change):</strong></p>
+<ul>
+<li><strong>सबसे सामान्य (most common)</strong> – <strong>चार (four)</strong> टूल्स (tools) को <strong>एक साथ (simultaneously)</strong> <strong>धारण (hold)</strong> कर सकता है – <strong>तेज़ (fast)</strong> टूल परिवर्तन (tool change) के लिए – <strong>प्रत्येक (each)</strong> टूल (tool) को <strong>अलग (separately)</strong> <strong>समायोजित (adjusted)</strong> किया जा सकता है – <strong>बहुत (very)</strong> कठोर (rigid) – <strong>उत्पादन (production)</strong> कार्य के लिए।</li>
+</ul>
+
+<p><strong>3. सिंगल-टूल टूल पोस्ट (Single-Tool Tool Post – सरल / Simple):</strong></p>
+<ul>
+<li><strong>एक (one)</strong> टूल (tool) के लिए – <strong>सरल (simple)</strong> – <strong>सस्ता (cheap)</strong> – <strong>छोटे (small)</strong> कार्यों (jobs) के लिए – <strong>प्रयोगशाला (workshop)</strong> में।</li>
+</ul>
+
+<p><strong>4. क्विक-चेंज टूल पोस्ट (Quick-Change Tool Post):</strong></p>
+<ul>
+<li><strong>आधुनिक (modern)</strong> – <strong>बहुत (very)</strong> तेज़ (fast) टूल परिवर्तन – <strong>दोहराव (repeat)</strong> सटीकता (accuracy) – <strong>विभिन्न (various)</strong> टूल होल्डर (tool holders) – <strong>उच्च (high)</strong> उत्पादन (production) के लिए।</li>
+</ul>
+
+<p><strong>टूल पोस्ट का चयन (Selection of Tool Post):</strong></p>
+<ul>
+<li><strong>संचालन (Operation):</strong> <strong>बहु-टूल (multi-tool)</strong> संचालन के लिए – <strong>चार-तरफा (four-way)</strong> या <strong>क्विक-चेंज (quick-change)</strong> – <strong>एकल (single)</strong> टूल के लिए – <strong>सिंगल (single)</strong>।</li>
+<li><strong>सटीकता (Accuracy):</strong> <strong>उच्च सटीकता (high accuracy)</strong> – <strong>क्विक-चेंज (quick-change)</strong> – <strong>दोहराव (repeatability)</strong> के लिए।</li>
+<li><strong>लागत (Cost):</strong> <strong>कम (low)</strong> – <strong>सिंगल (single)</strong> या <strong>रॉकर (rocker)</strong> – <strong>उच्च (high)</strong> – <strong>क्विक-चेंज (quick-change)</strong>।</li>
+</ul>
+
+<p><strong>टूल पोस्ट की देखभाल (Care of Tool Post):</strong></p>
+<ul>
+<li><strong>नियमित (regular)</strong> रूप से <strong>साफ (clean)</strong> करें – <strong>चिप्स (chips)</strong> और <strong>गंदगी (dirt)</strong> हटाएँ।</li>
+<li><strong>चल (moving)</strong> भागों (parts) को <strong>तेल (oil)</strong> या <strong>ग्रीस (grease)</strong> लगाएँ – <strong>सुचारू (smooth)</strong> संचालन (operation) के लिए।</li>
+<li><strong>घिसे (worn)</strong> हुए <strong>टूल पोस्ट (tool post)</strong> को <strong>बदलें (replace)</strong> – <strong>सटीकता (accuracy)</strong> बनाए रखने के लिए।</li>
+<li><strong>टूल (tool)</strong> को <strong>क्लैंप (clamp)</strong> करते समय <strong>अत्यधिक (excessive)</strong> बल (force) न लगाएँ – <strong>टूल पोस्ट (tool post)</strong> को <strong>नुकसान (damage)</strong> हो सकता है।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टूल पोस्ट के प्रकार (Tool Post Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/tool_post.jpg</p>
+<code>tool_post.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(रॉकर, चार-तरफा, क्विक-चेंज, सिंगल)</p>
+</div>
+<div class="figure-caption">Fig 15 – टूल पोस्ट के प्रकार</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>टूल पोस्ट – <strong>टूल (tool)</strong> को <strong>धारण (hold)</strong> करता है – <strong>कम्पाउंड रेस्ट (compound rest)</strong> पर।</li>
+<li>चार-तरफा (Four-Way) – <strong>चार (four)</strong> टूल्स – <strong>तेज़ (fast)</strong> परिवर्तन – <strong>उत्पादन (production)</strong> के लिए।</li>
+<li>क्विक-चेंज (Quick-Change) – <strong>बहुत (very)</strong> तेज़ – <strong>दोहराव (repeat)</strong> सटीकता (accuracy).</li>
+<li>रॉकर (Rocker) – <strong>पुराना (old)</strong> – <strong>कम (less)</strong> कठोर (rigid).</li>
+<li>चयन (Selection) – <strong>संचालन (operation)</strong>, <strong>सटीकता (accuracy)</strong>, <strong>लागत (cost)</strong> पर निर्भर (depends).</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>टूल पोस्ट – <strong>टूल (tool)</strong> को <strong>धारण (hold)</strong> करता है – <strong>कम्पाउंड रेस्ट (compound rest)</strong> पर।</li>
+<li>चार-तरफा (Four-Way) – <strong>चार (four)</strong> टूल्स – <strong>एक साथ (simultaneously)</strong> – <strong>उत्पादन (production)</strong> के लिए।</li>
+<li>क्विक-चेंज (Quick-Change) – <strong>बहुत तेज़ (very fast)</strong> टूल परिवर्तन – <strong>उच्च सटीकता (high accuracy)</strong>।</li>
+<li>रॉकर (Rocker) – <strong>ऊँचाई (height)</strong> समायोजन (adjustment) – <strong>कम (less)</strong> कठोर (rigid).</li>
+<li>टूल पोस्ट – <strong>सही (correct)</strong> प्रकार (type) का चयन – <strong>कार्य (job)</strong> के अनुसार।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.16 KNURLING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-knurling">
+<div class="content-section" data-content="knurling">
+<div class="section-header"><span class="icon">🔲</span><span class="title">7.16 – नरलिंग (Knurling)</span><span class="subtitle">— उद्देश्य, उपकरण, प्रकार, संचालन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>नरलिंग (Knurling)</strong> – वर्कपीस (workpiece) की <strong>सतह (surface)</strong> पर <strong>खुरदरा (rough)</strong> और <strong>दाँतेदार (serrated)</strong> पैटर्न (pattern) बनाना – <strong>नरलिंग टूल (knurling tool)</strong> का उपयोग करके।</p>
+
+<p><strong>उद्देश्य (Purpose):</strong></p>
+<ul>
+<li><strong>पकड़ (grip)</strong> बढ़ाना – <strong>हाथ (hand)</strong> से <strong>पकड़ने (holding)</strong> के लिए – उदाहरण: <strong>स्क्रूड्राइवर (screwdriver)</strong> हैंडल (handle), <strong>नट (nut)</strong>।</li>
+<li><strong>सौंदर्यशास्त्र (Aesthetics)</strong> – <strong>आकर्षक (attractive)</strong> उपस्थिति (appearance).</li>
+<li><strong>आयाम (dimensions)</strong> बढ़ाना – <strong>व्यास (diameter)</strong> को <strong>थोड़ा (slightly)</strong> बढ़ाना – <strong>फिट (fit)</strong> के लिए – <strong>प्रेस फिट (press fit)</strong> के लिए।</li>
+</ul>
+
+<p><strong>नरलिंग टूल (Knurling Tool):</strong></p>
+<ul>
+<li><strong>एक (one)</strong> या <strong>दो (two)</strong> <strong>गोल (round)</strong> <strong>पहिए (wheels)</strong> – <strong>दाँतेदार (serrated)</strong> – <strong>कठोर (hardened)</strong> स्टील।</li>
+<li><strong>प्रकार (Types):</strong>
+    <ul>
+        <li><strong>सिंगल-व्हील (Single-Wheel):</strong> एक (one) पहिया – <strong>सरल (simple)</strong> – <strong>कम (less)</strong> दबाव (pressure).</li>
+        <li><strong>डबल-व्हील (Double-Wheel – क्लैम्प / Clamp):</strong> दो (two) पहिए – <strong>विपरीत (opposite)</strong> दिशा (direction) में – <strong>संतुलित (balanced)</strong> दबाव (pressure) – <strong>बेहतर (better)</strong> गुणवत्ता (quality).</li>
+        <li><strong>क्लैम्प (Clamp) प्रकार:</strong> <strong>टूल पोस्ट (tool post)</strong> में <strong>क्लैंप (clamp)</strong> किया जाता है – <strong>समायोज्य (adjustable)</strong> दबाव (pressure).</li>
+    </ul>
+</li>
+</ul>
+
+<p><strong>नरलिंग पैटर्न (Knurling Patterns):</strong></p>
+<ul>
+<li><strong>स्ट्रेट (Straight – सीधा):</strong> <strong>समानांतर (parallel)</strong> रेखाएँ – <strong>सरल (simple)</strong> – <strong>कम (less)</strong> पकड़ (grip).</li>
+<li><strong>डायमंड (Diamond – हीरा):</strong> <strong>क्रॉस (cross)</strong> रेखाएँ – <strong>बेहतर (better)</strong> पकड़ (grip) – <strong>सबसे (most)</strong> सामान्य (common).</li>
+<li><strong>बाएँ-हाथ (Left-hand) और दाएँ-हाथ (Right-hand):</strong> <strong>दिशा (direction)</strong> के अनुसार – <strong>पहिए (wheels)</strong> की <strong>झुकाव (helix)</strong> पर।</li>
+</ul>
+
+<p><strong>नरलिंग प्रक्रिया (Knurling Process):</strong></p>
+<ol>
+<li>वर्कपीस (workpiece) को <strong>चक (chuck)</strong> में <strong>कसें (tighten)</strong> – <strong>केंद्र (centre)</strong> पर।</li>
+<li><strong>नरलिंग टूल (knurling tool)</strong> को <strong>टूल पोस्ट (tool post)</strong> में <strong>लगाएँ (mount)</strong> – <strong>पहिए (wheels)</strong> को वर्कपीस (workpiece) के <strong>संपर्क (contact)</strong> में <strong>लाएँ (bring)</strong> – <strong>हल्का (light)</strong> दबाव (pressure) – <strong>अत्यधिक (excessive)</strong> दबाव से <strong>टूल (tool)</strong> <strong>टूट (break)</strong> सकता है।</li>
+<li><strong>स्पिंडल (spindle)</strong> को <strong>धीमी (low)</strong> गति (speed) पर <strong>चालू (start)</strong> करें – <strong>50–200 RPM</strong> – <strong>कटिंग फ्लुइड (cutting fluid)</strong> का उपयोग करें – <strong>तेल (oil)</strong> – <strong>गर्मी (heat)</strong> कम (reduce) करने के लिए।</li>
+<li><strong>टूल (tool)</strong> को <strong>फीड (feed)</strong> करें – <strong>लॉन्गिट्यूडिनल (longitudinal)</strong> – <strong>0.1–0.3 मिमी/चक्कर (mm/rev)</strong> – <strong>वर्कपीस (workpiece)</strong> की <strong>पूरी (entire)</strong> लंबाई (length) पर – <strong>एक (one)</strong> या <strong>कई (multiple)</strong> पास (passes).</li>
+<li><strong>नरलिंग (knurling)</strong> पूरी (complete) होने पर – <strong>टूल (tool)</strong> को <strong>वापस (retract)</strong> करें – <strong>स्पिंडल (spindle)</strong> को <strong>बंद (stop)</strong> करें – वर्कपीस (workpiece) को <strong>हटाएँ (remove)</strong> – <strong>गुणवत्ता (quality)</strong> की <strong>जाँच (check)</strong> करें।</li>
+</ol>
+
+<p><strong>नरलिंग की सावधानियाँ (Precautions):</strong></p>
+<ul>
+<li>टूल (tool) को <strong>केंद्र (centre)</strong> पर <strong>संरेखित (align)</strong> करें – <strong>असमान (uneven)</strong> पैटर्न (pattern) से बचने के लिए।</li>
+<li><strong>अत्यधिक (excessive)</strong> दबाव (pressure) – <strong>टूल (tool)</strong> <strong>टूट (break)</strong> सकता है – <strong>वर्कपीस (workpiece)</strong> <strong>विकृत (deform)</strong> हो सकता है।</li>
+<li><strong>गति (speed)</strong> – <strong>कम (low)</strong> – <strong>गर्मी (heat)</strong> कम (reduce) करने के लिए – <strong>उच्च (high)</strong> गति – <strong>टूल (tool)</strong> <strong>घिस (wear)</strong> जाता है।</li>
+<li><strong>कटिंग फ्लुइड (cutting fluid)</strong> – <strong>तेल (oil)</strong> – <strong>अनुशंसित (recommended)</strong> – <strong>टूल (tool)</strong> जीवन (life) बढ़ाने के लिए।</li>
+<li><strong>वर्कपीस (workpiece)</strong> को <strong>मजबूती (firmly)</strong> से <strong>पकड़ें (hold)</strong> – <strong>स्लिप (slip)</strong> से बचने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: नरलिंग (Knurling) – टूल और पैटर्न</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/knurling.jpg</p>
+<code>knurling.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(नरलिंग टूल, स्ट्रेट, डायमंड, बाएँ-दाएँ पैटर्न)</p>
+</div>
+<div class="figure-caption">Fig 16 – नरलिंग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>नरलिंग – <strong>खुरदरा (rough)</strong> पैटर्न – <strong>पकड़ (grip)</strong> बढ़ाने के लिए।</li>
+<li>डबल-व्हील (Double-Wheel) – <strong>बेहतर (better)</strong> गुणवत्ता – <strong>संतुलित (balanced)</strong> दबाव।</li>
+<li>डायमंड (Diamond) – <strong>सबसे (most)</strong> सामान्य (common) – <strong>बेहतर (better)</strong> पकड़ (grip).</li>
+<li>गति (Speed) – <strong>50–200 RPM</strong> – <strong>कम (low)</strong> – <strong>गर्मी (heat)</strong> कम (reduce).</li>
+<li>कटिंग फ्लुइड – <strong>तेल (oil)</strong> – <strong>अनुशंसित (recommended)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>नरलिंग – <strong>पकड़ (grip)</strong> के लिए – <strong>हैंडल (handles)</strong> और <strong>नट (nuts)</strong> पर।</li>
+<li>डायमंड (Diamond) – <strong>सबसे (most)</strong> सामान्य (common) पैटर्न – <strong>क्रॉस (cross)</strong> रेखाएँ।</li>
+<li>डबल-व्हील (Double-Wheel) – <strong>संतुलित (balanced)</strong> दबाव – <strong>बेहतर (better)</strong> गुणवत्ता।</li>
+<li>गति – <strong>50–200 RPM</strong> – <strong>कम (low)</strong> – <strong>गर्मी (heat)</strong> कम (reduce).</li>
+<li>कटिंग फ्लुइड – <strong>तेल (oil)</strong> – <strong>टूल (tool)</strong> जीवन (life) बढ़ाता है।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.17 STANDARD TAPERS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tapers">
+<div class="content-section" data-content="tapers">
+<div class="section-header"><span class="icon">📐</span><span class="title">7.17 – मानक टेपर (Standard Tapers)</span><span class="subtitle">— प्रकार, आकार, उपयोग, कोण</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>टेपर (Taper)</strong> – वर्कपीस (workpiece) का <strong>व्यास (diameter)</strong> उसकी <strong>लंबाई (length)</strong> के साथ <strong>समान रूप (uniformly)</strong> <strong>घटता (decreases)</strong> या <strong>बढ़ता (increases)</strong> है। <strong>मानक टेपर (Standard Tapers)</strong> – <strong>सामान्य (common)</strong> उपयोग के लिए <strong>निर्दिष्ट (specified)</strong> टेपर (tapers).</p>
+
+<p><strong>मानक टेपर के प्रकार (Types of Standard Tapers):</strong></p>
+
+<p><strong>1. मोर्स टेपर (Morse Taper – MT):</strong></p>
+<ul>
+<li><strong>सबसे (most)</strong> सामान्य (common) – <strong>ड्रिल (drills)</strong>, <strong>रीमर (reamers)</strong>, <strong>स्लीव्स (sleeves)</strong>, <strong>सेंटर (centres)</strong> के लिए – <strong>लेथ (lathe)</strong> और <strong>ड्रिलिंग मशीन (drilling machines)</strong> पर।</li>
+<li><strong>कोण (Angle):</strong> लगभग <strong>1° 26′</strong> (MT1) से <strong>1° 30′</strong> (MT7) – <strong>टेपर प्रति फुट (taper per foot):</strong> <strong>0.624″</strong> (MT1) से <strong>0.651″</strong> (MT7).</li>
+<li><strong>आकार (Sizes):</strong> <strong>MT0</strong> से <strong>MT7</strong> – <strong>MT1</strong> सबसे (most) छोटा – <strong>MT7</strong> सबसे (most) बड़ा – <strong>MT1</strong> (0.475″ छोटा अंत – small end), <strong>MT2</strong> (0.572″), <strong>MT3</strong> (0.778″), <strong>MT4</strong> (1.020″), <strong>MT5</strong> (1.475″), <strong>MT6</strong> (2.116″), <strong>MT7</strong> (2.763″).</li>
+<li><strong>टैंग (Tang):</strong> <strong>ड्राइव (drive)</strong> के लिए – <strong>एक (one)</strong> सिरे (end) पर – <strong>स्लॉट (slot)</strong> में <strong>फिट (fit)</strong> होता है।</li>
+</ul>
+
+<p><strong>2. ब्राउन और शार्प टेपर (Brown &amp; Sharpe Taper – B&amp;S):</strong></p>
+<ul>
+<li><strong>मिलिंग मशीन (milling machines)</strong> और <strong>लेथ (lathes)</strong> पर – <strong>स्पिंडल (spindles)</strong> के लिए – <strong>अमेरिकी (American)</strong> मानक – <strong>MT</strong> से <strong>थोड़ा (slightly)</strong> भिन्न (different).</li>
+<li><strong>टेपर (taper)</strong> – <strong>0.5″ प्रति फुट (per foot)</strong> – लगभग <strong>1° 11′</strong> कोण (angle).</li>
+<li><strong>आकार (Sizes):</strong> <strong>#1</strong> से <strong>#18</strong> – <strong>सबसे (most)</strong> सामान्य (common) – <strong>#5, #7, #9</strong> – <strong>मशीन स्पिंडल (machine spindles)</strong> में।</li>
+</ul>
+
+<p><strong>3. जार्नो टेपर (Jarno Taper):</strong></p>
+<ul>
+<li><strong>यूरोपीय (European)</strong> मानक – <strong>लेथ (lathes)</strong> और <strong>मशीन टूल्स (machine tools)</strong> पर – <strong>टेपर (taper)</strong> – <strong>0.75″ प्रति फुट (per foot)</strong> – लगभग <strong>1° 47′</strong> कोण (angle).</li>
+<li><strong>आकार (Sizes):</strong> <strong>#1</strong> से <strong>#20</strong> – <strong>आयाम (dimensions)</strong> – <strong>सीरियल (serial)</strong> संख्या (number) के अनुसार – <strong>नंबर (number)</strong> × 0.2 = बड़ा व्यास (large diameter).</li>
+</ul>
+
+<p><strong>4. नेशनल टेपर (National Taper – NMTB – National Machine Tool Builders):</strong></p>
+<ul>
+<li><strong>मिलिंग मशीन (milling machines)</strong> स्पिंडल (spindles) के लिए – <strong>उच्च (high)</strong> परिशुद्धता (precision) – <strong>कठोर (rigid)</strong> – <strong>ड्राइव (drive)</strong> के लिए <strong>की (key)</strong> के साथ।</li>
+<li><strong>आकार (Sizes):</strong> <strong>NMTB 30, 40, 50, 60</strong> – <strong>#40</strong> सबसे (most) सामान्य (common) – <strong>मिलिंग मशीन (milling machines)</strong> पर।</li>
+</ul>
+
+<p><strong>5. रिवेट टेपर (Rivet Taper – पाइप टेपर / Pipe Taper):</strong></p>
+<ul>
+<li><strong>पाइप (pipe)</strong> और <strong>ट्यूब (tube)</strong> के लिए – <strong>थ्रेड (thread)</strong> के साथ – <strong>NPT (National Pipe Thread)</strong> – <strong>0.75″ प्रति फुट (per foot)</strong> – <strong>1° 47′</strong>।</li>
+</ul>
+
+<p><strong>टेपर का उपयोग (Uses of Tapers):</strong></p>
+<ul>
+<li><strong>सटीक (accurate)</strong> केंद्र (centring) – <strong>स्व-लॉकिंग (self-locking)</strong> – <strong>आसान (easy)</strong> असेंबली (assembly) और <strong>डिसअसेंबली (disassembly)</strong> – <strong>शक्ति (power)</strong> संचारण (transmission).</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: मानक टेपर (Standard Tapers) – MT, B&amp;S, Jarno</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/standard_tapers.jpg</p>
+<code>standard_tapers.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(मोर्स, ब्राउन और शार्प, जार्नो टेपर – आकार)</p>
+</div>
+<div class="figure-caption">Fig 17 – मानक टेपर</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>मोर्स टेपर आकार (Morse Taper Sizes)</caption>
+<thead><tr><th>MT आकार</th><th>छोटा अंत व्यास (mm)</th><th>बड़ा अंत व्यास (mm)</th><th>लंबाई (mm)</th></tr></thead>
+<tbody>
+<tr><td>MT0</td><td>6.35</td><td>9.07</td><td>52.5</td></tr>
+<tr><td>MT1</td><td>12.07</td><td>15.09</td><td>59.5</td></tr>
+<tr><td>MT2</td><td>17.78</td><td>21.21</td><td>75.0</td></tr>
+<tr><td>MT3</td><td>23.82</td><td>27.72</td><td>93.5</td></tr>
+<tr><td>MT4</td><td>31.27</td><td>35.70</td><td>112.5</td></tr>
+<tr><td>MT5</td><td>44.40</td><td>49.60</td><td>135.0</td></tr>
+<tr><td>MT6</td><td>63.50</td><td>69.85</td><td>180.0</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>मोर्स टेपर (MT) – <strong>सबसे (most)</strong> सामान्य (common) – <strong>ड्रिल (drills)</strong> और <strong>स्लीव्स (sleeves)</strong> के लिए।</li>
+<li>MT1–MT7 – <strong>व्यास (diameter)</strong> बढ़ता (increases) – <strong>कोण (angle)</strong> लगभग <strong>1° 26′–1° 30′</strong>।</li>
+<li>ब्राउन और शार्प (B&amp;S) – <strong>मिलिंग मशीन (milling machines)</strong> के लिए – <strong>टेपर (taper)</strong> – 0.5″/ft.</li>
+<li>जार्नो (Jarno) – <strong>यूरोपीय (European)</strong> – 0.75″/ft.</li>
+<li>NMTB – <strong>उच्च परिशुद्धता (high precision)</strong> मिलिंग स्पिंडल (spindles).</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>मोर्स टेपर (MT) – <strong>सबसे (most)</strong> सामान्य (common) – <strong>टेपर (taper)</strong> – <strong>स्व-लॉकिंग (self-locking)</strong>।</li>
+<li>MT1 – <strong>सबसे (most)</strong> छोटा (small) – MT7 – <strong>सबसे (most)</strong> बड़ा (large).</li>
+<li>ब्राउन और शार्प (B&amp;S) – <strong>मिलिंग मशीन (milling machines)</strong> स्पिंडल (spindles).</li>
+<li>NMTB – <strong>उच्च परिशुद्धता (high precision)</strong> – <strong>की (key)</strong> ड्राइव (drive) के साथ।</li>
+<li>टेपर (taper) – <strong>सटीक (accurate)</strong> केंद्र (centring) और <strong>शक्ति (power)</strong> संचारण (transmission) के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 7.18 SCREW THREAD -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-threads">
+<div class="content-section" data-content="threads">
+<div class="section-header"><span class="icon">🧵</span><span class="title">7.18 – स्क्रू थ्रेड (Screw Thread)</span><span class="subtitle">— प्रकार, एलीमेंट्स, मानक, कोण, पिच</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>स्क्रू थ्रेड (Screw Thread)</strong> – एक <strong>निरंतर (continuous)</strong> <strong>उभार (ridge)</strong> जो एक <strong>सिलेंडर (cylinder)</strong> या <strong>शंकु (cone)</strong> के चारों ओर <strong>घूमता (helical)</strong> है।</p>
+
+<p><strong>थ्रेड के एलीमेंट्स (Thread Elements):</strong></p>
+<ul>
+<li><strong>मुख्य व्यास (Major Diameter – D):</strong> थ्रेड का <strong>सबसे बड़ा (largest)</strong> व्यास – <strong>क्रेस्ट (crest)</strong> पर।</li>
+<li><strong>लघु व्यास (Minor Diameter – d):</strong> थ्रेड का <strong>सबसे छोटा (smallest)</strong> व्यास – <strong>रूट (root)</strong> पर।</li>
+<li><strong>पिच व्यास (Pitch Diameter – Dp):</strong> <strong>मुख्य (major)</strong> और <strong>लघु (minor)</strong> के <strong>बीच (between)</strong> – <strong>थ्रेड (thread)</strong> के <strong>फ्लैंक्स (flanks)</strong> के <strong>मध्य (middle)</strong>।</li>
+<li><strong>पिच (Pitch – P):</strong> दो <strong>आसन्न (adjacent)</strong> थ्रेड्स (threads) के <strong>सामान्य (corresponding)</strong> बिंदुओं (points) के <strong>बीच (between)</strong> की <strong>दूरी (distance)</strong> – <strong>मिमी (mm)</strong>।</li>
+<li><strong>थ्रेड प्रति इंच (Threads Per Inch – TPI):</strong> 1 इंच (inch) में थ्रेड्स की <strong>संख्या (number)</strong> – <strong>ब्रिटिश (British)</strong> प्रणाली।</li>
+<li><strong>थ्रेड कोण (Thread Angle):</strong> थ्रेड के <strong>फ्लैंक्स (flanks)</strong> के <strong>बीच (between)</strong> का <strong>कोण (angle)</strong> – <strong>60°</strong> (मीट्रिक, ISO), <strong>55°</strong> (ब्रिटिश व्हिटवर्थ – BSW).</li>
+<li><strong>थ्रेड गहराई (Thread Depth):</strong> मुख्य (major) और लघु (minor) व्यास के <strong>बीच (between)</strong> – <strong>0.5 × P × tan(θ/2)</strong>।</li>
+<li><strong>लीड (Lead):</strong> स्क्रू के <strong>एक (one)</strong> चक्कर (revolution) में <strong>अक्षीय (axial)</strong> दूरी – <strong>सिंगल स्टार्ट (single start)</strong> के लिए Lead = Pitch – <strong>मल्टी-स्टार्ट (multi-start)</strong> के लिए Lead = Pitch × Number of starts.</li>
+<li><strong>फ्लैंक (Flank):</strong> थ्रेड की <strong>पार्श्व (side)</strong> सतह – <strong>क्रेस्ट (crest)</strong> और <strong>रूट (root)</strong> के <strong>बीच (between)</strong>।</li>
+</ul>
+
+<p><strong>थ्रेड के प्रकार (Types of Threads):</strong></p>
+<ul>
+<li><strong>V-थ्रेड (V-Thread – मीट्रिक / ISO):</strong> <strong>60°</strong> कोण – <strong>सबसे (most)</strong> सामान्य (common) – <strong>फास्टनिंग (fastening)</strong> के लिए – <strong>M6, M8, M10</strong>, आदि।</li>
+<li><strong>व्हिटवर्थ थ्रेड (Whitworth – BSW):</strong> <strong>55°</strong> कोण – <strong>ब्रिटिश (British)</strong> – <strong>पुराना (old)</strong> – अब (now) <strong>कम (less)</strong> उपयोग।</li>
+<li><strong>यूनिफाइड थ्रेड (Unified – UNC / UNF):</strong> <strong>60°</strong> कोण – <strong>अमेरिकी (American)</strong> – <strong>UNC</strong> (कोर्स – coarse), <strong>UNF</strong> (फाइन – fine).</li>
+<li><strong>वर्गाकार थ्रेड (Square Thread):</strong> <strong>बल (force)</strong> संचारण (transmission) के लिए – <strong>स्क्रू जैक (screw jacks)</strong>, <strong>वाइस (vices)</strong>।</li>
+<li><strong>ट्रैपेज़ॉइडल थ्रेड (Trapezoidal – Acme):</strong> <strong>29°</strong> कोण – <strong>गति (motion)</strong> संचारण (transmission) के लिए – <strong>लीड स्क्रू (lead screws)</strong>।</li>
+<li><strong>बट्रेस थ्रेड (Buttress):</strong> <strong>एकतरफा (one-sided)</strong> – <strong>उच्च (high)</strong> अक्षीय भार (axial load) के लिए – <strong>आर्टिलरी (artillery)</strong>।</li>
+</ul>
+
+<p><strong>थ्रेड मानक (Thread Standards):</strong></p>
+<ul>
+<li><strong>ISO मीट्रिक (ISO Metric – M):</strong> <strong>60°</strong> – <strong>M10 × 1.5</strong> – <strong>व्यास (diameter)</strong> × <strong>पिच (pitch)</strong>।</li>
+<li><strong>UNC (Unified Coarse):</strong> <strong>1/4-20 UNC</strong> – <strong>1/4″ व्यास</strong>, <strong>20 TPI</strong>।</li>
+<li><strong>UNF (Unified Fine):</strong> <strong>1/4-28 UNF</strong> – <strong>28 TPI</strong>।</li>
+<li><strong>BSW (British Standard Whitworth):</strong> <strong>55°</strong> – <strong>1/4″ BSW</strong> – <strong>20 TPI</strong>।</li>
+<li><strong>BSP (British Standard Pipe):</strong> <strong>पाइप (pipe)</strong> थ्रेड – <strong>समानांतर (parallel)</strong> या <strong>टेपर (taper)</strong> – <strong>BSPP</strong> (समानांतर), <strong>BSPT</strong> (टेपर).</li>
+</ul>
+
+<p><strong>थ्रेड निर्माण (Thread Manufacturing):</strong></p>
+<ul>
+<li><strong>कटिंग (Cutting):</strong> <strong>टैप (tap)</strong> और <strong>डाई (die)</strong> – <strong>हाथ (hand)</strong> या <strong>लेथ (lathe)</strong> पर।</li>
+<li><strong>रोलिंग (Rolling):</strong> <strong>ठंडा (cold)</strong> – <strong>उत्पादन (production)</strong> के लिए – <strong>तेज़ (fast)</strong> – <strong>मजबूत (strong)</strong> थ्रेड।</li>
+<li><strong>ग्राइंडिंग (Grinding):</strong> <strong>परिशुद्धता (precision)</strong> थ्रेड – <strong>गेज (gauges)</strong> और <strong>उच्च-सटीक (high-precision)</strong> कार्यों के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्क्रू थ्रेड एलीमेंट्स और प्रकार</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/screw_thread.jpg</p>
+<code>screw_thread.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(मुख्य, लघु, पिच व्यास, पिच, कोण, फ्लैंक, क्रेस्ट, रूट)</p>
+</div>
+<div class="figure-caption">Fig 18 – स्क्रू थ्रेड एलीमेंट्स</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>मीट्रिक थ्रेड – <strong>60°</strong> – <strong>ISO</strong> मानक – <strong>M10 × 1.5</strong>।</li>
+<li>व्हिटवर्थ – <strong>55°</strong> – <strong>ब्रिटिश (British)</strong> – <strong>BSW</strong>।</li>
+<li>पिच (Pitch) – <strong>मिमी (mm)</strong> – दो आसन्न (adjacent) थ्रेड्स के <strong>बीच (between)</strong> दूरी।</li>
+<li>TPI – <strong>1 इंच (inch)</strong> में थ्रेड्स की <strong>संख्या (number)</strong>।</li>
+<li>वर्गाकार (Square) – <strong>बल (force)</strong> संचारण (transmission) – <strong>जैक (jacks)</strong>, <strong>वाइस (vices)</strong>।</li>
+<li>Acme (ट्रैपेज़ॉइडल) – <strong>गति (motion)</strong> संचारण – <strong>लीड स्क्रू (lead screws)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>मीट्रिक थ्रेड – <strong>60°</strong> – <strong>ISO मानक (ISO standard)</strong> – <strong>M10 × 1.5</strong> – <strong>पिच (pitch) = 1.5 मिमी</strong>।</li>
+<li>व्हिटवर्थ – <strong>55°</strong> – <strong>BSW</strong> – <strong>ब्रिटिश (British)</strong>।</li>
+<li>यूनिफाइड – <strong>60°</strong> – <strong>UNC</strong> (कोर्स) और <strong>UNF</strong> (फाइन).</li>
+<li>पिच (Pitch) – <strong>मिमी (mm)</strong> – <strong>TPI</strong> – <strong>इंच (inch)</strong>।</li>
+<li>वर्गाकार (Square) – <strong>उच्च (high)</strong> दक्षता (efficiency) – <strong>बल (force)</strong> संचारण (transmission).</li>
+<li>Acme – <strong>29°</strong> – <strong>लीड स्क्रू (lead screw)</strong> – <strong>उच्च (high)</strong> भार (load) क्षमता (capacity).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ============================== CONCLUSION ============================== -->
+<div class="container">
+<div class="conclusion-section">
+<h2>📌 Module 7 – निष्कर्ष (Conclusion)</h2>
+<div class="bilingual">
+<div class="content">
+<p><strong>Module 7 – Turning</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<ul>
+<li><strong>लेथ सुरक्षा (Lathe Safety):</strong> व्यक्तिगत सुरक्षा, मशीन सुरक्षा, संचालन सावधानियाँ, आपातकालीन (emergency).</li>
+<li><strong>लेथ मुख्य भाग (Lathe Main Parts):</strong> बेड, हेडस्टॉक, टेलस्टॉक, कैरिज, कम्पाउंड रेस्ट, टूल पोस्ट, लीड स्क्रू, फीड रॉड।</li>
+<li><strong>फीड और थ्रेड कटिंग तंत्र:</strong> फीड प्रकार (लॉन्गिट्यूडिनल, क्रॉस, एंगुलर), चेंज गियर्स, लीड स्क्रू, हाफ नट।</li>
+<li><strong>सेंटर के बीच जॉब पकड़ना:</strong> लाइव सेंटर, डेड सेंटर, कैच प्लेट, डॉग, सेंटर ड्रिल।</li>
+<li><strong>फेसिंग और रफिंग टूल:</strong> विवरण, ज्यामिति, अंतर, फीड, गति।</li>
+<li><strong>सिंगल पॉइंट और मल्टी पॉइंट टूल नामकरण:</strong> शैंक, फेस, फ्लैंक, नोज़, कटिंग एज, कोण (रेक, निकासी, कटिंग एज).</li>
+<li><strong>टूल चयन:</strong> सामग्री, संचालन, सटीकता, लागत, कटिंग द्रव।</li>
+<li><strong>टूल कोणों की आवश्यकता:</strong> रेक, निकासी, कटिंग एज, नोज़ त्रिज्या – कटिंग प्रदर्शन, टूल जीवन, सतह फिनिश।</li>
+<li><strong>कटिंग स्पीड, फीड, कूलेंट:</strong> CS, RPM, फीड, कटिंग फ्लुइड के प्रकार और चयन।</li>
+<li><strong>चक – स्वतंत्र 4-जॉ चक:</strong> संरचना, उपयोग, संचालन, 3-जॉ चक से तुलना।</li>
+<li><strong>फेस प्लेट:</strong> संरचना, उपयोग, कार्यप्रणाली, सावधानियाँ।</li>
+<li><strong>लेथ पर ड्रिलिंग:</strong> प्रक्रिया, ड्रिल होल्डिंग, सावधानियाँ।</li>
+<li><strong>बोरिंग और बोरिंग टूल:</strong> बोरिंग बार, प्रकार, संचालन, सटीकता।</li>
+<li><strong>टूल सेटिंग:</strong> ऊँचाई, कोण, संरेखण, टूल पोस्ट, ओवरहैंग।</li>
+<li><strong>टूल पोस्ट:</strong> प्रकार (रॉकर, चार-तरफा, क्विक-चेंज), चयन, रखरखाव।</li>
+<li><strong>नरलिंग:</strong> उद्देश्य, उपकरण, प्रकार (स्ट्रेट, डायमंड), संचालन, सावधानियाँ।</li>
+<li><strong>मानक टेपर:</strong> मोर्स, ब्राउन और शार्प, जार्नो, NMTB – आकार, कोण, उपयोग।</li>
+<li><strong>स्क्रू थ्रेड:</strong> एलीमेंट्स, प्रकार (मीट्रिक, व्हिटवर्थ, यूनिफाइड, वर्गाकार, Acme), मानक, निर्माण।</li>
+</ul>
+<p>इन सभी विषयों में महारत हासिल करना हर <strong>फिटर (fitter)</strong> के लिए आवश्यक है। प्रत्येक संचालन को <strong>सटीकता (precision)</strong> और <strong>सुरक्षा (safety)</strong> के साथ अभ्यास करें।</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ============================== MCQ ============================== -->
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="section-body">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/fitter/index.html?mod=7" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="section-body">
+<div style="display:flex; flex-wrap:wrap; gap:12px;">
+<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
+<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
+<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
+<a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
+<a href="module-5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 5: Drilling</a>
+<a href="module-6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 6: Assembly</a>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('⚙️ ' + getPageTitle() + ' - Complete Fitter Theory Module 7 Study Material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('⚙️ ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Fitter Theory Module 7 – Turning (Complete) Loaded.');
+        console.log('📚 Lathe Safety, Parts, Feed, Holding, Tools, Angles, Speed, Chucks, Drilling, Boring, Knurling, Tapers, Threads.');
+    </script>
+</body>
+  </html>
