@@ -1,1 +1,2059 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 1 – Assembly (पूर्ण) | Fitter 2nd Year | ITI Study Centre</title>
+<meta content="Complete Fitter 2nd Year Module 1 – Assembly. Screws, Screw Drivers, Locking Devices, Keys, Special Files, Template, Gauges, Slip Gauges, Sine Bar, Lapping, Honing, Frosting, Heat Treatment, Surface Hardening, Coatings. Full NIMI syllabus." name="description"/>
+<style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.8;
+            user-select: none;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
 
+        .main-header {
+            background: #003366;
+            padding: 16px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        @media(max-width:768px) {
+            .main-header .container { flex-direction: column; gap: 8px; }
+            .main-header nav { justify-content: center; gap: 6px 14px; }
+            .main-header nav a { font-size: 0.9rem; }
+        }
+
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a { color: #003366; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .current { color: #555; font-weight: 600; }
+
+        .page-title {
+            padding: 32px 0 22px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.3rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
+        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
+
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 540px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
+        }
+        .search-section button {
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover { background: #002244; transform: scale(1.02); }
+        @media(max-width:640px) {
+            .search-section { flex-direction: column; }
+            .search-section input { max-width: 100%; width: 100%; }
+            .search-section button { width: 100%; }
+        }
+
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            margin-bottom: 32px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 20px 28px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .section-header .icon { font-size: 1.8rem; line-height: 1; }
+        .section-header .title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body { padding: 28px 32px; background: #fafcff; }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-left: 5px solid #ffcc00;
+            padding-left: 18px;
+        }
+        .section-body h3:first-of-type { margin-top: 0; }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.12rem;
+            margin: 20px 0 10px;
+        }
+        @media(max-width:768px) {
+            .section-header { padding: 14px 18px; }
+            .section-header .title { font-size: 1.05rem; }
+            .section-body { padding: 18px 18px; }
+            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
+        }
+        @media(max-width:480px) {
+            .section-body { padding: 14px 14px; }
+            .section-header .icon { font-size: 1.4rem; }
+            .section-header .title { font-size: 0.95rem; }
+        }
+
+        .bilingual { margin: 14px 0; }
+        .bilingual .content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #1a2a3a;
+        }
+        .bilingual .content ul, .bilingual .content ol { padding-left: 26px; margin: 10px 0; }
+        .bilingual .content ul li, .bilingual .content ol li { margin-bottom: 6px; }
+        .bilingual .content p { margin: 10px 0; }
+        @media(max-width:480px) {
+            .bilingual .content { font-size: 0.95rem; }
+        }
+
+        .info-card {
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin: 18px 0;
+            background: #fff;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+        }
+        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
+        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
+        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
+        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
+        .info-card h4 { margin: 0 0 6px; color: #003366; }
+        .info-card ul { margin: 0; padding-left: 22px; }
+        .info-card ul li { margin-bottom: 4px; }
+
+        .tool-figure {
+            width:100%;
+            max-width:850px;
+            margin:24px auto;
+            text-align:center;
+            background:#f8fafc;
+            border:1px solid #e2e7ed;
+            border-radius:12px;
+            padding:20px;
+            transition:0.2s;
+        }
+        .tool-figure:hover { background:#f0f4fa; }
+        .tool-figure .placeholder-icon { font-size:3.5rem; line-height:1.2; color:#8a9aa8; margin-bottom:6px; }
+        .tool-figure .figure-caption { font-size:0.95rem; color:#555; font-weight:600; margin-top:8px; }
+        .tool-figure .image-placeholder {
+            display:block;
+            min-height:120px;
+            background:#f0f4fa;
+            border:2px dashed #c7ced7;
+            border-radius:8px;
+            padding:18px;
+            color:#68717c;
+        }
+        .tool-figure .image-placeholder code {
+            background:#e7ebef;
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:0.8rem;
+            display:inline-block;
+            margin:4px 0;
+        }
+        @media(max-width:768px) {
+            .tool-figure { padding:14px; }
+            .tool-figure .placeholder-icon { font-size:2.8rem; }
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 22px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 13px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 11px 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
+        .table-wrap tr:hover { background: #eef2f7; }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        @media(max-width:480px) {
+            .table-wrap table { font-size: 0.85rem; }
+            .table-wrap th, .table-wrap td { padding: 8px 10px; }
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin: 20px 0;
+        }
+        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
+        .compare-card {
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .compare-card h4 { font-size: 1.1rem; margin: 0 0 10px; color: #003366; }
+        .compare-card ul { padding-left: 20px; margin: 0; }
+        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .example-box strong { color: #003366; }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .important-box h4 { margin: 0 0 6px; color: #856404; }
+        .important-box ul { padding-left: 22px; margin: 0; }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
+        .short-notes ul { padding-left: 22px; margin: 0; }
+        .warning-box {
+            background: #fff5f2;
+            border-left: 5px solid #dc3545;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
+        .warning-box p { margin: 0; }
+        .success-box {
+            background: #eef9f1;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .success-box h4 { margin: 0 0 6px; color: #1e7e34; }
+        .success-box p { margin: 0; }
+
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 22px;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.link { background: #6c757d; }
+        .share-btn.link.copied { background: #28a745; }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        @media(max-width:600px) {
+            .share-section { flex-direction: column; align-items: stretch; }
+            .share-section .share-label { text-align: center; }
+            .share-btn { justify-content: center; }
+        }
+
+        .mcq-link { text-align: center; padding: 12px 0; }
+        .mcq-link a {
+            display: inline-block;
+            padding: 14px 44px;
+            background: #ffcc00;
+            color: #003366 !important;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
+        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
+
+        .conclusion-section {
+            background: #e8f4fd;
+            border: 2px solid #003366;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .conclusion-section h2 {
+            color: #003366;
+            font-size: 1.6rem;
+            border-left: 5px solid #ffcc00;
+            padding-left: 16px;
+            margin-bottom: 16px;
+        }
+        .conclusion-section ul {
+            padding-left: 26px;
+            margin: 10px 0;
+        }
+        .conclusion-section ul li { margin-bottom: 6px; }
+
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 28px 20px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 28px;
+            margin-bottom: 14px;
+        }
+        footer .footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover { background: #002244; transform: scale(1.05); }
+
+        .copy-protect::selection { background: #b3d4fc; color: #000; }
+
+        @media print {
+            #scrollTop, .share-section, .search-section { display: none !important; }
+            body { background: #fff !important; }
+            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+            .section-body { background: #fff !important; }
+            .tool-figure { border:1px solid #ccc; break-inside:avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+<div class="container">
+<div class="logo"><a href="/">🔧 ITI Study Centre</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/iti-study-centre-notes.html">Notes</a>
+<a class="active" href="/notes/fitter/index.html">Fitter</a>
+<a href="/question-bank/fitter/index.html">Question Bank</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+<a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+<a href="/notes/fitter/index.html">Fitter</a>  › 
+<a href="/notes/fitter/second-year/index.html">2nd Year</a>  › 
+<span class="current">Module 1 – Assembly (पूर्ण)</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>🔧 Module 1 – Assembly (पूर्ण)</h1>
+<p>स्क्रू · स्क्रू ड्राइवर · लॉकिंग डिवाइस · कीज · स्पेशल फाइल · टेम्पलेट · गेज · स्लिप गेज · साइन बार · लैपिंग · होनिंग · फ्रॉस्टिंग · हीट ट्रीटमेंट · कोटिंग्स</p>
+</div>
+</section>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()">🔍 Search</button>
+</section>
+
+<div class="container">
+<div class="share-section">
+<span class="share-label">📤 Share:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</button>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+Facebook
+</button>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+Twitter
+</button>
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div class="container">
+<div class="content-section" style="border:2px solid #003366;">
+<div class="section-header" style="background:#003366; border-bottom:none;">
+<span class="icon" style="color:#ffcc00;">📚</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 1 (Assembly)</span>
+</div>
+<div class="section-body" style="background:#fff;">
+<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
+<a href="#sec-assembly" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 2.1.115 – Assembly (असेबली)</a>
+<a href="#sec-screws" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 2.1.116-118 – स्क्रू (Screws)</a>
+<a href="#sec-screwdrivers" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🪛 2.1.119 – स्क्रू ड्राइवर</a>
+<a href="#sec-locking" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔒 2.1.120 – लॉकिंग डिवाइस – नट</a>
+<a href="#sec-keys" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🗝️ 2.1.121-122 – कीज (Keys)</a>
+<a href="#sec-special-files" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📁 2.1.123 – स्पेशल फाइल</a>
+<a href="#sec-template" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 2.1.124 – टेम्पलेट और गेज</a>
+<a href="#sec-slip-gauges" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📏 2.1.125-126 – स्लिप गेज</a>
+<a href="#sec-sine-bar" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 2.1.127 – साइन बार</a>
+<a href="#sec-quality" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">✅ 2.1.128 – गुणवत्ता मानक</a>
+<a href="#sec-lapping" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 2.1.129 – लैपिंग</a>
+<a href="#sec-surface-finish" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📊 2.1.130 – सरफेस फिनिश</a>
+<a href="#sec-honing" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔄 2.1.131 – होनिंग</a>
+<a href="#sec-frosting" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">❄️ 2.1.132-133 – फ्रॉस्टिंग</a>
+<a href="#sec-heat-treatment" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔥 2.1.134-135 – हीट ट्रीटमेंट</a>
+<a href="#sec-surface-hardening" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ 2.1.136 – सरफेस हार्डनिंग</a>
+<a href="#sec-tapers" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 2.1.137-138 – कीज पर टेपर</a>
+<a href="#sec-coatings" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🎨 2.1.139 – कोटिंग्स</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.115 ASSEMBLY -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-assembly">
+<div class="content-section" data-content="assembly">
+<div class="section-header"><span class="icon">🔧</span><span class="title">2.1.115 – Assembly (असेबली)</span><span class="subtitle">— अर्थ, प्रकार, प्रक्रिया, सावधानियाँ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>असेबली (Assembly)</strong> – विभिन्न भागों (parts) को <strong>एक साथ जोड़ना (joining together)</strong> – एक <strong>पूर्ण उत्पाद (complete product)</strong> या <strong>उप-असेबली (sub-assembly)</strong> बनाने के लिए।</p>
+
+<p><strong>असेबली का उद्देश्य (Purpose of Assembly):</strong></p>
+<ul>
+<li><strong>कार्यात्मक (functional)</strong> इकाई (unit) बनाना – <strong>मशीन (machine)</strong> या <strong>उपकरण (equipment)</strong>।</li>
+<li><strong>गुणवत्ता (quality)</strong> सुनिश्चित करना – <strong>सभी (all)</strong> भाग (parts) <strong>सही (correct)</strong> स्थान (position) पर हों।</li>
+<li><strong>सटीकता (accuracy)</strong> बनाए रखना – <strong>फिट (fits)</strong> और <strong>सहनशीलता (tolerances)</strong> के अनुसार।</li>
+<li><strong>रखरखाव (maintenance)</strong> में आसानी – <strong>भाग (parts)</strong> को <strong>अलग (disassemble)</strong> और <strong>बदला (replace)</strong> जा सके।</li>
+</ul>
+
+<p><strong>असेबली के प्रकार (Types of Assembly):</strong></p>
+<ul>
+<li><strong>स्थायी असेबली (Permanent Assembly):</strong> भाग (parts) <strong>स्थायी (permanently)</strong> जुड़े होते हैं – <strong>वेल्डिंग (welding)</strong>, <strong>रिवेटिंग (riveting)</strong>, <strong>सोल्डरिंग (soldering)</strong> – <strong>बिना तोड़े (without breaking)</strong> अलग नहीं किया जा सकता।</li>
+<li><strong>अस्थायी असेबली (Temporary Assembly):</strong> भाग (parts) <strong>अलग (separate)</strong> किए जा सकते हैं – <strong>स्क्रू (screws)</strong>, <strong>नट (nuts)</strong>, <strong>बोल्ट (bolts)</strong>, <strong>कीज (keys)</strong> – <strong>रखरखाव (maintenance)</strong> के लिए।</li>
+<li><strong>अर्ध-स्थायी असेबली (Semi-Permanent Assembly):</strong> – <strong>प्रेस फिट (press fit)</strong>, <strong>श्रिंक फिट (shrink fit)</strong> – <strong>विशेष (special)</strong> उपकरणों के साथ अलग किया जा सकता है।</li>
+</ul>
+
+<p><strong>असेबली प्रक्रिया (Assembly Process):</strong></p>
+<ol>
+<li><strong>योजना (Planning):</strong> <strong>असेबली ड्राइंग (assembly drawing)</strong> और <strong>चरण (steps)</strong> का अध्ययन (study).</li>
+<li><strong>भागों की जाँच (Parts Inspection):</strong> सभी (all) भाग (parts) – <strong>सही (correct)</strong> आकार (size), <strong>फिट (fit)</strong>, और <strong>गुणवत्ता (quality)</strong> – <strong>माप (measure)</strong> और <strong>जाँच (check)</strong>।</li>
+<li><strong>सफाई (Cleaning):</strong> सभी (all) भाग (parts) को <strong>साफ (clean)</strong> करना – <strong>गंदगी (dirt)</strong>, <strong>तेल (oil)</strong>, <strong>ग्रीस (grease)</strong> हटाना।</li>
+<li><strong>फिटिंग (Fitting):</strong> भागों (parts) को <strong>एक साथ (together)</strong> <strong>फिट (fit)</strong> करना – <strong>हाथ (hand)</strong> या <strong>उपकरण (tools)</strong> के साथ – <strong>समायोजन (adjustments)</strong> करना।</li>
+<li><strong>फास्टनिंग (Fastening):</strong> भागों (parts) को <strong>जोड़ना (joining)</strong> – <strong>स्क्रू (screws)</strong>, <strong>बोल्ट (bolts)</strong>, <strong>नट (nuts)</strong>, <strong>रिवेट्स (rivets)</strong>, <strong>वेल्डिंग (welding)</strong> – <strong>सही (correct)</strong> <strong>टॉर्क (torque)</strong> के साथ।</li>
+<li><strong>जाँच (Checking):</strong> <strong>असेबली (assembly)</strong> की <strong>कार्यक्षमता (functionality)</strong> और <strong>सटीकता (accuracy)</strong> की <strong>जाँच (check)</strong> – <strong>डायल गेज (dial gauge)</strong>, <strong>फीलर गेज (feeler gauge)</strong>, आदि।</li>
+<li><strong>फिनिशिंग (Finishing):</strong> <strong>सरफेस फिनिश (surface finish)</strong> – <strong>पेंटिंग (painting)</strong>, <strong>कोटिंग (coating)</strong>, <strong>लुब्रिकेशन (lubrication)</strong>।</li>
+</ol>
+
+<p><strong>असेबली के दौरान सावधानियाँ (Precautions during Assembly):</strong></p>
+<ul>
+<li><strong>सही (correct)</strong> <strong>टूल (tools)</strong> का उपयोग – <strong>रिंच (wrenches)</strong>, <strong>स्क्रूड्राइवर (screwdrivers)</strong>, <strong>प्लायर्स (pliers)</strong>।</li>
+<li><strong>अत्यधिक (excessive)</strong> बल (force) न लगाएँ – <strong>भाग (parts)</strong> <strong>क्षतिग्रस्त (damaged)</strong> हो सकते हैं।</li>
+<li><strong>स्वच्छता (cleanliness)</strong> – <strong>धूल (dust)</strong> और <strong>गंदगी (dirt)</strong> – <strong>फिट (fit)</strong> को <strong>प्रभावित (affect)</strong> कर सकते हैं।</li>
+<li><strong>सहनशीलता (tolerances)</strong> की जाँच – <strong>भाग (parts)</strong> <strong>आपस (interchangeable)</strong> में <strong>फिट (fit)</strong> होने चाहिए।</li>
+<li><strong>लुब्रिकेशन (lubrication)</strong> – <strong>घर्षण (friction)</strong> कम (reduce) करने के लिए – <strong>चल (moving)</strong> भागों (parts) पर।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: असेबली प्रक्रिया (Assembly Process)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/assembly_process.jpg</p>
+<code>assembly_process.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(योजना, निरीक्षण, सफाई, फिटिंग, फास्टनिंग, जाँच, फिनिशिंग)</p>
+</div>
+<div class="figure-caption">Fig 1 – असेबली प्रक्रिया</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>असेबली – <strong>भागों (parts)</strong> को <strong>जोड़ना (joining)</strong> – <strong>उत्पाद (product)</strong> बनाना।</li>
+<li>स्थायी (Permanent) – <strong>वेल्डिंग (welding)</strong>, <strong>रिवेटिंग (riveting)</strong>।</li>
+<li>अस्थायी (Temporary) – <strong>स्क्रू (screws)</strong>, <strong>बोल्ट (bolts)</strong> – <strong>अलग (removable)</strong>।</li>
+<li>असेबली के दौरान – <strong>सही (correct)</strong> <strong>टूल (tools)</strong> और <strong>टॉर्क (torque)</strong>।</li>
+<li>सफाई (Cleaning) – <strong>महत्वपूर्ण (important)</strong> – <strong>गंदगी (dirt)</strong> <strong>फिट (fit)</strong> को प्रभावित (affect) करती है।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>स्थायी असेबली – <strong>वेल्डिंग (welding)</strong>, <strong>रिवेटिंग (riveting)</strong> – <strong>बिना तोड़े (without breaking)</strong> अलग नहीं।</li>
+<li>अस्थायी असेबली – <strong>स्क्रू (screws)</strong>, <strong>नट (nuts)</strong> – <strong>आसान (easy)</strong> अलग करना।</li>
+<li>असेबली प्रक्रिया – <strong>योजना → निरीक्षण → सफाई → फिटिंग → फास्टनिंग → जाँच → फिनिशिंग</strong>।</li>
+<li>सावधानी – <strong>अत्यधिक (excessive)</strong> बल (force) न लगाएँ – <strong>भाग (parts)</strong> <strong>टूट (break)</strong> सकते हैं।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.116-118 SCREWS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-screws">
+<div class="content-section" data-content="screws">
+<div class="section-header"><span class="icon">🔩</span><span class="title">2.1.116-118 – स्क्रू (Screws)</span><span class="subtitle">— प्रकार, भाग, मानक, थ्रेड, चयन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>स्क्रू (Screw)</strong> – एक <strong>थ्रेडेड (threaded)</strong> फास्टनर (fastener) – <strong>बेलनाकार (cylindrical)</strong> या <strong>शंक्वाकार (conical)</strong> – <strong>सिर (head)</strong> और <strong>शैंक (shank)</strong> के साथ – <strong>घूर्णी (rotary)</strong> गति द्वारा <strong>भागों (parts)</strong> को <strong>जोड़ना (joining)</strong>।</p>
+
+<p><strong>स्क्रू के भाग (Parts of a Screw):</strong></p>
+<ul>
+<li><strong>सिर (Head):</strong> स्क्रू का <strong>ऊपरी (top)</strong> भाग – <strong>स्क्रूड्राइवर (screwdriver)</strong> या <strong>रिंच (wrench)</strong> द्वारा <strong>पकड़ (grip)</strong> के लिए – <strong>विभिन्न (various)</strong> आकार (shapes) – <strong>चपटा (flat)</strong>, <strong>गोल (round)</strong>, <strong>षट्कोणीय (hexagonal)</strong>।</li>
+<li><strong>शैंक (Shank – Body):</strong> स्क्रू का <strong>मुख्य (main)</strong> भाग – <strong>चिकना (smooth)</strong> या <strong>थ्रेडेड (threaded)</strong> – <strong>लंबाई (length)</strong> और <strong>व्यास (diameter)</strong>।</li>
+<li><strong>थ्रेड (Thread):</strong> शैंक (shank) पर <strong>उभार (ridges)</strong> – <strong>पिच (pitch)</strong> और <strong>कोण (angle)</strong> – <strong>मानक (standard)</strong> आकार (sizes).</li>
+<li><strong>नोक (Point – Tip):</strong> स्क्रू का <strong>निचला (bottom)</strong> सिरा – <strong>नुकीला (pointed)</strong>, <strong>चपटा (flat)</strong>, या <strong>गोल (round)</strong> – <strong>प्रवेश (entry)</strong> के लिए।</li>
+<li><strong>थ्रेड रूट (Thread Root):</strong> थ्रेड (thread) के <strong>निचले (bottom)</strong> भाग – <strong>लघु व्यास (minor diameter)</strong>।</li>
+<li><strong>थ्रेड क्रेस्ट (Thread Crest):</strong> थ्रेड (thread) के <strong>ऊपरी (top)</strong> भाग – <strong>मुख्य व्यास (major diameter)</strong>।</li>
+</ul>
+
+<p><strong>स्क्रू के प्रकार (Types of Screws):</strong></p>
+<ul>
+<li><strong>मशीन स्क्रू (Machine Screw):</strong> <strong>धातु (metal)</strong> भागों (parts) के लिए – <strong>पूर्ण (full)</strong> थ्रेड (thread) – <strong>नट (nut)</strong> के साथ या <strong>बिना (without)</strong>।</li>
+<li><strong>सेल्फ-टैपिंग स्क्रू (Self-Tapping Screw):</strong> <strong>थ्रेड (thread)</strong> को <strong>स्वयं (itself)</strong> <strong>काटता (cuts)</strong> है – <strong>पतली (thin)</strong> शीट (sheets) के लिए – <strong>पूर्व-ड्रिल (pre-drilled)</strong> छेद (hole) की आवश्यकता नहीं।</li>
+<li><strong>वुड स्क्रू (Wood Screw):</strong> <strong>लकड़ी (wood)</strong> के लिए – <strong>नुकीला (pointed)</strong> – <strong>आंशिक (partial)</strong> थ्रेड (thread) – <strong>चपटा (flat)</strong> या <strong>गोल (round)</strong> सिर (head).</li>
+<li><strong>सेट स्क्रू (Set Screw – Grub Screw):</strong> <strong>सिर (head) रहित (headless)</strong> – <strong>दो (two)</strong> भागों (parts) को <strong>एक दूसरे (each other)</strong> के <strong>सापेक्ष (relative)</strong> <strong>लॉक (lock)</strong> करने के लिए – <strong>गियर (gear)</strong> को <strong>शाफ्ट (shaft)</strong> पर।</li>
+<li><strong>कैप स्क्रू (Cap Screw):</strong> <strong>बड़ा (large)</strong> आकार – <strong>षट्कोणीय (hexagonal)</strong> सिर (head) – <strong>भारी (heavy)</strong> अनुप्रयोगों (applications) के लिए – <strong>बोल्ट (bolt)</strong> के समान।</li>
+<li><strong>काउंटरसंक स्क्रू (Countersunk Screw):</strong> <strong>चपटा (flat)</strong> सिर (head) – <strong>सतह (surface)</strong> के <strong>साथ समतल (flush)</strong> बैठता है – <strong>सौंदर्यशास्त्र (aesthetics)</strong> के लिए।</li>
+<li><strong>थंब स्क्रू (Thumb Screw):</strong> <strong>हाथ (hand)</strong> से <strong>कसने (tighten)</strong> के लिए – <strong>बड़ा (large)</strong> सिर (head) – <strong>त्वरित (quick)</strong> समायोजन (adjustment) के लिए।</li>
+</ul>
+
+<p><strong>स्क्रू मानक (Screw Standards):</strong></p>
+<ul>
+<li><strong>ISO मीट्रिक (ISO Metric – M):</strong> <strong>60°</strong> थ्रेड कोण – <strong>M10 × 1.5</strong> – <strong>व्यास (diameter)</strong> × <strong>पिच (pitch)</strong> – <strong>भारत (India)</strong> में <strong>सबसे (most)</strong> सामान्य (common).</li>
+<li><strong>UNC (Unified Coarse) / UNF (Unified Fine):</strong> <strong>60°</strong> – <strong>अमेरिकी (American)</strong> – <strong>1/4-20 UNC</strong> – <strong>1/4″</strong> व्यास (diameter), <strong>20 TPI</strong>।</li>
+<li><strong>BSW (British Standard Whitworth):</strong> <strong>55°</strong> – <strong>ब्रिटिश (British)</strong> – <strong>पुराना (old)</strong> – <strong>अब (now)</strong> कम (less) उपयोग।</li>
+<li><strong>IS (Indian Standard):</strong> <strong>ISO मीट्रिक (ISO Metric)</strong> के <strong>समान (similar)</strong> – <strong>IS 1367</strong> – <strong>स्क्रू (screws)</strong>, <strong>नट (nuts)</strong>, <strong>बोल्ट (bolts)</strong> के लिए।</li>
+</ul>
+
+<p><strong>स्क्रू चयन (Screw Selection) के कारक:</strong></p>
+<ul>
+<li><strong>सामग्री (Material):</strong> <strong>धातु (metal)</strong> या <strong>लकड़ी (wood)</strong> – <strong>स्टील (steel)</strong>, <strong>स्टेनलेस (stainless)</strong>, <strong>पीतल (brass)</strong>।</li>
+<li><strong>भार (Load):</strong> <strong>हल्का (light)</strong> या <strong>भारी (heavy)</strong> – <strong>शक्ति (strength)</strong> आवश्यकता (requirement).</li>
+<li><strong>वातावरण (Environment):</strong> <strong>जंग (corrosion)</strong> – <strong>गैल्वनाइज्ड (galvanized)</strong> या <strong>स्टेनलेस (stainless)</strong>।</li>
+<li><strong>असेंबली (Assembly):</strong> <strong>बार-बार (frequently)</strong> <strong>अलग (removed)</strong> करना – <strong>आसान (easy)</strong> अलग करने के लिए <strong>सेट स्क्रू (set screw)</strong>।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्क्रू के प्रकार (Screw Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/screw_types.jpg</p>
+<code>screw_types.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(मशीन, सेल्फ-टैपिंग, वुड, सेट, कैप, काउंटरसंक, थंब)</p>
+</div>
+<div class="figure-caption">Fig 2 – स्क्रू के प्रकार</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>स्क्रू मानक (Screw Standards)</caption>
+<thead><tr><th>मानक (Standard)</th><th>थ्रेड कोण</th><th>अंकन (Marking)</th><th>उपयोग (Use)</th></tr></thead>
+<tbody>
+<tr><td>ISO मीट्रिक (M)</td><td>60°</td><td>M10 × 1.5</td><td>भारत, यूरोप, विश्वव्यापी</td></tr>
+<tr><td>UNC</td><td>60°</td><td>1/4-20 UNC</td><td>अमेरिका, कोर्स थ्रेड</td></tr>
+<tr><td>UNF</td><td>60°</td><td>1/4-28 UNF</td><td>अमेरिका, फाइन थ्रेड</td></tr>
+<tr><td>BSW</td><td>55°</td><td>1/4″ BSW</td><td>ब्रिटेन (पुराना)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>स्क्रू – <strong>थ्रेडेड (threaded)</strong> फास्टनर – <strong>भागों (parts)</strong> को <strong>जोड़ना (join)</strong>।</li>
+<li>ISO मीट्रिक – <strong>60°</strong> – <strong>M10 × 1.5</strong> – <strong>व्यास (diameter)</strong> × <strong>पिच (pitch)</strong>।</li>
+<li>सेल्फ-टैपिंग – <strong>थ्रेड (thread)</strong> को <strong>स्वयं (itself)</strong> <strong>काटता (cuts)</strong> है।</li>
+<li>सेट स्क्रू – <strong>सिर (head) रहित (headless)</strong> – <strong>गियर (gear)</strong> को <strong>शाफ्ट (shaft)</strong> पर <strong>लॉक (lock)</strong> करने के लिए।</li>
+<li>काउंटरसंक – <strong>समतल (flush)</strong> सतह (surface) – <strong>सौंदर्यशास्त्र (aesthetics)</strong> के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>मशीन स्क्रू – <strong>धातु (metal)</strong> भागों (parts) के लिए – <strong>पूर्ण (full)</strong> थ्रेड।</li>
+<li>सेल्फ-टैपिंग – <strong>थ्रेड (thread)</strong> को <strong>स्वयं (itself)</strong> <strong>काटता (cuts)</strong> है – <strong>पतली (thin)</strong> शीट (sheets).</li>
+<li>सेट स्क्रू – <strong>सिर (head) रहित (headless)</strong> – <strong>लॉकिंग (locking)</strong> के लिए।</li>
+<li>ISO मीट्रिक – <strong>60°</strong> – <strong>M10 × 1.5</strong> – <strong>पिच (pitch) = 1.5 मिमी</strong>।</li>
+<li>UNC – <strong>1/4-20 UNC</strong> – <strong>1/4″ व्यास (diameter)</strong> – <strong>20 TPI</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.119 SCREW DRIVERS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-screwdrivers">
+<div class="content-section" data-content="screwdrivers">
+<div class="section-header"><span class="icon">🪛</span><span class="title">2.1.119 – स्क्रू ड्राइवर (Screw Drivers)</span><span class="subtitle">— प्रकार, उपयोग, चयन, देखभाल</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>स्क्रू ड्राइवर (Screw Driver)</strong> – एक हाथ (hand) उपकरण – <strong>स्क्रू (screws)</strong> को <strong>कसने (tighten)</strong> और <strong>ढीला (loosen)</strong> करने के लिए – <strong>हैंडल (handle)</strong> और <strong>ब्लेड (blade)</strong> के साथ।</p>
+
+<p><strong>स्क्रू ड्राइवर के भाग (Parts of a Screw Driver):</strong></p>
+<ul>
+<li><strong>हैंडल (Handle):</strong> <strong>लकड़ी (wood)</strong>, <strong>प्लास्टिक (plastic)</strong>, या <strong>रबर (rubber)</strong> – <strong>पकड़ (grip)</strong> के लिए – <strong>आरामदायक (comfortable)</strong>।</li>
+<li><strong>शैंक (Shank):</strong> <strong>धातु (metal)</strong> छड़ (rod) – <strong>हैंडल (handle)</strong> से <strong>ब्लेड (blade)</strong> तक – <strong>गोल (round)</strong> या <strong>षट्कोणीय (hexagonal)</strong>।</li>
+<li><strong>ब्लेड (Blade – Tip):</strong> स्क्रू ड्राइवर (screw driver) का <strong>अंत (end)</strong> – <strong>स्क्रू (screw)</strong> के <strong>सिर (head)</strong> में <strong>फिट (fit)</strong> होता है – <strong>चपटा (flat)</strong>, <strong>फिलिप्स (Phillips)</strong>, <strong>स्टार (star)</strong>, आदि।</li>
+</ul>
+
+<p><strong>स्क्रू ड्राइवर के प्रकार (Types of Screw Drivers):</strong></p>
+<ul>
+<li><strong>चपटा (Flat Head – Slotted):</strong> <strong>सबसे (most)</strong> सामान्य (common) – <strong>चपटा (flat)</strong> ब्लेड (blade) – <strong>एक (single)</strong> खाँच (slot) वाले स्क्रू (screws) के लिए – <strong>सरल (simple)</strong>।</li>
+<li><strong>फिलिप्स (Phillips – Cross Head):</strong> <strong>क्रॉस (cross)</strong> आकार – <strong>चार (four)</strong> खाँच (slots) – <strong>बेहतर (better)</strong> पकड़ (grip) – <strong>फिसलन (slipping)</strong> कम (less) – <strong>आधुनिक (modern)</strong> स्क्रू (screws) के लिए।</li>
+<li><strong>स्टार (Star – Torx):</strong> <strong>छह (six)</strong>-नुकीला (pointed) – <strong>उच्च (high)</strong> टॉर्क (torque) के लिए – <strong>ऑटोमोटिव (automotive)</strong> और <strong>इलेक्ट्रॉनिक्स (electronics)</strong> में।</li>
+<li><strong>पॉज़ीड्राइव (Pozidriv):</strong> <strong>फिलिप्स (Phillips)</strong> के <strong>समान (similar)</strong> लेकिन <strong>अतिरिक्त (additional)</strong> खाँच (slots) के साथ – <strong>बेहतर (better)</strong> पकड़ (grip)।</li>
+<li><strong>हेक्स (Hex – Allen Key):</strong> <strong>षट्कोणीय (hexagonal)</strong> – <strong>एलन (Allen)</strong> स्क्रू (screws) के लिए – <strong>L-आकार (L-shaped)</strong> या <strong>सीधा (straight)</strong>।</li>
+<li><strong>रैचेट (Ratchet Screw Driver):</strong> <strong>रैचेट (ratchet)</strong> तंत्र (mechanism) – <strong>एक (one)</strong> दिशा (direction) में <strong>मोड़ (turn)</strong> – <strong>त्वरित (quick)</strong> कार्य (work) के लिए।</li>
+<li><strong>प्रिसिजन (Precision Screw Driver):</strong> <strong>बहुत छोटे (very small)</strong> स्क्रू (screws) के लिए – <strong>घड़ी (watch)</strong>, <strong>इलेक्ट्रॉनिक्स (electronics)</strong> – <strong>महीन (fine)</strong> ब्लेड (blade).</li>
+<li><strong>इंटरचेंजेबल (Interchangeable – बदली / Replaceable):</strong> <strong>कई (multiple)</strong> ब्लेड (blades) – <strong>एक (one)</strong> हैंडल (handle) – <strong>विभिन्न (various)</strong> स्क्रू (screws) के लिए।</li>
+</ul>
+
+<p><strong>स्क्रू ड्राइवर का चयन (Selection of Screw Driver):</strong></p>
+<ul>
+<li><strong>स्क्रू (screw) के प्रकार (type):</strong> <strong>चपटा (flat)</strong> – <strong>फिलिप्स (Phillips)</strong> – <strong>स्टार (Star)</strong> – <strong>हेक्स (Hex)</strong> – <strong>मेल (match)</strong> करना चाहिए।</li>
+<li><strong>स्क्रू (screw) का आकार (size):</strong> ब्लेड (blade) की <strong>चौड़ाई (width)</strong> और <strong>मोटाई (thickness)</strong> – <strong>स्क्रू (screw)</strong> के <strong>खाँच (slot)</strong> से <strong>मेल (match)</strong>।</li>
+<li><strong>टॉर्क (Torque) आवश्यकता (requirement):</strong> <strong>भारी (heavy)</strong> – <strong>रैचेट (ratchet)</strong> या <strong>हेक्स (hex)</strong> – <strong>हल्का (light)</strong> – <strong>चपटा (flat)</strong> या <strong>फिलिप्स (Phillips)</strong>।</li>
+<li><strong>पहुँच (Access):</strong> <strong>गहरा (deep)</strong> – <strong>लंबा (long)</strong> शैंक (shank) – <strong>तंग (tight)</strong> स्थान (space) – <strong>छोटा (short)</strong> शैंक (shank).</li>
+</ul>
+
+<p><strong>स्क्रू ड्राइवर की देखभाल (Care of Screw Drivers):</strong></p>
+<ul>
+<li><strong>स्क्रू (screw) के <strong>सिर (head)</strong> के <strong>आकार (size)</strong> के <strong>अनुसार (according)</strong> <strong>सही (correct)</strong> ब्लेड (blade) का उपयोग – <strong>खाँच (slot)</strong> को <strong>नुकसान (damage)</strong> से बचाने के लिए।</li>
+<li><strong>अत्यधिक (excessive)</strong> बल (force) न लगाएँ – <strong>ब्लेड (blade)</strong> <strong>टूट (break)</strong> सकता है या <strong>स्क्रू (screw)</strong> <strong>क्षतिग्रस्त (damaged)</strong> हो सकता है।</li>
+<li>स्क्रू ड्राइवर (screw driver) को <strong>हथौड़े (hammer)</strong> की तरह <strong>उपयोग (use)</strong> न करें – <strong>हैंडल (handle)</strong> <strong>टूट (break)</strong> सकता है।</li>
+<li>ब्लेड (blade) को <strong>तीक्ष्ण (sharp)</strong> रखें – <strong>घिसे (worn)</strong> ब्लेड (blade) – <strong>फिसलन (slipping)</strong> – <strong>चोट (injury)</strong>।</li>
+<li>उपयोग (use) के बाद <strong>साफ (clean)</strong> करें – <strong>तेल (oil)</strong> लगाएँ – <strong>जंग (rust)</strong> से बचाने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्क्रू ड्राइवर के प्रकार (Screw Driver Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/screwdrivers.jpg</p>
+<code>screwdrivers.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(चपटा, फिलिप्स, स्टार, हेक्स, रैचेट, प्रिसिजन)</p>
+</div>
+<div class="figure-caption">Fig 3 – स्क्रू ड्राइवर के प्रकार</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>स्क्रू ड्राइवर – <strong>स्क्रू (screw)</strong> को <strong>कसने (tighten)</strong> और <strong>ढीला (loosen)</strong> करने के लिए।</li>
+<li>चपटा (Flat) – <strong>एक (single)</strong> खाँच (slot) – <strong>सरल (simple)</strong>।</li>
+<li>फिलिप्स (Phillips) – <strong>क्रॉस (cross)</strong> आकार – <strong>बेहतर (better)</strong> पकड़ (grip) – <strong>फिसलन (slipping)</strong> कम (less).</li>
+<li>हेक्स (Hex) – <strong>षट्कोणीय (hexagonal)</strong> – <strong>एलन (Allen)</strong> स्क्रू के लिए।</li>
+<li>रैचेट (Ratchet) – <strong>एक (one)</strong> दिशा (direction) में <strong>मोड़ (turn)</strong> – <strong>त्वरित (quick)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>चपटा (Flat) – <strong>एक (single)</strong> खाँच (slot) – <strong>सबसे (most)</strong> सामान्य (common).</li>
+<li>फिलिप्स (Phillips) – <strong>क्रॉस (cross)</strong> – <strong>फिसलन (slipping)</strong> से <strong>बचाता (prevents)</strong> है।</li>
+<li>स्टार (Torx) – <strong>छह (six)</strong>-नुकीला (pointed) – <strong>उच्च (high)</strong> टॉर्क (torque).</li>
+<li>हेक्स (Hex) – <strong>षट्कोणीय (hexagonal)</strong> – <strong>एलन (Allen)</strong> स्क्रू के लिए।</li>
+<li>स्क्रू ड्राइवर – <strong>हथौड़े (hammer)</strong> की तरह <strong>उपयोग (use)</strong> न करें।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.120 LOCKING DEVICES – NUTS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-locking">
+<div class="content-section" data-content="locking">
+<div class="section-header"><span class="icon">🔒</span><span class="title">2.1.120 – लॉकिंग डिवाइस – नट (Locking Devices – Nuts)</span><span class="subtitle">— नट के प्रकार, लॉकिंग विधियाँ, उपयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>नट (Nut)</strong> – एक <strong>थ्रेडेड (threaded)</strong> फास्टनर (fastener) – <strong>बोल्ट (bolt)</strong> के <strong>साथ (with)</strong> उपयोग – <strong>आंतरिक (internal)</strong> थ्रेड (thread) – <strong>षट्कोणीय (hexagonal)</strong> या <strong>वर्गाकार (square)</strong> आकार – <strong>भागों (parts)</strong> को <strong>जोड़ना (joining)</strong>।</p>
+
+<p><strong>नट के प्रकार (Types of Nuts):</strong></p>
+<ul>
+<li><strong>षट्कोणीय नट (Hexagonal Nut – हेक्स नट / Hex Nut):</strong> <strong>सबसे (most)</strong> सामान्य (common) – <strong>छह (six)</strong> भुजाएँ (sides) – <strong>रिंच (wrench)</strong> के साथ <strong>कसना (tightening)</strong> – <strong>सामान्य (general)</strong> उपयोग (use).</li>
+<li><strong>वर्गाकार नट (Square Nut):</strong> <strong>चार (four)</strong> भुजाएँ (sides) – <strong>वर्गाकार (square)</strong> – <strong>भारी (heavy)</strong> अनुप्रयोगों (applications) के लिए – <strong>समायोजन (adjustment)</strong> के लिए।</li>
+<li><strong>विंग नट (Wing Nut):</strong> <strong>दो (two)</strong> पंख (wings) – <strong>हाथ (hand)</strong> से <strong>कसना (tightening)</strong> – <strong>त्वरित (quick)</strong> समायोजन (adjustment) के लिए – <strong>कोई (no)</strong> उपकरण (tool) की आवश्यकता।</li>
+<li><strong>कैप नट (Cap Nut – डोम नट / Dome Nut):</strong> <strong>ऊपरी (top)</strong> सिरा (end) <strong>बंद (closed)</strong> – <strong>सौंदर्यशास्त्र (aesthetics)</strong> और <strong>सुरक्षा (safety)</strong> के लिए – <strong>थ्रेड (thread)</strong> को <strong>ढक (cover)</strong> करता है।</li>
+<li><strong>जैम नट (Jam Nut – लॉक नट / Lock Nut):</strong> <strong>पतला (thin)</strong> नट – <strong>मुख्य (main)</strong> नट (nut) के <strong>साथ (with)</strong> उपयोग – <strong>लॉकिंग (locking)</strong> के लिए – <strong>ढीला (loosening)</strong> को <strong>रोकता (prevents)</strong> है।</li>
+<li><strong>स्लॉटेड नट (Slotted Nut – कैसल नट / Castle Nut):</strong> <strong>स्लॉट्स (slots)</strong> – <strong>कॉटर पिन (cotter pin)</strong> के <strong>साथ (with)</strong> उपयोग – <strong>लॉकिंग (locking)</strong> के लिए – <strong>वाइब्रेशन (vibration)</strong> वाले स्थानों (applications) में।</li>
+<li><strong>टी-स्लॉट नट (T-Slot Nut):</strong> <strong>T-आकार (T-shaped)</strong> – <strong>मशीन (machine)</strong> टेबल (table) पर <strong>क्लैंप (clamping)</strong> के लिए – <strong>T-स्लॉट (T-slot)</strong> में <strong>फिट (fit)</strong> होता है।</li>
+<li><strong>आई-बोल्ट (Eye Bolt – आँख / Eye):</strong> <strong>नट (nut)</strong> नहीं बल्कि <strong>बोल्ट (bolt)</strong> – लेकिन <strong>आई नट (Eye Nut)</strong> – <strong>कुंडलाकार (ring)</strong> – <strong>उठाने (lifting)</strong> के लिए।</li>
+<li><strong>वेल्ड नट (Weld Nut):</strong> <strong>वेल्डिंग (welding)</strong> के लिए – <strong>सपाट (flat)</strong> या <strong>उभरा (raised)</strong> – <strong>धातु (metal)</strong> से <strong>जोड़ने (attach)</strong> के लिए।</li>
+</ul>
+
+<p><strong>लॉकिंग विधियाँ (Locking Methods):</strong></p>
+<ul>
+<li><strong>फ्रिक्शन लॉकिंग (Friction Locking):</strong> <strong>दो (two)</strong> नट (nuts) – <strong>जैम नट (jam nut)</strong> – <strong>घर्षण (friction)</strong> द्वारा <strong>लॉक (lock)</strong> – <strong>सरल (simple)</strong>।</li>
+<li><strong>पॉजिटिव लॉकिंग (Positive Locking):</strong> <strong>कॉटर पिन (cotter pin)</strong> – <strong>स्लॉटेड नट (slotted nut)</strong> – <strong>वाइब्रेशन (vibration)</strong> के लिए – <strong>सुरक्षित (secure)</strong>।</li>
+<li><strong>एडहेसिव लॉकिंग (Adhesive Locking):</strong> <strong>थ्रेड लॉकिंग तरल (thread locking liquid – लोकटाइट / Loctite)</strong> – <strong>रासायनिक (chemical)</strong> – <strong>ढीला (loosen)</strong> होने से <strong>रोकता (prevents)</strong> है।</li>
+<li><strong>केप नट (Cap Nut) / डोम नट (Dome Nut):</strong> <strong>थ्रेड (thread)</strong> को <strong>कवर (cover)</strong> करता है – <strong>गंदगी (dirt)</strong> से बचाता है।</li>
+<li><strong>लॉक वॉशर (Lock Washer – स्प्रिंग वॉशर / Spring Washer):</strong> नट (nut) के <strong>नीचे (under)</strong> – <strong>स्प्रिंग (spring)</strong> क्रिया – <strong>ढीला (loosen)</strong> होने से <strong>रोकता (prevents)</strong> है।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: नट के प्रकार (Nut Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/nut_types.jpg</p>
+<code>nut_types.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(हेक्स, स्क्वायर, विंग, कैप, जैम, स्लॉटेड, T-स्लॉट)</p>
+</div>
+<div class="figure-caption">Fig 4 – नट के प्रकार</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>लॉकिंग विधियाँ (Locking Methods)</caption>
+<thead><tr><th>विधि (Method)</th><th>प्रकार (Type)</th><th>उपयोग (Use)</th></tr></thead>
+<tbody>
+<tr><td>फ्रिक्शन लॉकिंग</td><td>जैम नट (Jam Nut)</td><td>सामान्य, सरल</td></tr>
+<tr><td>पॉजिटिव लॉकिंग</td><td>कॉटर पिन (Cotter Pin)</td><td>वाइब्रेशन (vibration) वाले स्थान</td></tr>
+<tr><td>एडहेसिव लॉकिंग</td><td>थ्रेड लॉकर (Thread Locker)</td><td>स्थायी, रासायनिक</td></tr>
+<tr><td>मैकेनिकल लॉकिंग</td><td>लॉक वॉशर (Lock Washer)</td><td>स्प्रिंग क्रिया</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>हेक्स नट – <strong>सबसे (most)</strong> सामान्य (common) – <strong>छह (six)</strong> भुजाएँ।</li>
+<li>विंग नट – <strong>हाथ (hand)</strong> से <strong>कसना (tightening)</strong> – <strong>त्वरित (quick)</strong>।</li>
+<li>जैम नट – <strong>लॉकिंग (locking)</strong> के लिए – <strong>मुख्य (main)</strong> नट के <strong>साथ (with)</strong>।</li>
+<li>स्लॉटेड नट – <strong>कॉटर पिन (cotter pin)</strong> के साथ – <strong>वाइब्रेशन (vibration)</strong> के लिए।</li>
+<li>लॉक वॉशर – <strong>स्प्रिंग (spring)</strong> क्रिया – <strong>ढीला (loosen)</strong> होने से <strong>रोकता (prevents)</strong> है।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>षट्कोणीय नट (Hex Nut) – <strong>सबसे (most)</strong> सामान्य – <strong>छह (six)</strong> भुजाएँ।</li>
+<li>विंग नट – <strong>हाथ (hand)</strong> से <strong>कसना (tightening)</strong> – <strong>कोई (no)</strong> उपकरण (tool) की आवश्यकता।</li>
+<li>जैम नट (Jam Nut) – <strong>पतला (thin)</strong> – <strong>लॉकिंग (locking)</strong> के लिए – <strong>घर्षण (friction)</strong> द्वारा।</li>
+<li>स्लॉटेड नट (Slotted Nut) – <strong>कॉटर पिन (cotter pin)</strong> – <strong>पॉजिटिव (positive)</strong> लॉकिंग।</li>
+<li>कैप नट (Cap Nut) – <strong>सौंदर्यशास्त्र (aesthetics)</strong> और <strong>सुरक्षा (safety)</strong> – <strong>थ्रेड (thread)</strong> को <strong>ढकता (covers)</strong> है।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.121-122 KEYS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-keys">
+<div class="content-section" data-content="keys">
+<div class="section-header"><span class="icon">🗝️</span><span class="title">2.1.121-122 – विभिन्न प्रकार की कीज (Various Types of Keys)</span><span class="subtitle">— उद्देश्य, प्रकार, सामग्री, चयन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>की (Key)</strong> – एक <strong>मशीन (machine)</strong> तत्व – <strong>शाफ्ट (shaft)</strong> और <strong>हब (hub)</strong> (पुली – pulley, गियर – gear) के <strong>बीच (between)</strong> – <strong>घूर्णी (rotary)</strong> गति को <strong>संचारित (transmit)</strong> करने के लिए – <strong>टॉर्क (torque)</strong> को <strong>शाफ्ट (shaft)</strong> से <strong>हब (hub)</strong> तक।</p>
+
+<p><strong>की का उद्देश्य (Purpose of Key):</strong></p>
+<ul>
+<li><strong>शक्ति (power)</strong> संचारण (transmission) – <strong>शाफ्ट (shaft)</strong> से <strong>पुली (pulley)</strong>, <strong>गियर (gear)</strong>, <strong>कपलिंग (coupling)</strong> तक।</li>
+<li><strong>संबंध (relative)</strong> गति (motion) को <strong>रोकना (prevent)</strong> – <strong>शाफ्ट (shaft)</strong> और <strong>हब (hub)</strong> के <strong>बीच (between)</strong>।</li>
+<li><strong>टॉर्क (torque)</strong> को <strong>सुरक्षित (safely)</strong> संचारित (transmit) करना – <strong>फिसलन (slippage)</strong> से <strong>बचना (avoid)</strong>।</li>
+</ul>
+
+<p><strong>की के प्रकार (Types of Keys):</strong></p>
+
+<p><strong>1. सोसनी (Sunk Key – धँसी / Recessed):</strong></p>
+<ul>
+<li><strong>शाफ्ट (shaft)</strong> और <strong>हब (hub)</strong> <strong>दोनों (both)</strong> में <strong>खाँचे (keyways)</strong> – <strong>सबसे (most)</strong> सामान्य (common).</li>
+<li><strong>वर्गाकार (Square Key):</strong> <strong>वर्गाकार (square)</strong> क्रॉस-सेक्शन (cross-section) – <strong>सामान्य (general)</strong> उपयोग (use).</li>
+<li><strong>आयताकार (Rectangular – Flat Key):</strong> <strong>आयताकार (rectangular)</strong> – <strong>भारी (heavy)</strong> अनुप्रयोगों (applications) के लिए – <strong>अधिक (more)</strong> सतह (surface) क्षेत्र (area).</li>
+<li><strong>वुड्रफ (Woodruff Key):</strong> <strong>अर्ध-गोलाकार (semi-circular)</strong> – <strong>टेपर (tapered)</strong> – <strong>छोटे (small)</strong> शाफ्ट्स (shafts) के लिए – <strong>गहराई (depth)</strong> समायोजन (adjustment) के लिए।</li>
+</ul>
+
+<p><strong>2. समानांतर (Parallel – Feather Key):</strong></p>
+<ul>
+<li><strong>समानांतर (parallel)</strong> – <strong>गोल (round)</strong> या <strong>वर्गाकार (square)</strong> – <strong>स्लाइडिंग (sliding)</strong> के लिए – <strong>हब (hub)</strong> को <strong>शाफ्ट (shaft)</strong> पर <strong>स्लाइड (slide)</strong> करने की अनुमति देता है – <strong>गियर (gear)</strong> को <strong>शिफ्ट (shift)</strong> करने के लिए।</li>
+<li><strong>गिब हेड (Gib Head Key):</strong> <strong>एक (one)</strong> सिरे (end) पर <strong>सिर (head)</strong> – <strong>हटाने (removal)</strong> के लिए – <strong>आसान (easy)</strong> निकालना।</li>
+</ul>
+
+<p><strong>3. टेपर (Taper Key):</strong></p>
+<ul>
+<li><strong>टेपर (tapered)</strong> – <strong>शाफ्ट (shaft)</strong> में <strong>खाँचा (keyway)</strong> – <strong>फ्रिक्शन (friction)</strong> द्वारा <strong>लॉक (lock)</strong> – <strong>हब (hub)</strong> को <strong>शाफ्ट (shaft)</strong> पर <strong>लॉक (lock)</strong> करने के लिए।</li>
+<li><strong>स्ट्रैट (Straight – सीधा):</strong> <strong>कोई (no)</strong> टेपर – <strong>दो (two)</strong> स्क्रू (screws) द्वारा <strong>लॉक (lock)</strong>।</li>
+</ul>
+
+<p><strong>4. सैडल (Saddle Key):</strong></p>
+<ul>
+<li><strong>शाफ्ट (shaft)</strong> में <strong>कोई (no)</strong> खाँचा (keyway) – <strong>हब (hub)</strong> में <strong>खाँचा (keyway)</strong> – <strong>कम (low)</strong> शक्ति (power) के लिए – <strong>हल्का (light)</strong> अनुप्रयोग (application).</li>
+<li><strong>फ्लैट (Flat – चपटा):</strong> <strong>सपाट (flat)</strong> तल (bottom) – <strong>शाफ्ट (shaft)</strong> पर <strong>फिट (fit)</strong> होता है।</li>
+</ul>
+
+<p><strong>की सामग्री (Key Materials):</strong></p>
+<ul>
+<li><strong>माइल्ड स्टील (Mild Steel):</strong> <strong>सामान्य (general)</strong> उपयोग (use) – <strong>सस्ता (cheap)</strong>।</li>
+<li><strong>मध्यम कार्बन स्टील (Medium Carbon Steel):</strong> <strong>उच्च (higher)</strong> शक्ति (strength) – <strong>भारी (heavy)</strong> अनुप्रयोग (application).</li>
+<li><strong>उच्च कार्बन स्टील (High Carbon Steel):</strong> <strong>उच्च (high)</strong> शक्ति (strength) और <strong>कठोरता (hardness)</strong> – <strong>घिसाव (wear)</strong> के लिए।</li>
+<li><strong>स्टेनलेस स्टील (Stainless Steel):</strong> <strong>जंग (corrosion)</strong> प्रतिरोधी (resistant) – <strong>समुद्री (marine)</strong> अनुप्रयोग (application).</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: की के प्रकार (Key Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/key_types.jpg</p>
+<code>key_types.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(सोसनी, वर्गाकार, आयताकार, वुड्रफ, समानांतर, टेपर, सैडल)</p>
+</div>
+<div class="figure-caption">Fig 5 – की के प्रकार</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>की – <strong>शक्ति (power)</strong> संचारण – <strong>शाफ्ट (shaft)</strong> से <strong>हब (hub)</strong> तक।</li>
+<li>सोसनी (Sunk) – <strong>शाफ्ट (shaft)</strong> और <strong>हब (hub)</strong> <strong>दोनों (both)</strong> में <strong>खाँचा (keyway)</strong> – <strong>सबसे (most)</strong> सामान्य।</li>
+<li>वुड्रफ (Woodruff) – <strong>अर्ध-गोलाकार (semi-circular)</strong> – <strong>छोटे (small)</strong> शाफ्ट्स (shafts) के लिए।</li>
+<li>समानांतर (Parallel – Feather) – <strong>स्लाइडिंग (sliding)</strong> – <strong>गियर (gear)</strong> को <strong>शिफ्ट (shift)</strong> करने के लिए।</li>
+<li>टेपर (Taper) – <strong>फ्रिक्शन (friction)</strong> द्वारा <strong>लॉक (lock)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>सोसनी की (Sunk Key) – <strong>सबसे (most)</strong> सामान्य – <strong>खाँचा (keyway)</strong> <strong>दोनों (both)</strong> में।</li>
+<li>वर्गाकार की (Square Key) – <strong>वर्गाकार (square)</strong> क्रॉस-सेक्शन (cross-section).</li>
+<li>वुड्रफ की (Woodruff Key) – <strong>अर्ध-गोलाकार (semi-circular)</strong> – <strong>छोटे (small)</strong> शाफ्ट्स (shafts).</li>
+<li>समानांतर की (Parallel Key) – <strong>स्लाइडिंग (sliding)</strong> – <strong>फेदर (feather)</strong> की।</li>
+<li>टेपर की (Taper Key) – <strong>फ्रिक्शन (friction)</strong> – <strong>लॉकिंग (locking)</strong> के लिए।</li>
+<li>सैडल की (Saddle Key) – <strong>शाफ्ट (shaft)</strong> में <strong>कोई (no)</strong> खाँचा (keyway) – <strong>हल्का (light)</strong> अनुप्रयोग।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.123 SPECIAL FILES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-special-files">
+<div class="content-section" data-content="special-files">
+<div class="section-header"><span class="icon">📁</span><span class="title">2.1.123 – स्पेशल फाइल (Special Files)</span><span class="subtitle">— प्रकार, आकार, उपयोग, चयन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>स्पेशल फाइल (Special Files)</strong> – <strong>विशेष (special)</strong> आकार (shapes) और <strong>कट (cuts)</strong> वाली फाइलें – <strong>जटिल (complex)</strong> सतहों (surfaces) के <strong>फिनिशिंग (finishing)</strong> और <strong>आकार देने (shaping)</strong> के लिए।</p>
+
+<p><strong>स्पेशल फाइल के प्रकार (Types of Special Files):</strong></p>
+<ul>
+<li><strong>रीलर फाइल (Riffler File):</strong> <strong>घुमावदार (curved)</strong> – <strong>मोल्ड (moulds)</strong> और <strong>डाई (dies)</strong> के लिए – <strong>विभिन्न (various)</strong> आकार (shapes) – <strong>दुर्गम (inaccessible)</strong> स्थानों (areas) के लिए।</li>
+<li><strong>आवा (Ava – अवा) फाइल:</strong> <strong>पतली (thin)</strong> – <strong>सुई (needle)</strong> जैसी – <strong>बहुत महीन (very fine)</strong> कार्य (work) के लिए – <strong>ज्वैलरी (jewellery)</strong>, <strong>घड़ी (watch)</strong>।</li>
+<li><strong>हाफ-राउंड (Half-Round) फाइल:</strong> <strong>एक (one)</strong> तरफ (side) <strong>चपटी (flat)</strong>, दूसरी <strong>गोल (round)</strong> – <strong>बहुमुखी (versatile)</strong> – <strong>आंतरिक (internal)</strong> और <strong>बाहरी (external)</strong> सतहों (surfaces) के लिए।</li>
+<li><strong>ट्राईएंगुलर (Triangular – त्रिकोणीय) फाइल:</strong> <strong>त्रिकोणीय (triangular)</strong> क्रॉस-सेक्शन (cross-section) – <strong>कोण (angles)</strong> और <strong>खाँचे (grooves)</strong> के लिए – <strong>थ्रेड (threads)</strong> की सफाई (cleaning) के लिए।</li>
+<li><strong>नाइफ-एज (Knife-Edge – चाकू-धार) फाइल:</strong> <strong>चाकू (knife)</strong> के आकार (shape) – <strong>संकीर्ण (narrow)</strong> – <strong>गहरी (deep)</strong> खाँचे (grooves) के लिए।</li>
+<li><strong>ओवल (Oval – अंडाकार) फाइल:</strong> <strong>अंडाकार (oval)</strong> – <strong>आंतरिक (internal)</strong> वक्र (curves) के लिए।</li>
+<li><strong>स्कॉच (Scotch) फाइल:</strong> <strong>मोटी (thick)</strong> – <strong>मजबूत (strong)</strong> – <strong>भारी (heavy)</strong> कट (cut) के लिए – <strong>रफिंग (roughing)</strong> के लिए।</li>
+<li><strong>सुई फाइल (Needle File – सूई फाइल):</strong> <strong>बहुत (very)</strong> छोटी (small) – <strong>बारीक (fine)</strong> – <strong>जटिल (complex)</strong> कार्य (work) के लिए – <strong>टूलरूम (toolroom)</strong> में।</li>
+</ul>
+
+<p><strong>स्पेशल फाइल के उपयोग (Uses of Special Files):</strong></p>
+<ul>
+<li><strong>मोल्ड (Moulds)</strong> और <strong>डाई (Dies)</strong> की फिनिशिंग (finishing).</li>
+<li><strong>जटिल (complex)</strong> आकृतियाँ (shapes) – <strong>गोल (round)</strong>, <strong>कोणीय (angular)</strong>, <strong>घुमावदार (curved)</strong>।</li>
+<li><strong>थ्रेड्स (threads)</strong> की सफाई (cleaning) और <strong>मरम्मत (repair)</strong>. </li>
+<li><strong>सटीक (precision)</strong> कार्य (work) – <strong>टूलरूम (toolroom)</strong>, <strong>ज्वैलरी (jewellery)</strong>, <strong>इंस्ट्रूमेंट (instrument)</strong>।</li>
+</ul>
+
+<p><strong>स्पेशल फाइल का चयन (Selection of Special File):</strong></p>
+<ul>
+<li><strong>आकार (Shape):</strong> काम (work) के <strong>आकार (shape)</strong> के <strong>अनुसार (according)</strong> – <strong>गोल (round)</strong> – <strong>हाफ-राउंड (half-round)</strong> – <strong>त्रिकोणीय (triangular)</strong>।</li>
+<li><strong>कट (Cut):</strong> <strong>मोटा (coarse)</strong> – <strong>मध्यम (medium)</strong> – <strong>महीन (fine)</strong> – <strong>सामग्री (material)</strong> और <strong>फिनिश (finish)</strong> के अनुसार।</li>
+<li><strong>लंबाई (Length):</strong> कार्य (work) के <strong>आकार (size)</strong> के अनुसार – <strong>छोटी (short)</strong> – <strong>लंबी (long)</strong>।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्पेशल फाइल के प्रकार (Special File Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/special_files.jpg</p>
+<code>special_files.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(रीलर, आवा, हाफ-राउंड, ट्राईएंगुलर, नाइफ-एज, ओवल, सुई)</p>
+</div>
+<div class="figure-caption">Fig 6 – स्पेशल फाइल के प्रकार</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>स्पेशल फाइल – <strong>जटिल (complex)</strong> सतहों (surfaces) के <strong>फिनिशिंग (finishing)</strong> के लिए।</li>
+<li>रीलर (Riffler) – <strong>घुमावदार (curved)</strong> – <strong>मोल्ड (moulds)</strong> और <strong>डाई (dies)</strong> के लिए।</li>
+<li>आवा (Ava) – <strong>पतली (thin)</strong> – <strong>सुई (needle)</strong> जैसी – <strong>बहुत महीन (very fine)</strong>।</li>
+<li>हाफ-राउंड (Half-Round) – <strong>बहुमुखी (versatile)</strong> – <strong>चपटी (flat)</strong> और <strong>गोल (round)</strong>।</li>
+<li>ट्राईएंगुलर (Triangular) – <strong>कोण (angles)</strong> और <strong>खाँचे (grooves)</strong> के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>रीलर (Riffler) – <strong>घुमावदार (curved)</strong> – <strong>मोल्ड (moulds)</strong> और <strong>डाई (dies)</strong> के लिए।</li>
+<li>आवा (Ava) – <strong>बहुत (very)</strong> महीन (fine) – <strong>ज्वैलरी (jewellery)</strong>, <strong>घड़ी (watch)</strong>।</li>
+<li>हाफ-राउंड (Half-Round) – <strong>आंतरिक (internal)</strong> और <strong>बाहरी (external)</strong> सतहों (surfaces) के लिए।</li>
+<li>ट्राईएंगुलर (Triangular) – <strong>थ्रेड्स (threads)</strong> की <strong>सफाई (cleaning)</strong> के लिए।</li>
+<li>सुई फाइल (Needle File) – <strong>बहुत (very)</strong> छोटी (small) – <strong>टूलरूम (toolroom)</strong> में।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.124 TEMPLATE AND GAUGES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-template">
+<div class="content-section" data-content="template">
+<div class="section-header"><span class="icon">📐</span><span class="title">2.1.124 – टेम्पलेट और गेज (Template and Gauges)</span><span class="subtitle">— अर्थ, प्रकार, उपयोग, निर्माण</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>टेम्पलेट (Template)</strong> – एक <strong>पैटर्न (pattern)</strong> – <strong>किसी (a)</strong> आकार (shape) या <strong>प्रोफ़ाइल (profile)</strong> की <strong>नकल (copy)</strong> – <strong>मार्किंग (marking)</strong>, <strong>कटिंग (cutting)</strong>, या <strong>निरीक्षण (inspection)</strong> के लिए – <strong>पतली (thin)</strong> धातु (metal) शीट (sheet) से <strong>बना (made)</strong>।</p>
+
+<p><strong>टेम्पलेट के प्रकार (Types of Templates):</strong></p>
+<ul>
+<li><strong>आउटलाइन टेम्पलेट (Outline Template):</strong> <strong>बाहरी (external)</strong> आकृति (shape) – <strong>काटने (cutting)</strong> के लिए – <strong>निशान (marking)</strong> के लिए।</li>
+<li><strong>कट-आउट टेम्पलेट (Cut-out Template):</strong> <strong>आंतरिक (internal)</strong> आकृति (shape) – <strong>छेद (holes)</strong> और <strong>खाँचे (slots)</strong> के लिए।</li>
+<li><strong>ड्रिलिंग टेम्पलेट (Drilling Template):</strong> <strong>छेद (holes)</strong> की <strong>स्थिति (position)</strong> को <strong>चिह्नित (mark)</strong> करने के लिए – <strong>सटीक (accurate)</strong> ड्रिलिंग (drilling) के लिए।</li>
+<li><strong>इंस्पेक्शन टेम्पलेट (Inspection Template):</strong> <strong>तैयार (finished)</strong> भाग (part) की <strong>जाँच (checking)</strong> के लिए – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
+</ul>
+
+<p><strong>गेज (Gauges) – संक्षिप्त (Brief):</strong></p>
+<ul>
+<li><strong>गेज (Gauge)</strong> – एक <strong>निरीक्षण (inspection)</strong> उपकरण – <strong>आयाम (dimensions)</strong> की <strong>जाँच (checking)</strong> के लिए – <strong>बिना (without)</strong> संख्यात्मक मान (numerical value).</li>
+<li><strong>फीलर गेज (Feeler Gauge):</strong> <strong>अंतर (clearance)</strong> मापने के लिए – <strong>पतली (thin)</strong> धातु (metal) पट्टियाँ (strips).</li>
+<li><strong>स्नैप गेज (Snap Gauge):</strong> <strong>बाहरी (external)</strong> व्यास (diameter) के लिए – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
+<li><strong>प्लग गेज (Plug Gauge):</strong> <strong>आंतरिक (internal)</strong> व्यास (holes) के लिए – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
+<li><strong>रेडियस गेज (Radius Gauge):</strong> <strong>त्रिज्या (radius)</strong> मापने के लिए – <strong>उत्तल (convex)</strong> और <strong>अवतल (concave)</strong>।</li>
+</ul>
+
+<p><strong>टेम्पलेट निर्माण (Template Making):</strong></p>
+<ul>
+<li><strong>सामग्री (Material):</strong> <strong>पतली (thin)</strong> शीट (sheet) – <strong>स्टील (steel)</strong>, <strong>एल्यूमीनियम (aluminium)</strong>, <strong>पीतल (brass)</strong>।</li>
+<li><strong>प्रक्रिया (Process):</strong> <strong>अंकन (marking)</strong> → <strong>कटिंग (cutting)</strong> → <strong>फाइलिंग (filing)</strong> → <strong>फिनिशिंग (finishing)</strong>।</li>
+<li><strong>सटीकता (Accuracy):</strong> <strong>उच्च (high)</strong> – <strong>टेम्पलेट (template)</strong> की <strong>सटीकता (accuracy)</strong> – <strong>भाग (part)</strong> की <strong>सटीकता (accuracy)</strong> को <strong>निर्धारित (determine)</strong> करती है।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टेम्पलेट और गेज (Template &amp; Gauges)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/template_gauges.jpg</p>
+<code>template_gauges.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(आउटलाइन, कट-आउट, ड्रिलिंग टेम्पलेट, फीलर, स्नैप, प्लग गेज)</p>
+</div>
+<div class="figure-caption">Fig 7 – टेम्पलेट और गेज</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>टेम्पलेट – <strong>पैटर्न (pattern)</strong> – <strong>मार्किंग (marking)</strong> और <strong>कटिंग (cutting)</strong> के लिए।</li>
+<li>गेज – <strong>निरीक्षण (inspection)</strong> – <strong>आयाम (dimensions)</strong> जाँचने के लिए – <strong>कोई (no)</strong> संख्यात्मक मान।</li>
+<li>टेम्पलेट – <strong>पतली (thin)</strong> शीट (sheet) – <strong>स्टील (steel)</strong>, <strong>एल्यूमीनियम (aluminium)</strong>।</li>
+<li>गो/नो-गो (Go/No-Go) – <strong>स्वीकार्य (acceptable)</strong> आकार (size) जाँचने के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>टेम्पलेट – <strong>पैटर्न (pattern)</strong> – <strong>धातु (metal)</strong> शीट (sheet) से <strong>बना (made)</strong>।</li>
+<li>ड्रिलिंग टेम्पलेट – <strong>छेद (holes)</strong> की <strong>स्थिति (position)</strong> के लिए।</li>
+<li>गेज – <strong>निरीक्षण (inspection)</strong> – <strong>बिना (without)</strong> संख्यात्मक मान।</li>
+<li>फीलर गेज – <strong>अंतर (clearance)</strong> के लिए – <strong>पतली (thin)</strong> पट्टियाँ (strips).</li>
+<li>स्नैप गेज – <strong>बाहरी (external)</strong> व्यास (diameter) – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.125-126 SLIP GAUGES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-slip-gauges">
+<div class="content-section" data-content="slip-gauges">
+<div class="section-header"><span class="icon">📏</span><span class="title">2.1.125-126 – स्लिप गेज (Slip Gauges) एवं अनुप्रयोग</span><span class="subtitle">— निर्माण, ग्रेड, समूह, वाइपिंग, उपयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>स्लिप गेज (Slip Gauges – जोहानसन गेज / Johannson Gauges)</strong> – <strong>उच्च-परिशुद्धता (high-precision)</strong> मापन (measurement) के लिए – <strong>सटीक (accurate)</strong> <strong>आयाम (dimensions)</strong> – <strong>गेज ब्लॉक्स (gauge blocks)</strong> के रूप में <strong>जाना (known)</strong> जाता है।</p>
+
+<p><strong>निर्माण (Construction):</strong></p>
+<ul>
+<li><strong>सामग्री (Material):</strong> <strong>उच्च गुणवत्ता (high-quality)</strong> <strong>स्टील (steel)</strong> – <strong>कठोर (hardened)</strong> और <strong>तड़का (tempered)</strong> – <strong>स्थिर (stable)</strong> आयाम (dimensions).</li>
+<li><strong>सतह (Surface):</strong> <strong>बहुत (very)</strong> <strong>चिकनी (smooth)</strong> – <strong>समतल (flat)</strong> और <strong>समानांतर (parallel)</strong> – <strong>0.00025 मिमी (mm)</strong> तक सटीकता (accuracy).</li>
+<li><strong>आकार (Size):</strong> <strong>आयताकार (rectangular)</strong> – <strong>छोटा (small)</strong> – <strong>विभिन्न (various)</strong> आयाम (dimensions) – <strong>सेट (set)</strong> के रूप में।</li>
+</ul>
+
+<p><strong>स्लिप गेज के ग्रेड (Grades of Slip Gauges):</strong></p>
+<ul>
+<li><strong>ग्रेड 0 (Grade 0 – कैलिब्रेशन / Calibration):</strong> <strong>सबसे (most)</strong> सटीक (accurate) – <strong>मानक (standard)</strong> गेज (gauges) को <strong>कैलिब्रेट (calibrate)</strong> करने के लिए – <strong>टूलरूम (toolroom)</strong>।</li>
+<li><strong>ग्रेड 1 (Grade 1 – निरीक्षण / Inspection):</strong> <strong>बहुत (very)</strong> सटीक – <strong>निरीक्षण (inspection)</strong> गेज (gauges) के लिए – <strong>गुणवत्ता नियंत्रण (quality control)</strong>।</li>
+<li><strong>ग्रेड 2 (Grade 2 – कार्यशाला / Workshop):</strong> <strong>सामान्य (general)</strong> कार्यशाला (workshop) के लिए – <strong>मशीन (machine)</strong> सेटिंग (setting) के लिए।</li>
+</ul>
+
+<p><strong>स्लिप गेज का समूह (Wringing – वाइपिंग / Wiping):</strong></p>
+<ul>
+<li><strong>वाइपिंग (Wringing – चिपकना / Adhesion):</strong> दो (two) स्लिप गेज (slip gauges) को <strong>एक साथ (together)</strong> <strong>चिपकाना (stick)</strong> – <strong>हवा (air)</strong> की <strong>पतली (thin)</strong> परत (film) और <strong>आणविक (molecular)</strong> आकर्षण (attraction) के कारण – <strong>बिना (without)</strong> किसी <strong>गोंद (adhesive)</strong> के।</li>
+<li><strong>सतह (surface) की सफाई (cleaning):</strong> <strong>बहुत (very)</strong> साफ (clean) – <strong>धूल (dust)</strong> और <strong>गंदगी (dirt)</strong> से <strong>मुक्त (free)</strong> – <strong>वाइपिंग (wringing)</strong> के लिए।</li>
+<li><strong>लंबाई (Length) का संयोजन (Combination):</strong> <strong>कई (multiple)</strong> स्लिप गेज (slip gauges) को <strong>एक साथ (together)</strong> <strong>वाइप (wring)</strong> करके – <strong>वांछित (desired)</strong> लंबाई (length) बनाना।</li>
+</ul>
+
+<p><strong>स्लिप गेज का अनुप्रयोग (Applications of Slip Gauges):</strong></p>
+<ul>
+<li><strong>मापन (Measurement):</strong> <strong>सटीक (accurate)</strong> लंबाई (length) मापन – <strong>माइक्रोमीटर (micrometers)</strong> और <strong>कैलिपर्स (calipers)</strong> को <strong>कैलिब्रेट (calibrate)</strong> करने के लिए।</li>
+<li><strong>निरीक्षण (Inspection):</strong> <strong>गो/नो-गो (Go/No-Go)</strong> गेज (gauges) के रूप में – <strong>भाग (part)</strong> की <strong>जाँच (checking)</strong> के लिए।</li>
+<li><strong>मशीन सेटिंग (Machine Setting):</strong> <strong>लेथ (lathe)</strong>, <strong>मिलिंग (milling)</strong>, <strong>ग्राइंडिंग (grinding)</strong> मशीनों (machines) को <strong>सेट (set)</strong> करने के लिए।</li>
+<li><strong>साइन बार (Sine Bar) के साथ:</strong> <strong>कोण (angles)</strong> मापने के लिए – <strong>साइन बार (sine bar)</strong> और <strong>स्लिप गेज (slip gauges)</strong> का <strong>संयोजन (combination)</strong>।</li>
+<li><strong>गेज (Gauges) की कैलिब्रेशन (Calibration):</strong> <strong>अन्य (other)</strong> मापन (measurement) उपकरणों (instruments) को <strong>सटीक (accurately)</strong> बनाने के लिए।</li>
+</ul>
+
+<p><strong>स्लिप गेज की देखभाल (Care of Slip Gauges):</strong></p>
+<ul>
+<li>उपयोग (use) के बाद <strong>तेल (oil)</strong> लगाएँ – <strong>जंग (rust)</strong> से बचाने के लिए।</li>
+<li><strong>गिराने (dropping)</strong> या <strong>टकराने (bumping)</strong> से <strong>बचाएँ (avoid)</strong> – <strong>क्षतिग्रस्त (damaged)</strong> हो सकते हैं।</li>
+<li><strong>साफ (clean)</strong> और <strong>सूखी (dry)</strong> जगह (place) पर <strong>रखें (store)</strong> – <strong>धूल (dust)</strong> से बचाने के लिए।</li>
+<li>उपयोग (use) से पहले <strong>सतह (surface)</strong> को <strong>साफ (clean)</strong> करें – <strong>चिकना (smooth)</strong> कपड़े (cloth) से।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: स्लिप गेज (Slip Gauges) – सेट और वाइपिंग</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/slip_gauges.jpg</p>
+<code>slip_gauges.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(सेट, ग्रेड, वाइपिंग प्रक्रिया, अनुप्रयोग)</p>
+</div>
+<div class="figure-caption">Fig 8 – स्लिप गेज</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>स्लिप गेज के ग्रेड (Slip Gauge Grades)</caption>
+<thead><tr><th>ग्रेड (Grade)</th><th>सटीकता (Accuracy)</th><th>उपयोग (Use)</th></tr></thead>
+<tbody>
+<tr><td>ग्रेड 0 (Grade 0)</td><td>±0.00025 मिमी</td><td>कैलिब्रेशन (Calibration)</td></tr>
+<tr><td>ग्रेड 1 (Grade 1)</td><td>±0.0005 मिमी</td><td>निरीक्षण (Inspection)</td></tr>
+<tr><td>ग्रेड 2 (Grade 2)</td><td>±0.001 मिमी</td><td>कार्यशाला (Workshop)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>स्लिप गेज – <strong>उच्च-परिशुद्धता (high-precision)</strong> मापन (measurement) – <strong>गेज ब्लॉक्स (gauge blocks)</strong>।</li>
+<li>वाइपिंग (Wringing) – <strong>चिपकना (adhesion)</strong> – <strong>हवा (air)</strong> की परत (film) और <strong>आणविक (molecular)</strong> आकर्षण (attraction).</li>
+<li>ग्रेड 0 – <strong>सबसे (most)</strong> सटीक – <strong>कैलिब्रेशन (calibration)</strong>।</li>
+<li>ग्रेड 2 – <strong>कार्यशाला (workshop)</strong> – <strong>सामान्य (general)</strong> उपयोग (use).</li>
+<li>अनुप्रयोग – <strong>कैलिब्रेशन (calibration)</strong>, <strong>निरीक्षण (inspection)</strong>, <strong>मशीन सेटिंग (machine setting)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>स्लिप गेज – <strong>गेज ब्लॉक्स (gauge blocks)</strong> – <strong>जोहानसन (Johannson)</strong> गेज।</li>
+<li>वाइपिंग (Wringing) – <strong>चिपकना (adhesion)</strong> – <strong>हवा (air)</strong> की परत (film).</li>
+<li>ग्रेड 0 – <strong>कैलिब्रेशन (calibration)</strong> – <strong>सबसे (most)</strong> सटीक।</li>
+<li>ग्रेड 2 – <strong>कार्यशाला (workshop)</strong> – <strong>सामान्य (general)</strong>।</li>
+<li>साइन बार (Sine Bar) के साथ – <strong>कोण (angles)</strong> मापने के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.127 SINE BAR -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-sine-bar">
+<div class="content-section" data-content="sine-bar">
+<div class="section-header"><span class="icon">📐</span><span class="title">2.1.127 – साइन बार (Sine Bar) – सिद्धांत, अनुप्रयोग, विशिष्टता</span><span class="subtitle">— सिद्धांत, निर्माण, उपयोग, सटीकता</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>साइन बार (Sine Bar)</strong> – एक <strong>उच्च-परिशुद्धता (high-precision)</strong> उपकरण – <strong>कोण (angles)</strong> को <strong>मापने (measure)</strong> और <strong>सेट करने (set)</strong> के लिए – <strong>त्रिकोणमिति (trigonometry)</strong> के <strong>साइन (sine)</strong> सिद्धांत (principle) पर <strong>आधारित (based)</strong>।</p>
+
+<p><strong>सिद्धांत (Principle):</strong></p>
+<ul>
+<li>साइन बार (sine bar) का <strong>साइन (sine)</strong> कोण = <strong>ऊँचाई (height) / लंबाई (length)</strong>।</li>
+<li><strong>sin θ = h / L</strong> – जहाँ (where) θ = कोण (angle), h = ऊँचाई (height) (स्लिप गेज – slip gauge), L = साइन बार (sine bar) की लंबाई (length).</li>
+<li><strong>L</strong> – <strong>स्थिर (constant)</strong> – आमतौर पर (usually) <strong>100 मिमी (mm)</strong> या <strong>200 मिमी (mm)</strong> – <strong>सटीक (accurate)</strong>।</li>
+<li><strong>h</strong> – <strong>स्लिप गेज (slip gauge)</strong> का <strong>ढेर (stack)</strong> – <strong>वांछित (desired)</strong> कोण (angle) प्राप्त करने के लिए।</li>
+</ul>
+
+<p><strong>निर्माण (Construction):</strong></p>
+<ul>
+<li><strong>बार (Bar):</strong> <strong>आयताकार (rectangular)</strong> – <strong>उच्च गुणवत्ता (high-quality)</strong> <strong>स्टील (steel)</strong> – <strong>कठोर (hardened)</strong> और <strong>पीसा (ground)</strong> – <strong>सटीक (precise)</strong> आयाम (dimensions).</li>
+<li><strong>रोलर्स (Rollers – सिलेंडर / Cylinders):</strong> <strong>दो (two)</strong> – <strong>सिरों (ends)</strong> पर – <strong>समान (equal)</strong> व्यास (diameter) – <strong>बहुत (very)</strong> सटीक (accurate) – <strong>कठोर (hardened)</strong> और <strong>पीसा (ground)</strong>।</li>
+<li><strong>लंबाई (Length – L):</strong> <strong>दो (two)</strong> रोलर्स (rollers) के <strong>केंद्रों (centres)</strong> के <strong>बीच (between)</strong> की <strong>दूरी (distance)</strong> – <strong>100 मिमी (mm)</strong> या <strong>200 मिमी (mm)</strong>।</li>
+</ul>
+
+<p><strong>अनुप्रयोग (Applications):</strong></p>
+<ul>
+<li><strong>कोण (Angles) मापन (Measurement):</strong> <strong>वर्कपीस (workpiece)</strong> के <strong>कोण (angle)</strong> को <strong>सटीक (accurately)</strong> मापना – <strong>डायल गेज (dial gauge)</strong> के साथ।</li>
+<li><strong>कोण (Angles) सेट करना (Setting):</strong> <strong>मशीन (machine)</strong> टेबल (table) को <strong>वांछित (desired)</strong> कोण (angle) पर <strong>सेट (set)</strong> करना – <strong>मिलिंग (milling)</strong>, <strong>ग्राइंडिंग (grinding)</strong>।</li>
+<li><strong>गेज (Gauges) कैलिब्रेशन (Calibration):</strong> <strong>कोण (angle)</strong> गेज (gauges) – <strong>प्रोट्रैक्टर (protractors)</strong> की <strong>जाँच (checking)</strong>।</li>
+<li><strong>सटीक (precision) मशीनिंग (machining):</strong> <strong>जटिल (complex)</strong> कोण (angles) – <strong>टूलरूम (toolroom)</strong> कार्य (work).</li>
+</ul>
+
+<p><strong>विशिष्टता (Specifications):</strong></p>
+<ul>
+<li><strong>लंबाई (Length):</strong> <strong>100 मिमी (mm)</strong> या <strong>200 मिमी (mm)</strong> – <strong>सबसे (most)</strong> सामान्य (common).</li>
+<li><strong>सटीकता (Accuracy):</strong> <strong>0.002 मिमी (mm)</strong> प्रति <strong>100 मिमी (mm)</strong> – <strong>बहुत (very)</strong> सटीक (accurate).</li>
+<li><strong>रोलर (Roller) व्यास (Diameter):</strong> <strong>20–30 मिमी (mm)</strong> – <strong>सटीक (precise)</strong>।</li>
+<li><strong>सामग्री (Material):</strong> <strong>उच्च गुणवत्ता (high-quality)</strong> <strong>टूल स्टील (tool steel)</strong> – <strong>कठोर (hardened)</strong> और <strong>पीसा (ground)</strong>।</li>
+</ul>
+
+<p><strong>साइन बार का उपयोग (Using Sine Bar):</strong></p>
+<ol>
+<li><strong>वांछित (desired)</strong> कोण (angle) – <strong>θ</strong> – <strong>चुनें (select)</strong>।</li>
+<li><strong>स्लिप गेज (slip gauge)</strong> की <strong>ऊँचाई (height – h)</strong> – <strong>h = L × sin θ</strong> – <strong>गणना (calculate)</strong> करें।</li>
+<li><strong>स्लिप गेज (slip gauge) का ढेर (stack)</strong> – <strong>h</strong> के बराबर (equal) – <strong>बनाएँ (make)</strong>।</li>
+<li>साइन बार (sine bar) के <strong>एक (one)</strong> रोलर (roller) को <strong>सरफेस प्लेट (surface plate)</strong> पर <strong>रखें (place)</strong> – <strong>दूसरे (other)</strong> रोलर (roller) को <strong>स्लिप गेज (slip gauge) के ढेर (stack)</strong> पर <strong>रखें (place)</strong>।</li>
+<li>साइन बार (sine bar) की <strong>शीर्ष (top)</strong> सतह (surface) – <strong>वांछित (desired)</strong> कोण (angle) पर – <strong>वर्कपीस (workpiece)</strong> को <strong>इस (this)</strong> सतह (surface) पर <strong>रखें (place)</strong> – <strong>मापें (measure)</strong> या <strong>मशीन (machine)</strong> करें।</li>
+</ol>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: साइन बार (Sine Bar) – सिद्धांत और उपयोग</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/sine_bar.jpg</p>
+<code>sine_bar.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(रोलर्स, लंबाई, ऊँचाई, कोण, स्लिप गेज के साथ सेटअप)</p>
+</div>
+<div class="figure-caption">Fig 9 – साइन बार</div>
+</div>
+<div class="example-box">
+<h4 style="margin:0 0 6px; color:#003366;">📘 उदाहरण (Example)</h4>
+<p><strong>100 मिमी (mm)</strong> साइन बार (sine bar) – <strong>30°</strong> कोण (angle) के लिए – <strong>h = 100 × sin 30° = 100 × 0.5 = 50 मिमी (mm)</strong> – <strong>50 मिमी (mm)</strong> स्लिप गेज (slip gauge) का ढेर (stack) – <strong>एक (one)</strong> रोलर (roller) के <strong>नीचे (under)</strong>।</p>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>साइन बार – <strong>कोण (angles)</strong> मापने और <strong>सेट (set)</strong> करने के लिए – <strong>उच्च (high)</strong> सटीकता।</li>
+<li>सिद्धांत – <strong>sin θ = h / L</strong> – <strong>त्रिकोणमिति (trigonometry)</strong>।</li>
+<li>लंबाई (L) – <strong>100 मिमी (mm)</strong> या <strong>200 मिमी (mm)</strong> – <strong>स्थिर (constant)</strong>।</li>
+<li>ऊँचाई (h) – <strong>स्लिप गेज (slip gauge)</strong> का <strong>ढेर (stack)</strong>।</li>
+<li>उपयोग – <strong>कोण (angle)</strong> मापन (measurement), <strong>मशीन (machine)</strong> सेटिंग (setting).</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>साइन बार – <strong>कोण (angles)</strong> के लिए – <strong>उच्च (high)</strong> सटीकता (accuracy).</li>
+<li>sin θ = h / L – <strong>स्लिप गेज (slip gauge)</strong> ऊँचाई (height) – <strong>h = L × sin θ</strong>।</li>
+<li>लंबाई (L) – <strong>100 मिमी (mm)</strong> या <strong>200 मिमी (mm)</strong>।</li>
+<li>अनुप्रयोग – <strong>कोण (angle)</strong> मापन (measurement), <strong>गेज (gauges)</strong> कैलिब्रेशन (calibration).</li>
+<li>सटीकता – <strong>0.002 मिमी (mm)</strong> प्रति <strong>100 मिमी (mm)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.128 QUALITY STANDARDS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-quality">
+<div class="content-section" data-content="quality">
+<div class="section-header"><span class="icon">✅</span><span class="title">2.1.128 – गुणवत्ता मानकों के अनुपालन की जाँच</span><span class="subtitle">— प्रक्रिया, उपकरण, प्रलेखन, सुधार</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>गुणवत्ता मानकों (Quality Standards)</strong> के <strong>अनुपालन (adherence)</strong> की <strong>जाँच (checking)</strong> – यह <strong>सुनिश्चित (ensure)</strong> करने के लिए कि <strong>उत्पाद (product)</strong> या <strong>सेवा (service)</strong> <strong>निर्दिष्ट (specified)</strong> <strong>आवश्यकताओं (requirements)</strong> को <strong>पूरा (meet)</strong> करती है।</p>
+
+<p><strong>जाँच की प्रक्रिया (Checking Procedure):</strong></p>
+
+<p><strong>1. मानकों की पहचान (Identification of Standards):</strong></p>
+<ul>
+<li><strong>ISO 9000</strong> श्रृंखला (series) – <strong>अंतर्राष्ट्रीय (international)</strong> गुणवत्ता (quality) मानक (standards).</li>
+<li><strong>IS (Indian Standards):</strong> BIS द्वारा <strong>प्रकाशित (published)</strong> – <strong>IS 1367</strong> (फास्टनर्स – fasteners), <strong>IS 919</strong> (लिमिट्स और फिट्स – limits &amp; fits).</li>
+<li><strong>ग्राहक (customer)</strong> विनिर्देश (specifications) – <strong>अतिरिक्त (additional)</strong> आवश्यकताएँ (requirements).</li>
+</ul>
+
+<p><strong>2. निरीक्षण (Inspection):</strong></p>
+<ul>
+<li><strong>100% निरीक्षण (100% Inspection):</strong> <strong>प्रत्येक (every)</strong> भाग (part) की <strong>जाँच (checking)</strong> – <strong>छोटे (small)</strong> बैच (batches) के लिए।</li>
+<li><strong>नमूना निरीक्षण (Sampling Inspection):</strong> <strong>कुछ (some)</strong> नमूनों (samples) की <strong>जाँच (checking)</strong> – <strong>बड़े (large)</strong> बैच (batches) के लिए – <strong>SQC</strong> (Statistical Quality Control).</li>
+<li><strong>प्रक्रिया निरीक्षण (In-process Inspection):</strong> <strong>उत्पादन (production)</strong> के <strong>दौरान (during)</strong> – <strong>समय-समय (periodically)</strong> पर – <strong>गुणवत्ता (quality)</strong> को <strong>नियंत्रण (control)</strong> में रखने के लिए।</li>
+</ul>
+
+<p><strong>3. उपकरण (Equipment):</strong></p>
+<ul>
+<li><strong>मापन (Measuring) उपकरण (Instruments):</strong> <strong>वर्नियर (vernier)</strong>, <strong>माइक्रोमीटर (micrometer)</strong>, <strong>डायल गेज (dial gauge)</strong>, <strong>स्लिप गेज (slip gauges)</strong>, <strong>साइन बार (sine bar)</strong>।</li>
+<li><strong>गेज (Gauges):</strong> <strong>गो/नो-गो (Go/No-Go)</strong> – <strong>स्नैप (snap)</strong>, <strong>प्लग (plug)</strong>, <strong>थ्रेड (thread)</strong>, <strong>रेडियस (radius)</strong>।</li>
+<li><strong>सरफेस (Surface) निरीक्षण (Inspection):</strong> <strong>खुरदरापन (roughness)</strong> मीटर (meter) – <strong>प्रोफिलोमीटर (profilometer)</strong>।</li>
+</ul>
+
+<p><strong>4. प्रलेखन (Documentation):</strong></p>
+<ul>
+<li><strong>निरीक्षण रिपोर्ट (Inspection Report):</strong> <strong>माप (measurements)</strong> और <strong>परिणाम (results)</strong> – <strong>प्रत्येक (each)</strong> भाग (part) के लिए।</li>
+<li><strong>गैर-अनुपालन रिपोर्ट (Non-Conformance Report – NCR):</strong> <strong>अस्वीकार्य (rejected)</strong> भागों (parts) के लिए – <strong>कारण (reason)</strong> और <strong>सुधार (correction)</strong>।</li>
+<li><strong>गुणवत्ता (Quality) रिकॉर्ड (Records):</strong> <strong>सभी (all)</strong> निरीक्षण (inspection) गतिविधियों (activities) का <strong>रिकॉर्ड (record)</strong> – <strong>भविष्य (future)</strong> संदर्भ (reference) के लिए।</li>
+</ul>
+
+<p><strong>5. सुधार (Corrective Action):</strong></p>
+<ul>
+<li><strong>गैर-अनुपालन (non-conformance)</strong> के <strong>कारण (root cause)</strong> का <strong>विश्लेषण (analysis)</strong> – <strong>कारण-और-प्रभाव (cause-and-effect)</strong> आरेख (diagram) – <strong>पेरेटो (Pareto)</strong> विश्लेषण (analysis).</li>
+<li><strong>सुधारात्मक कार्रवाई (Corrective Action):</strong> <strong>कारण (cause)</strong> को <strong>हटाना (eliminate)</strong> – <strong>प्रक्रिया (process)</strong> में <strong>बदलाव (change)</strong> – <strong>प्रशिक्षण (training)</strong>।</li>
+<li><strong>निवारक कार्रवाई (Preventive Action):</strong> <strong>गैर-अनुपालन (non-conformance)</strong> को <strong>भविष्य (future)</strong> में <strong>होने (occur)</strong> से <strong>रोकना (prevent)</strong>।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: गुणवत्ता नियंत्रण प्रक्रिया (Quality Control Process)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/quality_control.jpg</p>
+<code>quality_control.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(मानक, निरीक्षण, उपकरण, प्रलेखन, सुधार)</p>
+</div>
+<div class="figure-caption">Fig 10 – गुणवत्ता मानकों की जाँच</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>गुणवत्ता मानक – <strong>ISO 9000</strong>, <strong>IS</strong> (भारतीय – Indian), <strong>ग्राहक (customer)</strong> विनिर्देश (specifications).</li>
+<li>निरीक्षण – <strong>100%</strong> या <strong>नमूना (sampling)</strong> – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
+<li>प्रलेखन – <strong>निरीक्षण रिपोर्ट (Inspection Report)</strong>, <strong>NCR</strong>।</li>
+<li>सुधार – <strong>कारण (cause)</strong> का <strong>विश्लेषण (analysis)</strong> – <strong>सुधारात्मक (corrective)</strong> और <strong>निवारक (preventive)</strong> कार्रवाई (action).</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>ISO 9000 – <strong>अंतर्राष्ट्रीय (international)</strong> गुणवत्ता (quality) मानक।</li>
+<li>IS – <strong>भारतीय (Indian)</strong> मानक – <strong>BIS</strong> द्वारा <strong>प्रकाशित (published)</strong>।</li>
+<li>100% निरीक्षण – <strong>प्रत्येक (every)</strong> भाग – <strong>छोटे (small)</strong> बैच (batches).</li>
+<li>नमूना निरीक्षण – <strong>कुछ (some)</strong> नमूने – <strong>बड़े (large)</strong> बैच (batches).</li>
+<li>NCR – <strong>गैर-अनुपालन (non-conformance)</strong> रिपोर्ट (report) – <strong>सुधार (correction)</strong> के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.129 LAPPING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-lapping">
+<div class="content-section" data-content="lapping">
+<div class="section-header"><span class="icon">🔧</span><span class="title">2.1.129 – लैपिंग (Lapping)</span><span class="subtitle">— प्रक्रिया, उपकरण, एब्रासिव, अनुप्रयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>लैपिंग (Lapping)</strong> – एक <strong>फिनिशिंग (finishing)</strong> प्रक्रिया – <strong>बहुत (very)</strong> <strong>चिकनी (smooth)</strong> और <strong>सटीक (accurate)</strong> सतह (surface) प्राप्त करने के लिए – <strong>ढीले (loose)</strong> एब्रासिव (abrasive) कणों (particles) का उपयोग – <strong>लैपिंग प्लेट (lapping plate)</strong> के साथ।</p>
+
+<p><strong>लैपिंग का उद्देश्य (Purpose of Lapping):</strong></p>
+<ul>
+<li><strong>सतह खुरदरापन (Surface roughness) को कम (reduce)</strong> – <strong>Ra 0.01–0.05 µm</strong> तक।</li>
+<li><strong>आयामी (dimensional) सटीकता (accuracy)</strong> – <strong>±0.001 मिमी (mm)</strong> तक।</li>
+<li><strong>सतह समतलता (Surface flatness)</strong> – <strong>गेज (gauges)</strong>, <strong>बियरिंग्स (bearings)</strong> के लिए।</li>
+<li><strong>घिसाव (wear) प्रतिरोध (resistance)</strong> – <strong>सतह (surface)</strong> को <strong>कठोर (harden)</strong> करना – <strong>वर्क हार्डनिंग (work hardening)</strong>।</li>
+</ul>
+
+<p><strong>लैपिंग उपकरण (Lapping Tools):</strong></p>
+<ul>
+<li><strong>लैपिंग प्लेट (Lapping Plate – लैप / Lap):</strong> <strong>सपाट (flat)</strong> – <strong>कास्ट आयरन (cast iron)</strong> या <strong>तांबा (copper)</strong> – <strong>एब्रासिव (abrasive)</strong> से <strong>लेपित (coated)</strong>।</li>
+<li><strong>एब्रासिव (Abrasives):</strong> <strong>एल्यूमीनियम ऑक्साइड (Al₂O₃)</strong>, <strong>सिलिकॉन कार्बाइड (SiC)</strong>, <strong>डायमंड (diamond)</strong> – <strong>पाउडर (powder)</strong> या <strong>पेस्ट (paste)</strong>।</li>
+<li><strong>लैपिंग द्रव (Lapping Fluid):</strong> <strong>तेल (oil)</strong> या <strong>केरोसिन (kerosene)</strong> – <strong>एब्रासिव (abrasive)</strong> को <strong>फैलाने (spread)</strong> और <strong>गर्मी (heat)</strong> कम (reduce) करने के लिए।</li>
+</ul>
+
+<p><strong>लैपिंग प्रक्रिया (Lapping Process):</strong></p>
+<ol>
+<li><strong>लैपिंग प्लेट (lapping plate)</strong> को <strong>समतल (level)</strong> रखें – <strong>सरफेस प्लेट (surface plate)</strong> पर।</li>
+<li><strong>एब्रासिव (abrasive)</strong> और <strong>द्रव (fluid)</strong> को <strong>मिलाएँ (mix)</strong> – <strong>पेस्ट (paste)</strong> बनाएँ – <strong>प्लेट (plate)</strong> पर <strong>लगाएँ (apply)</strong>।</li>
+<li><strong>वर्कपीस (workpiece)</strong> को <strong>लैपिंग प्लेट (lapping plate)</strong> पर <strong>रखें (place)</strong> – <strong>हल्का (light)</strong> दबाव (pressure) – <strong>आगे-पीछे (back-and-forth)</strong> या <strong>गोल (circular)</strong> गति (motion) – <strong>समान (uniform)</strong>।</li>
+<li><strong>समय-समय (periodically)</strong> पर <strong>वर्कपीस (workpiece)</strong> को <strong>घुमाएँ (rotate)</strong> – <strong>समान (uniform)</strong> घिसाव (wear) के लिए।</li>
+<li><strong>जाँच (Check):</strong> <strong>सतह (surface)</strong> की <strong>फिनिश (finish)</strong> और <strong>आयाम (dimensions)</strong> – <strong>स्लिप गेज (slip gauge)</span> या <strong>डायल गेज (dial gauge)</strong> से।</li>
+</ol>
+
+<p><strong>लैपिंग के अनुप्रयोग (Applications of Lapping):</strong></p>
+<ul>
+<li><strong>गेज (Gauges) – स्लिप गेज (slip gauges), प्लग गेज (plug gauges).</strong></li>
+<li><strong>बियरिंग्स (Bearings) – बॉल बियरिंग (ball bearings) की गेंदें (balls).</strong></li>
+<li><strong>हाइड्रोलिक (hydraulic) और न्यूमेटिक (pneumatic) घटक (components).</strong></li>
+<li><strong>ऑप्टिकल (optical) लेंस (lenses) – <strong>बहुत (very)</strong> चिकनी (smooth) सतह (surface) के लिए।</strong></li>
+<li><strong>टूलरूम (toolroom) – <strong>सटीक (precision)</strong> कार्य (work).</strong></li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: लैपिंग (Lapping) – प्रक्रिया और उपकरण</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/lapping.jpg</p>
+<code>lapping.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(लैपिंग प्लेट, एब्रासिव, वर्कपीस, गति)</p>
+</div>
+<div class="figure-caption">Fig 11 – लैपिंग प्रक्रिया</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>लैपिंग – <strong>बहुत (very)</strong> <strong>चिकनी (smooth)</strong> और <strong>सटीक (accurate)</strong> सतह (surface).</li>
+<li>सटीकता – <strong>±0.001 मिमी (mm)</strong> – <strong>Ra 0.01–0.05 µm</strong>।</li>
+<li>एब्रासिव – <strong>Al₂O₃</strong>, <strong>SiC</strong>, <strong>डायमंड (diamond)</strong>।</li>
+<li>लैपिंग प्लेट – <strong>कास्ट आयरन (cast iron)</strong> या <strong>तांबा (copper)</strong>।</li>
+<li>अनुप्रयोग – <strong>गेज (gauges)</strong>, <strong>बियरिंग्स (bearings)</strong>, <strong>हाइड्रोलिक (hydraulic)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>लैपिंग – <strong>बहुत (very)</strong> <strong>चिकनी (smooth)</strong> सतह (surface) – <strong>फिनिशिंग (finishing)</strong>।</li>
+<li>एब्रासिव – <strong>Al₂O₃</strong>, <strong>SiC</strong>, <strong>डायमंड (diamond)</strong> – <strong>ढीला (loose)</strong> कण (particles).</li>
+<li>लैपिंग प्लेट – <strong>कास्ट आयरन (cast iron)</strong> – <strong>सपाट (flat)</strong>।</li>
+<li>सटीकता – <strong>±0.001 मिमी (mm)</strong> – <strong>Ra 0.01–0.05 µm</strong>।</li>
+<li>गेज (Gauges) – <strong>स्लिप (slip)</strong>, <strong>प्लग (plug)</strong> – <strong>लैपिंग (lapping)</strong> द्वारा <strong>फिनिश (finish)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.130 SURFACE FINISH -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-surface-finish">
+<div class="content-section" data-content="surface-finish">
+<div class="section-header"><span class="icon">📊</span><span class="title">2.1.130 – सरफेस फिनिश का महत्व (Surface Finish Importance)</span><span class="subtitle">— अर्थ, मापन, महत्व, अनुप्रयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>सरफेस फिनिश (Surface Finish)</strong> – किसी <strong>मशीनी (machined)</strong> सतह (surface) की <strong>गुणवत्ता (quality)</strong> – <strong>खुरदरापन (roughness)</strong>, <strong>तरंग (waviness)</strong>, और <strong>ले (lay)</strong> का <strong>संयोजन (combination)</strong>।</p>
+
+<p><strong>सरफेस फिनिश के पैरामीटर (Surface Finish Parameters):</strong></p>
+<ul>
+<li><strong>Ra (औसत खुरदरापन – Average Roughness):</strong> सतह (surface) की <strong>औसत (average)</strong> खुरदरापन (roughness) – <strong>सबसे (most)</strong> सामान्य (common) – <strong>माइक्रोमीटर (µm)</strong> में।</li>
+<li><strong>Rz (अधिकतम ऊँचाई – Maximum Height):</strong> <strong>सबसे (most)</strong> ऊँचे (highest) और <strong>निचले (lowest)</strong> बिंदुओं (points) के <strong>बीच (between)</strong> की <strong>दूरी (distance)</strong> – <strong>औसत (average)</strong>।</li>
+<li><strong>RMS (Root Mean Square):</strong> Ra का <strong>RMS</strong> मान – Ra से <strong>लगभग (approximately)</strong> <strong>11% अधिक (higher)</strong>।</li>
+<li><strong>ले (Lay):</strong> <strong>प्रमुख (dominant)</strong> खाँचों (grooves) की <strong>दिशा (direction)</strong> – <strong>समानांतर (parallel)</strong>, <strong>लंबवत (perpendicular)</strong>, <strong>क्रॉस (cross)</strong>, आदि।</li>
+</ul>
+
+<p><strong>सरफेस फिनिश का महत्व (Importance of Surface Finish):</strong></p>
+<ul>
+<li><strong>घर्षण (Friction):</strong> <strong>चिकनी (smooth)</strong> सतह (surface) – <strong>कम (less)</strong> घर्षण (friction) – <strong>कम (less)</strong> गर्मी (heat) – <strong>लंबा (longer)</strong> जीवन (life).</li>
+<li><strong>घिसाव (Wear):</strong> <strong>खुरदरी (rough)</strong> सतह (surface) – <strong>अधिक (more)</strong> घिसाव (wear) – <strong>चिकनी (smooth)</strong> सतह – <strong>कम (less)</strong> घिसाव (wear).</li>
+<li><strong>स्नेहन (Lubrication):</strong> <strong>खुरदरी (rough)</strong> सतह (surface) – <strong>तेल (oil)</strong> को <strong>बनाए (retain)</strong> रखती है – <strong>बेहतर (better)</strong> स्नेहन (lubrication) – <strong>कम (less)</strong> घर्षण (friction).</li>
+<li><strong>सौंदर्यशास्त्र (Aesthetics):</strong> <strong>चिकनी (smooth)</strong> और <strong>चमकदार (shiny)</strong> सतह (surface) – <strong>आकर्षक (attractive)</strong> – <strong>गुणवत्ता (quality)</strong> का <strong>संकेत (indication)</strong>।</li>
+<li><strong>फिट (Fit):</strong> <strong>सटीक (accurate)</strong> सतह (surface) – <strong>सही (proper)</strong> फिट (fit) – <strong>असेंबली (assembly)</strong> में <strong>आसानी (ease)</strong>।</li>
+<li><strong>जंग (Corrosion):</strong> <strong>खुरदरी (rough)</strong> सतह (surface) – <strong>गंदगी (dirt)</strong> और <strong>नमी (moisture)</strong> को <strong>पकड़ (trap)</strong> लेती है – <strong>जंग (corrosion)</strong> को <strong>बढ़ावा (promote)</strong> देती है।</li>
+</ul>
+
+<p><strong>सरफेस फिनिश मापन (Surface Finish Measurement):</strong></p>
+<ul>
+<li><strong>खुरदरापन तुलनित्र (Roughness Comparator – दृश्य / Visual):</strong> <strong>मानक (standard)</strong> नमूनों (samples) से <strong>तुलना (comparison)</strong> – <strong>आँख (eye)</strong> या <strong>नाखून (fingernail)</strong> द्वारा।</li>
+<li><strong>प्रोफिलोमीटर (Profilometer – इलेक्ट्रॉनिक / Electronic):</strong> <strong>डायमंड (diamond)</strong> स्टाइलस (stylus) – <strong>सतह (surface)</strong> पर <strong>चलता (traverses)</strong> है – <strong>खुरदरापन (roughness)</strong> को <strong>मापता (measures)</strong> है – <strong>सटीक (accurate)</strong>।</li>
+<li><strong>टेलर-हॉबसन (Taylor-Hobson Talysurf):</strong> <strong>उच्च-परिशुद्धता (high-precision)</strong> – <strong>प्रयोगशाला (laboratory)</strong> में।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: सरफेस फिनिश मापन (Surface Finish Measurement)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/surface_finish.jpg</p>
+<code>surface_finish.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(Ra, Rz, RMS, प्रोफिलोमीटर, तुलनित्र)</p>
+</div>
+<div class="figure-caption">Fig 12 – सरफेस फिनिश</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>सरफेस फिनिश – <strong>सतह (surface)</strong> की <strong>गुणवत्ता (quality)</strong> – <strong>खुरदरापन (roughness)</strong>, <strong>तरंग (waviness)</strong>, <strong>ले (lay)</strong>।</li>
+<li>Ra – <strong>औसत (average)</strong> खुरदरापन – <strong>सबसे (most)</strong> सामान्य।</li>
+<li>Rz – <strong>अधिकतम (maximum)</strong> ऊँचाई – <strong>Ra</strong> से <strong>अलग (different)</strong>।</li>
+<li>खुरदरी (rough) सतह – <strong>अधिक (more)</strong> घर्षण (friction) – <strong>अधिक (more)</strong> घिसाव (wear).</li>
+<li>प्रोफिलोमीटर – <strong>इलेक्ट्रॉनिक (electronic)</strong> – <strong>सटीक (accurate)</strong> मापन।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>Ra – <strong>औसत (average)</strong> खुरदरापन – <strong>सबसे (most)</strong> सामान्य।</li>
+<li>Rz – <strong>अधिकतम (maximum)</strong> ऊँचाई – <strong>उच्चतम-निम्नतम (highest-lowest)</strong> का औसत।</li>
+<li>चिकनी (smooth) सतह – <strong>कम (less)</strong> घर्षण (friction) – <strong>कम (less)</strong> घिसाव (wear).</li>
+<li>प्रोफिलोमीटर – <strong>इलेक्ट्रॉनिक (electronic)</strong> – <strong>स्टाइलस (stylus)</strong> – <strong>सटीक (accurate)</strong>।</li>
+<li>खुरदरी (rough) सतह – <strong>तेल (oil)</strong> को <strong>बनाए (retain)</strong> रखती है – <strong>बेहतर (better)</strong> स्नेहन (lubrication).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.131 HONING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-honing">
+<div class="content-section" data-content="honing">
+<div class="section-header"><span class="icon">🔄</span><span class="title">2.1.131 – होनिंग (Honing)</span><span class="subtitle">— प्रक्रिया, उपकरण, एब्रासिव, अनुप्रयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>होनिंग (Honing)</strong> – एक <strong>फिनिशिंग (finishing)</strong> प्रक्रिया – <strong>आंतरिक (internal)</strong> बेलनाकार (cylindrical) सतहों (surfaces) को <strong>चिकना (smooth)</strong> और <strong>सटीक (accurate)</strong> बनाने के लिए – <strong>होन (hone)</strong> – <strong>एब्रासिव (abrasive)</strong> पत्थर (stones) के <strong>सेट (set)</strong> के साथ।</p>
+
+<p><strong>होनिंग का उद्देश्य (Purpose of Honing):</strong></p>
+<ul>
+<li><strong>सतह खुरदरापन (Surface roughness) को कम (reduce)</strong> – <strong>Ra 0.05–0.2 µm</strong> तक।</li>
+<li><strong>आयामी (dimensional) सटीकता (accuracy)</strong> – <strong>±0.005 मिमी (mm)</strong> तक।</li>
+<li><strong>सिलेंडर (cylinder) बोर (bore) की <strong>ज्यामिति (geometry)</strong> – <strong>गोलाई (roundness)</strong> और <strong>सीधापन (straightness)</strong>।</li>
+<li><strong>क्रॉस-हैच (cross-hatch) पैटर्न (pattern)</strong> – <strong>तेल (oil)</strong> को <strong>बनाए (retain)</strong> रखने के लिए – <strong>इंजन (engine)</strong> सिलेंडर (cylinders) में।</li>
+</ul>
+
+<p><strong>होनिंग उपकरण (Honing Tools):</strong></p>
+<ul>
+<li><strong>होन (Hone – होनिंग स्टोन / Honing Stone):</strong> <strong>एब्रासिव (abrasive)</strong> पत्थर (stones) – <strong>सिलिकॉन कार्बाइड (SiC)</strong>, <strong>एल्यूमीनियम ऑक्साइड (Al₂O₃)</strong>, <strong>डायमंड (diamond)</strong> – <strong>होल्डर (holder)</strong> में <strong>लगे (mounted)</strong>।</li>
+<li><strong>होनिंग मशीन (Honing Machine):</strong> <strong>होन (hone)</strong> को <strong>घुमाता (rotates)</strong> और <strong>ऊपर-नीचे (reciprocates)</strong> – <strong>आंतरिक (internal)</strong> सतह (surface) पर।</li>
+<li><strong>होनिंग फ्लुइड (Honing Fluid):</strong> <strong>तेल (oil)</strong> या <strong>सॉल्यूबल (soluble)</strong> – <strong>गर्मी (heat)</strong> कम (reduce) करने और <strong>एब्रासिव (abrasive)</strong> को <strong>हटाने (remove)</strong> के लिए।</li>
+</ul>
+
+<p><strong>होनिंग प्रक्रिया (Honing Process):</strong></p>
+<ol>
+<li><strong>होन (hone)</strong> को <strong>सिलेंडर (cylinder)</strong> बोर (bore) के <strong>अंदर (inside)</strong> <strong>रखें (insert)</strong> – <strong>एब्रासिव (abrasive)</strong> पत्थर (stones) – <strong>बोर (bore)</strong> की <strong>सतह (surface)</strong> के <strong>संपर्क (contact)</strong> में।</li>
+<li>होन (hone) को <strong>घुमाएँ (rotate)</strong> और <strong>ऊपर-नीचे (reciprocate)</strong> – <strong>समान (uniform)</strong> सामग्री (material) हटाने के लिए।</li>
+<li><strong>एब्रासिव (abrasive)</strong> – <strong>पत्थरों (stones)</strong> से <strong>सामग्री (material)</strong> को <strong>हटाता (removes)</strong> है – <strong>चिकनी (smooth)</strong> सतह (surface) बनाता है।</li>
+<li><strong>जाँच (Check):</strong> <strong>व्यास (diameter)</strong>, <strong>गोलाई (roundness)</strong>, <strong>सीधापन (straightness)</strong> – <strong>डायल गेज (dial gauge)</strong> या <strong>आंतरिक माइक्रोमीटर (inside micrometer)</strong> से।</li>
+</ol>
+
+<p><strong>लैपिंग और होनिंग के बीच अंतर (Difference between Lapping &amp; Honing):</strong></p>
+<table style="width:100%; border-collapse:collapse; margin:14px 0;">
+<tr style="background:#003366; color:#fff;"><th style="padding:10px; text-align:left;">लैपिंग (Lapping)</th><th style="padding:10px; text-align:left;">होनिंग (Honing)</th></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">सतह (surface) को <strong>चिकना (smooth)</strong> करता है</td><td style="padding:10px; border:1px solid #ddd;">सिलेंडर (cylinder) बोर (bore) को <strong>फिनिश (finish)</strong> करता है</td></tr>
+<tr><td style="padding:10px; border:1px solid #ddd;">ढीले (loose) एब्रासिव (abrasive) कण (particles)</td><td style="padding:10px; border:1px solid #ddd;">एब्रासिव (abrasive) पत्थर (stones) – <strong>बंधे (bonded)</strong></td></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">सपाट (flat) सतहों (surfaces) के लिए</td><td style="padding:10px; border:1px solid #ddd;">बेलनाकार (cylindrical) सतहों (surfaces) के लिए</td></tr>
+<tr><td style="padding:10px; border:1px solid #ddd;">सटीकता – ±0.001 मिमी</td><td style="padding:10px; border:1px solid #ddd;">सटीकता – ±0.005 मिमी</td></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">कम (less) सामग्री हटाना</td><td style="padding:10px; border:1px solid #ddd;">अधिक (more) सामग्री हटाना</td></tr>
+</table>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: होनिंग (Honing) – प्रक्रिया और उपकरण</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/honing.jpg</p>
+<code>honing.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(होन, पत्थर, रोटेशन, रेसिप्रोकेशन, क्रॉस-हैच पैटर्न)</p>
+</div>
+<div class="figure-caption">Fig 13 – होनिंग प्रक्रिया</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>होनिंग – <strong>आंतरिक (internal)</strong> बेलनाकार (cylindrical) सतहों (surfaces) के लिए – <strong>फिनिशिंग (finishing)</strong>।</li>
+<li>सटीकता – <strong>±0.005 मिमी (mm)</strong> – <strong>Ra 0.05–0.2 µm</strong>।</li>
+<li>होन – <strong>एब्रासिव (abrasive)</strong> पत्थर (stones) – <strong>बंधे (bonded)</strong>।</li>
+<li>क्रॉस-हैच (cross-hatch) पैटर्न – <strong>तेल (oil)</strong> को <strong>बनाए (retain)</strong> रखने के लिए – <strong>इंजन (engine)</strong> सिलेंडर (cylinders).</li>
+<li>लैपिंग – <strong>सपाट (flat)</strong> सतहों (surfaces) के लिए – <strong>होनिंग</strong> – <strong>बेलनाकार (cylindrical)</strong> के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>होनिंग – <strong>आंतरिक (internal)</strong> सतहों (surfaces) – <strong>बेलनाकार (cylindrical)</strong>।</li>
+<li>सटीकता – <strong>±0.005 मिमी (mm)</strong> – <strong>Ra 0.05–0.2 µm</strong>।</li>
+<li>होन – <strong>एब्रासिव (abrasive)</strong> पत्थर (stones) – <strong>बंधे (bonded)</strong> – <strong>SiC</strong>, <strong>Al₂O₃</strong>, <strong>डायमंड (diamond)</strong>।</li>
+<li>लैपिंग – <strong>सपाट (flat)</strong> सतहों (surfaces) – <strong>ढीले (loose)</strong> एब्रासिव (abrasive).</li>
+<li>होनिंग – <strong>क्रॉस-हैच (cross-hatch)</strong> – <strong>तेल (oil)</strong> के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.132-133 FROSTING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-frosting">
+<div class="content-section" data-content="frosting">
+<div class="section-header"><span class="icon">❄️</span><span class="title">2.1.132-133 – फ्रॉस्टिंग (Frosting)</span><span class="subtitle">— अर्थ, उद्देश्य, प्रक्रिया, अनुप्रयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>फ्रॉस्टिंग (Frosting)</strong> – एक <strong>सतह (surface)</strong> फिनिशिंग (finishing) प्रक्रिया – <strong>बहुत (very)</strong> <strong>महीन (fine)</strong> खाँचे (grooves) या <strong>पैटर्न (pattern)</strong> – <strong>सौंदर्यशास्त्र (aesthetics)</strong> और <strong>कार्यात्मक (functional)</strong> उद्देश्य (purpose) के लिए।</p>
+
+<p><strong>फ्रॉस्टिंग का उद्देश्य (Purpose of Frosting):</strong></p>
+<ul>
+<li><strong>सौंदर्यशास्त्र (Aesthetics):</strong> <strong>आकर्षक (attractive)</strong> सतह (surface) – <strong>चमक (shine)</strong> को <strong>कम (reduce)</strong> करना – <strong>मैट (matte)</strong> फिनिश (finish).</li>
+<li><strong>प्रकाश (Light) परावर्तन (Reflection):</strong> <strong>अत्यधिक (excessive)</strong> परावर्तन (reflection) को <strong>कम (reduce)</strong> – <strong>उपकरण (instruments)</strong> और <strong>ऑप्टिकल (optical)</strong> उपकरणों (devices) में।</li>
+<li><strong>तेल (Oil) धारण (Retention):</strong> <strong>बहुत (very)</strong> महीन (fine) खाँचे (grooves) – <strong>तेल (oil)</strong> को <strong>बनाए (retain)</strong> रखते हैं – <strong>बेयरिंग्स (bearings)</strong> में।</li>
+<li><strong>फिंगरप्रिंट (Fingerprints) और गंदगी (dirt):</strong> <strong>चिकनी (smooth)</strong> सतहों (surfaces) पर <strong>फिंगरप्रिंट (fingerprints)</strong> और <strong>गंदगी (dirt)</strong> <strong>दिखाई (visible)</strong> देती है – <strong>फ्रॉस्टिंग (frosting)</strong> – उन्हें <strong>छिपाता (hides)</strong> है।</li>
+</ul>
+
+<p><strong>फ्रॉस्टिंग की प्रक्रिया (Frosting Process):</strong></p>
+<ul>
+<li><strong>रासायनिक (Chemical) फ्रॉस्टिंग:</strong> <strong>एसिड (acid)</strong> या <strong>क्षार (alkali)</strong> का उपयोग – <strong>सतह (surface)</strong> पर <strong>हमला (attack)</strong> – <strong>महीन (fine)</strong> पैटर्न (pattern) बनाना – <strong>कांच (glass)</strong> पर।</li>
+<li><strong>यांत्रिक (Mechanical) फ्रॉस्टिंग:</strong> <strong>सैंडब्लास्टिंग (sandblasting)</strong> – <strong>महीन (fine)</strong> रेत (sand) या <strong>एब्रासिव (abrasive)</strong> कणों (particles) का <strong>स्प्रे (spray)</strong> – <strong>सतह (surface)</strong> को <strong>खुरदरा (rough)</strong> बनाना।</li>
+<li><strong>ब्रशिंग (Brushing):</strong> <strong>तार (wire)</strong> ब्रश (brush) – <strong>सतह (surface)</strong> पर <strong>महीन (fine)</strong> रेखाएँ (lines) – <strong>वृत्ताकार (circular)</strong> या <strong>रेखीय (linear)</strong>।</li>
+</ul>
+
+<p><strong>फ्रॉस्टिंग के अनुप्रयोग (Applications of Frosting):</strong></p>
+<ul>
+<li><strong>कांच (Glass):</strong> <strong>खिड़कियाँ (windows)</strong>, <strong>दरवाजे (doors)</strong> – <strong>गोपनीयता (privacy)</strong> के लिए।</li>
+<li><strong>धातु (Metal) सतहें (Surfaces):</strong> <strong>उपकरण (instruments)</strong>, <strong>घड़ियाँ (watches)</strong>, <strong>आभूषण (jewellery)</strong> – <strong>सौंदर्यशास्त्र (aesthetics)</strong>।</li>
+<li><strong>बियरिंग्स (Bearings):</strong> <strong>तेल (oil)</strong> धारण (retention) – <strong>घर्षण (friction)</strong> कम (reduce).</li>
+<li><strong>डाई (Dies) और मोल्ड (Moulds):</strong> <strong>रिलीज (release)</strong> को <strong>बेहतर (improve)</strong> करने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: फ्रॉस्टिंग (Frosting) – उदाहरण</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/frosting.jpg</p>
+<code>frosting.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(कांच पर फ्रॉस्टिंग, धातु पर फ्रॉस्टिंग, पैटर्न)</p>
+</div>
+<div class="figure-caption">Fig 14 – फ्रॉस्टिंग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>फ्रॉस्टिंग – <strong>सौंदर्यशास्त्र (aesthetics)</strong> और <strong>कार्यात्मक (functional)</strong> – <strong>महीन (fine)</strong> पैटर्न (pattern).</li>
+<li>रासायनिक (Chemical) – <strong>एसिड (acid)</strong> – <strong>कांच (glass)</strong> के लिए।</li>
+<li>यांत्रिक (Mechanical) – <strong>सैंडब्लास्टिंग (sandblasting)</strong> – <strong>धातु (metal)</strong> के लिए।</li>
+<li>उद्देश्य – <strong>प्रकाश (light)</strong> परावर्तन (reflection) कम (reduce) – <strong>तेल (oil)</strong> धारण (retention).</li>
+<li>अनुप्रयोग – <strong>कांच (glass)</strong>, <strong>उपकरण (instruments)</strong>, <strong>बियरिंग्स (bearings)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फ्रॉस्टिंग – <strong>महीन (fine)</strong> पैटर्न (pattern) – <strong>सौंदर्यशास्त्र (aesthetics)</strong>।</li>
+<li>रासायनिक (Chemical) – <strong>एसिड (acid)</strong> – <strong>कांच (glass)</strong> पर।</li>
+<li>यांत्रिक (Mechanical) – <strong>सैंडब्लास्टिंग (sandblasting)</strong> – <strong>धातु (metal)</strong> पर।</li>
+<li>उद्देश्य – <strong>प्रकाश (light)</strong> परावर्तन (reflection) को <strong>कम (reduce)</strong> – <strong>तेल (oil)</strong> धारण (retention).</li>
+<li>बियरिंग्स (Bearings) – <strong>तेल (oil)</strong> धारण के लिए – <strong>घर्षण (friction)</strong> कम (reduce).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.134-135 HEAT TREATMENT -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-heat-treatment">
+<div class="content-section" data-content="heat-treatment">
+<div class="section-header"><span class="icon">🔥</span><span class="title">2.1.134-135 – प्लेन कार्बन स्टील का ताप उपचार (Heat Treatment)</span><span class="subtitle">— एनीलिंग, नॉर्मलाइजिंग, हार्डनिंग, टेम्परिंग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>ताप उपचार (Heat Treatment)</strong> – <strong>स्टील (steel)</strong> को <strong>गर्म (heating)</strong> और <strong>ठंडा (cooling)</strong> करने की प्रक्रिया – <strong>गुणों (properties)</strong> को <strong>बदलने (change)</strong> के लिए – <strong>कठोरता (hardness)</strong>, <strong>तन्यता (ductility)</strong>, <strong>शक्ति (strength)</strong>।</p>
+
+<p><strong>ताप उपचार के मुख्य प्रकार (Main Types of Heat Treatment):</strong></p>
+
+<p><strong>1. एनीलिंग (Annealing – नर्म करना / Softening):</strong></p>
+<ul>
+<li>स्टील (steel) को <strong>क्रांतिक (critical)</strong> तापमान (temperature) से <strong>ऊपर (above)</strong> <strong>गर्म (heat)</strong> करना – <strong>धीरे (slowly)</strong> <strong>ठंडा (cool)</strong> करना – <strong>भट्ठी (furnace)</strong> में।</li>
+<li><strong>उद्देश्य (Purpose):</strong> <strong>कठोरता (hardness)</strong> <strong>कम (reduce)</strong> – <strong>तन्यता (ductility)</strong> <strong>बढ़ाना (increase)</strong> – <strong>मशीनेबिलिटी (machinability)</strong> <strong>सुधारना (improve)</strong> – <strong>आंतरिक (internal)</strong> तनाव (stress) <strong>हटाना (remove)</strong>।</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>कास्टिंग (castings)</strong>, <strong>फोर्जिंग (forgings)</strong>, <strong>उच्च-कार्बन (high-carbon)</strong> स्टील (steel).</li>
+</ul>
+
+<p><strong>2. नॉर्मलाइजिंग (Normalizing – सामान्यीकरण):</strong></p>
+<ul>
+<li>स्टील (steel) को <strong>एनीलिंग (annealing)</strong> तापमान (temperature) से <strong>थोड़ा (slightly)</strong> <strong>ऊपर (above)</strong> <strong>गर्म (heat)</strong> करना – <strong>हवा (air)</strong> में <strong>ठंडा (cool)</strong> करना – <strong>तेज़ (faster)</strong> ठंडा (cooling).</li>
+<li><strong>उद्देश्य (Purpose):</strong> <strong>अनाज (grain)</strong> की संरचना (structure) को <strong>परिष्कृत (refine)</strong> करना – <strong>समान (uniform)</strong> गुण (properties) – <strong>शक्ति (strength)</strong> और <strong>कठोरता (hardness)</strong> बढ़ाना (increase).</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>मध्यम-कार्बन (medium-carbon)</strong> और <strong>निम्न-कार्बन (low-carbon)</strong> स्टील (steel) – <strong>संरचनात्मक (structural)</strong> अनुप्रयोग (applications).</li>
+</ul>
+
+<p><strong>3. हार्डनिंग (Hardening – कठोर बनाना):</strong></p>
+<ul>
+<li>स्टील (steel) को <strong>क्रांतिक (critical)</strong> तापमान (temperature) से <strong>ऊपर (above)</strong> <strong>गर्म (heat)</strong> करना – <strong>तेज़ी (rapidly)</strong> से <strong>ठंडा (cool)</strong> करना – <strong>पानी (water)</strong>, <strong>तेल (oil)</strong>, या <strong>नमक (salt)</strong> के <strong>स्नान (bath)</strong> में – <strong>शमन (quenching)</strong>।</li>
+<li><strong>उद्देश्य (Purpose):</strong> <strong>कठोरता (hardness)</strong> और <strong>घिसाव (wear)</strong> प्रतिरोध (resistance) को <strong>बढ़ाना (increase)</strong> – <strong>तन्यता (ductility)</strong> कम (reduce).</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>काटने (cutting)</strong> के उपकरण (tools), <strong>गियर (gears)</strong>, <strong>बियरिंग्स (bearings)</strong> – <strong>उच्च-कार्बन (high-carbon)</strong> स्टील (steel).</li>
+</ul>
+
+<p><strong>4. टेम्परिंग (Tempering – तड़का लगाना):</strong></p>
+<ul>
+<li><strong>हार्डनिंग (hardening)</strong> के <strong>बाद (after)</strong> – स्टील (steel) को <strong>कम (lower)</strong> तापमान (temperature) पर <strong>गर्म (heat)</strong> करना – <strong>200°C–600°C</strong> – <strong>हवा (air)</strong> या <strong>तेल (oil)</strong> में <strong>ठंडा (cool)</strong> करना।</li>
+<li><strong>उद्देश्य (Purpose):</strong> <strong>भंगुरता (brittleness)</strong> को <strong>कम (reduce)</strong> – <strong>कठोरता (hardness)</strong> को <strong>थोड़ा (slightly)</strong> <strong>कम (reduce)</strong> – <strong>तन्यता (ductility)</strong> और <strong>क्रूरता (toughness)</strong> <strong>बढ़ाना (increase)</strong>।</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>हार्डनिंग (hardening)</strong> के <strong>बाद (after)</strong> – <strong>उपकरण (tools)</strong>, <strong>स्प्रिंग्स (springs)</strong> – <strong>सभी (all)</strong> हार्ड (hard) स्टील (steel).</li>
+</ul>
+
+<p><strong>5. केस हार्डनिंग (Case Hardening – सतह हार्डनिंग / Surface Hardening):</strong></p>
+<ul>
+<li>स्टील (steel) की <strong>सतह (surface)</strong> को <strong>कठोर (hard)</strong> करना – <strong>कोर (core)</strong> को <strong>नरम (soft)</strong> रखना – <strong>कार्बराइजिंग (carburizing)</strong>, <strong>नाइट्राइडिंग (nitriding)</strong>, <strong>साइनाइडिंग (cyaniding)</strong>।</li>
+<li><strong>उद्देश्य (Purpose):</strong> <strong>घिसाव (wear)</strong> प्रतिरोध (resistance) – <strong>कोर (core)</strong> – <strong>तन्यता (ductility)</strong> और <strong>क्रूरता (toughness)</strong>।</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>गियर (gears)</strong>, <strong>कैम (cams)</strong>, <strong>शाफ्ट्स (shafts)</strong> – <strong>निम्न-कार्बन (low-carbon)</strong> स्टील (steel).</li>
+</ul>
+
+<p><strong>ताप उपचार का महत्व (Importance of Heat Treatment):</strong></p>
+<ul>
+<li><strong>गुण (Properties) को <strong>नियंत्रित (control)</strong></strong> – <strong>आवश्यकता (requirement)</strong> के अनुसार।</li>
+<li><strong>जीवन (Life) बढ़ाना (increase)</strong> – <strong>घिसाव (wear)</strong> और <strong>टूट-फूट (failure)</strong> से बचाना।</li>
+<li><strong>मशीनेबिलिटी (Machinability) में सुधार (improve)</strong> – <strong>काटने (cutting)</strong> और <strong>फॉर्मिंग (forming)</strong> को <strong>आसान (easier)</strong> बनाना।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: ताप उपचार प्रक्रिया (Heat Treatment Processes)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/heat_treatment.jpg</p>
+<code>heat_treatment.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(एनीलिंग, नॉर्मलाइजिंग, हार्डनिंग, टेम्परिंग, केस हार्डनिंग)</p>
+</div>
+<div class="figure-caption">Fig 15 – ताप उपचार</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>ताप उपचार प्रक्रियाएँ (Heat Treatment Processes)</caption>
+<thead><tr><th>प्रक्रिया (Process)</th><th>तापमान (Temperature)</th><th>ठंडा करना (Cooling)</th><th>उद्देश्य (Purpose)</th></tr></thead>
+<tbody>
+<tr><td>एनीलिंग (Annealing)</td><td>क्रांतिक से ऊपर</td><td>धीरे (Slow – भट्ठी में)</td><td>नर्म करना, मशीनेबिलिटी सुधार</td></tr>
+<tr><td>नॉर्मलाइजिंग (Normalizing)</td><td>क्रांतिक से थोड़ा ऊपर</td><td>हवा (Air) में</td><td>अनाज परिष्कृत, शक्ति बढ़ाना</td></tr>
+<tr><td>हार्डनिंग (Hardening)</td><td>क्रांतिक से ऊपर</td><td>तेज़ (Rapid – पानी/तेल)</td><td>कठोरता, घिसाव प्रतिरोध</td></tr>
+<tr><td>टेम्परिंग (Tempering)</td><td>200–600°C</td><td>हवा/तेल</td><td>भंगुरता कम, क्रूरता बढ़ाना</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>ताप उपचार – <strong>गर्म (heating)</strong> और <strong>ठंडा (cooling)</strong> – <strong>गुण (properties)</strong> बदलना।</li>
+<li>एनीलिंग – <strong>नर्म (soft)</strong> – <strong>तन्यता (ductility)</strong> बढ़ाना – <strong>मशीनेबिलिटी (machinability)</strong>।</li>
+<li>नॉर्मलाइजिंग – <strong>अनाज (grain)</strong> परिष्कृत – <strong>समान (uniform)</strong> गुण।</li>
+<li>हार्डनिंग – <strong>कठोर (hard)</strong> – <strong>शमन (quenching)</strong> – <strong>पानी (water)</strong> या <strong>तेल (oil)</strong>।</li>
+<li>टेम्परिंग – <strong>भंगुरता (brittleness)</strong> कम – <strong>क्रूरता (toughness)</strong> बढ़ाना।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>एनीलिंग – <strong>नर्म (soft)</strong> – <strong>धीरे (slow)</strong> ठंडा – <strong>मशीनेबिलिटी</strong> सुधार।</li>
+<li>नॉर्मलाइजिंग – <strong>हवा (air)</strong> में ठंडा – <strong>अनाज (grain)</strong> परिष्कृत।</li>
+<li>हार्डनिंग – <strong>तेज़ (rapid)</strong> ठंडा – <strong>शमन (quenching)</strong> – <strong>कठोरता (hardness)</strong>।</li>
+<li>टेम्परिंग – <strong>हार्डनिंग (hardening)</strong> के <strong>बाद (after)</strong> – <strong>भंगुरता (brittleness)</strong> कम।</li>
+<li>केस हार्डनिंग – <strong>सतह (surface)</strong> <strong>कठोर (hard)</strong> – <strong>कोर (core)</strong> <strong>नरम (soft)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.136 SURFACE HARDENING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-surface-hardening">
+<div class="content-section" data-content="surface-hardening">
+<div class="section-header"><span class="icon">⚙️</span><span class="title">2.1.136 – स्टील की सरफेस हार्डनिंग (Surface Hardening of Steel)</span><span class="subtitle">— कार्बराइजिंग, नाइट्राइडिंग, फ्लेम, इंडक्शन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>सरफेस हार्डनिंग (Surface Hardening – केस हार्डनिंग / Case Hardening)</strong> – स्टील (steel) की <strong>सतह (surface)</strong> को <strong>कठोर (hard)</strong> करना – <strong>कोर (core)</strong> को <strong>नरम (soft)</strong> और <strong>तन्य (ductile)</strong> रखना – <strong>निम्न-कार्बन (low-carbon)</strong> स्टील (steel) के लिए।</p>
+
+<p><strong>सरफेस हार्डनिंग की विधियाँ (Methods of Surface Hardening):</strong></p>
+
+<p><strong>1. कार्बराइजिंग (Carburizing – कार्बन डालना / Adding Carbon):</strong></p>
+<ul>
+<li><strong>प्रक्रिया (Process):</strong> स्टील (steel) को <strong>कार्बन (carbon)</strong> युक्त (rich) वातावरण (environment) में <strong>गर्म (heat)</strong> करना – <strong>900°C–950°C</strong> – <strong>कार्बन (carbon)</strong> को <strong>सतह (surface)</strong> में <strong>अवशोषित (absorb)</strong> करना – <strong>ठंडा (cool)</strong> करना – <strong>हार्डनिंग (hardening)</strong>।</li>
+<li><strong>कार्बराइजिंग माध्यम (Carburizing Media):</strong> <strong>ठोस (solid – चारकोल / charcoal)</strong>, <strong>तरल (liquid)</strong>, <strong>गैस (gas – CO₂, CH₄)</strong>।</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>गियर (gears)</strong>, <strong>कैम (cams)</strong>, <strong>शाफ्ट्स (shafts)</strong> – <strong>घिसाव (wear)</strong> प्रतिरोध (resistance) के लिए।</li>
+</ul>
+
+<p><strong>2. नाइट्राइडिंग (Nitriding – नाइट्रोजन डालना / Adding Nitrogen):</strong></p>
+<ul>
+<li><strong>प्रक्रिया (Process):</strong> स्टील (steel) को <strong>अमोनिया (ammonia – NH₃)</strong> गैस (gas) में <strong>गर्म (heat)</strong> करना – <strong>500°C–550°C</strong> – <strong>नाइट्रोजन (nitrogen)</strong> को <strong>सतह (surface)</strong> में <strong>अवशोषित (absorb)</strong> करना – <strong>कोई (no)</strong> शमन (quenching) की आवश्यकता – <strong>बहुत (very)</strong> <strong>कठोर (hard)</strong> सतह (surface).</li>
+<li><strong>लाभ (Advantages):</strong> <strong>कम (low)</strong> तापमान (temperature) – <strong>कोई (no)</strong> विरूपण (distortion) – <strong>बहुत (very)</strong> <strong>उच्च (high)</strong> कठोरता (hardness).</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>गियर (gears)</strong>, <strong>क्रैंकशाफ्ट (crankshafts)</strong>, <strong>स्पिंडल्स (spindles)</strong> – <strong>उच्च-मिश्र (high-alloy)</strong> स्टील (steel).</li>
+</ul>
+
+<p><strong>3. फ्लेम हार्डनिंग (Flame Hardening – लौ / Flame):</strong></p>
+<ul>
+<li><strong>प्रक्रिया (Process):</strong> <strong>ऑक्सी-एसिटिलीन (oxy-acetylene)</strong> लौ (flame) – <strong>सतह (surface)</strong> को <strong>गर्म (heat)</strong> करना – <strong>फिर (then)</strong> <strong>पानी (water)</strong> या <strong>तेल (oil)</strong> में <strong>शमन (quench)</strong> करना – <strong>चयनात्मक (selective)</strong> हार्डनिंग।</li>
+<li><strong>लाभ (Advantages):</strong> <strong>चयनात्मक (selective)</strong> – <strong>बड़े (large)</strong> भागों (parts) के लिए – <strong>सरल (simple)</strong>।</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>गियर (gears)</strong>, <strong>शाफ्ट्स (shafts)</strong>, <strong>रेल (rails)</strong> – <strong>मध्यम-कार्बन (medium-carbon)</strong> स्टील (steel).</li>
+</ul>
+
+<p><strong>4. इंडक्शन हार्डनिंग (Induction Hardening – प्रेरण / Induction):</strong></p>
+<ul>
+<li><strong>प्रक्रिया (Process):</strong> <strong>प्रेरण (induction)</strong> कुंडली (coil) – <strong>उच्च-आवृत्ति (high-frequency)</strong> वैकल्पिक धारा (alternating current) – <strong>सतह (surface)</strong> को <strong>गर्म (heat)</strong> करना – <strong>फिर (then)</strong> <strong>पानी (water)</strong> या <strong>तेल (oil)</strong> में <strong>शमन (quench)</strong> करना।</li>
+<li><strong>लाभ (Advantages):</strong> <strong>तेज़ (fast)</strong> – <strong>सटीक (precise)</strong> – <strong>नियंत्रित (controlled)</strong> – <strong>स्वचालित (automated)</strong>।</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>शाफ्ट्स (shafts)</strong>, <strong>गियर (gears)</strong>, <strong>बियरिंग्स (bearings)</strong> – <strong>मध्यम-कार्बन (medium-carbon)</strong> और <strong>अलॉय (alloy)</strong> स्टील (steel).</li>
+</ul>
+
+<p><strong>सरफेस हार्डनिंग के लाभ (Advantages of Surface Hardening):</strong></p>
+<ul>
+<li><strong>घिसाव (wear) प्रतिरोध (resistance)</strong> – <strong>सतह (surface)</strong> <strong>कठोर (hard)</strong>।</li>
+<li><strong>कोर (core) की तन्यता (ductility)</strong> – <strong>झटका (shock)</strong> सहन (absorb).</li>
+<li><strong>लागत (cost) प्रभावी (effective)</strong> – <strong>केवल (only)</strong> <strong>सतह (surface)</strong> को <strong>कठोर (harden)</strong> करना – <strong>पूरा (entire)</strong> भाग (part) को <strong>नहीं (not)</strong>।</li>
+<li><strong>विरूपण (distortion) कम (less)</strong> – <strong>सतह (surface)</strong> का <strong>ही (only)</strong> उपचार (treatment).</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: सरफेस हार्डनिंग विधियाँ (Surface Hardening Methods)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/surface_hardening.jpg</p>
+<code>surface_hardening.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(कार्बराइजिंग, नाइट्राइडिंग, फ्लेम, इंडक्शन)</p>
+</div>
+<div class="figure-caption">Fig 16 – सरफेस हार्डनिंग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>सरफेस हार्डनिंग – <strong>सतह (surface)</strong> <strong>कठोर (hard)</strong> – <strong>कोर (core)</strong> <strong>नरम (soft)</strong>।</li>
+<li>कार्बराइजिंग – <strong>कार्बन (carbon)</strong> डालना – <strong>900°C–950°C</strong>।</li>
+<li>नाइट्राइडिंग – <strong>नाइट्रोजन (nitrogen)</strong> डालना – <strong>500°C–550°C</strong> – <strong>कोई (no)</strong> शमन (quenching).</li>
+<li>फ्लेम – <strong>ऑक्सी-एसिटिलीन (oxy-acetylene)</strong> लौ – <strong>चयनात्मक (selective)</strong>।</li>
+<li>इंडक्शन – <strong>प्रेरण (induction)</strong> – <strong>तेज़ (fast)</strong> – <strong>सटीक (precise)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>कार्बराइजिंग – <strong>कार्बन (carbon)</strong> – <strong>900–950°C</strong> – <strong>शमन (quenching)</strong> आवश्यक।</li>
+<li>नाइट्राइडिंग – <strong>नाइट्रोजन (nitrogen)</strong> – <strong>500–550°C</strong> – <strong>कोई (no)</strong> शमन (quenching).</li>
+<li>फ्लेम हार्डनिंग – <strong>लौ (flame)</strong> – <strong>चयनात्मक (selective)</strong> – <strong>बड़े (large)</strong> भाग (parts).</li>
+<li>इंडक्शन हार्डनिंग – <strong>प्रेरण (induction)</strong> – <strong>तेज़ (fast)</strong> – <strong>स्वचालित (automated)</strong>।</li>
+<li>सरफेस हार्डनिंग – <strong>घिसाव (wear)</strong> प्रतिरोध (resistance) – <strong>कोर (core)</strong> की <strong>तन्यता (ductility)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.137-138 TAPERS ON KEYS AND COTTERS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tapers">
+<div class="content-section" data-content="tapers">
+<div class="section-header"><span class="icon">📐</span><span class="title">2.1.137-138 – कीज और कॉटर पर टेपर (Tapers on Keys and Cotters)</span><span class="subtitle">— टेपर की, गिब हेड की, टेपर कॉटर, उपयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>टेपर (Taper)</strong> – व्यास (diameter) या चौड़ाई (width) का <strong>लंबाई (length)</strong> के साथ <strong>समान (uniform)</strong> रूप से <strong>घटना (decrease)</strong> या <strong>बढ़ना (increase)</strong> – <strong>फ्रिक्शन (friction)</strong> द्वारा <strong>लॉकिंग (locking)</strong> के लिए – <strong>आसान (easy)</strong> असेंबली (assembly) और <strong>डिसअसेंबली (disassembly)</strong>।</p>
+
+<p><strong>टेपर की (Taper Key – टेपर / Tapered):</strong></p>
+<ul>
+<li><strong>आकार (Shape):</strong> <strong>टेपर (tapered)</strong> – <strong>एक (one)</strong> सिरा (end) <strong>मोटा (thick)</strong>, दूसरा <strong>पतला (thin)</strong> – <strong>सामान्य (common)</strong> टेपर – <strong>1:100</strong> (या <strong>1:50</strong>).</li>
+<li><strong>शाफ्ट (shaft) और हब (hub) में खाँचा (keyway):</strong> <strong>टेपर (tapered)</strong> – <strong>की (key)</strong> को <strong>हथौड़े (hammer)</strong> से <strong>ठोक (drive)</strong> कर – <strong>लॉक (lock)</strong> – <strong>घर्षण (friction)</strong> द्वारा।</li>
+<li><strong>उपयोग (Use):</strong> <strong>भारी (heavy)</strong> अनुप्रयोगों (applications) – <strong>गियर (gears)</strong>, <strong>पुली (pulleys)</strong> – <strong>वाइब्रेशन (vibration)</strong> वाले स्थानों (locations) में।</li>
+</ul>
+
+<p><strong>गिब हेड की (Gib Head Key – गिब हेड / Gib Head):</strong></p>
+<ul>
+<li><strong>टेपर (taper)</strong> + <strong>सिर (head)</strong> – <strong>एक (one)</strong> सिरे (end) पर – <strong>हटाने (removal)</strong> के लिए – <strong>आसान (easy)</strong> निकालना – <strong>हुक (hook)</strong> या <strong>पंच (punch)</strong> के साथ।</li>
+<li><strong>उपयोग (Use):</strong> <strong>जहाँ (where)</strong> <strong>बार-बार (frequently)</strong> <strong>हटाना (removal)</strong> आवश्यक (required) हो – <strong>रखरखाव (maintenance)</strong> के लिए।</li>
+</ul>
+
+<p><strong>कॉटर (Cotter – कॉटर / Cotter Pin):</strong></p>
+<ul>
+<li><strong>कॉटर (Cotter)</strong> – एक <strong>पतला (thin)</strong> <strong>धातु (metal)</strong> का <strong>टुकड़ा (piece)</strong> – <strong>दो (two)</strong> भागों (parts) को <strong>जोड़ना (join)</strong> – <strong>एक (one)</strong> सिरे (end) पर <strong>सिर (head)</strong> – <strong>दूसरे (other)</strong> सिरे (end) पर <strong>टेपर (taper)</strong> – <strong>फ्रिक्शन (friction)</strong> द्वारा <strong>लॉक (lock)</strong>।</li>
+<li><strong>कॉटर जोड़ (Cotter Joint):</strong> <strong>रॉड्स (rods)</strong> को <strong>जोड़ने (join)</strong> के लिए – <strong>टाई रॉड (tie rod)</strong>, <strong>कनेक्टिंग रॉड (connecting rod)</strong> – <strong>अक्षीय (axial)</strong> भार (load) के लिए।</li>
+</ul>
+
+<p><strong>टेपर कॉटर (Taper Cotter – टेपर / Tapered):</strong></p>
+<ul>
+<li><strong>कॉटर (cotter)</strong> – <strong>टेपर (tapered)</strong> – <strong>एक (one)</strong> सिरे (end) पर <strong>सिर (head)</strong> – <strong>खाँचे (slot)</strong> में <strong>डाला (inserted)</strong> – <strong>हथौड़े (hammer)</strong> से <strong>ठोक (drive)</strong> – <strong>लॉक (lock)</strong>।</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>कॉटर जोड़ (cotter joint)</strong> – <strong>रॉड्स (rods)</strong>, <strong>पिन्स (pins)</strong> – <strong>भारी (heavy)</strong> मशीनरी (machinery).</li>
+</ul>
+
+<p><strong>टेपर की और कॉटर की तुलना (Comparison – Taper Key vs Cotter):</strong></p>
+<table style="width:100%; border-collapse:collapse; margin:14px 0;">
+<tr style="background:#003366; color:#fff;"><th style="padding:10px; text-align:left;">टेपर की (Taper Key)</th><th style="padding:10px; text-align:left;">टेपर कॉटर (Taper Cotter)</th></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">शाफ्ट (shaft) और हब (hub) के बीच</td><td style="padding:10px; border:1px solid #ddd;">रॉड्स (rods) के बीच</td></tr>
+<tr><td style="padding:10px; border:1px solid #ddd;">टॉर्क (torque) संचारण</td><td style="padding:10px; border:1px solid #ddd;">अक्षीय (axial) भार (load) संचारण</td></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">शाफ्ट (shaft) में खाँचा (keyway) आवश्यक</td><td style="padding:10px; border:1px solid #ddd;">रॉड (rod) में खाँचा (slot) आवश्यक</td></tr>
+<tr><td style="padding:10px; border:1px solid #ddd;">सामान्य टेपर – 1:100</td><td style="padding:10px; border:1px solid #ddd;">सामान्य टेपर – 1:48</td></tr>
+</table>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टेपर की और कॉटर (Taper Key &amp; Cotter)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/taper_key_cotter.jpg</p>
+<code>taper_key_cotter.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(टेपर की, गिब हेड की, टेपर कॉटर, कॉटर जोड़)</p>
+</div>
+<div class="figure-caption">Fig 17 – टेपर की और कॉटर</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>टेपर – <strong>फ्रिक्शन (friction)</strong> द्वारा <strong>लॉकिंग (locking)</strong> – <strong>सरल (simple)</strong>।</li>
+<li>टेपर की – <strong>शाफ्ट (shaft)</strong> और <strong>हब (hub)</strong> के बीच – <strong>टॉर्क (torque)</strong> संचारण।</li>
+<li>गिब हेड की – <strong>सिर (head)</strong> – <strong>आसान (easy)</strong> हटाना।</li>
+<li>कॉटर – <strong>रॉड्स (rods)</strong> को <strong>जोड़ना (join)</strong> – <strong>अक्षीय (axial)</strong> भार (load).</li>
+<li>टेपर कॉटर – <strong>खाँचे (slot)</strong> में <strong>डाला (inserted)</strong> – <strong>हथौड़े (hammer)</strong> से <strong>ठोक (drive)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>टेपर की – <strong>शाफ्ट (shaft)</strong> और <strong>हब (hub)</strong> – <strong>टॉर्क (torque)</strong>।</li>
+<li>गिब हेड की – <strong>सिर (head)</strong> – <strong>हटाने (removal)</strong> में <strong>आसान (easy)</strong>।</li>
+<li>कॉटर – <strong>रॉड्स (rods)</strong> – <strong>अक्षीय (axial)</strong> भार (load).</li>
+<li>टेपर कॉटर – <strong>टेपर (tapered)</strong> – <strong>हथौड़े (hammer)</strong> से <strong>ठोक (drive)</strong>।</li>
+<li>सामान्य टेपर – की के लिए <strong>1:100</strong> – कॉटर के लिए <strong>1:48</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.1.139 COATINGS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-coatings">
+<div class="content-section" data-content="coatings">
+<div class="section-header"><span class="icon">🎨</span><span class="title">2.1.139 – संरक्षण के लिए विभिन्न कोटिंग्स (Various Coatings for Protection)</span><span class="subtitle">— हॉट डिप, इलेक्ट्रोप्लेटिंग, पेंटिंग, गैल्वनाइजिंग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>कोटिंग्स (Coatings)</strong> – <strong>सतह (surface)</strong> पर <strong>सुरक्षात्मक (protective)</strong> परत (layer) – <strong>जंग (corrosion)</strong>, <strong>घिसाव (wear)</strong>, और <strong>गर्मी (heat)</strong> से <strong>बचाने (protect)</strong> के लिए।</p>
+
+<p><strong>हॉट डिप कोटिंग (Hot Dip Coating – गर्म डुबोना / Hot Dipping):</strong></p>
+<ul>
+<li><strong>प्रक्रिया (Process):</strong> भाग (part) को <strong>पिघली (molten)</strong> हुई <strong>धातु (metal)</strong> में <strong>डुबोना (dipping)</strong> – <strong>जस्ता (zinc)</strong> – <strong>गैल्वनाइजिंग (galvanizing)</strong> – <strong>टिन (tin)</strong> – <strong>टिनिंग (tinning)</strong>।</li>
+<li><strong>उद्देश्य (Purpose):</strong> <strong>जंग (corrosion)</strong> से <strong>बचाना (protect)</strong> – <strong>गर्मी (heat)</strong> प्रतिरोध (resistance).</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>लोहा (iron)</strong> और <strong>स्टील (steel)</strong> – <strong>गैल्वनाइज्ड (galvanized)</strong> शीट (sheets), <strong>पाइप (pipes)</strong> – <strong>बाहरी (outdoor)</strong> अनुप्रयोग (applications).</li>
+</ul>
+
+<p><strong>इलेक्ट्रोप्लेटिंग (Electroplating – विद्युत लेपन / Electro-deposition):</strong></p>
+<ul>
+<li><strong>प्रक्रिया (Process):</strong> <strong>विद्युत (electric)</strong> धारा (current) का उपयोग – <strong>धातु (metal)</strong> को <strong>सतह (surface)</strong> पर <strong>जमा (deposit)</strong> करना – <strong>क्रोमियम (chromium)</strong>, <strong>निकल (nickel)</strong>, <strong>तांबा (copper)</strong>, <strong>चाँदी (silver)</strong>, <strong>सोना (gold)</strong>।</li>
+<li><strong>उद्देश्य (Purpose):</strong> <strong>सौंदर्यशास्त्र (aesthetics)</strong> – <strong>जंग (corrosion)</strong> प्रतिरोध (resistance) – <strong>घिसाव (wear)</strong> प्रतिरोध (resistance).</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>ऑटोमोटिव (automotive)</strong> भाग (parts), <strong>उपकरण (instruments)</strong>, <strong>आभूषण (jewellery)</strong> – <strong>इलेक्ट्रॉनिक्स (electronics)</strong>।</li>
+</ul>
+
+<p><strong>पेंटिंग (Painting – पेंट / Paint):</strong></p>
+<ul>
+<li><strong>प्रक्रिया (Process):</strong> <strong>पेंट (paint)</strong> – <strong>ब्रश (brush)</strong>, <strong>रोलर (roller)</strong>, या <strong>स्प्रे (spray)</strong> – <strong>सतह (surface)</strong> पर <strong>लगाना (apply)</strong> – <strong>सुखाना (drying)</strong>।</li>
+<li><strong>उद्देश्य (Purpose):</strong> <strong>जंग (corrosion)</strong> से <strong>बचाना (protect)</strong> – <strong>सौंदर्यशास्त्र (aesthetics)</strong> – <strong>रंग (color)</strong>।</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>मशीनरी (machinery)</strong>, <strong>संरचनाएँ (structures)</strong>, <strong>ऑटोमोबाइल (automobiles)</strong> – <strong>अंदरूनी (indoor)</strong> और <strong>बाहरी (outdoor)</strong>।</li>
+</ul>
+
+<p><strong>गैल्वनाइजिंग (Galvanizing – जस्ता लेपन / Zinc Coating):</strong></p>
+<ul>
+<li><strong>प्रक्रिया (Process):</strong> <strong>हॉट डिप (hot dip)</strong> – <strong>जस्ता (zinc)</strong> की परत (layer) – <strong>इलेक्ट्रोप्लेटिंग (electroplating)</strong> भी।</li>
+<li><strong>उद्देश्य (Purpose):</strong> <strong>जंग (corrosion)</strong> से <strong>बचाना (protect)</strong> – <strong>सैक्रिफिशियल (sacrificial)</strong> परत – <strong>जस्ता (zinc)</strong> <strong>पहले (first)</strong> <strong>क्षतिग्रस्त (corroded)</strong> होता है – <strong>स्टील (steel)</strong> को <strong>बचाता (protects)</strong> है।</li>
+<li><strong>अनुप्रयोग (Application):</strong> <strong>छत (roofing)</strong> शीट (sheets), <strong>पाइप (pipes)</strong>, <strong>बाहरी (outdoor)</strong> संरचनाएँ (structures).</li>
+</ul>
+
+<p><strong>अन्य कोटिंग्स (Other Coatings):</strong></p>
+<ul>
+<li><strong>एनोडाइजिंग (Anodizing):</strong> <strong>एल्यूमीनियम (aluminium)</strong> के लिए – <strong>ऑक्साइड (oxide)</strong> परत (layer) – <strong>जंग (corrosion)</strong> और <strong>घिसाव (wear)</strong> प्रतिरोध (resistance).</li>
+<li><strong>पाउडर कोटिंग (Powder Coating):</strong> <strong>सूखा (dry)</strong> पाउडर (powder) – <strong>इलेक्ट्रोस्टैटिक (electrostatic)</strong> – <strong>गर्म (heat)</strong> – <strong>टिकाऊ (durable)</strong> कोटिंग (coating).</li>
+<li><strong>फॉस्फेट (Phosphate) कोटिंग:</strong> <strong>जंग (corrosion)</strong> से <strong>बचाना (protect)</strong> – <strong>पेंट (paint)</strong> को <strong>चिपकने (adhesion)</strong> के लिए – <strong>पार्कराइजिंग (Parkerizing)</strong>।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: कोटिंग्स के प्रकार (Coating Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-1/coatings.jpg</p>
+<code>coatings.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(हॉट डिप, इलेक्ट्रोप्लेटिंग, पेंटिंग, गैल्वनाइजिंग, एनोडाइजिंग)</p>
+</div>
+<div class="figure-caption">Fig 18 – विभिन्न कोटिंग्स</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>कोटिंग – <strong>सतह (surface)</strong> की <strong>सुरक्षा (protection)</strong> – <strong>जंग (corrosion)</strong>, <strong>घिसाव (wear)</strong>।</li>
+<li>हॉट डिप – <strong>पिघली (molten)</strong> धातु (metal) में <strong>डुबोना (dipping)</strong> – <strong>गैल्वनाइजिंग (galvanizing)</strong>।</li>
+<li>इलेक्ट्रोप्लेटिंग – <strong>विद्युत (electric)</strong> – <strong>धातु (metal)</strong> को <strong>जमा (deposit)</strong> – <strong>क्रोमियम (chromium)</strong>, <strong>निकल (nickel)</strong>।</li>
+<li>गैल्वनाइजिंग – <strong>जस्ता (zinc)</strong> – <strong>सैक्रिफिशियल (sacrificial)</strong> परत – <strong>जंग (corrosion)</strong> से बचाता है।</li>
+<li>एनोडाइजिंग – <strong>एल्यूमीनियम (aluminium)</strong> – <strong>ऑक्साइड (oxide)</strong> परत।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>हॉट डिप – <strong>पिघली (molten)</strong> धातु – <strong>गैल्वनाइजिंग (galvanizing)</strong> – <strong>जस्ता (zinc)</strong>।</li>
+<li>इलेक्ट्रोप्लेटिंग – <strong>विद्युत (electric)</strong> – <strong>क्रोमियम (chromium)</strong>, <strong>निकल (nickel)</strong> – <strong>सौंदर्यशास्त्र (aesthetics)</strong>।</li>
+<li>गैल्वनाइजिंग – <strong>जस्ता (zinc)</strong> – <strong>सैक्रिफिशियल (sacrificial)</strong> – <strong>स्टील (steel)</strong> को <strong>बचाता (protects)</strong>।</li>
+<li>पेंटिंग – <strong>सबसे (most)</strong> सामान्य – <strong>जंग (corrosion)</strong> और <strong>सौंदर्यशास्त्र (aesthetics)</strong>।</li>
+<li>एनोडाइजिंग – <strong>एल्यूमीनियम (aluminium)</strong> – <strong>ऑक्साइड (oxide)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ============================== CONCLUSION ============================== -->
+<div class="container">
+<div class="conclusion-section">
+<h2>📌 Module 1 – निष्कर्ष (Conclusion)</h2>
+<div class="bilingual">
+<div class="content">
+<p><strong>Module 1 – Assembly</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<ul>
+<li><strong>Assembly (असेबली):</strong> अर्थ, प्रकार (स्थायी, अस्थायी), प्रक्रिया, सावधानियाँ।</li>
+<li><strong>Screws (स्क्रू):</strong> भाग, प्रकार, मानक (ISO, UNC, BSW), चयन।</li>
+<li><strong>Screw Drivers (स्क्रू ड्राइवर):</strong> प्रकार (चपटा, फिलिप्स, स्टार, हेक्स), उपयोग, देखभाल।</li>
+<li><strong>Locking Devices – Nuts (लॉकिंग डिवाइस – नट):</strong> नट के प्रकार (हेक्स, वर्गाकार, विंग, जैम, स्लॉटेड), लॉकिंग विधियाँ।</li>
+<li><strong>Keys (कीज):</strong> प्रकार (सोसनी, समानांतर, टेपर, सैडल), सामग्री, चयन।</li>
+<li><strong>Special Files (स्पेशल फाइल):</strong> रीलर, आवा, हाफ-राउंड, ट्राईएंगुलर, सुई – उपयोग।</li>
+<li><strong>Template and Gauges (टेम्पलेट और गेज):</strong> टेम्पलेट प्रकार, गेज (फीलर, स्नैप, प्लग), निर्माण।</li>
+<li><strong>Slip Gauges (स्लिप गेज):</strong> निर्माण, ग्रेड, वाइपिंग, अनुप्रयोग।</li>
+<li><strong>Sine Bar (साइन बार):</strong> सिद्धांत (sin θ = h / L), निर्माण, अनुप्रयोग, विशिष्टता।</li>
+<li><strong>Quality Standards (गुणवत्ता मानक):</strong> जाँच प्रक्रिया, ISO 9000, IS, निरीक्षण, प्रलेखन, सुधार।</li>
+<li><strong>Lapping (लैपिंग):</strong> प्रक्रिया, उपकरण, एब्रासिव, अनुप्रयोग, सटीकता।</li>
+<li><strong>Surface Finish (सरफेस फिनिश):</strong> महत्व, पैरामीटर (Ra, Rz), मापन, अनुप्रयोग।</li>
+<li><strong>Honing (होनिंग):</strong> प्रक्रिया, उपकरण, लैपिंग से अंतर, अनुप्रयोग।</li>
+<li><strong>Frosting (फ्रॉस्टिंग):</strong> उद्देश्य, प्रक्रिया (रासायनिक, यांत्रिक), अनुप्रयोग।</li>
+<li><strong>Heat Treatment (ताप उपचार):</strong> एनीलिंग, नॉर्मलाइजिंग, हार्डनिंग, टेम्परिंग – प्रक्रिया, उद्देश्य।</li>
+<li><strong>Surface Hardening (सरफेस हार्डनिंग):</strong> कार्बराइजिंग, नाइट्राइडिंग, फ्लेम, इंडक्शन – विधियाँ, लाभ।</li>
+<li><strong>Tapers on Keys and Cotters (कीज और कॉटर पर टेपर):</strong> टेपर की, गिब हेड की, टेपर कॉटर – उपयोग, अंतर।</li>
+<li><strong>Coatings (कोटिंग्स):</strong> हॉट डिप, इलेक्ट्रोप्लेटिंग, पेंटिंग, गैल्वनाइजिंग, एनोडाइजिंग – प्रक्रिया, उद्देश्य।</li>
+</ul>
+<p>इन सभी विषयों में महारत हासिल करना हर <strong>फिटर (fitter)</strong> के लिए आवश्यक है। प्रत्येक संचालन को <strong>सटीकता (precision)</strong> और <strong>सुरक्षा (safety)</strong> के साथ अभ्यास करें।</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ============================== MCQ ============================== -->
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="section-body">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/fitter/second-year/module-1.html" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="section-body">
+<div style="display:flex; flex-wrap:wrap; gap:12px;">
+<a href="../fitter1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 1: Safety</a>
+<a href="../fitter2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 2: Basic Fitting</a>
+<a href="../fitter3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 3: Sheet Metal</a>
+<a href="../fitter4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 4: Welding</a>
+<a href="../fitter5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 5: Drilling</a>
+<a href="../fitter6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 6: Assembly</a>
+<a href="../fitter7.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 7: Turning</a>
+<a href="../fitter8.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 8: Maintenance</a>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('🔧 ' + getPageTitle() + ' - Fitter 2nd Year Module 1 Study Material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('🔧 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Fitter 2nd Year Module 1 – Assembly (Complete) Loaded.');
+        console.log('📚 All topics covered: Screws, Drivers, Locking, Keys, Files, Template, Slip Gauges, Sine Bar, Lapping, Honing, Frosting, Heat Treatment, Coatings.');
+    </script>
+</body>
+  </html>
