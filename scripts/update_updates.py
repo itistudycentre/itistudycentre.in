@@ -133,7 +133,7 @@ def add_update(source, title, date, link):
 
 
 # ==========================================
-# DGT EXAM CORNER (IMPROVED - DGT LINK PRIORITY)
+# DGT EXAM CORNER (IMPROVED)
 # ==========================================
 
 def fetch_dgt():
@@ -149,7 +149,6 @@ def fetch_dgt():
 
         soup = BeautifulSoup(response.text, "html.parser")
 
-        # सभी संभावित रो/आइटम कलेक्ट करें
         rows = soup.select("table tr")
         rows += soup.select(".views-row, .views-field, article, li, .item-list li")
         rows += soup.select("div:has(a)")
@@ -162,7 +161,6 @@ def fetch_dgt():
             if len(full_text) < 15:
                 continue
 
-            # ---------- टाइटल ----------
             title = ""
             for child in element.find_all(["td", "th", "div", "p", "span", "strong"]):
                 txt = clean_text(child.get_text(" ", strip=True))
@@ -172,17 +170,15 @@ def fetch_dgt():
             if not title or len(title) < 5:
                 title = full_text
 
-            # ---------- तारीख ----------
             date = extract_date(full_text)
             if date:
                 title = re.sub(r"\b\d{1,2}[-/\.]\d{1,2}[-/\.]\d{4}\b", "", title)
                 title = clean_text(title)
 
-            # ---------- लिंक (DGT प्रायोरिटी के साथ) ----------
             link = ""
             all_links = element.find_all("a", href=True)
 
-            # 1. सबसे पहले "Download" / "PDF" वाला लिंक ढूंढें
+            # 1. Priority: Download / PDF link
             for a in all_links:
                 href = a.get("href", "").strip()
                 a_text = clean_text(a.get_text(" ", strip=True)).lower()
@@ -192,7 +188,7 @@ def fetch_dgt():
                         link = url
                         break
 
-            # 2. अगर न मिला, तो कोई भी ऐसा लिंक जो .pdf पर खत्म होता हो
+            # 2. If not found, any link ending with .pdf
             if not link:
                 for a in all_links:
                     href = a.get("href", "").strip()
@@ -202,27 +198,24 @@ def fetch_dgt():
                             link = url
                             break
 
-            # 3. अगर फिर भी न मिला, तो पहला वाला लिंक (DGT का इंटरनल पेज)
+            # 3. First available link (DGT internal page)
             if not link and all_links:
                 first_href = all_links[0].get("href", "").strip()
                 link = normalize_url(DGT_BASE, first_href)
 
-            # 4. अगर लिंक DGT_BASE से शुरू नहीं होता, तो उसे छोड़ दें (क्योंकि आपको DGT पर जाना है)
+            # 4. Ignore external links
             if link and not link.startswith(DGT_BASE):
-                link = ""  # बाहरी लिंक को नज़रअंदाज करें
+                link = ""
 
-            # ---------- बेकार शीर्षक ----------
             lower_title = title.lower()
             if lower_title in ["title", "subject", "download", "attachment", "date", "s.no", "sr.no", "serial no"]:
                 continue
 
-            # ---------- डुप्लिकेट ----------
             key = (title, link) if link else (title, "")
             if key in seen_texts:
                 continue
             seen_texts.add(key)
 
-            # ---------- सेव ----------
             if title and len(title) >= 5 and link:
                 add_update("DGT", title, date, link)
                 found += 1
@@ -230,7 +223,6 @@ def fetch_dgt():
 
         print(f"✅ DGT updates collected: {found}")
 
-        # ---------- FALLBACK (अगर टेबल/स्ट्रक्चर न मिले) ----------
         if found == 0:
             print("⚠️  No structured data found. Trying fallback on all links...")
             for a in soup.find_all("a", href=True):
@@ -254,7 +246,7 @@ def fetch_dgt():
 
 
 # ==========================================
-# SCVT (बिना बदलाव)
+# SCVT
 # ==========================================
 
 SCVT_KEYWORDS = [
@@ -315,6 +307,12 @@ def sort_updates():
 
 def save_updates():
     sort_updates()
+
+    # ✅ FIX: यदि कोई अपडेट नहीं मिला, तो पुरानी JSON फ़ाइल को मत छुओ!
+    if not updates:
+        print("⚠️ कोई नया अपडेट नहीं मिला। पुरानी JSON फ़ाइल सुरक्षित रखी गई।")
+        return
+
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     final_updates = updates[:MAX_ITEMS]
     with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
