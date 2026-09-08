@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 3 – Pipes & Pipe Fittings (पूर्ण) | Fitter 2nd Year | ITI Study Centre</title>
+<meta content="Complete Fitter 2nd Year Module 3 – Pipes & Pipe Fittings. Pipes, Pipe Fittings, Pipe Fitting Tools, Standard Pipe Fitting Method. Full NIMI syllabus." name="description"/>
+<style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.8;
+            user-select: none;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
+
+        .main-header {
+            background: #003366;
+            padding: 16px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        @media(max-width:768px) {
+            .main-header .container { flex-direction: column; gap: 8px; }
+            .main-header nav { justify-content: center; gap: 6px 14px; }
+            .main-header nav a { font-size: 0.9rem; }
+        }
+
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a { color: #003366; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .current { color: #555; font-weight: 600; }
+
+        .page-title {
+            padding: 32px 0 22px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.3rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
+        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
+
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 540px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
+        }
+        .search-section button {
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover { background: #002244; transform: scale(1.02); }
+        @media(max-width:640px) {
+            .search-section { flex-direction: column; }
+            .search-section input { max-width: 100%; width: 100%; }
+            .search-section button { width: 100%; }
+        }
+
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            margin-bottom: 32px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 20px 28px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .section-header .icon { font-size: 1.8rem; line-height: 1; }
+        .section-header .title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body { padding: 28px 32px; background: #fafcff; }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-left: 5px solid #ffcc00;
+            padding-left: 18px;
+        }
+        .section-body h3:first-of-type { margin-top: 0; }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.12rem;
+            margin: 20px 0 10px;
+        }
+        @media(max-width:768px) {
+            .section-header { padding: 14px 18px; }
+            .section-header .title { font-size: 1.05rem; }
+            .section-body { padding: 18px 18px; }
+            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
+        }
+        @media(max-width:480px) {
+            .section-body { padding: 14px 14px; }
+            .section-header .icon { font-size: 1.4rem; }
+            .section-header .title { font-size: 0.95rem; }
+        }
+
+        .bilingual { margin: 14px 0; }
+        .bilingual .content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #1a2a3a;
+        }
+        .bilingual .content ul, .bilingual .content ol { padding-left: 26px; margin: 10px 0; }
+        .bilingual .content ul li, .bilingual .content ol li { margin-bottom: 6px; }
+        .bilingual .content p { margin: 10px 0; }
+        @media(max-width:480px) {
+            .bilingual .content { font-size: 0.95rem; }
+        }
+
+        .info-card {
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin: 18px 0;
+            background: #fff;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+        }
+        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
+        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
+        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
+        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
+        .info-card h4 { margin: 0 0 6px; color: #003366; }
+        .info-card ul { margin: 0; padding-left: 22px; }
+        .info-card ul li { margin-bottom: 4px; }
+
+        .tool-figure {
+            width:100%;
+            max-width:850px;
+            margin:24px auto;
+            text-align:center;
+            background:#f8fafc;
+            border:1px solid #e2e7ed;
+            border-radius:12px;
+            padding:20px;
+            transition:0.2s;
+        }
+        .tool-figure:hover { background:#f0f4fa; }
+        .tool-figure .placeholder-icon { font-size:3.5rem; line-height:1.2; color:#8a9aa8; margin-bottom:6px; }
+        .tool-figure .figure-caption { font-size:0.95rem; color:#555; font-weight:600; margin-top:8px; }
+        .tool-figure .image-placeholder {
+            display:block;
+            min-height:120px;
+            background:#f0f4fa;
+            border:2px dashed #c7ced7;
+            border-radius:8px;
+            padding:18px;
+            color:#68717c;
+        }
+        .tool-figure .image-placeholder code {
+            background:#e7ebef;
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:0.8rem;
+            display:inline-block;
+            margin:4px 0;
+        }
+        @media(max-width:768px) {
+            .tool-figure { padding:14px; }
+            .tool-figure .placeholder-icon { font-size:2.8rem; }
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 22px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 13px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 11px 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
+        .table-wrap tr:hover { background: #eef2f7; }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        @media(max-width:480px) {
+            .table-wrap table { font-size: 0.85rem; }
+            .table-wrap th, .table-wrap td { padding: 8px 10px; }
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin: 20px 0;
+        }
+        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
+        .compare-card {
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .compare-card h4 { font-size: 1.1rem; margin: 0 0 10px; color: #003366; }
+        .compare-card ul { padding-left: 20px; margin: 0; }
+        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .example-box strong { color: #003366; }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .important-box h4 { margin: 0 0 6px; color: #856404; }
+        .important-box ul { padding-left: 22px; margin: 0; }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
+        .short-notes ul { padding-left: 22px; margin: 0; }
+        .warning-box {
+            background: #fff5f2;
+            border-left: 5px solid #dc3545;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
+        .warning-box p { margin: 0; }
+        .success-box {
+            background: #eef9f1;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .success-box h4 { margin: 0 0 6px; color: #1e7e34; }
+        .success-box p { margin: 0; }
+
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 22px;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.link { background: #6c757d; }
+        .share-btn.link.copied { background: #28a745; }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        @media(max-width:600px) {
+            .share-section { flex-direction: column; align-items: stretch; }
+            .share-section .share-label { text-align: center; }
+            .share-btn { justify-content: center; }
+        }
+
+        .mcq-link { text-align: center; padding: 12px 0; }
+        .mcq-link a {
+            display: inline-block;
+            padding: 14px 44px;
+            background: #ffcc00;
+            color: #003366 !important;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
+        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
+
+        .conclusion-section {
+            background: #e8f4fd;
+            border: 2px solid #003366;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .conclusion-section h2 {
+            color: #003366;
+            font-size: 1.6rem;
+            border-left: 5px solid #ffcc00;
+            padding-left: 16px;
+            margin-bottom: 16px;
+        }
+        .conclusion-section ul {
+            padding-left: 26px;
+            margin: 10px 0;
+        }
+        .conclusion-section ul li { margin-bottom: 6px; }
+
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 28px 20px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 28px;
+            margin-bottom: 14px;
+        }
+        footer .footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover { background: #002244; transform: scale(1.05); }
+
+        .copy-protect::selection { background: #b3d4fc; color: #000; }
+
+        @media print {
+            #scrollTop, .share-section, .search-section { display: none !important; }
+            body { background: #fff !important; }
+            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+            .section-body { background: #fff !important; }
+            .tool-figure { border:1px solid #ccc; break-inside:avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+<div class="container">
+<div class="logo"><a href="/">🔧 ITI Study Centre</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/iti-study-centre-notes.html">Notes</a>
+<a class="active" href="/notes/fitter/index.html">Fitter</a>
+<a href="/question-bank/fitter/index.html">Question Bank</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+<a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+<a href="/notes/fitter/index.html">Fitter</a>  › 
+<a href="/notes/fitter/second-year/index.html">2nd Year</a>  › 
+<span class="current">Module 3 – Pipes &amp; Pipe Fittings (पूर्ण)</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>🔧 Module 3 – Pipes &amp; Pipe Fittings (पूर्ण)</h1>
+<p>पाइप · पाइप फिटिंग · पाइप फिटिंग टूल्स · मानक पाइप फिटिंग विधि</p>
+</div>
+</section>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()">🔍 Search</button>
+</section>
+
+<div class="container">
+<div class="share-section">
+<span class="share-label">📤 Share:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</button>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+Facebook
+</button>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+Twitter
+</button>
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div class="container">
+<div class="content-section" style="border:2px solid #003366;">
+<div class="section-header" style="background:#003366; border-bottom:none;">
+<span class="icon" style="color:#ffcc00;">📚</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 3 (Pipes &amp; Pipe Fittings)</span>
+</div>
+<div class="section-body" style="background:#fff;">
+<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
+<a href="#sec-pipes" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 2.3.149-152 – पाइप (Pipes)</a>
+<a href="#sec-fittings" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 2.3.153-156 – पाइप फिटिंग (Pipe Fittings)</a>
+<a href="#sec-tools" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🛠️ 2.3.157-160 – पाइप फिटिंग टूल्स (Pipe Fitting Tools)</a>
+<a href="#sec-standard-method" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 2.3.161-164 – मानक पाइप फिटिंग विधि (Standard Method)</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.3.149-152 PIPES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-pipes">
+<div class="content-section" data-content="pipes">
+<div class="section-header"><span class="icon">🔧</span><span class="title">2.3.149-152 – पाइप (Pipes)</span><span class="subtitle">— प्रकार, सामग्री, आकार, मानक, चयन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>पाइप (Pipe)</strong> – एक <strong>खोखला (hollow)</strong> बेलनाकार (cylindrical) खंड (section) – <strong>तरल पदार्थ (fluids)</strong> या <strong>गैसों (gases)</strong> को <strong>संचारित (convey)</strong> करने के लिए – <strong>पानी (water)</strong>, <strong>तेल (oil)</strong>, <strong>गैस (gas)</strong>, <strong>भाप (steam)</strong> – <strong>दबाव (pressure)</strong> के तहत (under).</p>
+
+<p><strong>पाइप के प्रकार (Types of Pipes – सामग्री / Material के अनुसार):</strong></p>
+
+<p><strong>1. स्टील पाइप (Steel Pipe – इस्पात / Steel):</strong></p>
+<ul>
+<li><strong>उच्च (high)</strong> शक्ति (strength) – <strong>उच्च (high)</strong> दबाव (pressure) – <strong>उच्च (high)</strong> तापमान (temperature).</li>
+<li><strong>सीमलेस (Seamless – बिना जोड़ / Without Joint):</strong> <strong>बिना (without)</strong> वेल्ड (weld) – <strong>उच्च (high)</strong> दबाव (pressure) – <strong>तेल (oil)</strong> और <strong>गैस (gas)</strong> पाइपलाइन (pipelines).</li>
+<li><strong>ईआरडब्ल्यू (ERW – Electric Resistance Welded):</strong> <strong>वेल्डेड (welded)</strong> – <strong>मध्यम (medium)</strong> दबाव (pressure) – <strong>सामान्य (general)</strong> अनुप्रयोग (applications).</li>
+<li><strong>गैल्वनाइज्ड (Galvanized – GI Pipe):</strong> <strong>जस्ता (zinc)</strong> लेपित (coated) – <strong>जंग (rust)</strong> प्रतिरोधी (resistant) – <strong>पानी (water)</strong> आपूर्ति (supply) – <strong>घरेलू (domestic)</strong> उपयोग (use).</li>
+<li><strong>ब्लैक (Black – काला / Black) स्टील पाइप:</strong> <strong>बिना (without)</strong> कोटिंग (coating) – <strong>भाप (steam)</strong>, <strong>गैस (gas)</strong> – <strong>औद्योगिक (industrial)</strong> अनुप्रयोग (applications).</li>
+</ul>
+
+<p><strong>2. तांबा पाइप (Copper Pipe – तांबा / Copper):</strong></p>
+<ul>
+<li><strong>जंग (corrosion)</strong> प्रतिरोधी (resistant) – <strong>उच्च (high)</strong> तापीय (thermal) चालकता (conductivity) – <strong>निम्न (low)</strong> दबाव (pressure) – <strong>पानी (water)</strong> आपूर्ति (supply), <strong>हीटिंग (heating)</strong>, <strong>रेफ्रिजरेशन (refrigeration)</strong>, <strong>एयर कंडीशनिंग (air conditioning)</strong>।</li>
+<li><strong>नरम (Soft) तांबा:</strong> <strong>आसान (easy)</strong> झुकने (bending) – <strong>तंग (tight)</strong> स्थानों (spaces) के लिए – <strong>कुंडल (coils)</strong> में।</li>
+<li><strong>कठोर (Hard) तांबा:</strong> <strong>सीधा (straight)</strong> – <strong>सामान्य (general)</strong> अनुप्रयोग (applications).</li>
+</ul>
+
+<p><strong>3. प्लास्टिक पाइप (Plastic Pipe – प्लास्टिक / Plastic):</strong></p>
+<ul>
+<li><strong>हल्का (lightweight)</strong> – <strong>जंग (corrosion)</strong> प्रतिरोधी (resistant) – <strong>सस्ता (cheap)</strong> – <strong>आसान (easy)</strong> स्थापना (installation) – <strong>निम्न (low)</strong> दबाव (pressure) – <strong>पानी (water)</strong> आपूर्ति (supply), <strong>सीवरेज (sewage)</strong>, <strong>रासायनिक (chemical)</strong> अनुप्रयोग (applications).</li>
+<li><strong>पीवीसी (PVC – Polyvinyl Chloride):</strong> <strong>सबसे (most)</strong> सामान्य (common) – <strong>ठंडा (cold)</strong> पानी (water) – <strong>सीवरेज (sewage)</strong> – <strong>विद्युत (electrical)</strong> कंड्यूट (conduit).</li>
+<li><strong>सीपीवीसी (CPVC – Chlorinated PVC):</strong> <strong>गर्म (hot)</strong> पानी (water) – <strong>उच्च (higher)</strong> तापमान (temperature) – <strong>रासायनिक (chemical)</strong> प्रतिरोधी (resistant).</li>
+<li><strong>पीई (PE – Polyethylene):</strong> <strong>गैस (gas)</strong> आपूर्ति (supply) – <strong>पानी (water)</strong> आपूर्ति (supply) – <strong>लचीला (flexible)</strong>।</li>
+</ul>
+
+<p><strong>4. कच्चा लोहा पाइप (Cast Iron Pipe – कास्ट आयरन / Cast Iron):</strong></p>
+<ul>
+<li><strong>भारी (heavy)</strong> – <strong>उच्च (high)</strong> शक्ति (strength) – <strong>जंग (corrosion)</strong> प्रतिरोधी (resistant) – <strong>सीवरेज (sewage)</strong>, <strong>जल निकासी (drainage)</strong> – <strong>भूमिगत (underground)</strong> अनुप्रयोग (applications).</li>
+<li><strong>डक्टाइल (Ductile) लोहा:</strong> <strong>उच्च (higher)</strong> शक्ति (strength) – <strong>अधिक (more)</strong> तन्य (ductile) – <strong>पानी (water)</strong> और <strong>गैस (gas)</strong> पाइपलाइन (pipelines).</li>
+</ul>
+
+<p><strong>पाइप का आकार (Pipe Sizes):</strong></p>
+<ul>
+<li><strong>नाममात्र व्यास (Nominal Diameter – DN):</strong> <strong>मिलीमीटर (mm)</strong> में – <strong>DN 15</strong>, <strong>DN 20</strong>, <strong>DN 25</strong>, आदि – <strong>अंदरूनी (internal)</strong> या <strong>बाहरी (external)</strong> नहीं – <strong>अनुमानित (approximate)</strong> आकार।</li>
+<li><strong>NPS (Nominal Pipe Size – नाममात्र पाइप आकार):</strong> <strong>इंच (inches)</strong> में – <strong>1/2″ NPS</strong>, <strong>3/4″ NPS</strong>, <strong>1″ NPS</strong>, आदि – <strong>अमेरिकी (American)</strong> मानक।</li>
+<li><strong>शेड्यूल (Schedule – SCH):</strong> <strong>दीवार (wall) की मोटाई (thickness)</strong> – <strong>SCH 40</strong> (मानक – standard), <strong>SCH 80</strong> (मोटा – extra strong), <strong>SCH 160</strong> (बहुत मोटा – very strong) – <strong>दबाव (pressure)</strong> क्षमता (capacity) को <strong>निर्धारित (determine)</strong> करता है।</li>
+</ul>
+
+<p><strong>पाइप मानक (Pipe Standards):</strong></p>
+<ul>
+<li><strong>IS (Indian Standard):</strong> <strong>IS 1239</strong> – <strong>स्टील (steel)</strong> पाइप (pipes) – <strong>IS 4984</strong> – <strong>PE</strong> पाइप (pipes).</li>
+<li><strong>ASTM (American Society for Testing and Materials):</strong> <strong>ASTM A53</strong> – <strong>स्टील (steel)</strong> पाइप (pipes).</li>
+<li><strong>BS (British Standard):</strong> <strong>BS 1387</strong> – <strong>स्टील (steel)</strong> पाइप (pipes) – <strong>BS 3600</strong> – <strong>पाइप (pipe)</strong> आकार (sizes).</li>
+<li><strong>ISO (International Standard):</strong> <strong>ISO 6708</strong> – <strong>DN</strong> आकार (sizes).</li>
+</ul>
+
+<p><strong>पाइप चयन (Pipe Selection) के कारक:</strong></p>
+<ul>
+<li><strong>दबाव (Pressure):</strong> <strong>उच्च (high)</strong> – <strong>स्टील (steel)</strong> – <strong>निम्न (low)</strong> – <strong>प्लास्टिक (plastic)</strong>।</li>
+<li><strong>तापमान (Temperature):</strong> <strong>उच्च (high)</strong> – <strong>स्टील (steel)</strong> या <strong>तांबा (copper)</strong> – <strong>निम्न (low)</strong> – <strong>पीवीसी (PVC)</strong>।</li>
+<li><strong>संक्षारण (Corrosion):</strong> <strong>नमी (moisture)</strong> – <strong>गैल्वनाइज्ड (GI)</strong> या <strong>प्लास्टिक (plastic)</strong> – <strong>रासायनिक (chemical)</strong> – <strong>स्टेनलेस स्टील (SS)</strong> या <strong>पीवीसी (PVC)</strong>।</li>
+<li><strong>लागत (Cost):</strong> <strong>कम (low)</strong> – <strong>प्लास्टिक (plastic)</strong> – <strong>उच्च (high)</strong> – <strong>स्टेनलेस स्टील (SS)</strong>।</li>
+<li><strong>स्थापना (Installation):</strong> <strong>आसान (easy)</strong> – <strong>प्लास्टिक (plastic)</strong> – <strong>कठिन (difficult)</strong> – <strong>स्टील (steel)</strong> – <strong>वेल्डिंग (welding)</strong> या <strong>थ्रेडिंग (threading)</strong> की आवश्यकता।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: पाइप के प्रकार (Pipe Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/pipe_types.jpg</p>
+<code>pipe_types.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(स्टील, GI, तांबा, PVC, CPVC, कास्ट आयरन)</p>
+</div>
+<div class="figure-caption">Fig 1 – पाइप के प्रकार</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>पाइप सामग्री और उनके अनुप्रयोग (Pipe Materials &amp; Applications)</caption>
+<thead><tr><th>सामग्री (Material)</th><th>गुण (Properties)</th><th>अनुप्रयोग (Application)</th></tr></thead>
+<tbody>
+<tr><td>स्टील (GI/Black)</td><td>उच्च शक्ति, उच्च दबाव, जंग प्रतिरोधी (GI)</td><td>पानी, गैस, भाप, औद्योगिक</td></tr>
+<tr><td>तांबा (Copper)</td><td>जंग प्रतिरोधी, उच्च तापीय चालकता</td><td>हीटिंग, रेफ्रिजरेशन, AC, पानी</td></tr>
+<tr><td>PVC</td><td>हल्का, जंग प्रतिरोधी, सस्ता</td><td>ठंडा पानी, सीवरेज, विद्युत कंड्यूट</td></tr>
+<tr><td>CPVC</td><td>गर्म पानी, रासायनिक प्रतिरोधी</td><td>गर्म पानी, रसायन</td></tr>
+<tr><td>PE (Polyethylene)</td><td>लचीला, जंग प्रतिरोधी</td><td>गैस आपूर्ति, पानी</td></tr>
+<tr><td>कास्ट आयरन</td><td>भारी, उच्च शक्ति, जंग प्रतिरोधी</td><td>सीवरेज, जल निकासी, भूमिगत</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>पाइप – <strong>तरल (fluid)</strong> और <strong>गैस (gas)</strong> संचारण (convey) के लिए।</li>
+<li>GI (Galvanized Iron) – <strong>जस्ता (zinc)</strong> लेपित – <strong>जंग (rust)</strong> प्रतिरोधी – <strong>पानी (water)</strong> के लिए।</li>
+<li>शेड्यूल (Schedule) – <strong>दीवार (wall) की मोटाई (thickness)</strong> – SCH 40, SCH 80, SCH 160.</li>
+<li>DN (Nominal Diameter) – <strong>मिलीमीटर (mm)</strong> – NPS – <strong>इंच (inches)</strong>।</li>
+<li>PVC – <strong>ठंडा (cold)</strong> पानी – CPVC – <strong>गर्म (hot)</strong> पानी।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>GI पाइप – <strong>जस्ता (zinc)</strong> लेपित – <strong>जंग (rust)</strong> से बचाता है।</li>
+<li>सीमलेस (Seamless) – <strong>बिना (without)</strong> वेल्ड (weld) – <strong>उच्च (high)</strong> दबाव के लिए।</li>
+<li>ERW – <strong>वेल्डेड (welded)</strong> – <strong>मध्यम (medium)</strong> दबाव के लिए।</li>
+<li>PVC – <strong>सीवरेज (sewage)</strong> और <strong>ठंडा (cold)</strong> पानी – CPVC – <strong>गर्म (hot)</strong> पानी।</li>
+<li>शेड्यूल (Schedule) – <strong>SCH 40</strong> (मानक), <strong>SCH 80</strong> (मोटा).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.3.153-156 PIPE FITTINGS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-fittings">
+<div class="content-section" data-content="fittings">
+<div class="section-header"><span class="icon">🔩</span><span class="title">2.3.153-156 – पाइप फिटिंग (Pipe Fittings)</span><span class="subtitle">— प्रकार, उपयोग, सामग्री, चयन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>पाइप फिटिंग (Pipe Fitting)</strong> – एक <strong>घटक (component)</strong> – <strong>पाइप (pipes)</strong> को <strong>जोड़ने (connect)</strong>, <strong>मोड़ने (bend)</strong>, <strong>शाखा (branch)</strong> देने, <strong>आकार (size)</strong> बदलने, या <strong>बंद (close)</strong> करने के लिए – <strong>पाइपिंग (piping)</strong> प्रणाली (system) का <strong>हिस्सा (part)</strong>।</p>
+
+<p><strong>पाइप फिटिंग के प्रकार (Types of Pipe Fittings):</strong></p>
+
+<p><strong>1. कपलिंग (Coupling – युग्मक / Coupling):</strong></p>
+<ul>
+<li><strong>दो (two)</strong> पाइपों (pipes) को <strong>एक सीधी (straight)</strong> रेखा (line) में <strong>जोड़ना (join)</strong> – <strong>आंतरिक (internal)</strong> थ्रेड (thread) – <strong>समान (same)</strong> आकार (size) – <strong>पूर्ण (full)</strong> या <strong>आधा (half)</strong> कपलिंग।</li>
+</ul>
+
+<p><strong>2. एल्बो (Elbow – मोड़ / Bend):</strong></p>
+<ul>
+<li><strong>दिशा (direction) बदलना (change)</strong> – <strong>90°</strong> (दाएँ – right, बाएँ – left) – <strong>45°</strong> – <strong>लंबा (long)</strong> या <strong>छोटा (short)</strong> त्रिज्या (radius).</li>
+<li><strong>90° एल्बो:</strong> <strong>सबसे (most)</strong> सामान्य (common) – <strong>समकोण (right angle)</strong> मोड़ (turn).</li>
+<li><strong>45° एल्बो:</strong> <strong>कोणीय (angular)</strong> मोड़ – <strong>कम (less)</strong> दबाव (pressure) हानि (loss) – <strong>चिकना (smooth)</strong> प्रवाह (flow).</li>
+</ul>
+
+<p><strong>3. टी (Tee – तीन-तरफा / Three-way):</strong></p>
+<ul>
+<li><strong>तीन (three)</strong> सिरे (ends) – <strong>T-आकार (T-shaped)</strong> – <strong>शाखा (branch)</strong> या <strong>दो (two)</strong> पाइपों (pipes) को <strong>जोड़ना (join)</strong> – <strong>समान (equal)</strong> या <strong>असमान (unequal)</strong> आकार (sizes).</li>
+<li><strong>समान (Equal) टी:</strong> <strong>सभी (all)</strong> सिरे (ends) <strong>समान (same)</strong> आकार – <strong>सामान्य (general)</strong> अनुप्रयोग।</li>
+<li><strong>असमान (Unequal) टी – रिड्यूसिंग टी (Reducing Tee):</strong> <strong>मुख्य (main)</strong> आकार <strong>बड़ा (larger)</strong> – <strong>शाखा (branch)</strong> <strong>छोटा (smaller)</strong> – <strong>आकार (size)</strong> बदलने के लिए।</li>
+</ul>
+
+<p><strong>4. क्रॉस (Cross – चार-तरफा / Four-way):</strong></p>
+<ul>
+<li><strong>चार (four)</strong> सिरे (ends) – <strong>क्रॉस (cross)</strong> आकार – <strong>चार (four)</strong> पाइपों (pipes) को <strong>जोड़ना (join)</strong> – <strong>शाखा (branch)</strong> के लिए – <strong>अग्निशमन (firefighting)</strong>, <strong>सिंचाई (irrigation)</strong>।</li>
+</ul>
+
+<p><strong>5. रिड्यूसर (Reducer – आकार परिवर्तक / Size Reducer):</strong></p>
+<ul>
+<li><strong>पाइप (pipe) का आकार (size) बदलना (change)</strong> – <strong>बड़ा (larger)</strong> से <strong>छोटा (smaller)</strong> – <strong>संकेंद्रित (concentric)</strong> या <strong>उत्केंद्रित (eccentric)</strong>।</li>
+<li><strong>संकेंद्रित (Concentric):</strong> <strong>केंद्र (centre)</strong> एक (same) – <strong>ऊर्ध्वाधर (vertical)</strong> पाइपिंग (piping).</li>
+<li><strong>उत्केंद्रित (Eccentric):</strong> <strong>केंद्र (centre)</strong> <strong>अलग (different)</strong> – <strong>क्षैतिज (horizontal)</strong> पाइपिंग (piping) – <strong>तरल (liquid)</strong> को <strong>जमा (collect)</strong> होने से <strong>रोकना (prevent)</strong>।</li>
+</ul>
+
+<p><strong>6. यूनियन (Union – जोड़ / Joint):</strong></p>
+<ul>
+<li><strong>दो (two)</strong> पाइपों (pipes) को <strong>आसानी (easily)</strong> से <strong>जोड़ना (join)</strong> और <strong>अलग (separate)</strong> करना – <strong>तीन (three)</strong> भाग (parts) – <strong>नट (nut)</strong> और <strong>दो (two)</strong> थ्रेडेड (threaded) सिरे (ends) – <strong>रखरखाव (maintenance)</strong> के लिए।</li>
+</ul>
+
+<p><strong>7. प्लग (Plug – बंद / Closure):</strong></p>
+<ul>
+<li><strong>पाइप (pipe) के सिरे (end) को बंद (close)</strong> – <strong>आंतरिक (internal)</strong> थ्रेड (thread) – <strong>अस्थायी (temporary)</strong> या <strong>स्थायी (permanent)</strong> बंद (closure).</li>
+</ul>
+
+<p><strong>8. कैप (Cap – टोपी / Cap):</strong></p>
+<ul>
+<li><strong>पाइप (pipe) के सिरे (end) को बंद (close)</strong> – <strong>बाहरी (external)</strong> थ्रेड (thread) – <strong>प्लग (plug)</strong> के <strong>समान (similar)</strong> – <strong>बाहरी (external)</strong> बंद (closure).</li>
+</ul>
+
+<p><strong>9. निप्पल (Nipple – छोटा पाइप / Short Pipe):</strong></p>
+<ul>
+<li><strong>छोटा (short)</strong> पाइप (pipe) – <strong>दो (two)</strong> सिरों (ends) पर <strong>थ्रेड (thread)</strong> – <strong>दो (two)</strong> फिटिंग्स (fittings) को <strong>जोड़ना (connect)</strong> – <strong>बंद (close)</strong> निकासी (clearance) के लिए।</li>
+</ul>
+
+<p><strong>10. बुशिंग (Bushing – झाड़ी / Bush):</strong></p>
+<ul>
+<li><strong>आकार (size) कम (reduce)</strong> करना – <strong>बड़ा (larger)</strong> से <strong>छोटा (smaller)</strong> – <strong>आंतरिक (internal)</strong> और <strong>बाहरी (external)</strong> थ्रेड (thread) – <strong>रिड्यूसर (reducer)</strong> का <strong>विकल्प (alternative)</strong>।</li>
+</ul>
+
+<p><strong>पाइप फिटिंग की सामग्री (Materials for Pipe Fittings):</strong></p>
+<ul>
+<li><strong>कास्ट आयरन (Cast Iron):</strong> <strong>भारी (heavy)</strong> – <strong>सीवरेज (sewage)</strong> – <strong>जल निकासी (drainage)</strong>।</li>
+<li><strong>मैलीबल आयरन (Malleable Iron):</strong> <strong>मध्यम (medium)</strong> दबाव (pressure) – <strong>स्टील (steel)</strong> पाइप (pipes) के लिए – <strong>अधिक (more)</strong> तन्य (ductile).</li>
+<li><strong>स्टील (Steel – फोर्ज्ड / Forged):</strong> <strong>उच्च (high)</strong> दबाव (pressure) – <strong>उच्च (high)</strong> तापमान (temperature) – <strong>औद्योगिक (industrial)</strong> अनुप्रयोग।</li>
+<li><strong>पीतल (Brass):</strong> <strong>जंग (corrosion)</strong> प्रतिरोधी – <strong>निम्न (low)</strong> दबाव – <strong>पानी (water)</strong> – <strong>गैस (gas)</strong> – <strong>सौंदर्यशास्त्र (aesthetics)</strong>।</li>
+<li><strong>तांबा (Copper):</strong> <strong>जंग (corrosion)</strong> प्रतिरोधी – <strong>हीटिंग (heating)</strong> – <strong>रेफ्रिजरेशन (refrigeration)</strong> – <strong>सोल्डर (solder)</strong> द्वारा <strong>जोड़ (join)</strong>।</li>
+<li><strong>प्लास्टिक (Plastic – PVC, CPVC):</strong> <strong>हल्का (lightweight)</strong> – <strong>जंग (corrosion)</strong> प्रतिरोधी – <strong>सस्ता (cheap)</strong> – <strong>निम्न (low)</strong> दबाव – <strong>पानी (water)</strong> आपूर्ति (supply).</li>
+</ul>
+
+<p><strong>पाइप फिटिंग का चयन (Selection of Pipe Fittings):</strong></p>
+<ul>
+<li><strong>दिशा (Direction):</strong> <strong>मोड़ (turn)</strong> – <strong>एल्बो (elbow)</strong> – <strong>शाखा (branch)</strong> – <strong>टी (tee)</strong> या <strong>क्रॉस (cross)</strong>।</li>
+<li><strong>आकार (Size):</strong> <strong>बड़ा (larger)</strong> से <strong>छोटा (smaller)</strong> – <strong>रिड्यूसर (reducer)</strong> या <strong>बुशिंग (bushing)</strong>।</li>
+<li><strong>दबाव (Pressure):</strong> <strong>उच्च (high)</strong> – <strong>स्टील (steel)</strong> – <strong>निम्न (low)</strong> – <strong>पीतल (brass)</strong> या <strong>प्लास्टिक (plastic)</strong>।</li>
+<li><strong>तापमान (Temperature):</strong> <strong>उच्च (high)</strong> – <strong>स्टील (steel)</strong> – <strong>निम्न (low)</strong> – <strong>प्लास्टिक (plastic)</strong>।</li>
+<li><strong>जोड़ (Joint) का प्रकार (Type):</strong> <strong>थ्रेडेड (threaded)</strong> – <strong>सोल्डर (solder)</strong> – <strong>वेल्ड (weld)</strong> – <strong>चिपकने वाला (adhesive – सीमेंट / cement)</strong>।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: पाइप फिटिंग के प्रकार (Pipe Fitting Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/pipe_fittings.jpg</p>
+<code>pipe_fittings.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(कपलिंग, एल्बो, टी, क्रॉस, रिड्यूसर, यूनियन, प्लग, कैप, निप्पल, बुशिंग)</p>
+</div>
+<div class="figure-caption">Fig 2 – पाइप फिटिंग के प्रकार</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>पाइप फिटिंग और उनके उपयोग (Pipe Fittings &amp; Uses)</caption>
+<thead><tr><th>फिटिंग (Fitting)</th><th>उपयोग (Use)</th><th>आकार (Shape)</th></tr></thead>
+<tbody>
+<tr><td>कपलिंग (Coupling)</td><td>दो पाइपों को सीधी रेखा में जोड़ना</td><td>सीधा (Straight)</td></tr>
+<tr><td>एल्बो (Elbow)</td><td>दिशा बदलना (90°, 45°)</td><td>मोड़ (Bend)</td></tr>
+<tr><td>टी (Tee)</td><td>तीन पाइपों को जोड़ना, शाखा</td><td>T-आकार (T-shaped)</td></tr>
+<tr><td>क्रॉस (Cross)</td><td>चार पाइपों को जोड़ना</td><td>क्रॉस (Cross)</td></tr>
+<tr><td>रिड्यूसर (Reducer)</td><td>आकार बदलना (बड़ा से छोटा)</td><td>शंक्वाकार (Conical)</td></tr>
+<tr><td>यूनियन (Union)</td><td>आसान जोड़/अलग करना</td><td>तीन भाग (3-part)</td></tr>
+<tr><td>प्लग (Plug)</td><td>पाइप के सिरे को बंद करना</td><td>आंतरिक थ्रेड</td></tr>
+<tr><td>कैप (Cap)</td><td>पाइप के सिरे को बंद करना</td><td>बाहरी थ्रेड</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>पाइप फिटिंग – <strong>पाइपों (pipes)</strong> को <strong>जोड़ना (connect)</strong>, <strong>मोड़ना (bend)</strong>, <strong>शाखा (branch)</strong> देना।</li>
+<li>एल्बो – <strong>दिशा (direction)</strong> बदलना – <strong>90°</strong> (सबसे सामान्य) – <strong>45°</strong>।</li>
+<li>टी (Tee) – <strong>तीन (three)</strong> पाइपों को <strong>जोड़ना (join)</strong> – <strong>शाखा (branch)</strong> के लिए।</li>
+<li>रिड्यूसर – <strong>आकार (size)</strong> बदलना – <strong>संकेंद्रित (concentric)</strong> या <strong>उत्केंद्रित (eccentric)</strong>।</li>
+<li>यूनियन – <strong>आसान (easy)</strong> जोड़/अलग करना – <strong>रखरखाव (maintenance)</strong> के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>एल्बो (Elbow) – <strong>दिशा (direction)</strong> बदलता है – <strong>90°</strong> और <strong>45°</strong>।</li>
+<li>टी (Tee) – <strong>तीन (three)</strong> सिरे – <strong>शाखा (branch)</strong> के लिए – <strong>समान (equal)</strong> या <strong>असमान (unequal)</strong>।</li>
+<li>रिड्यूसर (Reducer) – <strong>आकार (size)</strong> कम करता है – <strong>संकेंद्रित (concentric)</strong> – <strong>उत्केंद्रित (eccentric)</strong>।</li>
+<li>यूनियन (Union) – <strong>तीन (three)</strong> भाग – <strong>आसान (easy)</strong> डिसअसेंबली (disassembly).</li>
+<li>कपलिंग (Coupling) – <strong>दो (two)</strong> पाइपों को <strong>सीधी (straight)</strong> रेखा में <strong>जोड़ना (join)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.3.157-160 PIPE FITTING TOOLS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tools">
+<div class="content-section" data-content="tools">
+<div class="section-header"><span class="icon">🛠️</span><span class="title">2.3.157-160 – पाइप फिटिंग टूल्स (Pipe Fitting Tools)</span><span class="subtitle">— प्रकार, उपयोग, चयन, देखभाल</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>पाइप फिटिंग टूल्स (Pipe Fitting Tools)</strong> – <strong>पाइप (pipes)</strong> और <strong>फिटिंग्स (fittings)</strong> को <strong>काटने (cut)</strong>, <strong>थ्रेड (thread)</strong> करने, <strong>कसने (tighten)</strong>, और <strong>स्थापित (install)</strong> करने के लिए उपयोग किए जाने वाले <strong>विशेष (special)</strong> उपकरण (tools).</p>
+
+<p><strong>पाइप फिटिंग टूल्स के प्रकार (Types of Pipe Fitting Tools):</strong></p>
+
+<p><strong>1. पाइप रिंच (Pipe Wrench – स्टिलसन / Stillson Wrench):</strong></p>
+<ul>
+<li><strong>सबसे (most)</strong> सामान्य (common) – <strong>समायोज्य (adjustable)</strong> – <strong>दाँतेदार (serrated)</strong> जॉ (jaws) – <strong>पाइप (pipe)</strong> को <strong>पकड़ना (grip)</strong> और <strong>घुमाना (turn)</strong> – <strong>कसने (tighten)</strong> और <strong>ढीला (loosen)</strong> करने के लिए – <strong>घूर्णी (rotary)</strong> गति (motion) – <strong>जॉ (jaws)</strong> <strong>एक (one)</strong> दिशा (direction) में <strong>पकड़ (grip)</strong> करते हैं – <strong>आकार (sizes):</strong> 14″, 18″, 24″, 36″ – <strong>पाइप (pipe)</strong> के <strong>व्यास (diameter)</strong> के अनुसार।</li>
+<li><strong>उपयोग (Use):</strong> <strong>पाइप (pipe)</strong> को <strong>मोड़ने (turn)</strong> और <strong>पकड़ने (hold)</strong> के लिए – <strong>स्टील (steel)</strong> और <strong>GI</strong> पाइप (pipes) के लिए।</li>
+</ul>
+
+<p><strong>2. पाइप कटर (Pipe Cutter – पाइप काटने वाला / Pipe Cutting Tool):</strong></p>
+<ul>
+<li><strong>पाइप (pipe)</strong> को <strong>काटना (cut)</strong> – <strong>गोल (circular)</strong> ब्लेड (blade) – <strong>समायोज्य (adjustable)</strong> – <strong>सीधा (straight)</strong> और <strong>स्वच्छ (clean)</strong> कट – <strong>कोई (no)</strong> चिप्स (chips) – <strong>हल्का (light)</strong> और <strong>सुरक्षित (safe)</strong> – <strong>प्लास्टिक (plastic)</strong> और <strong>तांबा (copper)</strong> पाइप (pipes) के लिए – <strong>स्टील (steel)</strong> पाइप (pipes) के लिए <strong>भी (also)</strong>।</li>
+<li><strong>प्रकार (Types):</strong> <strong>सिंगल-व्हील (single-wheel)</strong> – <strong>मल्टी-व्हील (multi-wheel – 3 या 4)</strong> – <strong>प्लास्टिक (plastic)</strong> पाइप (pipes) के लिए <strong>रेचेट (ratchet)</strong> कटर (cutter).</li>
+</ul>
+
+<p><strong>3. पाइप थ्रेडिंग डाई (Pipe Threading Die – थ्रेड काटने वाला / Thread Cutting Tool):</strong></p>
+<ul>
+<li><strong>पाइप (pipe) पर थ्रेड (thread)</strong> काटना – <strong>बाहरी (external)</strong> थ्रेड (thread) – <strong>गोल (round)</strong> डाई (die) – <strong>डाई स्टॉक (die stock – हैंडल / handle)</strong> के <strong>साथ (with)</strong> – <strong>हाथ (hand)</strong> या <strong>मशीन (machine)</strong> द्वारा – <strong>कटिंग ऑयल (cutting oil)</strong> का <strong>उपयोग (use)</strong> – <strong>चिकना (smooth)</strong> थ्रेड (thread) के लिए।</li>
+<li><strong>उपयोग (Use):</strong> <strong>पाइप (pipe)</strong> के <strong>सिरे (end)</strong> पर <strong>थ्रेड (thread)</strong> बनाना – <strong>फिटिंग्स (fittings)</strong> को <strong>जोड़ने (connect)</strong> के लिए।</li>
+</ul>
+
+<p><strong>4. पाइप टैप (Pipe Tap – आंतरिक थ्रेड / Internal Thread):</strong></p>
+<ul>
+<li><strong>पाइप फिटिंग (pipe fitting) में आंतरिक (internal) थ्रेड (thread)</strong> काटना – <strong>टैप (tap)</strong> – <strong>हाथ (hand)</strong> या <strong>मशीन (machine)</strong> – <strong>टैप रिंच (tap wrench)</strong> के <strong>साथ (with)</strong> – <strong>कटिंग ऑयल (cutting oil)</strong> का <strong>उपयोग (use)</strong>।</li>
+<li><strong>उपयोग (Use):</strong> <strong>फिटिंग्स (fittings)</strong> में <strong>आंतरिक (internal)</strong> थ्रेड (thread) बनाना – <strong>पाइप (pipe)</strong> को <strong>जोड़ने (connect)</strong> के लिए।</li>
+</ul>
+
+<p><strong>5. पाइप वाइस (Pipe Vice – पाइप पकड़ने वाला / Pipe Holding Tool):</strong></p>
+<ul>
+<li><strong>पाइप (pipe)</strong> को <strong>पकड़ना (hold)</strong> – <strong>काटने (cutting)</strong>, <strong>थ्रेडिंग (threading)</strong>, <strong>फिटिंग (fitting)</strong> के दौरान – <strong>V-आकार (V-shaped)</strong> जॉ (jaws) – <strong>पाइप (pipe)</strong> को <strong>चार (four)</strong> बिंदुओं (points) पर <strong>पकड़ (grip)</strong> – <strong>समायोज्य (adjustable)</strong> – <strong>बेंच (bench)</strong> या <strong>फर्श (floor)</strong> पर <strong>लगा (mounted)</strong>।</li>
+</ul>
+
+<p><strong>6. पाइप रीमर (Pipe Reamer – बर्र हटाने वाला / Burr Remover):</strong></p>
+<ul>
+<li><strong>पाइप (pipe) के अंदर (inside) की बर्र (burr)</strong> को <strong>हटाना (remove)</strong> – <strong>काटने (cutting)</strong> के बाद – <strong>चिकना (smooth)</strong> प्रवाह (flow) के लिए – <strong>हाथ (hand)</strong> या <strong>मशीन (machine)</strong> रीमर (reamer).</li>
+</ul>
+
+<p><strong>7. पाइप डाई स्टॉक (Pipe Die Stock – हैंडल / Handle):</strong></p>
+<ul>
+<li><strong>डाई (die)</strong> को <strong>पकड़ना (hold)</strong> – <strong>पाइप (pipe)</strong> पर <strong>थ्रेड (thread)</strong> काटने के लिए – <strong>दो (two)</strong> हैंडल (handles) – <strong>समायोज्य (adjustable)</strong> – <strong>विभिन्न (various)</strong> डाई (die) आकारों (sizes) के लिए।</li>
+</ul>
+
+<p><strong>8. पाइप बेंडर (Pipe Bender – मोड़ने वाला / Bending Tool):</strong></p>
+<ul>
+<li><strong>पाइप (pipe) को मोड़ना (bend)</strong> – <strong>कोण (angle)</strong> पर – <strong>हाथ (hand)</strong> या <strong>मशीन (machine)</strong> बेंडर (bender) – <strong>तांबा (copper)</strong> और <strong>प्लास्टिक (plastic)</strong> पाइप (pipes) के लिए – <strong>नरम (soft)</strong> मोड़ (bend) – <strong>सिलवट (kink)</strong> से <strong>बचाना (avoid)</strong>।</li>
+</ul>
+
+<p><strong>9. चेज़र (Chaser – थ्रेड साफ करने वाला / Thread Cleaner):</strong></p>
+<ul>
+<li><strong>क्षतिग्रस्त (damaged) थ्रेड्स (threads)</strong> को <strong>साफ (clean)</strong> और <strong>ठीक (repair)</strong> करना – <strong>थ्रेड (thread)</strong> को <strong>पुनः (re-cut)</strong> करना – <strong>हाथ (hand)</strong> या <strong>मशीन (machine)</strong> – <strong>पाइप (pipe)</strong> और <strong>फिटिंग (fitting)</strong> दोनों (both) के लिए।</li>
+</ul>
+
+<p><strong>टूल्स की देखभाल (Care of Tools):</strong></p>
+<ul>
+<li><strong>साफ (clean)</strong> रखें – <strong>गंदगी (dirt)</strong> और <strong>तेल (oil)</strong> – <strong>जंग (rust)</strong> से <strong>बचाना (protect)</strong>।</li>
+<li><strong>तेल (oil)</strong> लगाएँ – <strong>चल (moving)</strong> भागों (parts) पर – <strong>सुचारू (smooth)</strong> संचालन (operation) के लिए।</li>
+<li><strong>सही (correct)</strong> आकार (size) का <strong>टूल (tool)</strong> उपयोग – <strong>क्षति (damage)</strong> से <strong>बचाना (avoid)</strong>।</li>
+<li><strong>कटिंग ऑयल (cutting oil)</strong> का <strong>उपयोग (use)</strong> – <strong>थ्रेडिंग (threading)</strong> और <strong>कटिंग (cutting)</strong> के दौरान – <strong>गर्मी (heat)</strong> कम (reduce) करने के लिए।</li>
+<li><strong>नियमित (regular)</strong> निरीक्षण (inspection) – <strong>घिसाव (wear)</strong> और <strong>क्षति (damage)</strong> – <strong>समय पर (timely)</strong> प्रतिस्थापन (replacement).</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: पाइप फिटिंग टूल्स (Pipe Fitting Tools)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/pipe_tools.jpg</p>
+<code>pipe_tools.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(पाइप रिंच, कटर, थ्रेडिंग डाई, टैप, वाइस, रीमर, बेंडर, चेज़र)</p>
+</div>
+<div class="figure-caption">Fig 3 – पाइप फिटिंग टूल्स</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>पाइप फिटिंग टूल्स और उनके उपयोग (Pipe Fitting Tools &amp; Uses)</caption>
+<thead><tr><th>टूल (Tool)</th><th>उपयोग (Use)</th><th>विशेषता (Feature)</th></tr></thead>
+<tbody>
+<tr><td>पाइप रिंच (Pipe Wrench)</td><td>पाइप को पकड़ना और घुमाना</td><td>समायोज्य, दाँतेदार जॉ</td></tr>
+<tr><td>पाइप कटर (Pipe Cutter)</td><td>पाइप काटना</td><td>गोल ब्लेड, स्वच्छ कट</td></tr>
+<tr><td>थ्रेडिंग डाई (Threading Die)</td><td>बाहरी थ्रेड काटना</td><td>डाई स्टॉक के साथ</td></tr>
+<tr><td>पाइप टैप (Pipe Tap)</td><td>आंतरिक थ्रेड काटना</td><td>टैप रिंच के साथ</td></tr>
+<tr><td>पाइप वाइस (Pipe Vice)</td><td>पाइप पकड़ना</td><td>V-आकार जॉ, 4-बिंदु पकड़</td></tr>
+<tr><td>रीमर (Reamer)</td><td>बर्र हटाना</td><td>चिकना प्रवाह के लिए</td></tr>
+<tr><td>पाइप बेंडर (Pipe Bender)</td><td>पाइप मोड़ना</td><td>नरम मोड़, सिलवट से बचाव</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>पाइप रिंच – <strong>पाइप (pipe)</strong> को <strong>पकड़ना (grip)</strong> और <strong>घुमाना (turn)</strong> – <strong>स्टिलसन (Stillson)</strong> रिंच।</li>
+<li>पाइप कटर – <strong>स्वच्छ (clean)</strong> कट – <strong>कोई (no)</strong> चिप्स (chips).</li>
+<li>थ्रेडिंग डाई – <strong>बाहरी (external)</strong> थ्रेड (thread).</li>
+<li>पाइप टैप – <strong>आंतरिक (internal)</strong> थ्रेड (thread).</li>
+<li>पाइप वाइस – <strong>V-आकार (V-shaped)</strong> – <strong>4-बिंदु (4-point)</strong> पकड़.</li>
+<li>रीमर – <strong>बर्र (burr)</strong> हटाना – <strong>काटने (cutting)</strong> के बाद।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>पाइप रिंच (Pipe Wrench) – <strong>स्टिलसन (Stillson)</strong> – <strong>समायोज्य (adjustable)</strong> – <strong>दाँतेदार (serrated)</strong> जॉ।</li>
+<li>पाइप कटर (Pipe Cutter) – <strong>गोल (circular)</strong> ब्लेड – <strong>स्वच्छ (clean)</strong> कट – <strong>बर्र (burr)</strong> रहित।</li>
+<li>थ्रेडिंग डाई (Threading Die) – <strong>बाहरी (external)</strong> थ्रेड – <strong>डाई स्टॉक (die stock)</strong> के साथ।</li>
+<li>पाइप टैप (Pipe Tap) – <strong>आंतरिक (internal)</strong> थ्रेड – <strong>टैप रिंच (tap wrench)</strong> के साथ।</li>
+<li>रीमर (Reamer) – <strong>बर्र (burr)</strong> हटाना – <strong>काटने (cutting)</strong> के बाद – <strong>चिकना (smooth)</strong> प्रवाह।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.3.161-164 STANDARD PIPE FITTING METHOD -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-standard-method">
+<div class="content-section" data-content="standard-method">
+<div class="section-header"><span class="icon">📐</span><span class="title">2.3.161-164 – मानक पाइप फिटिंग विधि (Standard Pipe Fitting Method)</span><span class="subtitle">— चरण, सुरक्षा, सावधानियाँ, गुणवत्ता</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>मानक पाइप फिटिंग विधि (Standard Pipe Fitting Method)</strong> – <strong>पाइप (pipe)</strong> और <strong>फिटिंग्स (fittings)</strong> को <strong>सुरक्षित (safely)</strong> और <strong>सही (correctly)</strong> <strong>जोड़ने (joining)</strong> की <strong>प्रक्रिया (procedure)</strong> – <strong>रिसाव (leak)</strong> से <strong>मुक्त (free)</strong> और <strong>टिकाऊ (durable)</strong> जोड़ (joint) के लिए।</p>
+
+<p><strong>मानक पाइप फिटिंग के चरण (Steps of Standard Pipe Fitting):</strong></p>
+
+<p><strong>चरण 1 – योजना और मापन (Planning &amp; Measurement):</strong></p>
+<ul>
+<li><strong>पाइपिंग (piping) लेआउट (layout)</strong> – <strong>ड्राइंग (drawing)</strong> या <strong>स्केच (sketch)</strong> – <strong>पाइप (pipe) की लंबाई (length)</strong> और <strong>फिटिंग्स (fittings)</strong> की <strong>गणना (calculate)</strong> – <strong>सामग्री (material)</strong> की <strong>सूची (list)</strong> बनाना।</li>
+</ul>
+
+<p><strong>चरण 2 – पाइप काटना (Cutting the Pipe):</strong></p>
+<ul>
+<li><strong>पाइप कटर (pipe cutter)</strong> या <strong>हैकसॉ (hacksaw)</strong> का उपयोग – <strong>माप (measurement)</strong> के <strong>अनुसार (according)</strong> – <strong>सीधा (straight)</strong> और <strong>स्वच्छ (clean)</strong> कट – <strong>बर्र (burr)</strong> को <strong>रीमर (reamer)</strong> से <strong>हटाना (remove)</strong> – <strong>अंदर (inside)</strong> और <strong>बाहर (outside)</strong>।</li>
+</ul>
+
+<p><strong>चरण 3 – पाइप थ्रेडिंग (Threading the Pipe):</strong></p>
+<ul>
+<li><strong>पाइप (pipe) के सिरे (end) पर थ्रेड (thread)</strong> काटना – <strong>पाइप थ्रेडिंग डाई (pipe threading die)</strong> और <strong>डाई स्टॉक (die stock)</strong> का उपयोग – <strong>थ्रेड (thread)</strong> को <strong>चिकना (smooth)</strong> और <strong>समान (uniform)</strong> बनाने के लिए – <strong>कटिंग ऑयल (cutting oil)</strong> का <strong>उपयोग (use)</strong> – <strong>थ्रेड (thread)</strong> की <strong>गहराई (depth)</strong> और <strong>लंबाई (length)</strong> – <strong>मानक (standard)</strong> के अनुसार।</li>
+</ul>
+
+<p><strong>चरण 4 – पाइप फिटिंग (Fitting the Pipe):</strong></p>
+<ul>
+<li><strong>थ्रेडेड (threaded)</strong> सिरे (end) पर <strong>फिटिंग (fitting)</strong> को <strong>हाथ (hand)</strong> से <strong>कसना (tighten)</strong> – <strong>सीधा (straight)</strong> और <strong>सही (correct)</strong> संरेखण (alignment) – <strong>पाइप रिंच (pipe wrench)</strong> का उपयोग – <strong>अत्यधिक (excessive)</strong> बल (force) से <strong>बचना (avoid)</strong> – <strong>फिटिंग (fitting)</strong> को <strong>नुकसान (damage)</strong> से <strong>बचाना (protect)</strong> – <strong>टेफ्लॉन (Teflon) टेप (tape)</strong> या <strong>पाइप डोप (pipe dope – थ्रेड सीलेंट / Thread Sealant)</strong> का <strong>उपयोग (use)</strong> – <strong>रिसाव (leak)</strong> को <strong>रोकने (prevent)</strong> के लिए।</li>
+</ul>
+
+<p><strong>चरण 5 – परीक्षण (Testing – जाँच / Checking):</strong></p>
+<ul>
+<li><strong>रिसाव (leak)</strong> परीक्षण (test) – <strong>दबाव (pressure)</strong> परीक्षण – <strong>पानी (water)</strong> या <strong>वायु (air)</strong> – <strong>सभी (all)</strong> जोड़ों (joints) की <strong>जाँच (check)</strong> – <strong>रिसाव (leak)</strong> होने पर <strong>पुनः (re-tighten)</strong> या <strong>मरम्मत (repair)</strong> – <strong>साबुन (soap)</strong> के <strong>घोल (solution)</strong> का <strong>उपयोग (use)</strong> – <strong>गैस (gas)</strong> रिसाव (leak) के लिए।</li>
+</ul>
+
+<p><strong>चरण 6 – अंतिम (Final – पूर्ण / Completion):</strong></p>
+<ul>
+<li><strong>सफाई (cleaning)</strong> – <strong>अतिरिक्त (excess)</strong> सामग्री (material) को <strong>हटाना (remove)</strong> – <strong>पाइप (pipe)</strong> को <strong>क्लैंप (clamp)</strong> या <strong>ब्रैकेट (bracket)</strong> से <strong>सुरक्षित (secure)</strong> करना – <strong>प्रणाली (system)</strong> को <strong>संचालन (operate)</strong> में <strong>लाना (start)</strong> – <strong>प्रदर्शन (performance)</strong> की <strong>जाँच (check)</strong>।</li>
+</ul>
+
+<p><strong>सुरक्षा सावधानियाँ (Safety Precautions):</strong></p>
+<ul>
+<li><strong>सुरक्षा चश्मा (safety goggles)</strong> – <strong>चिप्स (chips)</strong> और <strong>धातु (metal)</strong> के <strong>टुकड़े (pieces)</strong> से <strong>आँखों (eyes)</strong> की <strong>सुरक्षा (protect)</strong>।</li>
+<li><strong>दस्ताने (gloves)</strong> – <strong>तीक्ष्ण (sharp)</strong> किनारों (edges) और <strong>थ्रेड्स (threads)</strong> से <strong>हाथों (hands)</strong> की <strong>सुरक्षा (protect)</strong>।</li>
+<li><strong>सुरक्षा जूते (safety shoes)</strong> – <strong>भारी (heavy)</strong> पाइप (pipes) से <strong>पैरों (feet)</strong> की <strong>सुरक्षा (protect)</strong>।</li>
+<li><strong>कार्य क्षेत्र (work area)</strong> – <strong>स्वच्छ (clean)</strong> और <strong>व्यवस्थित (organized)</strong> – <strong>फिसलन (slipping)</strong> से <strong>बचना (avoid)</strong>।</li>
+<li><strong>टूल्स (tools)</strong> – <strong>सही (correct)</strong> आकार (size) और <strong>स्थिति (condition)</strong> – <strong>क्षतिग्रस्त (damaged)</strong> टूल्स (tools) का <strong>उपयोग (use)</strong> न करें – <strong>दुर्घटना (accident)</strong> से <strong>बचने (avoid)</strong> के लिए।</li>
+<li><strong>दबाव (pressure) परीक्षण (testing):</strong> <strong>अत्यधिक (excessive)</strong> दबाव (pressure) से <strong>बचना (avoid)</strong> – <strong>पाइप (pipe)</strong> <strong>फट (burst)</strong> सकता है – <strong>सुरक्षित (safe)</strong> दबाव (pressure) का <strong>उपयोग (use)</strong>।</li>
+</ul>
+
+<p><strong>गुणवत्ता (Quality) जाँच (Checking):</strong></p>
+<ul>
+<li><strong>थ्रेड (thread) की गुणवत्ता (quality):</strong> <strong>चिकना (smooth)</strong> – <strong>कोई (no)</strong> गड़गड़ाहट (burrs) – <strong>फिटिंग (fitting)</strong> <strong>आसानी (easily)</strong> से <strong>फिट (fit)</strong> हो।</li>
+<li><strong>रिसाव (leak) परीक्षण (test):</strong> <strong>सभी (all)</strong> जोड़ों (joints) – <strong>कोई (no)</strong> रिसाव (leak) – <strong>दबाव (pressure)</strong> पर।</li>
+<li><strong>संरेखण (alignment):</strong> <strong>पाइप (pipe)</strong> <strong>सीधा (straight)</strong> – <strong>कोई (no)</strong> मोड़ (bend) या <strong>तनाव (stress)</strong> – <strong>फिटिंग्स (fittings)</strong> <strong>सही (correct)</strong> स्थिति (position) पर।</li>
+<li><strong>दस्तावेज़ीकरण (Documentation):</strong> <strong>सभी (all)</strong> कार्यों (activities) का <strong>रिकॉर्ड (record)</strong> – <strong>परीक्षण (testing)</strong> परिणाम (results) – <strong>भविष्य (future)</strong> संदर्भ (reference) के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: मानक पाइप फिटिंग विधि (Standard Pipe Fitting Method)</strong></p>
+<p>स्थान: /images/notes/fitter/module-3/standard_pipe_fitting.jpg</p>
+<code>standard_pipe_fitting.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(योजना, काटना, थ्रेडिंग, फिटिंग, परीक्षण, अंतिम)</p>
+</div>
+<div class="figure-caption">Fig 4 – मानक पाइप फिटिंग विधि</div>
+</div>
+<div class="example-box">
+<h4 style="margin:0 0 6px; color:#003366;">📘 पाइप साइजिंग (Pipe Sizing) – उदाहरण</h4>
+<p><strong>उदाहरण:</strong> 1″ NPS पाइप – बाहरी व्यास (OD) ≈ 33.4 mm – दीवार की मोटाई (SCH 40) ≈ 3.38 mm – आंतरिक व्यास (ID) ≈ 26.6 mm – <strong>DN 25</strong> के बराबर (equivalent).</p>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>मानक पाइप फिटिंग – <strong>योजना → काटना → थ्रेडिंग → फिटिंग → परीक्षण → अंतिम</strong>।</li>
+<li>काटना – <strong>सीधा (straight)</strong> और <strong>स्वच्छ (clean)</strong> – <strong>रीमर (reamer)</strong> से <strong>बर्र (burr)</strong> हटाना।</li>
+<li>थ्रेडिंग – <strong>कटिंग ऑयल (cutting oil)</strong> – <strong>चिकना (smooth)</strong> थ्रेड।</li>
+<li>फिटिंग – <strong>हाथ (hand)</strong> से कसना – <strong>पाइप रिंच (pipe wrench)</strong> – <strong>टेफ्लॉन (Teflon) टेप</strong> या <strong>थ्रेड सीलेंट (thread sealant)</strong>।</li>
+<li>परीक्षण – <strong>रिसाव (leak)</strong> परीक्षण – <strong>पानी (water)</strong> या <strong>वायु (air)</strong> – <strong>साबुन (soap)</strong> के घोल (solution) से।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>चरण – <strong>योजना (planning)</strong> → <strong>काटना (cutting)</strong> → <strong>थ्रेडिंग (threading)</strong> → <strong>फिटिंग (fitting)</strong> → <strong>परीक्षण (testing)</strong> → <strong>अंतिम (final)</strong>।</li>
+<li>काटना – <strong>पाइप कटर (pipe cutter)</strong> – <strong>सीधा (straight)</strong> कट – <strong>बर्र (burr)</strong> हटाना।</li>
+<li>थ्रेडिंग – <strong>डाई (die)</strong> – <strong>डाई स्टॉक (die stock)</strong> – <strong>कटिंग ऑयल (cutting oil)</strong>।</li>
+<li>फिटिंग – <strong>टेफ्लॉन (Teflon) टेप</strong> – <strong>पाइप डोप (pipe dope)</strong> – <strong>रिसाव (leak)</strong> रोकने के लिए।</li>
+<li>परीक्षण – <strong>दबाव (pressure)</strong> परीक्षण – <strong>साबुन (soap)</strong> के घोल (solution) – <strong>गैस (gas)</strong> रिसाव के लिए।</li>
+<li>सुरक्षा – <strong>चश्मा (goggles)</strong>, <strong>दस्ताने (gloves)</strong>, <strong>सुरक्षा जूते (safety shoes)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ============================== CONCLUSION ============================== -->
+<div class="container">
+<div class="conclusion-section">
+<h2>📌 Module 3 – निष्कर्ष (Conclusion)</h2>
+<div class="bilingual">
+<div class="content">
+<p><strong>Module 3 – Pipes &amp; Pipe Fittings</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<ul>
+<li><strong>Pipes (पाइप):</strong> प्रकार (स्टील, GI, तांबा, PVC, CPVC, PE, कास्ट आयरन), सामग्री, आकार (DN, NPS, शेड्यूल), मानक (IS, ASTM, BS, ISO), चयन के कारक।</li>
+<li><strong>Pipe Fittings (पाइप फिटिंग):</strong> प्रकार (कपलिंग, एल्बो, टी, क्रॉस, रिड्यूसर, यूनियन, प्लग, कैप, निप्पल, बुशिंग), उपयोग, सामग्री, चयन।</li>
+<li><strong>Pipe Fitting Tools (पाइप फिटिंग टूल्स):</strong> पाइप रिंच, कटर, थ्रेडिंग डाई, टैप, वाइस, रीमर, बेंडर, चेज़र – प्रकार, उपयोग, देखभाल।</li>
+<li><strong>Standard Pipe Fitting Method (मानक पाइप फिटिंग विधि):</strong> चरण (योजना → काटना → थ्रेडिंग → फिटिंग → परीक्षण → अंतिम), सुरक्षा सावधानियाँ, गुणवत्ता जाँच।</li>
+</ul>
+<p>इन सभी विषयों में महारत हासिल करना हर <strong>फिटर (fitter)</strong> के लिए आवश्यक है। प्रत्येक संचालन को <strong>सटीकता (precision)</strong> और <strong>सुरक्षा (safety)</strong> के साथ अभ्यास करें।</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ============================== MCQ ============================== -->
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="section-body">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/fitter/second-year/module-3.html" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="section-body">
+<div style="display:flex; flex-wrap:wrap; gap:12px;">
+<a href="../fitter1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 1: Safety</a>
+<a href="../fitter2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 2: Basic Fitting</a>
+<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 2nd Year – Module 1: Assembly</a>
+<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 2nd Year – Module 2: Gauges</a>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('🔧 ' + getPageTitle() + ' - Fitter 2nd Year Module 3 Study Material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('🔧 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Fitter 2nd Year Module 3 – Pipes & Pipe Fittings (Complete) Loaded.');
+        console.log('📚 All topics covered: Pipes, Fittings, Tools, Standard Method.');
+    </script>
+</body>
+</html>
