@@ -1,1 +1,1216 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 2 – Gauges (पूर्ण) | Fitter 2nd Year | ITI Study Centre</title>
+<meta content="Complete Fitter 2nd Year Module 2 – Gauges. Types of Gauges, Bearings, Roller & Needle Bearings, Bearing Materials, Rust & Corrosion Prevention. Full NIMI syllabus." name="description"/>
+<style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1e2a3a;
+            line-height: 1.8;
+            user-select: none;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
 
+        .main-header {
+            background: #003366;
+            padding: 16px 0;
+            border-bottom: 4px solid #ffcc00;
+        }
+        .main-header .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header .logo a {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .main-header nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+        }
+        .main-header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-header nav a:hover,
+        .main-header nav a.active {
+            border-bottom-color: #ffcc00;
+            color: #ffcc00;
+        }
+        @media(max-width:768px) {
+            .main-header .container { flex-direction: column; gap: 8px; }
+            .main-header nav { justify-content: center; gap: 6px 14px; }
+            .main-header nav a { font-size: 0.9rem; }
+        }
+
+        .breadcrumb {
+            background: #eef1f5;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #dde1e7;
+        }
+        .breadcrumb a { color: #003366; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .current { color: #555; font-weight: 600; }
+
+        .page-title {
+            padding: 32px 0 22px;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 2.3rem;
+            color: #003366;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .page-title p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 6px;
+        }
+        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
+        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
+
+        .search-section {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 30px;
+            flex-wrap: wrap;
+        }
+        .search-section input {
+            flex: 1;
+            max-width: 540px;
+            padding: 14px 20px;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            user-select: text;
+        }
+        .search-section input:focus {
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
+        }
+        .search-section button {
+            padding: 14px 40px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            background: #003366;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .search-section button:hover { background: #002244; transform: scale(1.02); }
+        @media(max-width:640px) {
+            .search-section { flex-direction: column; }
+            .search-section input { max-width: 100%; width: 100%; }
+            .search-section button { width: 100%; }
+        }
+
+        .content-section {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+            margin-bottom: 32px;
+            border: 1px solid #e6eaef;
+            overflow: hidden;
+        }
+        .section-header {
+            padding: 20px 28px;
+            background: #f8fafc;
+            border-bottom: 2px solid #e6eaef;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .section-header .icon { font-size: 1.8rem; line-height: 1; }
+        .section-header .title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #003366;
+            letter-spacing: -0.3px;
+        }
+        .section-header .subtitle {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .section-body { padding: 28px 32px; background: #fafcff; }
+        .section-body h3 {
+            color: #003366;
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-left: 5px solid #ffcc00;
+            padding-left: 18px;
+        }
+        .section-body h3:first-of-type { margin-top: 0; }
+        .section-body h4 {
+            color: #1e3a5f;
+            font-size: 1.12rem;
+            margin: 20px 0 10px;
+        }
+        @media(max-width:768px) {
+            .section-header { padding: 14px 18px; }
+            .section-header .title { font-size: 1.05rem; }
+            .section-body { padding: 18px 18px; }
+            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
+        }
+        @media(max-width:480px) {
+            .section-body { padding: 14px 14px; }
+            .section-header .icon { font-size: 1.4rem; }
+            .section-header .title { font-size: 0.95rem; }
+        }
+
+        .bilingual { margin: 14px 0; }
+        .bilingual .content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #1a2a3a;
+        }
+        .bilingual .content ul, .bilingual .content ol { padding-left: 26px; margin: 10px 0; }
+        .bilingual .content ul li, .bilingual .content ol li { margin-bottom: 6px; }
+        .bilingual .content p { margin: 10px 0; }
+        @media(max-width:480px) {
+            .bilingual .content { font-size: 0.95rem; }
+        }
+
+        .info-card {
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin: 18px 0;
+            background: #fff;
+            border: 1px solid #e8ecf0;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+        }
+        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
+        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
+        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
+        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
+        .info-card h4 { margin: 0 0 6px; color: #003366; }
+        .info-card ul { margin: 0; padding-left: 22px; }
+        .info-card ul li { margin-bottom: 4px; }
+
+        .tool-figure {
+            width:100%;
+            max-width:850px;
+            margin:24px auto;
+            text-align:center;
+            background:#f8fafc;
+            border:1px solid #e2e7ed;
+            border-radius:12px;
+            padding:20px;
+            transition:0.2s;
+        }
+        .tool-figure:hover { background:#f0f4fa; }
+        .tool-figure .placeholder-icon { font-size:3.5rem; line-height:1.2; color:#8a9aa8; margin-bottom:6px; }
+        .tool-figure .figure-caption { font-size:0.95rem; color:#555; font-weight:600; margin-top:8px; }
+        .tool-figure .image-placeholder {
+            display:block;
+            min-height:120px;
+            background:#f0f4fa;
+            border:2px dashed #c7ced7;
+            border-radius:8px;
+            padding:18px;
+            color:#68717c;
+        }
+        .tool-figure .image-placeholder code {
+            background:#e7ebef;
+            padding:3px 8px;
+            border-radius:4px;
+            font-size:0.8rem;
+            display:inline-block;
+            margin:4px 0;
+        }
+        @media(max-width:768px) {
+            .tool-figure { padding:14px; }
+            .tool-figure .placeholder-icon { font-size:2.8rem; }
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 22px 0;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+        }
+        .table-wrap th {
+            background: #003366;
+            color: #fff;
+            padding: 13px 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .table-wrap td {
+            padding: 11px 18px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
+        .table-wrap tr:hover { background: #eef2f7; }
+        .table-wrap caption {
+            caption-side: top;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #003366;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        @media(max-width:480px) {
+            .table-wrap table { font-size: 0.85rem; }
+            .table-wrap th, .table-wrap td { padding: 8px 10px; }
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            margin: 20px 0;
+        }
+        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
+        .compare-card {
+            padding: 20px 24px;
+            border-radius: 12px;
+            border: 2px solid #e6eaef;
+            background: #fff;
+        }
+        .compare-card h4 { font-size: 1.1rem; margin: 0 0 10px; color: #003366; }
+        .compare-card ul { padding-left: 20px; margin: 0; }
+        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .example-box {
+            background: #e8f4fd;
+            border-left: 5px solid #003366;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .example-box strong { color: #003366; }
+        .important-box {
+            background: #fff8e1;
+            border-left: 5px solid #ffc107;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .important-box h4 { margin: 0 0 6px; color: #856404; }
+        .important-box ul { padding-left: 22px; margin: 0; }
+        .short-notes {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 18px 24px;
+            border-radius: 8px;
+            margin: 18px 0;
+        }
+        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
+        .short-notes ul { padding-left: 22px; margin: 0; }
+        .warning-box {
+            background: #fff5f2;
+            border-left: 5px solid #dc3545;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
+        .warning-box p { margin: 0; }
+        .success-box {
+            background: #eef9f1;
+            border-left: 5px solid #28a745;
+            padding: 16px 22px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        .success-box h4 { margin: 0 0 6px; color: #1e7e34; }
+        .success-box p { margin: 0; }
+
+        .share-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 16px 0 22px;
+            padding: 14px 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e6eaef;
+        }
+        .share-section .share-label {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 0.95rem;
+            margin-right: 6px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.link { background: #6c757d; }
+        .share-btn.link.copied { background: #28a745; }
+        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        @media(max-width:600px) {
+            .share-section { flex-direction: column; align-items: stretch; }
+            .share-section .share-label { text-align: center; }
+            .share-btn { justify-content: center; }
+        }
+
+        .mcq-link { text-align: center; padding: 12px 0; }
+        .mcq-link a {
+            display: inline-block;
+            padding: 14px 44px;
+            background: #ffcc00;
+            color: #003366 !important;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
+        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
+
+        .conclusion-section {
+            background: #e8f4fd;
+            border: 2px solid #003366;
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .conclusion-section h2 {
+            color: #003366;
+            font-size: 1.6rem;
+            border-left: 5px solid #ffcc00;
+            padding-left: 16px;
+            margin-bottom: 16px;
+        }
+        .conclusion-section ul {
+            padding-left: 26px;
+            margin: 10px 0;
+        }
+        .conclusion-section ul li { margin-bottom: 6px; }
+
+        footer {
+            background: #1a2634;
+            color: #b0b8c5;
+            padding: 28px 20px;
+            text-align: center;
+            margin-top: 48px;
+            border-top: 4px solid #003366;
+        }
+        footer .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 28px;
+            margin-bottom: 14px;
+        }
+        footer .footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
+        footer .footer-links a:hover { color: #fff; }
+        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+
+        #scrollTop {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #003366;
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: none;
+            z-index: 999;
+        }
+        #scrollTop:hover { background: #002244; transform: scale(1.05); }
+
+        .copy-protect::selection { background: #b3d4fc; color: #000; }
+
+        @media print {
+            #scrollTop, .share-section, .search-section { display: none !important; }
+            body { background: #fff !important; }
+            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
+            .section-body { background: #fff !important; }
+            .tool-figure { border:1px solid #ccc; break-inside:avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+<div class="container">
+<div class="logo"><a href="/">🔧 ITI Study Centre</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/iti-study-centre-notes.html">Notes</a>
+<a class="active" href="/notes/fitter/index.html">Fitter</a>
+<a href="/question-bank/fitter/index.html">Question Bank</a>
+<a href="/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+<a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+<a href="/notes/fitter/index.html">Fitter</a>  › 
+<a href="/notes/fitter/second-year/index.html">2nd Year</a>  › 
+<span class="current">Module 2 – Gauges (पूर्ण)</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>🔧 Module 2 – Gauges (पूर्ण)</h1>
+<p>गेज · बियरिंग · रोलर और नीडल बियरिंग · बियरिंग सामग्री · जंग और संक्षारण की रोकथाम</p>
+</div>
+</section>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()">🔍 Search</button>
+</section>
+
+<div class="container">
+<div class="share-section">
+<span class="share-label">📤 Share:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
+WhatsApp
+</button>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+Facebook
+</button>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+Twitter
+</button>
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+
+<!-- ===== TABLE OF CONTENTS ===== -->
+<div class="container">
+<div class="content-section" style="border:2px solid #003366;">
+<div class="section-header" style="background:#003366; border-bottom:none;">
+<span class="icon" style="color:#ffcc00;">📚</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 2 (Gauges)</span>
+</div>
+<div class="section-body" style="background:#fff;">
+<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
+<a href="#sec-gauges" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📏 2.2.140-141 – गेज (Gauges)</a>
+<a href="#sec-bearings" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ 2.2.142-143 – बियरिंग (Bearings)</a>
+<a href="#sec-roller-needle" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 2.2.144-145 – रोलर और नीडल बियरिंग</a>
+<a href="#sec-bearing-materials" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🧪 2.2.146-148 – बियरिंग सामग्री</a>
+<a href="#sec-rust-prevention" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🛡️ 2.2.149-152 – जंग और संक्षारण की रोकथाम</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.2.140-141 GAUGES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-gauges">
+<div class="content-section" data-content="gauges">
+<div class="section-header"><span class="icon">📏</span><span class="title">2.2.140-141 – गेज (Gauges)</span><span class="subtitle">— अर्थ, प्रकार, उपयोग, गो/नो-गो सिद्धांत</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>गेज (Gauge)</strong> – एक <strong>निरीक्षण (inspection)</strong> उपकरण – <strong>आयाम (dimensions)</strong>, <strong>कोण (angles)</strong>, या <strong>सतह की स्थिति (surface condition)</strong> की <strong>जाँच (checking)</strong> के लिए – <strong>बिना (without)</strong> कोई <strong>संख्यात्मक मान (numerical value)</strong> दिए।</p>
+
+<p><strong>गेज का उद्देश्य (Purpose of Gauges):</strong></p>
+<ul>
+<li><strong>गुणवत्ता (Quality) नियंत्रण (Control):</strong> <strong>उत्पाद (product)</strong> को <strong>निर्दिष्ट (specified)</strong> सीमाओं (limits) के <strong>भीतर (within)</strong> रखना।</li>
+<li><strong>त्वरित (Quick) जाँच (Checking):</strong> <strong>मापन (measurement)</strong> उपकरणों (instruments) की तुलना में <strong>तेज़ (faster)</strong> – <strong>बड़े (large)</strong> उत्पादन (production) के लिए।</li>
+<li><strong>सटीकता (Accuracy):</strong> <strong>गो/नो-गो (Go/No-Go)</strong> – <strong>स्वीकार्य (acceptable)</strong> या <strong>अस्वीकार्य (rejectable)</strong> – <strong>सरल (simple)</strong>।</li>
+<li><strong>लागत (Cost) प्रभावी (Effective):</strong> <strong>महंगे (expensive)</strong> मापन (measurement) उपकरणों (instruments) की <strong>आवश्यकता (need)</strong> नहीं।</li>
+</ul>
+
+<p><strong>गेज के प्रकार (Types of Gauges):</strong></p>
+
+<p><strong>1. सीमा गेज (Limit Gauges – गो/नो-गो / Go/No-Go):</strong></p>
+<ul>
+<li><strong>गो (Go – पास):</strong> वर्कपीस (workpiece) में <strong>सुचारू (smoothly)</strong> रूप से <strong>जाना (go)</strong> चाहिए – <strong>न्यूनतम (minimum)</strong> आकार (size) की <strong>जाँच (check)</strong>।</li>
+<li><strong>नो-गो (No-Go – अस्वीकार):</strong> वर्कपीस (workpiece) में <strong>नहीं (not)</strong> जाना चाहिए – <strong>अधिकतम (maximum)</strong> आकार (size) की <strong>जाँच (check)</strong>।</li>
+<li><strong>गो (Go) जाता है, नो-गो (No-Go) नहीं जाता – वर्कपीस (workpiece) <strong>स्वीकार्य (acceptable)</strong> है।</li>
+</ul>
+
+<p><strong>2. प्लग गेज (Plug Gauge – आंतरिक / Internal):</strong></p>
+<ul>
+<li><strong>छेद (holes)</strong> की <strong>जाँच (checking)</strong> के लिए – <strong>बेलनाकार (cylindrical)</strong> आकार – <strong>गो (Go)</strong> और <strong>नो-गो (No-Go)</strong> <strong>दोनों (both)</strong> सिरों (ends) पर – <strong>या (or)</strong> <strong>अलग (separate)</strong> गेज।</li>
+<li><strong>उपयोग (Use):</strong> <strong>आंतरिक (internal)</strong> व्यास (diameter) – <strong>बुश (bushes)</strong>, <strong>बियरिंग्स (bearings)</strong> – <strong>सटीक (precise)</strong> जाँच (checking).</li>
+</ul>
+
+<p><strong>3. स्नैप गेज (Snap Gauge – बाहरी / External):</strong></p>
+<ul>
+<li><strong>बाहरी (external)</strong> व्यास (diameter) की <strong>जाँच (checking)</strong> के लिए – <strong>C-आकार (C-shaped)</strong> – <strong>गो (Go)</strong> और <strong>नो-गो (No-Go)</strong> <strong>दोनों (both)</strong> सिरों (ends) पर – <strong>शाफ्ट्स (shafts)</strong>, <strong>रॉड्स (rods)</strong> के लिए।</li>
+<li><strong>त्वरित (quick)</strong> जाँच – <strong>उत्पादन (production)</strong> लाइन (line) पर।</li>
+</ul>
+
+<p><strong>4. फीलर गेज (Feeler Gauge – अंतर / Clearance):</strong></p>
+<ul>
+<li><strong>अंतर (clearance – gap)</strong> मापने के लिए – <strong>पतली (thin)</strong> धातु (metal) की <strong>पट्टियाँ (strips)</strong> – <strong>विभिन्न (various)</strong> <strong>मोटाई (thicknesses)</strong> – <strong>0.03 मिमी (mm)</strong> से <strong>1.0 मिमी (mm)</strong> तक।</li>
+<li><strong>उपयोग (Use):</strong> <strong>वाल्व (valve)</strong> निकासी (clearance), <strong>बियरिंग (bearing)</strong> निकासी (clearance), <strong>स्पार्क प्लग (spark plug)</strong> गैप (gap).</li>
+</ul>
+
+<p><strong>5. थ्रेड गेज (Thread Gauge – धागा / Thread):</strong></p>
+<ul>
+<li><strong>थ्रेड्स (threads)</strong> की <strong>पिच (pitch)</strong> और <strong>व्यास (diameter)</strong> की <strong>जाँच (checking)</strong> – <strong>गो/नो-गो (Go/No-Go)</strong> – <strong>आंतरिक (internal)</strong> और <strong>बाहरी (external)</strong> दोनों (both) के लिए।</li>
+<li><strong>थ्रेड प्लग गेज (Thread Plug Gauge):</strong> <strong>आंतरिक (internal)</strong> थ्रेड्स (threads) के लिए।</li>
+<li><strong>थ्रेड रिंग गेज (Thread Ring Gauge):</strong> <strong>बाहरी (external)</strong> थ्रेड्स (threads) के लिए।</li>
+</ul>
+
+<p><strong>6. रेडियस गेज (Radius Gauge – त्रिज्या / Radius):</strong></p>
+<ul>
+<li><strong>त्रिज्या (radius)</strong> मापने के लिए – <strong>उत्तल (convex)</strong> और <strong>अवतल (concave)</strong> – <strong>विभिन्न (various)</strong> आकार (sizes) – <strong>0.5 मिमी (mm)</strong> से <strong>25 मिमी (mm)</strong> तक।</li>
+<li><strong>उपयोग (Use):</strong> <strong>फिलेट (fillet)</strong> त्रिज्या (radius) – <strong>कोनों (corners)</strong> की <strong>जाँच (checking)</strong>।</li>
+</ul>
+
+<p><strong>7. कोण गेज (Angle Gauge – कोण / Angle):</strong></p>
+<ul>
+<li><strong>कोण (angles)</strong> मापने और <strong>जाँच (checking)</strong> करने के लिए – <strong>बेवल (bevel)</strong> प्रोट्रैक्टर (protractor) के साथ – <strong>विभिन्न (various)</strong> कोण (angles) – <strong>30°</strong>, <strong>45°</strong>, <strong>60°</strong>, <strong>90°</strong>।</li>
+<li><strong>उपयोग (Use):</strong> <strong>कोणीय (angular)</strong> सतहों (surfaces) की <strong>जाँच (checking)</strong>।</li>
+</ul>
+
+<p><strong>8. डायल गेज (Dial Gauge – विक्षेपण / Deflection):</strong></p>
+<ul>
+<li><strong>विक्षेपण (deflection)</strong> मापने के लिए – <strong>0.01 मिमी (mm)</strong> सटीकता – <strong>सतह समतलता (flatness)</strong>, <strong>गोलाई (roundness)</strong>, <strong>समानता (parallelism)</strong> जाँचने के लिए।</li>
+<li><strong>उपयोग (Use):</strong> <strong>मशीन (machine)</strong> संरेखण (alignment), <strong>बियरिंग (bearing)</strong> निकासी (clearance), <strong>सतह (surface)</strong> निरीक्षण (inspection).</li>
+</ul>
+
+<p><strong>गेज का चयन (Selection of Gauges):</strong></p>
+<ul>
+<li><strong>आयाम (Dimension) के अनुसार:</strong> <strong>आंतरिक (internal)</strong> – प्लग (plug) – <strong>बाहरी (external)</strong> – स्नैप (snap).</li>
+<li><strong>सटीकता (Accuracy) के अनुसार:</strong> <strong>उच्च (high)</strong> – डायल (dial) – <strong>सामान्य (general)</strong> – गो/नो-गो (go/no-go).</li>
+<li><strong>उत्पादन (Production) दर (rate) के अनुसार:</strong> <strong>बड़े (large)</strong> – <strong>त्वरित (quick)</strong> – स्नैप (snap) या <strong>गो/नो-गो (go/no-go)</strong>।</li>
+<li><strong>लागत (Cost) के अनुसार:</strong> <strong>कम (low)</strong> – <strong>फीलर (feeler)</strong> – <strong>उच्च (high)</strong> – <strong>डायल (dial)</strong>।</li>
+</ul>
+
+<p><strong>गेज की देखभाल (Care of Gauges):</strong></p>
+<ul>
+<li><strong>साफ (clean)</strong> रखें – <strong>धूल (dust)</strong> और <strong>गंदगी (dirt)</strong> – <strong>सटीकता (accuracy)</strong> को <strong>प्रभावित (affect)</strong> करते हैं।</li>
+<li><strong>तेल (oil)</strong> लगाएँ – <strong>जंग (rust)</strong> से बचाने के लिए – <strong>पतली (thin)</strong> परत (layer).</li>
+<li><strong>गिराने (dropping)</strong> या <strong>टकराने (bumping)</strong> से <strong>बचाएँ (avoid)</strong> – <strong>क्षतिग्रस्त (damaged)</strong> हो सकते हैं।</li>
+<li><strong>नियमित (regular)</strong> <strong>कैलिब्रेशन (calibration)</strong> – <strong>मानक (standard)</strong> गेज (gauges) के <strong>साथ (with)</strong> – <strong>सटीकता (accuracy)</strong> बनाए रखने के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: गेज के प्रकार (Types of Gauges)</strong></p>
+<p>स्थान: /images/notes/fitter/module-2/gauges_types.jpg</p>
+<code>gauges_types.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(प्लग, स्नैप, फीलर, थ्रेड, रेडियस, कोण, डायल गेज)</p>
+</div>
+<div class="figure-caption">Fig 1 – गेज के प्रकार</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>गेज और उनके उपयोग (Gauges &amp; Their Uses)</caption>
+<thead><tr><th>गेज (Gauge)</th><th>उपयोग (Use)</th><th>प्रकार (Type)</th></tr></thead>
+<tbody>
+<tr><td>प्लग गेज (Plug Gauge)</td><td>आंतरिक व्यास (Holes)</td><td>गो/नो-गो (Go/No-Go)</td></tr>
+<tr><td>स्नैप गेज (Snap Gauge)</td><td>बाहरी व्यास (Shafts)</td><td>गो/नो-गो (Go/No-Go)</td></tr>
+<tr><td>फीलर गेज (Feeler Gauge)</td><td>अंतर (Clearance)</td><td>पट्टी (Strips)</td></tr>
+<tr><td>थ्रेड गेज (Thread Gauge)</td><td>थ्रेड पिच और व्यास</td><td>गो/नो-गो (Go/No-Go)</td></tr>
+<tr><td>रेडियस गेज (Radius Gauge)</td><td>त्रिज्या (Radius)</td><td>उत्तल/अवतल</td></tr>
+<tr><td>डायल गेज (Dial Gauge)</td><td>विक्षेपण (Deflection)</td><td>संकेतक (Indicator)</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>गेज – <strong>निरीक्षण (inspection)</strong> – <strong>बिना (without)</strong> संख्यात्मक मान (numerical value).</li>
+<li>गो/नो-गो (Go/No-Go) – <strong>स्वीकार्य (acceptable)</strong> आकार (size) जाँचने के लिए।</li>
+<li>गो (Go) – <strong>जाना (go)</strong> चाहिए – <strong>न्यूनतम (minimum)</strong> आकार।</li>
+<li>नो-गो (No-Go) – <strong>नहीं (not)</strong> जाना चाहिए – <strong>अधिकतम (maximum)</strong> आकार।</li>
+<li>गेज – <strong>त्वरित (quick)</strong> जाँच – <strong>बड़े (large)</strong> उत्पादन (production) के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>प्लग गेज – <strong>आंतरिक (internal)</strong> व्यास – <strong>छेद (holes)</strong> के लिए।</li>
+<li>स्नैप गेज – <strong>बाहरी (external)</strong> व्यास – <strong>शाफ्ट्स (shafts)</strong> के लिए।</li>
+<li>फीलर गेज – <strong>अंतर (clearance)</strong> – <strong>पतली (thin)</strong> पट्टियाँ (strips).</li>
+<li>गो/नो-गो (Go/No-Go) – <strong>स्वीकार्य (acceptable)</strong> या <strong>अस्वीकार्य (rejectable)</strong>।</li>
+<li>डायल गेज – <strong>विक्षेपण (deflection)</strong> – <strong>0.01 मिमी (mm)</strong> सटीकता।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.2.142-143 BEARINGS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-bearings">
+<div class="content-section" data-content="bearings">
+<div class="section-header"><span class="icon">⚙️</span><span class="title">2.2.142-143 – बियरिंग (Bearings)</span><span class="subtitle">— अर्थ, प्रकार, घटक, चयन, रखरखाव</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>बियरिंग (Bearing)</strong> – एक <strong>यांत्रिक (mechanical)</strong> घटक (component) – <strong>घूर्णी (rotary)</strong> या <strong>रैखिक (linear)</strong> गति को <strong>सहारा (support)</strong> देता है – <strong>घर्षण (friction)</strong> को <strong>कम (reduces)</strong> करता है – <strong>भार (load)</strong> को <strong>संचारित (transmits)</strong> करता है।</p>
+
+<p><strong>बियरिंग का उद्देश्य (Purpose of Bearings):</strong></p>
+<ul>
+<li><strong>घर्षण (Friction) को कम (reduce):</strong> <strong>चल (moving)</strong> भागों (parts) के <strong>बीच (between)</strong> – <strong>शक्ति (power)</strong> की <strong>बचत (save)</strong>।</li>
+<li><strong>घिसाव (Wear) को कम (reduce):</strong> <strong>सतह (surface)</strong> को <strong>नुकसान (damage)</strong> से <strong>बचाना (protect)</strong>।</li>
+<li><strong>भार (Load) को संचारित (transmit):</strong> <strong>रेडियल (radial)</strong> और <strong>अक्षीय (axial)</strong> भार (load) – <strong>शाफ्ट (shaft)</strong> से <strong>हाउसिंग (housing)</strong> तक।</li>
+<li><strong>सटीकता (Accuracy) बनाए रखना (maintain):</strong> <strong>शाफ्ट (shaft)</strong> को <strong>संरेखित (align)</strong> रखना – <strong>कंपन (vibration)</strong> कम (reduce).</li>
+</ul>
+
+<p><strong>बियरिंग के प्रकार (Types of Bearings):</strong></p>
+
+<p><strong>1. स्लाइडिंग संपर्क बियरिंग (Sliding Contact Bearing – प्लेन / Plain Bearing):</strong></p>
+<ul>
+<li><strong>भागों (parts) के बीच (between) सीधा (direct) संपर्क (contact)</strong> – <strong>स्लाइडिंग (sliding)</strong> गति (motion).</li>
+<li><strong>बुश (Bush – बुशिंग / Bushing):</strong> <strong>बेलनाकार (cylindrical)</strong> – <strong>शाफ्ट (shaft)</strong> के <strong>चारों (around)</strong> ओर – <strong>निम्न (low)</strong> गति (speed) – <strong>भारी (heavy)</strong> भार (load).</li>
+<li><strong>सामग्री (Material):</strong> <strong>कांस्य (bronze)</strong>, <strong>पीतल (brass)</strong>, <strong>बैबिट (Babbitt)</strong>, <strong>नायलॉन (nylon)</strong> – <strong>स्नेहन (lubrication)</strong> की <strong>आवश्यकता (required)</strong>।</li>
+<li><strong>उदाहरण (Examples):</strong> <strong>इंजन (engine)</strong> बियरिंग (bearing), <strong>पंप (pump)</strong> बियरिंग (bearing).</li>
+</ul>
+
+<p><strong>2. रोलिंग संपर्क बियरिंग (Rolling Contact Bearing – एंटी-फ्रिक्शन / Anti-friction):</strong></p>
+<ul>
+<li><strong>गेंदों (balls)</strong> या <strong>रोलर्स (rollers)</strong> का <strong>उपयोग (use)</strong> – <strong>घर्षण (friction)</strong> <strong>बहुत (very)</strong> <strong>कम (low)</strong> – <strong>उच्च (high)</strong> गति (speed).</li>
+<li><strong>बॉल बियरिंग (Ball Bearing):</strong> <strong>गेंदें (balls)</strong> – <strong>रेडियल (radial)</strong> और <strong>थ्रस्ट (thrust)</strong> भार (load) के लिए।</li>
+<li><strong>रोलर बियरिंग (Roller Bearing):</strong> <strong>बेलनाकार (cylindrical)</strong> रोलर्स – <strong>भारी (heavy)</strong> भार (load) के लिए।</li>
+<li><strong>नीडल बियरिंग (Needle Bearing):</strong> <strong>पतले (thin)</strong> रोलर्स – <strong>कॉम्पैक्ट (compact)</strong> स्थानों (spaces) के लिए।</li>
+<li><strong>थ्रस्ट बियरिंग (Thrust Bearing):</strong> <strong>अक्षीय (axial)</strong> भार (load) के लिए – <strong>गेंद (ball)</strong> या <strong>रोलर (roller)</strong> प्रकार।</li>
+</ul>
+
+<p><strong>रोलिंग संपर्क बियरिंग के भाग (Parts of Rolling Contact Bearing):</strong></p>
+<ul>
+<li><strong>आंतरिक रिंग (Inner Ring):</strong> <strong>शाफ्ट (shaft)</strong> पर <strong>फिट (fit)</strong> होता है – <strong>चल (rotates)</strong> है।</li>
+<li><strong>बाहरी रिंग (Outer Ring):</strong> <strong>हाउसिंग (housing)</strong> में <strong>फिट (fit)</strong> होता है – <strong>स्थिर (stationary)</strong>।</li>
+<li><strong>रोलिंग तत्व (Rolling Elements):</strong> <strong>गेंदें (balls)</strong> या <strong>रोलर्स (rollers)</strong> – <strong>रिंग्स (rings)</strong> के <strong>बीच (between)</strong>।</li>
+<li><strong>पिंजरा (Cage – रिटेनर / Retainer):</strong> रोलिंग तत्वों (rolling elements) को <strong>समान (even)</strong> दूरी (distance) पर <strong>रखता (holds)</strong> है – <strong>संपर्क (contact)</strong> से <strong>बचाता (prevents)</strong> है।</li>
+</ul>
+
+<p><strong>बियरिंग चयन (Bearing Selection) के कारक:</strong></p>
+<ul>
+<li><strong>भार (Load):</strong> <strong>रेडियल (radial)</strong>, <strong>थ्रस्ट (thrust)</strong>, या <strong>संयोजन (combination)</strong> – <strong>भार (load)</strong> का <strong>परिमाण (magnitude)</strong>।</li>
+<li><strong>गति (Speed):</strong> <strong>उच्च (high)</strong> RPM – <strong>बॉल (ball)</strong> – <strong>निम्न (low)</strong> RPM – <strong>रोलर (roller)</strong> – <strong>बुश (bush)</strong>।</li>
+<li><strong>कार्य वातावरण (Operating Environment):</strong> <strong>तापमान (temperature)</strong>, <strong>नमी (moisture)</strong>, <strong>संदूषण (contamination)</strong> – <strong>सामग्री (material)</strong> और <strong>सील (seal)</strong> का चयन।</li>
+<li><strong>स्थान (Space):</strong> उपलब्ध (available) <strong>आकार (size)</strong> – <strong>कॉम्पैक्ट (compact)</strong> – <strong>नीडल (needle)</strong>।</li>
+<li><strong>लागत (Cost):</strong> बजट (budget) – <strong>बुश (bush)</strong> – <strong>सस्ता (cheap)</strong> – <strong>बॉल (ball)</strong> – <strong>मध्यम (medium)</strong> – <strong>रोलर (roller)</strong> – <strong>महंगा (expensive)</strong>।</li>
+</ul>
+
+<p><strong>बियरिंग रखरखाव (Bearing Maintenance):</strong></p>
+<ul>
+<li><strong>उचित (proper) स्नेहन (lubrication):</strong> <strong>सही (correct)</strong> <strong>मात्रा (quantity)</strong> और <strong>प्रकार (type)</strong> के <strong>तेल (oil)</strong> या <strong>ग्रीस (grease)</strong> का उपयोग – <strong>अत्यधिक (excessive)</strong> – <strong>गर्मी (heat)</strong> – <strong>कम (less)</strong> – <strong>घिसाव (wear)</strong>।</li>
+<li><strong>स्वच्छता (Cleanliness):</strong> <strong>गंदगी (dirt)</strong> और <strong>नमी (moisture)</strong> से <strong>बचाएँ (protect)</strong> – <strong>सील (seals)</strong> का उपयोग।</li>
+<li><strong>निरीक्षण (Inspection):</strong> <strong>घिसाव (wear)</strong>, <strong>क्षति (damage)</strong>, <strong>शोर (noise)</strong> के लिए <strong>नियमित (regular)</strong> जाँच – <strong>कंपन (vibration)</strong> विश्लेषण (analysis).</li>
+<li><strong>समय पर (timely) प्रतिस्थापन (replacement):</strong> <strong>खराब (failed)</strong> या <strong>घिसे (worn)</strong> बियरिंग (bearing) को <strong>बदलें (replace)</strong> – <strong>बड़ी (major)</strong> खराबी (breakdown) से <strong>बचने (avoid)</strong> के लिए।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: बियरिंग के प्रकार (Bearing Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-2/bearings_types.jpg</p>
+<code>bearings_types.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बॉल, रोलर, नीडल, थ्रस्ट, बुश)</p>
+</div>
+<div class="figure-caption">Fig 2 – बियरिंग के प्रकार</div>
+</div>
+<div class="compare-grid">
+<div class="compare-card" style="border-color:#003366; background:#f0f5ff;"><h4>🔵 स्लाइडिंग बियरिंग (Plain)</h4><ul><li><strong>सीधा (direct)</strong> संपर्क (contact)</li><li><strong>निम्न (low)</strong> गति (speed)</li><li><strong>भारी (heavy)</strong> भार (load)</li><li><strong>सस्ता (cheap)</strong></li><li><strong>बुश (bush)</strong>, <strong>बैबिट (Babbitt)</strong></li></ul></div>
+<div class="compare-card" style="border-color:#28a745; background:#f0faf2;"><h4>🟢 रोलिंग बियरिंग (Anti-friction)</h4><ul><li><strong>गेंद (ball)</strong> या <strong>रोलर (roller)</strong></li><li><strong>उच्च (high)</strong> गति (speed)</li><li><strong>कम (low)</strong> घर्षण (friction)</li><li><strong>महंगा (expensive)</strong></li><li><strong>बॉल (ball)</strong>, <strong>रोलर (roller)</strong></li></ul></div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बियरिंग – <strong>घर्षण (friction)</strong> कम (reduce) – <strong>भार (load)</strong> संचारण (transmit).</li>
+<li>स्लाइडिंग (Plain) – <strong>सीधा (direct)</strong> संपर्क – <strong>निम्न (low)</strong> गति – <strong>भारी (heavy)</strong> भार।</li>
+<li>रोलिंग (Anti-friction) – <strong>गेंद (ball)</strong> या <strong>रोलर (roller)</strong> – <strong>उच्च (high)</strong> गति – <strong>कम (low)</strong> घर्षण।</li>
+<li>बॉल बियरिंग – <strong>रेडियल (radial)</strong> और <strong>थ्रस्ट (thrust)</strong> भार।</li>
+<li>पिंजरा (Cage) – रोलिंग तत्वों (rolling elements) को <strong>समान (even)</strong> दूरी पर रखता है।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बियरिंग – <strong>घर्षण (friction)</strong> कम (reduce) – <strong>शक्ति (power)</strong> की बचत।</li>
+<li>स्लाइडिंग (Plain) – <strong>बुश (bush)</strong> – <strong>निम्न (low)</strong> गति (speed).</li>
+<li>रोलिंग (Anti-friction) – <strong>बॉल (ball)</strong>, <strong>रोलर (roller)</strong> – <strong>उच्च (high)</strong> गति।</li>
+<li>बियरिंग के भाग – <strong>आंतरिक (inner)</strong>, <strong>बाहरी (outer)</strong> रिंग (ring), <strong>रोलिंग तत्व (rolling elements)</strong>, <strong>पिंजरा (cage)</strong>।</li>
+<li>थ्रस्ट बियरिंग – <strong>अक्षीय (axial)</strong> भार (load) के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.2.144-145 ROLLER & NEEDLE BEARINGS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-roller-needle">
+<div class="content-section" data-content="roller-needle">
+<div class="section-header"><span class="icon">🔩</span><span class="title">2.2.144-145 – रोलर और नीडल बियरिंग (Roller &amp; Needle Bearings)</span><span class="subtitle">— प्रकार, संरचना, उपयोग, चयन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>रोलर बियरिंग (Roller Bearing)</strong> और <strong>नीडल बियरिंग (Needle Bearing)</strong> – <strong>रोलिंग संपर्क (rolling contact)</strong> बियरिंग्स (bearings) – <strong>बेलनाकार (cylindrical)</strong> रोलर्स (rollers) का उपयोग – <strong>गेंदों (balls)</strong> के <strong>बजाय (instead)</strong> – <strong>भारी (heavy)</strong> भार (load) और <strong>कॉम्पैक्ट (compact)</strong> स्थानों (spaces) के लिए।</p>
+
+<p><strong>रोलर बियरिंग (Roller Bearing) के प्रकार:</strong></p>
+
+<p><strong>1. बेलनाकार रोलर बियरिंग (Cylindrical Roller Bearing – सिलिंड्रिकल / Cylindrical):</strong></p>
+<ul>
+<li><strong>रोलर्स (rollers)</strong> – <strong>बेलनाकार (cylindrical)</strong> – <strong>रेडियल (radial)</strong> भार (load) के लिए – <strong>उच्च (high)</strong> भार (load) क्षमता (capacity).</li>
+<li><strong>उपयोग (Use):</strong> <strong>गियर (gear)</strong> बॉक्स (boxes), <strong>इंजन (engine)</strong> क्रैंकशाफ्ट (crankshaft), <strong>भारी (heavy)</strong> मशीनरी (machinery).</li>
+<li><strong>विशेषता (Feature):</strong> <strong>आंतरिक (inner)</strong> या <strong>बाहरी (outer)</strong> रिंग (ring) को <strong>अलग (separate)</strong> किया जा सकता है – <strong>आसान (easy)</strong> असेंबली (assembly) और <strong>डिसअसेंबली (disassembly)</strong>।</li>
+</ul>
+
+<p><strong>2. टेपर रोलर बियरिंग (Tapered Roller Bearing – टेपर / Tapered):</strong></p>
+<ul>
+<li><strong>रोलर्स (rollers)</strong> – <strong>टेपर (tapered)</strong> – <strong>रेडियल (radial)</strong> और <strong>थ्रस्ट (thrust)</strong> <strong>दोनों (both)</strong> भार (load) के लिए – <strong>उच्च (high)</strong> भार (load) क्षमता (capacity).</li>
+<li><strong>उपयोग (Use):</strong> <strong>ऑटोमोटिव (automotive)</strong> – <strong>हब (hub)</strong> बियरिंग्स (bearings) – <strong>पहिए (wheels)</strong> – <strong>गियर (gear)</strong> बॉक्स (boxes).</li>
+<li><strong>विशेषता (Feature):</strong> <strong>टेपर (taper)</strong> – <strong>रेडियल (radial)</strong> और <strong>थ्रस्ट (thrust)</strong> भार (load) को <strong>संभाल (handle)</strong> सकता है – <strong>समायोज्य (adjustable)</strong> निकासी (clearance).</li>
+</ul>
+
+<p><strong>3. गोलाकार रोलर बियरिंग (Spherical Roller Bearing – स्फेरिकल / Spherical):</strong></p>
+<ul>
+<li><strong>रोलर्स (rollers)</strong> – <strong>गोलाकार (spherical)</strong> – <strong>उच्च (high)</strong> भार (load) क्षमता – <strong>गलत (misalignment)</strong> संरेखण (alignment) को <strong>सहन (tolerate)</strong> कर सकता है – <strong>भारी (heavy)</strong> उद्योग (industry).</li>
+<li><strong>उपयोग (Use):</strong> <strong>कन्वेयर (conveyor)</strong>, <strong>क्रेन (crane)</strong>, <strong>खनन (mining)</strong> उपकरण (equipment).</li>
+</ul>
+
+<p><strong>नीडल बियरिंग (Needle Bearing – सुई / Needle):</strong></p>
+<ul>
+<li><strong>रोलर्स (rollers)</strong> – <strong>बहुत (very)</strong> <strong>पतले (thin)</strong> और <strong>लंबे (long)</strong> – <strong>सुई (needle)</strong> के <strong>आकार (shape)</strong> – <strong>कॉम्पैक्ट (compact)</strong> स्थानों (spaces) के लिए – <strong>उच्च (high)</strong> भार (load) क्षमता – <strong>कम (low)</strong> क्रॉस-सेक्शन (cross-section).</li>
+<li><strong>पिंजरा (cage)</strong> – <strong>रोलर्स (rollers)</strong> को <strong>गाइड (guide)</strong> करता है – <strong>या (or)</strong> <strong>बिना (without)</strong> पिंजरे (cage) – <strong>पूर्ण (full)</strong> पूरक (complement) – <strong>उच्च (higher)</strong> भार (load) क्षमता. </li>
+<li><strong>उपयोग (Use):</strong> <strong>ऑटोमोटिव (automotive)</strong> – <strong>गियर (gear)</strong> बॉक्स (boxes) – <strong>कंप्रेसर (compressors)</strong> – <strong>पंप (pumps)</strong> – <strong>संकीर्ण (narrow)</strong> स्थानों (spaces) के लिए।</li>
+<li><strong>विशेषता (Feature):</strong> <strong>बहुत (very)</strong> <strong>उच्च (high)</strong> भार (load) क्षमता – <strong>बहुत (very)</strong> <strong>छोटा (small)</strong> स्थान (space) – <strong>कम (low)</strong> घर्षण (friction).</li>
+</ul>
+
+<p><strong>रोलर और नीडल बियरिंग की तुलना (Comparison – Roller vs Needle):</strong></p>
+<table style="width:100%; border-collapse:collapse; margin:14px 0;">
+<tr style="background:#003366; color:#fff;"><th style="padding:10px; text-align:left;">रोलर बियरिंग (Roller Bearing)</th><th style="padding:10px; text-align:left;">नीडल बियरिंग (Needle Bearing)</th></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">रोलर्स (rollers) – मोटे (thick)</td><td style="padding:10px; border:1px solid #ddd;">रोलर्स (rollers) – पतले (thin) – सुई (needle) जैसे</td></tr>
+<tr><td style="padding:10px; border:1px solid #ddd;">उच्च (high) भार (load) क्षमता (capacity)</td><td style="padding:10px; border:1px solid #ddd;">बहुत (very) उच्च भार क्षमता (capacity)</td></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">अधिक (more) स्थान (space) – बड़ा (larger) क्रॉस-सेक्शन</td><td style="padding:10px; border:1px solid #ddd;">कम (less) स्थान – छोटा (smaller) क्रॉस-सेक्शन</td></tr>
+<tr><td style="padding:10px; border:1px solid #ddd;">उच्च (higher) गति (speed)</td><td style="padding:10px; border:1px solid #ddd;">मध्यम (medium) गति (speed)</td></tr>
+<tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">अधिक (more) महंगा (expensive)</td><td style="padding:10px; border:1px solid #ddd;">कम (less) महंगा (expensive)</td></tr>
+</table>
+
+<p><strong>चयन (Selection) के कारक:</strong></p>
+<ul>
+<li><strong>स्थान (Space):</strong> <strong>संकीर्ण (narrow)</strong> – <strong>नीडल (needle)</strong> – <strong>पर्याप्त (adequate)</strong> – <strong>रोलर (roller)</strong>।</li>
+<li><strong>भार (Load):</strong> <strong>उच्च (high)</strong> – <strong>टेपर (tapered)</strong> या <strong>नीडल (needle)</strong> – <strong>मध्यम (medium)</strong> – <strong>बेलनाकार (cylindrical)</strong>।</li>
+<li><strong>गति (Speed):</strong> <strong>उच्च (high)</strong> – <strong>बेलनाकार (cylindrical)</strong> – <strong>मध्यम (medium)</strong> – <strong>नीडल (needle)</strong>।</li>
+<li><strong>संरेखण (Alignment):</strong> <strong>गलत (misalignment)</strong> – <strong>गोलाकार (spherical)</strong> – <strong>सटीक (precise)</strong> – <strong>बेलनाकार (cylindrical)</strong>।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: रोलर और नीडल बियरिंग (Roller &amp; Needle Bearings)</strong></p>
+<p>स्थान: /images/notes/fitter/module-2/roller_needle_bearings.jpg</p>
+<code>roller_needle_bearings.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बेलनाकार, टेपर, गोलाकार, नीडल)</p>
+</div>
+<div class="figure-caption">Fig 3 – रोलर और नीडल बियरिंग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>रोलर बियरिंग – <strong>बेलनाकार (cylindrical)</strong> रोलर्स – <strong>रेडियल (radial)</strong> भार (load).</li>
+<li>टेपर रोलर – <strong>रेडियल (radial)</strong> + <strong>थ्रस्ट (thrust)</strong> – <strong>ऑटोमोटिव (automotive)</strong> में।</li>
+<li>गोलाकार रोलर – <strong>गलत (misalignment)</strong> संरेखण (alignment) को सहन (tolerate).</li>
+<li>नीडल बियरिंग – <strong>पतले (thin)</strong> और <strong>लंबे (long)</strong> रोलर्स – <strong>कॉम्पैक्ट (compact)</strong> स्थानों (spaces) के लिए।</li>
+<li>नीडल – <strong>उच्च (high)</strong> भार (load) क्षमता – <strong>कम (low)</strong> स्थान (space).</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बेलनाकार रोलर – <strong>रेडियल (radial)</strong> भार – <strong>गियर (gear)</strong> बॉक्स (boxes).</li>
+<li>टेपर रोलर – <strong>रेडियल (radial)</strong> + <strong>थ्रस्ट (thrust)</strong> – <strong>ऑटोमोटिव (automotive)</strong> हब (hubs).</li>
+<li>गोलाकार रोलर – <strong>गलत (misalignment)</strong> संरेखण – <strong>भारी (heavy)</strong> उद्योग (industry).</li>
+<li>नीडल बियरिंग – <strong>सुई (needle)</strong> जैसे रोलर्स – <strong>कॉम्पैक्ट (compact)</strong> – <strong>उच्च (high)</strong> भार क्षमता.</li>
+<li>नीडल – <strong>संकीर्ण (narrow)</strong> स्थानों (spaces) के लिए – <strong>ऑटोमोटिव (automotive)</strong> में।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.2.146-148 BEARING MATERIALS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-bearing-materials">
+<div class="content-section" data-content="bearing-materials">
+<div class="section-header"><span class="icon">🧪</span><span class="title">2.2.146-148 – बियरिंग सामग्री (Bearing Materials)</span><span class="subtitle">— गुण, प्रकार, चयन, अनुप्रयोग</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>बियरिंग सामग्री (Bearing Materials)</strong> – <strong>बियरिंग्स (bearings)</strong> को <strong>बनाने (making)</strong> के लिए उपयोग की जाने वाली सामग्री – <strong>घिसाव (wear)</strong> प्रतिरोध (resistance), <strong>घर्षण (friction)</strong> गुणांक (coefficient), <strong>भार (load)</strong> क्षमता (capacity) – <strong>कार्य (operation)</strong> के लिए।</p>
+
+<p><strong>बियरिंग सामग्री के आवश्यक गुण (Required Properties of Bearing Materials):</strong></p>
+<ul>
+<li><strong>घिसाव (Wear) प्रतिरोध (Resistance):</strong> <strong>लंबे (long)</strong> समय (time) तक <strong>चलने (run)</strong> के लिए – <strong>घर्षण (friction)</strong> को <strong>कम (reduce)</strong> रखने के लिए।</li>
+<li><strong>कठोरता (Hardness):</strong> <strong>भार (load)</strong> को <strong>झेल (withstand)</strong> करने के लिए – <strong>विरूपण (deformation)</strong> से <strong>बचाना (prevent)</strong>।</li>
+<li><strong>तन्यता (Ductility) और क्रूरता (Toughness):</strong> <strong>झटका (shock)</strong> और <strong>कंपन (vibration)</strong> को <strong>सहन (absorb)</strong> करने के लिए।</li>
+<li><strong>जंग (Corrosion) प्रतिरोध (Resistance):</strong> <strong>नमी (moisture)</strong> और <strong>रसायनों (chemicals)</strong> से <strong>बचाना (protect)</strong>।</li>
+<li><strong>तापीय (Thermal) चालकता (Conductivity):</strong> <strong>गर्मी (heat)</strong> को <strong>हटाने (dissipate)</strong> के लिए – <strong>अत्यधिक (excessive)</strong> गर्मी (heat) से <strong>बचाना (prevent)</strong>।</li>
+<li><strong>मशीनेबिलिटी (Machinability):</strong> <strong>आसान (easy)</strong> से <strong>मशीन (machine)</strong> किया जा सके – <strong>उत्पादन (production)</strong> के लिए।</li>
+<li><strong>लागत (Cost):</strong> <strong>आर्थिक (economical)</strong> – <strong>अनुप्रयोग (application)</strong> के <strong>अनुसार (according)</strong>।</li>
+</ul>
+
+<p><strong>बियरिंग सामग्री के प्रकार (Types of Bearing Materials):</strong></p>
+
+<p><strong>1. बैबिट (Babbitt – व्हाइट मेटल / White Metal):</strong></p>
+<ul>
+<li><strong>टिन (tin)</strong> या <strong>सीसा (lead)</strong> आधारित (based) – <strong>सॉफ्ट (soft)</strong> – <strong>उत्कृष्ट (excellent)</strong> <strong>एम्बेडेबिलिटी (embedability)</strong> – <strong>गंदगी (dirt)</strong> को <strong>अंदर (embed)</strong> कर सकता है – <strong>शाफ्ट (shaft)</strong> को <strong>नुकसान (damage)</strong> से <strong>बचाता (protects)</strong> है।</li>
+<li><strong>उपयोग (Use):</strong> <strong>इंजन (engine)</strong> बियरिंग्स (bearings) – <strong>भारी (heavy)</strong> मशीनरी (machinery) – <strong>उच्च (high)</strong> गति (speed) और <strong>भारी (heavy)</strong> भार (load) के लिए।</li>
+</ul>
+
+<p><strong>2. कांस्य (Bronze – तांबा-टिन / Copper-Tin):</strong></p>
+<ul>
+<li><strong>तांबा (copper)</strong> + <strong>टिन (tin)</strong> – <strong>अच्छा (good)</strong> <strong>घिसाव (wear)</strong> प्रतिरोध (resistance) – <strong>उच्च (high)</strong> भार (load) क्षमता – <strong>जंग (corrosion)</strong> प्रतिरोधी (resistant).</li>
+<li><strong>उपयोग (Use):</strong> <strong>बुश (bushes)</strong> – <strong>बियरिंग्स (bearings)</strong> – <strong>पंप (pumps)</strong> – <strong>मशीनरी (machinery)</strong> – <strong>समुद्री (marine)</strong> अनुप्रयोग (applications).</li>
+</ul>
+
+<p><strong>3. पीतल (Brass – तांबा-जस्ता / Copper-Zinc):</strong></p>
+<ul>
+<li><strong>तांबा (copper)</strong> + <strong>जस्ता (zinc)</strong> – <strong>अच्छा (good)</strong> <strong>मशीनेबिलिटी (machinability)</strong> – <strong>निम्न (low)</strong> घर्षण (friction) – <strong>सस्ता (cheap)</strong>।</li>
+<li><strong>उपयोग (Use):</strong> <strong>बुश (bushes)</strong> – <strong>निम्न (low)</strong> गति (speed) और <strong>हल्के (light)</strong> भार (load) के लिए – <strong>पानी (water)</strong> पंप (pumps) – <strong>पाइप (pipe)</strong> फिटिंग्स (fittings).</li>
+</ul>
+
+<p><strong>4. कास्ट आयरन (Cast Iron):</strong></p>
+<ul>
+<li><strong>कठोर (hard)</strong> – <strong>घिसाव (wear)</strong> प्रतिरोधी (resistant) – <strong>सस्ता (cheap)</strong> – <strong>भारी (heavy)</strong> भार (load) के लिए – <strong>निम्न (low)</strong> गति (speed) के लिए।</li>
+<li><strong>उपयोग (Use):</strong> <strong>कृषि (agricultural)</strong> मशीनरी (machinery) – <strong>संरचनात्मक (structural)</strong> अनुप्रयोग (applications).</li>
+</ul>
+
+<p><strong>5. प्लास्टिक (Plastic – नायलॉन / Nylon, पीटीएफई / PTFE – Teflon):</strong></p>
+<ul>
+<li><strong>स्व-स्नेहन (Self-lubricating)</strong> – <strong>बहुत (very)</strong> <strong>कम (low)</strong> घर्षण (friction) – <strong>जंग (corrosion)</strong> प्रतिरोधी (resistant) – <strong>हल्का (lightweight)</strong> – <strong>शोर (noise)</strong> कम (reduce).</li>
+<li><strong>उपयोग (Use):</strong> <strong>खाद्य (food)</strong> उद्योग (industry) – <strong>रासायनिक (chemical)</strong> उद्योग – <strong>निम्न (low)</strong> भार (load) – <strong>उच्च (high)</strong> गति (speed).</li>
+</ul>
+
+<p><strong>6. सिरेमिक (Ceramic – सिलिकॉन नाइट्राइड / Silicon Nitride – Si₃N₄):</strong></p>
+<ul>
+<li><strong>बहुत (very)</strong> <strong>कठोर (hard)</strong> – <strong>उच्च (high)</strong> तापमान (temperature) – <strong>जंग (corrosion)</strong> प्रतिरोधी (resistant) – <strong>हल्का (lightweight)</strong> – <strong>उच्च (high)</strong> गति (speed) – <strong>महंगा (expensive)</strong>।</li>
+<li><strong>उपयोग (Use):</strong> <strong>टर्बाइन (turbines)</strong> – <strong>एयरोस्पेस (aerospace)</strong> – <strong>उच्च-तापमान (high-temperature)</strong> अनुप्रयोग (applications).</li>
+</ul>
+
+<p><strong>बियरिंग सामग्री का चयन (Selection of Bearing Materials):</strong></p>
+<ul>
+<li><strong>भार (Load):</strong> <strong>भारी (heavy)</strong> – <strong>कांस्य (bronze)</strong> या <strong>बैबिट (Babbitt)</strong> – <strong>हल्का (light)</strong> – <strong>प्लास्टिक (plastic)</strong>।</li>
+<li><strong>गति (Speed):</strong> <strong>उच्च (high)</strong> – <strong>बैबिट (Babbitt)</strong> या <strong>सिरेमिक (ceramic)</strong> – <strong>निम्न (low)</strong> – <strong>कास्ट आयरन (cast iron)</strong>।</li>
+<li><strong>वातावरण (Environment):</strong> <strong>नमी (moisture)</strong> – <strong>कांस्य (bronze)</strong> या <strong>प्लास्टिक (plastic)</strong> – <strong>उच्च (high)</strong> तापमान – <strong>सिरेमिक (ceramic)</strong>।</li>
+<li><strong>लागत (Cost):</strong> <strong>कम (low)</strong> – <strong>कास्ट आयरन (cast iron)</strong> – <strong>उच्च (high)</strong> – <strong>सिरेमिक (ceramic)</strong>।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: बियरिंग सामग्री (Bearing Materials)</strong></p>
+<p>स्थान: /images/notes/fitter/module-2/bearing_materials.jpg</p>
+<code>bearing_materials.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बैबिट, कांस्य, पीतल, कास्ट आयरन, प्लास्टिक, सिरेमिक)</p>
+</div>
+<div class="figure-caption">Fig 4 – बियरिंग सामग्री</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>बियरिंग सामग्री और उनके गुण (Bearing Materials &amp; Properties)</caption>
+<thead><tr><th>सामग्री (Material)</th><th>गुण (Properties)</th><th>अनुप्रयोग (Application)</th></tr></thead>
+<tbody>
+<tr><td>बैबिट (Babbitt)</td><td>सॉफ्ट, एम्बेडेबिलिटी, उत्कृष्ट</td><td>इंजन, भारी मशीनरी</td></tr>
+<tr><td>कांस्य (Bronze)</td><td>अच्छा घिसाव प्रतिरोध, संक्षारण प्रतिरोधी</td><td>बुश, पंप, समुद्री</td></tr>
+<tr><td>पीतल (Brass)</td><td>अच्छी मशीनेबिलिटी, सस्ता</td><td>बुश, हल्के भार</td></tr>
+<tr><td>कास्ट आयरन (Cast Iron)</td><td>कठोर, सस्ता, भारी</td><td>कृषि, संरचनात्मक</td></tr>
+<tr><td>प्लास्टिक (Plastic)</td><td>स्व-स्नेहन, जंग प्रतिरोधी, शोर कम</td><td>खाद्य, रासायनिक</td></tr>
+<tr><td>सिरेमिक (Ceramic)</td><td>बहुत कठोर, उच्च तापमान, हल्का</td><td>टर्बाइन, एयरोस्पेस</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बैबिट – <strong>सॉफ्ट (soft)</strong> – <strong>गंदगी (dirt)</strong> को <strong>अंदर (embed)</strong> कर सकता है – <strong>इंजन (engine)</strong> में।</li>
+<li>कांस्य – <strong>अच्छा (good)</strong> घिसाव (wear) प्रतिरोध – <strong>बुश (bushes)</strong> के लिए।</li>
+<li>पीतल – <strong>अच्छी (good)</strong> मशीनेबिलिटी (machinability) – <strong>सस्ता (cheap)</strong>।</li>
+<li>प्लास्टिक – <strong>स्व-स्नेहन (self-lubricating)</strong> – <strong>कोई (no)</strong> तेल (oil) की आवश्यकता – <strong>निम्न (low)</strong> भार।</li>
+<li>सिरेमिक – <strong>उच्च (high)</strong> तापमान – <strong>उच्च (high)</strong> गति – <strong>महंगा (expensive)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बैबिट – <strong>टिन (tin)</strong> या <strong>सीसा (lead)</strong> आधारित – <strong>सॉफ्ट (soft)</strong> – <strong>एम्बेडेबिलिटी (embedability)</strong>।</li>
+<li>कांस्य – <strong>तांबा (copper)</strong> + <strong>टिन (tin)</strong> – <strong>अच्छा (good)</strong> घिसाव (wear) प्रतिरोध।</li>
+<li>पीतल – <strong>तांबा (copper)</strong> + <strong>जस्ता (zinc)</strong> – <strong>अच्छी (good)</strong> मशीनेबिलिटी (machinability).</li>
+<li>प्लास्टिक – <strong>नायलॉन (nylon)</strong>, <strong>PTFE (Teflon)</strong> – <strong>स्व-स्नेहन (self-lubricating)</strong>।</li>
+<li>सिरेमिक – <strong>सिलिकॉन नाइट्राइड (Si₃N₄)</strong> – <strong>उच्च (high)</strong> तापमान – <strong>उच्च (high)</strong> गति।</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ====================================================================== -->
+<!-- 2.2.149-152 RUST AND CORROSION PREVENTION -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-rust-prevention">
+<div class="content-section" data-content="rust-prevention">
+<div class="section-header"><span class="icon">🛡️</span><span class="title">2.2.149-152 – जंग और संक्षारण की रोकथाम (Prevention of Rust &amp; Corrosion)</span><span class="subtitle">— कारण, प्रकार, रोकथाम के उपाय, कोटिंग्स</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>जंग (Rust)</strong> और <strong>संक्षारण (Corrosion)</strong> – <strong>धातुओं (metals)</strong> का <strong>क्षरण (deterioration)</strong> – <strong>रासायनिक (chemical)</strong> या <strong>विद्युत-रासायनिक (electrochemical)</strong> प्रतिक्रिया (reaction) के कारण – <strong>वातावरण (environment)</strong> के <strong>संपर्क (exposure)</strong> में।</p>
+
+<p><strong>जंग और संक्षारण के कारण (Causes of Rust &amp; Corrosion):</strong></p>
+<ul>
+<li><strong>नमी (Moisture):</strong> <strong>पानी (water)</strong> – <strong>ऑक्सीजन (oxygen)</strong> – <strong>लोहा (iron)</strong> – <strong>जंग (rust)</strong> – <strong>Fe₂O₃·xH₂O</strong>।</li>
+<li><strong>ऑक्सीजन (Oxygen):</strong> <strong>वायु (air)</strong> में <strong>ऑक्सीजन (oxygen)</strong> – <strong>ऑक्सीकरण (oxidation)</strong> – <strong>संक्षारण (corrosion)</strong>।</li>
+<li><strong>अम्ल (Acids) और क्षार (Alkalis):</strong> <strong>रासायनिक (chemical)</strong> हमला (attack) – <strong>धातु (metal)</strong> को <strong>नुकसान (damage)</strong>।</li>
+<li><strong>लवण (Salts):</strong> <strong>समुद्री (marine)</strong> वातावरण (environment) – <strong>विद्युत-रासायनिक (electrochemical)</strong> प्रतिक्रिया (reaction) को <strong>बढ़ावा (promote)</strong>।</li>
+<li><strong>तापमान (Temperature):</strong> <strong>उच्च (high)</strong> तापमान (temperature) – <strong>प्रतिक्रिया (reaction)</strong> की <strong>दर (rate)</strong> को <strong>बढ़ाता (increases)</strong> है।</li>
+</ul>
+
+<p><strong>संक्षारण के प्रकार (Types of Corrosion):</strong></p>
+<ul>
+<li><strong>समान (Uniform) संक्षारण:</strong> <strong>पूरी (entire)</strong> सतह (surface) पर <strong>समान (uniform)</strong> रूप से – <strong>सबसे (most)</strong> सामान्य (common) – <strong>अनुमानित (predictable)</strong>।</li>
+<li><strong>गैल्वेनिक (Galvanic) संक्षारण:</strong> <strong>दो (two)</strong> अलग-अलग (different) धातुओं (metals) के <strong>संपर्क (contact)</strong> में – <strong>विद्युत-रासायनिक (electrochemical)</strong> – <strong>एक (one)</strong> धातु (metal) <strong>दूसरी (other)</strong> की <strong>तुलना (compared)</strong> में <strong>अधिक (more)</strong> <strong>क्षतिग्रस्त (corroded)</strong> होती है।</li>
+<li><strong>गड्ढा (Pitting) संक्षारण:</strong> <strong>स्थानीय (localized)</strong> – <strong>गड्ढे (pits)</strong> – <strong>बहुत (very)</strong> <strong>खतरनाक (dangerous)</strong> – <strong>छेद (holes)</strong> हो सकते हैं।</li>
+<li><strong>अंतराल (Crevice) संक्षारण:</strong> <strong>संकीर्ण (narrow)</strong> अंतराल (gaps) या <strong>दरारें (crevices)</strong> में – <strong>नमी (moisture)</strong> और <strong>गंदगी (dirt)</strong> – <strong>स्थानीय (localized)</strong> संक्षारण (corrosion).</li>
+<li><strong>तनाव (Stress) संक्षारण:</strong> <strong>तनाव (stress)</strong> और <strong>संक्षारण (corrosion)</strong> का <strong>संयोजन (combination)</strong> – <strong>दरार (cracking)</strong>।</li>
+</ul>
+
+<p><strong>जंग और संक्षारण की रोकथाम के उपाय (Prevention Methods):</strong></p>
+
+<p><strong>1. कोटिंग (Coating – लेपन / Coating):</strong></p>
+<ul>
+<li><strong>पेंट (Paint):</strong> <strong>सबसे (most)</strong> सामान्य – <strong>अवरोधक (barrier)</strong> – <strong>नमी (moisture)</strong> और <strong>ऑक्सीजन (oxygen)</strong> को <strong>धातु (metal)</strong> तक <strong>पहुँचने (reach)</strong> से <strong>रोकता (prevents)</strong> है।</li>
+<li><strong>गैल्वनाइजिंग (Galvanizing – जस्ता लेपन / Zinc Coating):</strong> <strong>जस्ता (zinc)</strong> की परत (layer) – <strong>सैक्रिफिशियल (sacrificial)</strong> – <strong>जस्ता (zinc)</strong> <strong>पहले (first)</strong> <strong>क्षतिग्रस्त (corroded)</strong> होता है – <strong>स्टील (steel)</strong> को <strong>बचाता (protects)</strong> है।</li>
+<li><strong>इलेक्ट्रोप्लेटिंग (Electroplating):</strong> <strong>विद्युत (electric)</strong> – <strong>धातु (metal)</strong> की <strong>पतली (thin)</strong> परत (layer) – <strong>क्रोमियम (chromium)</strong>, <strong>निकल (nickel)</strong>, <strong>टिन (tin)</strong> – <strong>सौंदर्यशास्त्र (aesthetics)</strong> और <strong>सुरक्षा (protection)</strong>।</li>
+<li><strong>पाउडर कोटिंग (Powder Coating):</strong> <strong>सूखा (dry)</strong> पाउडर (powder) – <strong>इलेक्ट्रोस्टैटिक (electrostatic)</strong> – <strong>गर्म (heat)</strong> – <strong>टिकाऊ (durable)</strong> कोटिंग (coating).</li>
+<li><strong>एनोडाइजिंग (Anodizing):</strong> <strong>एल्यूमीनियम (aluminium)</strong> के लिए – <strong>ऑक्साइड (oxide)</strong> परत (layer) – <strong>जंग (corrosion)</strong> प्रतिरोध (resistance).</li>
+</ul>
+
+<p><strong>2. सामग्री का चयन (Material Selection):</strong></p>
+<ul>
+<li><strong>स्टेनलेस स्टील (Stainless Steel):</strong> <strong>क्रोमियम (chromium)</strong> – <strong>ऑक्साइड (oxide)</strong> परत (layer) – <strong>स्व-उपचार (self-healing)</strong> – <strong>संक्षारण (corrosion)</strong> प्रतिरोधी (resistant).</li>
+<li><strong>एल्यूमीनियम (Aluminium):</strong> <strong>ऑक्साइड (oxide)</strong> परत (layer) – <strong>हल्का (lightweight)</strong> – <strong>संक्षारण (corrosion)</strong> प्रतिरोधी (resistant).</li>
+<li><strong>तांबा (Copper) और उसके (its) मिश्र (alloys):</strong> <strong>पीतल (brass)</strong>, <strong>कांस्य (bronze)</strong> – <strong>समुद्री (marine)</strong> वातावरण (environment) के लिए।</li>
+</ul>
+
+<p><strong>3. वातावरण नियंत्रण (Environmental Control):</strong></p>
+<ul>
+<li><strong>नमी (Moisture) को कम (reduce):</strong> <strong>डीह्यूमिडिफायर (dehumidifier)</strong> – <strong>शुष्क (dry)</strong> वातावरण (environment) – <strong>भंडारण (storage)</strong> के लिए।</li>
+<li><strong>तापमान (Temperature) नियंत्रण (control):</strong> <strong>ठंडा (cool)</strong> – <strong>प्रतिक्रिया (reaction)</strong> की <strong>दर (rate)</strong> को <strong>कम (reduce)</strong>।</li>
+<li><strong>संदूषक (Contaminants) को हटाना (remove):</strong> <strong>अम्ल (acids)</strong>, <strong>क्षार (alkalis)</strong>, <strong>लवण (salts)</strong> – <strong>सफाई (cleaning)</strong>।</li>
+</ul>
+
+<p><strong>4. कैथोडिक संरक्षण (Cathodic Protection):</strong></p>
+<ul>
+<li><strong>सैक्रिफिशियल (Sacrificial) एनोड (Anode):</strong> <strong>अधिक (more)</strong> <strong>सक्रिय (active)</strong> धातु (metal) – <strong>जस्ता (zinc)</strong>, <strong>मैग्नीशियम (magnesium)</strong> – <strong>क्षतिग्रस्त (corroded)</strong> होता है – <strong>संरक्षित (protected)</strong> धातु (metal) को <strong>बचाता (protects)</strong> है – <strong>पाइपलाइन (pipelines)</strong>, <strong>जहाज (ships)</strong>।</li>
+<li><strong>प्रभावित (Impressed) करंट (Current):</strong> <strong>बाहरी (external)</strong> विद्युत (electrical) स्रोत (source) – <strong>धातु (metal)</strong> को <strong>कैथोड (cathode)</strong> बनाना – <strong>संक्षारण (corrosion)</strong> को <strong>रोकना (prevent)</strong>।</li>
+</ul>
+
+<p><strong>5. नियमित रखरखाव (Regular Maintenance):</strong></p>
+<ul>
+<li><strong>सफाई (Cleaning):</strong> <strong>गंदगी (dirt)</strong>, <strong>तेल (oil)</strong>, <strong>ग्रीस (grease)</strong> – <strong>नमी (moisture)</strong> को <strong>पकड़ (trap)</strong> सकते हैं – <strong>संक्षारण (corrosion)</strong> को <strong>बढ़ावा (promote)</strong>।</li>
+<li><strong>निरीक्षण (Inspection):</strong> <strong>नियमित (regular)</strong> जाँच – <strong>संक्षारण (corrosion)</strong> के <strong>प्रारंभिक (early)</strong> लक्षण (signs) – <strong>समय पर (timely)</strong> कार्रवाई (action).</li>
+<li><strong>मरम्मत (Repair):</strong> <strong>क्षतिग्रस्त (damaged)</strong> कोटिंग्स (coatings) – <strong>तुरंत (immediately)</strong> <strong>ठीक (repair)</strong> करना।</li>
+</ul>
+</div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: संक्षारण रोकथाम विधियाँ (Corrosion Prevention Methods)</strong></p>
+<p>स्थान: /images/notes/fitter/module-2/corrosion_prevention.jpg</p>
+<code>corrosion_prevention.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(कोटिंग, सामग्री चयन, कैथोडिक संरक्षण)</p>
+</div>
+<div class="figure-caption">Fig 5 – जंग और संक्षारण की रोकथाम</div>
+</div>
+<div class="table-wrap">
+<table>
+<caption>संक्षारण रोकथाम के उपाय (Corrosion Prevention Methods)</caption>
+<thead><tr><th>विधि (Method)</th><th>विवरण (Description)</th><th>अनुप्रयोग (Application)</th></tr></thead>
+<tbody>
+<tr><td>पेंट (Paint)</td><td>अवरोधक (Barrier) कोटिंग</td><td>सामान्य, बाहरी</td></tr>
+<tr><td>गैल्वनाइजिंग (Galvanizing)</td><td>जस्ता (Zinc) कोटिंग – सैक्रिफिशियल</td><td>स्टील, बाहरी संरचनाएँ</td></tr>
+<tr><td>इलेक्ट्रोप्लेटिंग (Electroplating)</td><td>धातु कोटिंग (क्रोमियम, निकल)</td><td>ऑटोमोटिव, सौंदर्यशास्त्र</td></tr>
+<tr><td>सामग्री चयन (Material Selection)</td><td>स्टेनलेस स्टील, एल्यूमीनियम</td><td>संक्षारण प्रतिरोधी अनुप्रयोग</td></tr>
+<tr><td>कैथोडिक संरक्षण (Cathodic Protection)</td><td>सैक्रिफिशियल एनोड / प्रभावित करंट</td><td>पाइपलाइन, जहाज</td></tr>
+</tbody>
+</table>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>जंग (Rust) – <strong>लोहा (iron)</strong> का <strong>ऑक्सीकरण (oxidation)</strong> – <strong>Fe₂O₃·xH₂O</strong>।</li>
+<li>संक्षारण (Corrosion) – <strong>धातुओं (metals)</strong> का <strong>क्षरण (deterioration)</strong> – <strong>रासायनिक (chemical)</strong> या <strong>विद्युत-रासायनिक (electrochemical)</strong>।</li>
+<li>गैल्वनाइजिंग – <strong>जस्ता (zinc)</strong> – <strong>सैक्रिफिशियल (sacrificial)</strong> – <strong>स्टील (steel)</strong> को <strong>बचाता (protects)</strong>।</li>
+<li>कैथोडिक संरक्षण – <strong>सैक्रिफिशियल (sacrificial)</strong> एनोड (anode) – <strong>पाइपलाइन (pipelines)</strong>, <strong>जहाज (ships)</strong>।</li>
+<li>स्टेनलेस स्टील – <strong>क्रोमियम (chromium)</strong> – <strong>ऑक्साइड (oxide)</strong> परत – <strong>स्व-उपचार (self-healing)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>जंग – <strong>नमी (moisture)</strong> और <strong>ऑक्सीजन (oxygen)</strong> – <strong>लोहा (iron)</strong> पर।</li>
+<li>गैल्वनाइजिंग – <strong>जस्ता (zinc)</strong> – <strong>सैक्रिफिशियल (sacrificial)</strong> – <strong>जंग (rust)</strong> से <strong>बचाता (protects)</strong>।</li>
+<li>इलेक्ट्रोप्लेटिंग – <strong>क्रोमियम (chromium)</strong>, <strong>निकल (nickel)</strong> – <strong>सौंदर्यशास्त्र (aesthetics)</strong> और <strong>सुरक्षा (protection)</strong>।</li>
+<li>स्टेनलेस स्टील – <strong>क्रोमियम (chromium)</strong> – <strong>संक्षारण (corrosion)</strong> प्रतिरोधी (resistant).</li>
+<li>कैथोडिक संरक्षण – <strong>जहाज (ships)</strong>, <strong>पाइपलाइन (pipelines)</strong> – <strong>सैक्रिफिशियल (sacrificial)</strong> एनोड (anode).</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+<!-- ============================== CONCLUSION ============================== -->
+<div class="container">
+<div class="conclusion-section">
+<h2>📌 Module 2 – निष्कर्ष (Conclusion)</h2>
+<div class="bilingual">
+<div class="content">
+<p><strong>Module 2 – Gauges</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<ul>
+<li><strong>Gauges (गेज):</strong> अर्थ, प्रकार (प्लग, स्नैप, फीलर, थ्रेड, रेडियस, कोण, डायल), गो/नो-गो सिद्धांत, चयन, देखभाल।</li>
+<li><strong>Bearings (बियरिंग):</strong> अर्थ, प्रकार (स्लाइडिंग – प्लेन, रोलिंग – बॉल, रोलर), भाग (आंतरिक, बाहरी रिंग, रोलिंग तत्व, पिंजरा), चयन, रखरखाव।</li>
+<li><strong>Roller &amp; Needle Bearings (रोलर और नीडल बियरिंग):</strong> बेलनाकार, टेपर, गोलाकार रोलर, नीडल बियरिंग – प्रकार, संरचना, उपयोग, चयन।</li>
+<li><strong>Bearing Materials (बियरिंग सामग्री):</strong> आवश्यक गुण, प्रकार (बैबिट, कांस्य, पीतल, कास्ट आयरन, प्लास्टिक, सिरेमिक), चयन, अनुप्रयोग।</li>
+<li><strong>Prevention of Rust &amp; Corrosion (जंग और संक्षारण की रोकथाम):</strong> कारण, प्रकार, रोकथाम के उपाय (कोटिंग्स, सामग्री चयन, वातावरण नियंत्रण, कैथोडिक संरक्षण, रखरखाव).</li>
+</ul>
+<p>इन सभी विषयों में महारत हासिल करना हर <strong>फिटर (fitter)</strong> के लिए आवश्यक है। प्रत्येक संचालन को <strong>सटीकता (precision)</strong> और <strong>सुरक्षा (safety)</strong> के साथ अभ्यास करें।</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ============================== MCQ ============================== -->
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="section-body">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/fitter/second-year/module-2.html" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="section-body">
+<div style="display:flex; flex-wrap:wrap; gap:12px;">
+<a href="../fitter1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 1: Safety</a>
+<a href="../fitter2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 1st Year – Module 2: Basic Fitting</a>
+<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 2nd Year – Module 1: Assembly</a>
+<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 2nd Year – Module 3: Pipes &amp; Fittings</a>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('🔧 ' + getPageTitle() + ' - Fitter 2nd Year Module 2 Study Material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('🔧 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Fitter 2nd Year Module 2 – Gauges (Complete) Loaded.');
+        console.log('📚 All topics covered: Gauges, Bearings, Roller & Needle Bearings, Bearing Materials, Rust & Corrosion Prevention.');
+    </script>
+</body>
+  </html>
