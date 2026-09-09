@@ -378,6 +378,22 @@
             display: block;
             margin-top: 2px;
         }
+
+        .module-card .mod-name .topic-sub {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: #555;
+            display: inline-block;
+            margin: 2px 0;
+        }
+
+        .module-card .module-topics {
+            margin-top: 6px;
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: #333;
+            font-weight: 500;
+        }
         .module-card .btn {
             align-self: flex-start;
             background: #003366;
@@ -723,28 +739,28 @@
     ============================================================ -->
 <script>
         // ============================================================
-        //  MODULE DATA – FITTER TRADE (ONLY 16 MODULES, NO AI)
+        //  MODULE DATA – FITTER TRADE (1st Year + 2nd Year, 8 Modules Each)
         // ============================================================
         const modulesData = {
             year1: [
-                { num: 1, name: 'Safety', nameHi: 'सुरक्षा' },
-                { num: 2, name: 'Basic Fitting', nameHi: 'बेसिक फिटिंग' },
-                { num: 3, name: 'Sheet Metal', nameHi: 'शीट मेटल' },
-                { num: 4, name: 'Welding', nameHi: 'वेल्डिंग' },
-                { num: 5, name: 'Drilling', nameHi: 'ड्रिलिंग' },
-                { num: 6, name: 'Fitting Assembly', nameHi: 'फिटिंग असेम्बली' },
-                { num: 7, name: 'Turning', nameHi: 'टर्निंग' },
-                { num: 8, name: 'Basic Maintenance', nameHi: 'बुनियादी रखरखाव' }
+                { num: 1, name: 'Safety', nameHi: 'सुरक्षा', link: 'fitter1.html' },
+                { num: 2, name: 'Basic Fitting Tools & Material Properties', nameHi: 'बेसिक फिटिंग टूल्स एवं मटेरियल प्रॉपर्टीज', link: 'fitter2.html' },
+                { num: 3, name: 'Sheet Metal', nameHi: 'शीट मेटल', link: 'fitter3.html' },
+                { num: 4, name: 'Welding', nameHi: 'वेल्डिंग', link: 'fitter4.html' },
+                { num: 5, name: 'Drilling, Gauges & Types', nameHi: 'ड्रिलिंग, गेजेस एवं टाइप्स', link: 'fitter5.html' },
+                { num: 6, name: 'Fitting Assembly', nameHi: 'फिटिंग असेम्बली', link: 'fitter6.html' },
+                { num: 7, name: 'Lathe & Accessories', nameHi: 'लेथ एवं एक्सेसरीज', link: 'fitter7.html' },
+                { num: 8, name: 'Basic Maintenance', nameHi: 'बेसिक मेंटेनेंस', link: 'fitter8.html' }
             ],
             year2: [
-                { num: 9, name: 'Advanced Fitting', nameHi: 'उन्नत फिटिंग' },
-                { num: 10, name: 'Precision Measurement', nameHi: 'सटीक मापन' },
-                { num: 11, name: 'Machine Tools', nameHi: 'मशीन उपकरण' },
-                { num: 12, name: 'Hydraulics & Pneumatics', nameHi: 'हाइड्रोलिक्स एवं न्यूमेटिक्स' },
-                { num: 13, name: 'Power Transmission', nameHi: 'शक्ति संचरण' },
-                { num: 14, name: 'Advanced Welding', nameHi: 'उन्नत वेल्डिंग' },
-                { num: 15, name: 'Quality Control', nameHi: 'गुणवत्ता नियंत्रण' },
-                { num: 16, name: 'Project Work & Entrepreneurship', nameHi: 'प्रोजेक्ट कार्य एवं उद्यमिता' }
+                { num: 1, name: 'Locking Devices', nameHi: 'लॉकिंग डिवाइसेस', topics: '<span class="topic-sub">(Nut, Bolt, Screw)</span><br>Keys & Types<br>Slip Gauge<br>Surface Finish<br><span class="topic-sub">(Lapping, Honing & Frosting)</span><br>Heat Treatment', link: 'fitter2-9.html' },
+                { num: 2, name: 'Gauges, Bearings & Types', nameHi: 'गेजेस, बियरिंग्स एवं टाइप्स', link: 'fitter2-10.html' },
+                { num: 3, name: 'Pipe & Pipe Fitting', nameHi: 'पाइप एवं पाइप फिटिंग', link: 'fitter2-11.html' },
+                { num: 4, name: 'Jig & Fixture', nameHi: 'जिग एवं फिक्स्चर', link: 'fitter2-12.html' },
+                { num: 5, name: 'Power Transmission, Aluminium & Alloys', nameHi: 'पावर ट्रांसमिशन, एल्युमिनियम एवं एलॉयज', link: 'fitter2-13.html' },
+                { num: 6, name: 'Hydraulics & Pneumatics', nameHi: 'हाइड्रोलिक्स एवं न्यूमेटिक्स', link: 'fitter2-14.html' },
+                { num: 7, name: 'Lubrication & Lubricants', nameHi: 'लुब्रिकेशन एवं लुब्रिकेंट्स', link: 'fitter2-15.html' },
+                { num: 8, name: 'Foundation Bolts & Material Handling', nameHi: 'फाउंडेशन बोल्ट्स एवं मटेरियल हैंडलिंग', link: 'fitter2-16.html' }
             ]
         };
 
@@ -756,20 +772,14 @@
             if (!container) return;
             let html = '';
             modules.forEach(mod => {
-                // 1st year: fitter1.html … fitter8.html
-                // 2nd year: fitter2-9.html … fitter2-16.html
-                let link;
-                if (mod.num <= 8) {
-                    link = `fitter${mod.num}.html`;
-                } else {
-                    link = `fitter2-${mod.num}.html`;
-                }
+                // Links are kept exactly as the existing site structure.
+                const link = mod.link;
                 const searchText = `${mod.num} ${mod.name} ${mod.nameHi}`.toLowerCase();
                 html += `
                             <div class="module-card" data-search="${searchText}">
                                 <div>
                                     <span class="mod-num">Module ${mod.num}</span>
-                                    <div class="mod-name">${mod.name} <span class="hi">${mod.nameHi}</span></div>
+                                    <div class="mod-name">${mod.name} <span class="hi">${mod.nameHi}</span>${mod.topics ? `<div class="module-topics">${mod.topics}</div>` : ''}</div>
                                 </div>
                                 <a href="${link}" class="btn">📖 Open Module →</a>
                             </div>
@@ -846,7 +856,7 @@
         document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() +
             ' ITI Study Centre. All Rights Reserved.';
 
-        console.log('✅ Fitter Trade Index loaded – only 16 modules (8+8), AI removed.');
+        console.log('✅ Fitter Trade Index loaded – 16 modules total (8+8), updated as per provided syllabus.');
     </script>
 </body>
 </html>
