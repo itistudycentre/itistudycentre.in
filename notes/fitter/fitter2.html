@@ -1,470 +1,648 @@
 <!DOCTYPE html>
-
 <html lang="hi">
 <head>
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Module 2 – Basic Fitting (पूर्ण) | Fitter Theory | ITI Study Centre</title>
-<meta content="Complete Fitter Theory Module 2 – Basic Fitting. All topics: Linear measurement, scribers, calipers, marking punches, vices, files, micrometers, vernier calipers, and more. Full NIMI syllabus." name="description"/>
+<title>Fitter Theory Module 2 – Basic Fitting | ITI Study Centre</title>
+<meta content="Fitter Theory Module 2 – Basic Fitting | Technical Hindi + English: measurement, scribers, calipers, marking tools, vices, files, surface tools, chisels, metal properties, saws, micrometers and vernier instruments. Hindi + English notes." name="description"/>
 <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            background: #f5f7fb;
-            color: #1e2a3a;
-            line-height: 1.8;
-            user-select: none;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 22px; }
 
-        .main-header {
-            background: #003366;
-            padding: 16px 0;
-            border-bottom: 4px solid #ffcc00;
-        }
-        .main-header .container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .main-header .logo a {
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-        .main-header nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px 20px;
-        }
-        .main-header nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-            padding: 4px 0;
-            border-bottom: 2px solid transparent;
-            transition: 0.2s;
-        }
-        .main-header nav a:hover,
-        .main-header nav a.active {
-            border-bottom-color: #ffcc00;
-            color: #ffcc00;
-        }
-        @media(max-width:768px) {
-            .main-header .container { flex-direction: column; gap: 8px; }
-            .main-header nav { justify-content: center; gap: 6px 14px; }
-            .main-header nav a { font-size: 0.9rem; }
-        }
+/* =========================================================
+   ITI STUDY CENTRE
+   FITTER THEORY – MODULE 1
+   FINAL TEMPLATE
+   ========================================================= */
 
-        .breadcrumb {
-            background: #eef1f5;
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            border-bottom: 1px solid #dde1e7;
-        }
-        .breadcrumb a { color: #003366; text-decoration: none; }
-        .breadcrumb a:hover { text-decoration: underline; }
-        .breadcrumb .current { color: #555; font-weight: 600; }
 
-        .page-title {
-            padding: 32px 0 22px;
-            text-align: center;
-        }
-        .page-title h1 {
-            font-size: 2.3rem;
-            color: #003366;
-            letter-spacing: -0.5px;
-            line-height: 1.2;
-        }
-        .page-title p {
-            font-size: 1.1rem;
-            color: #555;
-            margin-top: 6px;
-        }
-        @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
-        @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
+/* ================= RESET ================= */
 
-        .search-section {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            justify-content: center;
-            margin: 16px 0 30px;
-            flex-wrap: wrap;
-        }
-        .search-section input {
-            flex: 1;
-            max-width: 540px;
-            padding: 14px 20px;
-            font-size: 1rem;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            outline: none;
-            transition: 0.3s;
-            user-select: text;
-        }
-        .search-section input:focus {
-            border-color: #003366;
-            box-shadow: 0 0 0 3px rgba(0,51,102,0.12);
-        }
-        .search-section button {
-            padding: 14px 40px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            background: #003366;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.25s;
-        }
-        .search-section button:hover { background: #002244; transform: scale(1.02); }
-        @media(max-width:640px) {
-            .search-section { flex-direction: column; }
-            .search-section input { max-width: 100%; width: 100%; }
-            .search-section button { width: 100%; }
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .content-section {
-            background: #ffffff;
-            border-radius: 14px;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.05);
-            margin-bottom: 32px;
-            border: 1px solid #e6eaef;
-            overflow: hidden;
-        }
-        .section-header {
-            padding: 20px 28px;
-            background: #f8fafc;
-            border-bottom: 2px solid #e6eaef;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
-        .section-header .icon { font-size: 1.8rem; line-height: 1; }
-        .section-header .title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #003366;
-            letter-spacing: -0.3px;
-        }
-        .section-header .subtitle {
-            font-size: 0.85rem;
-            color: #888;
-            font-weight: 400;
-            margin-left: 8px;
-        }
-        .section-body { padding: 28px 32px; background: #fafcff; }
-        .section-body h3 {
-            color: #003366;
-            font-size: 1.35rem;
-            margin: 32px 0 16px;
-            border-left: 5px solid #ffcc00;
-            padding-left: 18px;
-        }
-        .section-body h3:first-of-type { margin-top: 0; }
-        .section-body h4 {
-            color: #1e3a5f;
-            font-size: 1.12rem;
-            margin: 20px 0 10px;
-        }
-        @media(max-width:768px) {
-            .section-header { padding: 14px 18px; }
-            .section-header .title { font-size: 1.05rem; }
-            .section-body { padding: 18px 18px; }
-            .section-body h3 { font-size: 1.1rem; padding-left: 12px; }
-        }
-        @media(max-width:480px) {
-            .section-body { padding: 14px 14px; }
-            .section-header .icon { font-size: 1.4rem; }
-            .section-header .title { font-size: 0.95rem; }
-        }
 
-        .bilingual { margin: 14px 0; }
-        .bilingual .content {
-            font-size: 1.05rem;
-            line-height: 1.9;
-            color: #1a2a3a;
-        }
-        .bilingual .content ul, .bilingual .content ol { padding-left: 26px; margin: 10px 0; }
-        .bilingual .content ul li, .bilingual .content ol li { margin-bottom: 6px; }
-        .bilingual .content p { margin: 10px 0; }
-        @media(max-width:480px) {
-            .bilingual .content { font-size: 0.95rem; }
-        }
+/* ================= BODY ================= */
 
-        .info-card {
-            border-radius: 12px;
-            padding: 18px 24px;
-            margin: 18px 0;
-            background: #fff;
-            border: 1px solid #e8ecf0;
-            box-shadow: 0 1px 6px rgba(0,0,0,0.03);
-        }
-        .info-card.blue { border-left: 5px solid #003366; background: #f0f5ff; }
-        .info-card.green { border-left: 5px solid #28a745; background: #f0faf2; }
-        .info-card.orange { border-left: 5px solid #ff9900; background: #fff8e1; }
-        .info-card.purple { border-left: 5px solid #6f42c1; background: #f5f0ff; }
-        .info-card h4 { margin: 0 0 6px; color: #003366; }
-        .info-card ul { margin: 0; padding-left: 22px; }
-        .info-card ul li { margin-bottom: 4px; }
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1e2a3a;
+    line-height: 1.75;
+}
 
-        .tool-figure {
-            width:100%;
-            max-width:850px;
-            margin:24px auto;
-            text-align:center;
-            background:#f8fafc;
-            border:1px solid #e2e7ed;
-            border-radius:12px;
-            padding:20px;
-            transition:0.2s;
-        }
-        .tool-figure:hover { background:#f0f4fa; }
-        .tool-figure .placeholder-icon { font-size:3.5rem; line-height:1.2; color:#8a9aa8; margin-bottom:6px; }
-        .tool-figure .figure-caption { font-size:0.95rem; color:#555; font-weight:600; margin-top:8px; }
-        .tool-figure .image-placeholder {
-            display:block;
-            min-height:120px;
-            background:#f0f4fa;
-            border:2px dashed #c7ced7;
-            border-radius:8px;
-            padding:18px;
-            color:#68717c;
-        }
-        .tool-figure .image-placeholder code {
-            background:#e7ebef;
-            padding:3px 8px;
-            border-radius:4px;
-            font-size:0.8rem;
-            display:inline-block;
-            margin:4px 0;
-        }
-        @media(max-width:768px) {
-            .tool-figure { padding:14px; }
-            .tool-figure .placeholder-icon { font-size:2.8rem; }
-        }
 
-        .table-wrap {
-            overflow-x: auto;
-            margin: 22px 0;
-        }
-        .table-wrap table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.95rem;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 1px 8px rgba(0,0,0,0.04);
-        }
-        .table-wrap th {
-            background: #003366;
-            color: #fff;
-            padding: 13px 18px;
-            text-align: left;
-            font-weight: 600;
-        }
-        .table-wrap td {
-            padding: 11px 18px;
-            border-bottom: 1px solid #e9ecef;
-        }
-        .table-wrap tr:nth-child(even) { background: #f8f9fc; }
-        .table-wrap tr:hover { background: #eef2f7; }
-        .table-wrap caption {
-            caption-side: top;
-            font-weight: 700;
-            font-size: 1.05rem;
-            color: #003366;
-            margin-bottom: 12px;
-            text-align: left;
-        }
-        @media(max-width:480px) {
-            .table-wrap table { font-size: 0.85rem; }
-            .table-wrap th, .table-wrap td { padding: 8px 10px; }
-        }
+/* ================= CONTAINER ================= */
 
-        .compare-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 22px;
-            margin: 20px 0;
-        }
-        @media(max-width:600px) { .compare-grid { grid-template-columns: 1fr; } }
-        .compare-card {
-            padding: 20px 24px;
-            border-radius: 12px;
-            border: 2px solid #e6eaef;
-            background: #fff;
-        }
-        .compare-card h4 { font-size: 1.1rem; margin: 0 0 10px; color: #003366; }
-        .compare-card ul { padding-left: 20px; margin: 0; }
-        .compare-card ul li { margin-bottom: 5px; font-size: 0.95rem; }
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        .example-box {
-            background: #e8f4fd;
-            border-left: 5px solid #003366;
-            padding: 18px 24px;
-            border-radius: 8px;
-            margin: 18px 0;
-        }
-        .example-box strong { color: #003366; }
-        .important-box {
-            background: #fff8e1;
-            border-left: 5px solid #ffc107;
-            padding: 18px 24px;
-            border-radius: 8px;
-            margin: 18px 0;
-        }
-        .important-box h4 { margin: 0 0 6px; color: #856404; }
-        .important-box ul { padding-left: 22px; margin: 0; }
-        .short-notes {
-            background: #d4edda;
-            border-left: 5px solid #28a745;
-            padding: 18px 24px;
-            border-radius: 8px;
-            margin: 18px 0;
-        }
-        .short-notes h4 { margin: 0 0 6px; color: #1e7e34; }
-        .short-notes ul { padding-left: 22px; margin: 0; }
-        .warning-box {
-            background: #fff5f2;
-            border-left: 5px solid #dc3545;
-            padding: 16px 22px;
-            border-radius: 8px;
-            margin: 16px 0;
-        }
-        .warning-box h4 { margin: 0 0 6px; color: #b02a37; }
-        .warning-box p { margin: 0; }
 
-        .share-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-            margin: 16px 0 22px;
-            padding: 14px 20px;
-            background: #f8fafc;
-            border-radius: 12px;
-            border: 1px solid #e6eaef;
-        }
-        .share-section .share-label {
-            font-weight: 600;
-            color: #1e3a5f;
-            font-size: 0.95rem;
-            margin-right: 6px;
-        }
-        .share-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 20px;
-            border-radius: 8px;
-            border: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            color: #fff;
-            text-decoration: none;
-        }
-        .share-btn:hover { transform: scale(1.04); opacity: 0.9; }
-        .share-btn.whatsapp { background: #25d366; }
-        .share-btn.facebook { background: #1877f2; }
-        .share-btn.twitter { background: #1da1f2; }
-        .share-btn.link { background: #6c757d; }
-        .share-btn.link.copied { background: #28a745; }
-        .share-btn svg { width: 18px; height: 18px; fill: currentColor; }
-        @media(max-width:600px) {
-            .share-section { flex-direction: column; align-items: stretch; }
-            .share-section .share-label { text-align: center; }
-            .share-btn { justify-content: center; }
-        }
+/* ================= BREADCRUMB ================= */
 
-        .mcq-link { text-align: center; padding: 12px 0; }
-        .mcq-link a {
-            display: inline-block;
-            padding: 14px 44px;
-            background: #ffcc00;
-            color: #003366 !important;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .mcq-link a:hover { background: #e6b800; transform: scale(1.03); }
-        .mcq-link p { margin: 10px 0 0; color: #888; font-size: 0.9rem; }
+.breadcrumb {
+    background: #eef1f5;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #dde1e7;
+}
 
-        .conclusion-section {
-            background: #e8f4fd;
-            border: 2px solid #003366;
-            border-radius: 14px;
-            padding: 28px 32px;
-            margin: 32px 0;
-        }
-        .conclusion-section h2 {
-            color: #003366;
-            font-size: 1.6rem;
-            border-left: 5px solid #ffcc00;
-            padding-left: 16px;
-            margin-bottom: 16px;
-        }
-        .conclusion-section ul {
-            padding-left: 26px;
-            margin: 10px 0;
-        }
-        .conclusion-section ul li { margin-bottom: 6px; }
+.breadcrumb a {
+    color: #003366;
+    text-decoration: none;
+}
 
-        footer {
-            background: #1a2634;
-            color: #b0b8c5;
-            padding: 28px 20px;
-            text-align: center;
-            margin-top: 48px;
-            border-top: 4px solid #003366;
-        }
-        footer .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px 28px;
-            margin-bottom: 14px;
-        }
-        footer .footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; transition: 0.2s; }
-        footer .footer-links a:hover { color: #fff; }
-        footer p { margin: 8px 0 0; font-size: 0.85rem; color: #7a8494; }
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
 
-        #scrollTop {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            background: #003366;
-            color: #fff;
-            border: none;
-            padding: 12px 18px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: none;
-            z-index: 999;
-        }
-        #scrollTop:hover { background: #002244; transform: scale(1.05); }
+.breadcrumb .current {
+    color: #555;
+    font-weight: 600;
+}
 
-        .copy-protect::selection { background: #b3d4fc; color: #000; }
 
-        @media print {
-            #scrollTop, .share-section, .search-section { display: none !important; }
-            body { background: #fff !important; }
-            .content-section { box-shadow: none !important; border: 1px solid #ddd !important; break-inside: avoid; }
-            .section-body { background: #fff !important; }
-            .tool-figure { border:1px solid #ccc; break-inside:avoid; }
-        }
-    </style>
+/* ================= PAGE TITLE ================= */
+
+.page-title {
+    padding: 30px 0 18px;
+    text-align: center;
+}
+
+.page-title h1 {
+    font-size: 2.25rem;
+    color: #003366;
+    line-height: 1.35;
+}
+
+.page-title p {
+    color: #555;
+    font-size: 1.08rem;
+    margin-top: 7px;
+}
+
+
+/* ================= MODULE NAVIGATION ================= */
+
+.module-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 25px;
+}
+
+.module-navigation a {
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 17px;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.module-navigation a:hover {
+    background: #002244;
+    transform: translateY(-1px);
+}
+
+
+/* ================= TABLE OF CONTENTS ================= */
+
+.toc-card {
+    background: #ffffff;
+    border: 1px solid #dfe5ec;
+    border-radius: 14px;
+    padding: 22px 25px;
+    margin: 18px 0 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.toc-card h2 {
+    color: #003366;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 15px;
+}
+
+.toc-grid a {
+    text-decoration: none;
+    color: #003366;
+    background: #f4f7fa;
+    border: 1px solid #e2e7ed;
+    padding: 8px 11px;
+    border-radius: 7px;
+    font-size: 0.92rem;
+    transition: 0.2s;
+}
+
+.toc-grid a:hover {
+    background: #eaf1f8;
+    border-color: #003366;
+}
+
+
+/* ================= CONTENT ================= */
+
+.module-content {
+    margin-bottom: 35px;
+}
+
+.content-card {
+    background: #fff;
+    border: 1px solid #e1e6ec;
+    border-radius: 14px;
+    padding: 25px 28px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.035);
+}
+
+.content-card h2 {
+    color: #003366;
+    font-size: 1.42rem;
+    line-height: 1.4;
+    border-left: 5px solid #ffcc00;
+    padding-left: 12px;
+    margin-bottom: 14px;
+}
+
+.content-card h3 {
+    color: #003366;
+    font-size: 1.14rem;
+    margin: 20px 0 8px;
+}
+
+.content-card p {
+    margin: 8px 0;
+}
+
+.content-card ul,
+.content-card ol {
+    margin: 10px 0 12px 24px;
+}
+
+.content-card li {
+    margin-bottom: 6px;
+}
+
+.content-card strong {
+    color: #003366;
+}
+
+
+/* ================= SECTION LABEL ================= */
+
+.section-label {
+    display: inline-block;
+    background: #003366;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+/* ================= INFO BOXES ================= */
+
+.info-box,
+.exam-box,
+.warning-box,
+.success-box {
+    border-radius: 9px;
+    padding: 15px 18px;
+    margin: 18px 0;
+}
+
+.info-box {
+    background: #eef6ff;
+    border-left: 5px solid #003366;
+}
+
+.exam-box {
+    background: #fffdf0;
+    border-left: 5px solid #ffcc00;
+}
+
+.warning-box {
+    background: #fff5f2;
+    border-left: 5px solid #e5533d;
+}
+
+.success-box {
+    background: #eef9f1;
+    border-left: 5px solid #198754;
+}
+
+.box-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #003366;
+}
+
+
+/* ================= FLOW ================= */
+
+.flow-box {
+    background: #f5f8fb;
+    border: 1px solid #dce3ea;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 18px 0;
+    text-align: center;
+    color: #003366;
+    font-weight: 700;
+}
+
+
+/* ================= IMAGES — FINAL HD DISPLAY ================= */
+
+.module-image{
+    width:100%;
+    max-width:900px;
+    margin:30px auto 38px;
+    text-align:center;
+    overflow:hidden;
+}
+
+.module-image img{
+    display:block;
+    width:100%;
+    max-width:900px;
+    height:auto;
+    margin:0 auto;
+    padding:0;
+    border:1px solid #d9dee5;
+    border-radius:10px;
+    background:#fff;
+    box-shadow:0 4px 16px rgba(0,0,0,.08);
+    object-fit:contain;
+    object-position:center;
+}
+
+.module-image figcaption{
+    color:#666;
+    font-size:.9rem;
+    margin-top:9px;
+}
+
+@media(max-width:768px){
+    .module-image{
+        width:100%;
+        margin:22px auto 28px;
+    }
+    .module-image img{
+        width:100%;
+        max-width:100%;
+        height:auto;
+        border-radius:7px;
+    }
+}
+
+
+/* ================= MISSING IMAGE ================= */
+
+.image-placeholder {
+    display: none;
+    min-height: 160px;
+    width: 100%;
+    padding: 30px 18px;
+    background: #f4f6f8;
+    border: 2px dashed #c7ced7;
+    border-radius: 10px;
+    color: #68717c;
+}
+
+.placeholder-icon {
+    font-size: 2rem;
+    margin-bottom: 7px;
+}
+
+.image-placeholder strong {
+    display: block;
+    color: #003366;
+    margin-bottom: 6px;
+}
+
+.image-placeholder code {
+    background: #e7ebef;
+    padding: 3px 7px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+
+/* ================= TABLE ================= */
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 18px 0;
+}
+
+.content-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.content-table th {
+    background: #003366;
+    color: #fff;
+    padding: 11px;
+    text-align: left;
+}
+
+.content-table td {
+    border: 1px solid #dfe3e8;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.content-table tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+
+/* ================= QUICK REVISION ================= */
+
+.quick-revision {
+    background: #fffdf0;
+    border: 2px solid #ffcc00;
+    border-radius: 14px;
+    padding: 25px;
+    margin: 28px 0;
+}
+
+.quick-revision h2 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.quick-revision h3 {
+    color: #003366;
+    margin: 15px 0 5px;
+}
+
+
+/* ================= FULL FORMS ================= */
+
+.full-forms {
+    background: #ffffff;
+    border: 1px solid #dfe5eb;
+    border-radius: 14px;
+    padding: 22px 25px;
+    margin: 25px 0;
+}
+
+.full-forms h2 {
+    color: #003366;
+    margin-bottom: 12px;
+}
+
+
+/* ================= BOTTOM NAV ================= */
+
+.next-module {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.next-module a {
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.next-module a:hover {
+    background: #002244;
+}
+
+
+/* ================= DISCLAIMER ================= */
+
+.disclaimer {
+    background: #fff;
+    border: 1px solid #e1e6eb;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 25px 0;
+}
+
+.disclaimer h2 {
+    color: #003366;
+    font-size: 1.2rem;
+    margin-bottom: 7px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #1a2634;
+    color: #b0b8c5;
+    padding: 24px 20px;
+    text-align: center;
+    margin-top: 44px;
+    border-top: 4px solid #003366;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #b0b8c5;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+
+/* ================= SCROLL TOP ================= */
+
+#scrollTop {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    display: none;
+    background: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .page-title h1 {
+        font-size: 1.65rem;
+    }
+
+    .module-navigation,
+    .next-module {
+        flex-direction: column;
+    }
+
+    .module-navigation a,
+    .next-module a {
+        width: 100%;
+    }
+
+    .content-card {
+        padding: 19px;
+    }
+
+    .toc-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .page-title h1 {
+        font-size: 1.4rem;
+    }
+
+    .content-card {
+        padding: 16px;
+    }
+
+    .content-card h2 {
+        font-size: 1.18rem;
+    }
+
+    .content-card p,
+    .content-card li {
+        font-size: 0.95rem;
+    }
+
+    .quick-revision {
+        padding: 18px;
+    }
+}
+
+
+/* ===== FINAL READING PROGRESS ===== */
+#readingProgress{
+    position:fixed;top:0;left:0;width:0;height:4px;
+    background:linear-gradient(90deg,#003366,#ffcc00);
+    z-index:10000;transition:width .08s linear;
+}
+@media print{
+    #readingProgress,#scrollTop,.module-navigation{display:none!important}
+    body{background:#fff!important}
+    .content-card,.toc-card,.full-forms,.disclaimer{box-shadow:none!important;break-inside:avoid}
+}
+
+
+/* ================= FITTER 2 — FITTER 1 VISUAL SYSTEM ================= */
+.fitter2-section-header{
+    padding: 18px 25px;
+    background:#f8fafc;
+    border-bottom:2px solid #e6eaef;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+.fitter2-section-header .icon{font-size:1.55rem;line-height:1;}
+.fitter2-section-header .title{
+    font-size:1.18rem;
+    font-weight:700;
+    color:#003366;
+    line-height:1.45;
+}
+.fitter2-section-header .subtitle{
+    font-size:.84rem;
+    color:#777;
+    font-weight:400;
+}
+.fitter2-section-body{
+    padding:25px 28px;
+    background:#fff;
+}
+.fitter2-section-body .bilingual{margin:12px 0;}
+.fitter2-section-body .content{font-size:1.02rem;line-height:1.8;color:#1e2a3a;}
+.fitter2-section-body h3{
+    color:#003366;
+    font-size:1.14rem;
+    margin:22px 0 10px;
+    border-left:4px solid #ffcc00;
+    padding-left:12px;
+}
+.fitter2-section-body h4{
+    color:#003366;
+    font-size:1rem;
+    margin:18px 0 8px;
+}
+.fitter2-section-body p{margin:9px 0;}
+.fitter2-section-body ul,.fitter2-section-body ol{margin:10px 0 12px 24px;}
+.fitter2-section-body li{margin-bottom:5px;}
+.tool-figure{
+    width:100%;
+    max-width:900px;
+    margin:28px auto 34px;
+    text-align:center;
+    background:#f8fafc;
+    border:1px solid #dfe5eb;
+    border-radius:10px;
+    padding:16px;
+}
+.info-card,.example-box,.important-box,.short-notes,.warning-box{
+    border-radius:9px;
+    padding:15px 18px;
+    margin:16px 0;
+}
+@media(max-width:768px){
+    .fitter2-section-header{padding:14px 18px;}
+    .fitter2-section-header .title{font-size:1rem;}
+    .fitter2-section-body{padding:18px;}
+    .fitter2-section-body .content{font-size:.95rem;}
+}
+</style>
+
 </head>
 <body>
+
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
 
@@ -480,10 +658,17 @@
 </div>
 <section class="page-title">
 <div class="container">
-<h1>🔧 Module 2 – Basic Fitting (पूर्ण)</h1>
-<p>रेखीय माप · स्क्राइबर · कैलिपर · पंच · वाइस · फाइल · V-ब्लॉक · सूई फाइल · माइक्रोमीटर · वर्नियर · और बहुत कुछ</p>
+<h1>🔧 Fitter Theory – Module 2</h1>
+<p>Basic Fitting | माप, मार्किंग, फाइलिंग, चिज़ेल, वाइस, माइक्रोमीटर और वर्नियर</p>
 </div>
 </section>
+<div class="container">
+<div class="module-navigation">
+<a href="module-1.html">← Module 1</a>
+<a href="/notes/fitter/">📚 All Fitter Modules</a>
+<a href="module-3.html">Module 3 →</a>
+</div>
+</div>
 <section class="search-section container">
 <input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
 <button onclick="filterSections()">🔍 Search</button>
@@ -511,12 +696,12 @@ Twitter
 </div>
 <!-- ===== TABLE OF CONTENTS ===== -->
 <div class="container">
-<div class="content-section" style="border:2px solid #003366;">
-<div class="section-header" style="background:#003366; border-bottom:none;">
+<div class="toc-card" style="border:2px solid #003366;">
+<div class="fitter2-section-header" style="background:#003366; border-bottom:none;">
 <span class="icon" style="color:#ffcc00;">📚</span>
 <span class="title" style="color:#fff;">विषय-सूची – Module 2 (Basic Fitting)</span>
 </div>
-<div class="section-body" style="background:#fff;">
+<div class="fitter2-section-body" style="background:#fff;">
 <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:6px 14px;">
 <a href="#sec-1.2.11" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">1.2.11 – रेखीय माप (Linear Measurement)</a>
 <a href="#sec-1.2.12" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">1.2.12 – स्क्राइबर (Scribers)</a>
@@ -547,14 +732,14 @@ Twitter
 <!-- 1.2.11 LINEAR MEASUREMENT -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.11">
-<div class="content-section" data-content="linear">
-<div class="section-header"><span class="icon">📏</span><span class="title">1.2.11 – रेखीय माप (Linear Measurement)</span><span class="subtitle">— इकाइयाँ, स्टील रूल, प्रकार, पैरालैक्स त्रुटि</span></div>
+<div class="content-card" data-content="linear">
+<div class="fitter2-section-header"><span class="icon">📏</span><span class="title">1.2.11 – रेखीय माप (Linear Measurement)</span><span class="subtitle">— इकाइयाँ, स्टील रूल, प्रकार, पैरालैक्स त्रुटि</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
 <p><strong>रेखीय माप (Linear measurement)</strong> लंबाई का माप है। SI प्रणाली में आधार इकाई <strong>मीटर (Metre)</strong> है, लेकिन इंजीनियरिंग में <strong>मिलीमीटर (Millimetre)</strong> सबसे अधिक उपयोग होता है। <strong>1 मीटर = 1000 मिलीमीटर</strong>.</p>
 <p><strong>ब्रिटिश प्रणाली (British system)</strong> में आधार इकाई <strong>इंच (Inch)</strong> है। 1 इंच = 25.4 मिलीमीटर। इसे उपविभाजनों में बाँटा गया है – 1/2″, 1/4″, 1/8″, 1/16″, 1/32″, 1/64″.</p>
-<p><strong>स्टील रूल (Steel Rule)</strong> स्प्रिंग स्टील या स्टेनलेस स्टील का बना होता है। 150 मिलीमीटर, 300 मिलीमीटर, 600 मिलीमीटर लंबाई में उपलब्ध है। सटीकता 0.5 मिलीमीटर और 1/64 इंच तक होती है। रीडिंग लेते समय आँख को निशान के ठीक ऊपर रखें, अन्यथा <strong>पैरालैक्स त्रुटि (parallax error)</strong> हो जाती है।</p>
+<p><strong>स्टील रूल (Steel Rule)</strong> स्प्रिंग स्टील या स्टेनलेस स्टील का बना होता है। 150 मिलीमीटर, 300 मिलीमीटर, 600 मिलीमीटर लंबाई में उपलब्ध है। परिशुद्धता 0.5 मिलीमीटर और 1/64 इंच तक होती है। रीडिंग लेते समय आँख को निशान के ठीक ऊपर रखें, अन्यथा <strong>पैरालैक्स त्रुटि (parallax error)</strong> हो जाती है।</p>
 <p><strong>स्टील रूल के अन्य प्रकार:</strong></p>
 <ul>
 <li><strong>संकीर्ण स्टील रूल (Narrow Steel Rule)</strong> – लगभग 5 मिलीमीटर चौड़ा, 2 मिलीमीटर मोटा। की-वे की गहराई और छोटे छिद्रों के अंदर माप के लिए उपयोग होता है।</li>
@@ -564,14 +749,7 @@ Twitter
 <p><strong>रूपांतरण (Conversion):</strong> 1 इंच = 25.4 मिलीमीटर (सटीक)। मिलीमीटर को इंच में बदलने के लिए 25.4 से भाग दें।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: स्टील रूल के प्रकार (Steel Rule Types)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/steel_rules.jpg</p>
-<code>steel_rules.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(मानक, संकीर्ण, लघु सेट, पतला अंत)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/steel_rules.jpg" alt="स्टील रूल के प्रकार (Steel Rule Types)  /images/notes/fitter/module-2/  (मानक, संकीर्ण, लघु सेट, पतला अंत)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 1 – स्टील रूल के प्रकार</div>
 </div>
 <div class="table-wrap">
@@ -594,8 +772,8 @@ Twitter
 <!-- 1.2.12 SCRIBERS -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.12">
-<div class="content-section" data-content="scribes">
-<div class="section-header"><span class="icon">✏️</span><span class="title">1.2.12 – स्क्राइबर (Scribers)</span><span class="subtitle">— प्रकार, उपयोग, देखभाल, तीक्ष्णीकरण</span></div>
+<div class="content-card" data-content="scribes">
+<div class="fitter2-section-header"><span class="icon">✏️</span><span class="title">1.2.12 – स्क्राइबर (Scribers)</span><span class="subtitle">— प्रकार, उपयोग, देखभाल, तीक्ष्णीकरण</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -609,14 +787,7 @@ Twitter
 <p><strong>देखभाल (Care):</strong> बिंदु बहुत तीक्ष्ण और भंगुर होता है। जेब में कभी न रखें। उपयोग में न हो तो बिंदु को कॉर्क (cork) या सुरक्षात्मक टोपी से ढक दें। नियमित रूप से ऑइलस्टोन (oilstone) पर तीक्ष्ण करें। अत्यधिक दबाव न डालें — बिंदु टूट सकता है या भारी रेखा बन सकती है।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: स्क्राइबर के प्रकार (Scriber Types)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/scriber_types.jpg</p>
-<code>scriber_types.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(सीधा, मुड़ा हुआ, स्क्रैच अवल)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/scriber_types.jpg" alt="स्क्राइबर के प्रकार (Scriber Types)  /images/notes/fitter/module-2/  (सीधा, मुड़ा हुआ, स्क्रैच अवल)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 2 – स्क्राइबर के प्रकार</div>
 </div>
 <div class="warning-box"><h4>⚠️ सुरक्षा</h4><p>स्क्राइबर बिंदु बहुत तीक्ष्ण है – सावधानी से संभालें। उपयोग में न हो तो कॉर्क से ढकें।</p></div>
@@ -628,12 +799,12 @@ Twitter
 <!-- 1.2.13 CALIPERS -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.13">
-<div class="content-section" data-content="calipers">
-<div class="section-header"><span class="icon">📐</span><span class="title">1.2.13 – कैलिपर (Calipers)</span><span class="subtitle">— फर्म जॉइंट, स्प्रिंग जॉइंट, इनसाइड, आउटसाइड, जेनी</span></div>
+<div class="content-card" data-content="calipers">
+<div class="fitter2-section-header"><span class="icon">📐</span><span class="title">1.2.13 – कैलिपर (Calipers)</span><span class="subtitle">— फर्म जॉइंट, स्प्रिंग जॉइंट, इनसाइड, आउटसाइड, जेनी</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>कैलिपर (Calipers)</strong> अप्रत्यक्ष माप उपकरण हैं। इनसे स्टील रूल से माप को जॉब पर स्थानांतरित (transfer) किया जाता है। <strong>जोड़ के प्रकार (joint type)</strong> और <strong>पैर के आकार (leg shape)</strong> के आधार पर वर्गीकृत किया जाता है। सटीकता उपयोगकर्ता के कौशल और उपकरण की गुणवत्ता पर निर्भर करती है (आमतौर पर 0.5 मिलीमीटर).</p>
+<p><strong>कैलिपर (Calipers)</strong> अप्रत्यक्ष माप उपकरण हैं। इनसे स्टील रूल से माप को जॉब पर स्थानांतरित (transfer) किया जाता है। <strong>जोड़ के प्रकार (joint type)</strong> और <strong>पैर के आकार (leg shape)</strong> के आधार पर वर्गीकृत किया जाता है। परिशुद्धता उपयोगकर्ता के कौशल और उपकरण की गुणवत्ता पर निर्भर करती है (आमतौर पर 0.5 मिलीमीटर).</p>
 <p><strong>जोड़ के अनुसार (By Joint):</strong></p>
 <ul>
 <li><strong>फर्म जॉइंट कैलिपर (Firm Joint Calipers)</strong> – पैरों को लकड़ी की सतह पर टैप (tap) करके सेट किया जाता है। घर्षण (friction) के कारण सेट रहता है। सरल और विश्वसनीय।</li>
@@ -647,14 +818,7 @@ Twitter
 </ul>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: कैलिपर के प्रकार (Calipers Types)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/calipers_types.jpg</p>
-<code>calipers_types.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(इनसाइड, आउटसाइड, जेनी, फर्म जॉइंट, स्प्रिंग जॉइंट)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/calipers_types.jpg" alt="कैलिपर के प्रकार (Calipers Types)  /images/notes/fitter/module-2/  (इनसाइड, आउटसाइड, जेनी, फर्म जॉइंट, स्प्रिंग जॉइंट)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 3 – कैलिपर के प्रकार</div>
 </div>
 <div class="info-card green"><h4>📌 परीक्षा फोकस</h4><ul><li>फर्म जॉइंट कैलिपर: लकड़ी की सतह पर टैप करके सेट करते हैं।</li><li>स्प्रिंग जॉइंट कैलिपर: समायोजन नट होता है।</li><li>जेनी कैलिपर = हर्माफ्रोडाइट = ऑड-लेग कैलिपर.</li><li>इनसाइड कैलिपर: आंतरिक आयाम के लिए।</li><li>आउटसाइड कैलिपर: बाहरी आयाम के लिए।</li></ul></div>
@@ -665,8 +829,8 @@ Twitter
 <!-- 1.2.14 MARKING PUNCHES -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.14">
-<div class="content-section" data-content="punches">
-<div class="section-header"><span class="icon">🔨</span><span class="title">1.2.14 – मार्किंग पंच (Marking Punches)</span><span class="subtitle">— सेंटर पंच, प्रिक पंच, कोण, उपयोग</span></div>
+<div class="content-card" data-content="punches">
+<div class="fitter2-section-header"><span class="icon">🔨</span><span class="title">1.2.14 – मार्किंग पंच (Marking Punches)</span><span class="subtitle">— सेंटर पंच, प्रिक पंच, कोण, उपयोग</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -680,23 +844,16 @@ Twitter
 </ul>
 </li>
 </ul>
-<p><strong>अंतर (Difference):</strong> सेंटर पंच के निशान चौड़े और उथले (ड्रिल मार्गदर्शन). प्रिक पंच के निशान संकीर्ण और गहरे (सटीकता और साक्षी).</p>
+<p><strong>अंतर (Difference):</strong> सेंटर पंच के निशान चौड़े और उथले (ड्रिल मार्गदर्शन). प्रिक पंच के निशान संकीर्ण और गहरे (परिशुद्धता और साक्षी).</p>
 <p><strong>उपयोग (Use):</strong> पंच को ऊर्ध्वाधर (vertical) रखें। सटीक स्थान पर रखें। उपयुक्त वजन (≈250 ग्राम) के हथौड़े से प्रहार करें। हल्के निशान के लिए हल्का आघात, गहरे के लिए जोरदार प्रहार।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: मार्किंग पंच (Marking Punches)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/marking_punches.jpg</p>
-<code>marking_punches.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(सेंटर पंच, प्रिक पंच 30°, प्रिक पंच 60°)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/marking_punches.jpg" alt="मार्किंग पंच (Marking Punches)  /images/notes/fitter/module-2/  (सेंटर पंच, प्रिक पंच 30°, प्रिक पंच 60°)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 4 – मार्किंग पंच</div>
 </div>
 <div class="compare-grid">
 <div class="compare-card" style="border-color:#003366; background:#f0f5ff;"><h4>🔵 सेंटर पंच</h4><ul><li>कोण: 90°</li><li>उपयोग: छिद्र केंद्र</li><li>निशान: चौड़ा, उथला</li><li>ड्रिल मार्गदर्शन के लिए</li></ul></div>
-<div class="compare-card" style="border-color:#ff9900; background:#fff8e1;"><h4>🟠 प्रिक पंच</h4><ul><li>कोण: 30° या 60°</li><li>उपयोग: डिवाइडर बिंदु (30°), साक्षी चिह्न (60°)</li><li>निशान: संकीर्ण, गहरा</li><li>सटीकता और जाँच के लिए</li></ul></div>
+<div class="compare-card" style="border-color:#ff9900; background:#fff8e1;"><h4>🟠 प्रिक पंच</h4><ul><li>कोण: 30° या 60°</li><li>उपयोग: डिवाइडर बिंदु (30°), साक्षी चिह्न (60°)</li><li>निशान: संकीर्ण, गहरा</li><li>परिशुद्धता और जाँच के लिए</li></ul></div>
 </div>
 <div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>सेंटर पंच कोण: <strong>90°</strong>.</li><li>प्रिक पंच कोण: <strong>30°</strong> (डिवाइडर) या <strong>60°</strong> (साक्षी चिह्न).</li><li>सेंटर पंच निशान चौड़ा और उथला; प्रिक पंच निशान संकीर्ण और गहरा।</li></ul></div>
 </div>
@@ -706,8 +863,8 @@ Twitter
 <!-- 1.2.15 BENCH VICE -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.15">
-<div class="content-section" data-content="vice">
-<div class="section-header"><span class="icon">🛠️</span><span class="title">1.2.15 – बेंच वाइस (Bench Vice)</span><span class="subtitle">— भाग, आकार, सॉफ्ट जॉ, देखभाल</span></div>
+<div class="content-card" data-content="vice">
+<div class="fitter2-section-header"><span class="icon">🛠️</span><span class="title">1.2.15 – बेंच वाइस (Bench Vice)</span><span class="subtitle">— भाग, आकार, सॉफ्ट जॉ, देखभाल</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -725,14 +882,7 @@ Twitter
 <p><strong>देखभाल (Care):</strong> तैयार सतहों को क्षति से बचाने के लिए <strong>सॉफ्ट जॉ (soft jaws – vice clamps)</strong> (एल्यूमीनियम, तांबा, प्लास्टिक) उपयोग करें। अत्यधिक न कसें। स्पिंडल धागों और स्लाइडिंग सतहों पर नियमित रूप से तेल लगाएँ। वाइस को निहाई (anvil) की तरह या हैंडल पर हथौड़ा न चलाएँ। उपयोग में न हो तो जॉ को हल्का सा अंतर रखें, हैंडल ऊर्ध्वाधर स्थिति में।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: बेंच वाइस (Bench Vice)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/bench_vice.jpg</p>
-<code>bench_vice.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(स्थिर जॉ, चल जॉ, कठोर जॉ, स्पिंडल, हैंडल)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/bench_vice.jpg" alt="बेंच वाइस (Bench Vice)  /images/notes/fitter/module-2/  (स्थिर जॉ, चल जॉ, कठोर जॉ, स्पिंडल, हैंडल)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 5 – बेंच वाइस</div>
 </div>
 <div class="success-box" style="background:#eef9f1; border-left:5px solid #28a745; padding:16px 22px; border-radius:8px; margin:16px 0;"><h4 style="margin:0 0 6px; color:#1e7e34;">✅ सर्वोत्तम अभ्यास</h4><p style="margin:0;">स्लाइडिंग भागों और स्पिंडल धागों पर नियमित रूप से तेल की पतली परत लगाएँ। उपयोग में न हो तो जॉ को हल्का सा अंतर रखें।</p></div>
@@ -744,8 +894,8 @@ Twitter
 <!-- 1.2.16 TYPES OF VICES -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.16">
-<div class="content-section" data-content="vice-types">
-<div class="section-header"><span class="icon">🔩</span><span class="title">1.2.16 – वाइस के प्रकार (Types of Vices)</span><span class="subtitle">— क्विक रिलीजिंग, पाइप, हैंड, पिन, टूलमेकर, लेग</span></div>
+<div class="content-card" data-content="vice-types">
+<div class="fitter2-section-header"><span class="icon">🔩</span><span class="title">1.2.16 – वाइस के प्रकार (Types of Vices)</span><span class="subtitle">— क्विक रिलीजिंग, पाइप, हैंड, पिन, टूलमेकर, लेग</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -760,14 +910,7 @@ Twitter
 </ul>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: वाइस के प्रकार (Types of Vices)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/vices_types.jpg</p>
-<code>vices_types.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(क्विक रिलीजिंग, पाइप, हैंड, पिन, टूलमेकर, लेग)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/vices_types.jpg" alt="वाइस के प्रकार (Types of Vices)  /images/notes/fitter/module-2/  (क्विक रिलीजिंग, पाइप, हैंड, पिन, टूलमेकर, लेग)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 6 – विभिन्न वाइस</div>
 </div>
 <div class="info-card purple"><h4>🔍 चयन सुझाव</h4><p>वाइस का प्रकार वर्कपीस के <strong>आकार, आकृति, सामग्री</strong> और संचालन (फाइलिंग, आरा, फोर्जिंग) के आधार पर चुनें।</p></div>
@@ -779,35 +922,28 @@ Twitter
 <!-- 1.2.17 TRY SQUARE -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.17">
-<div class="content-section" data-content="trysquare">
-<div class="section-header"><span class="icon">📐</span><span class="title">1.2.17 – ट्राई स्क्वायर (Try Square)</span><span class="subtitle">— 90° कोण जाँच और अंकन</span></div>
+<div class="content-card" data-content="trysquare">
+<div class="fitter2-section-header"><span class="icon">📐</span><span class="title">1.2.17 – ट्राई स्क्वायर (Try Square)</span><span class="subtitle">— 90° कोण जाँच और अंकन</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
 <p><strong>ट्राई स्क्वायर (Try Square)</strong> प्रेसिजन उपकरण है, सतह की वर्गाकारता (squareness – 90° कोण) जाँचने के लिए। <strong>ब्लेड (Blade)</strong> (समानांतर किनारों वाला स्टील रूल) 90° पर <strong>स्टॉक (Stock)</strong> (मोटा हैंडल) से स्थिर होता है।</p>
-<p>सटीकता: लगभग <strong>0.002 मिलीमीटर प्रति 10 मिलीमीटर</strong> लंबाई। ब्लेड की लंबाई आकार निर्धारित करती है – 100, 150, 200 मिलीमीटर उपलब्ध।</p>
+<p>परिशुद्धता: लगभग <strong>0.002 मिलीमीटर प्रति 10 मिलीमीटर</strong> लंबाई। ब्लेड की लंबाई आकार निर्धारित करती है – 100, 150, 200 मिलीमीटर उपलब्ध।</p>
 <p><strong>उपयोग (Uses):</strong></p>
 <ul>
 <li>सतहों की वर्गाकारता (आंतरिक और बाहरी) जाँचना।</li>
 <li>सतहों की समतलता (flatness) जाँचना।</li>
 <li>किनारे पर 90° रेखाएँ अंकित करना (लेआउट कार्य).</li>
 <li>मशीनों या असेंबली के दौरान वर्कपीस को समकोण पर सेट करना।</li>
-<li>अन्य उपकरणों की सटीकता जाँचना।</li>
+<li>अन्य उपकरणों की परिशुद्धता जाँचना।</li>
 </ul>
-<p><strong>देखभाल (Care):</strong> ब्लेड और स्टॉक को साफ और खरोंच (nicks) से मुक्त रखें। गिराने से बचें। हथौड़े की तरह उपयोग न करें। जंग रोकने के लिए तेल की पतली परत लगाएँ। नियमित रूप से ज्ञात स्क्वायर से सटीकता जाँचें।</p>
+<p><strong>देखभाल (Care):</strong> ब्लेड और स्टॉक को साफ और खरोंच (nicks) से मुक्त रखें। गिराने से बचें। हथौड़े की तरह उपयोग न करें। जंग रोकने के लिए तेल की पतली परत लगाएँ। नियमित रूप से ज्ञात स्क्वायर से परिशुद्धता जाँचें।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: ट्राई स्क्वायर (Try Square)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/try_square.jpg</p>
-<code>try_square.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(ब्लेड, स्टॉक, वर्गाकारता जाँच)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/try_square.jpg" alt="ट्राई स्क्वायर (Try Square)  /images/notes/fitter/module-2/  (ब्लेड, स्टॉक, वर्गाकारता जाँच)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 7 – ट्राई स्क्वायर</div>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>ट्राई स्क्वायर समकोण <strong>जाँच</strong> और <strong>अंकन</strong> दोनों के लिए।</li><li>सटीकता: 0.002 मिलीमीटर प्रति 10 मिलीमीटर लंबाई।</li><li>ब्लेड की लंबाई द्वारा निर्दिष्ट: 100, 150, 200 मिलीमीटर।</li></ul></div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>ट्राई स्क्वायर समकोण <strong>जाँच</strong> और <strong>अंकन</strong> दोनों के लिए।</li><li>परिशुद्धता: 0.002 मिलीमीटर प्रति 10 मिलीमीटर लंबाई।</li><li>ब्लेड की लंबाई द्वारा निर्दिष्ट: 100, 150, 200 मिलीमीटर।</li></ul></div>
 </div>
 </div>
 </div>
@@ -815,8 +951,8 @@ Twitter
 <!-- 1.2.18 TYPES OF FILES – पूर्ण (WITH NEEDLE FILES & ALL ANGLES) -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.18">
-<div class="content-section" data-content="files">
-<div class="section-header"><span class="icon">📁</span><span class="title">1.2.18 – फाइलों के प्रकार (Types of Files) – पूर्ण</span><span class="subtitle">— आकार, कट, ग्रेड, सूई फाइल, पिनिंग, देखभाल, कोण</span></div>
+<div class="content-card" data-content="files">
+<div class="fitter2-section-header"><span class="icon">📁</span><span class="title">1.2.18 – फाइलों के प्रकार (Types of Files) – पूर्ण</span><span class="subtitle">— आकार, कट, ग्रेड, सूई फाइल, पिनिंग, देखभाल, कोण</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -850,14 +986,7 @@ Twitter
 </ul>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: फाइलों के प्रकार (File Types) – सूई फाइल सहित</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/file_types_complete.jpg</p>
-<code>file_types_complete.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(फ्लैट, हैंड, स्क्वायर, राउंड, हाफ-राउंड, ट्राईएंगुलर, नाइफ-एज, सूई फाइलें)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/file_types_complete.jpg" alt="फाइलों के प्रकार (File Types) – सूई फाइल सहित  /images/notes/fitter/module-2/  (फ्लैट, हैंड, स्क्वायर, राउंड, हाफ-राउंड, ट्राईएंगुलर, नाइफ-एज, सूई फाइलें)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 8 – विभिन्न फाइल आकार</div>
 </div>
 <div class="table-wrap">
@@ -881,8 +1010,8 @@ Twitter
 <!-- 1.2.19 MEASUREMENT OF ANGLES -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.19">
-<div class="content-section" data-content="angles">
-<div class="section-header"><span class="icon">📐</span><span class="title">1.2.19 – कोणों का मापन (Measurement of Angles)</span><span class="subtitle">— डिग्री, मिनट, सेकंड, उपकरण</span></div>
+<div class="content-card" data-content="angles">
+<div class="fitter2-section-header"><span class="icon">📐</span><span class="title">1.2.19 – कोणों का मापन (Measurement of Angles)</span><span class="subtitle">— डिग्री, मिनट, सेकंड, उपकरण</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -891,10 +1020,10 @@ Twitter
 <ul>
 <li><strong>बेवल गेज (Bevel Gauge)</strong> – अप्रत्यक्ष माप उपकरण। कोण स्थानांतरित और जाँचने के लिए, सीधे माप नहीं करता। प्रोट्रैक्टर से कोण सेट करते हैं।</li>
 <li><strong>यूनिवर्सल बेवल गेज (Universal Bevel Gauge)</strong> – सरल बेवल गेज जैसा ही है लेकिन अतिरिक्त स्लाइडिंग ब्लेड होता है। दुर्गम या जटिल क्षेत्रों में कोण जाँच के लिए।</li>
-<li><strong>बेवल प्रोट्रैक्टर (Bevel Protractor)</strong> – प्रत्यक्ष माप उपकरण, अंशांकित डायल। सीधे कोण माप सकता है, सटीकता <strong>1°</strong>.</li>
+<li><strong>बेवल प्रोट्रैक्टर (Bevel Protractor)</strong> – प्रत्यक्ष माप उपकरण, अंशांकित डायल। सीधे कोण माप सकता है, परिशुद्धता <strong>1°</strong>.</li>
 <li><strong>संयोजन सेट (Combination Set)</strong> – बहुमुखी बहुउद्देश्यीय उपकरण:
     <ul>
-<li><strong>प्रोट्रैक्टर हेड (Protractor Head)</strong> – कोण मापने और अंकित करने के लिए (1° सटीकता).</li>
+<li><strong>प्रोट्रैक्टर हेड (Protractor Head)</strong> – कोण मापने और अंकित करने के लिए (1° परिशुद्धता).</li>
 <li><strong>स्क्वायर हेड (Square Head)</strong> – 90° और 45° जाँच के लिए।</li>
 <li><strong>सेंटर हेड (Centre Head)</strong> – बेलनाकार जॉब का केंद्र खोजने के लिए।</li>
 <li><strong>रूल (Rule)</strong> – रेखीय माप के लिए स्टील रूल।</li>
@@ -904,17 +1033,10 @@ Twitter
 </ul>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: कोणीय माप उपकरण (Angular Measuring Tools)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/angular_tools.jpg</p>
-<code>angular_tools.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(बेवल गेज, यूनिवर्सल बेवल गेज, बेवल प्रोट्रैक्टर, संयोजन सेट)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/angular_tools.jpg" alt="कोणीय माप उपकरण (Angular Measuring Tools)  /images/notes/fitter/module-2/  (बेवल गेज, यूनिवर्सल बेवल गेज, बेवल प्रोट्रैक्टर, संयोजन सेट)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 9 – कोणीय माप उपकरण</div>
 </div>
-<div class="info-card orange"><h4>📌 परीक्षा फोकस</h4><ul><li>1° = 60′, 1′ = 60″.</li><li>बेवल प्रोट्रैक्टर सटीकता: <strong>1°</strong>.</li><li>संयोजन सेट: <strong>प्रोट्रैक्टर हेड, स्क्वायर हेड, सेंटर हेड, रूल</strong>.</li><li>यूनिवर्सल बेवल गेज: <strong>अतिरिक्त स्लाइडिंग ब्लेड</strong>.</li></ul></div>
+<div class="info-card orange"><h4>📌 परीक्षा फोकस</h4><ul><li>1° = 60′, 1′ = 60″.</li><li>बेवल प्रोट्रैक्टर परिशुद्धता: <strong>1°</strong>.</li><li>संयोजन सेट: <strong>प्रोट्रैक्टर हेड, स्क्वायर हेड, सेंटर हेड, रूल</strong>.</li><li>यूनिवर्सल बेवल गेज: <strong>अतिरिक्त स्लाइडिंग ब्लेड</strong>.</li></ul></div>
 </div>
 </div>
 </div>
@@ -922,8 +1044,8 @@ Twitter
 <!-- 1.2.20 SURFACE GAUGES -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.20">
-<div class="content-section" data-content="surfacegauge">
-<div class="section-header"><span class="icon">📏</span><span class="title">1.2.20 – सरफेस गेज (Surface Gauges)</span><span class="subtitle">— स्क्राइबिंग ब्लॉक, प्रकार, भाग, उपयोग</span></div>
+<div class="content-card" data-content="surfacegauge">
+<div class="fitter2-section-header"><span class="icon">📏</span><span class="title">1.2.20 – सरफेस गेज (Surface Gauges)</span><span class="subtitle">— स्क्राइबिंग ब्लॉक, प्रकार, भाग, उपयोग</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -937,14 +1059,7 @@ Twitter
 <p><strong>देखभाल (Care):</strong> उपयोग से पहले और बाद में साफ करें। सरफेस प्लेट पर रखने से पहले आधार पर तेल की पतली परत लगाएँ – खरोंच से बचाव। स्क्राइबर बिंदु तीक्ष्ण रखें। अत्यधिक दबाव न डालें।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: सरफेस गेज (Surface Gauge)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/surface_gauge.jpg</p>
-<code>surface_gauge.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(स्थिर प्रकार, यूनिवर्सल प्रकार)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/surface_gauge.jpg" alt="सरफेस गेज (Surface Gauge)  /images/notes/fitter/module-2/  (स्थिर प्रकार, यूनिवर्सल प्रकार)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 10 – सरफेस गेज के प्रकार</div>
 </div>
 <div class="info-card blue"><h4>📌 परीक्षा फोकस</h4><ul><li>यूनिवर्सल सरफेस गेज में <strong>गाइड पिन</strong> होता है।</li><li>डेटम सतह के <strong>समानांतर</strong> रेखाएँ खींचता है।</li><li>आधार पर V-ग्रूव – <strong>बेलनाकार कार्य</strong> के लिए।</li><li>रॉकर आर्म – <strong>बढ़िया समायोजन</strong> के लिए।</li></ul></div>
@@ -955,8 +1070,8 @@ Twitter
 <!-- 1.2.21 COLD CHISEL -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.21">
-<div class="content-section" data-content="chisel">
-<div class="section-header"><span class="icon">🔪</span><span class="title">1.2.21 – कोल्ड चिज़ेल (Cold Chisel)</span><span class="subtitle">— चिपिंग, प्रकार, कोण, सामग्री, तीक्ष्णीकरण</span></div>
+<div class="content-card" data-content="chisel">
+<div class="fitter2-section-header"><span class="icon">🔪</span><span class="title">1.2.21 – कोल्ड चिज़ेल (Cold Chisel)</span><span class="subtitle">— चिपिंग, प्रकार, कोण, सामग्री, तीक्ष्णीकरण</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -982,14 +1097,7 @@ Twitter
 <p><strong>तीक्ष्णीकरण (Sharpening):</strong> बेंच ग्राइंडर पर पीसें, सही बिंदु कोण बनाए रखें। ऑइलस्टोन पर होन (hone) करें – महीन फिनिश के लिए। मशरूम सिर (mushroomed head – पीन किया हुआ) वाली चिज़ेल कभी उपयोग न करें – टूट सकती है, चोट लग सकती है। चिपिंग के दौरान सुरक्षा चश्मा (safety goggles) पहनें।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: कोल्ड चिज़ेल के प्रकार (Cold Chisel Types)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/cold_chisels.jpg</p>
-<code>cold_chisels.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(फ्लैट, क्रॉस-कट, हाफ-राउंड, डायमंड पॉइंट, वेब)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/cold_chisels.jpg" alt="कोल्ड चिज़ेल के प्रकार (Cold Chisel Types)  /images/notes/fitter/module-2/  (फ्लैट, क्रॉस-कट, हाफ-राउंड, डायमंड पॉइंट, वेब)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 11 – कोल्ड चिज़ेल के प्रकार</div>
 </div>
 <div class="warning-box"><h4>⚠️ सुरक्षा</h4><p>मशरूम सिर वाली चिज़ेल कभी उपयोग न करें। ठीक से पीसें। चिपिंग के दौरान <strong>सुरक्षा चश्मा</strong> पहनें।</p></div>
@@ -1001,12 +1109,12 @@ Twitter
 <!-- 1.2.22-23 MARKING MEDIA -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.22-23">
-<div class="content-section" data-content="markingmedia">
-<div class="section-header"><span class="icon">🎨</span><span class="title">1.2.22-23 – मार्किंग मीडिया (Marking Media)</span><span class="subtitle">— व्हाइट वॉश, मार्किंग ब्लू, प्रशियन ब्लू, कॉपर सल्फेट, लैकर</span></div>
+<div class="content-card" data-content="markingmedia">
+<div class="fitter2-section-header"><span class="icon">🎨</span><span class="title">1.2.22-23 – मार्किंग मीडिया (Marking Media)</span><span class="subtitle">— व्हाइट वॉश, मार्किंग ब्लू, प्रशियन ब्लू, कॉपर सल्फेट, लैकर</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>मार्किंग मीडिया (Marking media)</strong> वर्कपीस सतह पर लगाए जाते हैं ताकि अंकित रेखाएँ स्पष्ट दिखाई दें। चयन <strong>सतह फिनिश</strong> (खुरदरी या मशीनी) और <strong>सटीकता</strong> पर निर्भर करता है।</p>
+<p><strong>मार्किंग मीडिया (Marking media)</strong> वर्कपीस सतह पर लगाए जाते हैं ताकि अंकित रेखाएँ स्पष्ट दिखाई दें। चयन <strong>सतह फिनिश</strong> (खुरदरी या मशीनी) और <strong>परिशुद्धता</strong> पर निर्भर करता है।</p>
 <ul>
 <li><strong>व्हाइट वॉश (White Wash)</strong> – चाक पाउडर + पानी, मिथाइलेटेड स्पिरिट, या तारपीन। ब्रश से लगाते हैं। खुरदरी सतह (ढलाई, फोर्जिंग) पर उपयोग। जल्दी सूखता है लेकिन बहुत टिकाऊ नहीं।</li>
 <li><strong>मार्किंग ब्लू (Marking Blue)</strong> – रासायनिक डाई (एनिलिन-आधारित) + मिथाइलेटेड स्पिरिट। मशीनी सतहों पर उपयोग। जल्दी सूखता है, अच्छा कंट्रास्ट।</li>
@@ -1017,18 +1125,11 @@ Twitter
 <p><strong>अनुप्रयोग (Application):</strong> वर्कपीस सतह साफ और तेल/ग्रीस मुक्त होनी चाहिए। ब्रश, कपड़ा, या स्प्रे उपयोग करें मीडिया प्रकार के अनुसार।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: मार्किंग मीडिया (Marking Media)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/marking_media.jpg</p>
-<code>marking_media.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(व्हाइट वॉश, मार्किंग ब्लू, प्रशियन ब्लू, कॉपर सल्फेट, लैकर)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/marking_media.jpg" alt="मार्किंग मीडिया (Marking Media)  /images/notes/fitter/module-2/  (व्हाइट वॉश, मार्किंग ब्लू, प्रशियन ब्लू, कॉपर सल्फेट, लैकर)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 12 – मार्किंग मीडिया</div>
 </div>
 <div class="warning-box"><h4>⚠️ सुरक्षा</h4><p>कॉपर सल्फेट जहरीला है। दस्ताने से संभालें, त्वचा के संपर्क से बचें। निगलें नहीं।</p></div>
-<div class="info-card green"><h4>📌 परीक्षा फोकस</h4><ul><li>व्हाइट वॉश: <strong>खुरदरी ढलाई और फोर्जिंग</strong> के लिए।</li><li>मार्किंग ब्लू: <strong>मशीनी सतह</strong> के लिए।</li><li>प्रशियन ब्लू: <strong>फाइल/मशीन-फिनिश सतह</strong> के लिए।</li><li>कॉपर सल्फेट: <strong>जहरीला – सावधानी</strong>।</li><li>सेल्यूलोज लैकर: <strong>जल्दी सूखने वाला, उच्च सटीकता</strong>।</li></ul></div>
+<div class="info-card green"><h4>📌 परीक्षा फोकस</h4><ul><li>व्हाइट वॉश: <strong>खुरदरी ढलाई और फोर्जिंग</strong> के लिए।</li><li>मार्किंग ब्लू: <strong>मशीनी सतह</strong> के लिए।</li><li>प्रशियन ब्लू: <strong>फाइल/मशीन-फिनिश सतह</strong> के लिए।</li><li>कॉपर सल्फेट: <strong>जहरीला – सावधानी</strong>।</li><li>सेल्यूलोज लैकर: <strong>जल्दी सूखने वाला, उच्च परिशुद्धता</strong>।</li></ul></div>
 </div>
 </div>
 </div>
@@ -1036,8 +1137,8 @@ Twitter
 <!-- 1.2.24 SURFACE PLATE -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.24">
-<div class="content-section" data-content="surfaceplate">
-<div class="section-header"><span class="icon">⬛</span><span class="title">1.2.24 – सरफेस प्लेट (Surface Plate)</span><span class="subtitle">— डेटम सतह, ग्रेड, सामग्री, देखभाल</span></div>
+<div class="content-card" data-content="surfaceplate">
+<div class="fitter2-section-header"><span class="icon">⬛</span><span class="title">1.2.24 – सरफेस प्लेट (Surface Plate)</span><span class="subtitle">— डेटम सतह, ग्रेड, सामग्री, देखभाल</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -1046,9 +1147,9 @@ Twitter
 <ul>
 <li><strong>ग्रेड 1 (Grade 1)</strong> – सबसे सटीक। प्रेसिजन टूलरूम, निरीक्षण विभाग, उच्च-सटीक अंकन और परीक्षण के लिए।</li>
 <li><strong>ग्रेड 2 (Grade 2)</strong> – सामान्य कार्यशाला अंकन और निरीक्षण के लिए।</li>
-<li><strong>ग्रेड 3 (Grade 3)</strong> – रफ अंकन और सामान्य लेआउट कार्य के लिए, जहाँ उच्च सटीकता आवश्यक नहीं।</li>
+<li><strong>ग्रेड 3 (Grade 3)</strong> – रफ अंकन और सामान्य लेआउट कार्य के लिए, जहाँ उच्च परिशुद्धता आवश्यक नहीं।</li>
 </ul>
-<p><strong>ग्रेनाइट प्लेटें (Granite Plates):</strong> ग्रेनाइट सघन और अधिक स्थिर होता है। खरोंच होने पर भी सटीकता बनी रहती है, जंग नहीं लगती। सतह पर गड़गड़ाहट (burrs) नहीं बनती। अधिक महंगा लेकिन स्वच्छ वातावरण में बेहतर प्रदर्शन।</p>
+<p><strong>ग्रेनाइट प्लेटें (Granite Plates):</strong> ग्रेनाइट सघन और अधिक स्थिर होता है। खरोंच होने पर भी परिशुद्धता बनी रहती है, जंग नहीं लगती। सतह पर गड़गड़ाहट (burrs) नहीं बनती। अधिक महंगा लेकिन स्वच्छ वातावरण में बेहतर प्रदर्शन।</p>
 <p><strong>देखभाल (Care):</strong></p>
 <ul>
 <li>प्रत्येक उपयोग से पहले और बाद में मुलायम, लिंट-मुक्त कपड़े से साफ करें।</li>
@@ -1061,17 +1162,10 @@ Twitter
 <p><strong>विशिष्टता उदाहरण:</strong> कास्ट आयरन सरफेस प्लेट 2000 × 1000 Gr 1 IS 2285.</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: सरफेस प्लेट (Surface Plate)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/surface_plate.jpg</p>
-<code>surface_plate.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(कास्ट आयरन और ग्रेनाइट प्लेट)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/surface_plate.jpg" alt="सरफेस प्लेट (Surface Plate)  /images/notes/fitter/module-2/  (कास्ट आयरन और ग्रेनाइट प्लेट)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 13 – सरफेस प्लेट</div>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>सरफेस प्लेट <strong>संदर्भ सतह (reference surface)</strong> है।</li><li>ग्रेड 1 <strong>प्रेसिजन कार्य</strong> के लिए।</li><li>ग्रेनाइट प्लेटें खरोंच होने पर भी सटीकता बनाए रखती हैं।</li><li>विशिष्टता उदाहरण: कास्ट आयरन सरफेस प्लेट 2000×1000 Gr 1 IS 2285.</li></ul></div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>सरफेस प्लेट <strong>संदर्भ सतह (reference surface)</strong> है।</li><li>ग्रेड 1 <strong>प्रेसिजन कार्य</strong> के लिए।</li><li>ग्रेनाइट प्लेटें खरोंच होने पर भी परिशुद्धता बनाए रखती हैं।</li><li>विशिष्टता उदाहरण: कास्ट आयरन सरफेस प्लेट 2000×1000 Gr 1 IS 2285.</li></ul></div>
 </div>
 </div>
 </div>
@@ -1079,8 +1173,8 @@ Twitter
 <!-- 1.2.25 ANGLE PLATE AND V-BLOCK -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.25">
-<div class="content-section" data-content="angleplate">
-<div class="section-header"><span class="icon">📐</span><span class="title">1.2.25 – एंगल प्लेट (Angle Plate) और V-ब्लॉक (V-block)</span><span class="subtitle">— प्रकार, ग्रेड, उपयोग, समानांतर ब्लॉक</span></div>
+<div class="content-card" data-content="angleplate">
+<div class="fitter2-section-header"><span class="icon">📐</span><span class="title">1.2.25 – एंगल प्लेट (Angle Plate) और V-ब्लॉक (V-block)</span><span class="subtitle">— प्रकार, ग्रेड, उपयोग, समानांतर ब्लॉक</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -1097,14 +1191,7 @@ Twitter
 <p><strong>समानांतर ब्लॉक (Parallel Blocks):</strong> वर्कपीस को ऊँचाई पर सेट करने के लिए। ठोस और समायोज्य प्रकारों में उपलब्ध। ग्रेड: ग्रेड A (प्रेसिजन) और ग्रेड B (सामान्य).</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: एंगल प्लेट और V-ब्लॉक (Angle Plate &amp; V-block)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/angle_vblock.jpg</p>
-<code>angle_vblock.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(एंगल प्लेट प्रकार, V-ब्लॉक)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/angle_vblock.jpg" alt="एंगल प्लेट और V-ब्लॉक (Angle Plate &amp; V-block)  /images/notes/fitter/module-2/  (एंगल प्लेट प्रकार, V-ब्लॉक)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 14 – एंगल प्लेट और V-ब्लॉक</div>
 </div>
 <div class="info-card purple"><h4>📌 परीक्षा फोकस</h4><ul><li>एंगल प्लेट: <strong>90°</strong> पर दो सतहें।</li><li>स्विवेल टाइप: <strong>समायोज्य कोण</strong>।</li><li>बॉक्स एंगल प्लेट: <strong>सभी फलक वर्गाकार</strong>।</li><li>V-ब्लॉक: <strong>बेलनाकार वर्कपीस</strong> पकड़ने के लिए।</li><li>समानांतर ब्लॉक: <strong>ठोस और समायोज्य</strong>।</li></ul></div>
@@ -1115,21 +1202,21 @@ Twitter
 <!-- 1.2.26-30 PROPERTIES OF METALS -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.26-30">
-<div class="content-section" data-content="properties">
-<div class="section-header"><span class="icon">⚛️</span><span class="title">1.2.26-30 – धातुओं के भौतिक और यांत्रिक गुण</span><span class="subtitle">— रंग, वजन, तन्यता, कठोरता, क्रूरता, प्रत्यास्थता</span></div>
+<div class="content-card" data-content="properties">
+<div class="fitter2-section-header"><span class="icon">⚛️</span><span class="title">1.2.26-30 – धातुओं के भौतिक और यांत्रिक गुण</span><span class="subtitle">— रंग, वजन, तार खींचने की क्षमता, कठोरता, कठोरता, प्रत्यास्थता</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
 <p><strong>भौतिक गुण (Physical properties)</strong> – रंग, वजन (विशिष्ट गुरुत्व), संरचना (रेशेदार या दानेदार), चालकता (तापीय और विद्युत), चुंबकीय गुण, गलनशीलता (गलनांक).</p>
-<p><strong>यांत्रिक गुण (Mechanical properties)</strong> – तन्यता (ductility), आघातवर्धनीयता (malleability), कठोरता (hardness), भंगुरता (brittleness), क्रूरता (toughness), दृढ़ता (tenacity), प्रत्यास्थता (elasticity).</p>
+<p><strong>यांत्रिक गुण (Mechanical properties)</strong> – Ductility (तन्यता), Malleability (आघातवर्धनीयता), कठोरता (hardness), Brittleness (भंगुरता), Toughness (कठोरता), Tenacity (दृढ़ता), Elasticity (प्रत्यास्थता).</p>
 <ul>
-<li><strong>तन्यता (Ductility)</strong> – तार खींचने की क्षमता (तांबा, एल्यूमीनियम).</li>
+<li><strong>तार खींचने की क्षमता (Ductility)</strong> – तार खींचने की क्षमता (तांबा, एल्यूमीनियम).</li>
 <li><strong>आघातवर्धनीयता (Malleability)</strong> – हथौड़े से पीटकर या रोल करके शीट बनाने की क्षमता (सीसा).</li>
 <li><strong>कठोरता (Hardness)</strong> – इंडेंटेशन (indentation) प्रतिरोध।</li>
-<li><strong>भंगुरता (Brittleness)</strong> – बिना स्थायी विरूपण (deformation) के टूटना (कास्ट आयरन).</li>
-<li><strong>क्रूरता (Toughness)</strong> – आघात सहन कर सकता है (गढ़ा लोहा – wrought iron).</li>
+<li><strong>भंगुरता (Brittleness)</strong> – कम या बिना plastic deformation के टूटना (कास्ट आयरन).</li>
+<li><strong>कठोरता (Toughness)</strong> – आघात सहन कर सकता है (गढ़ा लोहा – wrought iron).</li>
 <li><strong>दृढ़ता (Tenacity)</strong> – तन्य बलों (tensile forces) का प्रतिरोध (माइल्ड स्टील).</li>
-<li><strong>प्रत्यास्थता (Elasticity)</strong> – बल हटने पर मूल आकार में लौटने की क्षमता (स्प्रिंग्स).</li>
+<li><strong>प्रत्यास्थता (Elasticity)</strong> – प्रत्यास्थता (स्प्रिंग्स).</li>
 </ul>
 <p><strong>लौह धातुएँ (Ferrous metals)</strong> – लोहा मुख्य घटक (कास्ट आयरन, गढ़ा लोहा, स्टील). <strong>अलौह धातुएँ (Non-ferrous metals)</strong> – लोहा नहीं (तांबा, एल्यूमीनियम, टिन, सीसा, जस्ता).</p>
 <p><strong>कास्ट आयरन के प्रकार (Cast Iron Types):</strong></p>
@@ -1148,7 +1235,7 @@ Twitter
 </ul>
 </div>
 </div>
-<div class="info-card green"><h4>📌 परीक्षा फोकस</h4><ul><li>तन्यता: <strong>तांबा, एल्यूमीनियम</strong> (तार खींचना).</li><li>आघातवर्धनीयता: <strong>सीसा</strong> (शीट बनाना).</li><li>भंगुरता: <strong>कास्ट आयरन</strong> (बिना विरूपण टूटना).</li><li>क्रूरता: <strong>गढ़ा लोहा</strong> (आघात सहन).</li><li>प्रत्यास्थता: <strong>स्प्रिंग्स</strong> (आकार में लौटना).</li><li>ग्रे कास्ट आयरन मशीन बेस के लिए सबसे सामान्य।</li></ul></div>
+<div class="info-card green"><h4>📌 परीक्षा फोकस</h4><ul><li>तार खींचने की क्षमता: <strong>तांबा, एल्यूमीनियम</strong> (तार खींचना).</li><li>आघातवर्धनीयता: <strong>सीसा</strong> (शीट बनाना).</li><li>भंगुरता: <strong>कास्ट आयरन</strong> (बिना विरूपण टूटना).</li><li>कठोरता: <strong>गढ़ा लोहा</strong> (आघात सहन).</li><li>प्रत्यास्थता: <strong>स्प्रिंग्स</strong> (आकार में लौटना).</li><li>ग्रे कास्ट आयरन मशीन बेस के लिए सबसे सामान्य।</li></ul></div>
 </div>
 </div>
 </div>
@@ -1156,8 +1243,8 @@ Twitter
 <!-- 1.2.31-32 METAL-CUTTING SAWS -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.31-32">
-<div class="content-section" data-content="saws">
-<div class="section-header"><span class="icon">🪚</span><span class="title">1.2.31-32 – धातु काटने वाली आरी (Metal-Cutting Saws)</span><span class="subtitle">— पावर आरी, बैंड आरी, वृत्ताकार आरी, कंटूर आरी</span></div>
+<div class="content-card" data-content="saws">
+<div class="fitter2-section-header"><span class="icon">🪚</span><span class="title">1.2.31-32 – धातु काटने वाली आरी (Metal-Cutting Saws)</span><span class="subtitle">— पावर आरी, बैंड आरी, वृत्ताकार आरी, कंटूर आरी</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -1171,14 +1258,7 @@ Twitter
 <p><strong>सुरक्षा (Safety):</strong> हमेशा कटिंग फ्लुइड (cutting fluid) उपयोग करें। अत्यधिक काटने का दबाव न लगाएँ। कई टुकड़ों के लिए स्टॉप गेज (stop gauge) उपयोग करें। ब्लेड से हाथ दूर रखें। आरी चलते समय वर्कपीस कभी मापें नहीं।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: धातु काटने वाली आरी (Metal-Cutting Saws)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/metal_saws.jpg</p>
-<code>metal_saws.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(पावर आरी, बैंड आरी, वृत्ताकार आरी, कंटूर आरी)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/metal_saws.jpg" alt="धातु काटने वाली आरी (Metal-Cutting Saws)  /images/notes/fitter/module-2/  (पावर आरी, बैंड आरी, वृत्ताकार आरी, कंटूर आरी)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 15 – धातु काटने वाली आरी</div>
 </div>
 <div class="warning-box"><h4>⚠️ सुरक्षा</h4><p>आरी चलते समय वर्कपीस कभी मापें नहीं। ब्लेड से हाथ दूर रखें। हमेशा कटिंग फ्लुइड उपयोग करें।</p></div>
@@ -1189,34 +1269,27 @@ Twitter
 <!-- 1.2.33 OUTSIDE MICROMETER -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.33">
-<div class="content-section" data-content="micrometer">
-<div class="section-header"><span class="icon">🔬</span><span class="title">1.2.33 – बाह्य माइक्रोमीटर (Outside Micrometer)</span><span class="subtitle">— 0.01 मिलीमीटर तक सटीक माप</span></div>
+<div class="content-card" data-content="micrometer">
+<div class="fitter2-section-header"><span class="icon">🔬</span><span class="title">1.2.33 – बाह्य माइक्रोमीटर (Outside Micrometer)</span><span class="subtitle">— 0.01 मिलीमीटर तक सटीक माप</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>बाह्य माइक्रोमीटर (Outside Micrometer)</strong> प्रेसिजन उपकरण है, <strong>0.01 मिलीमीटर</strong> तक सटीकता के साथ आयाम मापता है।</p>
+<p><strong>बाह्य माइक्रोमीटर (Outside Micrometer)</strong> प्रेसिजन उपकरण है, <strong>0.01 मिलीमीटर</strong> तक परिशुद्धता के साथ आयाम मापता है।</p>
 <p><strong>भाग (Parts):</strong> फ्रेम (ड्रॉप-जाली स्टील), बैरल/स्लीव (स्थिर, अंशांकन), थिम्बल (अंशांकन), स्पिंडल (स्क्रू द्वारा चलता है), एन्विल (स्थिर मापने वाला फलक), स्पिंडल लॉक नट, रैचेट स्टॉप (एकसमान दबाव).</p>
-<p><strong>अल्पतमांक (Least Count – Metric):</strong> स्पिंडल पिच = 0.5 मिलीमीटर। थिम्बल पर 50 विभाजन। LC = 0.5 / 50 = <strong>0.01 मिलीमीटर</strong>.</p>
+<p><strong>Least Count (सबसे छोटी माप) (Least Count – Metric):</strong> स्पिंडल पिच = 0.5 मिलीमीटर। थिम्बल पर 50 विभाजन। LC = 0.5 / 50 = <strong>0.01 मिलीमीटर</strong>.</p>
 <p><strong>पठन (Reading):</strong> बैरल रीडिंग (मिलीमीटर) + थिम्बल रीडिंग (विभाजन × 0.01).</p>
 <p><strong>रेंज (Ranges):</strong> 0-25, 25-50, 50-75, 75-100, 100-125, 125-150 मिलीमीटर।</p>
 <p><strong>देखभाल (Care):</strong> उपयोग से पहले और बाद में मापने वाले फलक साफ करें। शून्य त्रुटि (zero error) नियमित जाँचें। रैचेट स्टॉप – एकसमान दबाव के लिए। स्वच्छ, सूखी जगह पर रखें।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: बाह्य माइक्रोमीटर (Outside Micrometer)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/outside_micrometer.jpg</p>
-<code>outside_micrometer.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(भाग, पठन उदाहरण)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/outside_micrometer.jpg" alt="बाह्य माइक्रोमीटर (Outside Micrometer)  /images/notes/fitter/module-2/  (भाग, पठन उदाहरण)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 16 – बाह्य माइक्रोमीटर</div>
 </div>
 <div class="example-box">
 <h4 style="margin:0 0 6px; color:#003366;">📘 उदाहरण</h4>
 <p><strong>पठन:</strong> बैरल: 13 मिलीमीटर + 0.5 = 13.5 मिलीमीटर। थिम्बल 13वें विभाजन पर संरेखित। थिम्बल = 13 × 0.01 = 0.13 मिलीमीटर। कुल = <strong>13.63 मिलीमीटर</strong>.</p>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>अल्पतमांक: <strong>0.01 मिलीमीटर</strong>.</li><li>स्पिंडल पिच: <strong>0.5 मिलीमीटर</strong>.</li><li>थिम्बल विभाजन: <strong>50</strong>.</li><li>रेंज: 0-25, 25-50, 50-75, 75-100, 100-125, 125-150 मिलीमीटर।</li></ul></div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>Least Count (सबसे छोटी माप): <strong>0.01 मिलीमीटर</strong>.</li><li>स्पिंडल पिच: <strong>0.5 मिलीमीटर</strong>.</li><li>थिम्बल विभाजन: <strong>50</strong>.</li><li>रेंज: 0-25, 25-50, 50-75, 75-100, 100-125, 125-150 मिलीमीटर।</li></ul></div>
 </div>
 </div>
 </div>
@@ -1224,30 +1297,23 @@ Twitter
 <!-- 1.2.34 DEPTH MICROMETER -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.34">
-<div class="content-section" data-content="depthmic">
-<div class="section-header"><span class="icon">📏</span><span class="title">1.2.34 – डेप्थ माइक्रोमीटर (Depth Micrometer)</span><span class="subtitle">— छिद्रों, स्लॉट्स, स्टेप्स की गहराई मापना</span></div>
+<div class="content-card" data-content="depthmic">
+<div class="fitter2-section-header"><span class="icon">📏</span><span class="title">1.2.34 – डेप्थ माइक्रोमीटर (Depth Micrometer)</span><span class="subtitle">— छिद्रों, स्लॉट्स, स्टेप्स की गहराई मापना</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
 <p><strong>डेप्थ माइक्रोमीटर (Depth Micrometer)</strong> छिद्रों, स्लॉट्स, अवकाशों (recesses), स्टेप्स की गहराई मापने के लिए उपयोग होता है।</p>
 <p><strong>भाग (Parts):</strong> <strong>स्टॉक (Stock – आधार)</strong>, <strong>स्लीव (Sleeve)</strong> (अंशांकन), <strong>थिम्बल (Thimble)</strong>, <strong>विनिमेय एक्सटेंशन रॉड्स (interchangeable extension rods)</strong>.</p>
-<p>अल्पतमांक: <strong>0.01 मिलीमीटर</strong>.</p>
+<p>Least Count (सबसे छोटी माप): <strong>0.01 मिलीमीटर</strong>.</p>
 <p><strong>एक्सटेंशन रॉड्स (Extension rods):</strong> विभिन्न आकार – 0-25, 25-50, 50-75, 75-100, 100-125, 125-150 मिलीमीटर।</p>
 <p><strong>उपयोग (Use):</strong> एक्सटेंशन रॉड ठीक से बैठी होनी चाहिए। आधार वर्कपीस सतह पर सपाट (flat) होना चाहिए। बैरल और थिम्बल बाह्य माइक्रोमीटर जैसे पढ़ें।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: डेप्थ माइक्रोमीटर (Depth Micrometer)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/depth_micrometer.jpg</p>
-<code>depth_micrometer.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(भाग, एक्सटेंशन रॉड्स)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/depth_micrometer.jpg" alt="डेप्थ माइक्रोमीटर (Depth Micrometer)  /images/notes/fitter/module-2/  (भाग, एक्सटेंशन रॉड्स)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 17 – डेप्थ माइक्रोमीटर</div>
 </div>
 <div class="info-card blue"><h4>💡 सुझाव</h4><p>एक्सटेंशन रॉड ठीक से बैठी हो, आधार वर्कपीस सतह पर सपाट हो – यह सुनिश्चित करें।</p></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>डेप्थ माइक्रोमीटर मापता है: <strong>छिद्र, स्लॉट, स्टेप की गहराई</strong>.</li><li>इसमें <strong>विनिमेय एक्सटेंशन रॉड्स</strong> होती हैं।</li><li>अल्पतमांक: <strong>0.01 मिलीमीटर</strong>.</li></ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>डेप्थ माइक्रोमीटर मापता है: <strong>छिद्र, स्लॉट, स्टेप की गहराई</strong>.</li><li>इसमें <strong>विनिमेय एक्सटेंशन रॉड्स</strong> होती हैं।</li><li>Least Count (सबसे छोटी माप): <strong>0.01 मिलीमीटर</strong>.</li></ul></div>
 </div>
 </div>
 </div>
@@ -1255,34 +1321,27 @@ Twitter
 <!-- 1.2.35 VERNIER CALIPERS -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.35">
-<div class="content-section" data-content="vernier">
-<div class="section-header"><span class="icon">📐</span><span class="title">1.2.35 – वर्नियर कैलिपर (Vernier Calipers)</span><span class="subtitle">— 0.02 मिलीमीटर तक सटीक माप</span></div>
+<div class="content-card" data-content="vernier">
+<div class="fitter2-section-header"><span class="icon">📐</span><span class="title">1.2.35 – वर्नियर कैलिपर (Vernier Calipers)</span><span class="subtitle">— 0.02 मिलीमीटर तक सटीक माप</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>वर्नियर कैलिपर (Vernier Caliper)</strong> प्रेसिजन माप उपकरण है, सटीकता <strong>0.02 मिलीमीटर</strong> तक।</p>
+<p><strong>वर्नियर कैलिपर (Vernier Caliper)</strong> प्रेसिजन माप उपकरण है, परिशुद्धता <strong>0.02 मिलीमीटर</strong> तक।</p>
 <p><strong>भाग (Parts):</strong> स्थिर जॉ (बाहरी और भीतरी), चल जॉ, वर्नियर स्लाइड, बीम (मुख्य स्केल), डेप्थ बार, थंब लीवर (स्लाइड करने के लिए), वर्नियर स्केल (स्लाइड पर).</p>
-<p><strong>अल्पतमांक (Least Count – 50-division vernier):</strong> 50 VSD = 49 मिलीमीटर; 1 MSD = 1 मिलीमीटर; LC = 1 - 49/50 = <strong>0.02 मिलीमीटर</strong>.</p>
+<p><strong>Least Count (सबसे छोटी माप) (Least Count – 50-division vernier):</strong> 50 VSD = 49 मिलीमीटर; 1 MSD = 1 मिलीमीटर; LC = 1 - 49/50 = <strong>0.02 मिलीमीटर</strong>.</p>
 <p><strong>पठन (Reading):</strong> मुख्य स्केल रीडिंग + (वर्नियर संयोग × LC).</p>
 <p><strong>आकार (Sizes):</strong> 150, 200, 250, 300, 600 मिलीमीटर।</p>
 <p><strong>देखभाल (Care):</strong> मापने के अलावा किसी अन्य उद्देश्य के लिए उपयोग न करें। उपयोग के बाद साफ करके बॉक्स में रखें। गिराने/झटके से बचें।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: वर्नियर कैलिपर (Vernier Caliper)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/vernier_caliper.jpg</p>
-<code>vernier_caliper.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(भाग, पठन उदाहरण)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/vernier_caliper.jpg" alt="वर्नियर कैलिपर (Vernier Caliper)  /images/notes/fitter/module-2/  (भाग, पठन उदाहरण)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 18 – वर्नियर कैलिपर</div>
 </div>
 <div class="example-box">
 <h4 style="margin:0 0 6px; color:#003366;">📘 उदाहरण</h4>
 <p><strong>पठन:</strong> मुख्य स्केल: 60 मिलीमीटर। वर्नियर 28वाँ विभाजन संरेखित। LC = 0.02. कुल = 60 + (28 × 0.02) = <strong>60.56 मिलीमीटर</strong>.</p>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>अल्पतमांक: <strong>0.02 मिलीमीटर</strong>.</li><li>पठन = मुख्य स्केल + वर्नियर संयोग × LC.</li><li>आकार: 150 से 600 मिलीमीटर।</li></ul></div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>Least Count (सबसे छोटी माप): <strong>0.02 मिलीमीटर</strong>.</li><li>पठन = मुख्य स्केल + वर्नियर संयोग × LC.</li><li>आकार: 150 से 600 मिलीमीटर।</li></ul></div>
 </div>
 </div>
 </div>
@@ -1290,29 +1349,22 @@ Twitter
 <!-- 1.2.36 VERNIER BEVEL PROTRACTOR -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.36">
-<div class="content-section" data-content="bevel">
-<div class="section-header"><span class="icon">📐</span><span class="title">1.2.36 – वर्नियर बेवल प्रोट्रैक्टर (Vernier Bevel Protractor)</span><span class="subtitle">— 5′ सटीकता के साथ कोण माप</span></div>
+<div class="content-card" data-content="bevel">
+<div class="fitter2-section-header"><span class="icon">📐</span><span class="title">1.2.36 – वर्नियर बेवल प्रोट्रैक्टर (Vernier Bevel Protractor)</span><span class="subtitle">— 5′ परिशुद्धता के साथ कोण माप</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>वर्नियर बेवल प्रोट्रैक्टर (Vernier Bevel Protractor)</strong> कोण मापने के लिए, सटीकता <strong>5 मिनट (5′)</strong>.</p>
+<p><strong>वर्नियर बेवल प्रोट्रैक्टर (Vernier Bevel Protractor)</strong> कोण मापने के लिए, परिशुद्धता <strong>5 मिनट (5′)</strong>.</p>
 <p><strong>भाग (Parts):</strong> स्टॉक (संपर्क सतह), डायल (डिग्री में अंशांकित), ब्लेड (दूसरी संपर्क सतह, बढ़ाया जा सकता है), लॉकिंग स्क्रू।</p>
-<p><strong>अल्पतमांक (Least Count):</strong> 23 MSD = 12 VSD; 1 MSD = 1°; LC = 2° - (23/12)° = <strong>5′</strong>.</p>
+<p><strong>Least Count (सबसे छोटी माप) (Least Count):</strong> 23 MSD = 12 VSD; 1 MSD = 1°; LC = 2° - (23/12)° = <strong>5′</strong>.</p>
 <p><strong>उपयोग (Uses):</strong> कोण मापना (न्यून और अधिक), मशीन टूल्स पर वर्क-होल्डिंग उपकरणों को विशिष्ट कोणों पर सेट करना।</p>
 <p><strong>पठन (Reading):</strong> न्यून कोणों के लिए सीधे पढ़ें। अधिक कोणों के लिए दूसरी तरफ स्केल पढ़ें और 180° से घटाएँ।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: वर्नियर बेवल प्रोट्रैक्टर (Vernier Bevel Protractor)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/bevel_protractor.jpg</p>
-<code>bevel_protractor.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(भाग, पठन उदाहरण)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/bevel_protractor.jpg" alt="वर्नियर बेवल प्रोट्रैक्टर (Vernier Bevel Protractor)  /images/notes/fitter/module-2/  (भाग, पठन उदाहरण)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 19 – वर्नियर बेवल प्रोट्रैक्टर</div>
 </div>
-<div class="info-card orange"><h4>📌 परीक्षा फोकस</h4><ul><li>अल्पतमांक: <strong>5′</strong>.</li><li>अधिक कोण: स्केल पढ़ें और <strong>180° से घटाएँ</strong>।</li><li>भाग: स्टॉक, डायल, ब्लेड, लॉकिंग स्क्रू।</li></ul></div>
+<div class="info-card orange"><h4>📌 परीक्षा फोकस</h4><ul><li>Least Count (सबसे छोटी माप): <strong>5′</strong>.</li><li>अधिक कोण: स्केल पढ़ें और <strong>180° से घटाएँ</strong>।</li><li>भाग: स्टॉक, डायल, ब्लेड, लॉकिंग स्क्रू।</li></ul></div>
 </div>
 </div>
 </div>
@@ -1320,29 +1372,22 @@ Twitter
 <!-- 1.2.37 DIAL CALIPER -->
 <!-- ====================================================================== -->
 <div class="container" id="sec-1.2.37">
-<div class="content-section" data-content="dial">
-<div class="section-header"><span class="icon">📊</span><span class="title">1.2.37 – डायल कैलिपर (Dial Caliper)</span><span class="subtitle">— वर्नियर का प्रत्यक्ष-पठन विकल्प</span></div>
+<div class="content-card" data-content="dial">
+<div class="fitter2-section-header"><span class="icon">📊</span><span class="title">1.2.37 – डायल कैलिपर (Dial Caliper)</span><span class="subtitle">— वर्नियर का प्रत्यक्ष-पठन विकल्प</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
 <p><strong>डायल कैलिपर (Dial Caliper)</strong> प्रत्यक्ष-पठन (direct-reading) उपकरण, वर्नियर कैलिपर जैसा ही है लेकिन तेज़ और पढ़ने में आसान।</p>
 <p>बीम स्केल <strong>5 मिलीमीटर</strong> वृद्धि में अंशांकित। डायल 100 बराबर भागों में विभाजित। प्रत्येक डायल विभाजन = <strong>5/100 = 0.05 मिलीमीटर</strong>.</p>
 <p><strong>पठन (Reading):</strong> बीम स्केल रीडिंग + डायल रीडिंग × 0.05.</p>
-<p><strong>डिजिटल कैलिपर (Digital Calipers):</strong> और भी अधिक सटीकता (<strong>0.01 मिलीमीटर</strong>), LCD प्रदर्शन, शून्य सेटिंग, मीट्रिक/इंच रूपांतरण, ऑटो पावर-ऑफ।</p>
+<p><strong>डिजिटल कैलिपर (Digital Calipers):</strong> और भी अधिक परिशुद्धता (<strong>0.01 मिलीमीटर</strong>), LCD प्रदर्शन, शून्य सेटिंग, मीट्रिक/इंच रूपांतरण, ऑटो पावर-ऑफ।</p>
 <p><strong>देखभाल (Care):</strong> बीम और स्लाइडिंग भागों को नियमित रूप से साफ करें। रैक और पिनियन (rack and pinion) पर तेल की छोटी बूंद लगाएँ – सुचारू स्लाइडिंग के लिए।</p>
 </div>
 </div>
-<div class="tool-figure">
-<div class="placeholder-icon">🖼️</div>
-<div class="image-placeholder">
-<p><strong>चित्र: डायल कैलिपर (Dial Caliper)</strong></p>
-<p>स्थान: /images/notes/fitter/module-2/dial_caliper.jpg</p>
-<code>dial_caliper.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(डायल कैलिपर और डिजिटल कैलिपर)</p>
-</div>
+<div class="tool-figure"><img src="/images/notes/fitter/module-2/dial_caliper.jpg" alt="डायल कैलिपर (Dial Caliper)  /images/notes/fitter/module-2/  (डायल कैलिपर और डिजिटल कैलिपर)" loading="lazy" style="width:100%;height:auto;border-radius:10px;display:block;">
 <div class="figure-caption">Fig 20 – डायल कैलिपर</div>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>डायल कैलिपर: <strong>0.05 मिलीमीटर</strong>.</li><li>डिजिटल कैलिपर: <strong>0.01 मिलीमीटर</strong> सटीकता।</li></ul></div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>डायल कैलिपर: <strong>0.05 मिलीमीटर</strong>.</li><li>डिजिटल कैलिपर: <strong>0.01 मिलीमीटर</strong> परिशुद्धता।</li></ul></div>
 </div>
 </div>
 </div>
@@ -1358,19 +1403,19 @@ Twitter
 <li><strong>अंकन (Marking):</strong> स्क्राइबर, पंच (सेंटर, प्रिक), मार्किंग मीडिया, सरफेस प्लेट, एंगल प्लेट, V-ब्लॉक, सरफेस गेज।</li>
 <li><strong>पकड़ (Holding):</strong> बेंच वाइस, पाइप वाइस, हैंड वाइस, पिन वाइस, टूलमेकर वाइस, लेग वाइस।</li>
 <li><strong>काटना (Cutting):</strong> फाइलें (सिंगल/डबल कट, ग्रेड, आकार, सूई फाइल), कोल्ड चिज़ेल (विभिन्न सामग्री के लिए कोण), हैकसॉ।</li>
-<li><strong>गुण (Properties):</strong> धातुओं के भौतिक (रंग, वजन, चालकता) और यांत्रिक (तन्यता, आघातवर्धनीयता, कठोरता, क्रूरता, प्रत्यास्थता) गुण।</li>
+<li><strong>गुण (Properties):</strong> धातुओं के भौतिक (रंग, वजन, चालकता) और यांत्रिक (तार खींचने की क्षमता, आघातवर्धनीयता, कठोरता, कठोरता, प्रत्यास्थता) गुण।</li>
 <li><strong>सुरक्षा (Safety):</strong> उचित PPE, उपकरणों की सावधानीपूर्वक हैंडलिंग, सफाई, स्नेहन।</li>
 </ul>
-<p>इन बुनियादी बातों में महारत हासिल करना हर फिटर के लिए आवश्यक है। प्रत्येक संचालन को सटीकता और सुरक्षा के साथ अभ्यास करें।</p>
+<p>इन बुनियादी बातों में महारत हासिल करना हर फिटर के लिए आवश्यक है। प्रत्येक संचालन को परिशुद्धता और सुरक्षा के साथ अभ्यास करें।</p>
 </div>
 </div>
 </div>
 </div>
 <!-- ============================== MCQ ============================== -->
 <div class="container">
-<div class="content-section" data-content="mcq">
-<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
-<div class="section-body">
+<div class="content-card" data-content="mcq">
+<div class="fitter2-section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="fitter2-section-body">
 <div class="mcq-link">
 <p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
 <a href="/question-bank/fitter/index.html?mod=2" target="_blank">📝 Go to Question Bank →</a>
@@ -1380,9 +1425,9 @@ Twitter
 </div>
 </div>
 <div class="container">
-<div class="content-section" data-content="related">
-<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
-<div class="section-body">
+<div class="content-card" data-content="related">
+<div class="fitter2-section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="fitter2-section-body">
 <div style="display:flex; flex-wrap:wrap; gap:12px;">
 <a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
 <a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
@@ -1480,5 +1525,6 @@ Twitter
         console.log('✅ Fitter Theory Module 2 – Complete Book Loaded (without Drilling).');
         console.log('📚 All exercises covered with full detail in Hindi + technical terms in English brackets.');
     </script>
+
 </body>
 </html>
