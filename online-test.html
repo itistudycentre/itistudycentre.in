@@ -781,10 +781,17 @@
   //     कर दें जब उस ट्रेड का question-bank.js साइट पर जोड़ दें)
   // --------------------------------------------------------------
   const TRADES = [
-    { key: 'employability', title: 'Employability Skills', hindi: 'रोजगार कौशल', icon: '📘', available: true },
-    { key: 'fitter',        title: 'Fitter',                hindi: 'फिटर',        icon: '🔧', available: false },
-    { key: 'plumber',       title: 'Plumber',                hindi: 'प्लंबर',      icon: '🚰', available: false },
-    { key: 'other',         title: 'Other Trades',           hindi: 'अन्य ट्रेड',  icon: '🛠️', available: false }
+    { key: 'employability',          title: 'Employability Skills',                              hindi: 'रोजगार कौशल',                         icon: '📘' },
+    { key: 'fitter',                 title: 'Fitter',                                           hindi: 'फिटर',                                 icon: '🔧' },
+    { key: 'plumber',                title: 'Plumber',                                          hindi: 'प्लंबर',                               icon: '🚰' },
+    { key: 'mechanic-motor-vehicle', title: 'Mechanic Motor Vehicle (MMV)',                     hindi: 'मैकेनिक मोटर व्हीकल',                  icon: '🚗' },
+    { key: 'welder',                 title: 'Welder',                                           hindi: 'वेल्डर',                               icon: '🔥' },
+    { key: 'mechanic-diesel',        title: 'Mechanic Diesel',                                  hindi: 'मैकेनिक डीजल',                         icon: '🚛' },
+    { key: 'rac',                    title: 'RAC – Refrigeration and Air Conditioning',          hindi: 'रेफ्रिजरेशन एवं एयर कंडीशनिंग',         icon: '❄️' },
+    { key: 'turner',                 title: 'Turner',                                           hindi: 'टर्नर',                                icon: '⚙️' },
+    { key: 'machinist',              title: 'Machinist',                                        hindi: 'मशीनिस्ट',                             icon: '🔩' },
+    { key: 'electrician',            title: 'Electrician',                                      hindi: 'इलेक्ट्रीशियन',                        icon: '⚡' },
+    { key: 'copa',                   title: 'COPA – Computer Operator and Programming Assistant', hindi: 'कोपा',                              icon: '💻' }
   ];
 
   // जिस ट्रेड में "1st Year" के साथ किसी अतिरिक्त key (जैसे "AI Module")
@@ -1229,23 +1236,28 @@
   function renderTrades() {
     const grid = document.getElementById('tradeGrid');
     grid.innerHTML = '';
+
     TRADES.forEach(t => {
+      const isAvailable = !!(window.QUESTION_BANK && window.QUESTION_BANK[t.key]);
+
       const card = document.createElement('div');
-      card.className = 'trade-card' + (t.available ? '' : ' coming-soon');
+      card.className = 'trade-card' + (isAvailable ? '' : ' coming-soon');
       card.innerHTML = `
         <span class="trade-icon">${t.icon}</span>
         <div class="trade-name">${t.title}<span class="hi">${t.hindi}</span></div>
-        ${t.available
+        ${isAvailable
           ? '<span class="trade-btn">टेस्ट शुरू करें →</span>'
           : '<span class="soon-badge">🔔 जल्द आ रहा है</span>'}
       `;
+
       card.addEventListener('click', () => {
-        if (t.available) {
+        if (isAvailable) {
           openTrade(t.key, t.title, t.icon);
         } else {
-          alert('🔔 ' + t.title + ' के लिए प्रश्न बैंक जल्द जोड़ा जाएगा। कृपया प्रतीक्षा करें।');
+          alert('🔔 ' + t.title + ' के लिए प्रश्न बैंक अभी उपलब्ध नहीं है।');
         }
       });
+
       grid.appendChild(card);
     });
   }
@@ -1295,6 +1307,7 @@
     // बैकग्राउंड में प्रश्न बैंक लोड करते रहो ताकि क्लिक करते ही टेस्ट तैयार मिले
     loadQuestionBank()
       .then(() => {
+        renderTrades();
         console.log('✅ Question bank ready!');
       })
       .catch((err) => {
