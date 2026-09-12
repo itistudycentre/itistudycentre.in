@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Module 8 – Basic Maintenance (पूर्ण) | Fitter Theory | ITI Study Centre</title>
-<meta content="Complete Fitter Theory Module 8 – Basic Maintenance. Total Productive Maintenance, Routine Maintenance, Preventive Maintenance, Inspection Types, Installation &amp; Overhaul. Full NIMI syllabus." name="description"/>
+<title>Module 7 – Turning (पूर्ण) | Fitter Theory | ITI Study Centre</title>
+<meta content="Fitter Theory Module 7 – Turning: lathe safety, specifications, main parts, feed and thread cutting mechanism, centre work, facing and roughing tools, cutting tool nomenclature and selection, tool angles, cutting speed/feed, coolants/lubricants, chucks, face plate, drilling, boring, tool setting, tool post, knurling, standard tapers and screw threads. NIMI-based." name="description"/>
 <style>
         * { margin:0; padding:0; box-sizing:border-box; }
         body {
@@ -472,165 +472,58 @@
             .tool-figure { border:1px solid #ccc; break-inside:avoid; }
         }
     
-/* ================= TOP NAV + SEARCH + SHARE — FINAL CSS FIX ================= */
-.module-navigation{
-    display:flex !important;
-    justify-content:space-between !important;
-    align-items:center !important;
-    gap:10px !important;
-    margin:8px 0 25px !important;
-}
-.module-navigation a{
-    display:inline-flex !important;
-    align-items:center;
-    justify-content:center;
-    background:#003366 !important;
-    color:#fff !important;
-    text-decoration:none !important;
-    padding:9px 17px !important;
-    border-radius:7px !important;
-    font-size:.9rem !important;
-    font-weight:600 !important;
-    line-height:1.3 !important;
-    border:1px solid #003366 !important;
-}
-.module-navigation a:hover{
-    background:#002244 !important;
-    color:#fff !important;
-    transform:translateY(-1px);
-}
-.search-section{
-    display:flex !important;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
-    margin:16px 0 22px;
-}
-.search-section input{
-    flex:1;
-    min-width:0;
-    max-width:540px;
-    padding:12px 16px !important;
-    border:1px solid #cfd7e2 !important;
-    border-radius:8px !important;
-    background:#fff !important;
-    color:#1e2a3a;
-    font-size:.95rem !important;
-    outline:none;
-}
-.search-section input:focus{
-    border-color:#003366 !important;
-    box-shadow:0 0 0 3px rgba(0,51,102,.08);
-}
-.search-section button{
-    border:0 !important;
-    background:#003366 !important;
-    color:#fff !important;
-    padding:11px 22px !important;
-    border-radius:8px !important;
-    font-weight:600 !important;
-    cursor:pointer;
-}
-.search-section button:hover{
-    background:#002244 !important;
-}
-.share-section{
-    display:flex !important;
-    align-items:center;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:9px;
-    margin:0 auto 24px !important;
-    padding:10px 14px !important;
-    background:#f8fafc !important;
-    border:1px solid #e6eaef !important;
-    border-radius:12px !important;
-}
-.share-label{
-    color:#003366 !important;
-    font-weight:700 !important;
-}
-.share-btn{
-    display:inline-flex !important;
-    align-items:center;
-    justify-content:center;
-    gap:7px;
-    min-height:40px;
-    padding:9px 14px !important;
-    border:1px solid transparent !important;
-    border-radius:8px !important;
-    color:#fff !important;
-    font-family:inherit;
-    font-size:.88rem !important;
-    font-weight:600 !important;
-    line-height:1.2;
-    text-decoration:none !important;
-    cursor:pointer;
-    appearance:none;
-    -webkit-appearance:none;
-}
-.share-btn svg{
-    width:18px !important;
-    height:18px !important;
-    display:block !important;
-    flex:0 0 18px;
-    fill:currentColor;
-}
-.share-btn.whatsapp{background:#25d366 !important;}
-.share-btn.facebook{background:#1877f2 !important;}
-.share-btn.twitter{background:#111827 !important;}
-.share-btn.link{background:#003366 !important;}
-.share-btn:hover{
-    transform:translateY(-1px);
-    opacity:.92;
-}
-@media(max-width:768px){
-    .module-navigation{
-        flex-direction:column !important;
-    }
-    .module-navigation a{
-        width:100% !important;
-    }
-    .search-section{
-        flex-direction:column !important;
-        align-items:stretch !important;
-    }
-    .search-section input,
-    .search-section button{
-        width:100% !important;
-        max-width:100% !important;
-    }
-    .share-section{
-        justify-content:stretch !important;
-    }
-    .share-btn{
-        flex:1 1 140px;
-    }
-}
-
-</style>
+        /* ===== MODULE NAVIGATION – SAME FORMAT AS MODULE 2/3/4/5/6 ===== */
+        .module-navigation {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:10px;
+            margin:8px 0 25px;
+        }
+        .module-navigation a {
+            background:#003366;
+            color:#fff;
+            text-decoration:none;
+            padding:9px 17px;
+            border-radius:7px;
+            font-size:.9rem;
+            font-weight:600;
+            transition:.25s;
+        }
+        .module-navigation a:hover {
+            background:#002244;
+            transform:translateY(-1px);
+        }
+        @media(max-width:768px){
+            .module-navigation{flex-direction:column;}
+            .module-navigation a{width:100%; text-align:center;}
+        }
+    </style>
 </head>
 <body>
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
-
-
-
 <div class="breadcrumb">
 <div class="container">
 <a href="/">🏠 Home</a>  › 
 <a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
 <a href="/notes/fitter/index.html">Fitter Theory</a>  › 
-<span class="current">Module 8 – Basic Maintenance (पूर्ण)</span>
+<span class="current">Module 7 – Turning (पूर्ण)</span>
 </div>
 </div>
 <section class="page-title">
 <div class="container">
-<h1>🔧 Module 8 – Basic Maintenance (पूर्ण)</h1>
-<p>कुल उत्पादक रखरखाव · नियमित रखरखाव · निवारक रखरखाव · निरीक्षण · स्थापना और ओवरहॉल</p>
+<h1>⚙️ Module 7 – Turning (पूर्ण)</h1>
+<p>लेथ सुरक्षा · लेथ भाग · फीड तंत्र · कैच प्लेट · कटिंग टूल नामकरण · टूल कोण · चक · बोरिंग · नरलिंग · टेपर · स्क्रू थ्रेड</p>
 </div>
 </section>
+<div class="container">
+<div class="module-navigation">
+<a href="/notes/fitter/fitter6.html">← Module 6</a>
+<a href="/notes/fitter/">📚 All Fitter Modules</a>
+<a href="/notes/fitter/fitter8.html">Module 8 →</a>
+</div>
+</div>
 <section class="search-section container">
 <input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
 <button onclick="filterSections()">🔍 Search</button>
@@ -661,431 +554,888 @@ Twitter
 <div class="content-section" style="border:2px solid #003366;">
 <div class="section-header" style="background:#003366; border-bottom:none;">
 <span class="icon" style="color:#ffcc00;">📚</span>
-<span class="title" style="color:#fff;">विषय-सूची – Module 8 (Basic Maintenance)</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 7 (Turning)</span>
 </div>
 <div class="section-body" style="background:#fff;">
 <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:6px 14px;">
-<a href="#sec-tpm" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔄 8.1 – कुल उत्पादक रखरखाव (TPM)</a>
-<a href="#sec-routine" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📋 8.2 – नियमित रखरखाव (Routine Maintenance)</a>
-<a href="#sec-preventive" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🛡️ 8.3 – निवारक रखरखाव (Preventive Maintenance)</a>
-<a href="#sec-inspection" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔍 8.4 – निरीक्षण और गैजेंट्स (Inspection &amp; Gadgets)</a>
-<a href="#sec-installation" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 8.5 – स्थापना और ओवरहॉल (Installation &amp; Overhaul)</a>
+<a href="#sec-lathe-safety" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🛡️ 7.1 – लेथ सुरक्षा (Lathe Safety)</a>
+<a href="#sec-lathe-parts" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚙️ 7.2 – लेथ मुख्य भाग (Lathe Main Parts)</a>
+<a href="#sec-feed-mech" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 7.3 – फीड और थ्रेड कटिंग तंत्र</a>
+<a href="#sec-catch-plate" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔗 7.4 – कैच प्लेट और डॉग के साथ कार्य</a>
+<a href="#sec-facing-rough" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 7.5 – फेसिंग और रफिंग टूल</a>
+<a href="#sec-tool-nom" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 7.6 – सिंगल पॉइंट टूल नामकरण</a>
+<a href="#sec-tool-select" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔎 7.7 – टूल चयन</a>
+<a href="#sec-tool-angles" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 7.8 – टूल कोणों की आवश्यकता</a>
+<a href="#sec-speed-feed" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⚡ 7.9 – कटिंग स्पीड, फीड, कूलेंट</a>
+<a href="#sec-chucks" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 7.10 – चक – स्वतंत्र 4-जॉ चक</a>
+<a href="#sec-faceplate" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">⬛ 7.11 – फेस प्लेट (Face Plate)</a>
+<a href="#sec-drilling" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🕳️ 7.12 – लेथ पर ड्रिलिंग</a>
+<a href="#sec-boring" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔄 7.13 – बोरिंग और बोरिंग टूल</a>
+<a href="#sec-tool-setting" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔧 7.14 – टूल सेटिंग (Tool Setting)</a>
+<a href="#sec-tool-post" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔩 7.15 – टूल पोस्ट (Tool Post)</a>
+<a href="#sec-knurling" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🔲 7.16 – नरलिंग (Knurling)</a>
+<a href="#sec-tapers" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">📐 7.17 – मानक टेपर (Standard Tapers)</a>
+<a href="#sec-threads" style="color:#003366; text-decoration:none; padding:6px 10px; border-radius:6px; background:#f0f5ff; font-weight:500;">🧵 7.18 – स्क्रू थ्रेड (Screw Thread)</a>
 </div>
 </div>
 </div>
 </div>
 <!-- ====================================================================== -->
-<!-- 8.1 TOTAL PRODUCTIVE MAINTENANCE (TPM) -->
+<!-- 7.1 LATHE SAFETY -->
 <!-- ====================================================================== -->
-<div class="container" id="sec-tpm">
-<div class="content-section" data-content="tpm">
-<div class="section-header"><span class="icon">🔄</span><span class="title">8.1 – कुल उत्पादक रखरखाव (Total Productive Maintenance – TPM)</span><span class="subtitle">— अर्थ, स्तंभ, लाभ, कार्यान्वयन</span></div>
+<div class="container" id="sec-lathe-safety">
+<div class="content-section" data-content="lathe-safety">
+<div class="section-header"><span class="icon">🛡️</span><span class="title">7.1 – लेथ पर सुरक्षा (Safety on Lathe)</span><span class="subtitle">— व्यक्तिगत सुरक्षा, मशीन सुरक्षा, संचालन सावधानियाँ</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>कुल उत्पादक रखरखाव (Total Productive Maintenance – TPM)</strong> एक <strong>समग्र (comprehensive)</strong> दृष्टिकोण (approach) है जो <strong>मशीनरी (machinery)</strong> और <strong>उपकरणों (equipment)</strong> की <strong>दक्षता (efficiency)</strong> को <strong>अधिकतम (maximize)</strong> करने के लिए <strong>सभी (all)</strong> कर्मचारियों (employees) को <strong>रखरखाव (maintenance)</strong> में <strong>शामिल (involve)</strong> करता है।</p>
-<p><strong>TPM की परिभाषा (Definition of TPM):</strong></p>
+<p><strong>लेथ (Lathe)</strong> पर काम शुरू करने से पहले, काम के दौरान और काम के बाद निर्धारित सुरक्षा सावधानियों का पालन करना आवश्यक है।</p>
+<h3>काम शुरू करने से पहले (Before starting the work)</h3>
 <ul>
-<li><strong>TPM</strong> – <strong>जापानी (Japanese)</strong> मूल (origin) – <strong>Nippon Denso</strong> द्वारा विकसित (developed).</li>
-<li><strong>उद्देश्य (Objective):</strong> <strong>शून्य (zero)</strong> <strong>डाउनटाइम (downtime)</strong>, <strong>शून्य (zero)</strong> <strong>दोष (defects)</strong>, <strong>शून्य (zero)</strong> <strong>दुर्घटनाएँ (accidents)</strong> – <strong>उत्पादकता (productivity)</strong> बढ़ाना (increase).</li>
+<li>सुनिश्चित करें कि <strong>lubricating system</strong> काम कर रहा है।</li>
+<li><strong>Mating gears</strong> उचित mesh में हों और <strong>power feed lever</strong> neutral स्थिति में हो।</li>
+<li><strong>कार्य क्षेत्र (work area)</strong> साफ-सुथरा हो।</li>
+<li><strong>Safety guards</strong> अपनी जगह पर हों।</li>
 </ul>
-<p><strong>TPM के 8 स्तंभ (8 Pillars of TPM):</strong></p>
+<h3>काम के दौरान (During work)</h3>
 <ul>
-<li><strong>1. स्वायत्त रखरखाव (Autonomous Maintenance – Jishu Hozen):</strong> ऑपरेटर (operators) अपनी मशीनों का <strong>दैनिक (daily)</strong> रखरखाव (maintenance) करते हैं – <strong>सफाई (cleaning)</strong>, <strong>स्नेहन (lubrication)</strong>, <strong>निरीक्षण (inspection)</strong>।</li>
-<li><strong>2. नियोजित रखरखाव (Planned Maintenance – Keikaku Hozen):</strong> <strong>अनुसूचित (scheduled)</strong> रखरखाव – <strong>निवारक (preventive)</strong> और <strong>सुधारात्मक (corrective)</strong> रखरखाव।</li>
-<li><strong>3. गुणवत्ता रखरखाव (Quality Maintenance – Hinshitsu Hozen):</strong> <strong>शून्य दोष (zero defects)</strong> के लिए – <strong>प्रक्रिया (process)</strong> को <strong>नियंत्रित (control)</strong> करना।</li>
-<li><strong>4. फोकस्ड सुधार (Focused Improvement – Kobetsu Kaizen):</strong> <strong>निरंतर (continuous)</strong> सुधार – <strong>क्षति (losses)</strong> को <strong>कम (reduce)</strong> करना।</li>
-<li><strong>5. प्रारंभिक प्रबंधन (Early Management – Shoki Kanri):</strong> <strong>नई (new)</strong> मशीनों और उत्पादों (products) का <strong>प्रारंभिक (initial)</strong> प्रबंधन (management).</li>
-<li><strong>6. प्रशिक्षण और शिक्षा (Training &amp; Education – Kyoiku Kunren):</strong> कर्मचारियों (employees) को <strong>कौशल (skills)</strong> और <strong>ज्ञान (knowledge)</strong> प्रदान करना।</li>
-<li><strong>7. सुरक्षा, स्वास्थ्य और पर्यावरण (Safety, Health &amp; Environment – Anzen Eisei):</strong> <strong>सुरक्षित (safe)</strong> और <strong>स्वच्छ (clean)</strong> कार्य वातावरण (work environment) सुनिश्चित करना।</li>
-<li><strong>8. प्रशासनिक रखरखाव (Administrative Maintenance – Kanri Hozen):</strong> <strong>गैर-उत्पादन (non-production)</strong> क्षेत्रों (areas) का रखरखाव।</li>
+<li>घूमते हुए <strong>chuck</strong> को हाथ से रोकने की कोशिश कभी न करें।</li>
+<li>लेथ पर कोई adjustment करने से पहले <strong>machine बंद</strong> करें।</li>
+<li><strong>Chuck key</strong> को chuck में छोड़ना खतरनाक है; उपयोग के तुरंत बाद उसे हटा दें।</li>
+<li><strong>Single point tools</strong> तेज और खतरनाक होते हैं; उपयोग करते समय अतिरिक्त सावधानी रखें।</li>
+<li><strong>Chips</strong> को नंगे हाथों से कभी न हटाएँ; <strong>chip rake</strong> या brush का प्रयोग करें।</li>
+<li><strong>Emergency stop switch</strong> का स्थान हमेशा पता होना चाहिए।</li>
 </ul>
-<p><strong>TPM के 5 S (5S – Foundation of TPM):</strong></p>
+<h3>काम के बाद (After work)</h3>
 <ul>
-<li><strong>सेरी (Seiri – Sort / छँटाई):</strong> <strong>आवश्यक (necessary)</strong> और <strong>अनावश्यक (unnecessary)</strong> वस्तुओं (items) को <strong>अलग (separate)</strong> करना – <strong>अनावश्यक (unnecessary)</strong> को <strong>हटाना (remove)</strong>।</li>
-<li><strong>सेटन (Seiton – Set in Order / व्यवस्था):</strong> <strong>आवश्यक (necessary)</strong> वस्तुओं को <strong>सही (proper)</strong> स्थान (place) पर <strong>व्यवस्थित (organize)</strong> करना – <strong>लेबल (label)</strong> और <strong>चिह्न (mark)</strong> के साथ।</li>
-<li><strong>सीसो (Seiso – Shine / सफाई):</strong> <strong>कार्य (work)</strong> क्षेत्र को <strong>स्वच्छ (clean)</strong> रखना – <strong>नियमित (regular)</strong> सफाई (cleaning).</li>
-<li><strong>सीकेत्सु (Seiketsu – Standardize / मानकीकरण):</strong> <strong>मानक (standard)</strong> प्रक्रियाएँ (procedures) बनाना – <strong>सभी (all)</strong> के लिए <strong>समान (uniform)</strong>।</li>
-<li><strong>शित्सुके (Shitsuke – Sustain / अनुशासन):</strong> <strong>अनुशासन (discipline)</strong> बनाए रखना – <strong>नियमों (rules)</strong> का <strong>पालन (follow)</strong> करना – <strong>निरंतर (continuous)</strong> सुधार (improvement).</li>
+<li>लेथ को brush से साफ करें और रूई के कचरे से पोंछें।</li>
+<li><strong>Bedways</strong> और lubricating points पर तेल लगाएँ।</li>
+<li>लेथ के आसपास की सफाई करें और गंदगी/कचरा हटा दें।</li>
 </ul>
-<p><strong>TPM के लाभ (Benefits of TPM):</strong></p>
+<h3>Centre Lathe की Specification</h3>
 <ul>
-<li><strong>उत्पादकता (Productivity) में वृद्धि (increase):</strong> <strong>डाउनटाइम (downtime)</strong> कम (reduce).</li>
-<li><strong>गुणवत्ता (Quality) में सुधार (improvement):</strong> <strong>दोष (defects)</strong> कम (reduce).</li>
-<li><strong>लागत (Cost) में कमी (reduction):</strong> <strong>रखरखाव (maintenance)</strong> लागत (cost) कम (reduce).</li>
-<li><strong>कर्मचारी (Employee) संतुष्टि (satisfaction):</strong> <strong>स्वायत्तता (autonomy)</strong> और <strong>भागीदारी (participation)</strong>।</li>
-<li><strong>सुरक्षा (Safety) में सुधार (improvement):</strong> <strong>दुर्घटनाएँ (accidents)</strong> कम (reduce).</li>
-</ul>
-</div>
+<li>Bed की length और bed-ways की length.</li><li>Centres के बीच घुमाए जा सकने वाले work का maximum length.</li>
+<li>कट किए जा सकने वाले threads की range और lathe capacity.</li><li>Cross-slide तथा compound-slide graduated collar की प्रत्येक division का value.</li>
+<li>Spindle speed range, feed range, spindle bore का size और spindle nose का type.</li>
+<li>एक lathe को <strong>maximum diameter over bed (swing over bed)</strong> द्वारा भी specify किया जाता है।</li>
+</ul></div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: TPM के 8 स्तंभ और 5S (TPM Pillars &amp; 5S)</strong></p>
-<p>स्थान: /images/notes/fitter/module-8/tpm_pillars.jpg</p>
-<code>tpm_pillars.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(8 स्तंभ, 5S – सेरी, सेटन, सीसो, सीकेत्सु, शित्सुके)</p>
+<p><strong>चित्र: लेथ सुरक्षा (Lathe Safety)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/lathe_safety.jpg</p>
+<code>lathe_safety.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(सुरक्षा चश्मा, चक कुंजी हटाना, गार्ड, चिप हटाना)</p>
 </div>
-<div class="figure-caption">Fig 1 – TPM के 8 स्तंभ और 5S</div>
+<div class="figure-caption">Fig 1 – लेथ सुरक्षा</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>सुरक्षा चश्मा (safety goggles) – <strong>अनिवार्य (mandatory)</strong>।</li>
+<li>चक कुंजी (chuck key) – <strong>शुरू करने से पहले हटाएँ (remove before start)</strong>।</li>
+<li>चिप्स (chips) – <strong>ब्रश (brush)</strong> से हटाएँ – <strong>हाथ (hand)</strong> से नहीं।</li>
+<li>ढीले कपड़े (loose clothes) – <strong>न पहनें (do not wear)</strong>।</li>
+<li>कटिंग फ्लुइड (cutting fluid) – <strong>गर्मी (heat)</strong> कम करता है।</li></ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>लेथ पर <strong>सबसे (most)</strong> महत्वपूर्ण सुरक्षा: <strong>चक कुंजी (chuck key) हटाना</strong>।</li>
+<li>लेथ चलते समय <strong>कभी (never)</strong> वर्कपीस को <strong>मापें (measure)</strong> नहीं।</li>
+<li>चिप्स (chips) को <strong>हाथ (hand)</strong> से न हटाएँ – <strong>ब्रश (brush)</strong> का उपयोग करें।</li>
+<li>ढीले कपड़े (loose clothes) – <strong>स्पिंडल (spindle)</strong> में <strong>फँस (entangled)</strong> सकते हैं।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.2 LATHE MAIN PARTS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-lathe-parts">
+<div class="content-section" data-content="lathe-parts">
+<div class="section-header"><span class="icon">⚙️</span><span class="title">7.2 – लेथ मुख्य भाग (Lathe Main Parts)</span><span class="subtitle">— बेड, हेडस्टॉक, टेलस्टॉक, कैरिज, कम्पाउंड रेस्ट, टूल पोस्ट</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>Centre Lathe</strong> एक machine tool है जिसका उपयोग cutting tool द्वारा work से metal हटाकर आवश्यक size और shape प्राप्त करने के लिए किया जाता है। Work को centres, chuck या face plate पर रखा जा सकता है और cutting tool को tool post में मजबूती से पकड़कर work के विरुद्ध feed किया जाता है।</p>
+<h3>मुख्य भाग (Main Parts)</h3>
+<ul>
+<li><strong>Bed:</strong> fixed units को accurate relation में locate करता है और operating units के लिए slide-ways देता है। यह सामान्यतः भारी cast construction का होता है; rigidity बढ़ाने और shock/vibration absorb करने के लिए भारी बनाया जाता है।</li>
+<li><strong>Headstock:</strong> work-holding device को support करता है, main motor से drive को work तक पहुँचाता है और अलग-अलग work speeds के लिए shaft, gears और levers की व्यवस्था देता है। मुख्य प्रकार: <strong>all-geared headstock</strong> और <strong>cone-pulley headstock</strong>।</li>
+<li><strong>Carriage:</strong> cutting tool को hold और move करने की व्यवस्था देता है। इसके प्रमुख भाग <strong>apron</strong> और <strong>saddle</strong> हैं। Cross-slide tool को cross movement देता है; compound rest घूम सकता है और top slide tool post को support करता है।</li>
+<li><strong>Tailstock:</strong> bed-way पर sliding unit है। इसका उपयोग long work को dead centre से support करने तथा drill, reamer और drill chuck जैसे tools रखने के लिए किया जाता है। Barrel के hollow end में <strong>Morse taper</strong> दिया जाता है।</li>
+<li><strong>Feed shaft / Lead screw:</strong> feed mechanism और thread cutting में आवश्यक drive प्रदान करते हैं।</li>
+</ul>
+<h3>Lathe का working principle</h3>
+<p>जब cutting tool work की axis के parallel चलता है तो cylindrical surface बनती है; tool को angle पर चलाने पर taper surface बन सकती है।</p></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: लेथ मुख्य भाग (Lathe Main Parts)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/lathe_parts.jpg</p>
+<code>lathe_parts.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बेड, हेडस्टॉक, टेलस्टॉक, कैरिज, कम्पाउंड रेस्ट, टूल पोस्ट, लीड स्क्रू)</p>
+</div>
+<div class="figure-caption">Fig 2 – लेथ मुख्य भाग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बेड (Bed) – <strong>आधार (base)</strong> – कास्ट आयरन (cast iron).</li>
+<li>हेडस्टॉक (Headstock) – <strong>स्पिंडल (spindle)</strong> और <strong>चक (chuck)</strong> को घुमाता है।</li>
+<li>टेलस्टॉक (Tailstock) – <strong>सेंटर (centre)</strong> या <strong>ड्रिल (drill)</strong> धारण करता है।</li>
+<li>कैरिज (Carriage) – <strong>टूल (tool)</strong> को <strong>फीड (feed)</strong> देता है।</li>
+<li>लीड स्क्रू (Lead Screw) – <strong>थ्रेड कटिंग (thread cutting)</strong> के लिए।</li>
+<li>फीड रॉड (Feed Rod) – <strong>सामान्य टर्निंग (turning)</strong> के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बेड (Bed) – <strong>कास्ट आयरन (cast iron)</strong> – <strong>भारी (heavy)</strong> और <strong>कठोर (rigid)</strong>।</li>
+<li>हेडस्टॉक (Headstock) – <strong>स्पिंडल (spindle)</strong> को घुमाता है – <strong>बिजली (motor)</strong> और <strong>गियर (gears)</strong> द्वारा।</li>
+<li>टेलस्टॉक (Tailstock) – <strong>बेड (bed)</strong> पर <strong>स्लाइड (slide)</strong> कर सकता है – <strong>क्लैंप (clamp)</strong> करके <strong>लॉक (lock)</strong> किया जाता है।</li>
+<li>कम्पाउंड रेस्ट (Compound Rest) – <strong>360°</strong> तक <strong>घुमा (swivel)</strong> सकता है – <strong>टेपर (taper)</strong> के लिए।</li>
+<li>लीड स्क्रू (Lead Screw) – <strong>थ्रेड (thread)</strong> के लिए – <strong>फीड रॉड (feed rod)</strong> – सामान्य के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.3 FEED AND THREAD CUTTING MECHANISM -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-feed-mech">
+<div class="content-section" data-content="feed-mech">
+<div class="section-header"><span class="icon">🔩</span><span class="title">7.3 – फीड और थ्रेड कटिंग तंत्र (Feed &amp; Thread Cutting Mechanism)</span><span class="subtitle">— फीड प्रकार, चेंज गियर्स, लीड स्क्रू, हाफ नट</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>Feed mechanism</strong> work की प्रत्येक revolution के लिए tool को proportional movement देता है। इससे longitudinal और cross direction में automatic feeding सम्भव होती है।</p>
+<h3>Feed Mechanism के मुख्य भाग</h3>
+<ul><li><strong>Spindle gear (A)</strong></li><li><strong>Tumbler gear unit (B):</strong> तीन gears का set; spindle gear को fixed stud gear से जोड़ता है और feed की direction बदलने में उपयोग होता है।</li><li><strong>Fixed stud gear (C)</strong></li><li><strong>Change gear unit (D-E-F-G):</strong> feed changing तथा thread cutting के लिए gear ratio बदलने का प्रावधान।</li><li><strong>Quick change gear box (H):</strong> lever की विभिन्न positions से अलग feed rates चुनी जाती हैं।</li><li><strong>Feed shaft / Lead screw (I)</strong></li><li><strong>Apron mechanism:</strong> feed shaft की rotary movement को carriage/tool की linear movement में बदलने की व्यवस्था।</li></ul>
+<h3>Thread Cutting और Gear Train</h3>
+<ul>
+<li><strong>Change gear train</strong> spindle और lead screw के बीच आवश्यक speed ratio प्राप्त करने के लिए प्रयुक्त होती है।</li>
+<li><strong>Simple gear train:</strong> एक driver और एक driven gear; बीच का idler gear ratio को प्रभावित नहीं करता, केवल connection/direction में सहायता करता है।</li>
+<li><strong>Compound gear train:</strong> जब आवश्यक spindle-to-lead-screw ratio एक driver और एक driven gear से प्राप्त न हो सके, तब एक से अधिक driver/driven gears का arrangement प्रयोग होता है।</li>
+</ul>
+<p><strong>Thread cutting principle:</strong> change gears के द्वारा spindle और lead screw का सही ratio प्राप्त किया जाता है। Half nut को engage करने पर lead screw की motion carriage तक पहुँचती है और tool को work की revolution के अनुसार thread pitch के अनुरूप longitudinal movement मिलता है।</p></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: फीड और थ्रेड कटिंग तंत्र (Feed &amp; Thread Cutting Mechanism)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/feed_mechanism.jpg</p>
+<code>feed_mechanism.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(चेंज गियर्स, लीड स्क्रू, हाफ नट, एप्रन, फीड रॉड)</p>
+</div>
+<div class="figure-caption">Fig 3 – फीड और थ्रेड कटिंग तंत्र</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>फीड (Feed) – <strong>टूल (tool)</strong> की <strong>गति (movement)</strong> – लॉन्गिट्यूडिनल, क्रॉस, एंगुलर।</li>
+<li>लीड स्क्रू (Lead Screw) – <strong>थ्रेड कटिंग (thread cutting)</strong> के लिए।</li>
+<li>हाफ नट (Half Nut) – लीड स्क्रू को <strong>जोड़/अलग (engage/disengage)</strong> करता है।</li>
+<li>चेंज गियर्स (Change Gears) – <strong>पिच (pitch)</strong> बदलने के लिए।</li>
+<li>थ्रेड कटिंग में compound rest की setting NIMI procedure के अनुसार की जाती है; external thread के लिए half-angle method में लगभग <strong>1° कम</strong> setting दी गई है।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फीड (Feed) – <strong>लॉन्गिट्यूडिनल (longitudinal)</strong>, <strong>क्रॉस (cross)</strong>, <strong>एंगुलर (angular)</strong>।</li>
+<li>लीड स्क्रू (Lead Screw) – <strong>थ्रेड (thread)</strong> काटने के लिए – <strong>सटीक (accurate)</strong> पिच।</li>
+<li>हाफ नट (Half Nut) – <strong>कैरिज (carriage)</strong> को <strong>लीड स्क्रू (lead screw)</strong> से <strong>जोड़ता (connects)</strong> है।</li>
+<li>चेंज गियर्स (Change Gears) – <strong>विभिन्न (different)</strong> पिच (pitch) प्राप्त करने के लिए।</li>
+<li>External thread cutting में compound rest को required half-angle method के अनुसार set किया जाता है।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.4 HOLDING JOB BETWEEN CENTRES, CATCH PLATE & DOG -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-catch-plate">
+<div class="content-section" data-content="catch-plate">
+<div class="section-header"><span class="icon">🔗</span><span class="title">7.4 – सेंटर के बीच जॉब पकड़ना और कैच प्लेट एवं डॉग के साथ कार्य</span><span class="subtitle">— कैच प्लेट, डॉग, सेंटर, कार्यप्रणाली</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p>Long cylindrical work को <strong>centres के बीच</strong> hold करके turning किया जा सकता है। यह arrangement विशेष रूप से knurling, thread cutting और undercutting जैसे operations में उपयोगी है। यह मुख्यतः external work तक सीमित है।</p>
+<h3>Work Preparation</h3>
+<ul><li>Work के दोनों ends face करके कुल length को required limit में रखें।</li><li>सही size/type का <strong>centre drill</strong> चुनकर दोनों ends पर centre drill करें।</li><li>Spindle nose से chuck हटाकर <strong>driving/catch plate</strong> लगाएँ और spindle sleeve तथा live centre assemble करें।</li><li>Centre, sleeve और live centre को साफ और damage/burr से मुक्त रखें।</li><li>Work के diameter के अनुसार उपयुक्त <strong>lathe carrier/dog</strong> चुनें और work के एक end पर लगाएँ। Finished surface को carrier screw के नीचे copper/brass sheet से सुरक्षित किया जा सकता है।</li><li>Tailstock dead centre के लिए centre hole में suitable soft grease लगाएँ। Tailstock spindle को लगभग <strong>60–100 mm</strong> आगे बढ़ाने की व्यवस्था रखें।</li><li>Tailstock clamp nut कसें और dead centre को work के centre hole में seat करें। Carriage को आगे-पीछे चलाकर केवल हल्का resistance मिलने तक tailstock handwheel adjust करें।</li><li>Machine को लगभग <strong>250 rpm</strong> पर कुछ seconds चलाकर resistance फिर check करें और आवश्यकता हो तो tailstock spindle adjust करें।</li></ul>
+<h3>Catch Plate और Dog</h3>
+<p><strong>Catch/Driving plate</strong> spindle पर लगती है और dog के माध्यम से rotation को work तक पहुँचाती है। Work को centres के बीच रखते समय carrier का tail driving plate के slot के bottom पर नहीं टिकना चाहिए; इससे centre को सही seating नहीं मिलेगी। Centres का alignment भी जाँचें।</p></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: सेंटर के बीच जॉब, कैच प्लेट और डॉग</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/catch_plate_dog.jpg</p>
+<code>catch_plate_dog.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(लाइव सेंटर, डेड सेंटर, कैच प्लेट, डॉग, ड्राइव व्यवस्था)</p>
+</div>
+<div class="figure-caption">Fig 4 – कैच प्लेट और डॉग के साथ सेंटर के बीच जॉब</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>लाइव सेंटर (Live Centre) – <strong>हेडस्टॉक</strong> में – <strong>घूमता (rotates)</strong> है।</li>
+<li>डेड सेंटर (Dead Centre) – <strong>टेलस्टॉक</strong> में – <strong>स्थिर (stationary)</strong> – <strong>स्नेहन (lubrication)</strong> आवश्यक।</li>
+<li>कैच प्लेट (Catch Plate) – <strong>स्पिंडल (spindle)</strong> पर – <strong>डॉग (dog)</strong> को <strong>चलाता (drives)</strong> है।</li>
+<li>डॉग (Dog) – <strong>वर्कपीस (workpiece)</strong> पर क्लैंप (clamp) – <strong>टेल (tail)</strong> कैच प्लेट (catch plate) में।</li>
+<li>सेंटर ड्रिल (Centre Drill) – <strong>सेंटर छेद (centre holes)</strong> बनाने के लिए – <strong>60°</strong> कोण।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>लाइव सेंटर (Live Centre) – <strong>घूमता (rotating)</strong> – हेडस्टॉक (headstock) में।</li>
+<li>डेड सेंटर (Dead Centre) – <strong>स्थिर (stationary)</strong> – टेलस्टॉक (tailstock) में – <strong>तेल (oil)</strong> की आवश्यकता।</li>
+<li>कैच प्लेट (Catch Plate) – <strong>ड्राइव (drive)</strong> प्रदान करता है – <strong>स्पिंडल (spindle)</strong> से <strong>वर्कपीस (workpiece)</strong> तक।</li>
+<li>डॉग (Dog) – <strong>वर्कपीस (workpiece)</strong> को <strong>पकड़ता (grips)</strong> है – <strong>कैच प्लेट (catch plate)</strong> के स्लॉट (slot) में।</li>
+<li>सेंटर ड्रिल (Centre Drill) – <strong>60°</strong> कोण (angle) वाला।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.5 FACING AND ROUGHING TOOL -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-facing-rough">
+<div class="content-section" data-content="facing-rough">
+<div class="section-header"><span class="icon">🔧</span><span class="title">7.5 – फेसिंग और रफिंग टूल (Facing &amp; Roughing Tool)</span><span class="subtitle">— विवरण, ज्यामिति, उपयोग, अंतर</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>Facing</strong> में tool को work की spindle के समकोण पर feed करके work face से metal हटाया जाता है।</p>
+<h3>Facing का उद्देश्य</h3>
+<ul><li>Step length को mark और measure करने के लिए reference plane बनाना।</li><li>Work की spindle के समकोण पर face बनाना।</li><li>Rough surface हटाकर face को finish करना।</li><li>Work की कुल length बनाए रखना।</li></ul>
+<h3>Rough Facing और Finish Facing</h3>
+<ul><li><strong>Rough facing:</strong> अधिक depth of cut और comparatively coarse feed से अतिरिक्त metal हटाया जाता है और finishing के लिए पर्याप्त material छोड़ा जाता है। Tool को work की periphery से centre की ओर feed किया जाता है।</li><li><strong>Finish facing:</strong> rough facing से बनी rough surface को हटाकर smooth face प्राप्त किया जाता है। Tool को centre से periphery की ओर feed किया जाता है। Finish facing में roughing की तुलना में लगभग <strong>दो गुना cutting speed</strong>, लगभग <strong>0.05 mm fine feed</strong> और <strong>0.1 mm से अधिक depth of cut नहीं</strong> दी जाती है।</li></ul>
+<h3>Facing में सामान्य दोष</h3>
+<ul><li><strong>Concave face:</strong> tool के पर्याप्त rigidly clamp न होने/अधिक overhang से; tool को minimum overhang के साथ rigidly clamp करें।</li><li><strong>Convex face:</strong> blunt cutting edge या carriage lock न होने से; tool को re-sharpen करें और carriage को bed पर lock करें।</li><li><strong>Centre में pip:</strong> tool सही centre height पर set न होने से; tool को centre height पर रखें।</li></ul>
+<h3>Roughing Tool</h3>
+<p>Rough turning/facing का उद्देश्य अधिक मात्रा में material हटाकर work को required size के करीब लाना है। Rough turning में spindle speed अपेक्षाकृत कम और feed अधिक रखी जाती है; roughing या knife tool का उपयोग किया जा सकता है।</p></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: फेसिंग और रफिंग टूल (Facing &amp; Roughing Tools)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/facing_roughing_tools.jpg</p>
+<code>facing_roughing_tools.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(फेसिंग टूल, रफिंग टूल, ज्यामिति अंतर)</p>
+</div>
+<div class="figure-caption">Fig 5 – फेसिंग और रफिंग टूल</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>फेसिंग – <strong>सिरा (end)</strong> सपाट (flat) – <strong>सटीक लंबाई (accurate length)</strong>।</li>
+<li>रफिंग – <strong>बड़ी मात्रा (large amount)</strong> सामग्री हटाना – <strong>तेज़ (fast)</strong>।</li>
+<li>रफिंग टूल – <strong>बड़ा (large)</strong> नोज़ त्रिज्या (nose radius) – <strong>मजबूत (strong)</strong>।</li>
+<li>फेसिंग टूल – <strong>छोटी (small)</strong> नोज़ त्रिज्या – <strong>अच्छी फिनिश (good finish)</strong>।</li>
+<li>फीड (Feed) – रफिंग के लिए <strong>उच्च (high)</strong> – फेसिंग के लिए <strong>कम (low)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फेसिंग टूल – <strong>सिरा (end)</strong> सपाट करता है – <strong>लंबवत (perpendicular)</strong> कटिंग एज।</li>
+<li>रफिंग टूल – <strong>मोटा (thick)</strong> चिप (chip) हटाता है – <strong>उच्च फीड (high feed)</strong>।</li>
+<li>फेसिंग टूल – <strong>कम (low)</strong> फीड – <strong>अच्छी (good)</strong> सतह फिनिश (surface finish).</li>
+<li>रफिंग टूल – <strong>बड़ा (large)</strong> नोज़ त्रिज्या – <strong>उच्च (high)</strong> कठोरता (rigidity).</li>
+<li>फेसिंग – <strong>टूल (tool)</strong> को <strong>केंद्र (centre)</strong> से <strong>बाहर (outward)</strong> की ओर फीड (feed) किया जाता है।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.6 NOMENCLATURE OF SINGLE POINT AND MULTI POINT TOOLS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tool-nom">
+<div class="content-section" data-content="tool-nom">
+<div class="section-header"><span class="icon">📐</span><span class="title">7.6 – सिंगल पॉइंट और मल्टी पॉइंट कटिंग टूल का नामकरण (Nomenclature)</span><span class="subtitle">— कोण, सतहें, किनारे, प्रकार</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p>Lathe cutting tools मुख्यतः दो groups में होते हैं: <strong>1. Single point cutting tools</strong> और <strong>2. Multi point cutting tools</strong>। Single point tool wedge की तरह काम करता है; ground cutting edge work में प्रवेश करके metal हटाती है।</p>
+<h3>Single Point Tool Nomenclature</h3>
+<ul><li><strong>Shank:</strong> tool का body portion जो tool post में hold होता है।</li><li><strong>Face:</strong> वह surface जिस पर chip flow करती है।</li><li><strong>Flank:</strong> cutting edge के नीचे की surface जो work के सामने रहती है।</li><li><strong>Cutting edge:</strong> actual cutting करने वाला edge।</li><li><strong>Nose:</strong> main और auxiliary cutting edges के मिलन के पास का rounded portion।</li><li><strong>Approach angle</strong> और <strong>trail angle</strong> tool geometry का भाग हैं।</li><li><strong>Top/back rake, side rake, front clearance और side clearance</strong> tool के ground angles हैं; प्रत्येक tool पर सभी angles आवश्यक नहीं होते।</li></ul>
+<h3>Multi Point Cutting Tools</h3>
+<p>Lathe work में drill, reamer, tap और die जैसे multi point cutting tools उपयोग किए जाते हैं।</p></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: सिंगल पॉइंट टूल नामकरण (Single Point Tool Nomenclature)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/single_point_tool.jpg</p>
+<code>single_point_tool.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(शैंक, फेस, फ्लैंक, नोज़, कटिंग एज, कोण)</p>
+</div>
+<div class="figure-caption">Fig 6 – सिंगल पॉइंट कटिंग टूल नामकरण</div>
 </div>
 <div class="table-wrap">
 <table>
-<caption>TPM के 8 स्तंभ (8 Pillars of TPM)</caption>
-<thead><tr><th>स्तंभ (Pillar)</th><th>विवरण (Description)</th></tr></thead>
+<caption>सिंगल पॉइंट टूल कोण (Single Point Tool Angles)</caption>
+<thead><tr><th>कोण (Angle)</th><th>मान (Value) – HSS</th><th>उद्देश्य (Purpose)</th></tr></thead>
 <tbody>
-<tr><td>स्वायत्त रखरखाव (Autonomous)</td><td>ऑपरेटर द्वारा दैनिक रखरखाव</td></tr>
-<tr><td>नियोजित रखरखाव (Planned)</td><td>अनुसूचित निवारक रखरखाव</td></tr>
-<tr><td>गुणवत्ता रखरखाव (Quality)</td><td>शून्य दोष के लिए प्रक्रिया नियंत्रण</td></tr>
-<tr><td>फोकस्ड सुधार (Focused)</td><td>निरंतर सुधार – काइज़ेन (Kaizen)</td></tr>
-<tr><td>प्रारंभिक प्रबंधन (Early)</td><td>नई मशीनों का प्रारंभिक प्रबंधन</td></tr>
-<tr><td>प्रशिक्षण और शिक्षा (Training)</td><td>कर्मचारी कौशल विकास</td></tr>
-<tr><td>सुरक्षा, स्वास्थ्य (Safety)</td><td>सुरक्षित और स्वच्छ कार्य वातावरण</td></tr>
-<tr><td>प्रशासनिक रखरखाव (Administrative)</td><td>गैर-उत्पादन क्षेत्रों का रखरखाव</td></tr>
+<tr><td>बैक रेक (Back Rake)</td><td>8°–12°</td><td>चिप (chip) प्रवाह (flow)</td></tr>
+<tr><td>साइड रेक (Side Rake)</td><td>12°–18°</td><td>चिप (chip) प्रवाह</td></tr>
+<tr><td>एंड निकासी (End Clearance)</td><td>6°–8°</td><td>रगड़ (rubbing) से बचना</td></tr>
+<tr><td>साइड निकासी (Side Clearance)</td><td>6°–8°</td><td>रगड़ (rubbing) से बचना</td></tr>
+<tr><td>कटिंग एज (Cutting Edge)</td><td>60°–75°</td><td>मजबूती (strength) के लिए</td></tr>
 </tbody>
 </table>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>TPM – <strong>सभी (all)</strong> कर्मचारियों को <strong>रखरखाव (maintenance)</strong> में <strong>शामिल (involve)</strong> करता है।</li>
-<li>5S – <strong>TPM का आधार (foundation)</strong> – <strong>संगठन (organization)</strong> और <strong>स्वच्छता (cleanliness)</strong> के लिए।</li>
-<li>स्वायत्त रखरखाव – <strong>ऑपरेटर (operator)</strong> अपनी मशीन का <strong>खुद (own)</strong> रखरखाव करता है।</li>
-<li>लाभ – <strong>उत्पादकता (productivity)</strong> बढ़ती है – <strong>लागत (cost)</strong> घटती है – <strong>गुणवत्ता (quality)</strong> सुधरती है।</li>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>सिंगल पॉइंट – <strong>एक (one)</strong> कटिंग एज – टर्निंग, फेसिंग, थ्रेडिंग।</li>
+<li>मल्टी पॉइंट – <strong>एक से अधिक (multiple)</strong> कटिंग एज – ड्रिल, रीमर, मिलिंग कटर।</li>
+<li>रेक कोण (Rake Angle) – <strong>चिप (chip)</strong> प्रवाह (flow) और <strong>कटिंग (cutting)</strong> दक्षता (efficiency).</li>
+<li>निकासी कोण (Clearance Angle) – <strong>रगड़ (rubbing)</strong> से बचाता है – <strong>6°–8°</strong>।</li>
+<li>नोज़ त्रिज्या (Nose Radius) – <strong>फिनिश (finish)</strong> और <strong>मजबूती (strength)</strong> को प्रभावित (affect) करती है।</li>
 </ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>TPM – <strong>Total Productive Maintenance</strong> – <strong>जापानी (Japanese)</strong> मूल।</li>
-<li>5S – <strong>सेरी (Sort)</strong>, <strong>सेटन (Set in Order)</strong>, <strong>सीसो (Shine)</strong>, <strong>सीकेत्सु (Standardize)</strong>, <strong>शित्सुके (Sustain)</strong>।</li>
-<li>8 स्तंभ (8 Pillars) – <strong>स्वायत्त (Autonomous)</strong>, <strong>नियोजित (Planned)</strong>, <strong>गुणवत्ता (Quality)</strong>, <strong>फोकस्ड सुधार (Focused)</strong>, <strong>प्रारंभिक (Early)</strong>, <strong>प्रशिक्षण (Training)</strong>, <strong>सुरक्षा (Safety)</strong>, <strong>प्रशासनिक (Administrative)</strong>।</li>
-<li>लाभ – <strong>शून्य (zero)</strong> डाउनटाइम (downtime) – <strong>शून्य (zero)</strong> दोष (defects) – <strong>शून्य (zero)</strong> दुर्घटनाएँ (accidents).</li>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>सिंगल पॉइंट टूल – <strong>एक (one)</strong> कटिंग एज – <strong>टर्निंग (turning)</strong> के लिए।</li>
+<li>मल्टी पॉइंट टूल – <strong>एक से अधिक (multiple)</strong> कटिंग एज – <strong>ड्रिल (drill)</strong>, <strong>रीमर (reamer)</strong>।</li>
+<li>रेक कोण (Rake Angle) – <strong>चिप (chip)</strong> प्रवाह (flow) – <strong>सकारात्मक (positive)</strong> – बेहतर (better) कटिंग।</li>
+<li>निकासी कोण (Clearance Angle) – <strong>रगड़ (rubbing)</strong> से बचता है – <strong>6°–8°</strong>।</li>
+<li>नोज़ (Nose) – <strong>गोल (rounded)</strong> – <strong>नोज़ त्रिज्या (nose radius)</strong> – <strong>फिनिश (finish)</strong> को प्रभावित (affects).</li>
 </ul></div>
 </div>
 </div>
 </div>
 <!-- ====================================================================== -->
-<!-- 8.2 ROUTINE MAINTENANCE -->
+<!-- 7.7 TOOL SELECTION -->
 <!-- ====================================================================== -->
-<div class="container" id="sec-routine">
-<div class="content-section" data-content="routine">
-<div class="section-header"><span class="icon">📋</span><span class="title">8.2 – नियमित रखरखाव (Routine Maintenance)</span><span class="subtitle">— दैनिक, साप्ताहिक, मासिक कार्य, चेकलिस्ट</span></div>
+<div class="container" id="sec-tool-select">
+<div class="content-section" data-content="tool-select">
+<div class="section-header"><span class="icon">🔎</span><span class="title">7.7 – विभिन्न आवश्यकताओं के आधार पर औजार का चयन (Tool Selection)</span><span class="subtitle">— सामग्री, संचालन, सटीकता, लागत</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>नियमित रखरखाव (Routine Maintenance)</strong> – <strong>दैनिक (daily)</strong> या <strong>साप्ताहिक (weekly)</strong> आधार पर किए जाने वाले <strong>रखरखाव (maintenance)</strong> कार्य – <strong>मशीनों (machines)</strong> को <strong>सुचारू (smoothly)</strong> चलाने के लिए – <strong>बड़ी (major)</strong> खराबी (breakdown) को <strong>रोकने (prevent)</strong> के लिए।</p>
-<p><strong>दैनिक रखरखाव (Daily Maintenance – हर दिन / Everyday):</strong></p>
-<ul>
-<li><strong>सफाई (Cleaning):</strong> मशीन (machine) की <strong>सतह (surface)</strong>, <strong>स्लाइड्स (slides)</strong>, <strong>गाइड्स (guides)</strong> को <strong>साफ (clean)</strong> करना – <strong>चिप्स (chips)</strong>, <strong>धूल (dust)</strong> और <strong>गंदगी (dirt)</strong> हटाना।</li>
-<li><strong>स्नेहन (Lubrication):</strong> <strong>तेल (oil)</strong> और <strong>ग्रीस (grease)</strong> के स्तर (levels) की <strong>जाँच (check)</strong> – <strong>आवश्यक (required)</strong> स्थानों पर <strong>तेल (oil)</strong> डालना – <strong>लुब्रिकेशन चार्ट (lubrication chart)</strong> के अनुसार।</li>
-<li><strong>निरीक्षण (Inspection):</strong> <strong>बेल्ट (belts)</strong>, <strong>चेन (chains)</strong>, <strong>फास्टनर्स (fasteners)</strong> – <strong>ढीला (loose)</strong> या <strong>क्षतिग्रस्त (damaged)</strong> तो <strong>नहीं (not)</strong> हैं।</li>
-<li><strong>सुरक्षा (Safety):</strong> <strong>गार्ड (guards)</strong>, <strong>आपातकालीन स्टॉप (emergency stop)</strong> – <strong>कार्यशील (functional)</strong> हैं या <strong>नहीं (not)</strong>।</li>
-<li><strong>तापमान (Temperature) और ध्वनि (Sound):</strong> <strong>असामान्य (abnormal)</strong> गर्मी (heat) या <strong>शोर (noise)</strong> – <strong>संभावित (potential)</strong> समस्या (problem) का <strong>संकेत (indication)</strong>।</li>
-</ul>
-<p><strong>साप्ताहिक रखरखाव (Weekly Maintenance – हर सप्ताह / Every Week):</strong></p>
-<ul>
-<li><strong>विस्तृत (detailed)</strong> निरीक्षण (inspection) – <strong>सभी (all)</strong> भागों (parts) की <strong>जाँच (check)</strong>।</li>
-<li><strong>हाइड्रोलिक (hydraulic)</strong> और <strong>न्यूमेटिक (pneumatic)</strong> प्रणालियों (systems) की <strong>जाँच (check)</strong> – <strong>दबाव (pressure)</strong>, <strong>रिसाव (leakage)</strong>।</li>
-<li><strong>फिल्टर (filters)</strong> – <strong>साफ (clean)</strong> या <strong>बदलें (replace)</strong> – <strong>आवश्यक (required)</strong> हो तो।</li>
-<li><strong>इलेक्ट्रिकल (electrical)</strong> कनेक्शन (connections) – <strong>तार (wires)</strong>, <strong>केबल (cables)</strong> – <strong>क्षतिग्रस्त (damaged)</strong> तो <strong>नहीं (not)</strong> हैं।</li>
-<li><strong>स्नेहन (lubrication)</strong> – <strong>सप्ताहिक (weekly)</strong> आधार पर – <strong>ग्रीस (grease)</strong> निपल्स (nipples) – <strong>ग्रीस (grease)</strong> लगाना।</li>
-</ul>
-<p><strong>मासिक रखरखाव (Monthly Maintenance – हर महीने / Every Month):</strong></p>
-<ul>
-<li><strong>पूर्ण (full)</strong> मशीन (machine) <strong>निरीक्षण (inspection)</strong> – <strong>प्रमुख (major)</strong> घटकों (components) की <strong>जाँच (check)</strong>।</li>
-<li><strong>सटीकता (accuracy)</strong> जाँच – <strong>अंशांकन (calibration)</strong> – <strong>गेज (gauges)</strong>, <strong>माइक्रोमीटर (micrometers)</strong>।</li>
-<li><strong>बेल्ट (belts)</strong> तनाव (tension) – <strong>समायोजन (adjustment)</strong> – <strong>आवश्यक (required)</strong> हो तो।</li>
-<li><strong>शीतलक (coolant)</strong> और <strong>हाइड्रोलिक तेल (hydraulic oil)</strong> – <strong>स्तर (levels)</strong> और <strong>गुणवत्ता (quality)</strong> – <strong>बदलें (replace)</strong> यदि <strong>आवश्यक (required)</strong> हो।</li>
-<li><strong>रखरखाव लॉग (maintenance log)</strong> – <strong>रिकॉर्ड (record)</strong> बनाए रखना – <strong>भविष्य (future)</strong> संदर्भ (reference) के लिए।</li>
-</ul>
-<p><strong>नियमित रखरखाव के लाभ (Benefits of Routine Maintenance):</strong></p>
-<ul>
-<li><strong>मशीन (machine) का जीवन (life) बढ़ाना (increase)</strong> – <strong>समय से पहले (premature)</strong> खराबी (failure) को <strong>रोकना (prevent)</strong>।</li>
-<li><strong>डाउनटाइम (downtime) कम (reduce)</strong> – <strong>उत्पादन (production)</strong> निरंतर (continuous) बना रहता है।</li>
-<li><strong>गुणवत्ता (quality) बनाए रखना (maintain)</strong> – <strong>मशीन (machine)</strong> की <strong>सटीकता (accuracy)</strong> बनी रहती है।</li>
-<li><strong>सुरक्षा (safety) में सुधार (improve)</strong> – <strong>दुर्घटनाएँ (accidents)</strong> कम (reduce).</li>
-<li><strong>रखरखाव लागत (maintenance cost) कम (reduce)</strong> – <strong>बड़ी (major)</strong> मरम्मत (repair) से बचना।</li>
-</ul>
-</div>
+<h3>Cutting Tool Material के आवश्यक गुण</h3>
+<ul><li>जिस material को cut करना है उससे <strong>hard और strong</strong> होना।</li><li>Shock loads का विरोध करने के लिए पर्याप्त <strong>toughness</strong>।</li><li>Friction/wear के प्रति resistance ताकि tool life अच्छी हो।</li><li><strong>Cold hardness</strong>, <strong>red hardness</strong> और <strong>toughness</strong> आवश्यक गुण हैं।</li></ul>
+<h3>Tool Selection के Factors</h3>
+<ul><li>Machined होने वाली material.</li><li>Machine tool की condition — rigidity और efficiency.</li><li>Total production quantity और production rate.</li><li>Required dimensional accuracy और application method.</li><li>Coolant की quantity और application method.</li><li>Machined material की condition और form.</li></ul>
+<h3>Tool Materials और Types</h3>
+<ul><li><strong>High carbon steel / tool steel:</strong> शुरुआती tool material; red hardness कम होने के कारण cutting ability जल्दी कम होती है।</li><li><strong>High Speed Steel (HSS):</strong> tungsten, chromium, vanadium आदि alloying elements के कारण high carbon steel से बेहतर red hardness देता है।</li><li><strong>Carbide:</strong> बहुत ऊँचे तापमान पर hardness बनाए रखता है और HSS से अधिक cutting efficiency देता है; brittleness और cost के कारण इसे सामान्यतः brazed या throw-away/inserted form में प्रयोग किया जाता है।</li><li><strong>Ceramic और diamond</strong> non-metallic tool materials के उदाहरण हैं।</li></ul>
+<p>Lathe cutting tools के प्रकार: <strong>solid tools, brazed tools, inserted bits with holders और throw-away type tools</strong>। Common shapes में facing tool, knife-edge tool, roughing tool, broad nose finishing tool, undercutting/parting-off tool, external threading tool, boring tool और round-nose finishing tool शामिल हैं।</p></div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: नियमित रखरखाव चेकलिस्ट (Routine Maintenance Checklist)</strong></p>
-<p>स्थान: /images/notes/fitter/module-8/routine_maintenance.jpg</p>
-<code>routine_maintenance.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(दैनिक, साप्ताहिक, मासिक चेकलिस्ट)</p>
+<p><strong>चित्र: टूल चयन (Tool Selection) – सामग्री, संचालन, सामग्री</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/tool_selection.jpg</p>
+<code>tool_selection.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(HSS, कार्बाइड, सिरेमिक, रेक कोण, फीड)</p>
 </div>
-<div class="figure-caption">Fig 2 – नियमित रखरखाव चेकलिस्ट</div>
+<div class="figure-caption">Fig 7 – टूल चयन के कारक</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>वर्कपीस सामग्री – <strong>टूल सामग्री (tool material)</strong> का चयन।</li>
+<li>रफिंग – <strong>बड़ा (large)</strong> नोज़ त्रिज्या – <strong>उच्च फीड (high feed)</strong>।</li>
+<li>फिनिशिंग – <strong>छोटी (small)</strong> नोज़ त्रिज्या – <strong>कम फीड (low feed)</strong>।</li>
+<li>HSS – <strong>सबसे सामान्य (most common)</strong> – <strong>सस्ता (cheap)</strong>।</li>
+<li>कार्बाइड – <strong>उच्च गति (high speed)</strong> – <strong>घिसाव (wear)</strong> प्रतिरोधी।</li>
+<li>कास्ट आयरन – <strong>सूखा (dry)</strong> कटिंग – <strong>कोई (no)</strong> कटिंग फ्लुइड।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>माइल्ड स्टील – <strong>HSS</strong> या <strong>कार्बाइड</strong> – <strong>सकारात्मक रेक (positive rake)</strong>।</li>
+<li>कास्ट आयरन – <strong>कार्बाइड</strong> – <strong>नकारात्मक रेक (negative rake)</strong> – <strong>सूखा (dry)</strong>।</li>
+<li>रफिंग – <strong>बड़ा (large)</strong> नोज़ त्रिज्या – <strong>उच्च फीड (high feed)</strong>।</li>
+<li>फिनिशिंग – <strong>छोटी (small)</strong> नोज़ त्रिज्या – <strong>कम फीड (low feed)</strong> – <strong>उच्च गति (high speed)</strong>।</li>
+<li>एल्यूमीनियम – <strong>केरोसिन (kerosene)</strong> कटिंग फ्लुइड – <strong>बड़ा रेक (large rake)</strong>।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.8 NECESSITY OF TOOL ANGLES -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tool-angles">
+<div class="content-section" data-content="tool-angles">
+<div class="section-header"><span class="icon">📐</span><span class="title">7.8 – औजार कोणों की आवश्यकता (Necessity of Tool Angles)</span><span class="subtitle">— कटिंग क्षमता, चिप नियंत्रण, घिसाव, गर्मी</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p>Tool angles cutting action, chip formation और tool performance को प्रभावित करते हैं। सही angle का चुनाव machined material और operation पर निर्भर करता है।</p>
+<h3>मुख्य Tool Angles</h3>
+<ul>
+<li><strong>Approach angle:</strong> इसे end-cutting-edge angle भी कहा जाता है। Source में ground tool के लिए सामान्य रूप से <strong>30°</strong> का मान बताया गया है। Approach और trail angles मिलकर 90° का wedge angle बनाते हैं।</li>
+<li><strong>Top/Back rake angle:</strong> chip formation और cutting action को control करता है। यह positive, negative या zero हो सकता है। Soft, ductile materials के लिए positive rake अधिक हो सकता है; hard, brittle materials के लिए comparatively कम/negative rake उपयोग किया जा सकता है।</li>
+<li><strong>Side rake angle:</strong> chip flow को control करता है और material के अनुसार <strong>0° से 20°</strong> तक vary कर सकता है।</li>
+<li><strong>Front clearance angle:</strong> cutting edge और work के बीच rubbing रोकता है; बहुत अधिक clearance cutting edge को कमजोर करता है।</li>
+<li><strong>Side clearance angle:</strong> side cutting edge को work से rubbing से बचाता है। Feed rate बढ़ने पर side clearance angle बढ़ाने की आवश्यकता हो सकती है।</li>
+</ul>
+<div class="important-box"><h4>📌 ध्यान दें</h4><p>NIMI के अनुसार rake और clearance angles के लिए grinding के समय recommended standard chart को refer करना बेहतर है; actual operation tool performance के आधार पर adjustment की आवश्यकता दिखा सकता है।</p></div></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टूल कोणों का प्रभाव (Effect of Tool Angles)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/tool_angles.jpg</p>
+<code>tool_angles.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(रेक, निकासी, कटिंग एज, नोज़ त्रिज्या – प्रभाव)</p>
+</div>
+<div class="figure-caption">Fig 8 – टूल कोणों की आवश्यकता</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>रेक कोण – <strong>चिप (chip)</strong> प्रवाह (flow) – <strong>सकारात्मक (positive)</strong> – बेहतर (better) कटिंग।</li>
+<li>निकासी कोण – <strong>रगड़ (rubbing)</strong> से बचाता है – <strong>6°–8°</strong>।</li>
+<li>कटिंग एज कोण – <strong>मजबूती (strength)</strong> और <strong>फिनिश (finish)</strong>।</li>
+<li>नोज़ त्रिज्या – <strong>बड़ा (larger)</strong> – <strong>चिकनी (smoother)</strong> सतह – <strong>मजबूत (stronger)</strong> टूल।</li>
+<li>कोण (angles) – <strong>टूल जीवन (tool life)</strong> और <strong>गुणवत्ता (quality)</strong> को प्रभावित (affect) करते हैं।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>रेक कोण (Rake Angle) – <strong>चिप (chip)</strong> प्रवाह – <strong>कटिंग बल (cutting force)</strong> को कम (reduce) करता है।</li>
+<li>निकासी कोण (Clearance Angle) – <strong>रगड़ (rubbing)</strong> को रोकता है – <strong>गर्मी (heat)</strong> कम (reduce).</li>
+<li>कटिंग एज कोण (Cutting Edge Angle) – <strong>टूल (tool)</strong> को <strong>मजबूत (strong)</strong> बनाता है।</li>
+<li>नोज़ त्रिज्या (Nose Radius) – <strong>सतह फिनिश (surface finish)</strong> को <strong>सुधार (improve)</strong> करती है।</li>
+<li>सही कोण (correct angles) – <strong>टूल जीवन (tool life)</strong> बढ़ाता है – <strong>उत्पादन (production)</strong> बढ़ाता है।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.9 CUTTING SPEED, FEED, COOLANTS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-speed-feed">
+<div class="content-section" data-content="speed-feed">
+<div class="section-header"><span class="icon">⚡</span><span class="title">7.9 – कटिंग स्पीड, फीड, कूलेंट (Cutting Speed, Feed, Coolants)</span><span class="subtitle">— गणना, चयन, स्नेहक, शीतलक</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<h3>Cutting Speed</h3>
+<p><strong>Cutting speed (V)</strong> वह speed है जिस पर cutting edge material की surface के ऊपर से गुजरती है; इसे <strong>m/min</strong> में व्यक्त किया जाता है।</p>
+<div class="example-box"><strong>Formula:</strong><br/>V = πDN / 1000<br/>अतः <strong>N = 1000V / (πD)</strong>, जहाँ π = 3.14, D = work diameter in mm और N = RPM.</div>
+<p><strong>Example:</strong> 50 mm bar को 25 m/min पर चलाने के लिए spindle speed लगभग <strong>159 rpm</strong> होगी।</p>
+<h3>Cutting Speed को नियंत्रित करने वाले Factors</h3>
+<ul><li>Required finish</li><li>Depth of cut</li><li>Tool geometry</li><li>Cutting tool के गुण, hardness और mounting</li><li>Workpiece material के गुण और hardness</li><li>Cutting fluid का प्रकार</li></ul>
+<h3>Feed</h3>
+<p>Feed वह दूरी है जो tool work की प्रत्येक revolution में work के साथ चलता है; इसे <strong>mm/rev</strong> में व्यक्त किया जाता है। Feed को tool geometry, required surface finish और tool rigidity प्रभावित करते हैं। Metal removal rate cutting speed, feed rate और depth of cut पर निर्भर करता है।</p>
+<h3>HSS Tool के लिए Cutting Speed और Feed</h3>
+<div class="table-wrap"><table><caption>NIMI table — H.S.S. tools</caption><thead><tr><th>Material</th><th>Feed (mm/rev)</th><th>Cutting speed (m/min)</th></tr></thead><tbody>
+<tr><td>Aluminium</td><td>0.2–1.00</td><td>70–100</td></tr><tr><td>Brass (alpha)</td><td>0.2–1.00</td><td>50–80</td></tr><tr><td>Brass (free cutting)</td><td>0.2–1.5</td><td>70–100</td></tr><tr><td>Brass (gun metal)</td><td>0.2–1.00</td><td>35–70</td></tr><tr><td>Grey cast iron</td><td>0.15–0.7</td><td>25–40</td></tr><tr><td>Copper</td><td>0.2–1.00</td><td>35–70</td></tr><tr><td>Steel (mild)</td><td>0.2–1.00</td><td>35–50</td></tr><tr><td>Steel (medium carbon)</td><td>0.15–0.7</td><td>30–35</td></tr><tr><td>Steel (alloy-high tensile)</td><td>0.08–0.3</td><td>5–10</td></tr><tr><td>Thermosetting plastic</td><td>0.2–1.00</td><td>35–50</td></tr></tbody></table></div>
+<ul><li>Super HSS tools में feed समान रखा जा सकता है और cutting speed लगभग <strong>15–20%</strong> बढ़ाई जा सकती है।</li><li>Heavy roughing के लिए lower speed range और light finishing cut के लिए higher speed range उपयुक्त है।</li><li>Carbide tool के लिए HSS की तुलना में लगभग <strong>3–4 गुना</strong> अधिक cutting speed चुनी जा सकती है।</li></ul>
+<h3>Coolants / Cutting Fluids</h3>
+<p>Cutting fluids tool और work को cool करते हैं, chip/tool interface को lubricate करते हैं, tool wear कम करते हैं, chip welding रोकते हैं, surface finish सुधारते हैं, chips हटाने और corrosion रोकने में सहायता करते हैं।</p>
+<p>मुख्य प्रकार: <strong>soluble mineral oils, straight mineral oils, straight fatty oils, compounded/blended oils और sulphurised oils</strong>।</p>
+<h3>Lubricants</h3>
+<p>Lubricant mating parts के बीच friction और wear कम करता है, adhesion रोकता है, load distribution में सहायता करता है, moving parts को cool करता है, corrosion रोकता है और machine efficiency सुधारता है।</p></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: कटिंग स्पीड, फीड और कटिंग फ्लुइड</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/speed_feed_coolant.jpg</p>
+<code>speed_feed_coolant.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(CS चार्ट, फीड चार्ट, कटिंग फ्लुइड अनुप्रयोग)</p>
+</div>
+<div class="figure-caption">Fig 9 – कटिंग स्पीड, फीड और कटिंग फ्लुइड</div>
 </div>
 <div class="table-wrap">
 <table>
-<caption>नियमित रखरखाव चेकलिस्ट (Routine Maintenance Checklist)</caption>
-<thead><tr><th>आवृत्ति (Frequency)</th><th>कार्य (Task)</th><th>जिम्मेदारी (Responsibility)</th></tr></thead>
+<caption>HSS टूल के लिए अनुशंसित CS (m/min) और फीड (mm/rev)</caption>
+<thead><tr><th>सामग्री (Material)</th><th>CS (m/min) – रफिंग</th><th>CS (m/min) – फिनिशिंग</th><th>फीड (mm/rev) – रफिंग</th><th>फीड (mm/rev) – फिनिशिंग</th></tr></thead>
 <tbody>
-<tr><td>दैनिक (Daily)</td><td>सफाई, स्नेहन, निरीक्षण, सुरक्षा जाँच</td><td>ऑपरेटर (Operator)</td></tr>
-<tr><td>साप्ताहिक (Weekly)</td><td>विस्तृत निरीक्षण, फिल्टर सफाई, ग्रीसिंग</td><td>ऑपरेटर + तकनीशियन (Technician)</td></tr>
-<tr><td>मासिक (Monthly)</td><td>पूर्ण निरीक्षण, अंशांकन, तेल परिवर्तन</td><td>रखरखाव विभाग (Maintenance Dept.)</td></tr>
-<tr><td>त्रैमासिक (Quarterly)</td><td>प्रमुख घटकों का निरीक्षण, प्रतिस्थापन</td><td>रखरखाव विभाग (Maintenance Dept.)</td></tr>
+<tr><td>माइल्ड स्टील (Mild Steel)</td><td>20–25</td><td>25–30</td><td>0.3–0.5</td><td>0.05–0.15</td></tr>
+<tr><td>कास्ट आयरन (Cast Iron)</td><td>15–20</td><td>20–25</td><td>0.2–0.4</td><td>0.05–0.12</td></tr>
+<tr><td>एल्यूमीनियम (Aluminium)</td><td>60–80</td><td>80–100</td><td>0.3–0.6</td><td>0.05–0.15</td></tr>
+<tr><td>पीतल (Brass)</td><td>40–50</td><td>50–60</td><td>0.2–0.4</td><td>0.05–0.12</td></tr>
 </tbody>
 </table>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>नियमित रखरखाव – <strong>दैनिक (daily)</strong>, <strong>साप्ताहिक (weekly)</strong>, <strong>मासिक (monthly)</strong>।</li>
-<li>सफाई (Cleaning) – <strong>चिप्स (chips)</strong> और <strong>गंदगी (dirt)</strong> हटाना – <strong>मशीन (machine)</strong> के <strong>जीवन (life)</strong> के लिए।</li>
-<li>स्नेहन (Lubrication) – <strong>तेल (oil)</strong> और <strong>ग्रीस (grease)</strong> – <strong>घर्षण (friction)</strong> कम (reduce) करने के लिए।</li>
-<li>निरीक्षण (Inspection) – <strong>ढीला (loose)</strong> या <strong>क्षतिग्रस्त (damaged)</strong> भागों (parts) की <strong>जाँच (check)</strong>।</li>
-<li>रखरखाव लॉग (maintenance log) – <strong>रिकॉर्ड (record)</strong> बनाए रखना – <strong>महत्वपूर्ण (important)</strong>।</li>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>कटिंग स्पीड (CS) – <strong>m/min</strong> – सामग्री (material) और टूल (tool) पर निर्भर।</li>
+<li>RPM = (CS × 1000) / (π × D) – <strong>D (mm)</strong>।</li>
+<li>फीड (Feed) – <strong>mm/rev</strong> – रफिंग के लिए <strong>उच्च (high)</strong> – फिनिशिंग के लिए <strong>कम (low)</strong>।</li>
+<li>कटिंग फ्लुइड – <strong>गर्मी (heat)</strong> कम (reduce) करता है – <strong>टूल जीवन (tool life)</strong> बढ़ाता है।</li>
+<li>कास्ट आयरन – <strong>सूखा (dry)</strong> – <strong>कोई (no)</strong> कटिंग फ्लुइड।</li>
 </ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>दैनिक (Daily) – <strong>सफाई (cleaning)</strong>, <strong>स्नेहन (lubrication)</strong>, <strong>निरीक्षण (inspection)</strong>।</li>
-<li>साप्ताहिक (Weekly) – <strong>विस्तृत (detailed)</strong> निरीक्षण – <strong>फिल्टर (filters)</strong> सफाई।</li>
-<li>मासिक (Monthly) – <strong>पूर्ण (full)</strong> निरीक्षण – <strong>अंशांकन (calibration)</strong> – <strong>तेल (oil)</strong> परिवर्तन।</li>
-<li>नियमित रखरखाव – <strong>बड़ी (major)</strong> खराबी (breakdown) को <strong>रोकता (prevents)</strong> है।</li>
-<li>रखरखाव लॉग (log) – <strong>सभी (all)</strong> कार्यों का <strong>रिकॉर्ड (record)</strong>।</li>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>CS = <strong>π × D × N / 1000</strong> (m/min).</li>
+<li>RPM = <strong>(CS × 1000) / (π × D)</strong> – <strong>D (mm)</strong> में।</li>
+<li>फीड (Feed) – <strong>mm/rev</strong> – <strong>टूल (tool)</strong> की <strong>प्रति चक्कर (per revolution)</strong> गति (movement).</li>
+<li>कटिंग फ्लुइड – <strong>गर्मी (heat)</strong> और <strong>घर्षण (friction)</strong> कम (reduce) करता है – <strong>सतह फिनिश (surface finish)</strong> में सुधार (improve).</li>
+<li>कास्ट आयरन – <strong>सूखा (dry)</strong> कटिंग – <strong>कोई (no)</strong> शीतलक (coolant).</li>
 </ul></div>
 </div>
 </div>
 </div>
 <!-- ====================================================================== -->
-<!-- 8.3 PREVENTIVE MAINTENANCE -->
+<!-- 7.10 CHUCKS – INDEPENDENT 4-JAW CHUCK -->
 <!-- ====================================================================== -->
-<div class="container" id="sec-preventive">
-<div class="content-section" data-content="preventive">
-<div class="section-header"><span class="icon">🛡️</span><span class="title">8.3 – निवारक रखरखाव (Preventive Maintenance – PM)</span><span class="subtitle">— अर्थ, प्रकार, लाभ, कार्यक्रम</span></div>
+<div class="container" id="sec-chucks">
+<div class="content-section" data-content="chucks">
+<div class="section-header"><span class="icon">🔩</span><span class="title">7.10 – चक – स्वतंत्र 4-जॉ चक (Independent 4-Jaw Chuck)</span><span class="subtitle">— संरचना, उपयोग, संचालन, लाभ</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>निवारक रखरखाव (Preventive Maintenance – PM)</strong> – <strong>मशीन (machine)</strong> के <strong>खराब (breakdown)</strong> होने से <strong>पहले (before)</strong> किया जाने वाला <strong>रखरखाव (maintenance)</strong> – <strong>नियोजित (planned)</strong> और <strong>अनुसूचित (scheduled)</strong>।</p>
-<p><strong>निवारक रखरखाव का उद्देश्य (Purpose of Preventive Maintenance):</strong></p>
-<ul>
-<li><strong>अचानक (sudden)</strong> खराबी (breakdown) को <strong>रोकना (prevent)</strong> – <strong>उत्पादन (production)</strong> में <strong>रुकावट (interruption)</strong> से बचना।</li>
-<li><strong>मशीन (machine) का जीवन (life)</strong> बढ़ाना (increase) – <strong>घिसाव (wear)</strong> और <strong>क्षति (damage)</strong> को <strong>कम (reduce)</strong> करना।</li>
-<li><strong>मरम्मत (repair) लागत (cost) कम (reduce)</strong> – <strong>छोटी (small)</strong> समस्याओं (problems) को <strong>बड़ी (major)</strong> समस्या बनने से <strong>पहले (before)</strong> <strong>ठीक (fix)</strong> करना।</li>
-<li><strong>सुरक्षा (safety) में सुधार (improve)</strong> – <strong>मशीन (machine)</strong> की <strong>विश्वसनीयता (reliability)</strong> बढ़ाना (increase).</li>
-<li><strong>गुणवत्ता (quality) बनाए रखना (maintain)</strong> – <strong>मशीन (machine)</strong> की <strong>सटीकता (accuracy)</strong> बनी रहती है।</li>
-</ul>
-<p><strong>निवारक रखरखाव के प्रकार (Types of Preventive Maintenance):</strong></p>
-<ul>
-<li><strong>समय-आधारित (Time-Based – TBM):</strong> <strong>निश्चित (fixed)</strong> अंतराल (intervals) पर – <strong>दैनिक (daily)</strong>, <strong>साप्ताहिक (weekly)</strong>, <strong>मासिक (monthly)</strong>, <strong>वार्षिक (yearly)</strong> – <strong>घिसाव (wear)</strong> के <strong>अनुमान (estimation)</strong> पर आधारित।</li>
-<li><strong>उपयोग-आधारित (Usage-Based – UBM):</strong> मशीन (machine) के <strong>संचालन (operation) घंटे (hours)</strong> या <strong>चक्र (cycles)</strong> पर आधारित – <strong>उदाहरण (example):</strong> 1000 घंटे (hours) के बाद <strong>तेल (oil)</strong> बदलना।</li>
-<li><strong>स्थिति-आधारित (Condition-Based – CBM):</strong> मशीन (machine) की <strong>वास्तविक (actual)</strong> <strong>स्थिति (condition)</strong> पर आधारित – <strong>कंपन (vibration)</strong>, <strong>तापमान (temperature)</strong>, <strong>ध्वनि (sound)</strong> की <strong>निगरानी (monitoring)</strong> – <strong>जब (when)</strong> आवश्यक (required) हो तब <strong>रखरखाव (maintenance)</strong>।</li>
-<li><strong>पूर्वानुमानित (Predictive – PdM):</strong> <strong>डेटा (data)</strong> और <strong>विश्लेषण (analysis)</strong> के आधार पर <strong>भविष्यवाणी (prediction)</strong> – <strong>कब (when)</strong> मशीन (machine) <strong>खराब (fail)</strong> हो सकती है – <strong>उच्च (high)</strong> तकनीक (technology) की आवश्यकता – <strong>सेंसर (sensors)</strong> और <strong>सॉफ्टवेयर (software)</strong>।</li>
-</ul>
-<p><strong>निवारक रखरखाव कार्यक्रम (Preventive Maintenance Schedule):</strong></p>
-<ul>
-<li><strong>दैनिक (Daily):</strong> सफाई (cleaning), स्नेहन (lubrication), दृश्य (visual) निरीक्षण (inspection).</li>
-<li><strong>साप्ताहिक (Weekly):</strong> विस्तृत (detailed) निरीक्षण, फिल्टर (filters) सफाई, बेल्ट (belts) जाँच।</li>
-<li><strong>मासिक (Monthly):</strong> पूर्ण (full) निरीक्षण, अंशांकन (calibration), तेल (oil) परिवर्तन।</li>
-<li><strong>त्रैमासिक (Quarterly):</strong> प्रमुख (major) घटकों (components) का निरीक्षण, स्नेहन (lubrication) प्रणाली (system) की जाँच।</li>
-<li><strong>वार्षिक (Yearly):</strong> पूर्ण (complete) ओवरहॉल (overhaul), प्रमुख (major) भागों (parts) का प्रतिस्थापन (replacement).</li>
-</ul>
-<p><strong>निवारक रखरखाव के लाभ (Benefits of Preventive Maintenance):</strong></p>
-<ul>
-<li><strong>डाउनटाइम (downtime) कम (reduce)</strong> – <strong>उत्पादन (production)</strong> बढ़ता (increase) है।</li>
-<li><strong>मरम्मत (repair) लागत (cost) कम (reduce)</strong> – <strong>बड़ी (major)</strong> खराबी (breakdown) से बचना।</li>
-<li><strong>मशीन (machine) का जीवन (life) बढ़ाना (increase)</strong> – <strong>पूंजीगत (capital)</strong> व्यय (expenditure) कम (reduce).</li>
-<li><strong>सुरक्षा (safety) में सुधार (improve)</strong> – <strong>दुर्घटनाएँ (accidents)</strong> कम (reduce).</li>
-<li><strong>उत्पाद (product) गुणवत्ता (quality) बनाए रखना (maintain)</strong> – <strong>ग्राहक (customer)</strong> संतुष्टि (satisfaction).</li>
-</ul>
-</div>
+<h3>Independent 4-Jaw Chuck</h3>
+<p>4-jaw chuck के मुख्य parts: <strong>back plate, body, jaws और square-threaded screw shafts</strong>। प्रत्येक jaw independently adjust किया जा सकता है, इसलिए work को true या eccentric run के लिए set किया जा सकता है। Jaws बड़े diameter work को hold करने के लिए reversible होते हैं।</p>
+<ul><li>4-jaw chuck को independent chuck भी कहते हैं।</li><li>इसकी gripping power अधिक होती है और heavy cuts लिए जा सकते हैं।</li><li>Regular और irregular shapes को hold किया जा सकता है।</li><li>Work को eccentric turning के लिए जानबूझकर off-centre set किया जा सकता है।</li><li>Dial test indicator की सहायता से setting/checking की जा सकती है।</li></ul>
+<h3>3-Jaw और 4-Jaw Chuck</h3>
+<ul><li><strong>3-jaw:</strong> self-centring; cylindrical और hexagonal work के लिए convenient; internal और external jaws उपलब्ध। Wear होने पर accuracy घटती है और run-out को individual jaw adjustment से correct नहीं किया जा सकता।</li><li><strong>4-jaw:</strong> independent jaw adjustment; regular/irregular work, eccentric setting और heavier cuts के लिए suitable; setting comparatively अधिक समय लेती है।</li></ul>
+<h3>Chuck की Specification</h3>
+<p>Type, capacity, body diameter, body width और spindle nose पर mounting method बताकर chuck specify किया जाता है।</p>
+<h3>Chuck Mounting / Dismounting की सावधानियाँ</h3>
+<ul><li>Chuck और lathe के लिए सही work-holding device चुनें।</li><li>Spindle nose पर chuck mount करते समय force न लगाएँ।</li><li>Light chuck के लिए bed/slideway पर wooden board और heavy chuck के लिए chuck और bed के बीच wooden board का उपयोग damage से बचाने में सहायता करता है। Heavy chuck को mount करते समय सहायता लें।</li><li>Mounting surfaces पर हल्की oil film रखें और mating threads साफ रखें। Dirt से chuck true run-out और spindle/chuck thread या taper को नुकसान हो सकता है।</li><li>Threaded spindle, tapered spindle, cam-lock और bolted spindle mounting के लिए NIMI procedure के अनुसार motor बंद और spindle को सबसे धीमी setting पर रखकर mounting/dismounting करें।</li></ul></div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: निवारक रखरखाव प्रकार (Preventive Maintenance Types)</strong></p>
-<p>स्थान: /images/notes/fitter/module-8/preventive_maintenance.jpg</p>
-<code>preventive_maintenance.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(समय-आधारित, उपयोग-आधारित, स्थिति-आधारित, पूर्वानुमानित)</p>
+<p><strong>चित्र: स्वतंत्र 4-जॉ चक (Independent 4-Jaw Chuck)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/4_jaw_chuck.jpg</p>
+<code>4_jaw_chuck.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(जॉ, स्क्रू, चक बॉडी, चक कुंजी, संरेखण)</p>
 </div>
-<div class="figure-caption">Fig 3 – निवारक रखरखाव के प्रकार</div>
+<div class="figure-caption">Fig 10 – स्वतंत्र 4-जॉ चक</div>
 </div>
-<div class="compare-grid">
-<div class="compare-card" style="border-color:#003366; background:#f0f5ff;"><h4>🔵 निवारक (Preventive)</h4><ul><li><strong>खराबी (breakdown) से पहले (before)</strong></li><li><strong>नियोजित (planned)</strong> और <strong>अनुसूचित (scheduled)</strong></li><li><strong>लागत (cost)</strong> – कम (low) – <strong>बड़ी (major)</strong> मरम्मत से बचाता है</li><li><strong>उपयोग (use)</strong> – सामान्य (general) उद्योग (industry)</li></ul></div>
-<div class="compare-card" style="border-color:#28a745; background:#f0faf2;"><h4>🟢 सुधारात्मक (Corrective)</h4><ul><li><strong>खराबी (breakdown) के बाद (after)</strong></li><li><strong>अनियोजित (unplanned)</strong> – मरम्मत (repair)</li><li><strong>लागत (cost)</strong> – उच्च (high) – <strong>डाउनटाइम (downtime)</strong> अधिक (more)</li>
-<li><strong>उपयोग (use)</strong> – जब <strong>आवश्यक (required)</strong> हो</li></ul></div>
-</div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>निवारक रखरखाव – <strong>खराबी (breakdown) से पहले (before)</strong> – <strong>नियोजित (planned)</strong>।</li>
-<li>समय-आधारित (Time-Based) – <strong>निश्चित (fixed)</strong> अंतराल (intervals).</li>
-<li>उपयोग-आधारित (Usage-Based) – <strong>घंटे (hours)</strong> या <strong>चक्र (cycles)</strong> पर।</li>
-<li>स्थिति-आधारित (Condition-Based) – <strong>वास्तविक (actual)</strong> स्थिति (condition) पर।</li>
-<li>पूर्वानुमानित (Predictive) – <strong>डेटा (data)</strong> और <strong>विश्लेषण (analysis)</strong> – <strong>उच्च (high)</strong> तकनीक।</li>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>4-जॉ चक – <strong>स्वतंत्र (independent)</strong> जॉ – <strong>अनियमित (irregular)</strong> और <strong>वर्गाकार (square)</strong> वर्कपीस के लिए।</li>
+<li>3-जॉ चक – <strong>स्व-केंद्रित (self-centring)</strong> – <strong>गोल (round)</strong> वर्कपीस के लिए – <strong>तेज़ (fast)</strong>।</li>
+<li>4-जॉ चक – <strong>अधिक सटीक (more accurate)</strong> – ±0.01 मिमी – <strong>समायोजन (adjustment)</strong> समय लेता है।</li>
+<li>केंद्र स्थापना (centring) – <strong>डायल गेज (dial gauge)</strong> का उपयोग करें।</li>
+<li>जॉ (jaws) को <strong>क्रॉस (cross)</strong> क्रम (sequence) में <strong>कसें (tighten)</strong> – <strong>समान (uniform)</strong> दबाव के लिए।</li>
 </ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>निवारक रखरखाव – <strong>खराबी (breakdown) से पहले (before)</strong> – <strong>नियोजित (planned)</strong>।</li>
-<li>समय-आधारित (Time-Based) – <strong>दैनिक (daily)</strong>, <strong>साप्ताहिक (weekly)</strong>, <strong>मासिक (monthly)</strong>।</li>
-<li>उपयोग-आधारित (Usage-Based) – <strong>1000 घंटे (hours)</strong> के बाद <strong>तेल (oil)</strong> बदलना।</li>
-<li>स्थिति-आधारित (Condition-Based) – <strong>कंपन (vibration)</strong>, <strong>तापमान (temperature)</strong> की <strong>निगरानी (monitoring)</strong>।</li>
-<li>पूर्वानुमानित (Predictive) – <strong>उच्च (high)</strong> तकनीक – <strong>सेंसर (sensors)</strong> और <strong>सॉफ्टवेयर (software)</strong>।</li>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>4-जॉ चक – <strong>स्वतंत्र (independent)</strong> जॉ – <strong>अनियमित (irregular)</strong> आकार के लिए।</li>
+<li>3-जॉ चक – <strong>स्व-केंद्रित (self-centring)</strong> – <strong>गोल (round)</strong> वर्कपीस के लिए।</li>
+<li>4-जॉ चक – <strong>अधिक सटीक (more accurate)</strong> – <strong>भारी (heavy)</strong> कट (cut) के लिए।</li>
+<li>केंद्र स्थापना (centring) – <strong>डायल गेज (dial gauge)</strong> या <strong>स्क्राइबर (scriber)</strong> – <strong>सटीक (accurate)</strong> सेटिंग के लिए।</li>
+<li>जॉ (jaws) को <strong>क्रॉस (cross)</strong> क्रम (1-3-2-4) में <strong>कसें (tighten)</strong> – <strong>विकृति (distortion)</strong> से बचने के लिए।</li>
 </ul></div>
 </div>
 </div>
 </div>
 <!-- ====================================================================== -->
-<!-- 8.4 INSPECTION AND GADGETS -->
+<!-- 7.11 FACE PLATE -->
 <!-- ====================================================================== -->
-<div class="container" id="sec-inspection">
-<div class="content-section" data-content="inspection">
-<div class="section-header"><span class="icon">🔍</span><span class="title">8.4 – निरीक्षण और गैजेंट्स (Inspection &amp; Gadgets)</span><span class="subtitle">— निरीक्षण के प्रकार, उपकरण, गेज, विधियाँ</span></div>
+<div class="container" id="sec-faceplate">
+<div class="content-section" data-content="faceplate">
+<div class="section-header"><span class="icon">⬛</span><span class="title">7.11 – फेस प्लेट (Face Plate)</span><span class="subtitle">— संरचना, उपयोग, कार्यप्रणाली</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>निरीक्षण (Inspection)</strong> – <strong>उत्पाद (product)</strong>, <strong>भाग (part)</strong> या <strong>सामग्री (material)</strong> की <strong>जाँच (checking)</strong> – यह <strong>सुनिश्चित (ensure)</strong> करने के लिए कि यह <strong>निर्दिष्ट (specified)</strong> <strong>मानकों (standards)</strong> को <strong>पूरा (meet)</strong> करता है।</p>
-<p><strong>निरीक्षण के प्रकार (Types of Inspection):</strong></p>
-<p><strong>1. प्रक्रिया के अनुसार (By Process):</strong></p>
-<ul>
-<li><strong>प्रवेश निरीक्षण (Incoming Inspection – कच्चा माल / Raw Material):</strong> <strong>कच्चे माल (raw materials)</strong> और <strong>घटकों (components)</strong> की जाँच – <strong>उत्पादन (production)</strong> में <strong>प्रवेश (entry)</strong> से पहले।</li>
-<li><strong>प्रक्रिया निरीक्षण (In-process Inspection – उत्पादन के दौरान / During Production):</strong> <strong>उत्पादन (production)</strong> के <strong>दौरान (during)</strong> – <strong>समय-समय (periodically)</strong> पर – <strong>गुणवत्ता (quality)</strong> <strong>नियंत्रण (control)</strong> के लिए – <strong>प्रारंभिक (initial)</strong>, <strong>मध्य (intermediate)</strong>, <strong>अंतिम (final)</strong>।</li>
-<li><strong>अंतिम निरीक्षण (Final Inspection – तैयार उत्पाद / Finished Product):</strong> <strong>तैयार (finished)</strong> उत्पाद (product) की <strong>जाँच (checking)</strong> – <strong>शिपमेंट (shipment)</strong> से <strong>पहले (before)</strong> – <strong>ग्राहक (customer)</strong> को <strong>भेजने (dispatch)</strong> से पहले।</li>
-</ul>
-<p><strong>2. नमूने के अनुसार (By Sampling):</strong></p>
-<ul>
-<li><strong>100% निरीक्षण (100% Inspection – पूर्ण / Full):</strong> <strong>प्रत्येक (every)</strong> भाग (part) की <strong>जाँच (checking)</strong> – <strong>छोटे (small)</strong> उत्पादन (production) के लिए – <strong>महत्वपूर्ण (critical)</strong> अनुप्रयोगों (applications) के लिए – <strong>समय (time)</strong> और <strong>लागत (cost)</strong> अधिक (high).</li>
-<li><strong>नमूना निरीक्षण (Sampling Inspection – चयनित / Selected):</strong> <strong>बैच (batch)</strong> से <strong>कुछ (some)</strong> नमूनों (samples) की <strong>जाँच (checking)</strong> – <strong>बड़े (large)</strong> उत्पादन (production) के लिए – <strong>समय (time)</strong> और <strong>लागत (cost)</strong> कम (low) – <strong>सांख्यिकीय (statistical)</strong> विधियाँ (methods) – <strong>स्वीकृति (acceptance)</strong> या <strong>अस्वीकृति (rejection)</strong>।</li>
-</ul>
-<p><strong>3. स्थान के अनुसार (By Location):</strong></p>
-<ul>
-<li><strong>केंद्रीय (Centralized) निरीक्षण:</strong> <strong>एक (one)</strong> स्थान (location) पर – <strong>सभी (all)</strong> भागों (parts) को <strong>वहाँ (there)</strong> लाया जाता है – <strong>बड़े (large)</strong> संगठनों (organizations) में।</li>
-<li><strong>विकेंद्रीकृत (Decentralized) निरीक्षण:</strong> <strong>प्रत्येक (each)</strong> मशीन (machine) या <strong>कार्य (work)</strong> स्टेशन (station) पर – <strong>त्वरित (quick)</strong> फीडबैक (feedback) – <strong>छोटे (small)</strong> संगठनों (organizations) में।</li>
-</ul>
-<p><strong>निरीक्षण के लिए गैजेंट्स (Gadgets for Inspection):</strong></p>
-<ul>
-<li><strong>मापन (Measuring) उपकरण (Instruments):</strong>
-<ul>
-<li><strong>स्टील रूल (Steel Rule):</strong> <strong>लंबाई (length)</strong> मापने के लिए – <strong>सटीकता (accuracy):</strong> 0.5 मिमी (mm).</li>
-<li><strong>वर्नियर कैलिपर (Vernier Caliper):</strong> <strong>बाहरी (external)</strong>, <strong>आंतरिक (internal)</strong> और <strong>गहराई (depth)</strong> माप – <strong>सटीकता:</strong> 0.02 मिमी (mm).</li>
-<li><strong>माइक्रोमीटर (Micrometer):</strong> <strong>बाहरी (external)</strong> आयाम (dimensions) – <strong>सटीकता:</strong> 0.01 मिमी (mm).</li>
-<li><strong>डायल गेज (Dial Gauge):</strong> <strong>विक्षेपण (deflection)</strong> और <strong>सतह समतलता (flatness)</strong> – <strong>सटीकता:</strong> 0.01 मिमी (mm).</li>
-</ul>
-</li>
-<li><strong>गेज (Gauges):</strong>
-<ul>
-<li><strong>फीलर गेज (Feeler Gauge):</strong> <strong>अंतर (clearance)</strong> मापने के लिए – <strong>पतली (thin)</strong> धातु (metal) पट्टियाँ (strips).</li>
-<li><strong>स्नैप गेज (Snap Gauge):</strong> <strong>बाहरी (external)</strong> व्यास (diameter) की <strong>त्वरित (quick)</strong> जाँच – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
-<li><strong>प्लग गेज (Plug Gauge):</strong> <strong>आंतरिक (internal)</strong> व्यास (hole) की जाँच – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
-<li><strong>थ्रेड गेज (Thread Gauge):</strong> <strong>थ्रेड (thread)</strong> पिच (pitch) और <strong>व्यास (diameter)</strong> की जाँच – <strong>गो/नो-गो (Go/No-Go)</strong>।</li>
-<li><strong>रेडियस गेज (Radius Gauge):</strong> <strong>त्रिज्या (radius)</strong> मापने के लिए – <strong>उत्तल (convex)</strong> और <strong>अवतल (concave)</strong>।</li>
-</ul>
-</li>
-<li><strong>सतह (Surface) निरीक्षण:</strong>
-<ul>
-<li><strong>सरफेस प्लेट (Surface Plate):</strong> <strong>समतलता (flatness)</strong> जाँचने के लिए – <strong>संदर्भ (reference)</strong> सतह (surface).</li>
-<li><strong>स्क्राइबर (Scriber) और प्रशियन ब्लू (Prussian Blue):</strong> <strong>संपर्क (contact)</strong> बिंदुओं (points) की <strong>पहचान (identification)</strong> के लिए।</li>
-</ul>
-</li>
-</ul>
-</div>
+<p><strong>Face plate</strong> पर बड़े, flat और irregular workpieces, castings, jigs और fixtures को turning operations के लिए मजबूती से जोड़ा जा सकता है।</p>
+<h3>Face Plate के प्रकार</h3>
+<ul><li>केवल लंबी radial slots वाली face plate.</li><li>Long slots के साथ <strong>T-slots</strong> वाली face plate.</li><li>Long radial slots तथा अतिरिक्त parallel slots वाली face plate.</li></ul>
+<h3>Accessories</h3>
+<p>Face plate के साथ <strong>clamps, T-bolts, angle plate, parallels, counterweight, stepped block और V-block</strong> आदि उपयोग किए जाते हैं।</p>
+<h3>Work Mounting</h3>
+<ul><li>बड़े/flat/irregular workpieces को face plate पर clamp किया जा सकता है।</li><li>Heavy या awkward work के लिए work को face plate के workbench पर रहते हुए mount करना सुविधाजनक है।</li><li>Face plate को spindle पर लगाने से पहले work को face plate पर locate और centre करना लाभदायक है। Punch mark या hole को लगभग face plate के centre में रखें, जिससे spindle पर mounting के बाद truing आसान हो।</li><li>यदि कई duplicate pieces machine करने हों, तो parallels और stop blocks का उपयोग करके face plate को fixture की तरह set किया जा सकता है।</li></ul></div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: निरीक्षण गैजेंट्स (Inspection Gadgets)</strong></p>
-<p>स्थान: /images/notes/fitter/module-8/inspection_gadgets.jpg</p>
-<code>inspection_gadgets.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(वर्नियर, माइक्रोमीटर, डायल गेज, फीलर गेज, स्नैप गेज, थ्रेड गेज)</p>
+<p><strong>चित्र: फेस प्लेट (Face Plate)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/face_plate.jpg</p>
+<code>face_plate.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(T-स्लॉट, क्लैंप, बोल्ट, सेंटर होल, वर्कपीस माउंट)</p>
 </div>
-<div class="figure-caption">Fig 4 – निरीक्षण गैजेंट्स</div>
+<div class="figure-caption">Fig 11 – फेस प्लेट</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>फेस प्लेट – <strong>बड़े (large)</strong> और <strong>अनियमित (irregular)</strong> वर्कपीस के लिए।</li>
+<li>T-स्लॉट (T-slots) – <strong>क्लैंप (clamps)</strong> और <strong>बोल्ट (bolts)</strong> लगाने के लिए।</li>
+<li>सेंटर होल (centre hole) – <strong>टेलस्टॉक (tailstock)</strong> सेंटर (centre) के लिए।</li>
+<li>क्लैंप्स (clamps) – <strong>मजबूती (firmly)</strong> से <strong>कसें (tighten)</strong> – <strong>सुरक्षा (safety)</strong> के लिए।</li>
+<li>वर्कपीस (workpiece) को <strong>संतुलित (balanced)</strong> रखें – <strong>कंपन (vibration)</strong> से बचने के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>फेस प्लेट – <strong>बड़े (large)</strong> और <strong>अनियमित (irregular)</strong> वर्कपीस के लिए – <strong>चक (chuck)</strong> के विकल्प (alternative).</li>
+<li>T-स्लॉट (T-slots) – <strong>क्लैंप (clamps)</strong> लगाने के लिए – <strong>वर्कपीस (workpiece)</strong> को <strong>पकड़ने (hold)</strong> के लिए।</li>
+<li>सेंटर (centre) – <strong>टेलस्टॉक (tailstock)</strong> सेंटर (centre) – <strong>अतिरिक्त (additional)</strong> सहारा (support).</li>
+<li>सावधानी: <strong>सभी (all)</strong> क्लैंप्स (clamps) को <strong>कसें (tighten)</strong> – <strong>ढीला (loose)</strong> होने से <strong>चोट (injury)</strong>।</li>
+<li>संतुलन (balance) – <strong>महत्वपूर्ण (important)</strong> – <strong>कंपन (vibration)</strong> से बचने के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.12 DRILLING ON LATHE -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-drilling">
+<div class="content-section" data-content="drilling-lathe">
+<div class="section-header"><span class="icon">🕳️</span><span class="title">7.12 – लेथ पर ड्रिलिंग (Drilling on Lathe)</span><span class="subtitle">— प्रक्रिया, ड्रिल होल्डिंग, सावधानियाँ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p>Lathe पर drilling, boring, reaming और tapping जैसे internal operations से पहले की जा सकती है। Lathe drilling machine का replacement नहीं है, लेकिन suitable work में समय और effort बचा सकती है।</p>
+<h3>Drilling Method</h3>
+<ul><li>Drill किए जाने वाले end face को पहले face और centre करें ताकि drill सही स्थान से शुरू हो।</li><li>Headstock और tailstock spindle को drilling/reaming/tapping के लिए align रखें।</li><li>Tailstock में drill को <strong>directly fit</strong>, <strong>drill sleeve</strong>, <strong>drill chuck</strong> या <strong>drill socket</strong> से hold किया जा सकता है।</li><li>Tailstock spindle में सामान्यतः <strong>Morse taper</strong> होता है; taper-shank drill/sleeve/socket इसी के अनुसार fit होते हैं।</li></ul></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: लेथ पर ड्रिलिंग (Drilling on Lathe)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/drilling_lathe.jpg</p>
+<code>drilling_lathe.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(ड्रिल चक, टेलस्टॉक, वर्कपीस, ड्रिल फीड)</p>
+</div>
+<div class="figure-caption">Fig 12 – लेथ पर ड्रिलिंग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>ड्रिल – <strong>टेलस्टॉक (tailstock)</strong> में <strong>ड्रिल चक (drill chuck)</strong> में।</li>
+<li>ड्रिलिंग – <strong>छेद (hole)</strong> बनाना – <strong>सरल (simple)</strong> संचालन (operation).</li>
+<li>फीड (Feed) – <strong>टेलस्टॉक (tailstock)</strong> <strong>हैंडव्हील (handwheel)</strong> द्वारा – <strong>मैन्युअल (manual)</strong>।</li>
+<li>चिप्स (chips) – <strong>नियमित (regularly)</strong> हटाएँ – <strong>जाम (clogging)</strong> से बचने के लिए।</li>
+<li>कटिंग फ्लुइड – <strong>अनुशंसित (recommended)</strong> – <strong>गर्मी (heat)</strong> कम (reduce) करने के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>लेथ पर ड्रिलिंग – <strong>टेलस्टॉक (tailstock)</strong> में <strong>ड्रिल (drill)</strong> लगाकर।</li>
+<li>ड्रिल चक – <strong>सीधा (straight)</strong> शैंक के लिए।</li>
+<li>स्लीव (Sleeve) – <strong>टेपर (taper)</strong> शैंक के लिए – <strong>मोर्स टेपर (Morse taper)</strong>।</li>
+<li>चिप्स (chips) – <strong>बार-बार (frequently)</strong> हटाएँ – <strong>ब्रश (brush)</strong> या <strong>हुक (hook)</strong> से।</li>
+<li>ड्रिल (drill) को <strong>केंद्र (centre)</strong> पर <strong>सटीक (accurately)</strong> संरेखित (align) करें – <strong>छेद (hole)</strong> <strong>बड़ा (oversize)</strong> न हो।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.13 BORING AND BORING TOOLS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-boring">
+<div class="content-section" data-content="boring-lathe">
+<div class="section-header"><span class="icon">🔄</span><span class="title">7.13 – बोरिंग और बोरिंग टूल (Boring &amp; Boring Tools)</span><span class="subtitle">— बोरिंग बार, प्रकार, संचालन, सटीकता</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>Boring</strong> drilling, punching, casting या forging से बने existing hole को बड़ा और true करने का operation है। Boring से नया hole नहीं बनाया जाता।</p>
+<h3>Lathe पर Boring</h3>
+<p>Work को chuck या face plate में rotate किया जाता है और tool post में लगे boring tool को work में feed किया जाता है। छोटे holes के लिए solid boring tool और बड़े holes के लिए boring bar with tool bit उपयुक्त है। Depth of cut cross-slide screw से और feed carriage की longitudinal movement से प्राप्त होती है।</p>
+<h3>Boring Tool Types</h3>
+<ul><li><strong>Solid forged tools:</strong> HSS से end forged और ground; light duty और small diameter holes के लिए। इन्हें regrind, align, mount और remove करना आसान है।</li><li><strong>Boring bars with inserted bits:</strong> HSS square/round bits bar में insert और fix किए जाते हैं। Insert को 30°, 45° या 90° पर set किया जा सकता है। Heavy cuts के लिए उपयोगी।</li><li>इनमें <strong>plain boring bar</strong> और <strong>end-cap boring bar</strong> प्रकार शामिल हैं।</li></ul></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: बोरिंग और बोरिंग टूल (Boring &amp; Boring Tools)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/boring_tools.jpg</p>
+<code>boring_tools.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(बोरिंग बार, टूल पोस्ट माउंटिंग, कटिंग एक्शन)</p>
+</div>
+<div class="figure-caption">Fig 13 – बोरिंग और बोरिंग टूल</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बोरिंग – <strong>मौजूदा (existing)</strong> छेद (hole) को <strong>बड़ा (enlarge)</strong> करना और <strong>सटीक (accurate)</strong> बनाना।</li>
+<li>बोरिंग बार – <strong>टूल पोस्ट (tool post)</strong> में – <strong>छेद (hole)</strong> के अंदर (inside) – <strong>कटिंग (cutting)</strong>।</li>
+<li>टूल (tool) – <strong>केंद्र (centre)</strong> से <strong>0.5–1 मिमी (mm)</strong> <strong>ऊपर (above)</strong> – <strong>उचित (proper)</strong> ऊँचाई (height).</li>
+<li>कट (cut) गहराई – <strong>कम (small)</strong> – <strong>0.05–0.2 मिमी (mm)</strong> – <strong>सटीकता (accuracy)</strong> के लिए।</li>
+<li>कंपन (vibration) – <strong>खराब (poor)</strong> फिनिश (finish) – <strong>बोरिंग बार (boring bar)</strong> को <strong>मजबूती (firmly)</strong> से <strong>क्लैंप (clamp)</strong> करें।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बोरिंग – <strong>छेद (hole)</strong> को <strong>बड़ा (enlarge)</strong> करना – <strong>ड्रिलिंग (drilling)</strong> के बाद।</li>
+<li>बोरिंग बार – <strong>टूल पोस्ट (tool post)</strong> में – <strong>वर्कपीस (workpiece)</strong> के <strong>अंदर (inside)</strong>।</li>
+<li>बोरिंग बार का <strong>व्यास (diameter)</strong> – <strong>जितना (as)</strong> <strong>बड़ा (larger)</strong> <strong>संभव (possible)</strong> – <strong>कठोरता (rigidity)</strong> के लिए।</li>
+<li>कट (cut) गहराई – <strong>0.05–0.2 मिमी (mm)</strong> – <strong>सटीकता (accuracy)</strong> के लिए।</li>
+<li>कटिंग फ्लुइड – <strong>गर्मी (heat)</strong> कम (reduce) करता है – <strong>टूल (tool)</strong> जीवन (life) बढ़ाता है।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.14 TOOL SETTING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tool-setting">
+<div class="content-section" data-content="tool-setting">
+<div class="section-header"><span class="icon">🔧</span><span class="title">7.14 – टूल सेटिंग (Tool Setting)</span><span class="subtitle">— ऊँचाई, कोण, संरेखण, सटीकता</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p>Optimal cutting के लिए clamped tool का effective rake और clearance angle उसके ground angles के अनुरूप होना चाहिए। Tool की spindle lathe की spindle के perpendicular और tool tip workpiece centre पर set करना आवश्यक है।</p>
+<h3>Tool Setting Procedure</h3>
+<ul><li>Tool post seating face को साफ करें और <strong>minimum number of shims</strong> का उपयोग करें।</li><li>Shims/paking strips tool की width से थोड़ी कम width की हों और tool seating face के किनारे से flush हों।</li><li>Tool overhang को minimum रखें। NIMI rule के अनुसार unsupported overhanging length लगभग <strong>tool shank width × 1.5</strong> रखी जाती है।</li><li>Centre screw से tool को कसें और <strong>height setting gauge</strong> से centre height check करें।</li><li>Gauge उपलब्ध न हो तो surface gauge की सहायता से dead-centre height reference लेकर tool height set की जा सकती है।</li><li>सभी tool-holding screws को समान gripping pressure के साथ कसें और centre height दोबारा check करें।</li></ul>
+<h3>Plain और Step Turning</h3>
+<p><strong>Plain/parallel turning</strong> में पूरे tool travel के दौरान समान diameter की cylindrical surface बनती है। Rough turning में maximum material removal, lower spindle speed और higher feed होते हैं। Finish turning में rough marks हटाकर required accuracy और finish प्राप्त की जाती है; finish turning की speed rough turning से लगभग <strong>1–2 गुना</strong> और feed बहुत कम रखी जाती है। Round-nose finishing tool या comparatively larger nose radius tool उपयोग किया जा सकता है।</p>
+<p><strong>Step turning</strong> में workpiece पर अलग-अलग diameters के steps बनाए जाते हैं।</p>
+<h3>Grooving</h3>
+<p>Grooving cylindrical workpiece पर groove/channel बनाने का operation है। Tool का shape और depth of feed groove का आकार तय करते हैं। Square groove, round groove और अन्य grooves अलग applications के लिए बनाए जाते हैं।</p></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टूल सेटिंग (Tool Setting) – ऊँचाई, कोण, संरेखण</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/tool_setting.jpg</p>
+<code>tool_setting.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(शिम्स, टूल पोस्ट, संरेखण, ओवरहैंग)</p>
+</div>
+<div class="figure-caption">Fig 14 – टूल सेटिंग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>टूल केंद्र (centre) – <strong>वर्कपीस केंद्र (workpiece centre)</strong> के <strong>समान (same)</strong> ऊँचाई (height).</li>
+<li>शिम्स (Shims) – <strong>ऊँचाई (height)</strong> समायोजित (adjust) करने के लिए।</li>
+<li>टूल कोण (tool angle) – <strong>संचालन (operation)</strong> के अनुसार – फेसिंग, टर्निंग, थ्रेडिंग।</li>
+<li>ओवरहैंग (Overhang) – <strong>कम (short)</strong> – <strong>कंपन (vibration)</strong> कम (reduce) करने के लिए।</li>
+<li>टूल पोस्ट – <strong>मजबूती (firmly)</strong> से <strong>कसें (tighten)</strong> – <strong>टूल (tool)</strong> को <strong>हिलने (move)</strong> से रोकने के लिए।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>टूल केंद्र – <strong>वर्कपीस केंद्र (workpiece centre)</strong> के <strong>समान (same)</strong> ऊँचाई (height) – <strong>सटीकता (accuracy)</strong> के लिए।</li>
+<li>शिम्स (Shims) – <strong>टूल (tool)</strong> की <strong>ऊँचाई (height)</strong> को <strong>समायोजित (adjust)</strong> करने के लिए।</li>
+<li>टूल कोण (tool angle) – <strong>फेसिंग (facing)</strong> – <strong>लंबवत (perpendicular)</strong> – <strong>टर्निंग (turning)</strong> – <strong>समानांतर (parallel)</strong>।</li>
+<li>ओवरहैंग (Overhang) – <strong>जितना (as)</strong> <strong>कम (little)</strong> <strong>संभव (possible)</strong> – <strong>कंपन (vibration)</strong> कम (reduce).</li>
+<li>टूल पोस्ट – <strong>मजबूती (firmly)</strong> से <strong>कसें (tighten)</strong> – <strong>सुरक्षा (safety)</strong> के लिए।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.15 TOOL POST -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tool-post">
+<div class="content-section" data-content="tool-post">
+<div class="section-header"><span class="icon">🔩</span><span class="title">7.15 – टूल पोस्ट (Tool Post)</span><span class="subtitle">— प्रकार, कार्य, चयन, रखरखाव</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>Tool post</strong> tool या tools को hold और rigidly support करता है और <strong>top slide</strong> पर fit किया जाता है।</p>
+<h3>Common Types</h3>
+<ul><li><strong>American type / Single-way tool post:</strong> एक tool या tool-holder को slot में hold करता है। Ring base और rocker arm से tool tip की centre height adjust की जा सकती है। केवल एक tool fit होता है और single-bolt clamping के कारण rigidity कम होती है।</li><li><strong>Indexing type / Square or Four-way tool post:</strong> चार tools को एक साथ fix किया जा सकता है और handle lever से किसी tool को operating position में index किया जाता है। प्रत्येक tool को एक से अधिक bolts से secure किया जा सकता है, इसलिए rigidity अधिक होती है। अलग-अलग jobs के लिए tools बार-बार बदलने की आवश्यकता कम होती है। इसकी setting में skill और अधिक time लग सकता है।</li><li><strong>Quick-change tool post:</strong> modern lathes में उपयोग होता है। Tool बदलने के बजाय tool-holder बदला जाता है। यह महंगा होता है और कई holders की आवश्यकता होती है, लेकिन centre height पर आसानी से set किया जा सकता है और अच्छी rigidity देता है।</li></ul></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: टूल पोस्ट के प्रकार (Tool Post Types)</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/tool_post.jpg</p>
+<code>tool_post.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(रॉकर, चार-तरफा, क्विक-चेंज, सिंगल)</p>
+</div>
+<div class="figure-caption">Fig 15 – टूल पोस्ट के प्रकार</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>टूल पोस्ट – <strong>टूल (tool)</strong> को <strong>धारण (hold)</strong> करता है – <strong>कम्पाउंड रेस्ट (compound rest)</strong> पर।</li>
+<li>चार-तरफा (Four-Way) – <strong>चार (four)</strong> टूल्स – <strong>तेज़ (fast)</strong> परिवर्तन – <strong>उत्पादन (production)</strong> के लिए।</li>
+<li>क्विक-चेंज (Quick-Change) – <strong>बहुत (very)</strong> तेज़ – <strong>दोहराव (repeat)</strong> सटीकता (accuracy).</li>
+<li>रॉकर (Rocker) – <strong>पुराना (old)</strong> – <strong>कम (less)</strong> कठोर (rigid).</li>
+<li>चयन (Selection) – <strong>संचालन (operation)</strong>, <strong>सटीकता (accuracy)</strong>, <strong>लागत (cost)</strong> पर निर्भर (depends).</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>टूल पोस्ट – <strong>टूल (tool)</strong> को <strong>धारण (hold)</strong> करता है – <strong>कम्पाउंड रेस्ट (compound rest)</strong> पर।</li>
+<li>चार-तरफा (Four-Way) – <strong>चार (four)</strong> टूल्स – <strong>एक साथ (simultaneously)</strong> – <strong>उत्पादन (production)</strong> के लिए।</li>
+<li>क्विक-चेंज (Quick-Change) – <strong>बहुत तेज़ (very fast)</strong> टूल परिवर्तन – <strong>उच्च सटीकता (high accuracy)</strong>।</li>
+<li>रॉकर (Rocker) – <strong>ऊँचाई (height)</strong> समायोजन (adjustment) – <strong>कम (less)</strong> कठोर (rigid).</li>
+<li>टूल पोस्ट – <strong>सही (correct)</strong> प्रकार (type) का चयन – <strong>कार्य (job)</strong> के अनुसार।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.16 KNURLING -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-knurling">
+<div class="content-section" data-content="knurling">
+<div class="section-header"><span class="icon">🔲</span><span class="title">7.16 – नरलिंग (Knurling)</span><span class="subtitle">— उद्देश्य, उपकरण, प्रकार, संचालन</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>Knurling</strong> cylindrical external surface पर straight-line, diamond या cross-line pattern बनाने का operation है। यह <strong>cutting operation नहीं बल्कि forming operation</strong> है। NIMI के अनुसार knurling slow spindle speed, लगभग turning speed के <strong>1/3</strong>, पर किया जाता है।</p>
+<h3>Purpose</h3>
+<ul><li>अच्छी grip और positive handling.</li><li>अच्छी appearance.</li><li>Press-fit assembly के लिए diameter को छोटी सीमा तक बढ़ाना।</li></ul>
+<h3>Knurling Patterns</h3>
+<ul><li><strong>Diamond:</strong> right-hand और left-hand helical teeth वाले rollers से diamond pattern.</li><li><strong>Straight:</strong> straight-line pattern; single roller या straight-toothed double roller.</li><li><strong>Cross:</strong> square pattern; एक roller के straight teeth और दूसरे के teeth knurl axis के right angle पर।</li><li><strong>Concave:</strong> concave surface पर convex knurl; tool को plunge किया जाता है और longitudinal movement नहीं किया जाता; length roller width तक सीमित रहती है।</li><li><strong>Convex:</strong> convex surface पर concave knurl, plunge method से।</li></ul>
+<h3>Grades of Knurling</h3>
+<table><thead><tr><th>Grade</th><th>Pitch</th><th>TPI</th></tr></thead><tbody><tr><td>Coarse</td><td>1.75 mm</td><td>14</td></tr><tr><td>Medium</td><td>1.25 mm</td><td>21</td></tr><tr><td>Fine</td><td>0.75 mm</td><td>33</td></tr></tbody></table>
+<h3>Knurling Tool-holders</h3>
+<ul><li><strong>Single roller:</strong> एक roller; straight-line pattern; self-centering नहीं।</li><li><strong>Knuckle joint type:</strong> समान pitch के दो rollers; straight या helical teeth; self-centering.</li><li><strong>Revolving head / Universal:</strong> coarse, medium और fine pitch के तीन pairs of rollers; self-centering.</li></ul>
+<h3>Speed और Feed</h3>
+<p>Knurling speed material और finish के अनुसार चुनें। NIMI tables में straight/diagonal end-feed तथा in-feed के लिए TPI और material के अनुसार feed values दी गई हैं; diamond pattern के लिए feed straight/diagonal knurling से धीमी रखी जाती है।</p></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: नरलिंग (Knurling) – टूल और पैटर्न</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/knurling.jpg</p>
+<code>knurling.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(नरलिंग टूल, स्ट्रेट, डायमंड, बाएँ-दाएँ पैटर्न)</p>
+</div>
+<div class="figure-caption">Fig 16 – नरलिंग</div>
+</div>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>नरलिंग – <strong>खुरदरा (rough)</strong> पैटर्न – <strong>पकड़ (grip)</strong> बढ़ाने के लिए।</li>
+<li>डबल-व्हील (Double-Wheel) – <strong>बेहतर (better)</strong> गुणवत्ता – <strong>संतुलित (balanced)</strong> दबाव।</li>
+<li>डायमंड (Diamond) – <strong>सबसे (most)</strong> सामान्य (common) – <strong>बेहतर (better)</strong> पकड़ (grip).</li>
+<li>गति (Speed) – लगभग turning speed के <strong>1/3</strong> – <strong>कम (low)</strong> – <strong>गर्मी (heat)</strong> कम (reduce).</li>
+<li>कटिंग फ्लुइड – <strong>तेल (oil)</strong> – <strong>अनुशंसित (recommended)</strong>।</li>
+</ul></div>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>नरलिंग – <strong>पकड़ (grip)</strong> के लिए – <strong>हैंडल (handles)</strong> और <strong>नट (nuts)</strong> पर।</li>
+<li>डायमंड (Diamond) – <strong>सबसे (most)</strong> सामान्य (common) पैटर्न – <strong>क्रॉस (cross)</strong> रेखाएँ।</li>
+<li>डबल-व्हील (Double-Wheel) – <strong>संतुलित (balanced)</strong> दबाव – <strong>बेहतर (better)</strong> गुणवत्ता।</li>
+<li>गति – लगभग turning speed के <strong>1/3</strong> – <strong>कम (low)</strong> – <strong>गर्मी (heat)</strong> कम (reduce).</li>
+<li>कटिंग फ्लुइड – <strong>तेल (oil)</strong> – <strong>टूल (tool)</strong> जीवन (life) बढ़ाता है।</li>
+</ul></div>
+</div>
+</div>
+</div>
+<!-- ====================================================================== -->
+<!-- 7.17 STANDARD TAPERS -->
+<!-- ====================================================================== -->
+<div class="container" id="sec-tapers">
+<div class="content-section" data-content="tapers">
+<div class="section-header"><span class="icon">📐</span><span class="title">7.17 – मानक टेपर (Standard Tapers)</span><span class="subtitle">— प्रकार, आकार, उपयोग, कोण</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<p><strong>Taper</strong> job की length के साथ dimension का gradual increase या decrease है।</p>
+<h3>Taper के Uses</h3>
+<ul><li>Assembly में components का self-alignment/location.</li><li>Parts को आसानी से assemble और remove करना.</li><li>Assembly के माध्यम से drive transmit करना.</li></ul>
+<h3>Taper को Express करने के तरीके</h3>
+<p>Taper को <strong>angle in degrees</strong> या <strong>slope</strong> द्वारा व्यक्त किया जा सकता है। Drawing में taper specify करते समय cone का angle और component का size indicate किया जाता है।</p>
+<h3>Tool-holding Tapers</h3>
+<ul><li><strong>Self-holding tapers:</strong> taper angle कम होता है; बिना locking device के drill, reamer आदि cutting tools को hold और drive करने के लिए। Standard examples: <strong>Metric taper</strong> और <strong>Morse taper</strong>।</li><li><strong>Metric taper:</strong> taper on diameter <strong>1:20</strong>; common tang sizes 4, 6, 80, 100, 120, 160 और 200.</li><li><strong>Morse taper:</strong> common shank sizes 0, 1, 2, 3, 4, 5 और 6; taper size के अनुसार बदलता है और source में लगभग <strong>1:19.002 से 1:20.047</strong> तक दिया गया है।</li><li><strong>Self-releasing 7/24 taper:</strong> milling machine spindle noses और arbors के लिए; standard ratio 7/24. Common sizes 30, 40, 45, 50 और 60 हैं। यह fast taper है और component location/release में सहायता करता है; driving के लिए additional features दिए जाते हैं।</li></ul>
+<h3>Other Assembly Tapers</h3>
+<ul><li><strong>Pin taper:</strong> taper <strong>1:50</strong>; taper pin का size small diameter से specified होता है और components को position disturb किए बिना assembly/disassembly में सहायता करता है।</li><li><strong>Key and keyway taper:</strong> taper <strong>1:100</strong>; keys और keyways में उपयोग।</li></ul>
+<p><strong>Reference:</strong> NIMI text special taper applications के लिए <strong>IS:3458-1981</strong> को refer करने का उल्लेख करता है।</p></div>
+</div>
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: मानक टेपर (Standard Tapers) – MT, B&amp;S, Jarno</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/standard_tapers.jpg</p>
+<code>standard_tapers.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(मोर्स, ब्राउन और शार्प, जार्नो टेपर – आकार)</p>
+</div>
+<div class="figure-caption">Fig 17 – मानक टेपर</div>
 </div>
 <div class="table-wrap">
 <table>
-<caption>निरीक्षण उपकरण और उनके उपयोग (Inspection Tools &amp; Uses)</caption>
-<thead><tr><th>उपकरण (Tool)</th><th>उपयोग (Use)</th><th>सटीकता (Accuracy)</th></tr></thead>
+<caption>मोर्स टेपर आकार (Morse Taper Sizes)</caption>
+<thead><tr><th>MT आकार</th><th>छोटा अंत व्यास (mm)</th><th>बड़ा अंत व्यास (mm)</th><th>लंबाई (mm)</th></tr></thead>
 <tbody>
-<tr><td>स्टील रूल (Steel Rule)</td><td>लंबाई (Length) मापन</td><td>0.5 मिमी</td></tr>
-<tr><td>वर्नियर कैलिपर (Vernier Caliper)</td><td>बाहरी, आंतरिक, गहराई</td><td>0.02 मिमी</td></tr>
-<tr><td>माइक्रोमीटर (Micrometer)</td><td>बाहरी आयाम (External Dimensions)</td><td>0.01 मिमी</td></tr>
-<tr><td>डायल गेज (Dial Gauge)</td><td>विक्षेपण, समतलता, गोलाई</td><td>0.01 मिमी</td></tr>
-<tr><td>फीलर गेज (Feeler Gauge)</td><td>अंतर (Clearance) मापन</td><td>0.03–1.0 मिमी</td></tr>
-<tr><td>स्नैप गेज (Snap Gauge)</td><td>बाहरी व्यास – गो/नो-गो</td><td>±0.01 मिमी</td></tr>
-<tr><td>प्लग गेज (Plug Gauge)</td><td>आंतरिक व्यास – गो/नो-गो</td><td>±0.01 मिमी</td></tr>
+<tr><td>MT0</td><td>6.35</td><td>9.07</td><td>52.5</td></tr>
+<tr><td>MT1</td><td>12.07</td><td>15.09</td><td>59.5</td></tr>
+<tr><td>MT2</td><td>17.78</td><td>21.21</td><td>75.0</td></tr>
+<tr><td>MT3</td><td>23.82</td><td>27.72</td><td>93.5</td></tr>
+<tr><td>MT4</td><td>31.27</td><td>35.70</td><td>112.5</td></tr>
+<tr><td>MT5</td><td>44.40</td><td>49.60</td><td>135.0</td></tr>
+<tr><td>MT6</td><td>63.50</td><td>69.85</td><td>180.0</td></tr>
 </tbody>
 </table>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>निरीक्षण (Inspection) – <strong>गुणवत्ता (quality)</strong> <strong>नियंत्रण (control)</strong> के लिए।</li>
-<li>100% निरीक्षण – <strong>प्रत्येक (every)</strong> भाग (part) – <strong>छोटे (small)</strong> उत्पादन (production) के लिए।</li>
-<li>नमूना निरीक्षण – <strong>कुछ (some)</strong> नमूने (samples) – <strong>बड़े (large)</strong> उत्पादन के लिए।</li>
-<li>गो/नो-गो गेज (Go/No-Go Gauges) – <strong>त्वरित (quick)</strong> जाँच – <strong>सीमाओं (limits)</strong> के भीतर (within) हैं या नहीं।</li>
-<li>डायल गेज – <strong>विक्षेपण (deflection)</strong> और <strong>सतह समतलता (flatness)</strong> – <strong>0.01 मिमी</strong>।</li>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>मोर्स टेपर (MT) – <strong>सबसे (most)</strong> सामान्य (common) – <strong>ड्रिल (drills)</strong> और <strong>स्लीव्स (sleeves)</strong> के लिए।</li>
+<li>MT1–MT7 – <strong>व्यास (diameter)</strong> बढ़ता (increases) – <strong>कोण (angle)</strong> लगभग <strong>1° 26′–1° 30′</strong>।</li>
+<li>ब्राउन और शार्प (B&amp;S) – <strong>मिलिंग मशीन (milling machines)</strong> के लिए – <strong>टेपर (taper)</strong> – 0.5″/ft.</li>
+<li>जार्नो (Jarno) – <strong>यूरोपीय (European)</strong> – 0.75″/ft.</li>
+<li>NMTB – <strong>उच्च परिशुद्धता (high precision)</strong> मिलिंग स्पिंडल (spindles).</li>
 </ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>100% निरीक्षण – <strong>प्रत्येक (every)</strong> भाग – <strong>छोटे (small)</strong> उत्पादन (production) के लिए।</li>
-<li>नमूना निरीक्षण – <strong>कुछ (some)</strong> नमूने – <strong>बड़े (large)</strong> उत्पादन के लिए।</li>
-<li>गो/नो-गो (Go/No-Go) – <strong>स्वीकार्य (acceptable)</strong> आकार (size) जाँचने के लिए।</li>
-<li>डायल गेज – <strong>विक्षेपण (deflection)</strong> – <strong>0.01 मिमी</strong> – <strong>सतह समतलता (flatness)</strong> के लिए।</li>
-<li>फीलर गेज – <strong>अंतर (clearance)</strong> – <strong>0.03–1.0 मिमी</strong>।</li>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>मोर्स टेपर (MT) – <strong>सबसे (most)</strong> सामान्य (common) – <strong>टेपर (taper)</strong> – <strong>स्व-लॉकिंग (self-locking)</strong>।</li>
+<li>MT1 – <strong>सबसे (most)</strong> छोटा (small) – MT7 – <strong>सबसे (most)</strong> बड़ा (large).</li>
+<li>ब्राउन और शार्प (B&amp;S) – <strong>मिलिंग मशीन (milling machines)</strong> स्पिंडल (spindles).</li>
+<li>NMTB – <strong>उच्च परिशुद्धता (high precision)</strong> – <strong>की (key)</strong> ड्राइव (drive) के साथ।</li>
+<li>टेपर (taper) – <strong>सटीक (accurate)</strong> केंद्र (centring) और <strong>शक्ति (power)</strong> संचारण (transmission) के लिए।</li>
 </ul></div>
 </div>
 </div>
 </div>
 <!-- ====================================================================== -->
-<!-- 8.5 INSTALLATION AND OVERHAUL -->
+<!-- 7.18 SCREW THREAD -->
 <!-- ====================================================================== -->
-<div class="container" id="sec-installation">
-<div class="content-section" data-content="installation">
-<div class="section-header"><span class="icon">🔧</span><span class="title">8.5 – स्थापना, रखरखाव और ओवरहॉल (Installation, Maintenance &amp; Overhaul)</span><span class="subtitle">— स्थापना प्रक्रिया, रखरखाव, ओवरहॉल, सुरक्षा</span></div>
+<div class="container" id="sec-threads">
+<div class="content-section" data-content="threads">
+<div class="section-header"><span class="icon">🧵</span><span class="title">7.18 – स्क्रू थ्रेड (Screw Thread)</span><span class="subtitle">— प्रकार, एलीमेंट्स, मानक, कोण, पिच</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
-<p><strong>स्थापना (Installation)</strong> – <strong>मशीन (machine)</strong> या <strong>उपकरण (equipment)</strong> को <strong>सही (proper)</strong> स्थान (location) पर <strong>लगाना (set up)</strong> – <strong>संचालन (operation)</strong> के लिए <strong>तैयार (ready)</strong> करना।</p>
-<p><strong>स्थापना प्रक्रिया (Installation Procedure):</strong></p>
+<p><strong>Screw thread</strong> समान cross-section का ridge है जो cylinder या cone के चारों ओर internal या external रूप में helical path follow करता है।</p>
+<h3>Screw Threads के Uses</h3>
+<ul><li>Components को fasten करके आवश्यकता पर dismantle करना।</li><li>Machine में motion को एक unit से दूसरी unit तक transmit करना।</li><li>Accurate measurement के लिए।</li><li>Pressure बनाने और adjustment के लिए।</li></ul><h3>Thread Forms covered in NIMI</h3><ul><li><strong>Square thread:</strong> flanks thread axis के perpendicular; motion/power transmission के लिए — screw jack, vice handle, cross-slide, compound-slide और screw shaft actuation आदि।</li><li><strong>Modified square thread:</strong> square thread का modified form; depth half-pitch से कम और quick movement वाले applications में उपयोग।</li><li><strong>Acme thread:</strong> square thread का modified form; included angle 29°; lathe lead screw में उपयोग। Metric Acme में included angle 30° होता है।</li><li><strong>Buttress thread:</strong> एक flank axis के perpendicular और दूसरा 45° पर; एक दिशा में pressure/load वाले applications में उपयोग, जैसे power press, carpentry, gun breech और shaft। BIS form में bearing flank 7° और दूसरा 45° है।</li><li><strong>Saw-tooth thread:</strong> BIS 4696 form में load-bearing flank 3° और दूसरा flank 30° पर।</li><li><strong>Worm thread:</strong> Acme जैसा form, अधिक depth; worm shaft/worm wheel में right-angle motion transmission और reduction के लिए।</li><li><strong>Knuckle thread:</strong> rounded profile; valve spindle, railway carriage coupling और hose connection आदि में उपयोग।</li></ul>
+
 <ul>
-<li><strong>योजना (Planning):</strong> <strong>स्थान (location)</strong>, <strong>नींव (foundation)</strong>, <strong>बिजली (power)</strong>, <strong>पानी (water)</strong>, <strong>वेंटिलेशन (ventilation)</strong> – <strong>आवश्यकताएँ (requirements)</strong> – <strong>लेआउट (layout)</strong> और <strong>ड्राइंग (drawing)</strong>।</li>
-<li><strong>नींव (Foundation):</strong> <strong>कंक्रीट (concrete)</strong> नींव (foundation) – <strong>भारी (heavy)</strong> मशीनों (machines) के लिए – <strong>कंपन (vibration)</strong> को <strong>अवशोषित (absorb)</strong> करने के लिए – <strong>एंकर बोल्ट (anchor bolts)</strong>।</li>
-<li><strong>अनपैकिंग (Unpacking) और निरीक्षण (Inspection):</strong> <strong>क्षति (damage)</strong> के लिए <strong>जाँच (check)</strong> – <strong>सभी (all)</strong> भागों (parts) की <strong>गणना (count)</strong> – <strong>सूची (list)</strong> के अनुसार।</li>
-<li><strong>स्तरीकरण (Leveling):</strong> <strong>स्पिरिट लेवल (spirit level)</strong> का उपयोग – <strong>शिम्स (shims)</strong> के साथ – <strong>मशीन (machine)</strong> को <strong>समतल (level)</strong> करना – <strong>सटीकता (accuracy)</strong> के लिए।</li>
-<li><strong>एलाइनमेंट (Alignment):</strong> <strong>ड्राइव (drive)</strong> – <strong>मोटर (motor)</strong> और <strong>मशीन (machine)</strong> के <strong>बीच (between)</strong> – <strong>बेल्ट (belts)</strong> या <strong>कपलिंग (coupling)</strong> – <strong>संरेखण (alignment)</strong> – <strong>डायल गेज (dial gauge)</strong> का उपयोग।</li>
-<li><strong>कनेक्शन (Connections):</strong> <strong>बिजली (electrical)</strong> – <strong>पाइपिंग (piping)</strong> – <strong>न्यूमेटिक (pneumatic)</strong> – <strong>हाइड्रोलिक (hydraulic)</strong> – <strong>सभी (all)</strong> कनेक्शन (connections) – <strong>सुरक्षित (secure)</strong> और <strong>सही (correct)</strong>।</li>
-<li><strong>ट्रायल रन (Trial Run – परीक्षण चलाना):</strong> <strong>खाली (no-load)</strong> चलाना – <strong>गति (speed)</strong>, <strong>तापमान (temperature)</strong>, <strong>ध्वनि (sound)</strong> – <strong>जाँच (check)</strong> – <strong>समायोजन (adjustments)</strong> करना – <strong>लोड (load)</strong> पर चलाना।</li>
+<li><strong>Square thread:</strong> flanks thread axis के perpendicular होते हैं। Motion/power transmission के लिए — screw jack, vice handle, cross-slide और compound-slide screw आदि।</li>
+<li><strong>Modified square thread:</strong> ordinary square thread जैसा, लेकिन depth half-pitch से कम होती है; जहाँ quick movement आवश्यक हो वहाँ उपयोग।</li>
+<li><strong>Acme thread:</strong> square thread का modified form; included angle <strong>29°</strong>। Lathe lead screw में उपयोग और half nut engagement को आसान बनाता है। Metric Acme में included angle <strong>30°</strong> है।</li>
+<li><strong>Buttress thread:</strong> एक flank axis के perpendicular और दूसरा लगभग <strong>45°</strong> पर। जहाँ एक दिशा में high pressure/load कार्य करता है, वहाँ उपयोग — power press, carpentry, gun breech, shaft आदि। BIS modified buttress में bearing flank 7° और दूसरा flank 45° दिया गया है।</li>
+<li><strong>Saw-tooth thread:</strong> BIS 4696 के अनुसार load-bearing flank 3° और दूसरा flank 30° पर दिया गया है।</li>
+<li><strong>Worm thread:</strong> Acme के समान form लेकिन अधिक depth; worm shaft/worm wheel arrangements में motion को shaft के right angle पर transmit करने और high reduction के लिए।</li>
+<li><strong>Knuckle thread:</strong> trapezoidal नहीं बल्कि rounded profile; damage के प्रति relatively insensitive. Valve spindle, railway carriage coupling और hose connection आदि में उपयोग।</li>
 </ul>
-<p><strong>रखरखाव (Maintenance) – संचालन के दौरान (During Operation):</strong></p>
-<ul>
-<li><strong>नियमित (Routine) रखरखाव:</strong> <strong>दैनिक (daily)</strong> और <strong>साप्ताहिक (weekly)</strong> कार्य – <strong>सफाई (cleaning)</strong>, <strong>स्नेहन (lubrication)</strong>, <strong>निरीक्षण (inspection)</strong>।</li>
-<li><strong>निवारक (Preventive) रखरखाव:</strong> <strong>अनुसूचित (scheduled)</strong> – <strong>खराबी (breakdown)</strong> को <strong>रोकने (prevent)</strong> के लिए।</li>
-<li><strong>मरम्मत (Repair):</strong> <strong>क्षतिग्रस्त (damaged)</strong> या <strong>घिसे (worn)</strong> भागों (parts) को <strong>बदलना (replace)</strong> या <strong>ठीक (fix)</strong> करना।</li>
-</ul>
-<p><strong>ओवरहॉल (Overhaul – पूर्ण मरम्मत / Complete Repair):</strong></p>
-<ul>
-<li><strong>ओवरहॉल (Overhaul)</strong> – <strong>मशीन (machine)</strong> को <strong>पूरी तरह (completely)</strong> से <strong>अलग (disassemble)</strong> करना – <strong>प्रत्येक (each)</strong> भाग (part) का <strong>निरीक्षण (inspection)</strong> – <strong>क्षतिग्रस्त (damaged)</strong> भागों (parts) को <strong>बदलना (replace)</strong> – <strong>फिर से (re-assemble)</strong> जोड़ना – <strong>मशीन (machine)</strong> को <strong>नई (new)</strong> जैसी स्थिति (condition) में <strong>लाना (restore)</strong>।</li>
-<li><strong>ओवरहॉल की आवश्यकता (Need for Overhaul):</strong>
-<ul>
-<li><strong>निर्धारित (scheduled)</strong> अंतराल (intervals) पर – <strong>उदाहरण (example):</strong> 5 वर्ष (years).</li>
-<li><strong>बड़ी (major)</strong> खराबी (breakdown) के बाद (after).</li>
-<li><strong>प्रदर्शन (performance)</strong> में <strong>गिरावट (degradation)</strong> – <strong>सटीकता (accuracy)</strong> कम (less) होना।</li>
-<li><strong>सुरक्षा (safety)</strong> चिंताएँ (concerns).</li>
-</ul>
-</li>
-<li><strong>ओवरहॉल प्रक्रिया (Overhaul Procedure):</strong>
-<ol>
-<li><strong>डिसअसेंबली (Disassembly – अलग करना):</strong> मशीन (machine) को <strong>भागों (parts)</strong> में <strong>अलग (separate)</strong> करना – <strong>प्रत्येक (each)</strong> भाग (part) को <strong>चिह्नित (mark)</strong> करना।</li>
-<li><strong>सफाई (Cleaning):</strong> <strong>सभी (all)</strong> भागों (parts) को <strong>साफ (clean)</strong> करना – <strong>गंदगी (dirt)</strong>, <strong>ग्रीस (grease)</strong>, <strong>जंग (rust)</strong> हटाना।</li>
-<li><strong>निरीक्षण (Inspection):</strong> <strong>प्रत्येक (each)</strong> भाग (part) की <strong>जाँच (check)</strong> – <strong>घिसाव (wear)</strong>, <strong>दरार (cracks)</strong>, <strong>क्षति (damage)</strong> – <strong>माप (measurements)</strong> लेना।</li>
-<li><strong>मरम्मत/प्रतिस्थापन (Repair/Replacement):</strong> <strong>क्षतिग्रस्त (damaged)</strong> भागों (parts) को <strong>ठीक (repair)</strong> करना या <strong>बदलना (replace)</strong>।</li>
-<li><strong>पुनः असेंबली (Re-assembly – फिर से जोड़ना):</strong> <strong>सभी (all)</strong> भागों (parts) को <strong>पुनः (re-assemble)</strong> जोड़ना – <strong>सही (correct)</strong> क्रम (order) में – <strong>टोर्क (torque)</strong> विनिर्देशों (specifications) के अनुसार।</li>
-<li><strong>समायोजन (Adjustment) और अंशांकन (Calibration):</strong> <strong>मशीन (machine)</strong> को <strong>सटीक (accurate)</strong> बनाने के लिए – <strong>सेटिंग्स (settings)</strong> को <strong>समायोजित (adjust)</strong> करना।</li>
-<li><strong>ट्रायल रन (Trial Run – परीक्षण चलाना):</strong> <strong>खाली (no-load)</strong> और <strong>लोड (load)</strong> पर – <strong>प्रदर्शन (performance)</strong> की <strong>जाँच (check)</strong>।</li>
-<li><strong>प्रलेखन (Documentation – दस्तावेज़ीकरण):</strong> <strong>सभी (all)</strong> कार्यों (activities) का <strong>रिकॉर्ड (record)</strong> – <strong>भविष्य (future)</strong> संदर्भ (reference) के लिए।</li>
-</ol>
-</li>
-</ul>
-<p><strong>ओवरहॉल के दौरान सुरक्षा (Safety during Overhaul):</strong></p>
-<ul>
-<li><strong>लॉकआउट/टैगआउट (Lockout/Tagout – LOTO):</strong> <strong>बिजली (power)</strong> <strong>बंद (disconnect)</strong> और <strong>ताला (lock)</strong> लगाना – <strong>दुर्घटना (accident)</strong> से बचने के लिए।</li>
-<li><strong>सुरक्षा उपकरण (Safety Equipment):</strong> <strong>सुरक्षा चश्मा (safety goggles)</strong>, <strong>दस्ताने (gloves)</strong>, <strong>सुरक्षा जूते (safety shoes)</strong>।</li>
-<li><strong>भारी (heavy) भागों (parts) को उठाना (lifting):</strong> <strong>क्रेन (crane)</strong> या <strong>होइस्ट (hoist)</strong> – <strong>सुरक्षित (safe)</strong> उठाने (lifting) की <strong>प्रक्रिया (procedure)</strong>।</li>
-<li><strong>कार्य क्षेत्र (Work Area):</strong> <strong>स्वच्छ (clean)</strong> और <strong>व्यवस्थित (organized)</strong> – <strong>आग (fire)</strong> से बचाव (prevention).</li>
-</ul>
-</div>
+<h3>Centre Lathe में Screw Thread Cutting का Principle</h3>
+<p>Work को uniform speed से rotate करके cylindrical/conical surface पर uniform helical groove बनाया जाता है। Tool को work की प्रत्येक revolution के लिए required thread pitch के बराबर longitudinal movement मिलता है। यह movement <strong>lead screw और half nut</strong> के माध्यम से carriage तक पहुँचती है। Thread profile tool ground profile के अनुरूप होती है और lead screw की rotation direction thread का hand निर्धारित करती है।</p>
+<h3>Change Gear Formula</h3>
+<div class="example-box"><strong>Gear ratio = Driver teeth / Driven teeth = Work lead / Lead-screw lead</strong></div>
+<p>NIMI examples में 4 mm lead screw पर 4 mm, 2 mm और 8 mm pitch तथा 6 mm lead screw पर 3 mm pitch के लिए change-gear ratios समझाए गए हैं। उदाहरणतः 6 mm lead screw पर 3 mm thread के लिए 50-tooth driver के साथ 100-tooth driven gear का ratio दिया गया है।</p>
+<h3>Thread Chasing Dial</h3>
+<p>Single-point screw thread cutting में thread को जल्दी pick-up करने और labour बचाने के लिए <strong>thread chasing dial</strong> उपयोग किया जाता है। British thread chasing dial में calibrated dial और worm-wheel mechanism होता है। NIMI के उदाहरण में lead screw 4 TPI और worm wheel 16 teeth के साथ dial की divisions और half-nut engagement की स्थितियाँ समझाई गई हैं।</p>
+<h3>Centre Gauge</h3>
+<p><strong>Centre gauge / Fish-tail gauge</strong> का उपयोग single-point screw cutting tool bits और centres के profile/angles की grinding के दौरान checking के लिए किया जाता है। सही angle पर ground tool को workpiece पर perpendicular set करने में भी इसका उपयोग किया जा सकता है। Common forms में metric/UNS 60° और BSW 55° gauges शामिल हैं; Acme form के लिए भी gauges उपलब्ध हैं।</p>
+<h3>External Thread Tool Setting</h3>
+<ul><li>Thread होने वाले work diameter को drawing के अनुसार check करें और आवश्यक thread clearance दें।</li><li>Lathe spindle speed को turning speed के लगभग <strong>one-quarter</strong> पर set करें और gearbox को required pitch पर set करें।</li><li>Compound slide को cross-slide की line में लाने के लिए horizontal position से 90° rotate करें; right-hand thread के लिए half-angle से लगभग 1° कम setting source में दी गई है।</li><li>Tool को minimum overhang के साथ centre height पर set करें और centre gauge से align करें।</li><li>Trial cut लें, thread pitch gauge से formation check करें और successive cuts में cross-slide/compound-slide के अनुसार depth दें। Threading के दौरान पर्याप्त coolant का प्रयोग करें।</li></ul>
+<h3>Internal Thread</h3>
+<ul><li>Job को suitable chuck/fixture में mount करके required major diameter तक drill और bore करें। Blind hole में thread run-out के लिए relief दें।</li><li>Front end को 2×45° chamfer करें और 60° included angle के लिए compound rest को लगभग <strong>29°</strong> पर set करें।</li><li>Spindle speed calculated turning speed के लगभग <strong>1/3</strong> पर set करें और cut की depth क्रमशः बढ़ाएँ।</li><li>Thread के दोनों sides से tool को touch न होने दें। Finished internal thread को thread plug gauge या matching threaded bolt से check करें।</li></ul>
+<h3>Screw Pitch Gauge</h3>
+<p>सटीक result के लिए pitch gauge की blade की <strong>पूरी length</strong> को thread पर properly seat करना चाहिए।</p></div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: स्थापना, रखरखाव और ओवरहॉल (Installation, Maintenance &amp; Overhaul)</strong></p>
-<p>स्थान: /images/notes/fitter/module-8/installation_overhaul.jpg</p>
-<code>installation_overhaul.jpg</code>
-<p style="font-size:0.8rem; color:#888;">(स्तरीकरण, एलाइनमेंट, डिसअसेंबली, पुनः असेंबली, ट्रायल रन)</p>
+<p><strong>चित्र: स्क्रू थ्रेड एलीमेंट्स और प्रकार</strong></p>
+<p>स्थान: /images/notes/fitter/module-7/screw_thread.jpg</p>
+<code>screw_thread.jpg</code>
+<p style="font-size:0.8rem; color:#888;">(मुख्य, लघु, पिच व्यास, पिच, कोण, फ्लैंक, क्रेस्ट, रूट)</p>
 </div>
-<div class="figure-caption">Fig 5 – स्थापना, रखरखाव और ओवरहॉल</div>
+<div class="figure-caption">Fig 18 – स्क्रू थ्रेड एलीमेंट्स</div>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>स्थापना (Installation) – <strong>नींव (foundation)</strong>, <strong>स्तरीकरण (leveling)</strong>, <strong>एलाइनमेंट (alignment)</strong>।</li>
-<li>रखरखाव (Maintenance) – <strong>नियमित (routine)</strong>, <strong>निवारक (preventive)</strong>, <strong>सुधारात्मक (corrective)</strong>।</li>
-<li>ओवरहॉल (Overhaul) – <strong>पूर्ण (complete)</strong> मरम्मत – <strong>मशीन (machine)</strong> को <strong>नई (new)</strong> जैसी स्थिति में <strong>लाना (restore)</strong>।</li>
-<li>लॉकआउट/टैगआउट (LOTO) – <strong>सुरक्षा (safety)</strong> के लिए – <strong>बिजली (power)</strong> <strong>बंद (disconnect)</strong> करना।</li>
-<li>प्रलेखन (Documentation) – <strong>सभी (all)</strong> कार्यों का <strong>रिकॉर्ड (record)</strong> – <strong>महत्वपूर्ण (important)</strong>।</li>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>मीट्रिक थ्रेड – <strong>60°</strong> – <strong>ISO</strong> मानक – <strong>M10 × 1.5</strong>।</li>
+<li>व्हिटवर्थ – <strong>55°</strong> – <strong>ब्रिटिश (British)</strong> – <strong>BSW</strong>।</li>
+<li>पिच (Pitch) – <strong>मिमी (mm)</strong> – दो आसन्न (adjacent) थ्रेड्स के <strong>बीच (between)</strong> दूरी।</li>
+<li>TPI – <strong>1 इंच (inch)</strong> में थ्रेड्स की <strong>संख्या (number)</strong>।</li>
+<li>वर्गाकार (Square) – <strong>बल (force)</strong> संचारण (transmission) – <strong>जैक (jacks)</strong>, <strong>वाइस (vices)</strong>।</li>
+<li>Acme (ट्रैपेज़ॉइडल) – <strong>गति (motion)</strong> संचारण – <strong>लीड स्क्रू (lead screws)</strong>।</li>
 </ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>स्थापना – <strong>नींव (foundation)</strong> – <strong>कंक्रीट (concrete)</strong> – <strong>एंकर बोल्ट (anchor bolts)</strong>।</li>
-<li>स्तरीकरण (Leveling) – <strong>स्पिरिट लेवल (spirit level)</strong> – <strong>शिम्स (shims)</strong>।</li>
-<li>एलाइनमेंट (Alignment) – <strong>डायल गेज (dial gauge)</strong> – <strong>मोटर (motor)</strong> और <strong>मशीन (machine)</strong> के <strong>बीच (between)</strong>।</li>
-<li>ओवरहॉल (Overhaul) – <strong>डिसअसेंबली (disassembly)</strong>, <strong>सफाई (cleaning)</strong>, <strong>निरीक्षण (inspection)</strong>, <strong>मरम्मत/प्रतिस्थापन (repair/replacement)</strong>, <strong>पुनः असेंबली (re-assembly)</strong>, <strong>समायोजन (adjustment)</strong>, <strong>ट्रायल रन (trial run)</strong>।</li>
-<li>लॉकआउट/टैगआउट (LOTO) – <strong>सुरक्षा (safety)</strong> – <strong>बिजली (power)</strong> <strong>बंद (disconnect)</strong> – <strong>ताला (lock)</strong>।</li>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>मीट्रिक थ्रेड – <strong>60°</strong> – <strong>ISO मानक (ISO standard)</strong> – <strong>M10 × 1.5</strong> – <strong>पिच (pitch) = 1.5 मिमी</strong>।</li>
+<li>व्हिटवर्थ – <strong>55°</strong> – <strong>BSW</strong> – <strong>ब्रिटिश (British)</strong>।</li>
+<li>यूनिफाइड – <strong>60°</strong> – <strong>UNC</strong> (कोर्स) और <strong>UNF</strong> (फाइन).</li>
+<li>पिच (Pitch) – <strong>मिमी (mm)</strong> – <strong>TPI</strong> – <strong>इंच (inch)</strong>।</li>
+<li>वर्गाकार (Square) – <strong>उच्च (high)</strong> दक्षता (efficiency) – <strong>बल (force)</strong> संचारण (transmission).</li>
+<li>Acme – <strong>29°</strong> – <strong>लीड स्क्रू (lead screw)</strong> – <strong>उच्च (high)</strong> भार (load) क्षमता (capacity).</li>
 </ul></div>
 </div>
 </div>
@@ -1093,16 +1443,29 @@ Twitter
 <!-- ============================== CONCLUSION ============================== -->
 <div class="container">
 <div class="conclusion-section">
-<h2>📌 Module 8 – निष्कर्ष (Conclusion)</h2>
+<h2>📌 Module 7 – निष्कर्ष (Conclusion)</h2>
 <div class="bilingual">
 <div class="content">
-<p><strong>Module 8 – Basic Maintenance</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<p><strong>Module 7 – Turning</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
 <ul>
-<li><strong>कुल उत्पादक रखरखाव (TPM):</strong> अर्थ, 8 स्तंभ (Pillars), 5S, लाभ, कार्यान्वयन (implementation).</li>
-<li><strong>नियमित रखरखाव (Routine Maintenance):</strong> दैनिक (daily), साप्ताहिक (weekly), मासिक (monthly) कार्य – चेकलिस्ट (checklist), सफाई (cleaning), स्नेहन (lubrication), निरीक्षण (inspection).</li>
-<li><strong>निवारक रखरखाव (Preventive Maintenance):</strong> अर्थ, प्रकार (समय-आधारित, उपयोग-आधारित, स्थिति-आधारित, पूर्वानुमानित), लाभ, कार्यक्रम (schedule).</li>
-<li><strong>निरीक्षण और गैजेंट्स (Inspection &amp; Gadgets):</strong> निरीक्षण के प्रकार (100%, नमूना, प्रक्रिया, अंतिम), मापन उपकरण (वर्नियर, माइक्रोमीटर, डायल गेज), गेज (फीलर, स्नैप, प्लग, थ्रेड, रेडियस), सतह निरीक्षण (सरफेस प्लेट, प्रशियन ब्लू).</li>
-<li><strong>स्थापना, रखरखाव और ओवरहॉल (Installation, Maintenance &amp; Overhaul):</strong> स्थापना प्रक्रिया (नींव, स्तरीकरण, एलाइनमेंट, ट्रायल रन), ओवरहॉल प्रक्रिया (डिसअसेंबली, सफाई, निरीक्षण, मरम्मत/प्रतिस्थापन, पुनः असेंबली, समायोजन, ट्रायल रन), लॉकआउट/टैगआउट (LOTO), सुरक्षा, प्रलेखन (documentation).</li>
+<li><strong>लेथ सुरक्षा (Lathe Safety):</strong> व्यक्तिगत सुरक्षा, मशीन सुरक्षा, संचालन सावधानियाँ, आपातकालीन (emergency).</li>
+<li><strong>लेथ मुख्य भाग (Lathe Main Parts):</strong> बेड, हेडस्टॉक, टेलस्टॉक, कैरिज, कम्पाउंड रेस्ट, टूल पोस्ट, लीड स्क्रू, फीड रॉड।</li>
+<li><strong>फीड और थ्रेड कटिंग तंत्र:</strong> फीड प्रकार (लॉन्गिट्यूडिनल, क्रॉस, एंगुलर), चेंज गियर्स, लीड स्क्रू, हाफ नट।</li>
+<li><strong>सेंटर के बीच जॉब पकड़ना:</strong> लाइव सेंटर, डेड सेंटर, कैच प्लेट, डॉग, सेंटर ड्रिल।</li>
+<li><strong>फेसिंग और रफिंग टूल:</strong> विवरण, ज्यामिति, अंतर, फीड, गति।</li>
+<li><strong>सिंगल पॉइंट और मल्टी पॉइंट टूल नामकरण:</strong> शैंक, फेस, फ्लैंक, नोज़, कटिंग एज, कोण (रेक, निकासी, कटिंग एज).</li>
+<li><strong>टूल चयन:</strong> सामग्री, संचालन, सटीकता, लागत, कटिंग द्रव।</li>
+<li><strong>टूल कोणों की आवश्यकता:</strong> रेक, निकासी, कटिंग एज, नोज़ त्रिज्या – कटिंग प्रदर्शन, टूल जीवन, सतह फिनिश।</li>
+<li><strong>कटिंग स्पीड, फीड, कूलेंट:</strong> CS, RPM, फीड, कटिंग फ्लुइड के प्रकार और चयन।</li>
+<li><strong>चक – स्वतंत्र 4-जॉ चक:</strong> संरचना, उपयोग, संचालन, 3-जॉ चक से तुलना।</li>
+<li><strong>फेस प्लेट:</strong> संरचना, उपयोग, कार्यप्रणाली, सावधानियाँ।</li>
+<li><strong>लेथ पर ड्रिलिंग:</strong> प्रक्रिया, ड्रिल होल्डिंग, सावधानियाँ।</li>
+<li><strong>बोरिंग और बोरिंग टूल:</strong> बोरिंग बार, प्रकार, संचालन, सटीकता।</li>
+<li><strong>टूल सेटिंग:</strong> ऊँचाई, कोण, संरेखण, टूल पोस्ट, ओवरहैंग।</li>
+<li><strong>टूल पोस्ट:</strong> प्रकार (रॉकर, चार-तरफा, क्विक-चेंज), चयन, रखरखाव।</li>
+<li><strong>नरलिंग:</strong> उद्देश्य, उपकरण, प्रकार (स्ट्रेट, डायमंड), संचालन, सावधानियाँ।</li>
+<li><strong>मानक टेपर:</strong> मोर्स, ब्राउन और शार्प, जार्नो, NMTB – आकार, कोण, उपयोग।</li>
+<li><strong>स्क्रू थ्रेड:</strong> एलीमेंट्स, प्रकार (मीट्रिक, व्हिटवर्थ, यूनिफाइड, वर्गाकार, Acme), मानक, निर्माण।</li>
 </ul>
 <p>इन सभी विषयों में महारत हासिल करना हर <strong>फिटर (fitter)</strong> के लिए आवश्यक है। प्रत्येक संचालन को <strong>सटीकता (precision)</strong> और <strong>सुरक्षा (safety)</strong> के साथ अभ्यास करें।</p>
 </div>
@@ -1116,7 +1479,7 @@ Twitter
 <div class="section-body">
 <div class="mcq-link">
 <p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
-<a href="/question-bank/fitter/index.html?mod=8" target="_blank">📝 Go to Question Bank →</a>
+<a href="/question-bank/fitter/index.html?mod=7" target="_blank">📝 Go to Question Bank →</a>
 <p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
 </div>
 </div>
@@ -1127,13 +1490,12 @@ Twitter
 <div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
 <div class="section-body">
 <div style="display:flex; flex-wrap:wrap; gap:12px;">
-<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
-<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
-<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
-<a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
-<a href="module-5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 5: Drilling</a>
-<a href="module-6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 6: Assembly</a>
-<a href="module-7.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 7: Turning</a>
+<a href="/notes/fitter/fitter1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
+<a href="/notes/fitter/fitter2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
+<a href="/notes/fitter/fitter3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
+<a href="/notes/fitter/fitter4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
+<a href="/notes/fitter/fitter5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 5: Drilling</a>
+<a href="/notes/fitter/fitter6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 6: Assembly</a>
 </div>
 </div>
 </div>
@@ -1165,14 +1527,14 @@ Twitter
         function getPageTitle() { return document.querySelector('title').textContent; }
         function shareWhatsApp() {
             const url = getPageUrl();
-            const text = encodeURIComponent('🔧 ' + getPageTitle() + ' - Complete Fitter Theory Module 8 Study Material!');
+            const text = encodeURIComponent('⚙️ ' + getPageTitle() + ' - Complete Fitter Theory Module 7 Study Material!');
             window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
         }
         function shareFacebook() {
             window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
         }
         function shareTwitter() {
-            const text = encodeURIComponent('🔧 ' + getPageTitle());
+            const text = encodeURIComponent('⚙️ ' + getPageTitle());
             window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
         }
         function copyPageLink() {
@@ -1223,8 +1585,8 @@ Twitter
             }
         });
 
-        console.log('✅ Fitter Theory Module 8 – Basic Maintenance (Complete) Loaded.');
-        console.log('📚 TPM, Routine, Preventive, Inspection, Installation & Overhaul.');
+        console.log('✅ Fitter Theory Module 7 – Turning (Complete) Loaded.');
+        console.log('📚 Lathe Safety, Parts, Feed, Holding, Tools, Angles, Speed, Chucks, Drilling, Boring, Knurling, Tapers, Threads.');
     </script>
 </body>
 </html>
