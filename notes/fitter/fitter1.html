@@ -117,6 +117,14 @@ body {
 }
 
 
+/* ================= MODULE SEARCH ================= */
+.search-section { display:flex; gap:10px; margin:0 auto 25px; }
+.search-section input { flex:1; padding:11px 14px; border:1px solid #cfd7e1; border-radius:7px; font-size:.95rem; outline:none; }
+.search-section input:focus { border-color:#003366; box-shadow:0 0 0 2px rgba(0,51,102,.08); }
+.search-section button { background:#003366; color:#fff; border:none; padding:10px 18px; border-radius:7px; font-size:.9rem; font-weight:600; cursor:pointer; transition:.25s; }
+.search-section button:hover { background:#002244; transform:translateY(-1px); }
+@media (max-width:768px) { .search-section { flex-direction:column; } .search-section button { width:100%; } }
+
 /* ================= TABLE OF CONTENTS ================= */
 
 .toc-card {
@@ -626,6 +634,13 @@ Safety &amp; Industrial Training | Hindi + English Theory
 Next Module →
 </a>
 </div>
+
+<!-- ================= MODULE SEARCH ================= -->
+<section class="search-section container">
+<input id="sectionSearch" type="text" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..."/>
+<button type="button" onclick="filterSections()">🔍 Search</button>
+</section>
+
 <!-- ================= TABLE OF CONTENTS ================= -->
 <div class="toc-card" id="topics">
 <h2>📚 इस Module में क्या पढ़ेंगे?</h2>
@@ -2859,6 +2874,20 @@ console.log(
     "✅ Fitter Theory Module 1 – Final Template Loaded"
 );
 
+</script>
+
+<script>
+function filterSections() {
+    const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+    const sections = document.querySelectorAll('main .content-card');
+    sections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+        section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+    });
+}
+document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') filterSections();
+});
 </script>
 </body>
 </html>
