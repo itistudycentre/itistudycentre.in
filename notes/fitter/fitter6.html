@@ -471,14 +471,38 @@
             .section-body { background: #fff !important; }
             .tool-figure { border:1px solid #ccc; break-inside:avoid; }
         }
+    
+        /* ===== MODULE NAVIGATION – SAME FORMAT AS MODULE 2/3/4/5 ===== */
+        .module-navigation {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:10px;
+            margin:8px 0 25px;
+        }
+        .module-navigation a {
+            background:#003366;
+            color:#fff;
+            text-decoration:none;
+            padding:9px 17px;
+            border-radius:7px;
+            font-size:.9rem;
+            font-weight:600;
+            transition:.25s;
+        }
+        .module-navigation a:hover {
+            background:#002244;
+            transform:translateY(-1px);
+        }
+        @media(max-width:768px){
+            .module-navigation{flex-direction:column;}
+            .module-navigation a{width:100%; text-align:center;}
+        }
     </style>
 </head>
 <body>
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
-
-
-
 <div class="breadcrumb">
 <div class="container">
 <a href="/">🏠 Home</a>  › 
@@ -493,6 +517,13 @@
 <p>विनिमेयता · धातुएँ · स्क्रैपर्स और स्क्रैपिंग · वर्नियर माइक्रोमीटर · फास्टनर्स · स्क्रू थ्रेड माइक्रोमीटर · डायल टेस्ट इंडिकेटर · कम्पेरेटर</p>
 </div>
 </section>
+<div class="container">
+<div class="module-navigation">
+<a href="/notes/fitter/fitter5.html">← Module 5</a>
+<a href="/notes/fitter/">📚 All Fitter Modules</a>
+<a href="/notes/fitter/fitter7.html">Module 7 →</a>
+</div>
+</div>
 <section class="search-section container">
 <input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
 <button onclick="filterSections()">🔍 Search</button>
@@ -966,11 +997,11 @@ LC = 1 thimble division − 1 vernier division = 0.01 − 0.009 = <strong>0.001 
 <div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
 <div class="section-body">
 <div style="display:flex; flex-wrap:wrap; gap:12px;">
-<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
-<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
-<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
-<a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
-<a href="module-5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 5: Drilling</a>
+<a href="/notes/fitter/fitter1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
+<a href="/notes/fitter/fitter2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
+<a href="/notes/fitter/fitter3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
+<a href="/notes/fitter/fitter4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
+<a href="/notes/fitter/fitter5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 5: Drilling</a>
 </div>
 </div>
 </div>
