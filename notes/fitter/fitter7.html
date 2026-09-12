@@ -471,14 +471,38 @@
             .section-body { background: #fff !important; }
             .tool-figure { border:1px solid #ccc; break-inside:avoid; }
         }
+    
+        /* ===== MODULE NAVIGATION – SAME FORMAT AS MODULE 2/3/4/5/6 ===== */
+        .module-navigation {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:10px;
+            margin:8px 0 25px;
+        }
+        .module-navigation a {
+            background:#003366;
+            color:#fff;
+            text-decoration:none;
+            padding:9px 17px;
+            border-radius:7px;
+            font-size:.9rem;
+            font-weight:600;
+            transition:.25s;
+        }
+        .module-navigation a:hover {
+            background:#002244;
+            transform:translateY(-1px);
+        }
+        @media(max-width:768px){
+            .module-navigation{flex-direction:column;}
+            .module-navigation a{width:100%; text-align:center;}
+        }
     </style>
 </head>
 <body>
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
-
-
-
 <div class="breadcrumb">
 <div class="container">
 <a href="/">🏠 Home</a>  › 
@@ -493,6 +517,13 @@
 <p>लेथ सुरक्षा · लेथ भाग · फीड तंत्र · कैच प्लेट · कटिंग टूल नामकरण · टूल कोण · चक · बोरिंग · नरलिंग · टेपर · स्क्रू थ्रेड</p>
 </div>
 </section>
+<div class="container">
+<div class="module-navigation">
+<a href="/notes/fitter/fitter6.html">← Module 6</a>
+<a href="/notes/fitter/">📚 All Fitter Modules</a>
+<a href="/notes/fitter/fitter8.html">Module 8 →</a>
+</div>
+</div>
 <section class="search-section container">
 <input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
 <button onclick="filterSections()">🔍 Search</button>
@@ -1356,6 +1387,7 @@ Twitter
 <p><strong>Screw thread</strong> समान cross-section का ridge है जो cylinder या cone के चारों ओर internal या external रूप में helical path follow करता है।</p>
 <h3>Screw Threads के Uses</h3>
 <ul><li>Components को fasten करके आवश्यकता पर dismantle करना।</li><li>Machine में motion को एक unit से दूसरी unit तक transmit करना।</li><li>Accurate measurement के लिए।</li><li>Pressure बनाने और adjustment के लिए।</li></ul><h3>Thread Forms covered in NIMI</h3><ul><li><strong>Square thread:</strong> flanks thread axis के perpendicular; motion/power transmission के लिए — screw jack, vice handle, cross-slide, compound-slide और screw shaft actuation आदि।</li><li><strong>Modified square thread:</strong> square thread का modified form; depth half-pitch से कम और quick movement वाले applications में उपयोग।</li><li><strong>Acme thread:</strong> square thread का modified form; included angle 29°; lathe lead screw में उपयोग। Metric Acme में included angle 30° होता है।</li><li><strong>Buttress thread:</strong> एक flank axis के perpendicular और दूसरा 45° पर; एक दिशा में pressure/load वाले applications में उपयोग, जैसे power press, carpentry, gun breech और shaft। BIS form में bearing flank 7° और दूसरा 45° है।</li><li><strong>Saw-tooth thread:</strong> BIS 4696 form में load-bearing flank 3° और दूसरा flank 30° पर।</li><li><strong>Worm thread:</strong> Acme जैसा form, अधिक depth; worm shaft/worm wheel में right-angle motion transmission और reduction के लिए।</li><li><strong>Knuckle thread:</strong> rounded profile; valve spindle, railway carriage coupling और hose connection आदि में उपयोग।</li></ul>
+
 <ul>
 <li><strong>Square thread:</strong> flanks thread axis के perpendicular होते हैं। Motion/power transmission के लिए — screw jack, vice handle, cross-slide और compound-slide screw आदि।</li>
 <li><strong>Modified square thread:</strong> ordinary square thread जैसा, लेकिन depth half-pitch से कम होती है; जहाँ quick movement आवश्यक हो वहाँ उपयोग।</li>
@@ -1458,12 +1490,12 @@ Twitter
 <div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
 <div class="section-body">
 <div style="display:flex; flex-wrap:wrap; gap:12px;">
-<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
-<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
-<a href="module-3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
-<a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
-<a href="module-5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 5: Drilling</a>
-<a href="module-6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 6: Assembly</a>
+<a href="/notes/fitter/fitter1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
+<a href="/notes/fitter/fitter2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
+<a href="/notes/fitter/fitter3.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 3: Sheet Metal</a>
+<a href="/notes/fitter/fitter4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
+<a href="/notes/fitter/fitter5.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 5: Drilling</a>
+<a href="/notes/fitter/fitter6.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 6: Assembly</a>
 </div>
 </div>
 </div>
