@@ -634,13 +634,11 @@ Safety &amp; Industrial Training | Hindi + English Theory
 Next Module →
 </a>
 </div>
-
 <!-- ================= MODULE SEARCH ================= -->
 <section class="search-section container">
-<input id="sectionSearch" type="text" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..."/>
-<button type="button" onclick="filterSections()">🔍 Search</button>
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()" type="button">🔍 Search</button>
 </section>
-
 <!-- ================= TABLE OF CONTENTS ================= -->
 <div class="toc-card" id="topics">
 <h2>📚 इस Module में क्या पढ़ेंगे?</h2>
@@ -2875,7 +2873,6 @@ console.log(
 );
 
 </script>
-
 <script>
 function filterSections() {
     const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
