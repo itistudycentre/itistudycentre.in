@@ -86,6 +86,34 @@
         @media(max-width:768px) { .page-title h1 { font-size: 1.7rem; } }
         @media(max-width:480px) { .page-title h1 { font-size: 1.4rem; } .page-title p { font-size: 0.95rem; } }
 
+
+        /* ================= MODULE NAVIGATION ================= */
+        .module-navigation {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:10px;
+            margin:8px 0 25px;
+        }
+        .module-navigation a {
+            background:#003366;
+            color:#fff;
+            text-decoration:none;
+            padding:9px 17px;
+            border-radius:7px;
+            font-size:0.9rem;
+            font-weight:600;
+            transition:0.25s;
+        }
+        .module-navigation a:hover {
+            background:#002244;
+            transform:translateY(-1px);
+        }
+        @media(max-width:768px){
+            .module-navigation{flex-direction:column;}
+            .module-navigation a{width:100%; text-align:center;}
+        }
+
         .search-section {
             display: flex;
             gap: 12px;
@@ -467,9 +495,6 @@
 <body>
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
-
-
-
 <div class="breadcrumb">
 <div class="container">
 <a href="/">🏠 Home</a>  › 
@@ -484,6 +509,16 @@
 <p>सुरक्षा · धातु की चादरें · हैंड लीवर शीअर्स · शीट मेटल औजार · स्टेक्स · सीम · सोल्डर · रिवेट और रिवेटिंग</p>
 </div>
 </section>
+
+<!-- ================= MODULE NAVIGATION ================= -->
+<div class="container">
+<div class="module-navigation">
+<a href="/notes/fitter/fitter2.html">← Module 2</a>
+<a href="/notes/fitter/">📚 All Fitter Modules</a>
+<a href="/notes/fitter/fitter4.html">Module 4 →</a>
+</div>
+</div>
+
 <section class="search-section container">
 <input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
 <button onclick="filterSections()">🔍 Search</button>
@@ -981,9 +1016,9 @@ Twitter
 <div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
 <div class="section-body">
 <div style="display:flex; flex-wrap:wrap; gap:12px;">
-<a href="module-1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
-<a href="module-2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
-<a href="module-4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
+<a href="/notes/fitter/fitter1.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 1: Safety</a>
+<a href="/notes/fitter/fitter2.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 2: Basic Fitting</a>
+<a href="/notes/fitter/fitter4.html" style="background:#e9ecef; padding:10px 22px; border-radius:8px; color:#003366; text-decoration:none; font-weight:500;">📘 Module 4: Welding</a>
 </div>
 </div>
 </div>
