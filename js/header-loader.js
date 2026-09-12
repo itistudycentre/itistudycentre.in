@@ -259,3 +259,19 @@
     }
 
 })();
+/* ===== FORCE PAGE TO OPEN AT TOP ===== */
+(function () {
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+    }
+
+    function goToTop() {
+        window.scrollTo(0, 0);
+    }
+
+    // New page / reload
+    window.addEventListener("load", goToTop);
+
+    // Browser Back / Forward
+    window.addEventListener("pageshow", goToTop);
+})();
