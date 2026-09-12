@@ -471,7 +471,145 @@
             .section-body { background: #fff !important; }
             .tool-figure { border:1px solid #ccc; break-inside:avoid; }
         }
-    </style>
+    
+/* ================= TOP NAV + SEARCH + SHARE — FINAL CSS FIX ================= */
+.module-navigation{
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:center !important;
+    gap:10px !important;
+    margin:8px 0 25px !important;
+}
+.module-navigation a{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    background:#003366 !important;
+    color:#fff !important;
+    text-decoration:none !important;
+    padding:9px 17px !important;
+    border-radius:7px !important;
+    font-size:.9rem !important;
+    font-weight:600 !important;
+    line-height:1.3 !important;
+    border:1px solid #003366 !important;
+}
+.module-navigation a:hover{
+    background:#002244 !important;
+    color:#fff !important;
+    transform:translateY(-1px);
+}
+.search-section{
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin:16px 0 22px;
+}
+.search-section input{
+    flex:1;
+    min-width:0;
+    max-width:540px;
+    padding:12px 16px !important;
+    border:1px solid #cfd7e2 !important;
+    border-radius:8px !important;
+    background:#fff !important;
+    color:#1e2a3a;
+    font-size:.95rem !important;
+    outline:none;
+}
+.search-section input:focus{
+    border-color:#003366 !important;
+    box-shadow:0 0 0 3px rgba(0,51,102,.08);
+}
+.search-section button{
+    border:0 !important;
+    background:#003366 !important;
+    color:#fff !important;
+    padding:11px 22px !important;
+    border-radius:8px !important;
+    font-weight:600 !important;
+    cursor:pointer;
+}
+.search-section button:hover{
+    background:#002244 !important;
+}
+.share-section{
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:9px;
+    margin:0 auto 24px !important;
+    padding:10px 14px !important;
+    background:#f8fafc !important;
+    border:1px solid #e6eaef !important;
+    border-radius:12px !important;
+}
+.share-label{
+    color:#003366 !important;
+    font-weight:700 !important;
+}
+.share-btn{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    min-height:40px;
+    padding:9px 14px !important;
+    border:1px solid transparent !important;
+    border-radius:8px !important;
+    color:#fff !important;
+    font-family:inherit;
+    font-size:.88rem !important;
+    font-weight:600 !important;
+    line-height:1.2;
+    text-decoration:none !important;
+    cursor:pointer;
+    appearance:none;
+    -webkit-appearance:none;
+}
+.share-btn svg{
+    width:18px !important;
+    height:18px !important;
+    display:block !important;
+    flex:0 0 18px;
+    fill:currentColor;
+}
+.share-btn.whatsapp{background:#25d366 !important;}
+.share-btn.facebook{background:#1877f2 !important;}
+.share-btn.twitter{background:#111827 !important;}
+.share-btn.link{background:#003366 !important;}
+.share-btn:hover{
+    transform:translateY(-1px);
+    opacity:.92;
+}
+@media(max-width:768px){
+    .module-navigation{
+        flex-direction:column !important;
+    }
+    .module-navigation a{
+        width:100% !important;
+    }
+    .search-section{
+        flex-direction:column !important;
+        align-items:stretch !important;
+    }
+    .search-section input,
+    .search-section button{
+        width:100% !important;
+        max-width:100% !important;
+    }
+    .share-section{
+        justify-content:stretch !important;
+    }
+    .share-btn{
+        flex:1 1 140px;
+    }
+}
+
+</style>
 </head>
 <body>
 <div id="header-container"></div>
