@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 6 – Hydraulics and Pneumatics (पूर्ण) | Fitter 2nd Year | ITI Study Centre</title>
+<meta name="description" content="Fitter 2nd Year Module 6 – Hydraulics and Pneumatics. Air Compressor, FRL, Pneumatic Actuators, Cylinders, Valves, Electro-Pneumatics, Hydraulic Symbols, Filters, Pumps, Tube and Pipe Assembly, Hydraulic Cylinders and Flow Control Valve.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Roboto,Arial,sans-serif;background:#f5f7fb;color:#1e2a3a;line-height:1.8;user-select:none}
+.container{max-width:1200px;margin:0 auto;padding:0 22px}
+.main-header{background:#003366;padding:16px 0;border-bottom:4px solid #ffcc00}
+.main-header .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.logo a{color:#fff;font-size:1.5rem;font-weight:700;text-decoration:none}
+.main-header nav{display:flex;flex-wrap:wrap;gap:8px 20px}
+.main-header nav a{color:#fff;text-decoration:none;font-size:1rem;padding:4px 0;border-bottom:2px solid transparent}
+.main-header nav a:hover,.main-header nav a.active{border-bottom-color:#ffcc00;color:#ffcc00}
+.breadcrumb{background:#eef1f5;padding:10px 20px;font-size:.9rem;border-bottom:1px solid #dde1e7}
+.breadcrumb a{color:#003366;text-decoration:none}.breadcrumb .current{color:#555;font-weight:600}
+.page-title{background:#fff;padding:28px 22px;margin:22px auto;border-radius:14px;box-shadow:0 5px 18px rgba(0,0,0,.07);text-align:center}
+.page-title h1{color:#003366;font-size:2.3rem;line-height:1.3}.page-title p{margin-top:8px;color:#5d6875;font-size:1.05rem}
+.module-navigation{display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;margin:18px auto 24px}
+.module-navigation a{flex:1;min-width:190px;text-align:center;background:#003366;color:#fff;padding:12px 16px;border-radius:9px;text-decoration:none;font-weight:600;border-bottom:3px solid #ffcc00;transition:.2s}
+.module-navigation a:hover{transform:translateY(-2px);background:#004b8d}
+.search-section{background:#fff;padding:18px 22px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.06);margin-bottom:22px}
+.search-section input{width:100%;padding:13px 16px;border:1px solid #ccd5df;border-radius:8px;font-size:1rem;outline:none}
+.search-section input:focus{border-color:#003366;box-shadow:0 0 0 3px rgba(0,51,102,.08)}
+.toc-card{background:#fff;border-radius:14px;box-shadow:0 5px 18px rgba(0,0,0,.07);padding:24px;margin-bottom:24px}
+.toc-card h2{color:#003366;margin-bottom:15px;border-left:6px solid #ffcc00;padding-left:12px}
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.toc-grid a{background:#eef5fb;color:#003366;text-decoration:none;padding:13px 15px;border-radius:9px;border-left:4px solid #0077b6;font-weight:600}
+.toc-grid a:hover{background:#e1eef8}
+.content-section{background:#fff;border-radius:14px;box-shadow:0 5px 18px rgba(0,0,0,.07);margin-bottom:25px;overflow:hidden}
+.section-header{background:linear-gradient(90deg,#eaf4fb,#fff);padding:18px 24px;border-bottom:1px solid #dbe5ee}
+.section-header .title{color:#003366;font-size:1.35rem;font-weight:700}.section-header .icon{margin-right:9px}
+.section-body{padding:26px 30px}.section-body h3{color:#003366;font-size:1.18rem;margin:22px 0 10px;padding-left:11px;border-left:5px solid #ffcc00}
+.section-body h3:first-child{margin-top:0}
+.section-body p{margin:9px 0;font-size:1.04rem}
+.section-body ul,.section-body ol{padding-left:25px;margin:9px 0 14px}.section-body li{margin:5px 0}
+.section-body strong{color:#003366;font-weight:600}
+.info-box,.important-box,.warning-box,.success-box,.exam-box,.flow-box{margin:17px 0;padding:16px 18px;border-radius:10px;border-left:5px solid}
+.info-box{background:#eef7ff;border-color:#2196f3}.important-box{background:#fff8e1;border-color:#ffb300}
+.warning-box{background:#fff1f1;border-color:#e53935}.success-box{background:#eef9f1;border-color:#43a047}
+.exam-box{background:#f3efff;border-color:#7e57c2}.flow-box{background:#f4f7fa;border-color:#607d8b}
+.box-title{font-weight:700;margin-bottom:5px;color:#003366}
+.data-table{width:100%;border-collapse:collapse;margin:14px 0;background:#fff}
+.data-table th,.data-table td{border:1px solid #d6dee7;padding:10px 12px;text-align:left;vertical-align:top}
+.data-table th{background:#003366;color:#fff}.data-table tr:nth-child(even){background:#f7f9fb}
+.image-placeholder{margin:18px 0;border:2px dashed #c5d0db;border-radius:10px;padding:24px;text-align:center;background:#f8fafc;color:#637282}
+.image-placeholder .placeholder-icon{font-size:2rem}.image-placeholder code{display:block;margin-top:5px;color:#003366}
+.quick-revision{background:#003366;color:#fff;border-radius:14px;padding:25px 28px;margin:28px 0}
+.quick-revision h2{color:#ffcc00;margin-bottom:12px}.quick-revision li{margin:5px 0}
+.share-box{text-align:center;background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.06);margin:24px 0}
+.share-btn{display:inline-block;padding:9px 15px;border-radius:7px;color:#fff;text-decoration:none;margin:4px;font-weight:600}
+.whatsapp{background:#25D366}.facebook{background:#1877F2}.twitter{background:#111}.copy{background:#003366}
+.mcq-link{display:block;text-align:center;background:#ffcc00;color:#003366;padding:14px;border-radius:9px;text-decoration:none;font-weight:700;margin:22px 0}
+.conclusion{background:#003366;color:#fff;padding:28px;border-radius:14px;margin:25px 0}.conclusion h2{color:#ffcc00;margin-bottom:10px}
+footer{background:#00284d;color:#fff;text-align:center;padding:25px 15px;margin-top:35px}.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:10px}.footer-links a{color:#fff;text-decoration:none}
+#scrollTop{display:none;position:fixed;right:22px;bottom:22px;border:0;background:#003366;color:#fff;width:46px;height:46px;border-radius:50%;font-size:1.2rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+@media(max-width:768px){.page-title h1{font-size:1.8rem}.section-body{padding:21px}.module-navigation a{min-width:100%}.main-header .container{flex-direction:column;gap:8px}.main-header nav{justify-content:center;gap:6px 14px}}
+</style>
+</head>
+<body>
+
+<header class="main-header">
+<div class="container">
+<div class="logo"><a href="/">🔧 ITI Study Centre</a></div>
+<nav>
+<a href="/">Home</a>
+<a href="/notes/">Notes</a>
+<a href="/notes/fitter/" class="active">Fitter Notes</a>
+<a href="/iti-result/">ITI Result</a>
+</nav>
+</div>
+</header>
+
+<div class="breadcrumb">
+<div class="container"><a href="/">Home</a> › <a href="/notes/fitter/">Fitter 2nd Year</a> › <span class="current">Module 6 – Hydraulics and Pneumatics</span></div>
+</div>
+
+<main class="container">
+<div class="page-title">
+<h1>Module 6 – Hydraulics and Pneumatics</h1>
+<p>Fitter 2nd Year · हाइड्रोलिक्स और न्यूमैटिक्स · Complete Trade Theory Notes</p>
+</div>
+
+<div class="module-navigation">
+<a href="../module-5.html">← Previous Notes</a>
+<a href="/notes/fitter/">📚 All Theory Notes</a>
+<a href="../module-7.html">Next Notes →</a>
+</div>
+
+<div class="search-section">
+<input id="sectionSearch" type="search" placeholder="🔎 इस मॉड्यूल में विषय खोजें...">
+</div>
+
+<div class="toc-card">
+<h2>📚 Module 6 – विषय सूची</h2>
+<div class="toc-grid">
+<a href="#sec171">2.6.171 – एयर कंप्रेसर के भाग और कार्य</a>
+<a href="#sec172">2.6.172 – FRL इकाई</a>
+<a href="#sec173">2.6.173 – न्यूमैटिक एक्ट्यूएटर</a>
+<a href="#sec174">2.6.174-176 – सिंगल एक्टिंग सिलेंडर</a>
+<a href="#sec177">2.6.177 – न्यूमैटिक वाल्व</a>
+<a href="#sec178">2.6.178 – नॉन-रिटर्न / चेक वाल्व</a>
+<a href="#sec179">2.6.179 – इलेक्ट्रो-न्यूमैटिक्स</a>
+<a href="#sec180">2.6.180 – हाइड्रोलिक सिंबल</a>
+<a href="#sec181">2.6.181 – हाइड्रोलिक फिल्टर</a>
+<a href="#sec182">2.6.182 – हाइड्रोलिक पंप</a>
+<a href="#sec183">2.6.183-184 – ट्यूब और पाइप असेंबली</a>
+<a href="#sec185">2.6.185 – हाइड्रोलिक सिलेंडर</a>
+<a href="#sec186">2.6.186 – फ्लो कंट्रोल वाल्व</a>
+</div>
+</div>
+
+<section class="content-section" id="sec171">
+<div class="section-header"><span class="icon">⚙️</span><span class="title">2.6.171 – एयर कंप्रेसर के भाग और कार्य (Air Compressor Parts and Function)</span></div>
+<div class="section-body">
+<h3>एयर कंप्रेसर क्या है?</h3>
+<p><strong>Air Compressor</strong> वह मशीन है जो वायुमंडलीय हवा को लेकर उसका आयतन कम करके <strong>Compressed Air</strong> के रूप में दबावयुक्त हवा उपलब्ध कराती है। न्यूमैटिक मशीनों और उपकरणों को चलाने के लिए compressed air का उपयोग किया जाता है।</p>
+<h3>मुख्य भाग</h3>
+<ul>
+<li>Air filter – अंदर जाने वाली हवा से धूल और अशुद्धियाँ हटाता है।</li>
+<li>Cylinder और piston – हवा को compress करने का मुख्य कार्य करते हैं।</li>
+<li>Suction valve – हवा को cylinder में प्रवेश कराता है।</li>
+<li>Delivery valve – compressed air को बाहर भेजता है।</li>
+<li>Crank और connecting rod – piston की reciprocating motion को संचालित करते हैं।</li>
+<li>Air receiver – compressed air को store करता है।</li>
+<li>Pressure gauge – pressure को प्रदर्शित करता है।</li>
+<li>Safety / pressure relief valve – अत्यधिक pressure से सुरक्षा देता है।</li>
+</ul>
+<div class="flow-box"><div class="box-title">🔄 कार्य सिद्धांत</div><p>सक्शन स्ट्रोक में हवा cylinder में प्रवेश करती है। Compression stroke में piston हवा का आयतन कम करता है और उसका pressure बढ़ता है। इसके बाद compressed air delivery valve से receiver या pneumatic line में जाती है।</p></div>
+<div class="warning-box"><div class="box-title">⚠️ सुरक्षा</div><p>कंप्रेसर चलाने से पहले oil level, air leakage, pressure gauge, safety valve और receiver की स्थिति जाँचें।</p></div>
+</div></section>
+
+<section class="content-section" id="sec172">
+<div class="section-header"><span class="icon">🧰</span><span class="title">2.6.172 – FRL इकाई (Filter, Regulator, Lubricator)</span></div>
+<div class="section-body">
+<p><strong>FRL unit</strong> pneumatic system में आने वाली compressed air को साफ करने, pressure नियंत्रित करने और आवश्यक lubrication देने के लिए उपयोग की जाती है।</p>
+<table class="data-table"><tr><th>भाग</th><th>मुख्य कार्य</th></tr>
+<tr><td>Filter</td><td>हवा से dust, moisture और अन्य impurities हटाता है।</td></tr>
+<tr><td>Regulator</td><td>आवश्यक working pressure को नियंत्रित और स्थिर रखता है।</td></tr>
+<tr><td>Lubricator</td><td>आवश्यक मात्रा में oil mist देकर pneumatic components की lubrication करता है।</td></tr></table>
+<h3>FRL का क्रम</h3>
+<div class="flow-box"><p><strong>Compressor → Filter → Regulator → Lubricator → Pneumatic Circuit</strong></p></div>
+<div class="important-box"><div class="box-title">💡 याद रखें</div><p>कंप्रेसर से निकलने वाली हवा गर्म, गंदी और नमी वाली हो सकती है। इसलिए pneumatic equipment में उपयोग से पहले air conditioning आवश्यक है।</p></div>
+</div></section>
+
+<section class="content-section" id="sec173">
+<div class="section-header"><span class="icon">↔️</span><span class="title">2.6.173 – न्यूमैटिक एक्ट्यूएटर (Pneumatic Actuators)</span></div>
+<div class="section-body">
+<p><strong>Pneumatic actuator</strong> compressed air की energy को mechanical motion में बदलता है। इसका उपयोग linear या rotary motion प्राप्त करने के लिए किया जाता है।</p>
+<h3>प्रमुख प्रकार</h3>
+<ul>
+<li><strong>Linear actuator</strong> – सीधी रेखा में motion देता है।</li>
+<li><strong>Single-acting cylinder</strong> – एक दिशा में air pressure से चलता है और दूसरी दिशा में spring या external force से लौटता है।</li>
+<li><strong>Double-acting cylinder</strong> – दोनों दिशाओं में compressed air से चलता है।</li>
+<li><strong>Pneumatic rotary actuator / motor</strong> – rotary motion प्रदान करता है।</li>
+</ul>
+<div class="info-box"><div class="box-title">📌 Cylinder force</div><p>आदर्श स्थिति में cylinder का बल pressure और piston area पर निर्भर करता है: <strong>F = P × A</strong>.</p></div>
+</div></section>
+
+<section class="content-section" id="sec174">
+<div class="section-header"><span class="icon">🔩</span><span class="title">2.6.174-176 – सिंगल एक्टिंग सिलेंडर और उसका अनुप्रयोग</span></div>
+<div class="section-body">
+<h3>Single Acting Cylinder</h3>
+<p>इस cylinder में compressed air piston को केवल एक दिशा में चलाती है। piston की वापसी spring या बाहरी बल द्वारा होती है।</p>
+<h3>मुख्य भाग</h3>
+<ul><li>Cylinder barrel</li><li>Piston</li><li>Piston rod</li><li>Spring</li><li>Seals</li><li>End covers</li></ul>
+<h3>अनुप्रयोग</h3>
+<ul><li>Clamping और holding operations</li><li>Small pressing operations</li><li>Material feeding</li><li>Light lifting और pushing work</li></ul>
+<div class="flow-box"><div class="box-title">🔧 Basic circuit</div><p>Compressed air → FRL → Control valve → Single acting cylinder</p></div>
+<div class="warning-box"><div class="box-title">⚠️ Dismantling से पहले</div><p>Air supply बंद करें और system में बचा हुआ pressure पूरी तरह release करें।</p></div>
+</div></section>
+
+<section class="content-section" id="sec177">
+<div class="section-header"><span class="icon">🎛️</span><span class="title">2.6.177 – न्यूमैटिक वाल्व (Pneumatic Valves)</span></div>
+<div class="section-body">
+<p>Pneumatic valves compressed air के <strong>direction, pressure और flow</strong> को नियंत्रित करते हैं।</p>
+<h3>मुख्य प्रकार</h3>
+<table class="data-table"><tr><th>वाल्व</th><th>उपयोग</th></tr>
+<tr><td>3/2-way valve</td><td>Single acting cylinder जैसे applications में सामान्यतः उपयोग।</td></tr>
+<tr><td>5/2-way valve</td><td>Double acting cylinder की direction control के लिए।</td></tr>
+<tr><td>Check valve</td><td>हवा को एक दिशा में जाने देता है।</td></tr>
+<tr><td>Flow control valve</td><td>Air flow और cylinder speed को नियंत्रित करता है।</td></tr>
+<tr><td>Shuttle valve</td><td>दो input signals में से किसी एक को output देने के लिए।</td></tr>
+<tr><td>Two-pressure valve</td><td>दोनों inputs उपलब्ध होने पर output देने के लिए।</td></tr></table>
+<div class="exam-box"><div class="box-title">📝 परीक्षा के लिए</div><p>3/2 और 5/2 valve के ports, positions और pneumatic circuit में उनके उपयोग को विशेष रूप से समझें।</p></div>
+</div></section>
+
+<section class="content-section" id="sec178">
+<div class="section-header"><span class="icon">➡️</span><span class="title">2.6.178 – नॉन-रिटर्न वाल्व / चेक वाल्व (Non-Return Valve / Check Valve)</span></div>
+<div class="section-body">
+<p><strong>Check valve</strong> compressed air को केवल एक दिशा में flow करने देता है और reverse flow को रोकता है।</p>
+<h3>मुख्य भाग</h3>
+<ul><li>Body</li><li>Valve seat</li><li>Ball या poppet</li><li>Spring</li><li>Inlet और outlet ports</li></ul>
+<h3>कार्य</h3>
+<p>जब inlet side का pressure outlet side की तुलना में पर्याप्त अधिक होता है, valve खुलता है। विपरीत दिशा में flow होने पर ball/poppet seat पर बैठकर passage बंद कर देता है।</p>
+<div class="success-box"><div class="box-title">✅ उपयोग</div><p>Back-flow रोकने, pressure बनाए रखने और pneumatic circuit को सुरक्षित रखने में इसका उपयोग किया जाता है।</p></div>
+</div></section>
+
+<section class="content-section" id="sec179">
+<div class="section-header"><span class="icon">⚡</span><span class="title">2.6.179 – इलेक्ट्रो-न्यूमैटिक्स (Electro-Pneumatics)</span></div>
+<div class="section-body">
+<p><strong>Electro-pneumatics</strong> में electrical control और pneumatic power को मिलाकर machine या actuator को नियंत्रित किया जाता है।</p>
+<h3>मुख्य components</h3>
+<ul><li>Push button – NO / NC</li><li>Electromagnetic relay</li><li>Solenoid valve</li><li>3/2 single solenoid valve</li><li>5/2 single solenoid valve</li><li>5/2 double solenoid valve</li><li>Pneumatic cylinder</li></ul>
+<div class="flow-box"><div class="box-title">⚙️ Basic sequence</div><p>Electrical input signal → Relay / control → Solenoid coil → Pneumatic valve → Cylinder movement</p></div>
+<div class="warning-box"><div class="box-title">⚠️ सावधानी</div><p>Electrical supply और compressed-air supply पर अलग-अलग safety procedures का पालन करें। Wiring या valve dismantling से पहले supply isolate करें।</p></div>
+</div></section>
+
+<section class="content-section" id="sec180">
+<div class="section-header"><span class="icon">🔣</span><span class="title">2.6.180 – हाइड्रोलिक घटकों के लिए सिंबल (Symbols for Hydraulic Components)</span></div>
+<div class="section-body">
+<p>Hydraulic circuit में components को standard graphical symbols द्वारा दर्शाया जाता है। इससे circuit को पढ़ना, समझना और troubleshooting करना आसान होता है।</p>
+<h3>मुख्य symbols / components</h3>
+<ul><li>Hydraulic pump</li><li>Reservoir / tank</li><li>Pressure gauge</li><li>Pressure relief valve</li><li>Filter</li><li>Directional control valve</li><li>Flow control valve</li><li>Hydraulic motor</li><li>Hydraulic cylinder</li></ul>
+<div class="info-box"><div class="box-title">📌 ध्यान दें</div><p>Hydraulic circuit diagram में line, arrows, valve symbols और actuator symbols को सही पहचानना practical और examination दोनों के लिए महत्वपूर्ण है।</p></div>
+<div class="image-placeholder"><div class="placeholder-icon">🖼️</div><strong>चित्र: Hydraulic component symbols</strong><code>hydraulic_symbols.jpg</code></div>
+</div></section>
+
+<section class="content-section" id="sec181">
+<div class="section-header"><span class="icon">🛢️</span><span class="title">2.6.181 – हाइड्रोलिक्स फिल्टर (Hydraulic Filters)</span></div>
+<div class="section-body">
+<p>Hydraulic filter fluid से dust, metal particles और अन्य contaminants को हटाकर hydraulic components को सुरक्षित रखता है।</p>
+<h3>फिल्टर के प्रकार / स्थान</h3>
+<ul>
+<li><strong>Suction filter</strong> – pump inlet side पर लगाया जाता है।</li>
+<li><strong>Pressure line filter</strong> – pump के बाद pressure line में लगाया जाता है।</li>
+<li><strong>Return line filter</strong> – reservoir में fluid वापस जाने से पहले लगाया जाता है।</li>
+</ul>
+<div class="important-box"><div class="box-title">💡 Contamination control</div><p>Hydraulic oil में contamination pump, valves और actuators के wear को बढ़ा सकता है। इसलिए filter की condition और cleanliness की नियमित जाँच आवश्यक है।</p></div>
+</div></section>
+
+<section class="content-section" id="sec182">
+<div class="section-header"><span class="icon">🔄</span><span class="title">2.6.182 – हाइड्रोलिक पंप (Hydraulic Pumps)</span></div>
+<div class="section-body">
+<p>Hydraulic pump mechanical energy को hydraulic energy में बदलकर fluid को system में flow कराता है।</p>
+<h3>मुख्य प्रकार</h3>
+<table class="data-table"><tr><th>पंप</th><th>मुख्य विशेषता</th></tr>
+<tr><td>Gear pump</td><td>सरल construction, मजबूत और सामान्य industrial applications में उपयोगी।</td></tr>
+<tr><td>Vane pump</td><td>Vanes के द्वारा fluid displacement करता है और comparatively smooth flow देता है।</td></tr>
+<tr><td>Piston pump</td><td>उच्च pressure applications में उपयोग किया जाता है।</td></tr></table>
+<h3>Hydraulic reservoir और accessories</h3>
+<p>Reservoir hydraulic oil को store करता है तथा cooling, settling और air separation के लिए स्थान देता है। इसमें filler breather, level indicator, drain और अन्य accessories हो सकते हैं।</p>
+<div class="warning-box"><div class="box-title">⚠️ Pressure relief valve</div><p>System pressure को सुरक्षित सीमा में रखने के लिए pressure relief valve आवश्यक है।</p></div>
+</div></section>
+
+<section class="content-section" id="sec183">
+<div class="section-header"><span class="icon">🔧</span><span class="title">2.6.183-184 – ट्यूब और पाइप असेंबली (Tube and Pipe Assembly)</span></div>
+<div class="section-body">
+<p>Hydraulic system में tubes, pipes और hoses के द्वारा fluid को एक component से दूसरे component तक पहुँचाया जाता है।</p>
+<h3>Assembly के दौरान ध्यान रखने योग्य बातें</h3>
+<ul>
+<li>Tube का सही size और material चुनें।</li>
+<li>Tube को सही length में cut और deburr करें।</li>
+<li>Fittings को सही प्रकार से assemble करें।</li>
+<li>Hose में twist, kink और अनावश्यक sharp bend न होने दें।</li>
+<li>Minimum bend radius का पालन करें।</li>
+<li>Assembly के बाद leakage और fitting tightness की जाँच करें।</li>
+</ul>
+<div class="warning-box"><div class="box-title">⚠️ Safety</div><p>High-pressure hydraulic line को हाथ से leakage के लिए कभी न जाँचें। Pressure release करके ही fitting को खोलें या tighten करें।</p></div>
+</div></section>
+
+<section class="content-section" id="sec185">
+<div class="section-header"><span class="icon">⬆️</span><span class="title">2.6.185 – हाइड्रोलिक सिलेंडर (Hydraulic Cylinder / Linear Actuator)</span></div>
+<div class="section-body">
+<p><strong>Hydraulic cylinder</strong> hydraulic pressure को linear mechanical motion और force में बदलता है। इसका उपयोग lifting, pushing, pressing और clamping operations में किया जाता है।</p>
+<h3>मुख्य भाग</h3>
+<ul><li>Cylinder barrel</li><li>Piston</li><li>Piston rod</li><li>Seals</li><li>Gland</li><li>End caps</li><li>Ports</li></ul>
+<h3>कार्य</h3>
+<p>Pressurized oil cylinder के एक side में प्रवेश करता है और piston को move करता है। Oil की direction बदलने पर piston की movement भी बदल सकती है।</p>
+<div class="info-box"><div class="box-title">📐 बल का आधार</div><p>Hydraulic cylinder का theoretical force मुख्यतः pressure और effective piston area पर निर्भर करता है: <strong>F = P × A</strong>.</p></div>
+</div></section>
+
+<section class="content-section" id="sec186">
+<div class="section-header"><span class="icon">🎚️</span><span class="title">2.6.186 – प्रवाह नियंत्रण वाल्व (Flow Control Valve)</span></div>
+<div class="section-body">
+<p><strong>Flow control valve</strong> hydraulic fluid के flow rate को नियंत्रित करता है और इसी के द्वारा actuator की speed को नियंत्रित किया जा सकता है।</p>
+<h3>कार्य सिद्धांत</h3>
+<p>Valve में flow passage को throttle करके fluid के flow को कम या अधिक किया जाता है। Throttling screw को adjust करने से restricted passage का area बदलता है और flow rate नियंत्रित होता है।</p>
+<h3>Check और flow control का संयुक्त उपयोग</h3>
+<p>एक direction में restricted flow देकर actuator की speed control की जा सकती है, जबकि विपरीत direction में check valve के कारण comparatively free flow प्राप्त किया जा सकता है।</p>
+<div class="flow-box"><div class="box-title">🔄 सामान्य क्रम</div><p>Reservoir → Pump → Control Valve → Flow Control Valve → Hydraulic Cylinder → Return Line → Reservoir</p></div>
+<div class="exam-box"><div class="box-title">📝 परीक्षा के लिए</div><p>Flow control valve का उद्देश्य, throttling principle तथा check valve के साथ इसके कार्य को अच्छी तरह तैयार करें।</p></div>
+</div></section>
+
+<div class="quick-revision">
+<h2>⚡ Quick Revision – Module 6</h2>
+<ul>
+<li>Air compressor compressed air उत्पन्न करता है और pneumatic system को power देता है।</li>
+<li>FRL = Filter + Regulator + Lubricator.</li>
+<li>Single-acting cylinder में air pressure से मुख्यतः एक दिशा की movement होती है।</li>
+<li>3/2 और 5/2 directional valves pneumatic circuits के महत्वपूर्ण valves हैं।</li>
+<li>Check valve reverse flow को रोकता है।</li>
+<li>Electro-pneumatics में electrical control और pneumatic power का संयोजन होता है।</li>
+<li>Hydraulic filter fluid को contamination से साफ रखने में मदद करता है।</li>
+<li>Gear, vane और piston hydraulic pumps के प्रमुख प्रकार हैं।</li>
+<li>Hydraulic cylinder pressure energy को linear mechanical force में बदलता है।</li>
+<li>Flow control valve actuator की speed को नियंत्रित करने में उपयोगी है।</li>
+</ul>
+</div>
+
+<a class="mcq-link" href="/notes/fitter/mcq/module-6.html">🎯 Module 6 के MCQ / Online Test पर जाएँ →</a>
+
+<div class="share-box">
+<strong>📤 यह Notes Share करें</strong><br>
+<a class="share-btn whatsapp" href="#" onclick="shareWhatsApp();return false;">WhatsApp</a>
+<a class="share-btn facebook" href="#" onclick="shareFacebook();return false;">Facebook</a>
+<a class="share-btn twitter" href="#" onclick="shareTwitter();return false;">X / Twitter</a>
+<a class="share-btn copy" href="#" id="copyLinkBtn" onclick="copyPageLink();return false;"><span id="copyLinkText">Copy Link</span></a>
+</div>
+
+<div class="conclusion">
+<h2>📘 निष्कर्ष</h2>
+<p>Hydraulics और Pneumatics industrial machines में power transmission और motion control के महत्वपूर्ण माध्यम हैं। Fitter के लिए compressor, FRL, cylinders, valves, pumps, filters, hydraulic circuits और safety precautions की पहचान तथा उनके कार्य को समझना आवश्यक है।</p>
+</div>
+</main>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+<script>
+function filterSections(){
+ const keyword=document.getElementById('sectionSearch').value.toLowerCase().trim();
+ document.querySelectorAll('.content-section').forEach(section=>{
+   section.style.display=(keyword===''||section.innerText.toLowerCase().includes(keyword))?'':'none';
+ });
+}
+document.getElementById('sectionSearch').addEventListener('keyup',e=>{if(e.key==='Enter')filterSections();});
+function getPageUrl(){return window.location.href}
+function getPageTitle(){return document.querySelector('title').textContent}
+function shareWhatsApp(){
+ const text=encodeURIComponent('🔧 '+getPageTitle());
+ window.open('https://api.whatsapp.com/send?text='+text+'%20'+encodeURIComponent(getPageUrl()),'_blank');
+}
+function shareFacebook(){window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(getPageUrl()),'_blank')}
+function shareTwitter(){
+ const text=encodeURIComponent('🔧 '+getPageTitle());
+ window.open('https://twitter.com/intent/tweet?text='+text+'&url='+encodeURIComponent(getPageUrl()),'_blank');
+}
+function copyPageLink(){
+ const url=getPageUrl();
+ if(navigator.clipboard){
+  navigator.clipboard.writeText(url).then(()=>{
+   document.getElementById('copyLinkText').textContent='✅ Copied!';
+   setTimeout(()=>document.getElementById('copyLinkText').textContent='Copy Link',2500);
+  }).catch(()=>fallbackCopy(url));
+ }else fallbackCopy(url);
+}
+function fallbackCopy(text){
+ const t=document.createElement('textarea');t.value=text;t.style.position='fixed';t.style.opacity='0';
+ document.body.appendChild(t);t.select();
+ try{document.execCommand('copy');document.getElementById('copyLinkText').textContent='✅ Copied!';setTimeout(()=>document.getElementById('copyLinkText').textContent='Copy Link',2500)}
+ catch(e){alert('Unable to copy. Please copy the URL manually.')}
+ document.body.removeChild(t);
+}
+const scrollBtn=document.getElementById('scrollTop');
+window.addEventListener('scroll',()=>scrollBtn.style.display=window.scrollY>400?'block':'none');
+scrollBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.querySelector('footer p').textContent='© '+new Date().getFullYear()+' ITI Study Centre. All Rights Reserved.';
+document.addEventListener('contextmenu',e=>e.preventDefault());
+document.addEventListener('keydown',e=>{
+ if(e.ctrlKey&&(e.key==='c'||e.key==='x'||e.key==='u'||e.key==='s')){
+  e.preventDefault();alert('📚 Content is protected. Please use the share buttons to share this page.');
+ }
+});
+</script>
+</body>
+</html>
