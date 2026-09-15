@@ -471,14 +471,29 @@
             .section-body { background: #fff !important; }
             .tool-figure { border:1px solid #ccc; break-inside:avoid; }
         }
-    </style>
+    
+        .content-section strong, .conclusion-section strong { color:#003366; font-weight:600; }
+
+        .module-navigation{
+            display:flex;justify-content:center;align-items:center;gap:12px;
+            flex-wrap:wrap;margin:18px auto 8px;padding:0 22px;
+        }
+        .module-navigation a{
+            display:inline-block;padding:11px 20px;border-radius:8px;
+            background:#003366;color:#fff;text-decoration:none;font-weight:600;
+            box-shadow:0 2px 7px rgba(0,0,0,.10);transition:.2s;
+        }
+        .module-navigation a:nth-child(2){background:#ffcc00;color:#003366;}
+        .module-navigation a:hover{transform:translateY(-1px);opacity:.92;}
+        @media(max-width:600px){
+            .module-navigation{gap:8px;padding:0 14px;}
+            .module-navigation a{padding:9px 13px;font-size:.9rem;}
+        }
+</style>
 </head>
 <body>
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
-
-
-
 <div class="breadcrumb">
 <div class="container">
 <a href="/">🏠 Home</a>  › 
@@ -487,7 +502,7 @@
 <a href="/notes/fitter/second-year/index.html">2nd Year</a>  › 
 <span class="current">Module 2 – Gauges (पूर्ण)</span>
 </div>
-</div>
+</div><div class="module-navigation"><a href="../module-1.html">← Previous Notes</a><a href="/notes/fitter/">📚 All Theory Notes</a><a href="../module-3.html">Next Notes →</a></div>
 <section class="page-title">
 <div class="container">
 <h1>🔧 Module 2 – Gauges (पूर्ण)</h1>
@@ -549,67 +564,67 @@ Twitter
 <p><strong>गेज (Gauge)</strong> – एक <strong>निरीक्षण (inspection)</strong> उपकरण – <strong>आयाम (dimensions)</strong>, <strong>कोण (angles)</strong>, या <strong>सतह की स्थिति (surface condition)</strong> की <strong>जाँच (checking)</strong> के लिए – <strong>बिना (without)</strong> कोई <strong>संख्यात्मक मान (numerical value)</strong> दिए।</p>
 <p><strong>गेज का उद्देश्य (Purpose of Gauges):</strong></p>
 <ul>
-<li><strong>गुणवत्ता (Quality) नियंत्रण (Control):</strong> <strong>उत्पाद (product)</strong> को <strong>निर्दिष्ट (specified)</strong> सीमाओं (limits) के <strong>भीतर (within)</strong> रखना।</li>
-<li><strong>त्वरित (Quick) जाँच (Checking):</strong> <strong>मापन (measurement)</strong> उपकरणों (instruments) की तुलना में <strong>तेज़ (faster)</strong> – <strong>बड़े (large)</strong> उत्पादन (production) के लिए।</li>
-<li><strong>सटीकता (Accuracy):</strong> <strong>गो/नो-गो (Go/No-Go)</strong> – <strong>स्वीकार्य (acceptable)</strong> या <strong>अस्वीकार्य (rejectable)</strong> – <strong>सरल (simple)</strong>।</li>
-<li><strong>लागत (Cost) प्रभावी (Effective):</strong> <strong>महंगे (expensive)</strong> मापन (measurement) उपकरणों (instruments) की <strong>आवश्यकता (need)</strong> नहीं।</li>
+<li><strong>गुणवत्ता (Quality) नियंत्रण (Control):</strong> उत्पाद (product) को निर्दिष्ट (specified) सीमाओं (limits) के भीतर (within) रखना।</li>
+<li><strong>त्वरित (Quick) जाँच (Checking):</strong> मापन (measurement) उपकरणों (instruments) की तुलना में तेज़ (faster) – बड़े (large) उत्पादन (production) के लिए।</li>
+<li><strong>सटीकता (Accuracy):</strong> गो/नो-गो (Go/No-Go) – स्वीकार्य (acceptable) या अस्वीकार्य (rejectable) – सरल (simple)।</li>
+<li><strong>लागत (Cost) प्रभावी (Effective):</strong> महंगे (expensive) मापन (measurement) उपकरणों (instruments) की आवश्यकता (need) नहीं।</li>
 </ul>
 <p><strong>गेज के प्रकार (Types of Gauges):</strong></p>
-<p><strong>1. सीमा गेज (Limit Gauges – गो/नो-गो / Go/No-Go):</strong></p>
+<p>1. सीमा गेज (Limit Gauges – गो/नो-गो / Go/No-Go):</p>
 <ul>
-<li><strong>गो (Go – पास):</strong> वर्कपीस (workpiece) में <strong>सुचारू (smoothly)</strong> रूप से <strong>जाना (go)</strong> चाहिए – <strong>न्यूनतम (minimum)</strong> आकार (size) की <strong>जाँच (check)</strong>।</li>
-<li><strong>नो-गो (No-Go – अस्वीकार):</strong> वर्कपीस (workpiece) में <strong>नहीं (not)</strong> जाना चाहिए – <strong>अधिकतम (maximum)</strong> आकार (size) की <strong>जाँच (check)</strong>।</li>
-<li><strong>गो (Go) जाता है, नो-गो (No-Go) नहीं जाता – वर्कपीस (workpiece) <strong>स्वीकार्य (acceptable)</strong> है।</strong></li>
+<li><strong>गो (Go – पास):</strong> वर्कपीस (workpiece) में सुचारू (smoothly) रूप से जाना (go) चाहिए – न्यूनतम (minimum) आकार (size) की जाँच (check)।</li>
+<li><strong>नो-गो (No-Go – अस्वीकार):</strong> वर्कपीस (workpiece) में नहीं (not) जाना चाहिए – अधिकतम (maximum) आकार (size) की जाँच (check)।</li>
+<li><strong>गो (Go) जाता है, नो-गो (No-Go) नहीं जाता – वर्कपीस (workpiece) स्वीकार्य (acceptable) है।</strong></li>
 </ul>
 <p><strong>2. प्लग गेज (Plug Gauge – आंतरिक / Internal):</strong></p>
 <ul>
-<li><strong>छेद (holes)</strong> की <strong>जाँच (checking)</strong> के लिए – <strong>बेलनाकार (cylindrical)</strong> आकार – <strong>गो (Go)</strong> और <strong>नो-गो (No-Go)</strong> <strong>दोनों (both)</strong> सिरों (ends) पर – <strong>या (or)</strong> <strong>अलग (separate)</strong> गेज।</li>
-<li><strong>उपयोग (Use):</strong> <strong>आंतरिक (internal)</strong> व्यास (diameter) – <strong>बुश (bushes)</strong>, <strong>बियरिंग्स (bearings)</strong> – <strong>सटीक (precise)</strong> जाँच (checking).</li>
+<li><strong>छेद (holes)</strong> की जाँच (checking) के लिए – बेलनाकार (cylindrical) आकार – गो (Go) और नो-गो (No-Go) दोनों (both) सिरों (ends) पर – या (or) अलग (separate) गेज।</li>
+<li><strong>उपयोग (Use):</strong> आंतरिक (internal) व्यास (diameter) – बुश (bushes), बियरिंग्स (bearings) – सटीक (precise) जाँच (checking).</li>
 </ul>
 <p><strong>3. स्नैप गेज (Snap Gauge – बाहरी / External):</strong></p>
 <ul>
-<li><strong>बाहरी (external)</strong> व्यास (diameter) की <strong>जाँच (checking)</strong> के लिए – <strong>C-आकार (C-shaped)</strong> – <strong>गो (Go)</strong> और <strong>नो-गो (No-Go)</strong> <strong>दोनों (both)</strong> सिरों (ends) पर – <strong>शाफ्ट्स (shafts)</strong>, <strong>रॉड्स (rods)</strong> के लिए।</li>
-<li><strong>त्वरित (quick)</strong> जाँच – <strong>उत्पादन (production)</strong> लाइन (line) पर।</li>
+<li><strong>बाहरी (external)</strong> व्यास (diameter) की जाँच (checking) के लिए – C-आकार (C-shaped) – गो (Go) और नो-गो (No-Go) दोनों (both) सिरों (ends) पर – शाफ्ट्स (shafts), रॉड्स (rods) के लिए।</li>
+<li><strong>त्वरित (quick)</strong> जाँच – उत्पादन (production) लाइन (line) पर।</li>
 </ul>
-<p><strong>4. फीलर गेज (Feeler Gauge – अंतर / Clearance):</strong></p>
+<p>4. फीलर गेज (Feeler Gauge – अंतर / Clearance):</p>
 <ul>
-<li><strong>अंतर (clearance – gap)</strong> मापने के लिए – <strong>पतली (thin)</strong> धातु (metal) की <strong>पट्टियाँ (strips)</strong> – <strong>विभिन्न (various)</strong> <strong>मोटाई (thicknesses)</strong> – <strong>0.03 मिमी (mm)</strong> से <strong>1.0 मिमी (mm)</strong> तक।</li>
-<li><strong>उपयोग (Use):</strong> <strong>वाल्व (valve)</strong> निकासी (clearance), <strong>बियरिंग (bearing)</strong> निकासी (clearance), <strong>स्पार्क प्लग (spark plug)</strong> गैप (gap).</li>
+<li><strong>अंतर (clearance – gap)</strong> मापने के लिए – पतली (thin) धातु (metal) की पट्टियाँ (strips) – विभिन्न (various) मोटाई (thicknesses) – 0.03 मिमी (mm) से 1.0 मिमी (mm) तक।</li>
+<li><strong>उपयोग (Use):</strong> वाल्व (valve) निकासी (clearance), बियरिंग (bearing) निकासी (clearance), स्पार्क प्लग (spark plug) गैप (gap).</li>
 </ul>
 <p><strong>5. थ्रेड गेज (Thread Gauge – धागा / Thread):</strong></p>
 <ul>
-<li><strong>थ्रेड्स (threads)</strong> की <strong>पिच (pitch)</strong> और <strong>व्यास (diameter)</strong> की <strong>जाँच (checking)</strong> – <strong>गो/नो-गो (Go/No-Go)</strong> – <strong>आंतरिक (internal)</strong> और <strong>बाहरी (external)</strong> दोनों (both) के लिए।</li>
-<li><strong>थ्रेड प्लग गेज (Thread Plug Gauge):</strong> <strong>आंतरिक (internal)</strong> थ्रेड्स (threads) के लिए।</li>
-<li><strong>थ्रेड रिंग गेज (Thread Ring Gauge):</strong> <strong>बाहरी (external)</strong> थ्रेड्स (threads) के लिए।</li>
+<li><strong>थ्रेड्स (threads)</strong> की पिच (pitch) और व्यास (diameter) की जाँच (checking) – गो/नो-गो (Go/No-Go) – आंतरिक (internal) और बाहरी (external) दोनों (both) के लिए।</li>
+<li><strong>थ्रेड प्लग गेज (Thread Plug Gauge):</strong> आंतरिक (internal) थ्रेड्स (threads) के लिए।</li>
+<li><strong>थ्रेड रिंग गेज (Thread Ring Gauge):</strong> बाहरी (external) थ्रेड्स (threads) के लिए।</li>
 </ul>
-<p><strong>6. रेडियस गेज (Radius Gauge – त्रिज्या / Radius):</strong></p>
+<p>6. रेडियस गेज (Radius Gauge – त्रिज्या / Radius):</p>
 <ul>
-<li><strong>त्रिज्या (radius)</strong> मापने के लिए – <strong>उत्तल (convex)</strong> और <strong>अवतल (concave)</strong> – <strong>विभिन्न (various)</strong> आकार (sizes) – <strong>0.5 मिमी (mm)</strong> से <strong>25 मिमी (mm)</strong> तक।</li>
-<li><strong>उपयोग (Use):</strong> <strong>फिलेट (fillet)</strong> त्रिज्या (radius) – <strong>कोनों (corners)</strong> की <strong>जाँच (checking)</strong>।</li>
+<li><strong>त्रिज्या (radius)</strong> मापने के लिए – उत्तल (convex) और अवतल (concave) – विभिन्न (various) आकार (sizes) – 0.5 मिमी (mm) से 25 मिमी (mm) तक।</li>
+<li><strong>उपयोग (Use):</strong> फिलेट (fillet) त्रिज्या (radius) – कोनों (corners) की जाँच (checking)।</li>
 </ul>
 <p><strong>7. कोण गेज (Angle Gauge – कोण / Angle):</strong></p>
 <ul>
-<li><strong>कोण (angles)</strong> मापने और <strong>जाँच (checking)</strong> करने के लिए – <strong>बेवल (bevel)</strong> प्रोट्रैक्टर (protractor) के साथ – <strong>विभिन्न (various)</strong> कोण (angles) – <strong>30°</strong>, <strong>45°</strong>, <strong>60°</strong>, <strong>90°</strong>।</li>
-<li><strong>उपयोग (Use):</strong> <strong>कोणीय (angular)</strong> सतहों (surfaces) की <strong>जाँच (checking)</strong>।</li>
+<li><strong>कोण (angles)</strong> मापने और जाँच (checking) करने के लिए – बेवल (bevel) प्रोट्रैक्टर (protractor) के साथ – विभिन्न (various) कोण (angles) – 30°, 45°, 60°, 90°।</li>
+<li><strong>उपयोग (Use):</strong> कोणीय (angular) सतहों (surfaces) की जाँच (checking)।</li>
 </ul>
-<p><strong>8. डायल गेज (Dial Gauge – विक्षेपण / Deflection):</strong></p>
+<p>8. डायल गेज (Dial Gauge – विक्षेपण / Deflection):</p>
 <ul>
-<li><strong>विक्षेपण (deflection)</strong> मापने के लिए – <strong>0.01 मिमी (mm)</strong> सटीकता – <strong>सतह समतलता (flatness)</strong>, <strong>गोलाई (roundness)</strong>, <strong>समानता (parallelism)</strong> जाँचने के लिए।</li>
-<li><strong>उपयोग (Use):</strong> <strong>मशीन (machine)</strong> संरेखण (alignment), <strong>बियरिंग (bearing)</strong> निकासी (clearance), <strong>सतह (surface)</strong> निरीक्षण (inspection).</li>
+<li><strong>विक्षेपण (deflection)</strong> मापने के लिए – 0.01 मिमी (mm) सटीकता – सतह समतलता (flatness), गोलाई (roundness), समानता (parallelism) जाँचने के लिए।</li>
+<li><strong>उपयोग (Use):</strong> मशीन (machine) संरेखण (alignment), बियरिंग (bearing) निकासी (clearance), सतह (surface) निरीक्षण (inspection).</li>
 </ul>
 <p><strong>गेज का चयन (Selection of Gauges):</strong></p>
 <ul>
-<li><strong>आयाम (Dimension) के अनुसार:</strong> <strong>आंतरिक (internal)</strong> – प्लग (plug) – <strong>बाहरी (external)</strong> – स्नैप (snap).</li>
-<li><strong>सटीकता (Accuracy) के अनुसार:</strong> <strong>उच्च (high)</strong> – डायल (dial) – <strong>सामान्य (general)</strong> – गो/नो-गो (go/no-go).</li>
-<li><strong>उत्पादन (Production) दर (rate) के अनुसार:</strong> <strong>बड़े (large)</strong> – <strong>त्वरित (quick)</strong> – स्नैप (snap) या <strong>गो/नो-गो (go/no-go)</strong>।</li>
-<li><strong>लागत (Cost) के अनुसार:</strong> <strong>कम (low)</strong> – <strong>फीलर (feeler)</strong> – <strong>उच्च (high)</strong> – <strong>डायल (dial)</strong>।</li>
+<li><strong>आयाम (Dimension) के अनुसार:</strong> आंतरिक (internal) – प्लग (plug) – बाहरी (external) – स्नैप (snap).</li>
+<li><strong>सटीकता (Accuracy) के अनुसार:</strong> उच्च (high) – डायल (dial) – सामान्य (general) – गो/नो-गो (go/no-go).</li>
+<li><strong>उत्पादन (Production) दर (rate) के अनुसार:</strong> बड़े (large) – त्वरित (quick) – स्नैप (snap) या गो/नो-गो (go/no-go)।</li>
+<li><strong>लागत (Cost) के अनुसार:</strong> कम (low) – फीलर (feeler) – उच्च (high) – डायल (dial)।</li>
 </ul>
 <p><strong>गेज की देखभाल (Care of Gauges):</strong></p>
 <ul>
-<li><strong>साफ (clean)</strong> रखें – <strong>धूल (dust)</strong> और <strong>गंदगी (dirt)</strong> – <strong>सटीकता (accuracy)</strong> को <strong>प्रभावित (affect)</strong> करते हैं।</li>
-<li><strong>तेल (oil)</strong> लगाएँ – <strong>जंग (rust)</strong> से बचाने के लिए – <strong>पतली (thin)</strong> परत (layer).</li>
-<li><strong>गिराने (dropping)</strong> या <strong>टकराने (bumping)</strong> से <strong>बचाएँ (avoid)</strong> – <strong>क्षतिग्रस्त (damaged)</strong> हो सकते हैं।</li>
-<li><strong>नियमित (regular)</strong> <strong>कैलिब्रेशन (calibration)</strong> – <strong>मानक (standard)</strong> गेज (gauges) के <strong>साथ (with)</strong> – <strong>सटीकता (accuracy)</strong> बनाए रखने के लिए।</li>
+<li><strong>साफ (clean)</strong> रखें – धूल (dust) और गंदगी (dirt) – सटीकता (accuracy) को प्रभावित (affect) करते हैं।</li>
+<li><strong>तेल (oil)</strong> लगाएँ – जंग (rust) से बचाने के लिए – पतली (thin) परत (layer).</li>
+<li><strong>गिराने (dropping)</strong> या टकराने (bumping) से बचाएँ (avoid) – क्षतिग्रस्त (damaged) हो सकते हैं।</li>
+<li><strong>नियमित (regular)</strong> कैलिब्रेशन (calibration) – मानक (standard) गेज (gauges) के साथ (with) – सटीकता (accuracy) बनाए रखने के लिए।</li>
 </ul>
 </div>
 </div>
@@ -637,17 +652,17 @@ Twitter
 </tbody>
 </table>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>गेज – <strong>निरीक्षण (inspection)</strong> – <strong>बिना (without)</strong> संख्यात्मक मान (numerical value).</li>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>गेज – <strong>निरीक्षण (inspection)</strong> – बिना (without) संख्यात्मक मान (numerical value).</li>
 <li>गो/नो-गो (Go/No-Go) – <strong>स्वीकार्य (acceptable)</strong> आकार (size) जाँचने के लिए।</li>
-<li>गो (Go) – <strong>जाना (go)</strong> चाहिए – <strong>न्यूनतम (minimum)</strong> आकार।</li>
-<li>नो-गो (No-Go) – <strong>नहीं (not)</strong> जाना चाहिए – <strong>अधिकतम (maximum)</strong> आकार।</li>
-<li>गेज – <strong>त्वरित (quick)</strong> जाँच – <strong>बड़े (large)</strong> उत्पादन (production) के लिए।</li>
+<li>गो (Go) – <strong>जाना (go)</strong> चाहिए – न्यूनतम (minimum) आकार।</li>
+<li>नो-गो (No-Go) – <strong>नहीं (not)</strong> जाना चाहिए – अधिकतम (maximum) आकार।</li>
+<li>गेज – <strong>त्वरित (quick)</strong> जाँच – बड़े (large) उत्पादन (production) के लिए।</li>
 </ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>प्लग गेज – <strong>आंतरिक (internal)</strong> व्यास – <strong>छेद (holes)</strong> के लिए।</li>
-<li>स्नैप गेज – <strong>बाहरी (external)</strong> व्यास – <strong>शाफ्ट्स (shafts)</strong> के लिए।</li>
-<li>फीलर गेज – <strong>अंतर (clearance)</strong> – <strong>पतली (thin)</strong> पट्टियाँ (strips).</li>
-<li>गो/नो-गो (Go/No-Go) – <strong>स्वीकार्य (acceptable)</strong> या <strong>अस्वीकार्य (rejectable)</strong>।</li>
-<li>डायल गेज – <strong>विक्षेपण (deflection)</strong> – <strong>0.01 मिमी (mm)</strong> सटीकता।</li>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>प्लग गेज – <strong>आंतरिक (internal)</strong> व्यास – छेद (holes) के लिए।</li>
+<li>स्नैप गेज – <strong>बाहरी (external)</strong> व्यास – शाफ्ट्स (shafts) के लिए।</li>
+<li>फीलर गेज – <strong>अंतर (clearance)</strong> – पतली (thin) पट्टियाँ (strips).</li>
+<li>गो/नो-गो (Go/No-Go) – <strong>स्वीकार्य (acceptable)</strong> या अस्वीकार्य (rejectable)।</li>
+<li>डायल गेज – <strong>विक्षेपण (deflection)</strong> – 0.01 मिमी (mm) सटीकता।</li>
 </ul></div>
 </div>
 </div>
@@ -664,48 +679,48 @@ Twitter
 <p><strong>बियरिंग (Bearing)</strong> – एक <strong>यांत्रिक (mechanical)</strong> घटक (component) – <strong>घूर्णी (rotary)</strong> या <strong>रैखिक (linear)</strong> गति को <strong>सहारा (support)</strong> देता है – <strong>घर्षण (friction)</strong> को <strong>कम (reduces)</strong> करता है – <strong>भार (load)</strong> को <strong>संचारित (transmits)</strong> करता है।</p>
 <p><strong>बियरिंग का उद्देश्य (Purpose of Bearings):</strong></p>
 <ul>
-<li><strong>घर्षण (Friction) को कम (reduce):</strong> <strong>चल (moving)</strong> भागों (parts) के <strong>बीच (between)</strong> – <strong>शक्ति (power)</strong> की <strong>बचत (save)</strong>।</li>
-<li><strong>घिसाव (Wear) को कम (reduce):</strong> <strong>सतह (surface)</strong> को <strong>नुकसान (damage)</strong> से <strong>बचाना (protect)</strong>।</li>
-<li><strong>भार (Load) को संचारित (transmit):</strong> <strong>रेडियल (radial)</strong> और <strong>अक्षीय (axial)</strong> भार (load) – <strong>शाफ्ट (shaft)</strong> से <strong>हाउसिंग (housing)</strong> तक।</li>
-<li><strong>सटीकता (Accuracy) बनाए रखना (maintain):</strong> <strong>शाफ्ट (shaft)</strong> को <strong>संरेखित (align)</strong> रखना – <strong>कंपन (vibration)</strong> कम (reduce).</li>
+<li><strong>घर्षण (Friction) को कम (reduce):</strong> चल (moving) भागों (parts) के बीच (between) – शक्ति (power) की बचत (save)।</li>
+<li><strong>घिसाव (Wear) को कम (reduce):</strong> सतह (surface) को नुकसान (damage) से बचाना (protect)।</li>
+<li><strong>भार (Load) को संचारित (transmit):</strong> रेडियल (radial) और अक्षीय (axial) भार (load) – शाफ्ट (shaft) से हाउसिंग (housing) तक।</li>
+<li><strong>सटीकता (Accuracy) बनाए रखना (maintain):</strong> शाफ्ट (shaft) को संरेखित (align) रखना – कंपन (vibration) कम (reduce).</li>
 </ul>
 <p><strong>बियरिंग के प्रकार (Types of Bearings):</strong></p>
-<p><strong>1. स्लाइडिंग संपर्क बियरिंग (Sliding Contact Bearing – प्लेन / Plain Bearing):</strong></p>
+<p>1. स्लाइडिंग संपर्क बियरिंग (Sliding Contact Bearing – प्लेन / Plain Bearing):</p>
 <ul>
-<li><strong>भागों (parts) के बीच (between) सीधा (direct) संपर्क (contact)</strong> – <strong>स्लाइडिंग (sliding)</strong> गति (motion).</li>
-<li><strong>बुश (Bush – बुशिंग / Bushing):</strong> <strong>बेलनाकार (cylindrical)</strong> – <strong>शाफ्ट (shaft)</strong> के <strong>चारों (around)</strong> ओर – <strong>निम्न (low)</strong> गति (speed) – <strong>भारी (heavy)</strong> भार (load).</li>
-<li><strong>सामग्री (Material):</strong> <strong>कांस्य (bronze)</strong>, <strong>पीतल (brass)</strong>, <strong>बैबिट (Babbitt)</strong>, <strong>नायलॉन (nylon)</strong> – <strong>स्नेहन (lubrication)</strong> की <strong>आवश्यकता (required)</strong>।</li>
-<li><strong>उदाहरण (Examples):</strong> <strong>इंजन (engine)</strong> बियरिंग (bearing), <strong>पंप (pump)</strong> बियरिंग (bearing).</li>
+<li><strong>भागों (parts) के बीच (between) सीधा (direct) संपर्क (contact)</strong> – स्लाइडिंग (sliding) गति (motion).</li>
+<li><strong>बुश (Bush – बुशिंग / Bushing):</strong> बेलनाकार (cylindrical) – शाफ्ट (shaft) के चारों (around) ओर – निम्न (low) गति (speed) – भारी (heavy) भार (load).</li>
+<li><strong>सामग्री (Material):</strong> कांस्य (bronze), पीतल (brass), बैबिट (Babbitt), नायलॉन (nylon) – स्नेहन (lubrication) की आवश्यकता (required)।</li>
+<li><strong>उदाहरण (Examples):</strong> इंजन (engine) बियरिंग (bearing), पंप (pump) बियरिंग (bearing).</li>
 </ul>
-<p><strong>2. रोलिंग संपर्क बियरिंग (Rolling Contact Bearing – एंटी-फ्रिक्शन / Anti-friction):</strong></p>
+<p>2. रोलिंग संपर्क बियरिंग (Rolling Contact Bearing – एंटी-फ्रिक्शन / Anti-friction):</p>
 <ul>
-<li><strong>गेंदों (balls)</strong> या <strong>रोलर्स (rollers)</strong> का <strong>उपयोग (use)</strong> – <strong>घर्षण (friction)</strong> <strong>बहुत (very)</strong> <strong>कम (low)</strong> – <strong>उच्च (high)</strong> गति (speed).</li>
-<li><strong>बॉल बियरिंग (Ball Bearing):</strong> <strong>गेंदें (balls)</strong> – <strong>रेडियल (radial)</strong> और <strong>थ्रस्ट (thrust)</strong> भार (load) के लिए।</li>
-<li><strong>रोलर बियरिंग (Roller Bearing):</strong> <strong>बेलनाकार (cylindrical)</strong> रोलर्स – <strong>भारी (heavy)</strong> भार (load) के लिए।</li>
-<li><strong>नीडल बियरिंग (Needle Bearing):</strong> <strong>पतले (thin)</strong> रोलर्स – <strong>कॉम्पैक्ट (compact)</strong> स्थानों (spaces) के लिए।</li>
-<li><strong>थ्रस्ट बियरिंग (Thrust Bearing):</strong> <strong>अक्षीय (axial)</strong> भार (load) के लिए – <strong>गेंद (ball)</strong> या <strong>रोलर (roller)</strong> प्रकार।</li>
+<li><strong>गेंदों (balls)</strong> या रोलर्स (rollers) का उपयोग (use) – घर्षण (friction) बहुत (very) कम (low) – उच्च (high) गति (speed).</li>
+<li><strong>बॉल बियरिंग (Ball Bearing):</strong> गेंदें (balls) – रेडियल (radial) और थ्रस्ट (thrust) भार (load) के लिए।</li>
+<li><strong>रोलर बियरिंग (Roller Bearing):</strong> बेलनाकार (cylindrical) रोलर्स – भारी (heavy) भार (load) के लिए।</li>
+<li><strong>नीडल बियरिंग (Needle Bearing):</strong> पतले (thin) रोलर्स – कॉम्पैक्ट (compact) स्थानों (spaces) के लिए।</li>
+<li><strong>थ्रस्ट बियरिंग (Thrust Bearing):</strong> अक्षीय (axial) भार (load) के लिए – गेंद (ball) या रोलर (roller) प्रकार।</li>
 </ul>
-<p><strong>रोलिंग संपर्क बियरिंग के भाग (Parts of Rolling Contact Bearing):</strong></p>
+<p>रोलिंग संपर्क बियरिंग के भाग (Parts of Rolling Contact Bearing):</p>
 <ul>
-<li><strong>आंतरिक रिंग (Inner Ring):</strong> <strong>शाफ्ट (shaft)</strong> पर <strong>फिट (fit)</strong> होता है – <strong>चल (rotates)</strong> है।</li>
-<li><strong>बाहरी रिंग (Outer Ring):</strong> <strong>हाउसिंग (housing)</strong> में <strong>फिट (fit)</strong> होता है – <strong>स्थिर (stationary)</strong>।</li>
-<li><strong>रोलिंग तत्व (Rolling Elements):</strong> <strong>गेंदें (balls)</strong> या <strong>रोलर्स (rollers)</strong> – <strong>रिंग्स (rings)</strong> के <strong>बीच (between)</strong>।</li>
-<li><strong>पिंजरा (Cage – रिटेनर / Retainer):</strong> रोलिंग तत्वों (rolling elements) को <strong>समान (even)</strong> दूरी (distance) पर <strong>रखता (holds)</strong> है – <strong>संपर्क (contact)</strong> से <strong>बचाता (prevents)</strong> है।</li>
+<li><strong>आंतरिक रिंग (Inner Ring):</strong> शाफ्ट (shaft) पर फिट (fit) होता है – चल (rotates) है।</li>
+<li><strong>बाहरी रिंग (Outer Ring):</strong> हाउसिंग (housing) में फिट (fit) होता है – स्थिर (stationary)।</li>
+<li><strong>रोलिंग तत्व (Rolling Elements):</strong> गेंदें (balls) या रोलर्स (rollers) – रिंग्स (rings) के बीच (between)।</li>
+<li><strong>पिंजरा (Cage – रिटेनर / Retainer):</strong> रोलिंग तत्वों (rolling elements) को समान (even) दूरी (distance) पर रखता (holds) है – संपर्क (contact) से बचाता (prevents) है।</li>
 </ul>
 <p><strong>बियरिंग चयन (Bearing Selection) के कारक:</strong></p>
 <ul>
-<li><strong>भार (Load):</strong> <strong>रेडियल (radial)</strong>, <strong>थ्रस्ट (thrust)</strong>, या <strong>संयोजन (combination)</strong> – <strong>भार (load)</strong> का <strong>परिमाण (magnitude)</strong>।</li>
-<li><strong>गति (Speed):</strong> <strong>उच्च (high)</strong> RPM – <strong>बॉल (ball)</strong> – <strong>निम्न (low)</strong> RPM – <strong>रोलर (roller)</strong> – <strong>बुश (bush)</strong>।</li>
-<li><strong>कार्य वातावरण (Operating Environment):</strong> <strong>तापमान (temperature)</strong>, <strong>नमी (moisture)</strong>, <strong>संदूषण (contamination)</strong> – <strong>सामग्री (material)</strong> और <strong>सील (seal)</strong> का चयन।</li>
-<li><strong>स्थान (Space):</strong> उपलब्ध (available) <strong>आकार (size)</strong> – <strong>कॉम्पैक्ट (compact)</strong> – <strong>नीडल (needle)</strong>।</li>
-<li><strong>लागत (Cost):</strong> बजट (budget) – <strong>बुश (bush)</strong> – <strong>सस्ता (cheap)</strong> – <strong>बॉल (ball)</strong> – <strong>मध्यम (medium)</strong> – <strong>रोलर (roller)</strong> – <strong>महंगा (expensive)</strong>।</li>
+<li><strong>भार (Load):</strong> रेडियल (radial), थ्रस्ट (thrust), या संयोजन (combination) – भार (load) का परिमाण (magnitude)।</li>
+<li><strong>गति (Speed):</strong> उच्च (high) RPM – बॉल (ball) – निम्न (low) RPM – रोलर (roller) – बुश (bush)।</li>
+<li><strong>कार्य वातावरण (Operating Environment):</strong> तापमान (temperature), नमी (moisture), संदूषण (contamination) – सामग्री (material) और सील (seal) का चयन।</li>
+<li><strong>स्थान (Space):</strong> उपलब्ध (available) आकार (size) – कॉम्पैक्ट (compact) – नीडल (needle)।</li>
+<li><strong>लागत (Cost):</strong> बजट (budget) – बुश (bush) – सस्ता (cheap) – बॉल (ball) – मध्यम (medium) – रोलर (roller) – महंगा (expensive)।</li>
 </ul>
 <p><strong>बियरिंग रखरखाव (Bearing Maintenance):</strong></p>
 <ul>
-<li><strong>उचित (proper) स्नेहन (lubrication):</strong> <strong>सही (correct)</strong> <strong>मात्रा (quantity)</strong> और <strong>प्रकार (type)</strong> के <strong>तेल (oil)</strong> या <strong>ग्रीस (grease)</strong> का उपयोग – <strong>अत्यधिक (excessive)</strong> – <strong>गर्मी (heat)</strong> – <strong>कम (less)</strong> – <strong>घिसाव (wear)</strong>।</li>
-<li><strong>स्वच्छता (Cleanliness):</strong> <strong>गंदगी (dirt)</strong> और <strong>नमी (moisture)</strong> से <strong>बचाएँ (protect)</strong> – <strong>सील (seals)</strong> का उपयोग।</li>
-<li><strong>निरीक्षण (Inspection):</strong> <strong>घिसाव (wear)</strong>, <strong>क्षति (damage)</strong>, <strong>शोर (noise)</strong> के लिए <strong>नियमित (regular)</strong> जाँच – <strong>कंपन (vibration)</strong> विश्लेषण (analysis).</li>
-<li><strong>समय पर (timely) प्रतिस्थापन (replacement):</strong> <strong>खराब (failed)</strong> या <strong>घिसे (worn)</strong> बियरिंग (bearing) को <strong>बदलें (replace)</strong> – <strong>बड़ी (major)</strong> खराबी (breakdown) से <strong>बचने (avoid)</strong> के लिए।</li>
+<li><strong>उचित (proper) स्नेहन (lubrication):</strong> सही (correct) मात्रा (quantity) और प्रकार (type) के तेल (oil) या ग्रीस (grease) का उपयोग – अत्यधिक (excessive) – गर्मी (heat) – कम (less) – घिसाव (wear)।</li>
+<li><strong>स्वच्छता (Cleanliness):</strong> गंदगी (dirt) और नमी (moisture) से बचाएँ (protect) – सील (seals) का उपयोग।</li>
+<li><strong>निरीक्षण (Inspection):</strong> घिसाव (wear), क्षति (damage), शोर (noise) के लिए नियमित (regular) जाँच – कंपन (vibration) विश्लेषण (analysis).</li>
+<li><strong>समय पर (timely) प्रतिस्थापन (replacement):</strong> खराब (failed) या घिसे (worn) बियरिंग (bearing) को बदलें (replace) – बड़ी (major) खराबी (breakdown) से बचने (avoid) के लिए।</li>
 </ul>
 </div>
 </div>
@@ -720,19 +735,19 @@ Twitter
 <div class="figure-caption">Fig 2 – बियरिंग के प्रकार</div>
 </div>
 <div class="compare-grid">
-<div class="compare-card" style="border-color:#003366; background:#f0f5ff;"><h4>🔵 स्लाइडिंग बियरिंग (Plain)</h4><ul><li><strong>सीधा (direct)</strong> संपर्क (contact)</li><li><strong>निम्न (low)</strong> गति (speed)</li><li><strong>भारी (heavy)</strong> भार (load)</li><li><strong>सस्ता (cheap)</strong></li><li><strong>बुश (bush)</strong>, <strong>बैबिट (Babbitt)</strong></li></ul></div>
-<div class="compare-card" style="border-color:#28a745; background:#f0faf2;"><h4>🟢 रोलिंग बियरिंग (Anti-friction)</h4><ul><li><strong>गेंद (ball)</strong> या <strong>रोलर (roller)</strong></li><li><strong>उच्च (high)</strong> गति (speed)</li><li><strong>कम (low)</strong> घर्षण (friction)</li><li><strong>महंगा (expensive)</strong></li><li><strong>बॉल (ball)</strong>, <strong>रोलर (roller)</strong></li></ul></div>
+<div class="compare-card" style="border-color:#003366; background:#f0f5ff;"><h4>🔵 स्लाइडिंग बियरिंग (Plain)</h4><ul><li><strong>सीधा (direct)</strong> संपर्क (contact)</li><li><strong>निम्न (low)</strong> गति (speed)</li><li><strong>भारी (heavy)</strong> भार (load)</li><li><strong>सस्ता (cheap)</strong></li><li><strong>बुश (bush)</strong>, बैबिट (Babbitt)</li></ul></div>
+<div class="compare-card" style="border-color:#28a745; background:#f0faf2;"><h4>🟢 रोलिंग बियरिंग (Anti-friction)</h4><ul><li><strong>गेंद (ball)</strong> या रोलर (roller)</li><li><strong>उच्च (high)</strong> गति (speed)</li><li><strong>कम (low)</strong> घर्षण (friction)</li><li><strong>महंगा (expensive)</strong></li><li><strong>बॉल (ball)</strong>, रोलर (roller)</li></ul></div>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बियरिंग – <strong>घर्षण (friction)</strong> कम (reduce) – <strong>भार (load)</strong> संचारण (transmit).</li>
-<li>स्लाइडिंग (Plain) – <strong>सीधा (direct)</strong> संपर्क – <strong>निम्न (low)</strong> गति – <strong>भारी (heavy)</strong> भार।</li>
-<li>रोलिंग (Anti-friction) – <strong>गेंद (ball)</strong> या <strong>रोलर (roller)</strong> – <strong>उच्च (high)</strong> गति – <strong>कम (low)</strong> घर्षण।</li>
-<li>बॉल बियरिंग – <strong>रेडियल (radial)</strong> और <strong>थ्रस्ट (thrust)</strong> भार।</li>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बियरिंग – <strong>घर्षण (friction)</strong> कम (reduce) – भार (load) संचारण (transmit).</li>
+<li>स्लाइडिंग (Plain) – <strong>सीधा (direct)</strong> संपर्क – निम्न (low) गति – भारी (heavy) भार।</li>
+<li>रोलिंग (Anti-friction) – <strong>गेंद (ball)</strong> या रोलर (roller) – उच्च (high) गति – कम (low) घर्षण।</li>
+<li>बॉल बियरिंग – <strong>रेडियल (radial)</strong> और थ्रस्ट (thrust) भार।</li>
 <li>पिंजरा (Cage) – रोलिंग तत्वों (rolling elements) को <strong>समान (even)</strong> दूरी पर रखता है।</li>
 </ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बियरिंग – <strong>घर्षण (friction)</strong> कम (reduce) – <strong>शक्ति (power)</strong> की बचत।</li>
-<li>स्लाइडिंग (Plain) – <strong>बुश (bush)</strong> – <strong>निम्न (low)</strong> गति (speed).</li>
-<li>रोलिंग (Anti-friction) – <strong>बॉल (ball)</strong>, <strong>रोलर (roller)</strong> – <strong>उच्च (high)</strong> गति।</li>
-<li>बियरिंग के भाग – <strong>आंतरिक (inner)</strong>, <strong>बाहरी (outer)</strong> रिंग (ring), <strong>रोलिंग तत्व (rolling elements)</strong>, <strong>पिंजरा (cage)</strong>।</li>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बियरिंग – <strong>घर्षण (friction)</strong> कम (reduce) – शक्ति (power) की बचत।</li>
+<li>स्लाइडिंग (Plain) – <strong>बुश (bush)</strong> – निम्न (low) गति (speed).</li>
+<li>रोलिंग (Anti-friction) – <strong>बॉल (ball)</strong>, रोलर (roller) – उच्च (high) गति।</li>
+<li>बियरिंग के भाग – <strong>आंतरिक (inner)</strong>, बाहरी (outer) रिंग (ring), रोलिंग तत्व (rolling elements), पिंजरा (cage)।</li>
 <li>थ्रस्ट बियरिंग – <strong>अक्षीय (axial)</strong> भार (load) के लिए।</li>
 </ul></div>
 </div>
@@ -749,31 +764,31 @@ Twitter
 <div class="content">
 <p><strong>रोलर बियरिंग (Roller Bearing)</strong> और <strong>नीडल बियरिंग (Needle Bearing)</strong> – <strong>रोलिंग संपर्क (rolling contact)</strong> बियरिंग्स (bearings) – <strong>बेलनाकार (cylindrical)</strong> रोलर्स (rollers) का उपयोग – <strong>गेंदों (balls)</strong> के <strong>बजाय (instead)</strong> – <strong>भारी (heavy)</strong> भार (load) और <strong>कॉम्पैक्ट (compact)</strong> स्थानों (spaces) के लिए।</p>
 <p><strong>रोलर बियरिंग (Roller Bearing) के प्रकार:</strong></p>
-<p><strong>1. बेलनाकार रोलर बियरिंग (Cylindrical Roller Bearing – सिलिंड्रिकल / Cylindrical):</strong></p>
+<p>1. बेलनाकार रोलर बियरिंग (Cylindrical Roller Bearing – सिलिंड्रिकल / Cylindrical):</p>
 <ul>
-<li><strong>रोलर्स (rollers)</strong> – <strong>बेलनाकार (cylindrical)</strong> – <strong>रेडियल (radial)</strong> भार (load) के लिए – <strong>उच्च (high)</strong> भार (load) क्षमता (capacity).</li>
-<li><strong>उपयोग (Use):</strong> <strong>गियर (gear)</strong> बॉक्स (boxes), <strong>इंजन (engine)</strong> क्रैंकशाफ्ट (crankshaft), <strong>भारी (heavy)</strong> मशीनरी (machinery).</li>
-<li><strong>विशेषता (Feature):</strong> <strong>आंतरिक (inner)</strong> या <strong>बाहरी (outer)</strong> रिंग (ring) को <strong>अलग (separate)</strong> किया जा सकता है – <strong>आसान (easy)</strong> असेंबली (assembly) और <strong>डिसअसेंबली (disassembly)</strong>।</li>
+<li><strong>रोलर्स (rollers)</strong> – बेलनाकार (cylindrical) – रेडियल (radial) भार (load) के लिए – उच्च (high) भार (load) क्षमता (capacity).</li>
+<li><strong>उपयोग (Use):</strong> गियर (gear) बॉक्स (boxes), इंजन (engine) क्रैंकशाफ्ट (crankshaft), भारी (heavy) मशीनरी (machinery).</li>
+<li><strong>विशेषता (Feature):</strong> आंतरिक (inner) या बाहरी (outer) रिंग (ring) को अलग (separate) किया जा सकता है – आसान (easy) असेंबली (assembly) और डिसअसेंबली (disassembly)।</li>
 </ul>
-<p><strong>2. टेपर रोलर बियरिंग (Tapered Roller Bearing – टेपर / Tapered):</strong></p>
+<p>2. टेपर रोलर बियरिंग (Tapered Roller Bearing – टेपर / Tapered):</p>
 <ul>
-<li><strong>रोलर्स (rollers)</strong> – <strong>टेपर (tapered)</strong> – <strong>रेडियल (radial)</strong> और <strong>थ्रस्ट (thrust)</strong> <strong>दोनों (both)</strong> भार (load) के लिए – <strong>उच्च (high)</strong> भार (load) क्षमता (capacity).</li>
-<li><strong>उपयोग (Use):</strong> <strong>ऑटोमोटिव (automotive)</strong> – <strong>हब (hub)</strong> बियरिंग्स (bearings) – <strong>पहिए (wheels)</strong> – <strong>गियर (gear)</strong> बॉक्स (boxes).</li>
-<li><strong>विशेषता (Feature):</strong> <strong>टेपर (taper)</strong> – <strong>रेडियल (radial)</strong> और <strong>थ्रस्ट (thrust)</strong> भार (load) को <strong>संभाल (handle)</strong> सकता है – <strong>समायोज्य (adjustable)</strong> निकासी (clearance).</li>
+<li><strong>रोलर्स (rollers)</strong> – टेपर (tapered) – रेडियल (radial) और थ्रस्ट (thrust) दोनों (both) भार (load) के लिए – उच्च (high) भार (load) क्षमता (capacity).</li>
+<li><strong>उपयोग (Use):</strong> ऑटोमोटिव (automotive) – हब (hub) बियरिंग्स (bearings) – पहिए (wheels) – गियर (gear) बॉक्स (boxes).</li>
+<li><strong>विशेषता (Feature):</strong> टेपर (taper) – रेडियल (radial) और थ्रस्ट (thrust) भार (load) को संभाल (handle) सकता है – समायोज्य (adjustable) निकासी (clearance).</li>
 </ul>
-<p><strong>3. गोलाकार रोलर बियरिंग (Spherical Roller Bearing – स्फेरिकल / Spherical):</strong></p>
+<p>3. गोलाकार रोलर बियरिंग (Spherical Roller Bearing – स्फेरिकल / Spherical):</p>
 <ul>
-<li><strong>रोलर्स (rollers)</strong> – <strong>गोलाकार (spherical)</strong> – <strong>उच्च (high)</strong> भार (load) क्षमता – <strong>गलत (misalignment)</strong> संरेखण (alignment) को <strong>सहन (tolerate)</strong> कर सकता है – <strong>भारी (heavy)</strong> उद्योग (industry).</li>
-<li><strong>उपयोग (Use):</strong> <strong>कन्वेयर (conveyor)</strong>, <strong>क्रेन (crane)</strong>, <strong>खनन (mining)</strong> उपकरण (equipment).</li>
+<li><strong>रोलर्स (rollers)</strong> – गोलाकार (spherical) – उच्च (high) भार (load) क्षमता – गलत (misalignment) संरेखण (alignment) को सहन (tolerate) कर सकता है – भारी (heavy) उद्योग (industry).</li>
+<li><strong>उपयोग (Use):</strong> कन्वेयर (conveyor), क्रेन (crane), खनन (mining) उपकरण (equipment).</li>
 </ul>
 <p><strong>नीडल बियरिंग (Needle Bearing – सुई / Needle):</strong></p>
 <ul>
-<li><strong>रोलर्स (rollers)</strong> – <strong>बहुत (very)</strong> <strong>पतले (thin)</strong> और <strong>लंबे (long)</strong> – <strong>सुई (needle)</strong> के <strong>आकार (shape)</strong> – <strong>कॉम्पैक्ट (compact)</strong> स्थानों (spaces) के लिए – <strong>उच्च (high)</strong> भार (load) क्षमता – <strong>कम (low)</strong> क्रॉस-सेक्शन (cross-section).</li>
-<li><strong>पिंजरा (cage)</strong> – <strong>रोलर्स (rollers)</strong> को <strong>गाइड (guide)</strong> करता है – <strong>या (or)</strong> <strong>बिना (without)</strong> पिंजरे (cage) – <strong>पूर्ण (full)</strong> पूरक (complement) – <strong>उच्च (higher)</strong> भार (load) क्षमता. </li>
-<li><strong>उपयोग (Use):</strong> <strong>ऑटोमोटिव (automotive)</strong> – <strong>गियर (gear)</strong> बॉक्स (boxes) – <strong>कंप्रेसर (compressors)</strong> – <strong>पंप (pumps)</strong> – <strong>संकीर्ण (narrow)</strong> स्थानों (spaces) के लिए।</li>
-<li><strong>विशेषता (Feature):</strong> <strong>बहुत (very)</strong> <strong>उच्च (high)</strong> भार (load) क्षमता – <strong>बहुत (very)</strong> <strong>छोटा (small)</strong> स्थान (space) – <strong>कम (low)</strong> घर्षण (friction).</li>
+<li><strong>रोलर्स (rollers)</strong> – बहुत (very) पतले (thin) और लंबे (long) – सुई (needle) के आकार (shape) – कॉम्पैक्ट (compact) स्थानों (spaces) के लिए – उच्च (high) भार (load) क्षमता – कम (low) क्रॉस-सेक्शन (cross-section).</li>
+<li><strong>पिंजरा (cage)</strong> – रोलर्स (rollers) को गाइड (guide) करता है – या (or) बिना (without) पिंजरे (cage) – पूर्ण (full) पूरक (complement) – उच्च (higher) भार (load) क्षमता. </li>
+<li><strong>उपयोग (Use):</strong> ऑटोमोटिव (automotive) – गियर (gear) बॉक्स (boxes) – कंप्रेसर (compressors) – पंप (pumps) – संकीर्ण (narrow) स्थानों (spaces) के लिए।</li>
+<li><strong>विशेषता (Feature):</strong> बहुत (very) उच्च (high) भार (load) क्षमता – बहुत (very) छोटा (small) स्थान (space) – कम (low) घर्षण (friction).</li>
 </ul>
-<p><strong>रोलर और नीडल बियरिंग की तुलना (Comparison – Roller vs Needle):</strong></p>
+<p>रोलर और नीडल बियरिंग की तुलना (Comparison – Roller vs Needle):</p>
 <table style="width:100%; border-collapse:collapse; margin:14px 0;">
 <tr style="background:#003366; color:#fff;"><th style="padding:10px; text-align:left;">रोलर बियरिंग (Roller Bearing)</th><th style="padding:10px; text-align:left;">नीडल बियरिंग (Needle Bearing)</th></tr>
 <tr style="background:#f0f5ff;"><td style="padding:10px; border:1px solid #ddd;">रोलर्स (rollers) – मोटे (thick)</td><td style="padding:10px; border:1px solid #ddd;">रोलर्स (rollers) – पतले (thin) – सुई (needle) जैसे</td></tr>
@@ -784,34 +799,34 @@ Twitter
 </table>
 <p><strong>चयन (Selection) के कारक:</strong></p>
 <ul>
-<li><strong>स्थान (Space):</strong> <strong>संकीर्ण (narrow)</strong> – <strong>नीडल (needle)</strong> – <strong>पर्याप्त (adequate)</strong> – <strong>रोलर (roller)</strong>।</li>
-<li><strong>भार (Load):</strong> <strong>उच्च (high)</strong> – <strong>टेपर (tapered)</strong> या <strong>नीडल (needle)</strong> – <strong>मध्यम (medium)</strong> – <strong>बेलनाकार (cylindrical)</strong>।</li>
-<li><strong>गति (Speed):</strong> <strong>उच्च (high)</strong> – <strong>बेलनाकार (cylindrical)</strong> – <strong>मध्यम (medium)</strong> – <strong>नीडल (needle)</strong>।</li>
-<li><strong>संरेखण (Alignment):</strong> <strong>गलत (misalignment)</strong> – <strong>गोलाकार (spherical)</strong> – <strong>सटीक (precise)</strong> – <strong>बेलनाकार (cylindrical)</strong>।</li>
+<li><strong>स्थान (Space):</strong> संकीर्ण (narrow) – नीडल (needle) – पर्याप्त (adequate) – रोलर (roller)।</li>
+<li><strong>भार (Load):</strong> उच्च (high) – टेपर (tapered) या नीडल (needle) – मध्यम (medium) – बेलनाकार (cylindrical)।</li>
+<li><strong>गति (Speed):</strong> उच्च (high) – बेलनाकार (cylindrical) – मध्यम (medium) – नीडल (needle)।</li>
+<li><strong>संरेखण (Alignment):</strong> गलत (misalignment) – गोलाकार (spherical) – सटीक (precise) – बेलनाकार (cylindrical)।</li>
 </ul>
 </div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: रोलर और नीडल बियरिंग (Roller &amp; Needle Bearings)</strong></p>
+<p>चित्र: रोलर और नीडल बियरिंग (Roller &amp; Needle Bearings)</p>
 <p>स्थान: /images/notes/fitter/module-2/roller_needle_bearings.jpg</p>
 <code>roller_needle_bearings.jpg</code>
 <p style="font-size:0.8rem; color:#888;">(बेलनाकार, टेपर, गोलाकार, नीडल)</p>
 </div>
 <div class="figure-caption">Fig 3 – रोलर और नीडल बियरिंग</div>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>रोलर बियरिंग – <strong>बेलनाकार (cylindrical)</strong> रोलर्स – <strong>रेडियल (radial)</strong> भार (load).</li>
-<li>टेपर रोलर – <strong>रेडियल (radial)</strong> + <strong>थ्रस्ट (thrust)</strong> – <strong>ऑटोमोटिव (automotive)</strong> में।</li>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>रोलर बियरिंग – <strong>बेलनाकार (cylindrical)</strong> रोलर्स – रेडियल (radial) भार (load).</li>
+<li>टेपर रोलर – <strong>रेडियल (radial)</strong> + थ्रस्ट (thrust) – ऑटोमोटिव (automotive) में।</li>
 <li>गोलाकार रोलर – <strong>गलत (misalignment)</strong> संरेखण (alignment) को सहन (tolerate).</li>
-<li>नीडल बियरिंग – <strong>पतले (thin)</strong> और <strong>लंबे (long)</strong> रोलर्स – <strong>कॉम्पैक्ट (compact)</strong> स्थानों (spaces) के लिए।</li>
-<li>नीडल – <strong>उच्च (high)</strong> भार (load) क्षमता – <strong>कम (low)</strong> स्थान (space).</li>
+<li>नीडल बियरिंग – <strong>पतले (thin)</strong> और लंबे (long) रोलर्स – कॉम्पैक्ट (compact) स्थानों (spaces) के लिए।</li>
+<li>नीडल – <strong>उच्च (high)</strong> भार (load) क्षमता – कम (low) स्थान (space).</li>
 </ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बेलनाकार रोलर – <strong>रेडियल (radial)</strong> भार – <strong>गियर (gear)</strong> बॉक्स (boxes).</li>
-<li>टेपर रोलर – <strong>रेडियल (radial)</strong> + <strong>थ्रस्ट (thrust)</strong> – <strong>ऑटोमोटिव (automotive)</strong> हब (hubs).</li>
-<li>गोलाकार रोलर – <strong>गलत (misalignment)</strong> संरेखण – <strong>भारी (heavy)</strong> उद्योग (industry).</li>
-<li>नीडल बियरिंग – <strong>सुई (needle)</strong> जैसे रोलर्स – <strong>कॉम्पैक्ट (compact)</strong> – <strong>उच्च (high)</strong> भार क्षमता.</li>
-<li>नीडल – <strong>संकीर्ण (narrow)</strong> स्थानों (spaces) के लिए – <strong>ऑटोमोटिव (automotive)</strong> में।</li>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बेलनाकार रोलर – <strong>रेडियल (radial)</strong> भार – गियर (gear) बॉक्स (boxes).</li>
+<li>टेपर रोलर – <strong>रेडियल (radial)</strong> + थ्रस्ट (thrust) – ऑटोमोटिव (automotive) हब (hubs).</li>
+<li>गोलाकार रोलर – <strong>गलत (misalignment)</strong> संरेखण – भारी (heavy) उद्योग (industry).</li>
+<li>नीडल बियरिंग – <strong>सुई (needle)</strong> जैसे रोलर्स – कॉम्पैक्ट (compact) – उच्च (high) भार क्षमता.</li>
+<li>नीडल – <strong>संकीर्ण (narrow)</strong> स्थानों (spaces) के लिए – ऑटोमोटिव (automotive) में।</li>
 </ul></div>
 </div>
 </div>
@@ -826,53 +841,53 @@ Twitter
 <div class="bilingual">
 <div class="content">
 <p><strong>बियरिंग सामग्री (Bearing Materials)</strong> – <strong>बियरिंग्स (bearings)</strong> को <strong>बनाने (making)</strong> के लिए उपयोग की जाने वाली सामग्री – <strong>घिसाव (wear)</strong> प्रतिरोध (resistance), <strong>घर्षण (friction)</strong> गुणांक (coefficient), <strong>भार (load)</strong> क्षमता (capacity) – <strong>कार्य (operation)</strong> के लिए।</p>
-<p><strong>बियरिंग सामग्री के आवश्यक गुण (Required Properties of Bearing Materials):</strong></p>
+<p>बियरिंग सामग्री के आवश्यक गुण (Required Properties of Bearing Materials):</p>
 <ul>
-<li><strong>घिसाव (Wear) प्रतिरोध (Resistance):</strong> <strong>लंबे (long)</strong> समय (time) तक <strong>चलने (run)</strong> के लिए – <strong>घर्षण (friction)</strong> को <strong>कम (reduce)</strong> रखने के लिए।</li>
-<li><strong>कठोरता (Hardness):</strong> <strong>भार (load)</strong> को <strong>झेल (withstand)</strong> करने के लिए – <strong>विरूपण (deformation)</strong> से <strong>बचाना (prevent)</strong>।</li>
-<li><strong>तन्यता (Ductility) और क्रूरता (Toughness):</strong> <strong>झटका (shock)</strong> और <strong>कंपन (vibration)</strong> को <strong>सहन (absorb)</strong> करने के लिए।</li>
-<li><strong>जंग (Corrosion) प्रतिरोध (Resistance):</strong> <strong>नमी (moisture)</strong> और <strong>रसायनों (chemicals)</strong> से <strong>बचाना (protect)</strong>।</li>
-<li><strong>तापीय (Thermal) चालकता (Conductivity):</strong> <strong>गर्मी (heat)</strong> को <strong>हटाने (dissipate)</strong> के लिए – <strong>अत्यधिक (excessive)</strong> गर्मी (heat) से <strong>बचाना (prevent)</strong>।</li>
-<li><strong>मशीनेबिलिटी (Machinability):</strong> <strong>आसान (easy)</strong> से <strong>मशीन (machine)</strong> किया जा सके – <strong>उत्पादन (production)</strong> के लिए।</li>
-<li><strong>लागत (Cost):</strong> <strong>आर्थिक (economical)</strong> – <strong>अनुप्रयोग (application)</strong> के <strong>अनुसार (according)</strong>।</li>
+<li><strong>घिसाव (Wear) प्रतिरोध (Resistance):</strong> लंबे (long) समय (time) तक चलने (run) के लिए – घर्षण (friction) को कम (reduce) रखने के लिए।</li>
+<li><strong>कठोरता (Hardness):</strong> भार (load) को झेल (withstand) करने के लिए – विरूपण (deformation) से बचाना (prevent)।</li>
+<li><strong>तन्यता (Ductility) और क्रूरता (Toughness):</strong> झटका (shock) और कंपन (vibration) को सहन (absorb) करने के लिए।</li>
+<li><strong>जंग (Corrosion) प्रतिरोध (Resistance):</strong> नमी (moisture) और रसायनों (chemicals) से बचाना (protect)।</li>
+<li><strong>तापीय (Thermal) चालकता (Conductivity):</strong> गर्मी (heat) को हटाने (dissipate) के लिए – अत्यधिक (excessive) गर्मी (heat) से बचाना (prevent)।</li>
+<li><strong>मशीनेबिलिटी (Machinability):</strong> आसान (easy) से मशीन (machine) किया जा सके – उत्पादन (production) के लिए।</li>
+<li><strong>लागत (Cost):</strong> आर्थिक (economical) – अनुप्रयोग (application) के अनुसार (according)।</li>
 </ul>
-<p><strong>बियरिंग सामग्री के प्रकार (Types of Bearing Materials):</strong></p>
-<p><strong>1. बैबिट (Babbitt – व्हाइट मेटल / White Metal):</strong></p>
+<p>बियरिंग सामग्री के प्रकार (Types of Bearing Materials):</p>
+<p>1. बैबिट (Babbitt – व्हाइट मेटल / White Metal):</p>
 <ul>
-<li><strong>टिन (tin)</strong> या <strong>सीसा (lead)</strong> आधारित (based) – <strong>सॉफ्ट (soft)</strong> – <strong>उत्कृष्ट (excellent)</strong> <strong>एम्बेडेबिलिटी (embedability)</strong> – <strong>गंदगी (dirt)</strong> को <strong>अंदर (embed)</strong> कर सकता है – <strong>शाफ्ट (shaft)</strong> को <strong>नुकसान (damage)</strong> से <strong>बचाता (protects)</strong> है।</li>
-<li><strong>उपयोग (Use):</strong> <strong>इंजन (engine)</strong> बियरिंग्स (bearings) – <strong>भारी (heavy)</strong> मशीनरी (machinery) – <strong>उच्च (high)</strong> गति (speed) और <strong>भारी (heavy)</strong> भार (load) के लिए।</li>
+<li><strong>टिन (tin)</strong> या सीसा (lead) आधारित (based) – सॉफ्ट (soft) – उत्कृष्ट (excellent) एम्बेडेबिलिटी (embedability) – गंदगी (dirt) को अंदर (embed) कर सकता है – शाफ्ट (shaft) को नुकसान (damage) से बचाता (protects) है।</li>
+<li><strong>उपयोग (Use):</strong> इंजन (engine) बियरिंग्स (bearings) – भारी (heavy) मशीनरी (machinery) – उच्च (high) गति (speed) और भारी (heavy) भार (load) के लिए।</li>
 </ul>
 <p><strong>2. कांस्य (Bronze – तांबा-टिन / Copper-Tin):</strong></p>
 <ul>
-<li><strong>तांबा (copper)</strong> + <strong>टिन (tin)</strong> – <strong>अच्छा (good)</strong> <strong>घिसाव (wear)</strong> प्रतिरोध (resistance) – <strong>उच्च (high)</strong> भार (load) क्षमता – <strong>जंग (corrosion)</strong> प्रतिरोधी (resistant).</li>
-<li><strong>उपयोग (Use):</strong> <strong>बुश (bushes)</strong> – <strong>बियरिंग्स (bearings)</strong> – <strong>पंप (pumps)</strong> – <strong>मशीनरी (machinery)</strong> – <strong>समुद्री (marine)</strong> अनुप्रयोग (applications).</li>
+<li><strong>तांबा (copper)</strong> + टिन (tin) – अच्छा (good) घिसाव (wear) प्रतिरोध (resistance) – उच्च (high) भार (load) क्षमता – जंग (corrosion) प्रतिरोधी (resistant).</li>
+<li><strong>उपयोग (Use):</strong> बुश (bushes) – बियरिंग्स (bearings) – पंप (pumps) – मशीनरी (machinery) – समुद्री (marine) अनुप्रयोग (applications).</li>
 </ul>
 <p><strong>3. पीतल (Brass – तांबा-जस्ता / Copper-Zinc):</strong></p>
 <ul>
-<li><strong>तांबा (copper)</strong> + <strong>जस्ता (zinc)</strong> – <strong>अच्छा (good)</strong> <strong>मशीनेबिलिटी (machinability)</strong> – <strong>निम्न (low)</strong> घर्षण (friction) – <strong>सस्ता (cheap)</strong>।</li>
-<li><strong>उपयोग (Use):</strong> <strong>बुश (bushes)</strong> – <strong>निम्न (low)</strong> गति (speed) और <strong>हल्के (light)</strong> भार (load) के लिए – <strong>पानी (water)</strong> पंप (pumps) – <strong>पाइप (pipe)</strong> फिटिंग्स (fittings).</li>
+<li><strong>तांबा (copper)</strong> + जस्ता (zinc) – अच्छा (good) मशीनेबिलिटी (machinability) – निम्न (low) घर्षण (friction) – सस्ता (cheap)।</li>
+<li><strong>उपयोग (Use):</strong> बुश (bushes) – निम्न (low) गति (speed) और हल्के (light) भार (load) के लिए – पानी (water) पंप (pumps) – पाइप (pipe) फिटिंग्स (fittings).</li>
 </ul>
 <p><strong>4. कास्ट आयरन (Cast Iron):</strong></p>
 <ul>
-<li><strong>कठोर (hard)</strong> – <strong>घिसाव (wear)</strong> प्रतिरोधी (resistant) – <strong>सस्ता (cheap)</strong> – <strong>भारी (heavy)</strong> भार (load) के लिए – <strong>निम्न (low)</strong> गति (speed) के लिए।</li>
-<li><strong>उपयोग (Use):</strong> <strong>कृषि (agricultural)</strong> मशीनरी (machinery) – <strong>संरचनात्मक (structural)</strong> अनुप्रयोग (applications).</li>
+<li><strong>कठोर (hard)</strong> – घिसाव (wear) प्रतिरोधी (resistant) – सस्ता (cheap) – भारी (heavy) भार (load) के लिए – निम्न (low) गति (speed) के लिए।</li>
+<li><strong>उपयोग (Use):</strong> कृषि (agricultural) मशीनरी (machinery) – संरचनात्मक (structural) अनुप्रयोग (applications).</li>
 </ul>
-<p><strong>5. प्लास्टिक (Plastic – नायलॉन / Nylon, पीटीएफई / PTFE – Teflon):</strong></p>
+<p>5. प्लास्टिक (Plastic – नायलॉन / Nylon, पीटीएफई / PTFE – Teflon):</p>
 <ul>
-<li><strong>स्व-स्नेहन (Self-lubricating)</strong> – <strong>बहुत (very)</strong> <strong>कम (low)</strong> घर्षण (friction) – <strong>जंग (corrosion)</strong> प्रतिरोधी (resistant) – <strong>हल्का (lightweight)</strong> – <strong>शोर (noise)</strong> कम (reduce).</li>
-<li><strong>उपयोग (Use):</strong> <strong>खाद्य (food)</strong> उद्योग (industry) – <strong>रासायनिक (chemical)</strong> उद्योग – <strong>निम्न (low)</strong> भार (load) – <strong>उच्च (high)</strong> गति (speed).</li>
+<li><strong>स्व-स्नेहन (Self-lubricating)</strong> – बहुत (very) कम (low) घर्षण (friction) – जंग (corrosion) प्रतिरोधी (resistant) – हल्का (lightweight) – शोर (noise) कम (reduce).</li>
+<li><strong>उपयोग (Use):</strong> खाद्य (food) उद्योग (industry) – रासायनिक (chemical) उद्योग – निम्न (low) भार (load) – उच्च (high) गति (speed).</li>
 </ul>
-<p><strong>6. सिरेमिक (Ceramic – सिलिकॉन नाइट्राइड / Silicon Nitride – Si₃N₄):</strong></p>
+<p>6. सिरेमिक (Ceramic – सिलिकॉन नाइट्राइड / Silicon Nitride – Si₃N₄):</p>
 <ul>
-<li><strong>बहुत (very)</strong> <strong>कठोर (hard)</strong> – <strong>उच्च (high)</strong> तापमान (temperature) – <strong>जंग (corrosion)</strong> प्रतिरोधी (resistant) – <strong>हल्का (lightweight)</strong> – <strong>उच्च (high)</strong> गति (speed) – <strong>महंगा (expensive)</strong>।</li>
-<li><strong>उपयोग (Use):</strong> <strong>टर्बाइन (turbines)</strong> – <strong>एयरोस्पेस (aerospace)</strong> – <strong>उच्च-तापमान (high-temperature)</strong> अनुप्रयोग (applications).</li>
+<li><strong>बहुत (very)</strong> कठोर (hard) – उच्च (high) तापमान (temperature) – जंग (corrosion) प्रतिरोधी (resistant) – हल्का (lightweight) – उच्च (high) गति (speed) – महंगा (expensive)।</li>
+<li><strong>उपयोग (Use):</strong> टर्बाइन (turbines) – एयरोस्पेस (aerospace) – उच्च-तापमान (high-temperature) अनुप्रयोग (applications).</li>
 </ul>
-<p><strong>बियरिंग सामग्री का चयन (Selection of Bearing Materials):</strong></p>
+<p>बियरिंग सामग्री का चयन (Selection of Bearing Materials):</p>
 <ul>
-<li><strong>भार (Load):</strong> <strong>भारी (heavy)</strong> – <strong>कांस्य (bronze)</strong> या <strong>बैबिट (Babbitt)</strong> – <strong>हल्का (light)</strong> – <strong>प्लास्टिक (plastic)</strong>।</li>
-<li><strong>गति (Speed):</strong> <strong>उच्च (high)</strong> – <strong>बैबिट (Babbitt)</strong> या <strong>सिरेमिक (ceramic)</strong> – <strong>निम्न (low)</strong> – <strong>कास्ट आयरन (cast iron)</strong>।</li>
-<li><strong>वातावरण (Environment):</strong> <strong>नमी (moisture)</strong> – <strong>कांस्य (bronze)</strong> या <strong>प्लास्टिक (plastic)</strong> – <strong>उच्च (high)</strong> तापमान – <strong>सिरेमिक (ceramic)</strong>।</li>
-<li><strong>लागत (Cost):</strong> <strong>कम (low)</strong> – <strong>कास्ट आयरन (cast iron)</strong> – <strong>उच्च (high)</strong> – <strong>सिरेमिक (ceramic)</strong>।</li>
+<li><strong>भार (Load):</strong> भारी (heavy) – कांस्य (bronze) या बैबिट (Babbitt) – हल्का (light) – प्लास्टिक (plastic)।</li>
+<li><strong>गति (Speed):</strong> उच्च (high) – बैबिट (Babbitt) या सिरेमिक (ceramic) – निम्न (low) – कास्ट आयरन (cast iron)।</li>
+<li><strong>वातावरण (Environment):</strong> नमी (moisture) – कांस्य (bronze) या प्लास्टिक (plastic) – उच्च (high) तापमान – सिरेमिक (ceramic)।</li>
+<li><strong>लागत (Cost):</strong> कम (low) – कास्ट आयरन (cast iron) – उच्च (high) – सिरेमिक (ceramic)।</li>
 </ul>
 </div>
 </div>
@@ -900,17 +915,17 @@ Twitter
 </tbody>
 </table>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बैबिट – <strong>सॉफ्ट (soft)</strong> – <strong>गंदगी (dirt)</strong> को <strong>अंदर (embed)</strong> कर सकता है – <strong>इंजन (engine)</strong> में।</li>
-<li>कांस्य – <strong>अच्छा (good)</strong> घिसाव (wear) प्रतिरोध – <strong>बुश (bushes)</strong> के लिए।</li>
-<li>पीतल – <strong>अच्छी (good)</strong> मशीनेबिलिटी (machinability) – <strong>सस्ता (cheap)</strong>।</li>
-<li>प्लास्टिक – <strong>स्व-स्नेहन (self-lubricating)</strong> – <strong>कोई (no)</strong> तेल (oil) की आवश्यकता – <strong>निम्न (low)</strong> भार।</li>
-<li>सिरेमिक – <strong>उच्च (high)</strong> तापमान – <strong>उच्च (high)</strong> गति – <strong>महंगा (expensive)</strong>।</li>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>बैबिट – <strong>सॉफ्ट (soft)</strong> – गंदगी (dirt) को अंदर (embed) कर सकता है – इंजन (engine) में।</li>
+<li>कांस्य – <strong>अच्छा (good)</strong> घिसाव (wear) प्रतिरोध – बुश (bushes) के लिए।</li>
+<li>पीतल – <strong>अच्छी (good)</strong> मशीनेबिलिटी (machinability) – सस्ता (cheap)।</li>
+<li>प्लास्टिक – <strong>स्व-स्नेहन (self-lubricating)</strong> – कोई (no) तेल (oil) की आवश्यकता – निम्न (low) भार।</li>
+<li>सिरेमिक – <strong>उच्च (high)</strong> तापमान – उच्च (high) गति – महंगा (expensive)।</li>
 </ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बैबिट – <strong>टिन (tin)</strong> या <strong>सीसा (lead)</strong> आधारित – <strong>सॉफ्ट (soft)</strong> – <strong>एम्बेडेबिलिटी (embedability)</strong>।</li>
-<li>कांस्य – <strong>तांबा (copper)</strong> + <strong>टिन (tin)</strong> – <strong>अच्छा (good)</strong> घिसाव (wear) प्रतिरोध।</li>
-<li>पीतल – <strong>तांबा (copper)</strong> + <strong>जस्ता (zinc)</strong> – <strong>अच्छी (good)</strong> मशीनेबिलिटी (machinability).</li>
-<li>प्लास्टिक – <strong>नायलॉन (nylon)</strong>, <strong>PTFE (Teflon)</strong> – <strong>स्व-स्नेहन (self-lubricating)</strong>।</li>
-<li>सिरेमिक – <strong>सिलिकॉन नाइट्राइड (Si₃N₄)</strong> – <strong>उच्च (high)</strong> तापमान – <strong>उच्च (high)</strong> गति।</li>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>बैबिट – <strong>टिन (tin)</strong> या सीसा (lead) आधारित – सॉफ्ट (soft) – एम्बेडेबिलिटी (embedability)।</li>
+<li>कांस्य – <strong>तांबा (copper)</strong> + टिन (tin) – अच्छा (good) घिसाव (wear) प्रतिरोध।</li>
+<li>पीतल – <strong>तांबा (copper)</strong> + जस्ता (zinc) – अच्छी (good) मशीनेबिलिटी (machinability).</li>
+<li>प्लास्टिक – <strong>नायलॉन (nylon)</strong>, PTFE (Teflon) – स्व-स्नेहन (self-lubricating)।</li>
+<li>सिरेमिक – <strong>सिलिकॉन नाइट्राइड (Si₃N₄)</strong> – उच्च (high) तापमान – उच्च (high) गति।</li>
 </ul></div>
 </div>
 </div>
@@ -925,60 +940,60 @@ Twitter
 <div class="bilingual">
 <div class="content">
 <p><strong>जंग (Rust)</strong> और <strong>संक्षारण (Corrosion)</strong> – <strong>धातुओं (metals)</strong> का <strong>क्षरण (deterioration)</strong> – <strong>रासायनिक (chemical)</strong> या <strong>विद्युत-रासायनिक (electrochemical)</strong> प्रतिक्रिया (reaction) के कारण – <strong>वातावरण (environment)</strong> के <strong>संपर्क (exposure)</strong> में।</p>
-<p><strong>जंग और संक्षारण के कारण (Causes of Rust &amp; Corrosion):</strong></p>
+<p>जंग और संक्षारण के कारण (Causes of Rust &amp; Corrosion):</p>
 <ul>
-<li><strong>नमी (Moisture):</strong> <strong>पानी (water)</strong> – <strong>ऑक्सीजन (oxygen)</strong> – <strong>लोहा (iron)</strong> – <strong>जंग (rust)</strong> – <strong>Fe₂O₃·xH₂O</strong>।</li>
-<li><strong>ऑक्सीजन (Oxygen):</strong> <strong>वायु (air)</strong> में <strong>ऑक्सीजन (oxygen)</strong> – <strong>ऑक्सीकरण (oxidation)</strong> – <strong>संक्षारण (corrosion)</strong>।</li>
-<li><strong>अम्ल (Acids) और क्षार (Alkalis):</strong> <strong>रासायनिक (chemical)</strong> हमला (attack) – <strong>धातु (metal)</strong> को <strong>नुकसान (damage)</strong>।</li>
-<li><strong>लवण (Salts):</strong> <strong>समुद्री (marine)</strong> वातावरण (environment) – <strong>विद्युत-रासायनिक (electrochemical)</strong> प्रतिक्रिया (reaction) को <strong>बढ़ावा (promote)</strong>।</li>
-<li><strong>तापमान (Temperature):</strong> <strong>उच्च (high)</strong> तापमान (temperature) – <strong>प्रतिक्रिया (reaction)</strong> की <strong>दर (rate)</strong> को <strong>बढ़ाता (increases)</strong> है।</li>
+<li><strong>नमी (Moisture):</strong> पानी (water) – ऑक्सीजन (oxygen) – लोहा (iron) – जंग (rust) – Fe₂O₃·xH₂O।</li>
+<li><strong>ऑक्सीजन (Oxygen):</strong> वायु (air) में ऑक्सीजन (oxygen) – ऑक्सीकरण (oxidation) – संक्षारण (corrosion)।</li>
+<li><strong>अम्ल (Acids) और क्षार (Alkalis):</strong> रासायनिक (chemical) हमला (attack) – धातु (metal) को नुकसान (damage)।</li>
+<li><strong>लवण (Salts):</strong> समुद्री (marine) वातावरण (environment) – विद्युत-रासायनिक (electrochemical) प्रतिक्रिया (reaction) को बढ़ावा (promote)।</li>
+<li><strong>तापमान (Temperature):</strong> उच्च (high) तापमान (temperature) – प्रतिक्रिया (reaction) की दर (rate) को बढ़ाता (increases) है।</li>
 </ul>
 <p><strong>संक्षारण के प्रकार (Types of Corrosion):</strong></p>
 <ul>
-<li><strong>समान (Uniform) संक्षारण:</strong> <strong>पूरी (entire)</strong> सतह (surface) पर <strong>समान (uniform)</strong> रूप से – <strong>सबसे (most)</strong> सामान्य (common) – <strong>अनुमानित (predictable)</strong>।</li>
-<li><strong>गैल्वेनिक (Galvanic) संक्षारण:</strong> <strong>दो (two)</strong> अलग-अलग (different) धातुओं (metals) के <strong>संपर्क (contact)</strong> में – <strong>विद्युत-रासायनिक (electrochemical)</strong> – <strong>एक (one)</strong> धातु (metal) <strong>दूसरी (other)</strong> की <strong>तुलना (compared)</strong> में <strong>अधिक (more)</strong> <strong>क्षतिग्रस्त (corroded)</strong> होती है।</li>
-<li><strong>गड्ढा (Pitting) संक्षारण:</strong> <strong>स्थानीय (localized)</strong> – <strong>गड्ढे (pits)</strong> – <strong>बहुत (very)</strong> <strong>खतरनाक (dangerous)</strong> – <strong>छेद (holes)</strong> हो सकते हैं।</li>
-<li><strong>अंतराल (Crevice) संक्षारण:</strong> <strong>संकीर्ण (narrow)</strong> अंतराल (gaps) या <strong>दरारें (crevices)</strong> में – <strong>नमी (moisture)</strong> और <strong>गंदगी (dirt)</strong> – <strong>स्थानीय (localized)</strong> संक्षारण (corrosion).</li>
-<li><strong>तनाव (Stress) संक्षारण:</strong> <strong>तनाव (stress)</strong> और <strong>संक्षारण (corrosion)</strong> का <strong>संयोजन (combination)</strong> – <strong>दरार (cracking)</strong>।</li>
+<li><strong>समान (Uniform) संक्षारण:</strong> पूरी (entire) सतह (surface) पर समान (uniform) रूप से – सबसे (most) सामान्य (common) – अनुमानित (predictable)।</li>
+<li><strong>गैल्वेनिक (Galvanic) संक्षारण:</strong> दो (two) अलग-अलग (different) धातुओं (metals) के संपर्क (contact) में – विद्युत-रासायनिक (electrochemical) – एक (one) धातु (metal) दूसरी (other) की तुलना (compared) में अधिक (more) क्षतिग्रस्त (corroded) होती है।</li>
+<li><strong>गड्ढा (Pitting) संक्षारण:</strong> स्थानीय (localized) – गड्ढे (pits) – बहुत (very) खतरनाक (dangerous) – छेद (holes) हो सकते हैं।</li>
+<li><strong>अंतराल (Crevice) संक्षारण:</strong> संकीर्ण (narrow) अंतराल (gaps) या दरारें (crevices) में – नमी (moisture) और गंदगी (dirt) – स्थानीय (localized) संक्षारण (corrosion).</li>
+<li><strong>तनाव (Stress) संक्षारण:</strong> तनाव (stress) और संक्षारण (corrosion) का संयोजन (combination) – दरार (cracking)।</li>
 </ul>
-<p><strong>जंग और संक्षारण की रोकथाम के उपाय (Prevention Methods):</strong></p>
+<p>जंग और संक्षारण की रोकथाम के उपाय (Prevention Methods):</p>
 <p><strong>1. कोटिंग (Coating – लेपन / Coating):</strong></p>
 <ul>
-<li><strong>पेंट (Paint):</strong> <strong>सबसे (most)</strong> सामान्य – <strong>अवरोधक (barrier)</strong> – <strong>नमी (moisture)</strong> और <strong>ऑक्सीजन (oxygen)</strong> को <strong>धातु (metal)</strong> तक <strong>पहुँचने (reach)</strong> से <strong>रोकता (prevents)</strong> है।</li>
-<li><strong>गैल्वनाइजिंग (Galvanizing – जस्ता लेपन / Zinc Coating):</strong> <strong>जस्ता (zinc)</strong> की परत (layer) – <strong>सैक्रिफिशियल (sacrificial)</strong> – <strong>जस्ता (zinc)</strong> <strong>पहले (first)</strong> <strong>क्षतिग्रस्त (corroded)</strong> होता है – <strong>स्टील (steel)</strong> को <strong>बचाता (protects)</strong> है।</li>
-<li><strong>इलेक्ट्रोप्लेटिंग (Electroplating):</strong> <strong>विद्युत (electric)</strong> – <strong>धातु (metal)</strong> की <strong>पतली (thin)</strong> परत (layer) – <strong>क्रोमियम (chromium)</strong>, <strong>निकल (nickel)</strong>, <strong>टिन (tin)</strong> – <strong>सौंदर्यशास्त्र (aesthetics)</strong> और <strong>सुरक्षा (protection)</strong>।</li>
-<li><strong>पाउडर कोटिंग (Powder Coating):</strong> <strong>सूखा (dry)</strong> पाउडर (powder) – <strong>इलेक्ट्रोस्टैटिक (electrostatic)</strong> – <strong>गर्म (heat)</strong> – <strong>टिकाऊ (durable)</strong> कोटिंग (coating).</li>
-<li><strong>एनोडाइजिंग (Anodizing):</strong> <strong>एल्यूमीनियम (aluminium)</strong> के लिए – <strong>ऑक्साइड (oxide)</strong> परत (layer) – <strong>जंग (corrosion)</strong> प्रतिरोध (resistance).</li>
+<li><strong>पेंट (Paint):</strong> सबसे (most) सामान्य – अवरोधक (barrier) – नमी (moisture) और ऑक्सीजन (oxygen) को धातु (metal) तक पहुँचने (reach) से रोकता (prevents) है।</li>
+<li><strong>गैल्वनाइजिंग (Galvanizing – जस्ता लेपन / Zinc Coating):</strong> जस्ता (zinc) की परत (layer) – सैक्रिफिशियल (sacrificial) – जस्ता (zinc) पहले (first) क्षतिग्रस्त (corroded) होता है – स्टील (steel) को बचाता (protects) है।</li>
+<li><strong>इलेक्ट्रोप्लेटिंग (Electroplating):</strong> विद्युत (electric) – धातु (metal) की पतली (thin) परत (layer) – क्रोमियम (chromium), निकल (nickel), टिन (tin) – सौंदर्यशास्त्र (aesthetics) और सुरक्षा (protection)।</li>
+<li><strong>पाउडर कोटिंग (Powder Coating):</strong> सूखा (dry) पाउडर (powder) – इलेक्ट्रोस्टैटिक (electrostatic) – गर्म (heat) – टिकाऊ (durable) कोटिंग (coating).</li>
+<li><strong>एनोडाइजिंग (Anodizing):</strong> एल्यूमीनियम (aluminium) के लिए – ऑक्साइड (oxide) परत (layer) – जंग (corrosion) प्रतिरोध (resistance).</li>
 </ul>
 <p><strong>2. सामग्री का चयन (Material Selection):</strong></p>
 <ul>
-<li><strong>स्टेनलेस स्टील (Stainless Steel):</strong> <strong>क्रोमियम (chromium)</strong> – <strong>ऑक्साइड (oxide)</strong> परत (layer) – <strong>स्व-उपचार (self-healing)</strong> – <strong>संक्षारण (corrosion)</strong> प्रतिरोधी (resistant).</li>
-<li><strong>एल्यूमीनियम (Aluminium):</strong> <strong>ऑक्साइड (oxide)</strong> परत (layer) – <strong>हल्का (lightweight)</strong> – <strong>संक्षारण (corrosion)</strong> प्रतिरोधी (resistant).</li>
-<li><strong>तांबा (Copper) और उसके (its) मिश्र (alloys):</strong> <strong>पीतल (brass)</strong>, <strong>कांस्य (bronze)</strong> – <strong>समुद्री (marine)</strong> वातावरण (environment) के लिए।</li>
+<li><strong>स्टेनलेस स्टील (Stainless Steel):</strong> क्रोमियम (chromium) – ऑक्साइड (oxide) परत (layer) – स्व-उपचार (self-healing) – संक्षारण (corrosion) प्रतिरोधी (resistant).</li>
+<li><strong>एल्यूमीनियम (Aluminium):</strong> ऑक्साइड (oxide) परत (layer) – हल्का (lightweight) – संक्षारण (corrosion) प्रतिरोधी (resistant).</li>
+<li><strong>तांबा (Copper) और उसके (its) मिश्र (alloys):</strong> पीतल (brass), कांस्य (bronze) – समुद्री (marine) वातावरण (environment) के लिए।</li>
 </ul>
 <p><strong>3. वातावरण नियंत्रण (Environmental Control):</strong></p>
 <ul>
-<li><strong>नमी (Moisture) को कम (reduce):</strong> <strong>डीह्यूमिडिफायर (dehumidifier)</strong> – <strong>शुष्क (dry)</strong> वातावरण (environment) – <strong>भंडारण (storage)</strong> के लिए।</li>
-<li><strong>तापमान (Temperature) नियंत्रण (control):</strong> <strong>ठंडा (cool)</strong> – <strong>प्रतिक्रिया (reaction)</strong> की <strong>दर (rate)</strong> को <strong>कम (reduce)</strong>।</li>
-<li><strong>संदूषक (Contaminants) को हटाना (remove):</strong> <strong>अम्ल (acids)</strong>, <strong>क्षार (alkalis)</strong>, <strong>लवण (salts)</strong> – <strong>सफाई (cleaning)</strong>।</li>
+<li><strong>नमी (Moisture) को कम (reduce):</strong> डीह्यूमिडिफायर (dehumidifier) – शुष्क (dry) वातावरण (environment) – भंडारण (storage) के लिए।</li>
+<li><strong>तापमान (Temperature) नियंत्रण (control):</strong> ठंडा (cool) – प्रतिक्रिया (reaction) की दर (rate) को कम (reduce)।</li>
+<li><strong>संदूषक (Contaminants) को हटाना (remove):</strong> अम्ल (acids), क्षार (alkalis), लवण (salts) – सफाई (cleaning)।</li>
 </ul>
 <p><strong>4. कैथोडिक संरक्षण (Cathodic Protection):</strong></p>
 <ul>
-<li><strong>सैक्रिफिशियल (Sacrificial) एनोड (Anode):</strong> <strong>अधिक (more)</strong> <strong>सक्रिय (active)</strong> धातु (metal) – <strong>जस्ता (zinc)</strong>, <strong>मैग्नीशियम (magnesium)</strong> – <strong>क्षतिग्रस्त (corroded)</strong> होता है – <strong>संरक्षित (protected)</strong> धातु (metal) को <strong>बचाता (protects)</strong> है – <strong>पाइपलाइन (pipelines)</strong>, <strong>जहाज (ships)</strong>।</li>
-<li><strong>प्रभावित (Impressed) करंट (Current):</strong> <strong>बाहरी (external)</strong> विद्युत (electrical) स्रोत (source) – <strong>धातु (metal)</strong> को <strong>कैथोड (cathode)</strong> बनाना – <strong>संक्षारण (corrosion)</strong> को <strong>रोकना (prevent)</strong>।</li>
+<li><strong>सैक्रिफिशियल (Sacrificial) एनोड (Anode):</strong> अधिक (more) सक्रिय (active) धातु (metal) – जस्ता (zinc), मैग्नीशियम (magnesium) – क्षतिग्रस्त (corroded) होता है – संरक्षित (protected) धातु (metal) को बचाता (protects) है – पाइपलाइन (pipelines), जहाज (ships)।</li>
+<li><strong>प्रभावित (Impressed) करंट (Current):</strong> बाहरी (external) विद्युत (electrical) स्रोत (source) – धातु (metal) को कैथोड (cathode) बनाना – संक्षारण (corrosion) को रोकना (prevent)।</li>
 </ul>
 <p><strong>5. नियमित रखरखाव (Regular Maintenance):</strong></p>
 <ul>
-<li><strong>सफाई (Cleaning):</strong> <strong>गंदगी (dirt)</strong>, <strong>तेल (oil)</strong>, <strong>ग्रीस (grease)</strong> – <strong>नमी (moisture)</strong> को <strong>पकड़ (trap)</strong> सकते हैं – <strong>संक्षारण (corrosion)</strong> को <strong>बढ़ावा (promote)</strong>।</li>
-<li><strong>निरीक्षण (Inspection):</strong> <strong>नियमित (regular)</strong> जाँच – <strong>संक्षारण (corrosion)</strong> के <strong>प्रारंभिक (early)</strong> लक्षण (signs) – <strong>समय पर (timely)</strong> कार्रवाई (action).</li>
-<li><strong>मरम्मत (Repair):</strong> <strong>क्षतिग्रस्त (damaged)</strong> कोटिंग्स (coatings) – <strong>तुरंत (immediately)</strong> <strong>ठीक (repair)</strong> करना।</li>
+<li><strong>सफाई (Cleaning):</strong> गंदगी (dirt), तेल (oil), ग्रीस (grease) – नमी (moisture) को पकड़ (trap) सकते हैं – संक्षारण (corrosion) को बढ़ावा (promote)।</li>
+<li><strong>निरीक्षण (Inspection):</strong> नियमित (regular) जाँच – संक्षारण (corrosion) के प्रारंभिक (early) लक्षण (signs) – समय पर (timely) कार्रवाई (action).</li>
+<li><strong>मरम्मत (Repair):</strong> क्षतिग्रस्त (damaged) कोटिंग्स (coatings) – तुरंत (immediately) ठीक (repair) करना।</li>
 </ul>
 </div>
 </div>
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
-<p><strong>चित्र: संक्षारण रोकथाम विधियाँ (Corrosion Prevention Methods)</strong></p>
+<p>चित्र: संक्षारण रोकथाम विधियाँ (Corrosion Prevention Methods)</p>
 <p>स्थान: /images/notes/fitter/module-2/corrosion_prevention.jpg</p>
 <code>corrosion_prevention.jpg</code>
 <p style="font-size:0.8rem; color:#888;">(कोटिंग, सामग्री चयन, कैथोडिक संरक्षण)</p>
@@ -998,17 +1013,17 @@ Twitter
 </tbody>
 </table>
 </div>
-<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>जंग (Rust) – <strong>लोहा (iron)</strong> का <strong>ऑक्सीकरण (oxidation)</strong> – <strong>Fe₂O₃·xH₂O</strong>।</li>
-<li>संक्षारण (Corrosion) – <strong>धातुओं (metals)</strong> का <strong>क्षरण (deterioration)</strong> – <strong>रासायनिक (chemical)</strong> या <strong>विद्युत-रासायनिक (electrochemical)</strong>।</li>
-<li>गैल्वनाइजिंग – <strong>जस्ता (zinc)</strong> – <strong>सैक्रिफिशियल (sacrificial)</strong> – <strong>स्टील (steel)</strong> को <strong>बचाता (protects)</strong>।</li>
-<li>कैथोडिक संरक्षण – <strong>सैक्रिफिशियल (sacrificial)</strong> एनोड (anode) – <strong>पाइपलाइन (pipelines)</strong>, <strong>जहाज (ships)</strong>।</li>
-<li>स्टेनलेस स्टील – <strong>क्रोमियम (chromium)</strong> – <strong>ऑक्साइड (oxide)</strong> परत – <strong>स्व-उपचार (self-healing)</strong>।</li>
+<div class="short-notes"><h4>📌 मुख्य बिंदु</h4><ul><li>जंग (Rust) – <strong>लोहा (iron)</strong> का ऑक्सीकरण (oxidation) – Fe₂O₃·xH₂O।</li>
+<li>संक्षारण (Corrosion) – <strong>धातुओं (metals)</strong> का क्षरण (deterioration) – रासायनिक (chemical) या विद्युत-रासायनिक (electrochemical)।</li>
+<li>गैल्वनाइजिंग – <strong>जस्ता (zinc)</strong> – सैक्रिफिशियल (sacrificial) – स्टील (steel) को बचाता (protects)।</li>
+<li>कैथोडिक संरक्षण – <strong>सैक्रिफिशियल (sacrificial)</strong> एनोड (anode) – पाइपलाइन (pipelines), जहाज (ships)।</li>
+<li>स्टेनलेस स्टील – <strong>क्रोमियम (chromium)</strong> – ऑक्साइड (oxide) परत – स्व-उपचार (self-healing)।</li>
 </ul></div>
-<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>जंग – <strong>नमी (moisture)</strong> और <strong>ऑक्सीजन (oxygen)</strong> – <strong>लोहा (iron)</strong> पर।</li>
-<li>गैल्वनाइजिंग – <strong>जस्ता (zinc)</strong> – <strong>सैक्रिफिशियल (sacrificial)</strong> – <strong>जंग (rust)</strong> से <strong>बचाता (protects)</strong>।</li>
-<li>इलेक्ट्रोप्लेटिंग – <strong>क्रोमियम (chromium)</strong>, <strong>निकल (nickel)</strong> – <strong>सौंदर्यशास्त्र (aesthetics)</strong> और <strong>सुरक्षा (protection)</strong>।</li>
-<li>स्टेनलेस स्टील – <strong>क्रोमियम (chromium)</strong> – <strong>संक्षारण (corrosion)</strong> प्रतिरोधी (resistant).</li>
-<li>कैथोडिक संरक्षण – <strong>जहाज (ships)</strong>, <strong>पाइपलाइन (pipelines)</strong> – <strong>सैक्रिफिशियल (sacrificial)</strong> एनोड (anode).</li>
+<div class="important-box"><h4>📌 परीक्षा फोकस</h4><ul><li>जंग – <strong>नमी (moisture)</strong> और ऑक्सीजन (oxygen) – लोहा (iron) पर।</li>
+<li>गैल्वनाइजिंग – <strong>जस्ता (zinc)</strong> – सैक्रिफिशियल (sacrificial) – जंग (rust) से बचाता (protects)।</li>
+<li>इलेक्ट्रोप्लेटिंग – <strong>क्रोमियम (chromium)</strong>, निकल (nickel) – सौंदर्यशास्त्र (aesthetics) और सुरक्षा (protection)।</li>
+<li>स्टेनलेस स्टील – <strong>क्रोमियम (chromium)</strong> – संक्षारण (corrosion) प्रतिरोधी (resistant).</li>
+<li>कैथोडिक संरक्षण – <strong>जहाज (ships)</strong>, पाइपलाइन (pipelines) – सैक्रिफिशियल (sacrificial) एनोड (anode).</li>
 </ul></div>
 </div>
 </div>
@@ -1038,7 +1053,7 @@ Twitter
 <div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
 <div class="section-body">
 <div class="mcq-link">
-<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<p>📌 Click below to practice multiple-choice questions for this module.</p>
 <a href="/question-bank/fitter/second-year/module-2.html" target="_blank">📝 Go to Question Bank →</a>
 <p style="margin-top:10px; font-size:0.9rem; color:#888;">(Opens in a new tab)</p>
 </div>
