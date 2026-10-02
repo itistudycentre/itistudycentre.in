@@ -143,13 +143,14 @@ async function loadUpdates() {
 
 }
 
-/* Automatically load ITI Study Centre branding */
 (function () {
-    if (document.getElementById("isc-branding-script")) return;
-
     var script = document.createElement("script");
-    script.id = "isc-branding-script";
-    script.src = "/js/branding.js";
-    script.defer = true;
+    script.src = "/js/branding.js?v=2";
+    script.onload = function () {
+        console.log("Branding loaded");
+    };
+    script.onerror = function () {
+        console.error("Branding file not found");
+    };
     document.head.appendChild(script);
 })();
