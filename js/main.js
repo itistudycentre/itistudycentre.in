@@ -142,3 +142,14 @@ async function loadUpdates() {
     }
 
 }
+
+/* Automatically load ITI Study Centre branding */
+(function () {
+    if (document.getElementById("isc-branding-script")) return;
+
+    var script = document.createElement("script");
+    script.id = "isc-branding-script";
+    script.src = "/js/branding.js";
+    script.defer = true;
+    document.head.appendChild(script);
+})();
