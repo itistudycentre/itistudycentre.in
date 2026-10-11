@@ -1,5 +1,5 @@
 
-/* ITI STUDY CENTRE - WEBSITE BRANDING */
+/* ITI Study Centre Branding and Article Credits */
 (function () {
   "use strict";
 
@@ -9,6 +9,7 @@
   var SITE_NAME = "ITI STUDY CENTRE";
   var SITE_URL = "https://www.itistudycentre.in/";
   var SITE_TEXT = "WWW.ITISTUDYCENTRE.IN";
+  var CREDIT_TEXT = "Article by www.itistudycentre.in";
 
   function addStyles() {
     if (document.getElementById("isc-branding-style")) return;
@@ -58,27 +59,35 @@
         display: block;
         white-space: nowrap;
         transform: rotate(-28deg);
-        color: rgba(18, 52, 90, .065);
+        color: rgba(18, 52, 90, .035);
         font: 800 clamp(10px, 1.5vw, 17px)/1.3 Arial, sans-serif;
         letter-spacing: .35px;
       }
 
       .isc-article-credit {
         display: block;
-        box-sizing: border-box;
-        margin: 16px 0 24px;
-        padding: 7px 10px;
-        border-left: 3px solid #d6a83d;
-        background: rgba(18, 52, 90, .035);
-        color: #687789;
-        font: 12px/1.6 Arial, sans-serif;
-        overflow-wrap: anywhere;
+        position: relative;
+        z-index: 3;
+        margin: 26px 0;
+        padding: 9px 6px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.6;
+        color: #64748b;
+        border-top: 1px solid rgba(100, 116, 139, .15);
+        border-bottom: 1px solid rgba(100, 116, 139, .15);
+        clear: both;
       }
 
       .isc-article-credit a {
-        color: #164b7a;
+        color: #174a7e;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .isc-article-credit a:hover {
         text-decoration: underline;
-        text-underline-offset: 2px;
       }
 
       @media (max-width: 600px) {
@@ -97,8 +106,8 @@
         }
 
         .isc-article-credit {
-          font-size: 11px;
-          margin: 13px 0 20px;
+          margin: 20px 0;
+          font-size: 12px;
         }
       }
 
@@ -110,17 +119,13 @@
         #isc-watermark {
           position: fixed;
         }
-
-        .isc-article-credit {
-          break-inside: avoid;
-        }
       }
     `;
 
     document.head.appendChild(style);
   }
 
-  function addTopBar() {
+  function addBrandBar() {
     if (document.getElementById("isc-brand-bar")) return;
 
     var bar = document.createElement("div");
@@ -129,7 +134,7 @@
     var link = document.createElement("a");
     link.href = SITE_URL;
     link.textContent = SITE_NAME + "     " + SITE_TEXT;
-    link.setAttribute("aria-label", SITE_NAME + " website");
+    link.setAttribute("aria-label", SITE_NAME + " - " + SITE_TEXT);
 
     bar.appendChild(link);
     document.body.insertBefore(bar, document.body.firstChild);
@@ -152,82 +157,97 @@
   }
 
   function addArticleCredits() {
-    var content = document.querySelector(
-      "article, main, .article-content, .content, " +
-      ".fitter2-section-body, .section-body"
-    );
+    var selectors = [
+      ".fitter2-section-body",
+      ".section-body",
+      ".article-content",
+      "article",
+      "main",
+      ".content"
+    ];
 
-    if (!content) return;
+    var containers = [];
+    var seen = new Set();
 
-    var headings = Array.from(
-      content.querySelectorAll("h2, h3")
-    ).filter(function (heading) {
-      return !heading.closest("header, footer, nav");
+    selectors.forEach(function (selector) {
+      document.querySelectorAll(selector).forEach(function (el) {
+        if (!seen.has(el)) {
+          seen.add(el);
+          containers.push(el);
+        }
+      });
     });
 
-    if (headings.length < 3) return;
+    // Prefer the largest content container with headings.
+    containers.sort(function (a, b) {
+      return b.querySelectorAll("h2, h3").length -
+             a.querySelectorAll("h2, h3").length;
+    });
 
-    var count = Math.min(6, headings.length - 1);
-    var selected = [];
+    var container = containers.find(function (el) {
+      return el.querySelectorAll("h2, h3").length >= 2;
+    });
 
-    for (var i = 1; i <= count; i++) {
-      var index = Math.round(
-        (i * (headings.length - 1)) / (count + 1)
+    if (!container) return;
+
+    if (container.dataset.iscCreditsAdded === "yes") return;
+
+    var headings = Array.from(
+      container.querySelectorAll("h2, h3")
+    ).filter(function (heading) {
+      return !heading.closest("#isc-brand-bar") &&
+             !heading.closest("#isc-watermark");
+    });
+
+    if (headings.length < 2) return;
+
+    var totalCredits = Math.min(6, headings.length - 1);
+    var used = [];
+
+    for (var i = 1; i <= totalCredits; i++) {
+      var index = Math.floor(
+        (i * headings.length) / (totalCredits + 1)
       );
 
-      if (
-        index > 0 &&
-        index < headings.length &&
-        !selected.includes(index)
-      ) {
-        selected.push(index);
+      if (index > 0 && index < headings.length &&
+          used.indexOf(index) === -1) {
+        used.push(index);
       }
     }
 
-    selected.forEach(function (index) {
+    used.sort(function (a, b) { return a - b; });
+
+    used.forEach(function (index) {
       var heading = headings[index];
-
-      if (
-        heading.nextElementSibling &&
-        heading.nextElementSibling.classList.contains(
-          "isc-article-credit"
-        )
-      ) {
-        return;
-      }
-
       var credit = document.createElement("div");
       credit.className = "isc-article-credit";
-      credit.appendChild(
-        document.createTextNode("Article by ")
-      );
 
       var link = document.createElement("a");
       link.href = SITE_URL;
-      link.textContent = "www.itistudycentre.in";
+      link.textContent = CREDIT_TEXT;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
 
       credit.appendChild(link);
-      heading.insertAdjacentElement("afterend", credit);
+
+      // Place the credit before the next subheading.
+      heading.parentNode.insertBefore(credit, heading);
     });
+
+    container.dataset.iscCreditsAdded = "yes";
   }
 
   function init() {
-    if (!document.body) return;
+    if (!document.body || !document.head) return;
 
     addStyles();
-    addTopBar();
+    addBrandBar();
     addWatermark();
     addArticleCredits();
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener(
-      "DOMContentLoaded",
-      init,
-      { once: true }
-    );
+    document.addEventListener("DOMContentLoaded", init, { once: true });
   } else {
     init();
   }
