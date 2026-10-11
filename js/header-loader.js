@@ -49,7 +49,7 @@
     var script = document.createElement("script");
     script.id = "iti-branding-script";
     /* IMPORTANT: bump this version whenever branding.js changes. */
-    script.src = "/js/branding.js?v=18";
+    script.src = "/js/branding.js?v=19";
     script.dataset.itiBranding = "true";
 
     script.onload = function () {
