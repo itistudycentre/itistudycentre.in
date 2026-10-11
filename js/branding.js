@@ -2,6 +2,7 @@
 (function () {
   "use strict";
 
+  // Prevent duplicate initialization
   if (window.__itiBrandingInitialized) return;
   window.__itiBrandingInitialized = true;
 
@@ -10,30 +11,27 @@
   var SITE_TEXT = "WWW.ITISTUDYCENTRE.IN";
   var CREDIT_TEXT = "Article by www.itistudycentre.in";
 
-  var lastSignature = "";
+  var articleObserver = null;
+  var pageObserver = null;
+  var activeContainer = null;
   var refreshTimer = null;
-  var contentObserver = null;
-  var bodyObserver = null;
-  var observedContainer = null;
+  var isUpdating = false;
 
-  /* =========================================
-     1. STYLES
-  ========================================= */
+  /* ---------------- CSS ---------------- */
+
   function addStyles() {
-    var oldStyle = document.getElementById("isc-branding-style");
-    if (oldStyle) oldStyle.remove();
+    if (document.getElementById("isc-branding-style")) return;
 
     var style = document.createElement("style");
     style.id = "isc-branding-style";
 
     style.textContent = `
       #isc-brand-bar {
-        position: sticky;
-        top: 0;
+        position: relative;
         z-index: 10001;
         width: 100%;
         box-sizing: border-box;
-        padding: 8px 10px;
+        padding: 9px 8px;
         text-align: center;
         background: #12345a;
         border-bottom: 2px solid #e6b84a;
@@ -42,22 +40,21 @@
       }
 
       #isc-brand-bar a {
-        color: #fff;
+        color: #ffffff !important;
         font-size: 14px;
         font-weight: 800;
-        text-decoration: none;
+        text-decoration: none !important;
         letter-spacing: .3px;
       }
 
       #isc-brand-bar a:hover {
-        text-decoration: underline;
+        text-decoration: underline !important;
       }
 
-      /* WATERMARK: VISIBLE BUT TRANSPARENT */
       #isc-watermark {
         position: fixed;
         inset: 0;
-        z-index: 9998;
+        z-index: 2;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-template-rows: repeat(8, minmax(0, 1fr));
@@ -70,27 +67,24 @@
       }
 
       #isc-watermark span {
-        display: block;
         white-space: nowrap;
+        display: block;
         transform: rotate(-28deg);
-        color: rgba(18, 52, 90, .06);
+        color: rgba(18, 52, 90, .065);
         font-family: Arial, sans-serif;
         font-size: clamp(10px, 1.4vw, 16px);
         font-weight: 700;
-        line-height: 1.4;
-        letter-spacing: .25px;
-        text-shadow: none;
+        letter-spacing: .2px;
       }
 
-      /* ARTICLE CREDIT */
       .isc-article-credit {
         display: block !important;
-        clear: both;
         position: relative;
-        z-index: 10000;
+        z-index: 3;
+        clear: both;
         box-sizing: border-box;
         width: 100%;
-        margin: 24px 0 !important;
+        margin: 22px 0 !important;
         padding: 8px 10px;
         text-align: right;
         font-family: Arial, sans-serif;
@@ -102,10 +96,9 @@
       }
 
       .isc-article-credit a {
-        display: inline-block;
         color: #34516e !important;
-        font-weight: 600;
-        text-decoration: underline;
+        font-weight: 700 !important;
+        text-decoration: underline !important;
         visibility: visible !important;
         opacity: 1 !important;
       }
@@ -131,11 +124,10 @@
 
         #isc-watermark span {
           font-size: 10px;
-          color: rgba(18, 52, 90, .06);
         }
 
         .isc-article-credit {
-          margin: 20px 0 !important;
+          margin: 18px 0 !important;
           padding: 7px 4px;
           font-size: 11px;
         }
@@ -149,18 +141,20 @@
         #isc-watermark {
           position: fixed;
         }
+
+        .isc-article-credit {
+          break-inside: avoid;
+        }
       }
     `;
 
     document.head.appendChild(style);
   }
 
-  /* =========================================
-     2. TOP BRAND BAR
-  ========================================= */
+  /* ---------------- HEADER ---------------- */
+
   function addBrandBar() {
-    var existing = document.getElementById("isc-brand-bar");
-    if (existing) existing.remove();
+    if (document.getElementById("isc-brand-bar")) return;
 
     var bar = document.createElement("div");
     bar.id = "isc-brand-bar";
@@ -168,21 +162,16 @@
     var link = document.createElement("a");
     link.href = SITE_URL;
     link.textContent = SITE_NAME + "     " + SITE_TEXT;
-    link.setAttribute(
-      "aria-label",
-      SITE_NAME + " - " + SITE_TEXT
-    );
+    link.setAttribute("aria-label", SITE_NAME + " - " + SITE_TEXT);
 
     bar.appendChild(link);
     document.body.insertBefore(bar, document.body.firstChild);
   }
 
-  /* =========================================
-     3. WATERMARK
-  ========================================= */
+  /* ---------------- WATERMARK ---------------- */
+
   function addWatermark() {
-    var existing = document.getElementById("isc-watermark");
-    if (existing) existing.remove();
+    if (document.getElementById("isc-watermark")) return;
 
     var layer = document.createElement("div");
     layer.id = "isc-watermark";
@@ -190,49 +179,73 @@
 
     for (var i = 0; i < 24; i++) {
       var mark = document.createElement("span");
-      mark.textContent = SITE_NAME + "     " + SITE_TEXT;
+      mark.textContent = SITE_NAME + "   " + SITE_TEXT;
       layer.appendChild(mark);
     }
 
     document.body.appendChild(layer);
   }
 
-  /* =========================================
-     4. FIND MAIN ARTICLE
-  ========================================= */
+  /* ---------------- ARTICLE DETECTION ---------------- */
+
   function getArticleContainer() {
-    return document.querySelector("main.module-content") ||
-      document.querySelector("main article") ||
-      document.querySelector("article") ||
-      document.querySelector(".module-content") ||
-      document.querySelector(".article-content") ||
-      document.querySelector("main");
-  }
+    var selectors = [
+      "main.module-content",
+      ".module-content",
+      ".article-content",
+      ".theory-content",
+      ".notes-content",
+      "main article",
+      "article",
+      "main",
+      "#content",
+      ".content"
+    ];
 
-  function getParagraphs(container) {
-    return Array.from(container.querySelectorAll("p")).filter(
-      function (p) {
-        return p.textContent.trim().length > 0 &&
-          !p.closest(
-            "header, nav, footer, #isc-brand-bar, " +
-            "#isc-watermark, .isc-article-credit"
-          );
+    for (var i = 0; i < selectors.length; i++) {
+      var element = document.querySelector(selectors[i]);
+
+      if (
+        element &&
+        !element.closest("#isc-brand-bar") &&
+        element.querySelector("p, li, h2, h3")
+      ) {
+        return element;
       }
-    );
+    }
+
+    return null;
   }
 
-  /* =========================================
-     5. NUMBER OF CREDITS
-     Long article: 8 credits
-     Shorter article: fewer, spaced credits
-  ========================================= */
-  function getCreditCount(paragraphCount) {
-    if (paragraphCount >= 14) return 8;
-    if (paragraphCount >= 9) return 6;
-    if (paragraphCount >= 5) return 4;
-    if (paragraphCount >= 2) return 2;
-    return 0;
+  function getArticleBlocks(container) {
+    if (!container) return [];
+
+    return Array.from(
+      container.querySelectorAll("p, li, h2, h3")
+    ).filter(function (element) {
+      if (!element.textContent.trim()) return false;
+
+      if (
+        element.closest(
+          "header, nav, footer, #isc-brand-bar, #isc-watermark, .isc-article-credit"
+        )
+      ) {
+        return false;
+      }
+
+      // Ignore short navigation labels and empty headings
+      if (
+        (element.tagName === "H2" || element.tagName === "H3") &&
+        element.textContent.trim().length < 8
+      ) {
+        return false;
+      }
+
+      return true;
+    });
   }
+
+  /* ---------------- CREDIT ---------------- */
 
   function createCredit() {
     var credit = document.createElement("div");
@@ -248,142 +261,143 @@
     return credit;
   }
 
-  /* =========================================
-     6. ADD CREDITS TOP, MIDDLE AND BOTTOM
-  ========================================= */
   function addArticleCredits() {
+    if (isUpdating) return;
+
     var container = getArticleContainer();
-    if (!container) return;
 
-    container.querySelectorAll(".isc-article-credit").forEach(
-      function (item) {
-        item.remove();
-      }
-    );
-
-    var paragraphs = getParagraphs(container);
-    var n = paragraphs.length;
-    var totalCredits = getCreditCount(n);
-
-    if (!totalCredits || !n) return;
-
-    /* TOP CREDIT: before the first article paragraph */
-    paragraphs[0].insertAdjacentElement(
-      "beforebegin",
-      createCredit()
-    );
-
-    /* BOTTOM CREDIT: after the last article paragraph */
-    paragraphs[n - 1].insertAdjacentElement(
-      "afterend",
-      createCredit()
-    );
-
-    /* MIDDLE CREDITS: evenly distributed */
-    var middleCount = totalCredits - 2;
-    var selectedIndexes = [];
-
-    for (var i = 1; i <= middleCount; i++) {
-      var index = Math.round(
-        (i * (n - 1)) / (middleCount + 1)
+    if (!container) {
+      console.warn(
+        "ITI Branding: article container not found. Check the page HTML."
       );
-
-      index = Math.max(1, Math.min(n - 2, index));
-
-      if (selectedIndexes.indexOf(index) === -1) {
-        selectedIndexes.push(index);
-      }
-    }
-
-    /* Insert from bottom to top for stable placement */
-    selectedIndexes.sort(function (a, b) {
-      return b - a;
-    });
-
-    selectedIndexes.forEach(function (index) {
-      var paragraph = paragraphs[index];
-
-      if (paragraph && paragraph.parentNode) {
-        paragraph.insertAdjacentElement(
-          "afterend",
-          createCredit()
-        );
-      }
-    });
-  }
-
-  /* =========================================
-     7. DETECT CONTENT CHANGES
-  ========================================= */
-  function getSignature(container) {
-    var paragraphs = getParagraphs(container);
-
-    return paragraphs.length + "|" +
-      paragraphs.map(function (p) {
-        return p.textContent.trim();
-      }).join("\u241f");
-  }
-
-  function refreshCredits() {
-    refreshTimer = null;
-
-    var container = getArticleContainer();
-    if (!container) return;
-
-    var signature = getSignature(container);
-    var expectedCount = getCreditCount(
-      getParagraphs(container).length
-    );
-
-    var currentCount = container.querySelectorAll(
-      ".isc-article-credit"
-    ).length;
-
-    if (
-      signature === lastSignature &&
-      currentCount === expectedCount
-    ) {
       return;
     }
 
-    addArticleCredits();
+    var blocks = getArticleBlocks(container);
 
-    lastSignature = getSignature(container);
+    if (blocks.length < 2) {
+      console.warn(
+        "ITI Branding: not enough article blocks to insert credits."
+      );
+      return;
+    }
+
+    isUpdating = true;
+
+    try {
+      // Remove previous credits so they are not duplicated
+      container.querySelectorAll(".isc-article-credit").forEach(
+        function (credit) {
+          credit.remove();
+        }
+      );
+
+      // Up to 8 credits, spread across the article
+      var totalCredits = Math.min(8, blocks.length);
+      var positions = [];
+
+      for (var i = 0; i < totalCredits; i++) {
+        var index = totalCredits === 1
+          ? 0
+          : Math.round(
+              i * (blocks.length - 1) / (totalCredits - 1)
+            );
+
+        if (positions.indexOf(index) === -1) {
+          positions.push(index);
+        }
+      }
+
+      // Insert from bottom to top so indexes remain valid
+      positions.sort(function (a, b) {
+        return b - a;
+      });
+
+      positions.forEach(function (index) {
+        var block = blocks[index];
+
+        if (block && block.parentNode) {
+          block.insertAdjacentElement("afterend", createCredit());
+        }
+      });
+
+      console.log(
+        "ITI Branding: inserted " + positions.length + " article credits."
+      );
+    } finally {
+      isUpdating = false;
+    }
   }
 
+  /* ---------------- DYNAMIC CONTENT ---------------- */
+
   function scheduleRefresh() {
-    if (refreshTimer !== null) {
+    if (refreshTimer) {
       window.clearTimeout(refreshTimer);
     }
 
-    refreshTimer = window.setTimeout(refreshCredits, 400);
+    refreshTimer = window.setTimeout(function () {
+      refreshTimer = null;
+
+      var newContainer = getArticleContainer();
+
+      if (newContainer && newContainer !== activeContainer) {
+        observeArticle(newContainer);
+      }
+
+      addArticleCredits();
+    }, 400);
   }
 
-  function watchArticle() {
-    var container = getArticleContainer();
+  function observeArticle(container) {
     if (!container || !("MutationObserver" in window)) return;
 
-    if (container === observedContainer && contentObserver) return;
+    if (articleObserver) {
+      articleObserver.disconnect();
+    }
 
-    if (contentObserver) contentObserver.disconnect();
+    activeContainer = container;
+    articleObserver = new MutationObserver(function (mutations) {
+      var relevantChange = mutations.some(function (mutation) {
+        var target = mutation.target.nodeType === 1
+          ? mutation.target
+          : mutation.target.parentElement;
 
-    observedContainer = container;
-    lastSignature = getSignature(container);
+        if (
+          target &&
+          target.closest &&
+          target.closest(".isc-article-credit")
+        ) {
+          return false;
+        }
 
-    contentObserver = new MutationObserver(function () {
-      scheduleRefresh();
+        var changedNodes = Array.from(mutation.addedNodes || [])
+          .concat(Array.from(mutation.removedNodes || []));
+
+        return changedNodes.some(function (node) {
+          if (node.nodeType !== 1) return true;
+
+          return !(
+            node.matches(".isc-article-credit") ||
+            node.closest(".isc-article-credit")
+          );
+        }) || mutation.type === "characterData";
+      });
+
+      if (relevantChange && !isUpdating) {
+        scheduleRefresh();
+      }
     });
 
-    contentObserver.observe(container, {
+    articleObserver.observe(container, {
       childList: true,
       subtree: true,
       characterData: true
     });
   }
 
-  /* =========================================
-     8. INITIALIZE AND HANDLE LATE-LOADED CONTENT
-  ========================================= */
+  /* ---------------- INITIALIZATION ---------------- */
+
   function initBranding() {
     if (!document.body || !document.head) return;
 
@@ -393,25 +407,36 @@
     addArticleCredits();
 
     var container = getArticleContainer();
-    lastSignature = container ? getSignature(container) : "";
 
-    watchArticle();
+    if (container) {
+      observeArticle(container);
+    }
 
-    if ("MutationObserver" in window) {
-      if (bodyObserver) bodyObserver.disconnect();
-
-      bodyObserver = new MutationObserver(function () {
+    // Retry in case article content loads after the page
+    [1000, 2500, 5000].forEach(function (delay) {
+      window.setTimeout(function () {
         var current = getArticleContainer();
 
-        if (current && current !== observedContainer) {
-          watchArticle();
-          scheduleRefresh();
-        } else if (current) {
+        if (current && current !== activeContainer) {
+          observeArticle(current);
+        }
+
+        addArticleCredits();
+      }, delay);
+    });
+
+    // Detect when the page inserts its article container later
+    if ("MutationObserver" in window && !pageObserver) {
+      pageObserver = new MutationObserver(function () {
+        var current = getArticleContainer();
+
+        if (current && current !== activeContainer) {
+          observeArticle(current);
           scheduleRefresh();
         }
       });
 
-      bodyObserver.observe(document.body, {
+      pageObserver.observe(document.body, {
         childList: true,
         subtree: true
       });
@@ -419,11 +444,9 @@
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener(
-      "DOMContentLoaded",
-      initBranding,
-      { once: true }
-    );
+    document.addEventListener("DOMContentLoaded", initBranding, {
+      once: true
+    });
   } else {
     initBranding();
   }
