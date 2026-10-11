@@ -1,39 +1,36 @@
-
 /* =========================================================
    ITI STUDY CENTRE — HEADER LOADER
    File: /js/header-loader.js
 
-   Features:
-   1. Common Header Loading
-   2. Active Navigation Link
-   3. Automatic Comments System
-   4. Website Branding and Watermark
-   5. Preserve browser scroll restoration
+   Features preserved:
+   1. Common header loading from /header.html
+   2. Active navigation link highlighting
+   3. Automatic comments system (comments.js)
+   4. Excludes /admin-comments.html from comments
+   5. Loads /js/branding.js with cache-busting version
+   6. Preserves scroll restoration
+
+   NOTE: Footer loading is NOT handled here. It is managed elsewhere
+   (main.js / HTML). Do not add footer logic to this file.
 ========================================================= */
 
 (function () {
   "use strict";
 
-  var container = document.getElementById("header-container");
-
   /* -------------------- HEADER CONTAINER -------------------- */
+
+  var container = document.getElementById("header-container");
 
   if (!container) {
     container = document.createElement("div");
     container.id = "header-container";
 
     if (document.body) {
-      document.body.insertBefore(
-        container,
-        document.body.firstChild
-      );
+      document.body.insertBefore(container, document.body.firstChild);
     } else {
       document.addEventListener("DOMContentLoaded", function () {
         if (!document.getElementById("header-container")) {
-          document.body.insertBefore(
-            container,
-            document.body.firstChild
-          );
+          document.body.insertBefore(container, document.body.firstChild);
         }
       }, { once: true });
     }
@@ -51,23 +48,20 @@
 
     var script = document.createElement("script");
     script.id = "iti-branding-script";
-    script.src = "/js/branding.js?v=17";
+    /* IMPORTANT: bump this version whenever branding.js changes. */
+    script.src = "/js/branding.js?v=18";
     script.dataset.itiBranding = "true";
 
     script.onload = function () {
-      console.log("ITI Study Centre branding loaded.");
+      console.log("ITI Study Centre branding loaded (v=18).");
     };
 
     script.onerror = function () {
-      console.error(
-        "Branding file failed to load. Check /js/branding.js."
-      );
+      console.error("Branding file failed to load. Check /js/branding.js.");
     };
 
     document.head.appendChild(script);
   }
-
-  loadBranding();
 
   /* -------------------- LOAD HEADER -------------------- */
 
@@ -81,23 +75,18 @@
         if (!response.ok) {
           throw new Error("Header HTTP " + response.status);
         }
-
         return response.text();
       })
       .then(function (html) {
         container.innerHTML = html;
         container.dataset.headerLoaded = "true";
         highlightActiveLink();
-
         console.log("ITI Study Centre header loaded.");
       })
       .catch(function (error) {
         console.warn("Header loading failed:", error);
 
-        /*
-          Keep a minimal fallback header if the shared file
-          cannot be loaded.
-        */
+        /* Minimal fallback if /header.html cannot be fetched. */
         if (!container.innerHTML.trim()) {
           container.innerHTML =
             '<header class="main-header">' +
@@ -117,7 +106,6 @@
     if (!container) return;
 
     var path = window.location.pathname;
-
     if (path.length > 1) {
       path = path.replace(/\/$/, "");
     }
@@ -138,7 +126,6 @@
         if (item === "/") {
           return path === "" || path === "/";
         }
-
         return path === item || path.startsWith(item);
       });
 
@@ -152,8 +139,14 @@
 
   function loadCommentsSystem() {
     var currentPath = window.location.pathname;
+    var cleanPath = currentPath.split("?")[0].split("#")[0]
+      .replace(/\/$/, "");
 
-    if (currentPath === "/admin-comments.html") {
+    /* Skip the admin comments page entirely. */
+    if (
+      cleanPath === "/admin-comments" ||
+      cleanPath === "/admin-comments.html"
+    ) {
       return;
     }
 
