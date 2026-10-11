@@ -9,17 +9,23 @@
   var SITE_URL = "https://www.itistudycentre.in/";
   var SITE_TEXT = "WWW.ITISTUDYCENTRE.IN";
   var CREDIT_TEXT = "Article by www.itistudycentre.in";
-  var refreshTimer = null;
-  var lastArticleSignature = "";
-  var observedContainer = null;
-  var articleObserver = null;
 
-  /* 1. STYLES */
+  var lastSignature = "";
+  var refreshTimer = null;
+  var contentObserver = null;
+  var bodyObserver = null;
+  var observedContainer = null;
+
+  /* =========================================
+     1. STYLES
+  ========================================= */
   function addStyles() {
-    if (document.getElementById("isc-branding-style")) return;
+    var oldStyle = document.getElementById("isc-branding-style");
+    if (oldStyle) oldStyle.remove();
 
     var style = document.createElement("style");
     style.id = "isc-branding-style";
+
     style.textContent = `
       #isc-brand-bar {
         position: sticky;
@@ -47,11 +53,11 @@
         text-decoration: underline;
       }
 
-      /* WATERMARK */
+      /* WATERMARK: VISIBLE BUT TRANSPARENT */
       #isc-watermark {
         position: fixed;
         inset: 0;
-        z-index: 2;
+        z-index: 9998;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-template-rows: repeat(8, minmax(0, 1fr));
@@ -67,7 +73,7 @@
         display: block;
         white-space: nowrap;
         transform: rotate(-28deg);
-        color: rgba(18, 52, 90, .085);
+        color: rgba(18, 52, 90, .06);
         font-family: Arial, sans-serif;
         font-size: clamp(10px, 1.4vw, 16px);
         font-weight: 700;
@@ -78,31 +84,34 @@
 
       /* ARTICLE CREDIT */
       .isc-article-credit {
-        display: block;
+        display: block !important;
         clear: both;
         position: relative;
-        z-index: 3;
+        z-index: 10000;
         box-sizing: border-box;
         width: 100%;
-        margin: 26px 0;
-        padding: 7px 10px;
+        margin: 24px 0 !important;
+        padding: 8px 10px;
         text-align: right;
         font-family: Arial, sans-serif;
         font-size: 12px;
-        line-height: 1.5;
+        line-height: 1.6;
         background: transparent;
-        border-top: 1px solid rgba(18, 52, 90, .14);
-        border-bottom: 1px solid rgba(18, 52, 90, .14);
+        border-top: 1px solid rgba(18, 52, 90, .18);
+        border-bottom: 1px solid rgba(18, 52, 90, .18);
       }
 
       .isc-article-credit a {
-        color: #34516e;
+        display: inline-block;
+        color: #34516e !important;
         font-weight: 600;
         text-decoration: underline;
+        visibility: visible !important;
+        opacity: 1 !important;
       }
 
       .isc-article-credit a:hover {
-        color: #b07800;
+        color: #b07800 !important;
       }
 
       @media (max-width: 600px) {
@@ -121,13 +130,13 @@
         }
 
         #isc-watermark span {
-          font-size: 9px;
-          color: rgba(18, 52, 90, .085);
+          font-size: 10px;
+          color: rgba(18, 52, 90, .06);
         }
 
         .isc-article-credit {
-          margin: 20px 0;
-          padding: 6px 4px;
+          margin: 20px 0 !important;
+          padding: 7px 4px;
           font-size: 11px;
         }
       }
@@ -146,9 +155,12 @@
     document.head.appendChild(style);
   }
 
-  /* 2. TOP BRAND BAR */
+  /* =========================================
+     2. TOP BRAND BAR
+  ========================================= */
   function addBrandBar() {
-    if (document.getElementById("isc-brand-bar")) return;
+    var existing = document.getElementById("isc-brand-bar");
+    if (existing) existing.remove();
 
     var bar = document.createElement("div");
     bar.id = "isc-brand-bar";
@@ -165,9 +177,12 @@
     document.body.insertBefore(bar, document.body.firstChild);
   }
 
-  /* 3. WATERMARK */
+  /* =========================================
+     3. WATERMARK
+  ========================================= */
   function addWatermark() {
-    if (document.getElementById("isc-watermark")) return;
+    var existing = document.getElementById("isc-watermark");
+    if (existing) existing.remove();
 
     var layer = document.createElement("div");
     layer.id = "isc-watermark";
@@ -182,37 +197,60 @@
     document.body.appendChild(layer);
   }
 
-  /* 4. FIND ARTICLE */
+  /* =========================================
+     4. FIND MAIN ARTICLE
+  ========================================= */
   function getArticleContainer() {
     return document.querySelector("main.module-content") ||
       document.querySelector("main article") ||
       document.querySelector("article") ||
-      document.querySelector("main") ||
       document.querySelector(".module-content") ||
-      document.querySelector(".article-content");
+      document.querySelector(".article-content") ||
+      document.querySelector("main");
   }
 
-  function getArticleParagraphs(container) {
+  function getParagraphs(container) {
     return Array.from(container.querySelectorAll("p")).filter(
       function (p) {
         return p.textContent.trim().length > 0 &&
           !p.closest(
-            "header, nav, footer, #isc-brand-bar, .isc-article-credit"
+            "header, nav, footer, #isc-brand-bar, " +
+            "#isc-watermark, .isc-article-credit"
           );
       }
     );
   }
 
-  function getSignature(container) {
-    var paragraphs = getArticleParagraphs(container);
-
-    return paragraphs.length + "|" +
-      paragraphs.map(function (p) {
-        return p.textContent.trim();
-      }).join("\u241f");
+  /* =========================================
+     5. NUMBER OF CREDITS
+     Long article: 8 credits
+     Shorter article: fewer, spaced credits
+  ========================================= */
+  function getCreditCount(paragraphCount) {
+    if (paragraphCount >= 14) return 8;
+    if (paragraphCount >= 9) return 6;
+    if (paragraphCount >= 5) return 4;
+    if (paragraphCount >= 2) return 2;
+    return 0;
   }
 
-  /* 5. ADD ARTICLE CREDITS */
+  function createCredit() {
+    var credit = document.createElement("div");
+    credit.className = "isc-article-credit";
+
+    var link = document.createElement("a");
+    link.href = SITE_URL;
+    link.textContent = CREDIT_TEXT;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    credit.appendChild(link);
+    return credit;
+  }
+
+  /* =========================================
+     6. ADD CREDITS TOP, MIDDLE AND BOTTOM
+  ========================================= */
   function addArticleCredits() {
     var container = getArticleContainer();
     if (!container) return;
@@ -223,135 +261,129 @@
       }
     );
 
-    var paragraphs = getArticleParagraphs(container);
+    var paragraphs = getParagraphs(container);
+    var n = paragraphs.length;
+    var totalCredits = getCreditCount(n);
 
-    if (paragraphs.length < 4) return;
+    if (!totalCredits || !n) return;
 
-    /* Maximum 6 credits across the article */
-    var creditCount = Math.min(
-      6,
-      Math.max(1, Math.floor(paragraphs.length / 8))
+    /* TOP CREDIT: before the first article paragraph */
+    paragraphs[0].insertAdjacentElement(
+      "beforebegin",
+      createCredit()
     );
 
-    var indexes = [];
+    /* BOTTOM CREDIT: after the last article paragraph */
+    paragraphs[n - 1].insertAdjacentElement(
+      "afterend",
+      createCredit()
+    );
 
-    for (var i = 1; i <= creditCount; i++) {
+    /* MIDDLE CREDITS: evenly distributed */
+    var middleCount = totalCredits - 2;
+    var selectedIndexes = [];
+
+    for (var i = 1; i <= middleCount; i++) {
       var index = Math.round(
-        (i * paragraphs.length) / (creditCount + 1)
-      ) - 1;
-
-      index = Math.max(
-        1,
-        Math.min(paragraphs.length - 1, index)
+        (i * (n - 1)) / (middleCount + 1)
       );
 
-      if (indexes.indexOf(index) === -1) {
-        indexes.push(index);
+      index = Math.max(1, Math.min(n - 2, index));
+
+      if (selectedIndexes.indexOf(index) === -1) {
+        selectedIndexes.push(index);
       }
     }
 
-    indexes.forEach(function (index) {
+    /* Insert from bottom to top for stable placement */
+    selectedIndexes.sort(function (a, b) {
+      return b - a;
+    });
+
+    selectedIndexes.forEach(function (index) {
       var paragraph = paragraphs[index];
-      if (!paragraph || !paragraph.parentNode) return;
 
-      var credit = document.createElement("div");
-      credit.className = "isc-article-credit";
-
-      var link = document.createElement("a");
-      link.href = SITE_URL;
-      link.textContent = CREDIT_TEXT;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-
-      credit.appendChild(link);
-      paragraph.insertAdjacentElement("afterend", credit);
+      if (paragraph && paragraph.parentNode) {
+        paragraph.insertAdjacentElement(
+          "afterend",
+          createCredit()
+        );
+      }
     });
   }
 
-  /* 6. REFRESH WHEN ARTICLE CONTENT CHANGES */
-  function refreshCreditsIfChanged() {
+  /* =========================================
+     7. DETECT CONTENT CHANGES
+  ========================================= */
+  function getSignature(container) {
+    var paragraphs = getParagraphs(container);
+
+    return paragraphs.length + "|" +
+      paragraphs.map(function (p) {
+        return p.textContent.trim();
+      }).join("\u241f");
+  }
+
+  function refreshCredits() {
     refreshTimer = null;
 
     var container = getArticleContainer();
     if (!container) return;
 
     var signature = getSignature(container);
-    if (signature === lastArticleSignature) return;
+    var expectedCount = getCreditCount(
+      getParagraphs(container).length
+    );
 
-    lastArticleSignature = signature;
+    var currentCount = container.querySelectorAll(
+      ".isc-article-credit"
+    ).length;
+
+    if (
+      signature === lastSignature &&
+      currentCount === expectedCount
+    ) {
+      return;
+    }
+
     addArticleCredits();
+
+    lastSignature = getSignature(container);
   }
 
-  function queueCreditRefresh() {
+  function scheduleRefresh() {
     if (refreshTimer !== null) {
       window.clearTimeout(refreshTimer);
     }
 
-    refreshTimer = window.setTimeout(
-      refreshCreditsIfChanged,
-      300
-    );
+    refreshTimer = window.setTimeout(refreshCredits, 400);
   }
 
-  function watchArticleContent() {
+  function watchArticle() {
     var container = getArticleContainer();
-
     if (!container || !("MutationObserver" in window)) return;
 
-    if (container !== observedContainer) {
-      if (articleObserver) articleObserver.disconnect();
+    if (container === observedContainer && contentObserver) return;
 
-      observedContainer = container;
-      lastArticleSignature = getSignature(container);
+    if (contentObserver) contentObserver.disconnect();
 
-      articleObserver = new MutationObserver(function (mutations) {
-        var relevant = mutations.some(function (mutation) {
-          var target = mutation.target.nodeType === 1
-            ? mutation.target
-            : mutation.target.parentElement;
+    observedContainer = container;
+    lastSignature = getSignature(container);
 
-          if (
-            target &&
-            target.closest &&
-            target.closest(".isc-article-credit")
-          ) {
-            return false;
-          }
+    contentObserver = new MutationObserver(function () {
+      scheduleRefresh();
+    });
 
-          var changedNodes = Array.from(
-            mutation.addedNodes || []
-          ).concat(
-            Array.from(mutation.removedNodes || [])
-          );
-
-          if (
-            changedNodes.length &&
-            changedNodes.every(function (node) {
-              return node.nodeType === 1 &&
-                (
-                  node.matches(".isc-article-credit") ||
-                  node.closest(".isc-article-credit")
-                );
-            })
-          ) {
-            return false;
-          }
-
-          return true;
-        });
-
-        if (relevant) queueCreditRefresh();
-      });
-
-      articleObserver.observe(container, {
-        childList: true,
-        subtree: true,
-        characterData: true
-      });
-    }
+    contentObserver.observe(container, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
   }
 
-  /* 7. INITIALIZE */
+  /* =========================================
+     8. INITIALIZE AND HANDLE LATE-LOADED CONTENT
+  ========================================= */
   function initBranding() {
     if (!document.body || !document.head) return;
 
@@ -359,16 +391,23 @@
     addBrandBar();
     addWatermark();
     addArticleCredits();
-    watchArticleContent();
 
-    /* Detect article containers added later */
+    var container = getArticleContainer();
+    lastSignature = container ? getSignature(container) : "";
+
+    watchArticle();
+
     if ("MutationObserver" in window) {
-      var bodyObserver = new MutationObserver(function () {
+      if (bodyObserver) bodyObserver.disconnect();
+
+      bodyObserver = new MutationObserver(function () {
         var current = getArticleContainer();
 
         if (current && current !== observedContainer) {
-          addArticleCredits();
-          watchArticleContent();
+          watchArticle();
+          scheduleRefresh();
+        } else if (current) {
+          scheduleRefresh();
         }
       });
 
