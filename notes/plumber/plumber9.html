@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 9 – Drainage System (ड्रेनेज सिस्टम) | Plumber Theory | ITI Study Centre</title>
+<meta content="Plumber Module 9 – Drainage System. Inspection chamber, septic tank, drains, cesspool, soak pit, types of traps, layout of drainage system, method of testing drainage lines as per NIMI Plumber Trade Theory." name="description"/>
+<style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Segoe UI',Roboto,Arial,sans-serif;background:#f5f7fb;color:#1e2a3a;line-height:1.8;user-select:none;}
+        .container{max-width:1200px;margin:0 auto;padding:0 22px;}
+
+        .main-header{background:#003366;padding:16px 0;border-bottom:4px solid #ffcc00;}
+        .main-header .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;}
+        .main-header .logo a{color:#fff;font-size:1.5rem;font-weight:700;text-decoration:none;}
+        .main-header nav{display:flex;flex-wrap:wrap;gap:8px 20px;}
+        .main-header nav a{color:#fff;text-decoration:none;font-size:1rem;padding:4px 0;border-bottom:2px solid transparent;transition:0.2s;}
+        .main-header nav a:hover,.main-header nav a.active{border-bottom-color:#ffcc00;color:#ffcc00;}
+
+        .breadcrumb{background:#eef1f5;padding:10px 20px;font-size:0.9rem;border-bottom:1px solid #dde1e7;}
+        .breadcrumb a{color:#003366;text-decoration:none;}
+        .breadcrumb a:hover{text-decoration:underline;}
+        .breadcrumb .current{color:#555;font-weight:600;}
+
+        .page-title{padding:32px 0 22px;text-align:center;}
+        .page-title h1{font-size:2.3rem;color:#003366;letter-spacing:-0.5px;line-height:1.2;}
+        .page-title p{font-size:1.1rem;color:#555;margin-top:6px;}
+
+        .search-section{display:flex;gap:12px;align-items:center;justify-content:center;margin:16px 0 30px;flex-wrap:wrap;}
+        .search-section input{flex:1;max-width:540px;padding:14px 20px;font-size:1rem;border:2px solid #ccc;border-radius:8px;outline:none;transition:0.3s;user-select:text;}
+        .search-section input:focus{border-color:#003366;box-shadow:0 0 0 3px rgba(0,51,102,0.12);}
+        .search-section button{padding:14px 40px;font-size:1.05rem;font-weight:600;background:#003366;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.25s;}
+        .search-section button:hover{background:#002244;transform:scale(1.02);}
+
+        .content-section{background:#fff;border-radius:14px;box-shadow:0 2px 16px rgba(0,0,0,0.05);margin-bottom:32px;border:1px solid #e6eaef;overflow:hidden;}
+        .section-header{padding:20px 28px;background:#f8fafc;border-bottom:2px solid #e6eaef;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+        .section-header .icon{font-size:1.8rem;line-height:1;}
+        .section-header .title{font-size:1.3rem;font-weight:700;color:#003366;letter-spacing:-0.3px;}
+        .section-header .subtitle{font-size:0.85rem;color:#888;font-weight:400;margin-left:8px;}
+        .section-body{padding:28px 32px;background:#fafcff;}
+        .section-body h3{color:#003366;font-size:1.35rem;margin:32px 0 16px;border-left:5px solid #ffcc00;padding-left:18px;}
+        .section-body h3:first-of-type{margin-top:0;}
+        .section-body h4{color:#1e3a5f;font-size:1.12rem;margin:20px 0 10px;}
+
+        .bilingual{margin:14px 0;}
+        .bilingual .content{font-size:1.05rem;line-height:1.9;color:#1a2a3a;}
+        .bilingual .content ul,.bilingual .content ol{padding-left:26px;margin:10px 0;}
+        .bilingual .content ul li,.bilingual .content ol li{margin-bottom:6px;}
+        .bilingual .content p{margin:10px 0;}
+
+        .info-card{border-radius:12px;padding:18px 24px;margin:18px 0;background:#fff;border:1px solid #e8ecf0;box-shadow:0 1px 6px rgba(0,0,0,0.03);}
+        .info-card.blue{border-left:5px solid #003366;background:#f0f5ff;}
+        .info-card.green{border-left:5px solid #28a745;background:#f0faf2;}
+        .info-card.orange{border-left:5px solid #ff9900;background:#fff8e1;}
+        .info-card.purple{border-left:5px solid #6f42c1;background:#f5f0ff;}
+        .info-card.red{border-left:5px solid #dc3545;background:#fdf0f1;}
+        .info-card h4{margin:0 0 6px;color:#003366;}
+        .info-card ul{margin:0;padding-left:22px;}
+        .info-card ul li{margin-bottom:4px;}
+
+        .table-wrap{overflow-x:auto;margin:22px 0;}
+        .table-wrap table{width:100%;border-collapse:collapse;font-size:0.95rem;border-radius:10px;overflow:hidden;box-shadow:0 1px 8px rgba(0,0,0,0.04);}
+        .table-wrap th{background:#003366;color:#fff;padding:13px 18px;text-align:left;font-weight:600;}
+        .table-wrap td{padding:11px 18px;border-bottom:1px solid #e9ecef;}
+        .table-wrap tr:nth-child(even){background:#f8f9fc;}
+        .table-wrap tr:hover{background:#eef2f7;}
+        .table-wrap caption{caption-side:top;font-weight:700;font-size:1.05rem;color:#003366;margin-bottom:12px;text-align:left;}
+
+        .example-box{background:#e8f4fd;border-left:5px solid #003366;padding:18px 24px;border-radius:8px;margin:18px 0;}
+        .example-box strong{color:#003366;}
+        .important-box{background:#fff8e1;border-left:5px solid #ffc107;padding:18px 24px;border-radius:8px;margin:18px 0;}
+        .important-box h4{margin:0 0 6px;color:#856404;}
+        .important-box ul{padding-left:22px;margin:0;}
+        .short-notes{background:#d4edda;border-left:5px solid #28a745;padding:18px 24px;border-radius:8px;margin:18px 0;}
+        .short-notes h4{margin:0 0 6px;color:#1e7e34;}
+        .short-notes ul{padding-left:22px;margin:0;}
+        .warning-box{background:#fff5f2;border-left:5px solid #dc3545;padding:16px 22px;border-radius:8px;margin:16px 0;}
+        .warning-box h4{margin:0 0 6px;color:#b02a37;}
+        .warning-box p{margin:0;}
+
+        .tool-figure{width:100%;max-width:850px;margin:24px auto;text-align:center;background:#f8fafc;border:1px solid #e2e7ed;border-radius:12px;padding:20px;transition:0.2s;}
+        .tool-figure:hover{background:#f0f4fa;}
+        .tool-figure .placeholder-icon{font-size:3.5rem;line-height:1.2;color:#8a9aa8;margin-bottom:6px;}
+        .tool-figure .figure-caption{font-size:0.95rem;color:#555;font-weight:600;margin-top:8px;}
+        .tool-figure .image-placeholder{display:block;min-height:120px;background:#f0f4fa;border:2px dashed #c7ced7;border-radius:8px;padding:18px;color:#68717c;}
+        .tool-figure .image-placeholder code{background:#e7ebef;padding:3px 8px;border-radius:4px;font-size:0.8rem;display:inline-block;margin:4px 0;}
+
+        .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:20px 0;}
+        .compare-card{padding:20px 24px;border-radius:12px;border:2px solid #e6eaef;background:#fff;}
+        .compare-card h4{font-size:1.1rem;margin:0 0 10px;color:#003366;}
+        .compare-card ul{padding-left:20px;margin:0;}
+        .compare-card ul li{margin-bottom:5px;font-size:0.95rem;}
+
+        .share-section{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0 22px;padding:14px 20px;background:#f8fafc;border-radius:12px;border:1px solid #e6eaef;}
+        .share-section .share-label{font-weight:600;color:#1e3a5f;font-size:0.95rem;margin-right:6px;}
+        .share-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 20px;border-radius:8px;border:none;font-weight:600;font-size:0.9rem;cursor:pointer;color:#fff;text-decoration:none;}
+        .share-btn:hover{transform:scale(1.04);opacity:0.9;}
+        .share-btn.whatsapp{background:#25d366;}
+        .share-btn.facebook{background:#1877f2;}
+        .share-btn.twitter{background:#1da1f2;}
+        .share-btn.link{background:#6c757d;}
+        .share-btn.link.copied{background:#28a745;}
+        .share-btn svg{width:18px;height:18px;fill:currentColor;}
+
+        .module-navigation{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin:24px 0;padding:14px 20px;background:#fff;border-radius:12px;border:1px solid #e6eaef;}
+        .module-navigation a{display:inline-block;padding:10px 22px;background:#003366;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:0.95rem;transition:0.3s;}
+        .module-navigation a:hover{background:#002244;transform:scale(1.02);}
+
+        .mcq-link{text-align:center;padding:12px 0;}
+        .mcq-link a{display:inline-block;padding:14px 44px;background:#ffcc00;color:#003366 !important;border-radius:8px;font-weight:700;font-size:1.1rem;text-decoration:none;transition:0.3s;}
+        .mcq-link a:hover{background:#e6b800;transform:scale(1.03);}
+        .mcq-link p{margin:10px 0 0;color:#888;font-size:0.9rem;}
+
+        .conclusion-section{background:#e8f4fd;border:2px solid #003366;border-radius:14px;padding:28px 32px;margin:32px 0;}
+        .conclusion-section h2{color:#003366;font-size:1.6rem;border-left:5px solid #ffcc00;padding-left:16px;margin-bottom:16px;}
+        .conclusion-section ul{padding-left:26px;margin:10px 0;}
+        .conclusion-section ul li{margin-bottom:6px;}
+
+        footer{background:#1a2634;color:#b0b8c5;padding:28px 20px;text-align:center;margin-top:48px;border-top:4px solid #003366;}
+        footer .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 28px;margin-bottom:14px;}
+        footer .footer-links a{color:#b0b8c5;text-decoration:none;font-size:0.9rem;transition:0.2s;}
+        footer .footer-links a:hover{color:#fff;}
+        footer p{margin:8px 0 0;font-size:0.85rem;color:#7a8494;}
+
+        #scrollTop{position:fixed;bottom:24px;right:24px;background:#003366;color:#fff;border:none;padding:12px 18px;border-radius:8px;cursor:pointer;font-size:1.2rem;box-shadow:0 4px 12px rgba(0,0,0,0.15);display:none;z-index:999;}
+        #scrollTop:hover{background:#002244;transform:scale(1.05);}
+
+        .copy-protect::selection{background:#b3d4fc;color:#000;}
+
+        @media(max-width:768px){
+            .section-header{padding:14px 18px;}
+            .section-header .title{font-size:1.05rem;}
+            .section-body{padding:18px 18px;}
+            .section-body h3{font-size:1.1rem;padding-left:12px;}
+            .page-title h1{font-size:1.7rem;}
+            .compare-grid{grid-template-columns:1fr;}
+        }
+        @media(max-width:480px){
+            .section-body{padding:14px 14px;}
+            .section-header .icon{font-size:1.4rem;}
+            .section-header .title{font-size:0.95rem;}
+            .bilingual .content{font-size:0.95rem;}
+            .page-title h1{font-size:1.4rem;}
+        }
+        @media print{
+            #scrollTop,.share-section,.search-section{display:none !important;}
+            body{background:#fff !important;}
+            .content-section{box-shadow:none !important;border:1px solid #ddd !important;break-inside:avoid;}
+            .section-body{background:#fff !important;}
+        }
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<script defer src="/js/header-loader.js"></script>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>  › 
+            <a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+            <a href="/notes/plumber/index.html">Plumber Theory</a>  › 
+            <span class="current">Module 9 – Drainage System</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>🚰 Module 9 – Drainage System (ड्रेनेज सिस्टम)</h1>
+<p>निरीक्षण कक्ष · सेप्टिक टैंक · नालियाँ · सेसपूल · सोक पिट · ट्रैप के प्रकार · जल निकासी लाइनों का परीक्षण</p>
+</div>
+</section>
+
+<div class="container">
+<div class="module-navigation">
+<a href="/notes/plumber/plumber8.html">← Module 8</a>
+<a href="/notes/plumber/index.html">📚 All Modules</a>
+<a href="/notes/plumber/plumber10.html">Module 10 →</a>
+</div>
+</div>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()">🔍 Search</button>
+</section>
+
+<div class="container">
+<div class="share-section">
+<span class="share-label">📤 Share:</span>
+<button class="share-btn whatsapp" onclick="shareWhatsApp()">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+WhatsApp
+</button>
+<button class="share-btn facebook" onclick="shareFacebook()">
+<svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+Facebook
+</button>
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+Twitter
+</button>
+<button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
+<svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+<span id="copyLinkText">Copy Link</span>
+</button>
+</div>
+</div>
+
+<!-- ===== TOC ===== -->
+<div class="container">
+<div class="content-section" style="border:2px solid #003366;">
+<div class="section-header" style="background:#003366;border-bottom:none;">
+<span class="icon" style="color:#ffcc00;">📚</span>
+<span class="title" style="color:#fff;">विषय-सूची – Module 9 (Drainage System)</span>
+</div>
+<div class="section-body" style="background:#fff;">
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:6px 14px;">
+<a href="#sec-inspection" style="color:#003366;text-decoration:none;padding:6px 10px;border-radius:6px;background:#f0f5ff;font-weight:500;">🔍 निरीक्षण कक्ष (Inspection Chamber)</a>
+<a href="#sec-septic" style="color:#003366;text-decoration:none;padding:6px 10px;border-radius:6px;background:#f0f5ff;font-weight:500;">🏭 सेप्टिक टैंक (Septic Tank)</a>
+<a href="#sec-soakpit" style="color:#003366;text-decoration:none;padding:6px 10px;border-radius:6px;background:#f0f5ff;font-weight:500;">🕳️ सोक पिट और सेसपूल</a>
+<a href="#sec-traps" style="color:#003366;text-decoration:none;padding:6px 10px;border-radius:6px;background:#f0f5ff;font-weight:500;">🔧 ट्रैप के प्रकार (Types of Traps)</a>
+<a href="#sec-layout" style="color:#003366;text-decoration:none;padding:6px 10px;border-radius:6px;background:#f0f5ff;font-weight:500;">📐 जल निकासी का लेआउट</a>
+<a href="#sec-testing" style="color:#003366;text-decoration:none;padding:6px 10px;border-radius:6px;background:#f0f5ff;font-weight:500;">🧪 जल निकासी लाइनों का परीक्षण</a>
+<a href="#sec-drains" style="color:#003366;text-decoration:none;padding:6px 10px;border-radius:6px;background:#f0f5ff;font-weight:500;">🛤️ नालियाँ (Drains)</a>
+<a href="#sec-bending" style="color:#003366;text-decoration:none;padding:6px 10px;border-radius:6px;background:#f0f5ff;font-weight:500;">🔄 पाइप बेंडिंग (Hot & Cold Method)</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== SECTION 1: INSPECTION CHAMBER ===== -->
+<div class="container" id="sec-inspection">
+<div class="content-section" data-content="inspection">
+<div class="section-header"><span class="icon">🔍</span><span class="title">निरीक्षण कक्ष (Inspection Chamber)</span><span class="subtitle">— परिभाषा, निर्माण, स्थिति</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<h3>निरीक्षण कक्ष (Inspection Chamber)</h3>
+<p><strong>निरीक्षण कक्ष</strong> किसी भी भवन जल निकासी प्रणाली में एक <strong>जलरोधी कक्ष (Water-tight Chamber)</strong> है जो अपशिष्ट गली जाल / मिट्टी के पाइप लेता है और निरीक्षण और रखरखाव के लिए मैनहोल पहुंच का निपटान करता है।</p>
+
+<h3>मुख्य विशेषताएँ (Key Features)</h3>
+<ul>
+<li>निरीक्षण कक्ष भवन के <strong>गली ट्रैप/मिट्टी की पाइप लाइनों के बहुत पास</strong> उपलब्ध कराया गया है।</li>
+<li>इसे गली ट्रैप से <strong>6 मीटर के भीतर</strong> उपलब्ध कराया जाना चाहिए।</li>
+<li>निरीक्षण कक्ष का मुख्य उद्देश्य:
+<ul>
+<li>जल निकासी लाइनों का निरीक्षण करना।</li>
+<li>रुकावट होने पर सफाई करना।</li>
+<li>लाइनों की जाँच और रखरखाव करना।</li>
+<li>अपशिष्ट पदार्थों को एकत्र करना और आगे भेजना।</li>
+</ul>
+</li>
+</ul>
+
+<h3>निर्माण सामग्री (Construction Materials)</h3>
+<ul>
+<li>निरीक्षण कक्ष का निर्माण <strong>ईंट की चिनाई (Brick Masonry)</strong> या <strong>कंक्रीट (Concrete)</strong> से किया जाता है।</li>
+<li>इसकी दीवारें जलरोधी होनी चाहिए।</li>
+<li>तल पर <strong>कंक्रीट का बेस</strong> बनाया जाता है।</li>
+<li>ऊपर <strong>मैनहोल कवर (Manhole Cover)</strong> प्रदान किया जाता है।</li>
+<li>मैनहोल कवर <strong>C.I. (Cast Iron)</strong> या <strong>R.C.C. (Reinforced Cement Concrete)</strong> का होता है।</li>
+</ul>
+
+<h3>निरीक्षण कक्ष के प्रकार (Types of Inspection Chambers)</h3>
+<ol>
+<li><strong>शैलो निरीक्षण कक्ष (Shallow Inspection Chamber):</strong> छोटी गहराई के लिए, आमतौर पर 60-90 सेमी।</li>
+<li><strong>डीप निरीक्षण कक्ष (Deep Inspection Chamber):</strong> बड़ी गहराई के लिए, सीढ़ी या स्टेप्स के साथ।</li>
+<li><strong>गली ट्रैप चैंबर (Gully Trap Chamber):</strong> गली ट्रैप के चारों ओर बनाया गया कक्ष।</li>
+</ol>
+
+<h3>निरीक्षण कक्ष की स्थिति (Location of Inspection Chamber)</h3>
+<ul>
+<li>भवन की बाहरी दीवार के पास।</li>
+<li>जहां पाइप लाइन की दिशा बदलती है।</li>
+<li>जहां दो या अधिक पाइप लाइनें मिलती हैं।</li>
+<li>जहां पाइप का व्यास बदलता है।</li>
+<li>प्रत्येक 30-50 मीटर की दूरी पर सीधी लाइन में।</li>
+<li>सार्वजनिक सीवर से जोड़ने से पहले।</li>
+</ul>
+
+<h3>निरीक्षण कक्ष की विशेषताएँ (Specifications)</h3>
+<div class="table-wrap">
+<table>
+<caption>निरीक्षण कक्ष के सामान्य आयाम</caption>
+<thead><tr><th>विवरण</th><th>आयाम</th></tr></thead>
+<tbody>
+<tr><td>न्यूनतम आंतरिक आकार</td><td>600 × 600 mm</td></tr>
+<tr><td>न्यूनतम गहराई</td><td>900 mm</td></tr>
+<tr><td>दीवार की मोटाई</td><td>200 mm (ईंट की चिनाई)</td></tr>
+<tr><td>तल की मोटाई</td><td>150 mm (कंक्रीट)</td></tr>
+<tr><td>मैनहोल कवर का व्यास</td><td>560 mm (न्यूनतम)</td></tr>
+<tr><td>ढलान (Slope)</td><td>1:60 से 1:100</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: निरीक्षण कक्ष</strong></p>
+<p>स्थान: /images/notes/plumber/module-9/inspection_chamber.jpg</p>
+<code>inspection_chamber.jpg</code>
+<p style="font-size:0.8rem;color:#888;">(Inspection Chamber Plan, Section, Manhole Cover)</p>
+</div>
+<div class="figure-caption">Fig 1 – निरीक्षण कक्ष</div>
+</div>
+
+<div class="important-box">
+<h4>📌 परीक्षा फोकस</h4>
+<ul>
+<li>Inspection Chamber: Water-tight chamber</li>
+<li>गली ट्रैप से दूरी: 6 मीटर के भीतर</li>
+<li>Manhole Cover: C.I. या R.C.C.</li>
+<li>Minimum Size: 600 × 600 mm</li>
+<li>Manhole Cover Diameter: 560 mm (न्यूनतम)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== SECTION 2: SEPTIC TANK ===== -->
+<div class="container" id="sec-septic">
+<div class="content-section" data-content="septic">
+<div class="section-header"><span class="icon">🏭</span><span class="title">सेप्टिक टैंक (Septic Tank)</span><span class="subtitle">— परिभाषा, निर्माण, महत्वपूर्ण बिंदु, बहिःस्राव निपटान</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<h3>सेप्टिक टैंक (Septic Tank)</h3>
+<p>जहां नगरपालिका सीवेज सिस्टम नहीं है वहां <strong>सेप्टिक टैंक</strong> उपलब्ध कराए जाते हैं।</p>
+<ul>
+<li><strong>300 या उससे कम आबादी</strong> वाले अलग-अलग घरों और छोटी कॉलोनियों के लिए सेप्टिक टैंक की सिफारिश की जाती है।</li>
+<li>सेप्टिक टैंक का निर्माण <strong>ईंट/पत्थर की चिनाई</strong> या <strong>कंक्रीट की दीवारों</strong> से किया जाता है।</li>
+</ul>
+
+<h3>महत्वपूर्ण बिंदु (Important Points)</h3>
+<ol>
+<li><strong>इनलेट और आउटलेट पाइप को नीचे की ओर मोड़ना है।</strong></li>
+<li>आउटलेट पाइप का केंद्र इनलेट पाइप के केंद्र से <strong>5 से 7 सेमी नीचे</strong> होना चाहिए।</li>
+<li>अत्यधिक डिटर्जेंट और कीटाणुनाशक ले जाने वाली अपशिष्ट जल लाइनों को सेप्टिक टैंक से नहीं जोड़ा जाना चाहिए।</li>
+<li>कवरिंग स्लैब (न्यूनतम - <strong>100 मिमी</strong>) पर एक <strong>वेंट पाइप</strong> (CI/AC/PVC) प्रदान किया जाना चाहिए।</li>
+</ol>
+
+<h3>सेप्टिक टैंक का निर्माण विवरण (Construction Details)</h3>
+<ul>
+<li>यह योजना में <strong>आयताकार</strong> है, लंबाई आमतौर पर चौड़ाई से <strong>2 से 4 गुना</strong> अधिक होती है।</li>
+<li>छोटे टैंकों के लिए <strong>100 सेमी की तरल गहराई</strong> परदान की जाती है, बड़े टैंकों के लिए यह <strong>180 सेमी</strong> तक हो सकती है।</li>
+<li>पाइप, मैल, गैस आदि को ठीक करने के लिए तरल के स्तर से ऊपर <strong>30-45 सेमी का मुफ्त बोर्ड</strong> प्रदान किया जाता है।</li>
+<li>एक कोहनी पाइप, आमतौर पर तरल स्तर से नीचे <strong>15-25 सेमी की गहराई</strong> तक डूबा हुआ <strong>टी-पाइप इनलेट पाइप</strong> के रूप में प्रदान किया जाता है।</li>
+<li>बड़े टैंकों के लिए अधिक संख्या में इनलेट पाइप उपलब्ध कराए जा सकते हैं।</li>
+<li><strong>सिंगल एल्बो या टी-आकार का आउटलेट पाइप</strong> दिया गया है।</li>
+<li>यह भी तरल स्तर से कम से कम <strong>15 सेमी नीचे</strong> डूबा होना चाहिए।</li>
+<li>बहुत बड़े टैंकों के लिए, बसने वाले टैंकों के समान <strong>वियर टाइप आउटलेट</strong> प्रदान किए जाते हैं।</li>
+<li>आमतौर पर <strong>आर.सी.सी. सीआई के साथ स्लैब मैनहोल कवर</strong> दिए गए हैं।</li>
+<li>आमतौर पर <strong>एसी या सीआई के 10 सेमी व्यास के वेंटिलेशन पाइप</strong> का उपयोग दुर्गंध को बाहर निकालने के लिए किया जाता है।</li>
+<li>उनके शीर्ष को <strong>काउल (Cowl)</strong> के साथ प्रदान किया जाता है।</li>
+</ul>
+
+<h3>सेप्टिक टैंक का आकार (Septic Tank Size)</h3>
+<div class="table-wrap">
+<table>
+<caption>सेप्टिक टैंक के आकार (घरेलू उद्देश्य के लिए)</caption>
+<thead><tr><th>उपयोगकर्ता</th><th>टैंक का आकार (L × W × D)</th><th>क्षमता</th></tr></thead>
+<tbody>
+<tr><td>5 व्यक्ति</td><td>1.5 m × 0.75 m × 1.0 m</td><td>1.1 m³</td></tr>
+<tr><td>10 व्यक्ति</td><td>2.0 m × 1.0 m × 1.0 m</td><td>2.0 m³</td></tr>
+<tr><td>15 व्यक्ति</td><td>2.5 m × 1.0 m × 1.2 m</td><td>3.0 m³</td></tr>
+<tr><td>20 व्यक्ति</td><td>3.0 m × 1.2 m × 1.2 m</td><td>4.3 m³</td></tr>
+<tr><td>25 व्यक्ति</td><td>3.5 m × 1.5 m × 1.2 m</td><td>6.3 m³</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>सेप्टिक टैंक का कार्य (Working of Septic Tank)</h3>
+<ul>
+<li>सीवेज का सेप्टिक टैंक में उपचार किया जाता है।</li>
+<li><strong>अवायवीय जीवाणु (Anaerobic Bacteria)</strong> कार्बनिक पदार्थों को विघटित करते हैं।</li>
+<li>ठोस पदार्थ तल पर जमा हो जाते हैं (Sludge)।</li>
+<li>हल्के पदार्थ ऊपर तैरते हैं (Scum)।</li>
+<li>बीच में साफ पानी रहता है जो आउटलेट से बाहर निकलता है।</li>
+<li>यह प्रक्रिया <strong>धीमी</strong> होती है, इसलिए टैंक में पानी को कुछ समय रुकने दिया जाता है (Detention Time – लगभग 24 घंटे)।</li>
+</ul>
+
+<div class="warning-box">
+<h4>⚠️ महत्वपूर्ण</h4>
+<p>बहिःस्राव अर्थात अपशिष्ट जल में अभी भी विषैला हो सकता है और बहिःस्राव को <strong>सुरक्षित नहीं माना जा सकता है</strong>। इसलिए सेप्टिक टैंक के अपशिष्टों का निपटान मृदा अवशोषण प्रणाली द्वारा किया जाता है।</p>
+</div>
+
+<h3>बहिःस्राव के निपटान की विधियाँ (Disposal Methods)</h3>
+<ol>
+<li><strong>सोक पिट (Soak Pit):</strong> सीपेज पिट के माध्यम से।</li>
+<li><strong>लीचिंग सेसपूल (Leaching Cesspool):</strong> अपशिष्ट को भिगोने के लिए।</li>
+<li><strong>डिस्पोजल ट्रेंच (Disposal Trench):</strong> वितरण नाली के माध्यम से।</li>
+<li><strong>सेप्टिक टैंक + प्लांट:</strong> उन्नत उपचार प्रणाली।</li>
+</ol>
+
+<h3>सेप्टिक टैंक की सफाई (Cleaning of Septic Tank)</h3>
+<ul>
+<li>टैंक की सफाई <strong>हर 1-3 साल</strong> में की जानी चाहिए।</li>
+<li>सफाई के दौरान <strong>सुरक्षा उपाय</strong> आवश्यक हैं:
+<ul>
+<li>गैस मास्क या श्वसन यंत्र।</li>
+<li>रबर के दस्ताने और बूट।</li>
+<li>पर्याप्त वेंटिलेशन।</li>
+<li>कोई खुली लौ नहीं।</li>
+<li>अकेले काम न करें।</li>
+</ul>
+</li>
+<li>निकाले गए कीचड़ (Sludge) का उचित निपटान किया जाना चाहिए।</li>
+</ul>
+</div>
+</div>
+
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: सेप्टिक टैंक</strong></p>
+<p>स्थान: /images/notes/plumber/module-9/septic_tank.jpg</p>
+<code>septic_tank.jpg</code>
+<p style="font-size:0.8rem;color:#888;">(Septic Tank Plan, Section, Inlet/Outlet Arrangement)</p>
+</div>
+<div class="figure-caption">Fig 2 – सेप्टिक टैंक</div>
+</div>
+
+<div class="important-box">
+<h4>📌 परीक्षा फोकस</h4>
+<ul>
+<li>Septic Tank: 300 या कम आबादी के लिए</li>
+<li>आउटलेट केंद्र: इनलेट से 5-7 सेमी नीचे</li>
+<li>टैंक का आकार: L × W × D, लंबाई चौड़ाई से 2-4 गुना</li>
+<li>तरल गहराई: 100-180 सेमी</li>
+<li>Free Board: 30-45 सेमी</li>
+<li>Inlet Pipe: तरल स्तर से 15-25 सेमी नीचे डूबा</li>
+<li>Vent Pipe: AC या CI, 10 सेमी व्यास, Cowl के साथ</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== SECTION 3: SOAK PIT & CESSPOOL ===== -->
+<div class="container" id="sec-soakpit">
+<div class="content-section" data-content="soakpit">
+<div class="section-header"><span class="icon">🕳️</span><span class="title">सोक पिट और सेसपूल (Soak Pit & Cesspool)</span><span class="subtitle">— परिभाषा, निर्माण, विधियाँ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<h3>सोक पिट / भिगोना पिट (Soak Pit)</h3>
+<p>इसे <strong>सीपेज पिट (Seepage Pit)</strong> के नाम से भी जाना जाता है।</p>
+<ul>
+<li>ये एक <strong>मीटर से अधिक व्यास</strong> और इनलेट पाइप के उल्टे नीचे <strong>1 मीटर गहराई</strong> में गोलाकार गड्ढे हैं।</li>
+<li>इन गड्ढों को <strong>सूखी ईंटों या पत्थर</strong> से पंक्तिबद्ध किया जाता है।</li>
+<li>और ईंट-चमगादड़ या मोटे समुच्चय से <strong>7.5 सेमी से अधिक आकार</strong> के होते हैं।</li>
+<li>बड़े गड्ढों के मामले में <strong>आर.सी.सी. ढकना</strong>।</li>
+</ul>
+
+<h3>सोक पिट का निर्माण (Construction of Soak Pit)</h3>
+<ol>
+<li><strong>गड्ढे की खुदाई:</strong> 1-1.5 मीटर व्यास और 1-1.5 मीटर गहराई में।</li>
+<li><strong>तल:</strong> तल पर कंकड़ या मोटे समुच्चय की परत।</li>
+<li><strong>दीवारें:</strong> सूखी ईंटों या पत्थर से बनी होती हैं, जिनमें जोड़ खुले रहते हैं।</li>
+<li><strong>भराई:</strong> गड्ढे को मोटे समुच्चय (कंकड़) से भरा जाता है।</li>
+<li><strong>इनलेट:</strong> सेप्टिक टैंक के आउटलेट से जोड़ा जाता है।</li>
+<li><strong>ढकना:</strong> ऊपर से R.C.C. ढक्कन से ढका जाता है।</li>
+</ol>
+
+<h3>सोक पिट की कार्यप्रणाली (Working)</h3>
+<ul>
+<li>सेप्टिक टैंक से निकला अपशिष्ट जल सोक पिट में आता है।</li>
+<li>पानी गड्ढे की दीवारों और तल से मिट्टी में रिसता है।</li>
+<li><strong>मृदा अवशोषण (Soil Absorption)</strong> प्रक्रिया द्वारा पानी साफ हो जाता है।</li>
+<li>ठोस पदार्थ गड्ढे में रह जाते हैं।</li>
+</ul>
+
+<h3>लीचिंग सेसपूल (Leaching Cesspool)</h3>
+<p>सेसपूल का उपयोग सेप्टिक टैंकों के अपशिष्ट को भिगोने के लिए किया जा सकता है।</p>
+<ul>
+<li>इस सेसपूल में सीवेज और कीचड़ को बनाए रखने के लिए <strong>तल को पानी से तंग (Water-tight)</strong> किया जाता है।</li>
+<li>जबकि <strong>ऊपरी हिस्से को खुले जोड़ों</strong> के साथ प्रदान किया जाता है जहां से अपशिष्ट आसपास की मिट्टी में फैल जाता है।</li>
+<li>खुली संयुक्त परत <strong>4-5 सेमी आकार के 15 सेमी मोटे समुच्चय</strong> से घिरी होती है।</li>
+<li>और मिट्टी में सतह पर तैरनेवाला प्रवाह के बेहतर वितरण के लिए <strong>30 सेमी मोटी रेत का बाहरी आवरण</strong> भी प्रदान किया जाता है।</li>
+</ul>
+
+<h3>सोक पिट और सेसपूल में अंतर</h3>
+<div class="compare-grid">
+<div class="compare-card" style="border-color:#003366;background:#f0f5ff;">
+<h4>🔵 सोक पिट (Soak Pit)</h4>
+<ul>
+<li>पूरा गड्ढा खुला/झरझरा होता है</li>
+<li>दीवारें खुली ईंट/पत्थर की होती हैं</li>
+<li>तल से भी पानी रिसता है</li>
+<li>छोटे क्षेत्र के लिए उपयुक्त</li>
+<li>सरल निर्माण</li>
+<li>मृदा अवशोषण प्रणाली</li>
+</ul>
+</div>
+<div class="compare-card" style="border-color:#ff9900;background:#fff8e1;">
+<h4>🟠 लीचिंग सेसपूल</h4>
+<ul>
+<li>तल water-tight होता है</li>
+<li>ऊपरी हिस्सा खुले जोड़ों वाला</li>
+<li>अपशिष्ट आसपास की मिट्टी में फैलता है</li>
+<li>बड़े क्षेत्र के लिए उपयुक्त</li>
+<li>समुच्चय और रेत की परत आवश्यक</li>
+<li>सीवेज और कीचड़ अंदर रहते हैं</li>
+</ul>
+</div>
+</div>
+
+<h3>सोक पिट के लाभ (Advantages of Soak Pit)</h3>
+<ul>
+<li>सरल और सस्ता निर्माण।</li>
+<li>कोई यांत्रिक उपकरण की आवश्यकता नहीं।</li>
+<li>भूजल स्तर को पुनर्भरण करता है।</li>
+<li>छोटे घरों और ग्रामीण क्षेत्रों के लिए उपयुक्त।</li>
+<li>रखरखाव कम।</li>
+</ul>
+
+<h3>सोक पिट के नुकसान (Disadvantages)</h3>
+<ul>
+<li>अनुपयुक्त मिट्टी में काम नहीं करता।</li>
+<li>समय के साथ गड्ढा भर सकता है।</li>
+<li>भूजल प्रदूषण का खतरा।</li>
+<li>बड़े क्षेत्र की आवश्यकता।</li>
+<li>कीटाणुओं का खतरा।</li>
+</ul>
+
+<h3>सोक पिट की देखभाल (Maintenance)</h3>
+<ul>
+<li>नियमित रूप से निरीक्षण करें।</li>
+<li>यदि रिसाव कम हो जाए तो सफाई करें।</li>
+<li>ठोस पदार्थ जमा होने पर निकालें।</li>
+<li>मच्छरों और मक्खियों को रोकें।</li>
+<li>बारिश का पानी सीधे न डालें।</li>
+</ul>
+</div>
+</div>
+
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: सोक पिट और लीचिंग सेसपूल</strong></p>
+<p>स्थान: /images/notes/plumber/module-9/soak_pit.jpg</p>
+<code>soak_pit.jpg</code>
+<p style="font-size:0.8rem;color:#888;">(Soak Pit Section, Leaching Cesspool, Construction)</p>
+</div>
+<div class="figure-caption">Fig 3 – सोक पिट और लीचिंग सेसपूल</div>
+</div>
+
+<div class="important-box">
+<h4>📌 परीक्षा फोकस</h4>
+<ul>
+<li>Soak Pit: 1 मीटर से अधिक व्यास, 1 मीटर गहराई</li>
+<li>Leaching Cesspool: तल water-tight, ऊपरी हिस्सा खुला</li>
+<li>Soak Pit में: सूखी ईंटें/पत्थर + मोटे समुच्चय</li>
+<li>Leaching Cesspool: 15 सेमी मोटा समुच्चय + 30 सेमी रेत</li>
+<li>Soak Pit: मृदा अवशोषण प्रणाली</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== SECTION 4: TYPES OF TRAPS ===== -->
+<div class="container" id="sec-traps">
+<div class="content-section" data-content="traps">
+<div class="section-header"><span class="icon">🔧</span><span class="title">ट्रैप के प्रकार (Types of Traps)</span><span class="subtitle">— P, Q, S Trap, Floor Trap, Gully Trap, Intercepting Trap</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<h3>ट्रैप की परिभाषा (Definition of Trap)</h3>
+<p><strong>ट्रैप</strong> को फिटिंग के रूप में परिभाषित किया जा सकता है, जिसे पाइप से बाहर की ओर जाने वाली गैसों के मार्ग को रोकने के लिए मिट्टी के पाइप या सुलेज पाइप (अपशिष्ट पाइप) के सिरों पर रखा जाता है।</p>
+<ul>
+<li>यह संभव है क्योंकि जाल पाइप और बाहर के बीच पानी की सील को बंद या बनाए रखता है।</li>
+<li>यह पानी की गहराई गैसों को पाइप के बाहर तक नहीं जाने देती है।</li>
+<li>जाल की दक्षता और प्रभावशीलता पानी की सील की गहराई पर निर्भर करेगी।</li>
+<li>यह गहराई जितनी अधिक होगी, जाल उतना ही प्रभावी होगा।</li>
+<li>यह पानी की सील आम तौर पर <strong>25 mm से 75 mm</strong> तक भिन्न होती है, अधिकांश जाल में <strong>50 मिमी</strong> शांत आम है।</li>
+</ul>
+
+<h3>अच्छे ट्रैप के गुण (Qualities of a Good Trap)</h3>
+<ol>
+<li>इसे बड़े सतह क्षेत्र के साथ पर्याप्त पानी की सील <strong>(50 मिमी)</strong> प्रदान करनी चाहिए।</li>
+<li>इसका आंतरिक भाग <strong>चिकना</strong> होना चाहिए ताकि प्रवाह में बाधा न हो और जाल स्वयं सफाई वाला होना चाहिए।</li>
+<li>इसमें सफाई के लिए एक <strong>प्रवेश द्वार (Access Door)</strong> प्रदान किया जाना चाहिए।</li>
+<li>यह किसी <strong>गैर शोषक सामग्री (Non-Absorbent Material)</strong> से बना होना चाहिए।</li>
+<li>इसे आसानी से साफ किया जा सके।</li>
+</ol>
+
+<h3>ट्रैप की पानी की सील टूट सकती है (Water Seal Break Conditions)</h3>
+<p>ट्रैप की पानी की सील निम्नलिखित परिस्थितियों में टूट सकती है:</p>
+<ol>
+<li>यदि सील के तल में कोई दरार है या जोड़ खराब है।</li>
+<li>यदि लंबे समय तक सील उपयोग में नहीं है, तो इसका पानी वातावरण में वाष्पित हो जाएगा।</li>
+<li>यदि रुकावट या किसी अन्य कारण से सीवर गैसों का दबाव बढ़ जाता है तो यह सील के पानी से होकर गुजरेगा।</li>
+<li>यदि सीवर फिटिंग में आंशिक वैक्यूम बनाया जाता है, तो यह सील के पानी को सोख लेगा। इस कारण से टूटने से बचने के लिए, जाल और मिट्टी के पाइप के बीच के हिस्से को <strong>वेंट पाइप</strong> से जोड़ा जाना चाहिए।</li>
+</ol>
+
+<h3>ट्रैप के प्रकार - आकार के अनुसार (By Shape)</h3>
+<p>उनके आकार के आधार पर, ट्रैप तीन प्रकार के हो सकते हैं:</p>
+<ol>
+<li><strong>P ट्रैप (P Trap):</strong> P-आकार का।</li>
+<li><strong>Q ट्रैप (Q Trap):</strong> Q-आकार का।</li>
+<li><strong>S ट्रैप (S Trap):</strong> S-आकार का।</li>
+</ol>
+
+<h3>P ट्रैप (P Trap)</h3>
+<ul>
+<li>P-ट्रैप का उपयोग वाटर क्लोसेट सॉइल डिस्चार्ज के लिए किया जाता है।</li>
+<li>इसका आकार 'P' अक्षर जैसा होता है।</li>
+<li>इसमें <strong>50 मिमी पानी की सील</strong> होती है।</li>
+<li>यह एक <strong>horizontal outlet</strong> होता है जिसे दीवार या फर्श से बाहर ले जाया जाता है।</li>
+</ul>
+
+<h3>Q ट्रैप (Q Trap)</h3>
+<ul>
+<li>Q-ट्रैप 'Q' अक्षर के आकार का होता है।</li>
+<li>यह P-ट्रैप का एक प्रकार है।</li>
+<li>इसमें <strong>एक लंबा horizontal आउटलेट</strong> होता है।</li>
+<li>इसका उपयोग किचन सिंक, वॉश बेसिन आदि में किया जाता है।</li>
+</ul>
+
+<h3>S ट्रैप (S Trap)</h3>
+<ul>
+<li>S-ट्रैप 'S' अक्षर के आकार का होता है।</li>
+<li>यह <strong>vertical outlet</strong> के लिए उपयुक्त है।</li>
+<li>इसमें <strong>50 मिमी पानी की सील</strong> होती है।</li>
+<li>S-ट्रैप का उपयोग पुराने plumbing में किया जाता था, लेकिन अब कम उपयोग किया जाता है क्योंकि यह <strong>साइफोनेज (Siphonage)</strong> के लिए ज्यादा उत्तरदायी है।</li>
+</ul>
+
+<h3>ट्रैप के प्रकार - उपयोग के अनुसार (By Use)</h3>
+<ol>
+<li><strong>फ्लोर ट्रैप (Floor Trap):</strong> फर्श से अपशिष्ट जल के लिए।</li>
+<li><strong>गली ट्रैप (Gully Trap):</strong> रसोई, स्नान आदि से अपशिष्ट के लिए।</li>
+<li><strong>इंटरसेप्टिंग ट्रैप (Intercepting Trap):</strong> घर के सीवर और नगरपालिका के सीवर के जंक्शन पर।</li>
+</ol>
+
+<h3>फ्लोर ट्रैप (Floor Trap)</h3>
+<ul>
+<li>इन ट्रैप का उपयोग आमतौर पर <strong>कमरे, रसोई, स्नान</strong> आदि के फर्श से अपशिष्ट जल (कूड़ा) को उक्त कमरे के नाले (सल्लेज पाइप) में डालने के लिए किया जाता है।</li>
+<li>इन्हें हमेशा शीर्ष पर <strong>कच्चा लोहा या जस्ती या स्टेनलेस स्टील की झंझरी (जाली)</strong> के साथ प्रदान किया जाता है, ताकि बार-बार रुकावट से बचने के लिए, ठोस और बड़े चिपचिपे पदार्थ को नाली के पाइप में प्रवेश करने से रोका जा सके।</li>
+<li>आमतौर पर इस्तेमाल किया जाने वाला जाल <strong>नहानी ट्रैप (Nahani Trap)</strong> है।</li>
+<li><strong>मल्टी इनलेट मल्टी फ्लोर ट्रैप</strong> का उपयोग किया जाता है।</li>
+</ul>
+
+<h3>गली ट्रैप (Gully Trap)</h3>
+<ul>
+<li>एक गली ट्रैप या गली अक्सर एक कमरे या छत के नाले के जंक्शन पर और स्नान, रसोई आदि से आने वाले अन्य नाले पर प्रदान की जाती है।</li>
+<li>स्नान से निकलने वाला दुर्गंध, साइड इनलेट (बैक इनलेट कहा जाता है) और अनफॉल्ड के माध्यम से प्रवेश करेगा।</li>
+<li>कमरे की धुलाई या छत या आंगन से बारिश का पानी ऊपर से प्रवेश करेगा।</li>
+<li>गली ट्रैप में या तो <strong>एस-ट्रैप या पी-ट्रैप</strong> हो सकता है।</li>
+<li>पानी की सील आमतौर पर <strong>50 मिमी से 75 मिमी</strong> गहरी होती है।</li>
+<li>ट्रैप के शीर्ष को <strong>C.I. झंझरी</strong> द्वारा कवर किया जाता है ताकि रुकावट से बचने के लिए मोटे सामग्री के प्रवेश को बाहर किया जा सके।</li>
+</ul>
+
+<h3>इंटरसेप्टिंग ट्रैप (Intercepting Trap)</h3>
+<ul>
+<li>घर के सीवर और नगरपालिका के सीवर के जंक्शन पर अक्सर एक <strong>इंटरसेप्टिंग ट्रैप</strong> लगाया जाता है, ताकि घर के ड्रेनेज सिस्टम में म्यूनिसिपल सीवर की दुर्गंध वाली गैसों के प्रवेश को रोका जा सके।</li>
+<li>या तो बाहर गली में या घर की बाउंड्री के अंदर एक कोने में।</li>
+<li>इस ट्रैप को इसके शीर्ष के पास एक <strong>एक्सेस गेट या प्लग</strong> के साथ प्रदान किया जाता है, जिसे रुकावट के मामले में ट्रैप के अंदर से गाद को हटाने के लिए <strong>क्लीनिंग आई (Cleaning Eye)</strong> कहा जाता है।</li>
+<li>इसमें पानी की सील की उच्च गहराई है, लगभग <strong>100 मिमी</strong>।</li>
+</ul>
+
+<h3>इंटरसेप्टर के गुण (Advantages of Interceptor)</h3>
+<ul>
+<li>सार्वजनिक सीवर की दूषित गैसें इंटरसेप्टर से नहीं गुजर सकतीं।</li>
+<li>यदि नहीं दी गई तो ये गैसें घर की जल निकासी प्रणाली के वेंट पाइप में प्रवेश करेंगी, और आसपास के वातावरण में फैल जाएंगी, जिससे गंभीर वायु प्रदूषण हो सकता है।</li>
+<li>इस प्रकार सार्वजनिक सीवरों में निहित हानिकारक रोगजनक बैक्टीरिया को इंटरसेप्टर की उपस्थिति के कारण घर की नालियों में प्रवेश करने से रोका जाता है।</li>
+</ul>
+
+<h3>इंटरसेप्टर के दोष (Disadvantages of Interceptor)</h3>
+<ul>
+<li>यदि घर की नालियों से डिस्चार्ज छोटा है, तो ठोस भारी पदार्थ जाल में रह सकता है और सड़ने लग सकता है, जिससे दुर्गंध पैदा हो सकती है।</li>
+<li>यदि ढक्कन या प्लग ठीक से नहीं लगाया गया है, या टूट गया है, तो सार्वजनिक सीवर से दुर्गंधयुक्त गैसें घर के नाले में प्रवेश करेंगी।</li>
+<li>जाल की निरीक्षण शाखा के माध्यम से सफाई करना आसान नहीं है।</li>
+<li>इंटरसेप्टर स्वयं सीवेज के सामान्य प्रवाह में बाधा उत्पन्न करता है।</li>
+<li>घरेलू अपशिष्ट प्रतिष्ठानों और अन्य सभी जालों में उपयोग के लिए जाल आसानी से सुलभ होने चाहिए और आंखों की सफाई या सफाई के अन्य साधन उपलब्ध कराए जाने चाहिए।</li>
+</ul>
+
+<h3>गली ट्रैप चैंबर्स (Gully Trap Chambers)</h3>
+<ul>
+<li>गली ट्रैप चैंबर्स में <strong>ईंट चिनाई वाले चैंबर</strong> होंगे जो गली ट्रैप के निर्दिष्ट आकार के लिए उपयुक्त होंगे।</li>
+<li>ट्रैप्स अनुमोदित मेक के <strong>ग्लेज्ड स्टोनवेयर (Glazed Stoneware)</strong> होंगे।</li>
+</ul>
+
+<h3>ट्रैप के प्रकार - आकार के अनुसार (Visual Comparison)</h3>
+<div class="compare-grid">
+<div class="compare-card" style="border-color:#003366;background:#f0f5ff;">
+<h4>🔵 P Trap</h4>
+<ul>
+<li>'P' आकार</li>
+<li>Horizontal Outlet</li>
+<li>50 mm Water Seal</li>
+<li>WC, Wash Basin के लिए</li>
+</ul>
+</div>
+<div class="compare-card" style="border-color:#28a745;background:#f0faf2;">
+<h4>🟢 Q Trap</h4>
+<ul>
+<li>'Q' आकार</li>
+<li>Long Horizontal Outlet</li>
+<li>P Trap का प्रकार</li>
+<li>Kitchen Sink, Wash Basin</li>
+</ul>
+</div>
+<div class="compare-card" style="border-color:#ff9900;background:#fff8e1;">
+<h4>🟠 S Trap</h4>
+<ul>
+<li>'S' आकार</li>
+<li>Vertical Outlet</li>
+<li>50 mm Water Seal</li>
+<li>पुराने Plumbing में</li>
+<li>Siphonage के लिए संवेदनशील</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: ट्रैप के प्रकार</strong></p>
+<p>स्थान: /images/notes/plumber/module-9/types_of_traps.jpg</p>
+<code>types_of_traps.jpg</code>
+<p style="font-size:0.8rem;color:#888;">(P Trap, Q Trap, S Trap, Floor Trap, Gully Trap, Intercepting Trap)</p>
+</div>
+<div class="figure-caption">Fig 4 – ट्रैप के प्रकार</div>
+</div>
+
+<div class="important-box">
+<h4>📌 परीक्षा फोकस</h4>
+<ul>
+<li>Trap: Water Seal – 25 mm से 75 mm, Common 50 mm</li>
+<li>अच्छे Trap के 5 गुण</li>
+<li>Water Seal टूटने के 4 कारण</li>
+<li>P Trap: Horizontal Outlet, WC के लिए</li>
+<li>Q Trap: Long Horizontal Outlet, Kitchen Sink के लिए</li>
+<li>S Trap: Vertical Outlet, Siphonage के लिए संवेदनशील</li>
+<li>Intercepting Trap: 100 mm Water Seal</li>
+<li>Floor Trap: Nahani Trap का उपयोग</li>
+<li>Gully Trap: 50-75 mm Water Seal</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== SECTION 5: LAYOUT OF DRAINAGE SYSTEM ===== -->
+<div class="container" id="sec-layout">
+<div class="content-section" data-content="layout">
+<div class="section-header"><span class="icon">📐</span><span class="title">जल निकासी का लेआउट (Layout of Drainage System)</span><span class="subtitle">— योजना बनाना, विचार करने योग्य बातें</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<h3>जल निकासी का लेआउट (Layout of Drainage System)</h3>
+<p>प्लंबिंग का काम शुरू करने से पहले सबसे पहले <strong>ड्रेनेज प्लान</strong> तैयार करना सबसे जरूरी है। जिस प्रकार भवन निर्माण के प्रारम्भ से पूर्व विस्तृत रेखाचित्रों की आवश्यकता होती है उसी प्रकार विस्तृत योजनाएँ बना लेनी चाहिए।</p>
+
+<h3>लेआउट तैयार करते समय विचार करने योग्य बातें (Considerations)</h3>
+<ol>
+<li><strong>त्वरित निष्कासन (Quick Disposal):</strong> नालियों को इस तरह से बिछाया जाना चाहिए कि भवन से सीवेज को जल्दी से हटाया जा सके। त्वरित निष्कासन पाइपों के गिरने से नियंत्रित होता है।</li>
+<li><strong>स्वयं सफाई गति (Self-Cleaning Velocity):</strong> नालियों को इस तरह ढलान पर बिछाया जाना चाहिए कि उनमें स्वयं सफाई की गति विकसित हो।</li>
+<li><strong>हवादार (Ventilation):</strong> घर की तरफ सभी जल निकासी व्यवस्था ठीक से हवादार होनी चाहिए। वेंटिलेशन पाइप को इमारतों के ऊपर पर्याप्त रूप से ऊपर ले जाया जाना चाहिए।</li>
+<li><strong>निरीक्षण कक्ष (Inspection Chambers):</strong> सभी निरीक्षण कक्षों को ताजी हवा के प्रवेश द्वार प्रदान किए जाने चाहिए।</li>
+<li><strong>सुरक्षा (Protection):</strong> सभी नालों को इस तरह से बिछाया जाए कि भविष्य में उनकी सुरक्षा सुनिश्चित हो सके।</li>
+<li><strong>विस्तार (Extension):</strong> नाली इस प्रकार बिछाई जाए कि भविष्य में इच्छानुसार विस्तार आसानी से किया जा सके।</li>
+<li><strong>गली ट्रैप (Gully Trap):</strong> बारिश के पानी के सभी पाइप, घर से झाड़ू लगाने और नहाने के पानी को गली ट्रैप पर छोड़ देना चाहिए।</li>
+<li><strong>मिट्टी के पाइप (Soil Pipes):</strong> सभी मिट्टी के पाइपों को बिना गली ट्रैप के सीधे मैनहोल तक ले जाया जाना चाहिए।</li>
+<li><strong>ढलान (Slope):</strong> नालियों को स्वयं सफाई के लिए ढालों पर बिछाया जाना चाहिए।</li>
+<li><strong>सीधी रेखा (Straight Line):</strong> नाली को पहुंच के बिंदुओं के बीच सीधा रखा जाना चाहिए। दिशा या ढाल के सभी परिवर्तन निरीक्षण के लिए खुले होने चाहिए।</li>
+<li><strong>छोटी शाखा नालियाँ (Short Branch Drains):</strong> शाखा नालियाँ यथासंभव छोटी होनी चाहिए।</li>
+<li><strong>तिरछे कनेक्शन (Oblique Connections):</strong> सभी कनेक्शन तिरछे होने चाहिए, ताकि आने वाली नाली सीवेज के प्रवाह की दिशा की ओर हो।</li>
+<li><strong>पर्याप्त आकार (Adequate Size):</strong> नालों का आकार आवश्यकताओं को पूरा करने के लिए पर्याप्त होना चाहिए।</li>
+<li><strong>वाटर टाइट जोड़ (Water-Tight Joints):</strong> पाइप के जोड़ पानी से टाइट होने चाहिए और गैर-शोषक सामग्री से बने होने चाहिए।</li>
+<li><strong>पब्लिक सीवर कनेक्शन (Public Sewer Connection):</strong> हाउस ड्रेन को पब्लिक सीवर से तभी जोड़ा जाना चाहिए जब पब्लिक सीवर हाउस ड्रेन से गहरा हो।</li>
+<li><strong>ट्रैप (Traps):</strong> हाउस ड्रेन में उपयुक्त स्थानों पर पर्याप्त संख्या में ट्रैप होने चाहिए।</li>
+<li><strong>इंटरसेप्टर (Interceptor):</strong> घरों में दुर्गंधयुक्त गैस के प्रवेश को रोकने के लिए घर के नाले को सार्वजनिक सीवर से एक जाल से अलग किया जाना चाहिए।</li>
+<li><strong>बारिश का पानी (Rain Water):</strong> बेहतर होगा कि बारिश के पानी को लेने के लिए अलग से नालियों की व्यवस्था की जाए।</li>
+</ol>
+
+<h3>ड्रेनेज सिस्टम के प्रकार (Types of Drainage Systems)</h3>
+<p>सैनिटरी प्लंबिंग की प्रणाली - एक भवन में जल निकासी कार्य की प्लंबिंग में अपनाई गई चार सिद्धांत प्रणालियाँ:</p>
+
+<h4>1. दो पाइप प्रणाली (Two Pipe System):</h4>
+<ul>
+<li>यह प्लंबिंग का सबसे अच्छा और सबसे बेहतर प्रकार का सिस्टम है।</li>
+<li>इस प्रणाली में, ऊर्ध्वाधर पाइप के दो सेट बिछाए जाते हैं, यानी एक रात की मिट्टी को निकालने के लिए और दूसरा गंदे पानी को निकालने के लिए।</li>
+<li>दूसरे सेट के बाथ पाइप आदि से मैला ढोने वाले पाइपों को <strong>सलेज पाइप या वेस्ट पाइप</strong> कहा जाता है।</li>
+<li>मिट्टी के जुड़नार, जैसे शौचालय और मूत्रालय, सभी शाखा पाइप (पार्श्व) के माध्यम से ऊर्ध्वाधर मिट्टी के पाइप से जुड़े होते हैं।</li>
+<li>अपशिष्ट जुड़नार जैसे स्नान, सिंक, वॉश बेसिन, आदि सभी शाखा पाइपों के माध्यम से ऊर्ध्वाधर अपशिष्ट पाइप से जुड़े होते हैं।</li>
+<li>मिट्टी के पाइप के साथ-साथ अपशिष्ट पाइप को अलग-अलग वेंट पाइप या एंटीसाइफ़ोनेज पाइप प्रदान करके अलग-अलग हवादार किया जाता है।</li>
+<li>इस प्रकार इस व्यवस्था के लिए चार पाइपों की आवश्यकता होती है।</li>
+<li><strong>नुकसान:</strong> इस प्रणाली में बड़ी संख्या में पाइप शामिल हैं, और इस प्रकार यह काफी महंगा है।</li>
+</ul>
+
+<h4>2. एक पाइप प्रणाली (One Pipe System):</h4>
+<ul>
+<li>इस प्रणाली में, दो अलग-अलग पाइपों का उपयोग करने के बजाय (कूड़ा-करकट और रात की मिट्टी को ले जाने के लिए) केवल <strong>एक मुख्य ऊर्ध्वाधर पाइप</strong> प्रदान किया जाता है।</li>
+<li>यह रात की मिट्टी के साथ-साथ उनके पानी से गंदे पानी को भी एकत्र करता है।</li>
+<li>शाखा पाइप के माध्यम से संबंधित जुड़नार।</li>
+<li>मुख्य पाइप अपने आप में शीर्ष पर काउल प्रदान करके हवादार होता है।</li>
+<li>इसके अलावा, एक अलग वेंट पाइप भी प्रदान किया जाता है।</li>
+<li>इस प्रकार, इस प्रणाली में चार पाइपों के बजाय दो पाइप हैं।</li>
+</ul>
+
+<h4>3. सिंगल स्टैक सिस्टम (Single Stack System):</h4>
+<ul>
+<li>यह सिस्टम बिना किसी अलग वेंटिलेशन पाइप के सिंगल पाइप सिस्टम है।</li>
+<li>इसलिए, यह केवल एक पाइप का उपयोग करता है, जो सीवेज के साथ-साथ मल को भी वहन करता है।</li>
+<li>इसमें कोई अलग वेंट पाइप प्रदान नहीं किया जाता है, सिवाय इसके कि यह स्वयं छत के स्तर से लगभग <strong>2 मीटर ऊंचा</strong> हो जाता है।</li>
+<li>हटाने के लिए एक कवर प्रदान किया जाता है।</li>
+</ul>
+
+<h4>4. आंशिक रूप से हवादार सिंगल स्टैक सिस्टम (Partially Ventilated Single Stack System):</h4>
+<ul>
+<li>यह एकल स्टैक प्रणाली का एक उन्नत रूप है।</li>
+<li>इस प्रणाली में, पानी की अलमारी के जाल को एक अलग वेंट पाइप द्वारा अलग से हवादार किया जाता है जिसे <strong>रिलीफ वेंट पाइप (Relief Vent Pipe)</strong> कहा जाता है।</li>
+<li>इस प्रकार, यह प्रणाली एकल पाइप प्रणाली की तरह दो पाइपों का उपयोग करती है।</li>
+<li>लेकिन सिंगल पाइप सिस्टम की तुलना में शाखाओं (पार्श्व) की लागत काफी कम हो जाती है, क्योंकि सुलेज जुड़नार वेंट पाइप से जुड़े नहीं होते हैं।</li>
+</ul>
+
+<h3>प्रणाली का चुनाव (Selection of System)</h3>
+<ul>
+<li><strong>दो पाइप प्रणाली:</strong> बड़े और बहुमंजिला भवनों के लिए सबसे अच्छी।</li>
+<li><strong>एक पाइप प्रणाली:</strong> छोटे घरों और इमारतों के लिए अधिक किफायती।</li>
+<li><strong>सिंगल स्टैक सिस्टम:</strong> सरल और सस्ता।</li>
+<li><strong>आंशिक रूप से हवादार:</strong> बहुमंजिला इमारतों में, विशेष रूप से शौचालय ब्लॉकों के लिए।</li>
+</ul>
+</div>
+</div>
+
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: जल निकासी का लेआउट</strong></p>
+<p>स्थान: /images/notes/plumber/module-9/drainage_layout.jpg</p>
+<code>drainage_layout.jpg</code>
+<p style="font-size:0.8rem;color:#888;">(Two Pipe System, One Pipe System, Single Stack System)</p>
+</div>
+<div class="figure-caption">Fig 5 – जल निकासी का लेआउट</div>
+</div>
+
+<div class="important-box">
+<h4>📌 परीक्षा फोकस</h4>
+<ul>
+<li>Drainage System के 4 प्रकार: Two Pipe, One Pipe, Single Stack, Partially Ventilated</li>
+<li>Two Pipe System: 4 पाइप (Soil + Waste + 2 Vent)</li>
+<li>One Pipe System: 2 पाइप (Main + Vent)</li>
+<li>Single Stack System: 1 पाइप (छत से 2 मीटर ऊंचा)</li>
+<li>Partially Ventilated: Relief Vent Pipe</li>
+<li>विचार के 18 बिंदु</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== SECTION 6: TESTING DRAINAGE LINES ===== -->
+<div class="container" id="sec-testing">
+<div class="content-section" data-content="testing">
+<div class="section-header"><span class="icon">🧪</span><span class="title">जल निकासी लाइनों का परीक्षण (Testing Drainage Lines)</span><span class="subtitle">— Smoke Test, Water Test, Ball Test, Mirror Test, Air Test</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<h3>जल निकासी लाइनों का परीक्षण (Testing of Drainage Lines)</h3>
+<p>परीक्षण उपकरणों की एक विस्तृत श्रृंखला उपलब्ध है इसलिए हमें स्थानीय कानून की आवश्यकताओं के अनुसार निरीक्षण और परीक्षण के लिए आवश्यक उपकरणों का चयन करना चाहिए।</p>
+
+<h3>मिट्टी के ढेर और नाली परीक्षण के सिद्धांत तरीके (Principal Methods)</h3>
+<ol>
+<li><strong>मिरर टेस्ट (Mirror Test)</strong></li>
+<li><strong>बॉल टेस्ट (Ball Test)</strong></li>
+<li><strong>हाइड्रोस्टेटिक या जल परीक्षण (Hydrostatic/Water Test)</strong></li>
+<li><strong>धुआं परीक्षण (Smoke Test)</strong></li>
+<li><strong>वायवीय या वायु परीक्षण (Air Test)</strong></li>
+<li><strong>रासायनिक गंध परीक्षण (Chemical/Odor Test)</strong></li>
+</ol>
+
+<h3>1. मिरर टेस्ट (Mirror Test)</h3>
+<ul>
+<li>यह टेस्ट पाइप के अंदर के अलाइनमेंट और कंडीशन को जांचने के लिए लगाया जाता है।</li>
+<li>परीक्षण के लिए <strong>दो दर्पणों (Two Mirrors)</strong> का उपयोग किया जाता है।</li>
+<li>उन्हें पूरे बिंदुओं के माध्यम से स्थिति में रखा जाता है।</li>
+<li>दर्पण में से एक को देखकर पाइप के बोर की स्थिति देखी जा सकती है क्योंकि प्रकाश पाइप के साथ परिलक्षित होता है।</li>
+<li><strong>उपयोग:</strong> पाइप की सीधीता और अंदर की स्थिति की जाँच।</li>
+</ul>
+
+<h3>2. बॉल टेस्ट (Ball Test)</h3>
+<ul>
+<li>ऐसी स्थितियों में जहां दर्पण परीक्षण का उपयोग करना संभव नहीं है जैसे कि पाइप में मोड़।</li>
+<li>पाइप के अंदर से <strong>13 मिमी छोटी पीतल की गेंद</strong> को शीर्ष छोर में डाला जाता है।</li>
+<li>गेंद को नीचे या नीचे की ओर स्वतंत्र रूप से लुढ़कना चाहिए।</li>
+<li>यदि कोई रुकावट है या पाइप संरेखण से बाहर है, तो गेंद रुक जाएगी।</li>
+<li>जिस बिंदु पर वह रुकती है उसे एक रॉड पर चिह्नित किया जाता है ताकि सटीक स्थिति को पाइप के साथ मापा जा सके।</li>
+<li><strong>उपचार:</strong>
+<ul>
+<li>पाइप को सही ढंग से गिराने के लिए पुन: संरेखित करें।</li>
+<li>बाधा को दूर करना।</li>
+</ul>
+</li>
+</ul>
+
+<h3>3. लेड स्लाइड या प्लग टेस्ट (Lead Slide/Plug Test)</h3>
+<ul>
+<li>बाधा के परीक्षण के लिए एक <strong>लीड स्लाइड या प्लग</strong> का भी उपयोग किया जा सकता है।</li>
+<li>एक लेड प्लग <strong>स्प्रिंग स्टील टेप</strong> से जुड़ा होता है।</li>
+<li>फिर प्लग को सावधानी से पाइप के साथ तब तक धकेला जाता है जब तक कि प्रतिरोध महसूस न हो जाए।</li>
+<li>इसके बाद टैप को मार्क कर दिया जाता है और प्लग को वापस ले लिया जाता है।</li>
+<li>यह बिल्कुल दिखाएगा कि अवरोध कहाँ है।</li>
+</ul>
+
+<h3>4. हाइड्रोस्टेटिक या जल परीक्षण (Hydrostatic/Water Test)</h3>
+<ul>
+<li>इस परीक्षण को करने के लिए आवश्यक उपकरण: <strong>ड्रेन प्लग/एयर बैग स्टॉपर, एक्सट्रूज़न ट्यूब, फ़नल और दृष्टि गेज</strong>।</li>
+<li>क्षैतिज पाइप पर दबाव या सिर प्रदान करने और पानी के स्तर को रिकॉर्ड करने के लिए स्थापना के शीर्ष छोर पर लंबवत पाइप अस्थायी रूप से स्थापित किए जाते हैं।</li>
+<li><strong>रंगीन पानी का परीक्षण:</strong> इसके समान है, सिवाय इसके कि रिसाव का आसानी से पता लगाने के लिए एक घुलनशील डाई जैसे कि <strong>फ्लोरेसीन</strong> को पानी के साथ मिलाया जाता है।</li>
+</ul>
+
+<h4>जल परीक्षण की विधि:</h4>
+<ol>
+<li><strong>1.5 मीटर पानी</strong> के बराबर परीक्षण दबाव देने के लिए नाली को पानी से भरा जाना चाहिए।</li>
+<li>स्टीपली ग्रेड ड्रेन का परीक्षण चरणों में किया जाना चाहिए, ताकि निचले सिरे पर पानी का शीर्ष <strong>4 मीटर से अधिक न हो</strong>।</li>
+<li>पाइपलाइन को <strong>दो घंटे</strong> तक खड़ा रहने दिया जाना चाहिए और पानी के साथ ऊपर रखा जाना चाहिए।</li>
+<li>दो घंटे के बाद पाइप लाइन से पानी की हानि को <strong>30 मिनट</strong> तक परीक्षण शीर्ष को बनाए रखने के लिए आवश्यक पानी की मात्रा को नोट करके मापा जाना चाहिए।</li>
+<li>विभिन्न पाइप आकारों के लिए पानी की हानि की दर <strong>1 लीटर/घंटा से अधिक नहीं</strong> होनी चाहिए।</li>
+</ol>
+
+<h3>5. धुआं परीक्षण (Smoke Test)</h3>
+<ul>
+<li>यह परीक्षण जल परीक्षण से कम गंभीर होता है और आमतौर पर वहाँ किया जाता है जहाँ हाइड्रोस्टेटिक परीक्षण लागू करने के लिए पानी उपलब्ध नहीं होता है।</li>
+<li>धुएँ के परीक्षण के लिए पाइप के एक सिरे को, दूसरे सिरे को प्लग करें।</li>
+<li>पाइप में <strong>स्मोक रॉकेट</strong> डालने के बाद टच पेपर धुएं के घने बादल पैदा कर रहा है जो इस पाइप के काम के दौरान यात्रा करते हैं।</li>
+<li>या <strong>धूम्रपान जनरेटर</strong> का उपयोग पाइप के दबाव में धुएं को मजबूर करने के लिए किया जा सकता है।</li>
+<li>संयुक्त, प्लग किए गए सिरे से धुएँ के रिसाव के संकेत के लिए स्थापना की जाँच करें।</li>
+<li>धुएँ और कुछ प्रकार के प्लास्टिक के बीच हानिकारक क्रिया के कारण इस परीक्षण का उपयोग <strong>प्लास्टिक प्रणाली पर नहीं किया जाना चाहिए</strong>।</li>
+</ul>
+
+<h4>धुआं परीक्षण की विधि:</h4>
+<ol>
+<li>सभी पानी की मुहरों को पानी से चार्ज किया जाना चाहिए।</li>
+<li>एक को छोड़कर सभी शाखा नालियों और वेंट को सील कर दिया जाना चाहिए।</li>
+<li>फिर एक परीक्षण प्लग के माध्यम से सिस्टम में धुआं डाला जाता है जिसे नाली या स्टैक के सबसे निचले बिंदु में लगाया जाता है।</li>
+<li>उच्चतम वेंट को तब तक खुला छोड़ दिया जाता है जब तक कि धुआं निकलना शुरू न हो जाए।</li>
+<li>इस बिंदु पर वेंट को सील कर दिया जाता है और पंपिंग तब तक जारी रहती है जब तक कि धूम्रपान मशीन के अंदर गुंबद को लगभग <strong>50 मिमी ऊपर</strong> उठाने के लिए पर्याप्त दबाव नहीं बनाया जाता है।</li>
+<li>पम्पिंग अब बंद हो जाती है और सिस्टम <strong>5 मिनट</strong> तक परीक्षण के अधीन रहता है।</li>
+<li>यदि गुम्बद ऊँचे स्थान पर रहता है तो व्यवस्था ठीक रहती है।</li>
+</ul>
+
+<h3>6. वायवीय या वायु परीक्षण (Air Test)</h3>
+<ul>
+<li>पाइप लाइन में वायु परीक्षण धूम्रपान परीक्षण के समान है।</li>
+<li>मैनोमीटर को पाइप लाइन से कनेक्ट करें।</li>
+<li>हैंड बैलून को पाइप के काम के साथ हवा के दबाव में पंप किया जाता है।</li>
+<li>इसे बिना पीछे गिराए एक अवधि के लिए बनाए रखा जाना चाहिए।</li>
+<li>यदि स्तर गिरता है, तो रिसाव का पता लगाना होगा और यह जोड़ों पर <strong>साबुन का घोल</strong> लगाकर किया जा सकता है।</li>
+<li>वायु परीक्षण आमतौर पर <strong>10 से 15 मिनट</strong> के लिए होते हैं, गेज पर दबाव <strong>25 मिमी से अधिक नहीं</strong> होना चाहिए।</li>
+<li>वायु परीक्षण के साथ एक फायदा यह है कि नाली के सभी हिस्से समान दबाव के अधीन हैं।</li>
+</ul>
+
+<h3>7. रासायनिक गंध परीक्षण / गंध परीक्षण (Chemical/Odor Test)</h3>
+<ul>
+<li>पीपर मिनिट के कच्चे तेल जैसे मजबूत तीखे रसायन से भरा एक छोटा कंटेनर।</li>
+<li>स्ट्रिंग की एक लंबी लंबाई से जुड़ा होता है।</li>
+<li>एक जाल के माध्यम से पाइप के काम में प्रवाहित होता है।</li>
+<li>स्ट्रिंग पर खींचने से कंटेनर खुल जाता है - गंध द्वारा रिसाव का पता लगाया जाता है।</li>
+</ul>
+
+<h3>ड्रेन टेस्टिंग (Drain Testing)</h3>
+<p>ड्रेन बिछाए जाने के बाद और बैकफिलिंग से पहले या पाइप के चारों ओर कंक्रीटर या ग्रेन्युलर सामग्री डालने से पहले इसकी जांच कर लेनी चाहिए।</p>
+
+<h4>भूमिगत नालियों की सुदृढ़ता के परीक्षण की तीन मुख्य विधियाँ:</h4>
+<ol>
+<li><strong>जल परीक्षण (Water Test)</strong></li>
+<li><strong>वायु परीक्षण (Air Test)</strong></li>
+<li><strong>धूम्रपान परीक्षण (Smoke Test)</strong></li>
+</ol>
+
+<h4>महत्वपूर्ण निर्देश:</h4>
+<ul>
+<li>यदि कोई रिसाव होता है, तो दोषपूर्ण पाइप या जोड़ को ठीक किया जाना चाहिए और फिर से नाली का परीक्षण किया जाना चाहिए।</li>
+<li>जहां भी संभव हो, मुख्य जल निकासी प्रणाली के साथ परीक्षण किए गए मैनहोल और छोटी शाखा नालियों के बीच परीक्षण किया जाना चाहिए।</li>
+<li>बैकफिलिंग से पहले परीक्षण किया जाना चाहिए।</li>
+<li>किसी भी आंदोलन को रोकने के लिए पाइप का समर्थन किया जाना चाहिए।</li>
+</ul>
+
+<h3>वायु परीक्षण की विधि (Air Test Method)</h3>
+<ul>
+<li>तीन वाल्व वाला एक <strong>टी पीस</strong> एक मैनोमीटर (यू-गेज), हैंड पंप और एक नली से जुड़ा होता है।</li>
+<li>नली को गली ट्रैप की सील से गुजारा जाता है।</li>
+<li>वाल्व A और C खुले और वाल्व B बंद होने के साथ, हवा को सिस्टम में पंप किया जाता है।</li>
+<li>वाल्व B को खोलकर हवा के दबाव को समय-समय पर चेक किया जाता है।</li>
+<li>जब परीक्षण दबाव पहुँच जाता है, तो वाल्व A बंद हो जाता है और वाल्व B खोला जाता है।</li>
+<li>हवा का दबाव अब यू-गेज पर दर्ज किया जाता है।</li>
+<li>यदि सिस्टम सही है तो मैनोमीटर में स्तरों में अंतर बना रहेगा।</li>
+<li>यदि कोई रिसाव होता है तो स्तर शून्य पर वापस आ जाएगा।</li>
+</ul>
+
+<h4>वायु परीक्षण में समस्याएँ:</h4>
+<ul>
+<li>पाइप या जोड़ों द्वारा अवशोषण।</li>
+<li>ट्रैप्ड एयर (Trapped Air)।</li>
+<li>पाइप और जोड़ों का पसीना।</li>
+<li>दोषपूर्ण पाइप या जोड़ों से रिसाव।</li>
+<li>स्टॉपर्स से रिसाव।</li>
+</ul>
+</div>
+</div>
+
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: जल निकासी लाइनों का परीक्षण</strong></p>
+<p>स्थान: /images/notes/plumber/module-9/testing_drainage.jpg</p>
+<code>testing_drainage.jpg</code>
+<p style="font-size:0.8rem;color:#888;">(Mirror Test, Ball Test, Water Test, Smoke Test, Air Test)</p>
+</div>
+<div class="figure-caption">Fig 6 – जल निकासी लाइनों का परीक्षण</div>
+</div>
+
+<div class="important-box">
+<h4>📌 परीक्षा फोकस</h4>
+<ul>
+<li>6 मुख्य परीक्षण विधियाँ: Mirror, Ball, Water, Smoke, Air, Odor</li>
+<li>Ball Test: 13 mm पीतल की गेंद</li>
+<li>Water Test: 1.5 मीटर परीक्षण दबाव, 2 घंटे, 30 मिनट</li>
+<li>Water Loss Rate: 1 लीटर/घंटा से अधिक नहीं</li>
+<li>Smoke Test: 50 mm गुंबद ऊपर, 5 मिनट</li>
+<li>Air Test: 10-15 मिनट, 25 mm से अधिक नहीं</li>
+<li>Plastic System: Smoke Test न करें</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== SECTION 7: DRAINS ===== -->
+<div class="container" id="sec-drains">
+<div class="content-section" data-content="drains">
+<div class="section-header"><span class="icon">🛤️</span><span class="title">नालियाँ (Drains)</span><span class="subtitle">— परिभाषा, खंड के प्रकार, विशेषताएँ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<h3>नालियाँ (Drains)</h3>
+<p>इनका उपयोग कम गंदा पानी लाने के लिए किया जाता है - रसोई, स्नानघर, धोने के स्थान और आंगनों, सड़कों, छतों, खुले मैदानों आदि से बारिश का पानी, पानी की अलमारी से दुर्गंध को छोड़कर।</p>
+<ul>
+<li>खुली नालियां मल और वर्षा जल को प्राकृतिक जलधाराओं तक ले जाती हैं या सार्वजनिक सीवर में बहा देती हैं।</li>
+<li>खुली नालियां ज्यादातर सड़कों के दोनों ओर इमारतों की चारदीवारी के साथ बिछाई जाती हैं।</li>
+<li>उनके सस्तेपन और कम रखरखाव लागत के कारण, कुछ नगर पालिकाओं और स्थानीय निकायों ने उन्हें गंदे पानी के परिवहन के लिए अपनाया।</li>
+<li>उन्हें थोड़े अंतराल के बाद सफाई की आवश्यकता होती है।</li>
+</ul>
+
+<h3>नालियों के खंड (Sections of Drains)</h3>
+<p>एक आदर्श नाली को निम्नलिखित शर्तों को पूरा करना चाहिए:</p>
+<ol>
+<li>इसे न्यूनतम शुष्क मौसम प्रवाह के साथ <strong>स्व-सफाई वेग (Self-Cleaning Velocity)</strong> विकसित करना चाहिए।</li>
+<li>इसके शीर्ष पर पर्याप्त <strong>मुक्त बोर्ड (Free Board)</strong> होना चाहिए, यहां तक कि अधिकतम निर्वहन के दौरान भी।</li>
+<li>यह निर्माण और रखरखाव में साफ होना चाहिए।</li>
+<li>यह ऐसा होना चाहिए कि इसे आसानी से साफ किया जा सके।</li>
+<li>यह संरचनात्मक रूप से सुरक्षित और स्थिर होना चाहिए।</li>
+<li>इसका निर्माण गैर-संक्षारक सामग्री से किया जाना चाहिए और इसमें कटाव के लिए पर्याप्त प्रतिरोध होना चाहिए।</li>
+</ol>
+
+<h3>नालियों के खंड के प्रकार (Types of Drain Sections)</h3>
+<p>व्यवहार में सीवर के केवल <strong>चार सामान्य वर्गों</strong> का उपयोग किया जाता है, जिनका सफलतापूर्वक परीक्षण किया गया है:</p>
+
+<h4>1. अर्ध-गोलाकार खंड (Semi-Circular Section):</h4>
+<ul>
+<li>इस प्रकार की नाली का उपयोग ज्यादातर <strong>छोटी नालियों</strong> के लिए किया जाता है क्योंकि बिछाने में आसानी, स्थिरता और सस्तापन होता है।</li>
+<li>इसके निर्माण के लिए आधा गोल <strong>ग्लेज्ड स्टोन-वेयर पाइप</strong> का उपयोग किया जाता है।</li>
+<li>यदि इस खंड में निर्वहन कम हो जाता है, तो स्व-सफाई वेग विकसित नहीं होगा और जमा नीचे में बस जाएगा और प्रवाह सीवेज में बाधा उत्पन्न करेगा।</li>
+<li>अर्ध-वृत्ताकार नालियां <strong>बड़े निर्वहन</strong> के लिए उपयुक्त नहीं हैं, क्योंकि ऐसे मामलों में वे अधिक स्थान घेरते हैं।</li>
+<li>यदि यह नाला गहरा है, तो हमेशा संभावना है कि वाहनों के पहिये इसमें गिर सकते हैं जिससे वाहन और नाले दोनों को नुकसान हो सकता है।</li>
+<li>तेज हवाओं के दौरान रेतीले क्षेत्र में, ये खंड रेत से भर जाते हैं।</li>
+</ul>
+
+<h4>2. यू-सेक्शन (U-Section):</h4>
+<ul>
+<li>सेमी-सर्कुलर सेक्शन में यदि भुजाओं को ऊपर उठा दिया जाए तो यह <strong>U-सेक्शन</strong> हो जाता है।</li>
+<li>इसका उपयोग ऐसे स्थानों पर किया जाता है जहां <strong>डिस्चार्ज अधिक</strong> होता है और अर्धवृत्ताकार नाली द्वारा नहीं लिया जा सकता है।</li>
+<li>आधे पत्थरों के नीचे पाइप बिछाया जाता है और इसके ऊपर चिनाई का काम किया जाता है।</li>
+</ul>
+
+<h4>3. वी-सेक्शन (V-Section):</h4>
+<ul>
+<li>यह खंड बहुत छोटे निर्वहन के लिए भी <strong>स्व-सफाई गति (Self-Cleaning Velocity)</strong> देता है क्योंकि प्रत्येक मामले में अधिक गहराई उपलब्ध है।</li>
+<li>इनवर्ट में एक तिहाई से एक चौथाई <strong>स्टोन वेयर पाइप या कंक्रीट ब्लॉक</strong> बिछाया जाता है।</li>
+<li>किनारों को ईंट या झंडे के पत्थरों से बनाया जाता है और प्लास्टर किया जाता है।</li>
+<li>इस प्रकार के खंड को साफ करना आसान है।</li>
+<li>ये खंड स्टोनवेयर पाइप के केंद्र में <strong>120°, 100° या 60°</strong> को घटा सकते हैं।</li>
+</ul>
+
+<h4>4. आयताकार खंड (Rectangular Section):</h4>
+<ul>
+<li>इस प्रकार का खंड केवल <strong>बड़े निर्वहन</strong> के लिए है क्योंकि छोटे निर्वहन के लिए स्व-सफाई वेग विकसित नहीं होगा जिससे निलंबित कणों का निपटारा हो जाएगा।</li>
+<li>इस नाले का निर्माण सीमेंट की क्यारी बिछाकर किया जाता है।</li>
+<li>किनारों पर पत्थर या ईंट की चिनाई से निर्माण किया जाता है और अंत में अंदर प्लास्टर किया जाता है।</li>
+<li>सफाई में कठिनाई के कारण, इस खंड का आमतौर पर उपयोग नहीं किया जाता है।</li>
+</ul>
+
+<h3>नालियों के खंड की तुलना (Comparison of Drain Sections)</h3>
+<div class="table-wrap">
+<table>
+<caption>नालियों के खंड की तुलना</caption>
+<thead><tr><th>खंड का प्रकार</th><th>निर्वहन</th><th>स्व-सफाई</th><th>निर्माण</th><th>उपयोग</th></tr></thead>
+<tbody>
+<tr><td>Semi-Circular</td><td>कम</td><td>अच्छा</td><td>आसान</td><td>छोटी नालियाँ</td></tr>
+<tr><td>U-Section</td><td>अधिक</td><td>अच्छा</td><td>मध्यम</td><td>मध्यम नालियाँ</td></tr>
+<tr><td>V-Section</td><td>बहुत कम</td><td>बहुत अच्छा</td><td>कठिन</td><td>छोटी नालियाँ</td></tr>
+<tr><td>Rectangular</td><td>बहुत अधिक</td><td>खराब</td><td>कठिन</td><td>बड़ी नालियाँ</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>नालियों की सफाई (Cleaning of Drains)</h3>
+<ul>
+<li>नियमित सफाई आवश्यक है।</li>
+<li>सफाई के लिए उपकरण:
+<ul>
+<li><strong>ड्रेन रॉड (Drain Rods)</strong></li>
+<li><strong>ड्रेन जेटिंग मशीन (Drain Jetting Machine)</strong></li>
+<li><strong>क्लीनिंग स्कूप (Cleaning Scoop)</strong></li>
+<li><strong>बकेट (Bucket)</strong></li>
+</ul>
+</li>
+<li>सफाई करते समय सुरक्षा उपाय:
+<ul>
+<li>ग्लव्स पहनें</li>
+<li>मास्क पहनें</li>
+<li>गमबूट पहनें</li>
+<li>पर्याप्त वेंटिलेशन</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: नालियों के खंड</strong></p>
+<p>स्थान: /images/notes/plumber/module-9/drain_sections.jpg</p>
+<code>drain_sections.jpg</code>
+<p style="font-size:0.8rem;color:#888;">(Semi-Circular, U-Section, V-Section, Rectangular Section)</p>
+</div>
+<div class="figure-caption">Fig 7 – नालियों के खंड</div>
+</div>
+
+<div class="important-box">
+<h4>📌 परीक्षा फोकस</h4>
+<ul>
+<li>Drain Sections: 4 प्रकार - Semi-Circular, U, V, Rectangular</li>
+<li>Semi-Circular: छोटी नालियाँ, Glazed Stoneware</li>
+<li>U-Section: अधिक Discharge</li>
+<li>V-Section: बहुत छोटा Discharge, Best Self-Cleaning</li>
+<li>Rectangular: बहुत अधिक Discharge, Poor Self-Cleaning</li>
+<li>आदर्श नाली के 6 गुण</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== SECTION 8: PIPE BENDING ===== -->
+<div class="container" id="sec-bending">
+<div class="content-section" data-content="bending">
+<div class="section-header"><span class="icon">🔄</span><span class="title">पाइप बेंडिंग - गर्म और ठंडी विधि (Pipe Bending – Hot & Cold Method)</span><span class="subtitle">— विधियाँ, उपकरण, सावधानियाँ</span></div>
+<div class="section-body copy-protect">
+<div class="bilingual">
+<div class="content">
+<h3>पाइप बेंडिंग (Pipe Bending)</h3>
+<p>कुछ स्थितियां ऐसी होती हैं, जहां पाइप फिटिंग का उपयोग करने के बजाय पाइप को मोड़ना बेहतर होता है।</p>
+
+<h3>सबसे आम पाइप बेंडर्स (Most Common Pipe Benders)</h3>
+
+<h4>1. पोर्टेबल हाथ से संचालित पाइप बेंडर (Portable Hand-Operated Pipe Bender):</h4>
+<p>इसमें निम्नलिखित भाग होते हैं:</p>
+<ol>
+<li><strong>त्रिकोण स्टैंड (Tripod Stand)</strong></li>
+<li><strong>पाइप स्टॉप लीवर (Pipe Stop Lever)</strong></li>
+<li><strong>हैंडल या लीवर (Handle or Lever)</strong></li>
+<li><strong>इनसाइड फॉर्मर (Inside Former)</strong></li>
+</ol>
+
+<h4>2. बेंच टाइप हैंड ऑपरेटेड पाइप बेंडर (Bench Type Hand Operated Pipe Bender):</h4>
+<p>इसमें निम्नलिखित भाग होते हैं:</p>
+<ol>
+<li><strong>इनर फॉर्मर (Inner Former)</strong></li>
+<li><strong>लीवर या हैंडल (Lever or Handle)</strong></li>
+<li><strong>लॉक नट के साथ समायोज्य पेंच (Adjustable Screw with Lock Nut)</strong></li>
+<li><strong>पाइप गाइड (Pipe Guide)</strong></li>
+</ol>
+<p>इसका उपयोग गैल्वेनाइज्ड लौह और स्टील पाइप बेंडिंग के लिए किया जाता है।</p>
+
+<h4>3. हाइड्रोलिक बेंडिंग मशीन (Hydraulic Bending Machine):</h4>
+<p>इस मशीन का उपयोग G.I. और M.S. पाइपों को बिना रेत भरे किसी दिशा में बेंड करने के लिए किया जा सकता है।</p>
+<p>इसमें निम्नलिखित भाग होते हैं:</p>
+<ol>
+<li><strong>इनर फॉर्मर (Inner Former)</strong></li>
+<li><strong>बैक फॉर्मर (Back Former)</strong></li>
+<li><strong>हाइड्रोलिक रैम (Hydraulic Ram)</strong></li>
+<li><strong>प्रेशर रिलीज वाल्व (Pressure Release Valve)</strong></li>
+<li><strong>ऑपरेटिंग लीवर (Operating Lever)</strong></li>
+<li><strong>ब्लीड स्क्रू (Bleed Screw)</strong></li>
+<li><strong>बेस प्लेट (Base Plate)</strong></li>
+</ol>
+<p>इनर फॉर्मर्स विनमेय हैं और <strong>75 मिमी व्यास तक</strong> पाइप को मोड़ने में सक्षम हैं।</p>
+
+<h3>पाइप बेंडिंग की विधियाँ (Methods of Pipe Bending)</h3>
+
+<h4>1. कोल्ड बेंडिंग (Cold Bending):</h4>
+<ul>
+<li><strong>1 से 15 मिमी व्यास</strong> की ट्यूबों को मोड़ने की सबसे सरल विधि साधारण उपकरण द्वारा की जाती है।</li>
+<li>इस उपकरण में छेद और त्रिज्या पिन वाली एक प्लेट होती है, जिसे उपयुक्त छिद्रों में डाला जाता है।</li>
+<li><strong>40 मिमी व्यास तक</strong> के पाइप ठंड की स्थिति में साधारण बेंडर के माध्यम से बड़े दायरे में झुक जाते हैं।</li>
+<li>त्रिज्या कॉलर के अंत में क्लैंप में फिक्सिंग के बाद पाइप कॉलर के खांचे के चारों ओर मुझे हुए हैं।</li>
+<li><strong>20 मिमी व्यास तक</strong> के पाइप त्रिज्या-कॉलर झुकने वाली इकाई द्वारा मुड़ा हुआ।</li>
+<li>यह इकाई बोल्ट के माध्यम से अपनी बेस प्लेट के माध्यम से कार्य बेंच के शीर्ष पर तय की जाती है।</li>
+<li>त्रिज्या कॉलर और क्लैंप आधार पर लगे होते हैं।</li>
+<li>चल रोलर हाथ लीवर के साथ योक में फिक्स किया गया है।</li>
+<li>अब पाइप को रोलर और कॉलर के बीच में डाला जाता है ताकि उसका सिरा क्लैंप से पकड़े रहे।</li>
+<li>अब हैंड लीवर को योक और रोलर के साथ त्रिज्या कॉलर के चारों ओर घुमाया जाता है, जब तक कि पाइप आवश्यकता के अनुसार मोड़ न जाए।</li>
+</ul>
+
+<h4>2. हॉट बेंडिंग (Hot Bending):</h4>
+<ul>
+<li>हॉट बेंडिंग का उपयोग <strong>100 मिमी व्यास से अधिक</strong> के पाइप के लिए किया जाता है।</li>
+<li>फिलर (रेत) के साथ हॉट बेंडिंग में, ट्यूब को <strong>अनील (Anneal)</strong> कर दिया जाता है, ले आउट किया जाता है और एक छोर को लकड़ी या धातु के प्लग से बंद कर दिया जाता है।</li>
+<li>ट्यूब को दबाव (Crush), उभड़ने (Bulg) या टूट-फूट (Crack) से रोकने के लिए, इसे <strong>सूखी रेत</strong> से भर दिया जाता है, 2 मिमी चलनी के माध्यम से स्थानांतरित किया जाता है।</li>
+<li>पाइपों में रेत को उचित रूप से भरने और जमा करने के लिए हथौड़ों या वाइब्रेटर का उपयोग किया जाता है।</li>
+<li>रेत भरने के बाद पाइप को प्लग के साथ अच्छी तरह से फिट किया जाता है।</li>
+<li>झुकने से पहले पाइपों को भट्टियों में या गैस बर्नर के साथ ब्लो लैंप से <strong>लाल-गर्म (Red Hot)</strong> किया जाता है।</li>
+<li>उचित बेंडिंग वाले उपकरणों में पाइप को गर्म स्थिति में आवश्यक आकार में मोड़ा जाता है।</li>
+<li>बेंडिंग के बाद प्लग निकाले जाते हैं या जला दिए जाते हैं और रेत हटा दी जाती है।</li>
+<li><strong>रेत का खराब संघनन और अपर्याप्त या गैर-समान तापन से सिलवटों का निर्माण हो सकता है या यहां तक कि पाइप में दरार भी पड़ सकती है।</strong></li>
+</ul>
+
+<h3>गैल्वेनाइज्ड और भारी पाइपों को मोड़ने की विधि (Bending Galvanized & Heavy Pipes)</h3>
+<ul>
+<li>गैल्वेनाइज्ड पाइप को मोड़ने का सबसे प्रभावी तरीका <strong>पाइप बेंडर</strong> का उपयोग करना है।</li>
+<li>स्वचालित और मैनुअल पाइप बेंडर्स दोनों को एक पाइप पर काम करते समय आपको लीवरेज देने के लिए डिज़ाइन किया गया है।</li>
+<li>संक्षेप में, ये उपकरण आपको खुद को नुकसान पहुंचाए बिना या पाइप को नुकसान पहुंचाए बिना गैल्वेनाइज्ड स्टील में सुरक्षित रूप से मोड़ बनाने के लिए आवश्यक ताकत देते हैं।</li>
+</ul>
+
+<h3>तकनीकें (Techniques)</h3>
+
+<h4>1. हैंडहेल्ड (Handheld):</h4>
+<ul>
+<li>तुलनात्मक रूप से, हैंडहेल्ड पाइप बेंडर्स कम खर्चिल होते हैं लेकिन उपयोग में अधिक कठिन होते हैं।</li>
+<li>यदि आप चाहते हैं कि आपका हैंडहेल्ड बेंडर अच्छी प्रकार से कार्य करे, तो आपको समय से पहले अपना बहुत सारा गणित करने की आवश्यकता होगी।</li>
+</ul>
+
+<h4>2. इंडक्शन बेंडिंग (Induction Bending):</h4>
+<ul>
+<li>जस्ती पाइप के लिए, आप अपने पाइप के चारों ओर एक <strong>हीटिंग कॉइल</strong> लपेट सकते हैं।</li>
+<li>सुनिश्चित करें कि कॉइल उस पाइप के हिस्से में फिट बैठता है जिसे आप मोड़ना चाहते हैं।</li>
+<li>जैसे ही पाइप प्रभावी रूप से नरम हो गया है, आप इसे अपने पसंदीदा डिग्री तक मोड़ने के लिए अपने हाथों या उपकरण का उपयोग कर सकते हैं।</li>
+</ul>
+
+<h4>3. हॉट बेंडिंग (Hot Bending):</h4>
+<ul>
+<li>हॉट बेंडिंग इंडक्शन बेंडिंग के समान काम करता है।</li>
+<li>अपने पाइप को इंडक्शन कॉइल से फिट करने के बजाय, आप इसके बजाय अपने पसंदीदा मोड़ को <strong>ब्लो टॉर्च</strong> या इसी तरह के टूल से गर्म कर सकते हैं।</li>
+<li>एक बार जब मटेरियल नरम हो जाता है, तो आप एक प्रभावी मोड़ सुनिश्चित करने के लिए इसे एक क्लैंप के साथ फिट कर सकते हैं।</li>
+</ul>
+
+<h3>जस्ती पाइप का आसान बेंडिंग (Easy Bending of Galvanized Pipes)</h3>
+<ul>
+<li>जस्ती पाइप जस्ता की एक परत द्वारा संरक्षित होता है।</li>
+<li>यह परत पाइप को जंग लगने से बचाती है।</li>
+<li>जबकि परत समय के साथ क्षतिग्रस्त हो सकती है, यह पाइप की लंबी उम्र सुनिश्चित करती है, आपको पैसे बचाती है और आपके पानी और गैस को एक समय में सालों तक चालू रखती है।</li>
+</ul>
+
+<h3>बेंडिंग में सावधानियाँ (Precautions in Bending)</h3>
+<ol>
+<li>पाइप को मोड़ने से पहले उचित रूप से गर्म करें।</li>
+<li>गर्म करते समय समान तापन सुनिश्चित करें।</li>
+<li>रेत को अच्छी तरह से भरें और संघनित करें।</li>
+<li>बेंडिंग के बाद पाइप को धीरे-धीरे ठंडा करें।</li>
+<li>पाइप को अधिक मोड़ने से बचें।</li>
+<li>त्रिज्या कॉलर के आकार का सही चयन करें।</li>
+<li>बेंडिंग करते समय सुरक्षा उपकरण पहनें।</li>
+<li>गर्म पाइप को छूने से बचें।</li>
+</ol>
+</div>
+</div>
+
+<div class="tool-figure">
+<div class="placeholder-icon">🖼️</div>
+<div class="image-placeholder">
+<p><strong>चित्र: पाइप बेंडिंग</strong></p>
+<p>स्थान: /images/notes/plumber/module-9/pipe_bending.jpg</p>
+<code>pipe_bending.jpg</code>
+<p style="font-size:0.8rem;color:#888;">(Cold Bending, Hot Bending, Hydraulic Bending Machine)</p>
+</div>
+<div class="figure-caption">Fig 8 – पाइप बेंडिंग</div>
+</div>
+
+<div class="important-box">
+<h4>📌 परीक्षा फोकस</h4>
+<ul>
+<li>Cold Bending: 1-15 मिमी (साधारण), 40 मिमी (बड़े दायरे), 20 मिमी (Radius Collar)</li>
+<li>Hot Bending: 100 मिमी से अधिक व्यास</li>
+<li>Hot Bending में: सूखी रेत भरें, लाल-गर्म करें</li>
+<li>Hydraulic Bending Machine: 75 मिमी तक</li>
+<li>Induction Bending: Heating Coil लपेटें</li>
+<li>Galvanized Pipe: पाइप बेंडर का उपयोग करें</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== CONCLUSION ===== -->
+<div class="container">
+<div class="conclusion-section">
+<h2>📌 Module 9 – निष्कर्ष (Conclusion)</h2>
+<div class="bilingual">
+<div class="content">
+<p><strong>Module 9 – Drainage System</strong> में हमने निम्नलिखित सभी विषयों को पूर्ण रूप से कवर किया है:</p>
+<ul>
+<li><strong>निरीक्षण कक्ष:</strong> Water-tight chamber, गली ट्रैप से 6 मीटर के भीतर, 600 × 600 mm न्यूनतम आकार, C.I./R.C.C. Manhole Cover।</li>
+<li><strong>सेप्टिक टैंक:</strong> 300 या कम आबादी, आयताकार, लंबाई 2-4 गुना चौड़ाई, आउटलेट 5-7 सेमी नीचे, 100-180 सेमी तरल गहराई, 30-45 सेमी Free Board, Vent Pipe 10 सेमी।</li>
+<li><strong>सोक पिट और सेसपूल:</strong> Soak Pit (1 मीटर+ व्यास, 1 मीटर गहराई, मृदा अवशोषण), Leaching Cesspool (तल water-tight, ऊपरी हिस्सा खुला)।</li>
+<li><strong>ट्रैप के प्रकार:</strong> P, Q, S Trap (आकार के अनुसार), Floor, Gully, Intercepting Trap (उपयोग के अनुसार), Water Seal 25-75 mm (common 50 mm), Intercepting 100 mm।</li>
+<li><strong>जल निकासी का लेआउट:</strong> 18 विचार बिंदु, 4 प्रणालियाँ (Two Pipe, One Pipe, Single Stack, Partially Ventilated)।</li>
+<li><strong>परीक्षण:</strong> 6 मुख्य विधियाँ (Mirror, Ball, Water, Smoke, Air, Odor), Water Test (1.5 मीटर, 2 घंटे), Air Test (25 mm max), Smoke Test (5 मिनट)।</li>
+<li><strong>नालियाँ:</strong> 4 खंड (Semi-Circular, U, V, Rectangular), Self-Cleaning Velocity, Free Board।</li>
+<li><strong>पाइप बेंडिंग:</strong> Cold Bending (1-40 मिमी), Hot Bending (100 मिमी+), Hydraulic Machine (75 मिमी), सावधानियाँ।</li>
+</ul>
+<p>ये सभी ड्रेनेज सिस्टम कौशल हर प्लंबर के लिए आवश्यक हैं। इनका सही अभ्यास करें और सुरक्षित तरीके से उपयोग करें।</p>
+</div>
+</div>
+<p><strong>Source verification:</strong> इस Module 9 की सामग्री को NIMI Plumber Trade Theory (NSQF Level 4, Revised 2022) के Exercise 1.9.77 से 1.9.82 से cross-check किया गया है।</p>
+</div>
+</div>
+
+<!-- ===== MCQ ===== -->
+<div class="container">
+<div class="content-section" data-content="mcq">
+<div class="section-header"><span class="icon">❓</span><span class="title">MCQ Practice / बहुविकल्पीय प्रश्न</span></div>
+<div class="section-body">
+<div class="mcq-link">
+<p><strong>📌 Click below to practice multiple-choice questions for this module.</strong></p>
+<a href="/question-bank/plumber/index.html?mod=9" target="_blank">📝 Go to Question Bank →</a>
+<p style="margin-top:10px;font-size:0.9rem;color:#888;">(Opens in a new tab)</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ===== RELATED MODULES ===== -->
+<div class="container">
+<div class="content-section" data-content="related">
+<div class="section-header"><span class="icon">🔗</span><span class="title">Related Modules / संबंधित मॉड्यूल</span></div>
+<div class="section-body">
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+<a href="/notes/plumber/plumber1.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 1: Safety</a>
+<a href="/notes/plumber/plumber2.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 2: Hand Tools</a>
+<a href="/notes/plumber/plumber3.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 3: Fitter</a>
+<a href="/notes/plumber/plumber4.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 4: Welder</a>
+<a href="/notes/plumber/plumber5.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 5: Mason</a>
+<a href="/notes/plumber/plumber6.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 6: Plumber</a>
+<a href="/notes/plumber/plumber7.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 7: Piping System</a>
+<a href="/notes/plumber/plumber8.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 8: Pump & PVC Joints</a>
+<a href="/notes/plumber/plumber10.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 10: Water Supply System</a>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+        function filterSections() {
+            const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterSections();
+        });
+
+        function getPageUrl() { return window.location.href; }
+        function getPageTitle() { return document.querySelector('title').textContent; }
+        function shareWhatsApp() {
+            const url = getPageUrl();
+            const text = encodeURIComponent('🚰 ' + getPageTitle() + ' - Plumber Theory Module 9 Study Material!');
+            window.open('https://api.whatsapp.com/send?text=' + text + '%20' + encodeURIComponent(url), '_blank');
+        }
+        function shareFacebook() {
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function shareTwitter() {
+            const text = encodeURIComponent('🚰 ' + getPageTitle());
+            window.open('https://twitter.com/intent/tweet?text=' + text + '&url=' + encodeURIComponent(getPageUrl()), '_blank');
+        }
+        function copyPageLink() {
+            const url = getPageUrl();
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.getElementById('copyLinkBtn');
+                    const span = document.getElementById('copyLinkText');
+                    span.textContent = '✅ Copied!';
+                    btn.classList.add('copied');
+                    setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+                }).catch(() => fallbackCopy(url));
+            } else { fallbackCopy(url); }
+        }
+        function fallbackCopy(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyLinkBtn');
+                const span = document.getElementById('copyLinkText');
+                span.textContent = '✅ Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => { span.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 3000);
+            } catch (err) { alert('Unable to copy. Please select and copy the URL manually.'); }
+            document.body.removeChild(textarea);
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'x' || e.key === 'u' || e.key === 's')) {
+                e.preventDefault();
+                alert('📚 Content is protected. Please use the share buttons to share this page.');
+            }
+        });
+
+        console.log('✅ Plumber Theory Module 9 – Drainage System Loaded.');
+</script>
+</body>
+</html>
