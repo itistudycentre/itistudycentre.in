@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
@@ -152,7 +153,9 @@
 </head>
 <body>
 <div id="header-container"></div>
-<script defer src="/js/header-loader.js"></script>
+<script defer="" src="/js/header-loader.js"></script>
+
+
 
 <div class="breadcrumb">
 <div class="container">
@@ -162,48 +165,43 @@
             <span class="current">Module 1 – Safety</span>
 </div>
 </div>
-
 <section class="page-title">
 <div class="container">
 <h1>🛡️ Module 1 – Safety (सुरक्षा)</h1>
 <p>सुरक्षा का महत्व · प्राथमिक चिकित्सा · अग्निशामक · हाउसकीपिंग · अपशिष्ट निपटान</p>
 </div>
 </section>
-
 <div class="container">
 <div class="module-navigation">
 <a href="/notes/plumber/index.html">← All Modules</a>
 <a href="/notes/plumber/plumber2.html">Module 2 →</a>
 </div>
 </div>
-
 <section class="search-section container">
 <input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
 <button onclick="filterSections()">🔍 Search</button>
 </section>
-
 <div class="container">
 <div class="share-section">
 <span class="share-label">📤 Share:</span>
 <button class="share-btn whatsapp" onclick="shareWhatsApp()">
-<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
 WhatsApp
 </button>
 <button class="share-btn facebook" onclick="shareFacebook()">
-<svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
 Facebook
 </button>
 <button class="share-btn twitter" onclick="shareTwitter()">
-<svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
 Twitter
 </button>
 <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
-<svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
 <span id="copyLinkText">Copy Link</span>
 </button>
 </div>
 </div>
-
 <!-- ===== TOC ===== -->
 <div class="container">
 <div class="content-section" style="border:2px solid #003366;">
@@ -223,7 +221,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== SECTION 1: IMPORTANCE OF SAFETY ===== -->
 <div class="container" id="sec-intro">
 <div class="content-section" data-content="intro">
@@ -238,7 +235,6 @@ Twitter
 <li>एक लापरवाह कार्यकर्ता की छोटी सी गलती संगठन को भारी नुकसान पहुँचा सकती है।</li>
 <li>श्रमिकों की सुरक्षा से उत्पादकता और नैतिकता बढ़ती है।</li>
 </ul>
-
 <h3>सुरक्षा के लिए बुनियादी नियम (Basic Rules for Safety)</h3>
 <ul>
 <li>कारखानों में दुर्घटनाओं को रोकने के लिए सुरक्षा नियम बनाए जाते हैं।</li>
@@ -252,15 +248,13 @@ Twitter
 </li>
 <li>प्रत्येक औद्योगिक संगठन का आदर्श वाक्य है – <strong>“पहले सुरक्षा और सर्वोपरि सुरक्षा” (Safety First and Safety Foremost)</strong>।</li>
 </ul>
-
 <h3>सुरक्षा सावधानियों का वर्गीकरण (Classification of Safety Precautions)</h3>
 <ol>
 <li><strong>व्यक्तिगत के लिए सुरक्षा (Safety for Individual):</strong> ढीले कपड़ों से बचें, औजार पीसते समय चश्मा पहनें, सुरक्षा जूते पहनें।</li>
 <li><strong>कॉलेज और अन्य लोगों के लिए सुरक्षा (Safety for Others):</strong> भारी इकाइयाँ उठाने से पहले सावधानी, साझा कार्य में सतर्कता, दोषपूर्ण उपकरणों का उपयोग न करें।</li>
-<li><strong>उपकरण और मशीनों के लिए सुरक्षा (Safety for Tools & Equipment):</strong> उचित काम के लिए उचित उपकरण, उपयोग के बाद सफाई और तेल लगाना।</li>
+<li><strong>उपकरण और मशीनों के लिए सुरक्षा (Safety for Tools &amp; Equipment):</strong> उचित काम के लिए उचित उपकरण, उपयोग के बाद सफाई और तेल लगाना।</li>
 <li><strong>सामग्री के लिए सुरक्षा (Safety for Materials):</strong> ईंटों को ठीक से ढेर करना, सीमेंट की बोरियों को फर्श से ऊपर रखना।</li>
 </ol>
-
 <h3>व्यक्तिगत सुरक्षा उपकरण (Personal Protective Equipment – PPE)</h3>
 <div class="table-wrap">
 <table>
@@ -276,7 +270,6 @@ Twitter
 </tbody>
 </table>
 </div>
-
 <h3>आपातकालीन टेलीफोन नंबर</h3>
 <div class="info-card orange">
 <h4>📞 भारत में आपातकालीन नंबर</h4>
@@ -302,7 +295,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== SECTION 2: FIRST AID ===== -->
 <div class="container" id="sec-firstaid">
 <div class="content-section" data-content="firstaid">
@@ -311,7 +303,6 @@ Twitter
 <div class="bilingual">
 <div class="content">
 <p><strong>प्राथमिक चिकित्सा (First Aid)</strong> दुर्घटना या अचानक बीमारी के शिकार व्यक्ति को तब तक दी जाने वाली <strong>तत्काल और अस्थायी देखभाल</strong> है, जब तक डॉक्टर से इलाज उपलब्ध नहीं हो जाता।</p>
-
 <h3>प्राथमिक चिकित्सा किट (First Aid Kit) में शामिल वस्तुएँ</h3>
 <ul>
 <li>सूती कपड़े (Cotton cloth)</li>
@@ -327,7 +318,6 @@ Twitter
 <li>चाकू (Knife)</li>
 <li>ब्लेड (Blade)</li>
 </ul>
-
 <h3>साइट पर प्रमुख संभावित चोटें</h3>
 <ul>
 <li>खून बह रहा है (Bleeding)</li>
@@ -336,14 +326,12 @@ Twitter
 <li>जलना (Burns)</li>
 <li>बेहोशी (Unconsciousness)</li>
 </ul>
-
 <h3>रक्तस्राव को रोकना (Control of Bleeding)</h3>
 <ul>
 <li>आमतौर पर रक्तस्राव को घाव पर सीधे दबाव डालकर नियंत्रित किया जा सकता है।</li>
 <li>इसे बाँध या ड्रेसिंग या किसी कपड़े से लगाया जा सकता है।</li>
 <li>यदि रक्तस्राव बंद न हो तो घाव के ऊपर कसकर पट्टी बाँधें।</li>
 </ul>
-
 <h3>कृत्रिम श्वसन (Artificial Respiration)</h3>
 <p>जब किसी व्यक्ति की साँस रुक जाती है, तो <strong>मुँह से मुँह (Mouth-to-Mouth)</strong> कृत्रिम श्वसन दिया जाता है:</p>
 <ol>
@@ -354,19 +342,16 @@ Twitter
 <li>मुँह हटाएँ और छाती को गिरने दें।</li>
 <li>प्रति मिनट 12–16 बार दोहराएँ।</li>
 </ol>
-
 <div class="warning-box">
 <h4>⚠️ महत्वपूर्ण</h4>
 <p>यदि <strong>दिल नहीं धड़क रहा है</strong> तो तुरंत <strong>बाहरी छाती का संपीडन (External Chest Compression – CPR)</strong> करना चाहिए।</p>
 </div>
-
 <h3>जलने का इलाज (Treatment of Burns)</h3>
 <ul>
 <li>सुखदायक मरहम लगाएँ (Apply soothing ointment)।</li>
 <li>जले को जीवाणुरहित ड्रेसिंग से ढकें।</li>
 <li>गंभीर जलने पर तुरंत डॉक्टर से मिलें।</li>
 </ul>
-
 <h3>इलेक्ट्रिक शॉक (Electric Shock) का इलाज</h3>
 <ul>
 <li>पहले मुख्य स्विच बंद करें।</li>
@@ -374,7 +359,6 @@ Twitter
 <li>यदि साँस रुकी हो तो कृत्रिम श्वसन दें।</li>
 <li>तुरंत डॉक्टर को बुलाएँ।</li>
 </ul>
-
 <h3>साँप के काटने पर प्राथमिक उपचार (Snake Bite)</h3>
 <ul>
 <li>रोगी को आराम की स्थिति में रखें।</li>
@@ -395,7 +379,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== SECTION 3: GENERAL PRECAUTIONS ===== -->
 <div class="container" id="sec-precaution">
 <div class="content-section" data-content="precaution">
@@ -428,7 +411,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== SECTION 4: FIRE EXTINGUISHERS ===== -->
 <div class="container" id="sec-fire">
 <div class="content-section" data-content="fire">
@@ -437,7 +419,6 @@ Twitter
 <div class="bilingual">
 <div class="content">
 <p>एक <strong>अग्निशामक यंत्र (Fire Extinguisher)</strong> एक सक्रिय अग्नि सुरक्षा उपकरण है जिसका उपयोग छोटी आग को बुझाने के लिए किया जाता है।</p>
-
 <h3>आग के वर्ग (Classes of Fire)</h3>
 <div class="table-wrap">
 <table>
@@ -451,7 +432,6 @@ Twitter
 </tbody>
 </table>
 </div>
-
 <h3>अग्निशामक के प्रकार (Types of Fire Extinguishers)</h3>
 <ol>
 <li><strong>पानी से भरे बुझाने वाले (Water Type):</strong> Gas Cartridge Type और Stored Pressure Type।</li>
@@ -460,7 +440,6 @@ Twitter
 <li><strong>कार्बन डाइऑक्साइड (CO₂):</strong> विशिष्ट आकार के डिस्चार्ज हॉर्न द्वारा पहचाना जाता है।</li>
 <li><strong>हेलोन एक्सटिंग्विशर:</strong> CTC (Carbon Tetra Chloride) और BCF से भरे जाते हैं।</li>
 </ol>
-
 <h3>अग्निशामक का उपयोग – P.A.S.S. विधि</h3>
 <div class="info-card blue">
 <h4>🧯 P.A.S.S. Technique</h4>
@@ -471,7 +450,6 @@ Twitter
 <li><strong>S – Sweep:</strong> आग के आधार पर झाड़ू की तरह घुमाएँ</li>
 </ul>
 </div>
-
 <h3>आग लगने की स्थिति में सामान्य प्रक्रिया</h3>
 <ol>
 <li>अलार्म बजाएँ।</li>
@@ -490,7 +468,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== SECTION 5: HOUSEKEEPING ===== -->
 <div class="container" id="sec-housekeeping">
 <div class="content-section" data-content="housekeeping">
@@ -509,7 +486,6 @@ Twitter
 <li><strong>पाइलिंग के तरीके:</strong> प्लेटफॉर्म, फर्श को ओवरलोड न करें और सामग्री को सुरक्षित ऊँचाई पर रखें।</li>
 <li><strong>सामग्री हैंडलिंग:</strong> पैकेज की मात्रा और वजन के अनुसार फोकलिपट, कवेयर और होइस्ट का उपयोग करें।</li>
 </ol>
-
 <h3>5S विधि (5S Methodology)</h3>
 <div class="info-card green">
 <h4>🏭 5S के पाँच सिद्धांत</h4>
@@ -521,7 +497,6 @@ Twitter
 <li><strong>Shitsuke (Sustain):</strong> अनुशासन बनाए रखें</li>
 </ul>
 </div>
-
 <h3>अच्छी शॉप फ्लोर प्रथाएँ (Good Shop Floor Practices)</h3>
 <ul>
 <li>प्रबंधन प्रक्रिया सुधार पर इनपुट प्राप्त करने के लिए संयंत्र कर्मचारियों के साथ नियमित बैठक करता है।</li>
@@ -534,7 +509,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== SECTION 6: WASTE DISPOSAL ===== -->
 <div class="container" id="sec-waste">
 <div class="content-section" data-content="waste">
@@ -543,7 +517,6 @@ Twitter
 <div class="bilingual">
 <div class="content">
 <p><strong>औद्योगिक अपशिष्ट (Industrial Waste)</strong> औद्योगिक गतिविधियों जैसे कारखानों, मिलों और खानों द्वारा उत्पादित अपशिष्ट है।</p>
-
 <h3>अपशिष्ट पदार्थों की सूची (List of Waste Materials)</h3>
 <ul>
 <li>विभिन्न सामग्री के धातु के चिप्स (Metal Chips)</li>
@@ -551,7 +524,6 @@ Twitter
 <li>कपास का कचरा (Cotton Waste)</li>
 <li>अन्य अपशिष्ट जैसे बिजली, काँच आदि</li>
 </ul>
-
 <h3>अपशिष्ट पृथक्करण के लिए रंग कोड (Colour Code for Waste Segregation)</h3>
 <div class="table-wrap">
 <table>
@@ -566,7 +538,6 @@ Twitter
 </tbody>
 </table>
 </div>
-
 <h3>अपशिष्ट निपटान के लाभ (Benefits of Waste Disposal)</h3>
 <ul>
 <li>स्वच्छ और सुरक्षित कार्य वातावरण।</li>
@@ -575,7 +546,6 @@ Twitter
 <li>पुनर्चक्रण से कच्चे माल की बचत।</li>
 <li>कंपनी की छवि में सुधार।</li>
 </ul>
-
 <h3>अपशिष्ट प्रबंधन के 3R</h3>
 <div class="info-card green">
 <h4>♻️ 3R Principle</h4>
@@ -590,7 +560,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== CONCLUSION ===== -->
 <div class="container">
 <div class="conclusion-section">
@@ -611,7 +580,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== MCQ ===== -->
 <div class="container">
 <div class="content-section" data-content="mcq">
@@ -625,7 +593,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== RELATED MODULES ===== -->
 <div class="container">
 <div class="content-section" data-content="related">
@@ -639,7 +606,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <footer>
 <div class="footer-links">
 <a href="/disclaimer.html">Disclaimer</a>
@@ -650,7 +616,6 @@ Twitter
 <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
 </footer>
 <button id="scrollTop" title="Go to Top">⬆</button>
-
 <script>
         function filterSections() {
             const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
