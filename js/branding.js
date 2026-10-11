@@ -7,13 +7,18 @@
         "ITI STUDY CENTRE     WWW.ITISTUDYCENTRE.IN"
      2. Repeating diagonal watermark
      3. Automatic "Article by www.itistudycentre.in" credit strips
-        distributed evenly through article content (6–10 per article)
+        evenly distributed across the WHOLE article (6–10 strips)
 
-   Designed to survive:
-     • dynamically loaded article bodies
-     • repeated initialisation
-     • old credit elements left behind by previous versions
-     • MutationObserver feedback loops
+   Credit placement strategy (v2):
+     • Collect every content block (p, ul, ol, blockquote, table,
+       pre, figure) inside the article.
+     • Ignore headers, nav, TOC, sidebar, comments, footer.
+     • Split the block list into N equal segments and drop one
+       credit after the last block of each segment.
+     • Result: strips appear evenly from near the top to near the
+       bottom of the article, never clustered.
+     • Target N depends on article length: 6, 7, 8, 9 or 10.
+     • Never more than 10 strips per page.
 ========================================================= */
 
 (function () {
@@ -28,8 +33,8 @@
   var SITE_TEXT = "WWW.ITISTUDYCENTRE.IN";
   var CREDIT_TEXT = "Article by www.itistudycentre.in";
 
-  /* All known credit class names from previous versions.
-     Removing all of them before re-inserting prevents duplicates. */
+  /* Every credit class name we have ever used — remove them all
+     before reinserting, so no duplicates from old versions remain. */
   var OLD_CREDIT_SELECTOR = [
     ".isc-article-credit",
     ".isc-credit-v14",
@@ -38,6 +43,19 @@
     ".article-credit",
     ".iti-credit"
   ].join(", ");
+
+  /* Content blocks that we use as insertion anchors. */
+  var BLOCK_SELECTOR =
+    "p, ul, ol, blockquote, table, pre, figure";
+
+  /* Elements that must never receive a credit or anchor one. */
+  var EXCLUDE_ANCESTOR =
+    "header, nav, footer, aside, " +
+    "#isc-brand-bar, #isc-watermark, " +
+    ".isc-article-credit, .toc, #toc, .table-of-contents, " +
+    ".breadcrumb, .breadcrumbs, " +
+    ".iti-comments, .isc-comments, #comments, .comments, " +
+    "form, .sidebar, #sidebar, .widget, .advertisement, .ads";
 
   var creditTimer = null;
   var lastSignature = "";
@@ -71,7 +89,7 @@
 
       ".isc-article-credit{display:block !important;position:relative;z-index:3;",
       "clear:both;box-sizing:border-box;width:100%;",
-      "margin:16px 0 24px !important;padding:11px 12px;text-align:center;",
+      "margin:18px 0 26px !important;padding:12px 14px;text-align:center;",
       "background:#eef3f8;border:1px solid #d4dfeb;",
       "border-left:4px solid #34516e;border-radius:4px;color:#34516e;",
       "font:13px/1.6 Arial,sans-serif;overflow-wrap:anywhere}",
@@ -87,7 +105,7 @@
       "#isc-watermark{grid-template-columns:repeat(2,minmax(0,1fr));",
       "grid-template-rows:repeat(10,minmax(0,1fr))}",
       "#isc-watermark span{font-size:9px}",
-      ".isc-article-credit{margin:13px 0 20px !important;padding:9px 5px;font-size:12px}",
+      ".isc-article-credit{margin:14px 0 20px !important;padding:10px 6px;font-size:12px}",
       "}",
 
       "@media print{",
@@ -158,75 +176,50 @@
 
     for (var i = 0; i < selectors.length; i++) {
       var root = document.querySelector(selectors[i]);
-      if (root && root.querySelector("h2, h3")) {
+      if (root && root.querySelector("p, h2, h3")) {
         return root;
       }
     }
     return null;
   }
 
-  function isExcludedHeading(heading) {
-    if (heading.closest(
-      "header, nav, footer, #isc-brand-bar, #isc-watermark, " +
-      ".isc-article-credit, .toc, #toc, .table-of-contents, " +
-      ".breadcrumb, .breadcrumbs, table, thead, tbody, tr, td, th, " +
-      "aside, .sidebar, #sidebar"
-    )) {
-      return true;
-    }
+  /* Collect every content block in document order, excluding
+     everything that lives inside a header, nav, TOC, sidebar,
+     comments area, form, etc. Also skips blocks nested inside
+     another collected block (e.g. <p> inside <blockquote>). */
+  function collectContentBlocks(root) {
+    var all = root.querySelectorAll(BLOCK_SELECTOR);
+    var result = [];
 
-    var title = heading.textContent.trim();
-
-    if (/^(विषय.?सूची|contents|table of contents)$/i.test(title)) {
-      return true;
-    }
-
-    var parent = heading.parentElement;
-    while (parent && parent !== document.body) {
-      var marker = (
-        (parent.id || "") + " " +
-        (typeof parent.className === "string" ? parent.className : "")
-      ).toLowerCase();
-
-      if (/table-of-contents|(^|[\s_-])toc([\s_-]|$)|breadcrumb/.test(marker)) {
-        return true;
+    Array.prototype.forEach.call(all, function (el) {
+      /* Skip empty blocks (whitespace only, no image / table cell) */
+      if (!el.textContent.replace(/\s+/g, "").length &&
+          !el.querySelector("img, video, iframe, svg")) {
+        return;
       }
-      parent = parent.parentElement;
-    }
 
-    return false;
-  }
+      /* Skip excluded areas */
+      if (el.closest(EXCLUDE_ANCESTOR)) return;
 
-  function getEligibleHeadings(root, tag) {
-    return Array.prototype.slice.call(root.querySelectorAll(tag))
-      .filter(function (h) {
-        return h.textContent.trim().length > 2 && !isExcludedHeading(h);
-      });
-  }
+      /* Skip blocks nested inside another collected block */
+      var p = el.parentElement;
+      while (p && p !== root) {
+        if (p.matches && p.matches(BLOCK_SELECTOR)) return;
+        p = p.parentElement;
+      }
 
-  /*
-    Choose which headings will be used as insertion points.
-
-    • If there are enough <h2> headings to reach the target, use only
-      <h2> — this keeps credits well separated.
-    • Otherwise, add <h3> headings in document order so shorter
-      articles can still reach the target number of strips.
-  */
-  function getArticleHeadings(root, target) {
-    var h2 = getEligibleHeadings(root, "h2");
-
-    if (h2.length >= target) return h2;
-
-    var h3 = getEligibleHeadings(root, "h3");
-    var combined = h2.concat(h3);
-
-    combined.sort(function (a, b) {
-      if (a === b) return 0;
-      return (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING)
-        ? -1 : 1;
+      result.push(el);
     });
 
-    return combined;
+    return result;
+  }
+
+  function pickTarget(textLen) {
+    if (textLen < 2500) return 6;
+    if (textLen < 6000) return 7;
+    if (textLen < 12000) return 8;
+    if (textLen < 25000) return 9;
+    return 10;
   }
 
   function createCredit() {
@@ -244,8 +237,10 @@
     return box;
   }
 
-  function removeOldCredits(root) {
-    root.querySelectorAll(OLD_CREDIT_SELECTOR).forEach(function (el) {
+  function removeAllOldCredits() {
+    /* Remove credits anywhere in the document — including stray
+       ones left outside the article root by older versions. */
+    document.querySelectorAll(OLD_CREDIT_SELECTOR).forEach(function (el) {
       if (el.parentNode) el.parentNode.removeChild(el);
     });
   }
@@ -260,70 +255,82 @@
       return;
     }
 
-    var textBlocks = root.querySelectorAll("p, li").length;
+    var blocks = collectContentBlocks(root);
 
-    /* Short: 6, medium: 7, long: 8, very long: 10 — hard cap 10. */
-    var target = textBlocks < 30 ? 6 :
-                 textBlocks < 70 ? 7 :
-                 textBlocks < 150 ? 8 : 10;
-
-    var headings = getArticleHeadings(root, target);
-
-    if (!headings.length) {
-      console.warn("ITI Branding: no eligible article headings found.");
+    if (blocks.length < 4) {
+      console.warn(
+        "ITI Branding: not enough content blocks (found " +
+        blocks.length + "). Skipping credits."
+      );
       return;
     }
 
-    var count = Math.min(target, headings.length);
+    var textLen = (root.innerText || root.textContent || "").length;
+    var target = pickTarget(textLen);
 
-    /*
-      Build a "signature" describing the current article structure.
-      If nothing meaningful changed, skip the remove/reinsert cycle
-      so we never cause a MutationObserver loop.
-    */
+    /* Never insert two credits closer than 2 blocks apart. */
+    var maxCredits = Math.floor((blocks.length - 1) / 2) + 1;
+    target = Math.min(target, maxCredits);
+    target = Math.max(target, 3);
+
+    /* Signature check — skip the remove/reinsert cycle if nothing
+       structural has changed. Prevents observer feedback loops. */
     var signature = [
+      blocks.length,
+      target,
+      textLen,
       root.tagName,
       root.id || "",
-      typeof root.className === "string" ? root.className : "",
-      headings.length,
-      count,
-      textBlocks
+      typeof root.className === "string" ? root.className : ""
     ].join("|");
 
-    var existingCredits = root.querySelectorAll(".isc-article-credit").length;
+    var existing = document.querySelectorAll(".isc-article-credit").length;
 
-    if (existingCredits === count && lastSignature === signature) {
+    if (signature === lastSignature && existing === target) {
       return;
     }
     lastSignature = signature;
 
-    /* Now it is safe to remove old credits — we already know the
-       replacement plan will succeed. */
-    removeOldCredits(root);
+    /* Safe to remove now — we already know we will reinsert. */
+    removeAllOldCredits();
 
-    /* Evenly spaced positions from first to last heading. */
+    /* Compute evenly spaced insertion indices.
+       For target N and block count B:
+         idx_i = round((i+1) * B / (N+1)) - 1   for i = 0..N-1
+       This places credits at roughly B/(N+1), 2B/(N+1), ... through
+       the article — evenly from near the start to near the end. */
     var positions = [];
-    for (var i = 0; i < count; i++) {
-      var idx = count === 1
-        ? 0
-        : Math.round(i * (headings.length - 1) / (count - 1));
-
-      if (positions.indexOf(idx) === -1) positions.push(idx);
+    for (var i = 0; i < target; i++) {
+      var idx = Math.round((i + 1) * blocks.length / (target + 1)) - 1;
+      idx = Math.max(0, Math.min(blocks.length - 1, idx));
+      positions.push(idx);
     }
 
-    /* Insert from bottom to top so earlier indices stay valid. */
+    /* Deduplicate while preserving order */
+    var seen = {};
+    positions = positions.filter(function (v) {
+      if (seen[v]) return false;
+      seen[v] = true;
+      return true;
+    });
+
+    /* Insert from bottom to top so earlier references stay valid. */
     positions.sort(function (a, b) { return b - a; });
 
+    var inserted = 0;
     positions.forEach(function (idx) {
-      var heading = headings[idx];
-      if (heading && heading.parentNode) {
-        heading.insertAdjacentElement("afterend", createCredit());
+      var ref = blocks[idx];
+      if (ref && ref.parentNode) {
+        ref.parentNode.insertBefore(createCredit(), ref.nextSibling);
+        inserted++;
       }
     });
 
     console.log(
-      "ITI Branding: inserted " + positions.length + " credit strips " +
-      "(text blocks: " + textBlocks + ", headings: " + headings.length + ")."
+      "ITI Branding: inserted " + inserted + " credit strips " +
+      "(blocks: " + blocks.length +
+      ", target: " + target +
+      ", textLen: " + textLen + ")."
     );
   }
 
@@ -340,16 +347,12 @@
         return nodes.some(function (node) {
           if (node.nodeType !== 1) return false;
 
-          /* Ignore our own UI — otherwise the observer loops forever. */
-          if (node.id === "isc-brand-bar" || node.id === "isc-watermark") {
-            return false;
-          }
-          if (node.classList && node.classList.contains("isc-article-credit")) {
-            return false;
-          }
-          if (node.hasAttribute && node.hasAttribute("data-isc-credit")) {
-            return false;
-          }
+          /* Ignore our own UI so we never loop */
+          if (node.id === "isc-brand-bar" ||
+              node.id === "isc-watermark") return false;
+          if (node.classList && node.classList.contains("isc-article-credit")) return false;
+          if (node.hasAttribute && node.hasAttribute("data-isc-credit")) return false;
+
           return true;
         });
       });
@@ -376,8 +379,7 @@
     addWatermark();
     addArticleCredits();
 
-    /* Retry for pages that load article content shortly after
-       DOMContentLoaded (fetch, template rendering, etc.). */
+    /* Retry for pages whose article content appears a bit later. */
     [800, 2000, 4000, 7000].forEach(function (delay) {
       window.setTimeout(addArticleCredits, delay);
     });
