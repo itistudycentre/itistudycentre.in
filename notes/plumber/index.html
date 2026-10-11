@@ -1,93 +1,292 @@
 <!DOCTYPE html>
-
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Plumber Notes | ITI Study Centre</title>
-<meta content="ITI Plumber Trade Theory Notes in Hindi. Chapter Wise Study Material for NCVT and SCVT Students." name="description"/>
+<title>Plumber Trade – Complete Module Index | ITI Study Centre</title>
+<meta content="Complete list of Plumber Trade modules for ITI students – 1st Year – NSQF Level 4 (Revised 2022)" name="description"/>
 <link href="/images/favicon.png" rel="icon"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<link href="https://www.itistudycentre.in/notes/plumber/index.html" rel="canonical"/>
+<style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Segoe UI',Roboto,Arial,sans-serif;background:#f5f7fb;color:#1e2a3a;line-height:1.7;}
+        .container{max-width:1180px;margin:0 auto;padding:0 24px;}
+
+        .main-header{background:#003366;padding:12px 0;border-bottom:4px solid #ffcc00;position:sticky;top:0;z-index:1000;box-shadow:0 2px 12px rgba(0,0,0,0.15);}
+        .main-header .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;}
+        .main-header .logo a{color:#fff;font-size:1.5rem;font-weight:700;text-decoration:none;letter-spacing:-0.5px;}
+        .main-header .logo a span{color:#ffcc00;}
+        .main-header nav{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;}
+        .main-header nav a{color:#fff;text-decoration:none;font-size:0.95rem;font-weight:500;padding:6px 0;border-bottom:2px solid transparent;transition:0.2s;}
+        .main-header nav a:hover,.main-header nav a.active{border-bottom-color:#ffcc00;color:#ffcc00;}
+        .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
+        .hamburger span{display:block;width:28px;height:3px;background:#fff;border-radius:2px;transition:0.3s;}
+
+        .trade-hero{background:linear-gradient(135deg,#003366 0%,#1a4a7a 100%);color:#fff;padding:44px 0 36px;border-radius:0 0 24px 24px;margin:0 0 24px 0;box-shadow:0 4px 20px rgba(0,51,102,0.25);position:relative;overflow:hidden;}
+        .trade-hero::after{content:'';position:absolute;top:-60%;right:-10%;width:300px;height:300px;background:rgba(255,204,0,0.06);border-radius:50%;pointer-events:none;}
+        .trade-hero .container{position:relative;z-index:1;}
+        .trade-hero .trade-badge{display:inline-block;background:#ffcc00;color:#003366;font-size:0.75rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:4px 18px;border-radius:20px;margin-bottom:8px;}
+        .trade-hero h1{font-size:2.6rem;font-weight:800;letter-spacing:-0.5px;margin-bottom:4px;}
+        .trade-hero h1 span{color:#ffcc00;}
+        .trade-hero .sub-title{font-size:1.2rem;font-weight:400;opacity:0.9;margin-bottom:6px;}
+        .trade-hero .meta-info{font-size:0.95rem;opacity:0.85;margin-top:6px;display:flex;flex-wrap:wrap;gap:8px 24px;}
+        .trade-hero .meta-info strong{color:#ffcc00;font-weight:600;}
+
+        .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:-18px 0 28px 0;position:relative;z-index:2;}
+        .stats-row .stat-card{background:#fff;border-radius:14px;padding:18px 16px 14px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,0.06);border:1px solid #e6eaef;transition:0.3s;}
+        .stats-row .stat-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,0.08);}
+        .stats-row .stat-card .stat-number{font-size:2rem;font-weight:800;color:#003366;line-height:1.2;}
+        .stats-row .stat-card .stat-number .k{font-size:1.2rem;font-weight:700;}
+        .stats-row .stat-card .stat-label{font-size:0.85rem;color:#666;font-weight:500;margin-top:2px;}
+        .stats-row .stat-card.highlight{background:#003366;border-color:#003366;}
+        .stats-row .stat-card.highlight .stat-number{color:#ffcc00;}
+        .stats-row .stat-card.highlight .stat-label{color:rgba(255,255,255,0.85);}
+
+        .breadcrumb{background:#eef1f5;padding:10px 20px;font-size:0.85rem;border-bottom:1px solid #dde1e7;}
+        .breadcrumb a{color:#003366;text-decoration:none;}
+        .breadcrumb a:hover{text-decoration:underline;}
+        .breadcrumb .current{color:#555;font-weight:600;}
+
+        .search-section{display:flex;gap:12px;align-items:center;justify-content:center;margin:16px 0 24px;flex-wrap:wrap;}
+        .search-section input{flex:1;max-width:520px;padding:13px 18px;font-size:1rem;border:2px solid #ccc;border-radius:8px;outline:none;transition:0.3s;}
+        .search-section input:focus{border-color:#003366;box-shadow:0 0 0 3px rgba(0,51,102,0.12);}
+        .search-section button{padding:13px 36px;font-size:1.05rem;font-weight:600;background:#003366;color:#fff;border:none;border-radius:8px;cursor:pointer;transition:0.25s;}
+        .search-section button:hover{background:#002244;transform:scale(1.02);}
+        @media(max-width:640px){.search-section{flex-direction:column;}.search-section input{max-width:100%;width:100%;}.search-section button{width:100%;}}
+
+        .tab-container{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 20px;justify-content:center;}
+        .tab-btn{padding:12px 32px;background:#e9ecef;border:none;border-radius:30px;font-size:1rem;font-weight:700;color:#333;cursor:pointer;transition:0.3s;}
+        .tab-btn:hover{background:#d0d5db;transform:scale(1.02);}
+        .tab-btn.active{background:#003366;color:#fff;}
+
+        .year-section{display:none;}
+        .year-section.active{display:block;}
+
+        .module-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:20px 0;}
+        .module-card{background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,0.05);border:1px solid #e6eaef;padding:20px 22px;transition:0.3s;display:flex;flex-direction:column;justify-content:space-between;}
+        .module-card:hover{box-shadow:0 6px 24px rgba(0,0,0,0.08);transform:translateY(-3px);border-color:#003366;}
+        .module-card .mod-num{font-size:0.7rem;color:#888;font-weight:700;background:#e9ecef;padding:2px 14px;border-radius:20px;display:inline-block;margin-bottom:8px;letter-spacing:0.3px;}
+        .module-card .mod-name{font-size:1.05rem;font-weight:600;color:#003366;margin-bottom:4px;}
+        .module-card .mod-name .hi{font-weight:400;color:#555;font-size:0.9rem;display:block;margin-top:2px;}
+        .module-card .module-topics{margin-top:6px;font-size:0.92rem;line-height:1.7;color:#333;font-weight:500;}
+        .module-card .btn{align-self:flex-start;background:#003366;color:#fff;padding:8px 22px;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:0.3s;border:none;cursor:pointer;margin-top:14px;}
+        .module-card .btn:hover{background:#002244;transform:scale(1.02);}
+
+        .card{background:#fff;border-radius:14px;padding:20px 24px;border:1px solid #e6eaef;margin:20px 0;box-shadow:0 2px 8px rgba(0,0,0,0.03);}
+        .card h2{color:#003366;font-size:1.3rem;margin-bottom:6px;}
+        .news-btn{display:inline-block;padding:10px 28px;background:#003366;color:#fff !important;border-radius:6px;text-decoration:none;font-weight:600;transition:0.3s;border:none;cursor:pointer;font-size:1rem;}
+        .news-btn:hover{background:#002244;transform:scale(1.02);}
+
+        footer{background:#1a2634;color:#b0b8c5;padding:28px 20px 20px;text-align:center;margin-top:44px;border-top:4px solid #003366;}
+        footer .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px;margin-bottom:12px;}
+        footer .footer-links a{color:#b0b8c5;text-decoration:none;font-size:0.9rem;transition:0.2s;}
+        footer .footer-links a:hover{color:#fff;}
+        footer p{margin:8px 0 0;font-size:0.85rem;color:#7a8494;}
+
+        #scrollTop{position:fixed;bottom:24px;right:24px;background:#003366;color:#fff;border:none;padding:12px 16px;border-radius:8px;cursor:pointer;font-size:1.1rem;box-shadow:0 4px 12px rgba(0,0,0,0.15);transition:0.25s;display:none;z-index:999;}
+        #scrollTop:hover{background:#002244;transform:scale(1.05);}
+
+        @media(max-width:900px){.main-header nav{gap:4px 12px;margin-top:4px;width:100%;justify-content:center;}.main-header nav a{font-size:0.85rem;}}
+        @media(max-width:768px){
+            .trade-hero h1{font-size:1.8rem;}
+            .trade-hero .sub-title{font-size:1rem;}
+            .stats-row{grid-template-columns:repeat(2,1fr);gap:12px;}
+            .stats-row .stat-card .stat-number{font-size:1.5rem;}
+            .module-grid{grid-template-columns:1fr;}
+            .tab-btn{padding:8px 18px;font-size:0.85rem;}
+            .module-card .mod-name{font-size:0.95rem;}
+            .hamburger{display:flex;}
+            .main-header nav{display:none;flex-direction:column;width:100%;gap:4px;padding:12px 0 6px;border-top:1px solid rgba(255,255,255,0.1);margin-top:8px;}
+            .main-header nav.open{display:flex;}
+            .main-header nav a{padding:6px 0;width:100%;text-align:center;border-bottom:none;}
+        }
+        @media(max-width:480px){
+            .container{padding:0 12px;}
+            .trade-hero{padding:28px 0 24px;}
+            .trade-hero h1{font-size:1.4rem;}
+            .stats-row{grid-template-columns:1fr 1fr;gap:8px;margin-top:-8px;}
+            .stats-row .stat-card{padding:12px 8px;}
+            .stats-row .stat-card .stat-number{font-size:1.3rem;}
+            .tab-container{gap:6px;}
+            .tab-btn{padding:6px 12px;font-size:0.75rem;}
+            .module-card{padding:16px 18px;}
+        }
+</style>
 </head>
 <body>
 <div id="header-container"></div>
-<script defer="" src="/js/header-loader.js"></script>
+<script defer src="/js/header-loader.js"></script>
 
-
-
-<!-- =========================================
-    HEADER
-========================================= -->
-<!-- =========================================
-    BREADCRUMB
-========================================= -->
-<div id="breadcrumb" style="background:#f0f0f0; padding:8px 20px; font-size:0.9rem; border-bottom:1px solid #ddd;">
-<a href="/" style="text-decoration:none; color:#003366;">🏠 Home</a>  ›  <a href="/iti-study-centre-notes.html" style="text-decoration:none; color:#003366;">ITI Notes</a>  ›  <span style="color:#555; font-weight:bold;">Plumber Notes</span>
-</div>
-<!-- =========================================
-    PAGE TITLE
-========================================= -->
-<section class="page-title">
+<div class="breadcrumb">
 <div class="container">
-<h1>🚰 ITI Plumber Trade Notes</h1>
-<p>Chapter Wise Theory Notes | Hindi Medium | NCVT &amp; SCVT</p>
+<a href="/">🏠 Home</a>  › 
+            <a href="/iti-study-centre-notes.html">ITI Notes</a>  › 
+            <span class="current">Plumber Trade – Complete Module Index</span>
+</div>
+</div>
+
+<section class="trade-hero">
+<div class="container">
+<div class="trade-badge">📍 NSQF Level - 4 (Revised 2022)</div>
+<h1>PLUMBER <span>TRADE</span></h1>
+<p class="sub-title">Complete Theory &amp; Question Bank</p>
+<div class="meta-info">
+<span><strong>Plumbing</strong> Sector</span>
+<span>🔧 <strong>1 Year</strong> · <strong>12 Modules</strong></span>
+<span>⏱️ <strong>1200 Hours</strong></span>
+</div>
 </div>
 </section>
-<!-- =========================================
-    SEARCH BOX
-========================================= -->
+
+<div class="container">
+<div class="stats-row">
+<div class="stat-card highlight">
+<div class="stat-number">12</div>
+<div class="stat-label">📘 Modules</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">1200</div>
+<div class="stat-label">⏱️ Training Hours</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">1</div>
+<div class="stat-label">📅 Year</div>
+</div>
+<div class="stat-card">
+<div class="stat-number">123</div>
+<div class="stat-label">🔧 Practical Exercises</div>
+</div>
+</div>
+</div>
+
 <section class="search-section container">
-<input placeholder="Search Plumber Topics, Chapters, or Keywords..." type="text"/>
-<button>🔍 Search</button>
+<input id="moduleSearch" placeholder="🔍 Search module by name or number..." type="text"/>
+<button onclick="filterModules()">Search</button>
 </section>
-<!-- =========================================
-    MAIN CONTENT
-========================================= -->
-<section class="container">
-<div class="card">
-<h2>📖 Plumber Trade Study Notes</h2>
-<p>इस पेज पर ITI Plumber Trade के सभी Theory Notes Chapter Wise उपलब्ध कराए जाएंगे। सभी Notes सरल हिन्दी भाषा में तैयार किए जाएंगे ताकि NCVT एवं SCVT दोनों के विद्यार्थी आसानी से अध्ययन कर सकें।</p>
-<p>जैसे-जैसे नए Chapters तैयार होंगे, उन्हें इसी पेज पर जोड़ा जाएगा।</p>
-<div class="notice-box" style="background:#fff3cd; padding:15px; border-left:6px solid #ffc107; border-radius:6px; margin:20px 0;">
-<h3 style="margin-top:0; color:#856404;">📢 वर्तमान स्थिति</h3>
-<p>अभी Plumber Trade के Notes उपलब्ध नहीं हैं। जैसे-जैसे नए Notes तैयार होंगे, उन्हें इसी पेज पर जोड़ा जाएगा।</p>
+
+<div class="container">
+<div class="tab-container">
+<button class="tab-btn active" data-year="year1">📚 All Modules</button>
 </div>
-<a class="news-btn" href="/iti-study-centre-notes.html">⬅ वापस ITI Notes पर जाएं</a>
 </div>
-</section>
-<!-- =========================================
-    SUGGESTIONS
-========================================= -->
+
+<div class="year-section active" id="year1">
+<div class="container">
+<div class="module-grid" id="year1-container"></div>
+</div>
+</div>
+
 <section class="container">
 <div class="card">
 <h2>💬 सुझाव दें</h2>
-<p>यदि आप किसी नए Chapter, Topic अथवा Study Material जोड़ना चाहते हैं, तो कृपया हमें अवश्य बताएं।</p>
+<p>यदि आपको किसी Module में सुधार चाहिए, तो हमें बताएं।</p>
 <br/>
 <a class="news-btn" href="/contact.html">💬 Click Here →</a>
 </div>
 </section>
-<!-- =========================================
-    FOOTER
-========================================= -->
-<footer style="background:#222; color:#ccc; padding:20px 15px; text-align:center; margin-top:40px; border-top:4px solid #003366;">
-<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 20px; margin-bottom:10px;">
-<a href="/disclaimer.html" style="color:#aaa; text-decoration:none;">Disclaimer</a>
-<a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a>
-<a href="/terms.html" style="color:#aaa; text-decoration:none;">Terms</a>
-<a href="/contact.html" style="color:#aaa; text-decoration:none;">Contact</a>
+
+<section class="container">
+<div class="card">
+<h2>⚠ Disclaimer</h2>
+<p>ITI Study Centre एक शैक्षणिक एवं सूचना प्रदान करने वाला प्लेटफ़ॉर्म है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के उद्देश्य से प्रकाशित की जाती है। आधिकारिक पाठ्यक्रम एवं नवीनतम जानकारी के लिए संबंधित विभाग द्वारा जारी सामग्री को प्राथमिकता दें।</p>
 </div>
-<p style="margin:10px 0 0 0; color:#888;">© 2026 ITI Study Centre. All Rights Reserved.</p>
+</section>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p>© 2026 ITI Study Centre. All Rights Reserved.</p>
 </footer>
-<button id="scrollTop" style="position:fixed; bottom:20px; right:20px; background:#003366; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;" title="Go to Top">⬆</button>
-<script src="/js/main.js"></script>
+<button id="scrollTop" title="Go to Top">⬆</button>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const year = document.querySelector('footer p');
-    if (year) {
-      year.textContent = "© " + new Date().getFullYear() + " ITI Study Centre. All Rights Reserved.";
-    }
-  });
+        // ============================================================
+        //  PLUMBER MODULE DATA – 12 Modules (NSQF Level 4, Revised 2022)
+        // ============================================================
+        const modulesData = {
+            year1: [
+                { num: 1, name: 'Safety', nameHi: 'सुरक्षा', topics: 'Importance of Safety & General Precautions<br>First Aid<br>Fire Extinguishers<br>Housekeeping', link: 'plumber1.html' },
+                { num: 2, name: 'Hand Tools', nameHi: 'हाथ उपकरण', topics: 'Steel Rule, Try Square, Calipers<br>Hacksaw Frame & Blades<br>Files, Chisels, Hammers<br>Pipe Wrench, Chain Wrench, Pipe Cutter', link: 'plumber2.html' },
+                { num: 3, name: 'Fitter', nameHi: 'फिटर', topics: 'Hacksawing, Punching & Filing<br>Types of Files<br>Inner & Outer Thread Cutting<br>Drilling Machine & Taps', link: 'plumber3.html' },
+                { num: 4, name: 'Welder', nameHi: 'वेल्डर', topics: 'Gas Welding Method<br>Safety Precautions<br>Soldering & Brazing<br>Hard & Soft Solders', link: 'plumber4.html' },
+                { num: 5, name: 'Mason', nameHi: 'मेसन', topics: 'Mason\'s Hand Tools<br>Bricks, Lime & Cement<br>Scaffolding & Plastering<br>R.C.C. & Proportion', link: 'plumber5.html' },
+                { num: 6, name: 'Plumber', nameHi: 'प्लंबर', topics: 'Plumber Tools & Equipment<br>P.P.R Pipe Joints – Hot Gas Welding<br>Types of Fittings<br>Water Composition & Hardness', link: 'plumber6.html' },
+                { num: 7, name: 'Piping System', nameHi: 'पाइपिंग सिस्टम', topics: 'Humed & Asbestos Pipes<br>Pipe Joints – Straight, Branch, Expansion<br>Solders & Fluxes', link: 'plumber7.html' },
+                { num: 8, name: 'Pump & PVC Joints', nameHi: 'पंप और पीवीसी जोड़', topics: 'Plumber\'s Materials – Lead, Tin, Zinc<br>Types of Pumps – Suction, Centrifugal<br>BSP Threads, Pipe Dies<br>PVC Bending & Joining', link: 'plumber8.html' },
+                { num: 9, name: 'Drainage System', nameHi: 'ड्रेनेज सिस्टम', topics: 'Inspection Chamber, Septic Tank<br>Types of Traps – P, Q, S<br>Layout of Drainage System<br>Method of Testing Drainage Lines', link: 'plumber9.html' },
+                { num: 10, name: 'Water Supply System', nameHi: 'जल आपूर्ति प्रणाली', topics: 'Dismantling & Renewal of Valves<br>Installation of Water Meters<br>Description of Cocks & Valves<br>Sanitary Appliances Installation', link: 'plumber10.html' },
+                { num: 11, name: 'Bending & Water Supply', nameHi: 'झुकने और जल आपूर्ति', topics: 'Bending of Pipes – Hot & Cold Method<br>Domestic Drainage System<br>Different Types of Traps<br>General Layout & Pipe Connection', link: 'plumber11.html' },
+                { num: 12, name: 'Tank Installation & Testing', nameHi: 'टैंक स्थापना एवं परीक्षण', topics: 'Plumbing & Sanitary Symbols<br>Plumbing Codes<br>Layout of Pipes as per Drawing<br>Estimation & Bill of Quantity', link: 'plumber12.html' }
+            ]
+        };
+
+        function renderModules(containerId, modules) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            let html = '';
+            modules.forEach(mod => {
+                const searchText = `${mod.num} ${mod.name} ${mod.nameHi}`.toLowerCase();
+                html += `
+                            <div class="module-card" data-search="${searchText}">
+                                <div>
+                                    <span class="mod-num">Module ${mod.num}</span>
+                                    <div class="mod-name">${mod.name} <span class="hi">${mod.nameHi}</span>
+                                    ${mod.topics ? `<div class="module-topics">${mod.topics}</div>` : ''}
+                                    </div>
+                                </div>
+                                <a href="${mod.link}" class="btn">📖 Open Module →</a>
+                            </div>
+                        `;
+            });
+            container.innerHTML = html;
+        }
+
+        renderModules('year1-container', modulesData.year1);
+
+        function switchTab(year) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.tab-btn[data-year="${year}"]`).classList.add('active');
+            document.querySelectorAll('.year-section').forEach(el => el.classList.remove('active'));
+            document.getElementById(year).classList.add('active');
+        }
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() { switchTab(this.dataset.year); });
+        });
+
+        function filterModules() {
+            const keyword = document.getElementById('moduleSearch').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.module-card');
+            cards.forEach(card => {
+                const data = card.dataset.search || '';
+                card.style.display = (data.includes(keyword) || keyword === '') ? '' : 'none';
+            });
+        }
+        document.getElementById('moduleSearch').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') filterModules();
+        });
+
+        const hamburger = document.getElementById('hamburgerBtn');
+        const mainNav = document.getElementById('mainNav');
+        if (hamburger && mainNav) {
+            hamburger.addEventListener('click', function() { mainNav.classList.toggle('open'); });
+            document.querySelectorAll('#mainNav a').forEach(link => {
+                link.addEventListener('click', function() { mainNav.classList.remove('open'); });
+            });
+        }
+
+        const scrollBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            scrollBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelector('footer p').textContent = '© ' + new Date().getFullYear() + ' ITI Study Centre. All Rights Reserved.';
+        console.log('✅ Plumber Trade Index loaded – 12 modules.');
 </script>
 </body>
 </html>
