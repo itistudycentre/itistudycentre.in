@@ -33,7 +33,7 @@
         }
 
         var script = document.createElement("script");
-        script.src = "/js/branding.js?v=8";
+        script.src = "/js/branding.js?v=9";
         script.dataset.itiBranding = "true";
 
         script.onload = function () {
