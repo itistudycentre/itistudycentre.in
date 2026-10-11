@@ -9,9 +9,7 @@
   var SITE_URL = "https://www.itistudycentre.in/";
   var SITE_TEXT = "WWW.ITISTUDYCENTRE.IN";
 
-  /* =========================
-     1. ALL STYLES
-  ========================= */
+  /* 1. STYLES */
   function addStyles() {
     if (document.getElementById("isc-branding-style")) return;
 
@@ -19,7 +17,6 @@
     style.id = "isc-branding-style";
 
     style.textContent = `
-      /* TOP WEBSITE BAR */
       #isc-brand-bar {
         position: sticky;
         top: 0;
@@ -46,10 +43,7 @@
         text-decoration: underline;
       }
 
-      /* VERY LIGHT WATERMARK
-         Keep the watermark subtle so that
-         the educational content remains readable.
-      */
+      /* VERY LIGHT WATERMARK */
       #isc-watermark {
         position: fixed;
         inset: 0;
@@ -69,7 +63,7 @@
         display: block;
         white-space: nowrap;
         transform: rotate(-28deg);
-        color: rgba(18, 52, 90, .045);
+        color: rgba(18, 52, 90, .035);
         font-family: Arial, sans-serif;
         font-size: clamp(10px, 1.4vw, 16px);
         font-weight: 700;
@@ -86,8 +80,8 @@
         z-index: 3;
         box-sizing: border-box;
         width: 100%;
-        margin: 18px 0;
-        padding: 6px 10px;
+        margin: 24px 0;
+        padding: 7px 10px;
         text-align: right;
         font-family: Arial, sans-serif;
         font-size: 12px;
@@ -107,7 +101,6 @@
         color: #b07800;
       }
 
-      /* MOBILE */
       @media (max-width: 600px) {
         #isc-brand-bar {
           padding: 7px 4px;
@@ -125,12 +118,11 @@
 
         #isc-watermark span {
           font-size: 9px;
-          color: rgba(18, 52, 90, .045);
-          letter-spacing: 0;
+          color: rgba(18, 52, 90, .035);
         }
 
         .isc-article-credit {
-          margin: 14px 0;
+          margin: 18px 0;
           padding: 6px 4px;
           font-size: 11px;
         }
@@ -150,9 +142,7 @@
     document.head.appendChild(style);
   }
 
-  /* =========================
-     2. TOP BRANDING BAR
-  ========================= */
+  /* 2. TOP BRAND BAR */
   function addBrandBar() {
     if (document.getElementById("isc-brand-bar")) return;
 
@@ -171,9 +161,7 @@
     document.body.insertBefore(bar, document.body.firstChild);
   }
 
-  /* =========================
-     3. BACKGROUND WATERMARK
-  ========================= */
+  /* 3. BACKGROUND WATERMARK */
   function addWatermark() {
     if (document.getElementById("isc-watermark")) return;
 
@@ -190,61 +178,67 @@
     document.body.appendChild(layer);
   }
 
-  /* =========================
-     4. ARTICLE CREDITS
-     Add up to 6 clickable credits
-     throughout a long article.
-  ========================= */
+  /* 4. ADD CREDITS SPREAD ACROSS THE WHOLE ARTICLE */
   function addArticleCredits() {
     var container =
       document.querySelector("main.module-content") ||
-      document.querySelector("main");
-
-    if (!container) {
-      container =
-        document.querySelector("article") ||
-        document.querySelector(".module-content") ||
-        document.querySelector(".article-content");
-    }
+      document.querySelector("main article") ||
+      document.querySelector("article") ||
+      document.querySelector("main") ||
+      document.querySelector(".article-content");
 
     if (!container) return;
 
-    var sections = Array.from(
-      container.querySelectorAll(".content-card")
-    );
+    /*
+      Remove old credits inside this article first.
+      This prevents old, closely spaced credits from
+      remaining when this function runs again.
+    */
+    container
+      .querySelectorAll(".isc-article-credit")
+      .forEach(function (item) {
+        item.remove();
+      });
 
-    if (!sections.length) {
-      sections = Array.from(
-        container.querySelectorAll("section")
+    /*
+      Collect paragraphs across the whole article,
+      rather than selecting every small section.
+    */
+    var paragraphs = Array.from(
+      container.querySelectorAll("p")
+    ).filter(function (p) {
+      return !p.closest(".isc-article-credit") &&
+             p.textContent.trim().length > 0;
+    });
+
+    if (paragraphs.length < 2) return;
+
+    // Maximum 6 credits for the entire article.
+    var creditCount = Math.min(6, paragraphs.length);
+    var selected = [];
+
+    /*
+      Place credits at evenly spaced paragraph positions.
+      The first and last paragraphs are not used.
+    */
+    for (var i = 1; i <= creditCount; i++) {
+      var index = Math.round(
+        (i * paragraphs.length) / (creditCount + 1)
       );
-    }
 
-    if (!sections.length) return;
+      index = Math.max(
+        0,
+        Math.min(paragraphs.length - 1, index)
+      );
 
-    // Select up to 6 sections spread across the article.
-    var count = Math.min(6, sections.length);
-    var indexes = [];
-
-    for (var i = 0; i < count; i++) {
-      var idx = count === 1
-        ? 0
-        : Math.round(
-            i * (sections.length - 1) / (count - 1)
-          );
-
-      if (indexes.indexOf(idx) === -1) {
-        indexes.push(idx);
+      if (selected.indexOf(index) === -1) {
+        selected.push(index);
       }
     }
 
-    indexes.forEach(function (idx) {
-      var section = sections[idx];
-      if (!section) return;
-
-      // Prevent duplicate credits in this section.
-      if (section.querySelector(".isc-article-credit")) {
-        return;
-      }
+    selected.forEach(function (index) {
+      var paragraph = paragraphs[index];
+      if (!paragraph || !paragraph.parentNode) return;
 
       var credit = document.createElement("div");
       credit.className = "isc-article-credit";
@@ -257,30 +251,12 @@
 
       credit.appendChild(link);
 
-      var firstParagraph = section.querySelector("p");
-      var heading = section.querySelector(
-        "h2, h3, h4, h5, h6"
-      );
-
-      if (firstParagraph) {
-        firstParagraph.insertAdjacentElement(
-          "afterend",
-          credit
-        );
-      } else if (heading) {
-        heading.insertAdjacentElement(
-          "afterend",
-          credit
-        );
-      } else {
-        section.appendChild(credit);
-      }
+      // Keep the credit in the article's normal flow.
+      paragraph.insertAdjacentElement("afterend", credit);
     });
   }
 
-  /* =========================
-     5. INITIALIZE
-  ========================= */
+  /* 5. INITIALIZE */
   function initBranding() {
     if (!document.body || !document.head) return;
 
@@ -300,25 +276,4 @@
     initBranding();
   }
 
-  // Retry after the page and its content have fully loaded.
-  window.addEventListener("load", initBranding);
-
-  // Support pages whose article content is inserted later.
-  if (document.body && window.MutationObserver) {
-    var observer = new MutationObserver(function () {
-      if (
-        document.querySelector("main.module-content .content-card") &&
-        !document.querySelector(
-          "main.module-content .isc-article-credit"
-        )
-      ) {
-        addArticleCredits();
-      }
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-  }
 })();
