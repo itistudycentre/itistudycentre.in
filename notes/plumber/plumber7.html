@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="hi">
 <head>
 <meta charset="utf-8"/>
@@ -152,7 +153,9 @@
 </head>
 <body>
 <div id="header-container"></div>
-<script defer src="/js/header-loader.js"></script>
+<script defer="" src="/js/header-loader.js"></script>
+
+
 
 <div class="breadcrumb">
 <div class="container">
@@ -162,14 +165,12 @@
             <span class="current">Module 7 – Piping System</span>
 </div>
 </div>
-
 <section class="page-title">
 <div class="container">
 <h1>🚰 Module 7 – Piping System (पाइपिंग सिस्टम)</h1>
 <p>हम्ड और एस्बेस्टस पाइप · पाइप बिछाना और संरेखण · पाइप जोड़ के प्रकार · सोल्डर और फ्लक्स</p>
 </div>
 </section>
-
 <div class="container">
 <div class="module-navigation">
 <a href="/notes/plumber/plumber6.html">← Module 6</a>
@@ -177,34 +178,31 @@
 <a href="/notes/plumber/plumber8.html">Module 8 →</a>
 </div>
 </div>
-
 <section class="search-section container">
 <input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
 <button onclick="filterSections()">🔍 Search</button>
 </section>
-
 <div class="container">
 <div class="share-section">
 <span class="share-label">📤 Share:</span>
 <button class="share-btn whatsapp" onclick="shareWhatsApp()">
-<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<svg viewbox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
 WhatsApp
 </button>
 <button class="share-btn facebook" onclick="shareFacebook()">
-<svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+<svg viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
 Facebook
 </button>
 <button class="share-btn twitter" onclick="shareTwitter()">
-<svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+<svg viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
 Twitter
 </button>
 <button class="share-btn link" id="copyLinkBtn" onclick="copyPageLink()">
-<svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+<svg viewbox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"></path></svg>
 <span id="copyLinkText">Copy Link</span>
 </button>
 </div>
 </div>
-
 <!-- ===== TOC ===== -->
 <div class="container">
 <div class="content-section" style="border:2px solid #003366;">
@@ -222,7 +220,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== SECTION 1: HUMED & ASBESTOS PIPES ===== -->
 <div class="container" id="sec-humed">
 <div class="content-section" data-content="humed">
@@ -236,7 +233,6 @@ Twitter
 <li>कच्चे पानी को स्रोत से जल उपचार संयंत्रों तक पहुंचाने के लिए <strong>खुले चैनलों (Open Channels)</strong> का उपयोग किया जाता है।</li>
 <li><strong>पाइप लाइनों (Pipelines)</strong> का उपयोग करने का लाभ वाष्पीकरण और रिसाव के नुकसान जैसे परिवहन नुकसान में कमी है।</li>
 </ul>
-
 <h3>कंक्रीट पाइप (Concrete Pipes)</h3>
 <ul>
 <li>ये पाइप <strong>प्रीकास्ट (Precast)</strong> या <strong>कास्ट-इन-साइट (Cast-in-site)</strong> हो सकते हैं।</li>
@@ -244,7 +240,6 @@ Twitter
 <li>इन पाइपों को <strong>बेल और स्पिगोट जोड़ों (Bell and Spigot Joints)</strong> से जोड़ा जाता है।</li>
 <li>सादे कंक्रीट के पाइपों का उपयोग केवल <strong>60 सेमी व्यास</strong> तक किया जाता है, इसके ऊपर ये प्रबलित होते हैं।</li>
 </ul>
-
 <h3>R.C.C. पाइप (R.C.C. Pipes)</h3>
 <p>R.C.C. पाइप निम्नलिखित विधियों द्वारा निर्मित होते हैं:</p>
 <ul>
@@ -256,10 +251,8 @@ Twitter
 <li>रखरखाव की लागत कम है। लेकिन वे बहुत भारी हैं और उन्हें संभालना और परिवहन करना मुश्किल है।</li>
 <li>वे उच्च दबाव का सामना नहीं कर सकते हैं और मरम्मत करना मुश्किल है।</li>
 </ul>
-
 <h3>हम्ड पाइप (Humed Pipes)</h3>
 <p><strong>भारतीय मानक (IS: 458 - 1961)</strong> हम्ड पाइपों को छह वर्गों में वर्गीकृत करता है:</p>
-
 <div class="table-wrap">
 <table>
 <caption>हम्ड पाइपों का तालिका वर्गीकरण</caption>
@@ -274,7 +267,6 @@ Twitter
 </tbody>
 </table>
 </div>
-
 <h4>हम्ड पाइप के फायदे (Advantages of Humed Pipes):</h4>
 <ol>
 <li>वे <strong>बैकफिलिंग</strong> के कारण बाहरी भार और भार का विरोध करने के लिए अधिक उपयुक्त हैं।</li>
@@ -285,7 +277,6 @@ Twitter
 <li>इनके भारी वजन के कारण इनके खाली होने पर तैरने की समस्या नहीं होती है।</li>
 <li>विस्तार जोड़ों की सामान्य रूप से आवश्यकता नहीं होती है।</li>
 </ol>
-
 <h4>हम्ड पाइप के नुकसान (Disadvantages of Humed Pipes):</h4>
 <ol>
 <li>अप्रतिबंधित पाइप तन्यता दरारों के लिए उत्तरदायी हैं, और वे उच्च दबाव का सामना नहीं कर सकते।</li>
@@ -293,7 +284,6 @@ Twitter
 <li>उनकी मरम्मत करना बहुत कठिन है।</li>
 <li>प्रीकास्ट पाइप बहुत भारी होते हैं, और उन्हें ले जाना मुश्किल होता है।</li>
 </ol>
-
 <h4>हम्ड पाइपों की विशिष्टता (Specifications of Humed Pipes):</h4>
 <div class="table-wrap">
 <table>
@@ -306,7 +296,6 @@ Twitter
 </tbody>
 </table>
 </div>
-
 <h3>एस्बेस्टस सीमेंट पाइप (Asbestos Cement Pipes – A.C. Pipes)</h3>
 <p><strong>सामान्य:</strong> A.C. पाइप मशीनों में उच्च दबाव में शुद्ध <strong>एस्बेस्टस फाइबर (Asbestos Fibre)</strong>, <strong>पोर्टलैंड सीमेंट (Portland Cement)</strong> और <strong>सिलिका (Silica)</strong> से निर्मित होते हैं।</p>
 <ul>
@@ -315,7 +304,6 @@ Twitter
 <li>पाइप में शामिल होने के लिए पाइप के एक छोर पर <strong>सॉकेट</strong> होता है।</li>
 <li>A.C. पाइप का उपयोग अपशिष्ट जल या बारिश के पानी को ले जाने के लिए किया जाता है।</li>
 </ul>
-
 <h4>A.C. पाइप के फायदे (Advantages):</h4>
 <ol>
 <li>इसमें क्षरण नहीं पकड़ता।</li>
@@ -325,7 +313,6 @@ Twitter
 <li>काटना और ड्रिलिंग आसान है।</li>
 <li>पाइप के अंदर चिकना है; इसलिए अच्छी वहन क्षमता है।</li>
 </ol>
-
 <h4>A.C. पाइप के नुकसान (Disadvantages):</h4>
 <ol>
 <li>A.C. पाइप प्रकृति में <strong>भंगुर</strong> होते हैं इसलिए हैंडलिंग और परिवहन के दौरान टूटने की संभावना अधिक होती है।</li>
@@ -333,7 +320,6 @@ Twitter
 <li>शॉक रेजिस्टेंस कम है इसलिए इसे सावधानी के साथ रखना चाहिए।</li>
 <li>स्वास्थ्य के आधार पर कई देशों में एस्बेस्टस सीमेंट के उपयोग पर प्रतिबंध लगा दिया गया है।</li>
 </ol>
-
 <h4>A.C. पाइप के वर्गीकरण (Classification of A.C. Pressure Pipes):</h4>
 <div class="table-wrap">
 <table>
@@ -348,7 +334,6 @@ Twitter
 </tbody>
 </table>
 </div>
-
 <h3>A.C. पाइप की स्थापना (Laying of A.C. Pipes)</h3>
 <ul>
 <li>यह ल्यूबरकुलेशन, इक्रस्टेशन, मिट्टी के क्षरण और इलेक्ट्रोलिसिस के लिए प्रतिरोधी है और इसमें उत्कृष्ट हाइड्रोलिक गुण हैं।</li>
@@ -357,7 +342,6 @@ Twitter
 </ul>
 </div>
 </div>
-
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
@@ -368,7 +352,6 @@ Twitter
 </div>
 <div class="figure-caption">Fig 1 – हम्ड और एस्बेस्टस पाइप</div>
 </div>
-
 <div class="important-box">
 <h4>📌 परीक्षा फोकस</h4>
 <ul>
@@ -382,11 +365,10 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== SECTION 2: LAYING OUT PIPES ===== -->
 <div class="container" id="sec-laying">
 <div class="content-section" data-content="laying">
-<div class="section-header"><span class="icon">🛠️</span><span class="title">पाइप बिछाना और संरेखण (Method of Laying Out Pipes & Alignment)</span><span class="subtitle">— खाइयों की खुदाई, पाइप बिछाना, जोड़ना, परीक्षण</span></div>
+<div class="section-header"><span class="icon">🛠️</span><span class="title">पाइप बिछाना और संरेखण (Method of Laying Out Pipes &amp; Alignment)</span><span class="subtitle">— खाइयों की खुदाई, पाइप बिछाना, जोड़ना, परीक्षण</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -401,14 +383,12 @@ Twitter
 <li>पाइप की रक्षा (Protection of Pipes)</li>
 <li>फिर से भरना (Back Filling)</li>
 </ol>
-
 <h3>1. खाई के लिए उत्खनन (Excavation for Trench)</h3>
 <ul>
 <li>खाइयों की खुदाई इस प्रकार की जानी चाहिए कि पाइपों को आवश्यक संरेखण में और आवश्यक चौड़ाई और गहराई पर निर्दिष्ट किया जा सके।</li>
 <li><strong>कवर (Cover)</strong> को पाइप के ऊपर से जमीन की सतह तक मापा जाता है।</li>
 <li>उत्खनन मैन्युअल या यंत्रवत् किया जा सकता है।</li>
 </ul>
-
 <h4>खाई की चौड़ाई (Trench Width):</h4>
 <ul>
 <li>120cm की औसत गहराई तक सभी व्यास के लिए यह <strong>पाइप + 30cm</strong> होना चाहिए।</li>
@@ -416,7 +396,6 @@ Twitter
 <li>खाई की चौड़ाई 90cm से अधिक गहराई के लिए 75cm से कम नहीं होनी चाहिए।</li>
 <li>शीर्ष पर खाई की चौड़ाई गहराई के आधार पर बढ़ाई जा सकती है।</li>
 </ul>
-
 <h4>खाई की क्यारी (Trench Bed):</h4>
 <ul>
 <li>यदि नरम या बनी हुई मिट्टी में है, को अच्छी तरह से पानी पिलाया जाना है और पाइप डालने से पहले इसे कूटना है।</li>
@@ -424,7 +403,6 @@ Twitter
 <li>यदि खाई का तल अत्यंत कठोर या चट्टानी है तो खाइयों की खुदाई आवश्यक खाई स्तर से कम से कम <strong>150cm</strong> नीचे की जानी चाहिए।</li>
 <li>आवश्यक स्तर को चयनित महीन मिट्टी या रेत से भरकर बनाया जाता है और पाइप के लिए एक चिकनी बिस्तर प्राप्त करने के लिए संकुचित किया जाता है।</li>
 </ul>
-
 <h4>अन्य आवश्यकताएँ:</h4>
 <ul>
 <li>उत्खनन के पूरा होने पर, सॉकेट/कॉलर प्राप्त करने के लिए आवश्यक स्थान पर खोखले को काट दिया जाता है।</li>
@@ -437,14 +415,12 @@ Twitter
 <li>यातायात के लिए आवश्यक सुरक्षा उपाय जैसे बैरिकेड, लाल झंडा, लाल बत्ती आदि स्थापित किए जाने हैं।</li>
 <li>किसी भी अन्य सर्विस लाइन जैसे पानी की मेन, बिजली, टेलीफोन आदि की खुदाई करते समय सावधानीपूर्वक संरक्षित और समर्थित होना चाहिए और संबंधित अधिकारियों को भी सूचित किया जाना चाहिए।</li>
 </ul>
-
 <h3>2. पाइप के लिए बिस्तर (Bedding for Pipes)</h3>
 <ul>
 <li>अस्थिर मिट्टी जैसे नरम मिट्टी और सूखी ढेलेदार मिट्टी में यह जांचना होता है कि मिट्टी पाइप लाइन का समर्थन कर सकती है या नहीं।</li>
 <li>कभी-कभी उपयुक्त नींव प्रदान करने की आवश्यकता हो सकती है।</li>
 <li>विस्तृत मिट्टी की मिट्टी पाइपों को नुकसान पहुंचा सकती है। इसलिए पाइप लाइन के चारों ओर कम से कम <strong>100mm टैम्पर्ड रेत का लिफाफा</strong> देना आवश्यक है।</li>
 </ul>
-
 <h3>3. पाइप बिछाना (Laying of Pipes)</h3>
 <ul>
 <li>पाइपों को खाई के पास उतारकर खाई के साथ रखा जाना है।</li>
@@ -454,7 +430,6 @@ Twitter
 <li>प्रत्येक रस्सी का एक सिरा लकड़ी या स्टील की खूंटी से बंधा हो सकता है जिसे जमीन में दबा दिया जाता है और पाइप को रस्सी में रखा जाता है और दूसरा सिरा आदमी द्वारा रखा जाता है, जिसे धीरे-धीरे छोड़े जाने पर पाइप को खाई में गिरा दिया जाता है।</li>
 <li><strong>किसी भी स्थिति में पाइपों को लुढ़काकर खाई में नहीं गिराना चाहिए।</strong></li>
 </ul>
-
 <h3>4. पाइप का जोड़ (Joining of Pipes)</h3>
 <ul>
 <li>खाई की चौड़ाई के लिए सीमेंट या चूने के कंक्रीट के बिस्तर पर पत्थर के बर्तन पाइप बिछाए जाने हैं।</li>
@@ -466,13 +441,11 @@ Twitter
 <li>गाढ़े सीमेंट के घोल में गांजा यार्न सॉकेट के तार वाले गैसकेट का उपयोग करके और सीमेंट मोर्टार का उपयोग करके पाइपों को जोड़ दिया जाता है।</li>
 <li>बिछाने और जोड़ने के बाद, जोड़ों को <strong>7 दिनों तक ठीक</strong> करना होता है।</li>
 </ul>
-
 <h3>5. परीक्षण (Testing)</h3>
 <ul>
 <li>इलाज खत्म होने के बाद, पाइप और जोड़ों का परीक्षण किया जाता है।</li>
 <li>परीक्षण के संतोषजनक पूरा होने पर पृथ्वी को जमीनी स्तर तक भर दिया जाता है।</li>
 </ul>
-
 <h3>सीवर के लिए ढाल (Slope for Sewer)</h3>
 <div class="table-wrap">
 <table>
@@ -488,7 +461,6 @@ Twitter
 </tbody>
 </table>
 </div>
-
 <h3>पाइप बिछाने की स्थितियाँ (Conditions for Laying Pipes)</h3>
 <p>निम्नलिखित के तहत सीवर पाइप बिछाना पड़ सकता है:</p>
 <ul>
@@ -497,7 +469,6 @@ Twitter
 <li><strong>नकारात्मक प्रक्षेपण की स्थिति (Negative Projection):</strong> जब पाइप बिक्षाया जाता है तो दोनों पाइप एक ऊंचाई वाली जमीन की सतह पर होते हैं।</li>
 <li><strong>खुली स्थिति (Open Condition):</strong> पाइप बिछाई जाती है कि यह पूरी तरह या आंशिक रूप से जमीन की सतह से ऊपर हो।</li>
 </ul>
-
 <h3>पाइप बेडिंग के प्रकार (Various Types of Pipe Bedding)</h3>
 <ul>
 <li><strong>Earth Cushion:</strong> मिट्टी का कुशन।</li>
@@ -507,7 +478,6 @@ Twitter
 </ul>
 </div>
 </div>
-
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
@@ -518,7 +488,6 @@ Twitter
 </div>
 <div class="figure-caption">Fig 2 – पाइप बिछाना और संरेखण</div>
 </div>
-
 <div class="important-box">
 <h4>📌 परीक्षा फोकस</h4>
 <ul>
@@ -533,11 +502,10 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== SECTION 3: PIPE JOINTS ===== -->
 <div class="container" id="sec-joints">
 <div class="content-section" data-content="joints">
-<div class="section-header"><span class="icon">🔩</span><span class="title">विभिन्न पाइप जोड़ के प्रकार (Various Pipe Joints)</span><span class="subtitle">— Straight, Branch, Taft & Blow, Expansion Joints</span></div>
+<div class="section-header"><span class="icon">🔩</span><span class="title">विभिन्न पाइप जोड़ के प्रकार (Various Pipe Joints)</span><span class="subtitle">— Straight, Branch, Taft &amp; Blow, Expansion Joints</span></div>
 <div class="section-body copy-protect">
 <div class="bilingual">
 <div class="content">
@@ -549,7 +517,6 @@ Twitter
 <li>टाफ्ट और ब्लो जोड़ (Taft and Blow Joint)</li>
 <li>विस्तार जोड़ (Expansion Joint)</li>
 </ol>
-
 <h3>1. स्ट्रेट जोड़ (Straight Joint)</h3>
 <p>यह पाइप जोड़ का सबसे सरल प्रकार है जिसमें दो पाइपों को एक सीधी रेखा में जोड़ा जाता है।</p>
 <ul>
@@ -558,7 +525,6 @@ Twitter
 <li>पिघला हुआ सीसा या सीमेंट मोर्टार से जोड़ को सील किया जाता है।</li>
 <li><strong>उपयोग:</strong> C.I. पाइप, A.C. पाइप, कंक्रीट पाइप।</li>
 </ul>
-
 <h3>2. शाखा जोड़ (Branch Joint)</h3>
 <p>जब एक पाइप लाइन से दूसरी पाइप लाइन को जोड़ा जाता है तो उसे शाखा जोड़ कहते हैं।</p>
 <ul>
@@ -566,7 +532,6 @@ Twitter
 <li><strong>वाई जोड़ (Y Joint):</strong> 45° के कोण पर शाखा निकालने के लिए।</li>
 <li><strong>क्रॉस जोड़ (Cross Joint):</strong> चार दिशाओं में शाखा निकालने के लिए।</li>
 </ul>
-
 <h3>3. टाफ्ट और ब्लो जोड़ (Taft and Blow Joint)</h3>
 <p>यह विशेष प्रकार का जोड़ है जिसका उपयोग बड़े व्यास के पाइपों में किया जाता है।</p>
 <ul>
@@ -574,7 +539,6 @@ Twitter
 <li>जोड़ को सीमेंट मोर्टार या सीसा से सील किया जाता है।</li>
 <li><strong>उपयोग:</strong> पानी की मुख्य लाइनों में।</li>
 </ul>
-
 <h3>4. विस्तार जोड़ (Expansion Joint)</h3>
 <p>इस जोड़ का उपयोग ऐसे स्थानों पर किया जाता है जहां <strong>वायुमंडलीय तापमान में परिवर्तन</strong> के कारण पाइप सिकुड़ते और फैलते हैं।</p>
 <ul>
@@ -582,9 +546,7 @@ Twitter
 <li>रबर गैसकेट को बोल्ट के माध्यम से सॉकेट और स्पिगोट के बीच कसकर दबाया जाता है।</li>
 <li>शुरुआत में फॉलोअर रिंग को ठीक करते समय सॉकेट बेस और स्पिगोट एंड के बीच कुछ जगह छोड़ दी जाती है ताकि पाइपों की मुक्त आवाजाही हो सके।</li>
 </ul>
-
-<h3>सोल्डर और फ्लक्स (Solders & Fluxes in Joints)</h3>
-
+<h3>सोल्डर और फ्लक्स (Solders &amp; Fluxes in Joints)</h3>
 <h4>सॉफ्ट सोल्डर (Soft Solder):</h4>
 <ul>
 <li>गलनांक <strong>450°C से नीचे</strong>।</li>
@@ -592,7 +554,6 @@ Twitter
 <li>विभिन्न अनुपातों में उपलब्ध: 50:50, 60:40, 70:30 आदि।</li>
 <li>उपयोग: पीने के पानी की लाइन, विद्युत कनेक्शन, शीट मेटल।</li>
 </ul>
-
 <h4>हार्ड सोल्डर (Hard Solder / Brazing):</h4>
 <ul>
 <li>गलनांक <strong>450°C से ऊपर</strong>।</li>
@@ -600,7 +561,6 @@ Twitter
 <li>स्पेल्टर के रूप में जाना जाता है।</li>
 <li>उपयोग: मजबूत जोड़, धातु पाइप जोड़।</li>
 </ul>
-
 <div class="table-wrap">
 <table>
 <caption>सोल्डर के प्रकार और संरचना</caption>
@@ -615,20 +575,17 @@ Twitter
 </tbody>
 </table>
 </div>
-
 <h4>फ्लक्स के प्रकार (Types of Flux):</h4>
 <ul>
 <li><strong>संक्षारक फ्लक्स (Corrosive Flux):</strong> जिंक क्लोराइड, अमोनियम क्लोराइड, हाइड्रोक्लोरिक एसिड। सोल्डरिंग के बाद अच्छी तरह धोना आवश्यक।</li>
 <li><strong>गैर-संक्षारक फ्लक्स (Non-Corrosive Flux):</strong> राल (Rosin) आधारित। विद्युत कार्यों के लिए उपयुक्त।</li>
 </ul>
-
 <h4>फ्लक्स का कार्य:</h4>
 <ol>
 <li>ऑक्साइड को हटाना।</li>
 <li>क्षरण को रोकना।</li>
 <li>पिघले हुए सोल्डर के प्रवाह में मदद करना।</li>
 <li>बेहतर जोड़ को बढ़ावा देना।</li>
-</ul>
 
 <h3>तांबे के पाइप के जोड़ (Copper Pipe Joints)</h3>
 <p>तांबे के पाइप को जोड़ने के लिए दो मुख्य प्रकार के जोड़ों का उपयोग किया जाता है:</p>
@@ -636,21 +593,18 @@ Twitter
 <li><strong>नरम सोल्डर केशिका जोड़ (Soft Solder Capillary Joint)</strong></li>
 <li><strong>संपीडन जोड़ / प्लेयरिंग हुआ जोड़ (Compression Joint / Flaring Joint)</strong></li>
 </ol>
-
 <h4>सॉफ्ट सोल्डर केशिका फिटिंग के तीन प्रकार:</h4>
 <ol>
 <li><strong>फिटिंग में टच होल के माध्यम से सोल्डर वायर लगाया जाता है।</strong></li>
 <li><strong>फिटिंग के मुहाने पर सोल्डर लगाया जाता है।</strong></li>
 <li><strong>एक सोल्डर पहले से ही फिटिंग में है।</strong></li>
 </ol>
-
 <h3>केपिलरी एक्शन (Capillary Action)</h3>
 <ul>
 <li>केपिलरी एक्शन के कारण, पिघला हुआ सोल्डर दो निकटवर्ती सतहों के बीच प्रवाहित होता है।</li>
 <li>यह सुनिश्चित करता है कि जोड़ पूरी तरह से भरा हुआ है।</li>
 <li>केपिलरी फिटिंग को इस तरह से डिजाइन किया गया है कि पाइप फिटिंग में स्ट्राइड करके जोड़ पर अतिरिक्त ताकत की दोहरी दीवार बनाता है।</li>
 </ul>
-
 <h3>पाइप जोड़ के लिए सावधानियाँ (Precautions for Pipe Joints)</h3>
 <ul>
 <li>सभी जोड़ों को पानी से टाइट बनाना चाहिए।</li>
@@ -661,20 +615,18 @@ Twitter
 <li>सोल्डरिंग के बाद, एसिड फ्लक्स को अच्छी तरह धोना चाहिए।</li>
 <li>सोल्डरिंग करते समय सुरक्षा चश्मा पहनें।</li>
 </ul>
+</ol></div>
 </div>
-</div>
-
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
 <p><strong>चित्र: पाइप जोड़ के प्रकार</strong></p>
 <p>स्थान: /images/notes/plumber/module-7/pipe_joints.jpg</p>
 <code>pipe_joints.jpg</code>
-<p style="font-size:0.8rem;color:#888;">(Straight Joint, Branch Joint, Taft & Blow Joint, Expansion Joint)</p>
+<p style="font-size:0.8rem;color:#888;">(Straight Joint, Branch Joint, Taft &amp; Blow Joint, Expansion Joint)</p>
 </div>
 <div class="figure-caption">Fig 3 – पाइप जोड़ के प्रकार</div>
 </div>
-
 <div class="important-box">
 <h4>📌 परीक्षा फोकस</h4>
 <ul>
@@ -690,7 +642,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== SECTION 4: SOLDERS & FLUXES ===== -->
 <div class="container" id="sec-solders">
 <div class="content-section" data-content="solders">
@@ -705,9 +656,7 @@ Twitter
 <li>पिघला हुआ सोल्डर आधार धातु को गीला कर देता है जो आधार धातु को एक जोड़ बनाने में मदद करता है।</li>
 <li>गर्मी और कंपन के अधीन जोड़ों पर और जहां अधिक ताकत की आवश्यकता होती है, वहां सोल्डरिंग नहीं की जानी चाहिए।</li>
 </ul>
-
 <h3>सोल्डरिंग के प्रकार (Types of Soldering)</h3>
-
 <h4>1. सॉफ्ट सोल्डरिंग (Soft Soldering):</h4>
 <ul>
 <li>गलनांक <strong>427°C से कम</strong>।</li>
@@ -715,7 +664,6 @@ Twitter
 <li>सॉफ्ट सोल्डर विभिन्न आकृतियों और रूपों में उपलब्ध हैं जैसे कि <strong>छड़ी, बार, पेस्ट, टेप या तार</strong>।</li>
 <li>उपयोग: पीने के पानी की लाइन, विद्युत कनेक्शन।</li>
 </ul>
-
 <h4>2. हार्ड सोल्डरिंग (Hard Soldering / Brazing):</h4>
 <ul>
 <li>गलनांक <strong>450°C से ऊपर</strong>।</li>
@@ -723,7 +671,6 @@ Twitter
 <li>ब्रेज़िंग फिलर रॉड्स <strong>860°C से 950°C</strong> के तापमान पर पिघलती हैं।</li>
 <li>उपयोग: मजबूत जोड़, धातु पाइप जोड़।</li>
 </ul>
-
 <h3>सोल्डर के प्रकार (Types of Solder)</h3>
 <div class="table-wrap">
 <table>
@@ -739,7 +686,6 @@ Twitter
 </tbody>
 </table>
 </div>
-
 <h3>सोल्डर का चयन (Selection of Solder)</h3>
 <p>पीने योग्य जल प्रणालियों के लिए, <strong>सीसा रहित ठोस कोर (Lead-Free Solid Core)</strong> सोल्डर बेचा जाता है।</p>
 <ul>
@@ -747,12 +693,9 @@ Twitter
 <li>इसलिए पीने के पानी की लाइनों में लीड-फ्री सोल्डर का उपयोग किया जाना चाहिए।</li>
 <li>बाजार में टिन-एंटीमनी (Tin-Antimony) सोल्डर भी उपलब्ध है।</li>
 </ul>
-
 <h3>सोल्डरिंग फ्लक्स (Soldering Flux)</h3>
 <p><strong>फ्लक्स</strong> एक रासायनिक यौगिक है जो सोल्डरिंग के दौरान सतह की सफाई और सोल्डर के प्रवाह में मदद करता है।</p>
-
 <h4>फ्लक्स के प्रकार (Types of Flux):</h4>
-
 <h5>1. संक्षारक फ्लक्स (Corrosive Flux):</h5>
 <ul>
 <li><strong>रासायनिक संरचना:</strong> जिंक क्लोराइड, अमोनियम क्लोराइड, हाइड्रोक्लोरिक एसिड।</li>
@@ -760,14 +703,12 @@ Twitter
 <li><strong>सोल्डरिंग के बाद अच्छी तरह धोया जाना चाहिए।</strong></li>
 <li>इस प्रकार के फ्लक्स का उपयोग विद्युत कार्यों पर नहीं किया जाता है।</li>
 </ul>
-
 <h5>2. गैर-संक्षारक फ्लक्स (Non-Corrosive Flux):</h5>
 <ul>
 <li>ये राल (Rosin) पर आधारित फ्लक्स हैं।</li>
 <li>ये एक <strong>गैर-संक्षारक अवशेष</strong> छोड़ते हैं।</li>
 <li>इनका उपयोग विद्युत के कामों, दबाव नापने का यंत्र जैसे उपकरणों और उन हिस्सों में किया जाता है जहां धुलाई मुश्किल होती है।</li>
 </ul>
-
 <h4>विभिन्न सामग्रियों के लिए उपयुक्त फ्लक्स:</h4>
 <div class="table-wrap">
 <table>
@@ -782,7 +723,6 @@ Twitter
 </tbody>
 </table>
 </div>
-
 <h3>फ्लक्स के कार्य (Functions of Flux)</h3>
 <ol>
 <li>फ्लक्स सोल्डरिंग सतह से <strong>ऑक्साइड (Oxide)</strong> को हटाता है।</li>
@@ -790,7 +730,6 @@ Twitter
 <li>यह पिघले हुए सोल्डर की सतह के तनाव को कम करके पिघले हुए सोल्डर को आवश्यक स्थान पर आसानी से प्रवाहित करने में मदद करता है।</li>
 <li>यह बेहतर जोड़ को बढ़ावा देता है।</li>
 </ol>
-
 <h4>फ्लक्स का चयन (Flux Selection):</h4>
 <p>फ्लक्स के चयन के लिए निम्नलिखित मानदंड महत्वपूर्ण हैं:</p>
 <ul>
@@ -798,13 +737,11 @@ Twitter
 <li>सोल्डरिंग प्रक्रिया</li>
 <li>शामिल होने वाली सामग्री</li>
 </ul>
-
 <h3>सोल्डरिंग आयरन (Soldering Iron)</h3>
 <ul>
 <li>सोल्डरिंग आयरन का उपयोग मिलाप को पिघलाने और उस धातु को गर्म करने के लिए किया जाता है जिसे आपस में जोड़ना है।</li>
 <li>इलेक्ट्रिक सोल्डरिंग आयरन विद्युत ताप तत्व द्वारा गर्म किया जाता है।</li>
 </ul>
-
 <h4>सोल्डरिंग आयरन के भाग:</h4>
 <ul>
 <li><strong>सिर (Head) – तांबा बिट (Copper Bit)</strong></li>
@@ -812,13 +749,11 @@ Twitter
 <li><strong>लकड़ी का हैंडल (Wooden Handle)</strong></li>
 <li><strong>किनारा (Edge)</strong></li>
 </ul>
-
 <h4>सिर का आकार (Shape of Head):</h4>
 <ul>
 <li><strong>हैचेट प्रकार (Hatchet Type):</strong> सिर पर 90 डिग्री पर शैंक लगाई गई है। किनारा 'V' आकार का होता है।</li>
 <li><strong>मानक कार्यशाला पैटर्न (Standard Workshop Pattern):</strong> किनारे को चारों तरफ एक कोण के आकार का बनाया गया है।</li>
 </ul>
-
 <h3>सोल्डरिंग में सुरक्षा सावधानियाँ (Safety Precautions in Soldering)</h3>
 <ol>
 <li>अपनी आंखों को सोल्डर स्पैटरिंग और फ्लक्स से बचाने के लिए <strong>सुरक्षा चश्मा</strong> पहनें।</li>
@@ -831,7 +766,6 @@ Twitter
 <li>सभी अकार्बनिक फ्लक्स जहरीले होते हैं।</li>
 <li>संक्षारक प्रवाह को संभालते समय काले चश्मे और दस्ताने पहनें।</li>
 </ol>
-
 <h3>पाइप जोड़ों में सोल्डर और फ्लक्स का उपयोग (Use in Pipe Joints)</h3>
 <ul>
 <li><strong>तांबे के पाइप:</strong> सॉफ्ट सोल्डर केशिका जोड़ के लिए सोल्डर और राल फ्लक्स।</li>
@@ -841,7 +775,6 @@ Twitter
 </ul>
 </div>
 </div>
-
 <div class="tool-figure">
 <div class="placeholder-icon">🖼️</div>
 <div class="image-placeholder">
@@ -852,7 +785,6 @@ Twitter
 </div>
 <div class="figure-caption">Fig 4 – सोल्डर और फ्लक्स</div>
 </div>
-
 <div class="compare-grid">
 <div class="compare-card" style="border-color:#003366;background:#f0f5ff;">
 <h4>🔵 सॉफ्ट सोल्डरिंग</h4>
@@ -875,7 +807,6 @@ Twitter
 </ul>
 </div>
 </div>
-
 <div class="important-box">
 <h4>📌 परीक्षा फोकस</h4>
 <ul>
@@ -891,7 +822,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== CONCLUSION ===== -->
 <div class="container">
 <div class="conclusion-section">
@@ -902,7 +832,7 @@ Twitter
 <ul>
 <li><strong>हम्ड और एस्बेस्टस पाइप:</strong> पाइप की आवश्यकता, कंक्रीट पाइप, RCC पाइप, हम्ड पाइप (IS: 458 - 1961 के अनुसार 6 वर्ग), A.C. पाइप (5 सेमी से 100 सेमी व्यास, 5 Classes)।</li>
 <li><strong>पाइप बिछाना और संरेखण:</strong> खाई की खुदाई, पाइप बेडिंग, पाइप बिछाना, जोड़ना, परीक्षण, सुरक्षा, ढाल (Slope Table)।</li>
-<li><strong>पाइप जोड़ के प्रकार:</strong> Straight Joint, Branch Joint (Tee, Y, Cross), Taft & Blow Joint, Expansion Joint।</li>
+<li><strong>पाइप जोड़ के प्रकार:</strong> Straight Joint, Branch Joint (Tee, Y, Cross), Taft &amp; Blow Joint, Expansion Joint।</li>
 <li><strong>सोल्डर और फ्लक्स:</strong> Soft Solder (427°C से कम), Hard Solder (450°C से ऊपर), Solder Composition Table, Flux Types (Corrosive, Non-Corrosive), Soldering Iron, Safety Precautions।</li>
 </ul>
 <p>ये सभी पाइपिंग कौशल और ज्ञान हर प्लंबर के लिए आवश्यक हैं। इनका सही अभ्यास करें और सुरक्षित तरीके से उपयोग करें।</p>
@@ -911,7 +841,6 @@ Twitter
 <p><strong>Source verification:</strong> इस Module 7 की सामग्री को NIMI Plumber Trade Theory (NSQF Level 4, Revised 2022) के Exercise 1.7.60 से 1.7.66 से cross-check किया गया है।</p>
 </div>
 </div>
-
 <!-- ===== MCQ ===== -->
 <div class="container">
 <div class="content-section" data-content="mcq">
@@ -925,7 +854,6 @@ Twitter
 </div>
 </div>
 </div>
-
 <!-- ===== RELATED MODULES ===== -->
 <div class="container">
 <div class="content-section" data-content="related">
@@ -938,12 +866,11 @@ Twitter
 <a href="/notes/plumber/plumber4.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 4: Welder</a>
 <a href="/notes/plumber/plumber5.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 5: Mason</a>
 <a href="/notes/plumber/plumber6.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 6: Plumber</a>
-<a href="/notes/plumber/plumber8.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 8: Pump & PVC Joints</a>
+<a href="/notes/plumber/plumber8.html" style="background:#e9ecef;padding:10px 22px;border-radius:8px;color:#003366;text-decoration:none;font-weight:500;">📘 Module 8: Pump &amp; PVC Joints</a>
 </div>
 </div>
 </div>
 </div>
-
 <footer>
 <div class="footer-links">
 <a href="/disclaimer.html">Disclaimer</a>
@@ -954,7 +881,6 @@ Twitter
 <p>© 2026 ITI Study Centre. All Rights Reserved.</p>
 </footer>
 <button id="scrollTop" title="Go to Top">⬆</button>
-
 <script>
         function filterSections() {
             const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
