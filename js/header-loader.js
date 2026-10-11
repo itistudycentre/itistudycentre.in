@@ -16,10 +16,7 @@
 
     var container = document.getElementById("header-container");
 
-    /* ---------------------------------------------------------
-       HEADER CONTAINER
-    --------------------------------------------------------- */
-
+    /* HEADER CONTAINER */
     if (!container) {
         container = document.createElement("div");
         container.id = "header-container";
@@ -29,21 +26,20 @@
         );
     }
 
-    /* ---------------------------------------------------------
-       LOAD WEBSITE BRANDING
-    --------------------------------------------------------- */
-
+    /* LOAD WEBSITE BRANDING */
     function loadBranding() {
         if (document.querySelector("script[data-iti-branding]")) {
             return;
         }
 
         var script = document.createElement("script");
-        script.src = "/js/branding.js?v=6";
+        script.src = "/js/branding.js?v=8";
         script.dataset.itiBranding = "true";
+
         script.onload = function () {
             console.log("ITI Study Centre branding loaded");
         };
+
         script.onerror = function () {
             console.error("Branding file could not load");
         };
@@ -53,15 +49,13 @@
 
     loadBranding();
 
-    /* ---------------------------------------------------------
-       LOAD HEADER
-    --------------------------------------------------------- */
-
+    /* LOAD COMMON HEADER */
     fetch("/header.html")
         .then(function (res) {
             if (!res.ok) {
                 throw new Error("Header not found");
             }
+
             return res.text();
         })
         .then(function (html) {
@@ -83,10 +77,7 @@
                 '</header>';
         });
 
-    /* ---------------------------------------------------------
-       HIGHLIGHT ACTIVE LINK
-    --------------------------------------------------------- */
-
+    /* HIGHLIGHT ACTIVE NAVIGATION LINK */
     function highlightActiveLink() {
         var path = window.location.pathname;
 
@@ -103,9 +94,7 @@
                 link.dataset.match ||
                 link.getAttribute("href");
 
-            if (!raw) {
-                return;
-            }
+            if (!raw) return;
 
             var candidates = raw.split(",");
 
@@ -125,11 +114,7 @@
         });
     }
 
-    /* ---------------------------------------------------------
-       AUTOMATIC COMMENT SYSTEM
-       Admin Comments page excluded
-    --------------------------------------------------------- */
-
+    /* AUTOMATIC COMMENTS SYSTEM */
     function loadCommentsSystem() {
         var currentPath = window.location.pathname;
 
@@ -152,17 +137,17 @@
     if (document.readyState === "loading") {
         document.addEventListener(
             "DOMContentLoaded",
-            loadCommentsSystem
+            loadCommentsSystem,
+            { once: true }
         );
     } else {
         loadCommentsSystem();
     }
-
 })();
 
 /* =========================================================
    OPEN AT TOP ON FRESH LOAD
-   Browser Back/Forward scroll restoration is preserved.
+   Preserve browser Back/Forward scroll restoration.
 ========================================================= */
 
 (function () {
@@ -186,5 +171,4 @@
     window.addEventListener("pagehide", function () {
         // Browser handles scroll restoration automatically.
     });
-
 })();
