@@ -1,59 +1,59 @@
 /* =========================================================
-   ITI STUDY CENTRE — BRANDING  (v3 — reliable)
+   ITI STUDY CENTRE — BRANDING  (v6 — container-free)
    File: /js/branding.js
 
-   Features:
-     1. Top brand bar  "ITI STUDY CENTRE   WWW.ITISTUDYCENTRE.IN"
-     2. Repeating diagonal watermark
-     3. Automatic "Article by www.itistudycentre.in" credit strips
-        evenly from top to bottom of the article (6 to 10 strips).
+   This version does NOT look for an article container.
+   Instead it works directly on headings across the whole page:
 
-   v3 fixes:
-     • Blocks are counted at LIST level (ul / ol), not per <li>.
-       This avoids one long list dominating the block count.
-     • Credits are inserted in the BLOCK'S PARENT container,
-       never inside <ul>/<ol> between <li> elements (invalid HTML
-       that browsers silently drop).
-     • Article root detection tries many selectors, and if the
-       matched container has too few blocks it falls through to
-       the next candidate. This handles pages split across
-       multiple wrappers.
-     • Signature check prevents observer feedback loops.
-     • Clear console logs for debugging.
+     Step 1 — collect every <h2> on the page, skipping anything
+              inside header / nav / footer / sidebar / TOC /
+              comments / forms / tables.
+     Step 2 — if fewer than 6 anchors, also collect <h3>.
+     Step 3 — if still fewer than 6, also collect content
+              blocks (p, ul, ol, blockquote, table, pre, figure).
+     Step 4 — sort all anchors by document order.
+     Step 5 — pick N (6–10) based on total page text length,
+              then place one credit after evenly-spaced anchors
+              from the first to the last.
+
+   Because it does not depend on any container class, it works
+   on fitter3.html, fitter6.html, question-bank pages, MCQ pages,
+   and any future article page with the same heading pattern.
+
+   Safety:
+     • No credits on home / contact / short pages
+       (needs at least 4 real headings or ≥ 1500 text chars).
+     • Never inserts inside <ul>/<ol>/<table>/.compare-card.
+     • Skips admin pages and pages marked with data-no-branding.
+     • Signature check prevents MutationObserver feedback loops.
 ========================================================= */
 
 (function () {
   "use strict";
 
-  if (window.__itiBrandingFinalV3) return;
-  window.__itiBrandingFinalV3 = true;
+  if (window.__itiBrandingFinalV6) return;
+  window.__itiBrandingFinalV6 = true;
 
-  var SITE_NAME = "ITI STUDY CENTRE";
-  var SITE_URL = "https://www.itistudycentre.in/";
-  var SITE_TEXT = "WWW.ITISTUDYCENTRE.IN";
+  var SITE_NAME   = "ITI STUDY CENTRE";
+  var SITE_URL    = "https://www.itistudycentre.in/";
+  var SITE_TEXT   = "WWW.ITISTUDYCENTRE.IN";
   var CREDIT_TEXT = "Article by www.itistudycentre.in";
 
-  /* Every credit class name ever used — remove all before re-insert */
-  var OLD_CREDIT_SELECTOR = [
-    ".isc-article-credit",
-    ".isc-credit-v14",
-    ".isc-article-credit-v14",
-    ".isc-credit-strip",
-    ".article-credit",
-    ".iti-credit"
-  ].join(", ");
+  var OLD_CREDIT_SELECTOR =
+    ".isc-article-credit, .isc-credit-v14, .isc-article-credit-v14, " +
+    ".isc-credit-strip, .article-credit, .iti-credit";
 
-  /* BLOCK-LEVEL content units. Lists count as ONE block, not per <li>. */
+  /* Fallback anchors when headings are too few. */
   var BLOCK_SELECTOR =
-    "p, ul, ol, blockquote, table, pre, figure, " +
-    "div.isc-content-block, section.isc-content-block";
+    "p, ul, ol, blockquote, table, pre, figure, .compare-grid";
 
-  /* Never anchor a credit inside these areas */
   var EXCLUDE_ANCESTOR =
     "header, nav, footer, aside, " +
     "#isc-brand-bar, #isc-watermark, " +
     ".isc-article-credit, .toc, #toc, .table-of-contents, " +
     ".breadcrumb, .breadcrumbs, " +
+    ".page-title, .module-navigation, .search-section, " +
+    ".share-section, .mcq-link, .related-modules, " +
     ".iti-comments, .isc-comments, #comments, .comments, " +
     "form, .sidebar, #sidebar, .widget, .advertisement, .ads, " +
     "td, th, thead, tbody, tr";
@@ -154,84 +154,124 @@
     document.body.appendChild(layer);
   }
 
-  /* ==================== ARTICLE ROOT ==================== */
+  /* ==================== HEADING FILTER ==================== */
 
-  /* Try each selector in order. If the matched container has at
-     least 6 content blocks, accept it. Otherwise remember it as a
-     fallback and keep looking. This handles pages where the article
-     content is split across several wrappers. */
-  function findArticleRoot() {
-    var selectors = [
-      "main.module-content",
-      ".module-content",
-      "article.article-content",
-      ".article-content",
-      ".post-content",
-      ".entry-content",
-      ".fitter2-section-body",
-      ".section-body",
-      "main article",
-      "article",
-      "[role='main']",
-      "main",
-      "#main-content",
-      "#content",
-      ".content-area",
-      ".content"
-    ];
+  var TOC_TEXT_RE = /^(contents?|table of contents|विषय.?सूची|अनुक्रमणिका|सूची|related|disclaimer|नोट|निष्कर्ष|conclusion)$/i;
 
-    var fallback = null;
+  function isTocOrJunkHeading(h) {
+    var text = (h.textContent || "").trim();
 
-    for (var i = 0; i < selectors.length; i++) {
-      var root = document.querySelector(selectors[i]);
-      if (!root) continue;
+    /* Heading text itself is a TOC label */
+    if (TOC_TEXT_RE.test(text)) return true;
 
-      var blocks = root.querySelectorAll(BLOCK_SELECTOR).length;
-      if (blocks >= 6) return root;
+    /* Heading is inside a TOC container */
+    if (h.closest(".toc, #toc, .table-of-contents, [class*='toc-']")) return true;
 
-      if (!fallback && blocks >= 2) fallback = root;
+    /* Parent id/class mentions toc */
+    var p = h.parentElement;
+    while (p && p !== document.body) {
+      var marker = (
+        (p.id || "") + " " +
+        (typeof p.className === "string" ? p.className : "")
+      ).toLowerCase();
+      if (/(^|[\s_-])toc([\s_-]|$)|table-of-contents|breadcrumb/.test(marker)) {
+        return true;
+      }
+      p = p.parentElement;
     }
 
-    return fallback;
+    return false;
   }
 
-  /* ==================== CONTENT BLOCKS ==================== */
+  function isEligibleHeading(h) {
+    if (!h) return false;
+    if (h.closest(EXCLUDE_ANCESTOR)) return false;
+    if (isTocOrJunkHeading(h)) return false;
 
-  function collectContentBlocks(root) {
-    var all = root.querySelectorAll(BLOCK_SELECTOR);
-    var result = [];
+    var text = (h.textContent || "").replace(/[\s\u00a0]+/g, "");
+    if (text.length < 3) return false;
 
-    Array.prototype.forEach.call(all, function (el) {
-      /* Skip if inside excluded area */
-      if (el.closest(EXCLUDE_ANCESTOR)) return;
+    return true;
+  }
 
-      /* Skip if nested inside another collected block
-         (e.g. <p> inside <blockquote> — only the outer counts) */
-      var p = el.parentElement;
-      while (p && p !== root) {
-        if (p.matches && p.matches(BLOCK_SELECTOR)) return;
-        p = p.parentElement;
-      }
+  /* ==================== ANCHOR COLLECTION ==================== */
 
-      /* Skip empty blocks with no text and no media */
-      var text = (el.textContent || "").replace(/[\s\u00a0]+/g, "");
-      if (text.length < 5 &&
-          !el.querySelector("img, video, iframe, svg, table")) {
-        return;
-      }
+  /* Collect anchors in priority order: h2 first, then h3, then
+     content blocks. Sorted by document order at the end. */
+  function collectAnchors() {
+    var anchors = [];
+    var seen = [];
 
-      result.push(el);
+    function addAll(list) {
+      Array.prototype.forEach.call(list, function (el) {
+        if (seen.indexOf(el) !== -1) return;
+        if (el.closest(EXCLUDE_ANCESTOR)) return;
+
+        /* For content blocks, skip if nested inside another block */
+        if (el.matches && el.matches(BLOCK_SELECTOR)) {
+          var p = el.parentElement;
+          while (p && p !== document.body) {
+            if (p.matches && p.matches(BLOCK_SELECTOR) && seen.indexOf(p) !== -1) {
+              return;
+            }
+            p = p.parentElement;
+          }
+        }
+
+        /* Skip empty blocks */
+        var text = (el.textContent || "").replace(/[\s\u00a0]+/g, "");
+        if (text.length < 5 &&
+            !el.querySelector("img, video, iframe, svg, table")) {
+          return;
+        }
+
+        /* Skip if already followed by a credit */
+        if (el.nextElementSibling &&
+            el.nextElementSibling.classList &&
+            el.nextElementSibling.classList.contains("isc-article-credit")) {
+          return;
+        }
+
+        seen.push(el);
+        anchors.push(el);
+      });
+    }
+
+    /* Priority 1: h2 (always) */
+    addAll(Array.prototype.filter.call(
+      document.querySelectorAll("h2"),
+      isEligibleHeading
+    ));
+
+    /* Priority 2: h3 if not enough h2 */
+    if (anchors.length < 6) {
+      addAll(Array.prototype.filter.call(
+        document.querySelectorAll("h3"),
+        isEligibleHeading
+      ));
+    }
+
+    /* Priority 3: content blocks if still not enough */
+    if (anchors.length < 6) {
+      addAll(document.querySelectorAll(BLOCK_SELECTOR));
+    }
+
+    /* Sort by document order */
+    anchors.sort(function (a, b) {
+      if (a === b) return 0;
+      return (a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING)
+        ? -1 : 1;
     });
 
-    return result;
+    return anchors;
   }
 
   /* ==================== TARGET COUNT ==================== */
 
   function pickTarget(textLen) {
-    if (textLen < 2500)  return 6;
-    if (textLen < 6000)  return 7;
-    if (textLen < 12000) return 8;
+    if (textLen < 3000)  return 6;
+    if (textLen < 7000)  return 7;
+    if (textLen < 13000) return 8;
     if (textLen < 25000) return 9;
     return 10;
   }
@@ -261,118 +301,124 @@
 
   /* ==================== SAFE INSERT ==================== */
 
-  /* Insert credit immediately after `ref`, but never inside a
-     <ul>/<ol> between <li> elements. If the parent is a list, we
-     walk out to the list itself and insert after the whole list. */
   function insertCreditAfter(ref) {
     if (!ref || !ref.parentNode) return false;
 
     var anchor = ref;
     var parent = anchor.parentNode;
 
-    /* If the block is a list item (shouldn't happen now, but defensive),
-       climb out of the list. */
-    var tag = (parent.tagName || "").toLowerCase();
-    while (tag === "ul" || tag === "ol") {
+    /* Never place a <div> inside list / table / card */
+    while (parent && parent !== document.body) {
+      var tag = (parent.tagName || "").toLowerCase();
+      var cls = (typeof parent.className === "string"
+                  ? parent.className : "").toLowerCase();
+
+      var isBad =
+        tag === "ul" || tag === "ol" ||
+        tag === "table" || tag === "thead" || tag === "tbody" ||
+        tag === "tr" || tag === "td" || tag === "th" ||
+        /\bcompare-card\b/.test(cls) ||
+        /\bcompare-grid\b/.test(cls);
+
+      if (!isBad) break;
+
       anchor = parent;
       parent = anchor.parentNode;
-      if (!parent) return false;
-      tag = (parent.tagName || "").toLowerCase();
     }
 
+    if (!parent) return false;
+
     try {
-      var credit = createCredit();
-      parent.insertBefore(credit, anchor.nextSibling);
-      return credit.parentNode === parent;
+      var c = createCredit();
+      parent.insertBefore(c, anchor.nextSibling);
+      return c.parentNode === parent;
     } catch (e) {
       return false;
     }
   }
 
+  /* ==================== PAGE CHECK ==================== */
+
+  function isArticlePage(anchors, textLen) {
+    /* Skip admin and opt-out pages */
+    var path = (window.location.pathname || "").toLowerCase();
+    if (path.indexOf("/admin") !== -1) return false;
+    if (document.body.hasAttribute("data-no-branding")) return false;
+
+    /* Need enough headings and enough text */
+    var headingCount = 0;
+    anchors.forEach(function (a) {
+      if (a.tagName === "H2" || a.tagName === "H3") headingCount++;
+    });
+
+    if (headingCount >= 4 && textLen >= 1500) return true;
+    if (anchors.length >= 8 && textLen >= 2500) return true;
+
+    return false;
+  }
+
   /* ==================== MAIN DISTRIBUTION ==================== */
 
   function addArticleCredits() {
-    var root = findArticleRoot();
+    var anchors = collectAnchors();
+    var textLen = (document.body.innerText || document.body.textContent || "").length;
 
-    if (!root) {
-      console.warn("ITI Branding: article container not found.");
-      return;
-    }
-
-    var blocks = collectContentBlocks(root);
-    var textLen = (root.innerText || root.textContent || "").length;
-
-    if (blocks.length < 4) {
-      console.warn(
-        "ITI Branding: only " + blocks.length + " content blocks — " +
-        "skipping credits. Container: <" + root.tagName.toLowerCase() +
-        (root.id ? " #" + root.id : "") +
-        (typeof root.className === "string" && root.className
-          ? " ." + root.className.split(/\s+/)[0] : "") + ">"
-      );
+    if (!isArticlePage(anchors, textLen)) {
+      console.log("ITI v6: not an article page — skipping credits " +
+                  "(anchors: " + anchors.length +
+                  ", textLen: " + textLen + ").");
       return;
     }
 
     var target = pickTarget(textLen);
 
-    /* Never place two credits closer than 2 blocks apart. */
-    var maxCredits = Math.floor((blocks.length - 1) / 2) + 1;
+    /* Never place two credits closer than 2 anchors apart. */
+    var maxCredits = Math.floor((anchors.length - 1) / 2) + 1;
     target = Math.min(target, maxCredits);
     target = Math.max(target, 3);
 
-    /* Signature check — skip the remove/reinsert cycle if nothing
-       structural has changed. Prevents observer feedback loops. */
-    var signature = [
-      blocks.length,
-      target,
-      textLen,
-      root.tagName,
-      root.id || "",
-      typeof root.className === "string" ? root.className : ""
-    ].join("|");
-
+    var signature = [anchors.length, target, textLen].join("|");
     var existing = document.querySelectorAll(".isc-article-credit").length;
 
-    if (signature === lastSignature && existing === target) {
-      return;
-    }
+    if (signature === lastSignature && existing === target) return;
     lastSignature = signature;
 
     removeAllOldCredits();
 
-    /* Evenly spaced indices across the block list. */
+    /* Evenly spaced indices from first to last anchor.
+       Formula: idx_i = round((i+1) * A / (T+1)) - 1 for i=0..T-1 */
     var positions = [];
     for (var i = 0; i < target; i++) {
-      var idx = Math.round((i + 1) * blocks.length / (target + 1)) - 1;
-      idx = Math.max(0, Math.min(blocks.length - 1, idx));
+      var idx = Math.round((i + 1) * anchors.length / (target + 1)) - 1;
+      idx = Math.max(0, Math.min(anchors.length - 1, idx));
       positions.push(idx);
     }
 
-    /* Deduplicate while preserving order */
-    var seen = {};
+    /* Deduplicate */
+    var seenIdx = {};
     positions = positions.filter(function (v) {
-      if (seen[v]) return false;
-      seen[v] = true;
+      if (seenIdx[v]) return false;
+      seenIdx[v] = true;
       return true;
     });
 
-    /* Insert from bottom to top so earlier references stay valid. */
+    /* Insert bottom-to-top so earlier references stay valid */
     positions.sort(function (a, b) { return b - a; });
 
     var inserted = 0;
     positions.forEach(function (idx) {
-      if (insertCreditAfter(blocks[idx])) inserted++;
+      if (insertCreditAfter(anchors[idx])) inserted++;
     });
 
     console.log(
-      "ITI Branding: inserted " + inserted + "/" + positions.length +
-      " credit strips  (blocks: " + blocks.length +
+      "ITI v6: inserted " + inserted + "/" + positions.length +
+      " credits  (anchors: " + anchors.length +
       ", target: " + target +
       ", textLen: " + textLen + ")."
     );
   }
 
-  /* ==================== MUTATION OBSERVER ==================== */
+  /* ==================== OBSERVER ==================== */
 
   function startObserver() {
     if (!("MutationObserver" in window)) return;
@@ -384,12 +430,10 @@
 
         return nodes.some(function (node) {
           if (node.nodeType !== 1) return false;
-
           if (node.id === "isc-brand-bar" ||
               node.id === "isc-watermark") return false;
           if (node.classList && node.classList.contains("isc-article-credit")) return false;
           if (node.hasAttribute && node.hasAttribute("data-isc-credit")) return false;
-
           return true;
         });
       });
@@ -400,7 +444,7 @@
       creditTimer = window.setTimeout(function () {
         creditTimer = null;
         addArticleCredits();
-      }, 600);
+      }, 800);
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
@@ -416,8 +460,9 @@
     addWatermark();
     addArticleCredits();
 
-    [600, 1500, 3000, 6000, 10000].forEach(function (delay) {
-      window.setTimeout(addArticleCredits, delay);
+    /* Retries for pages whose article content loads late */
+    [600, 1500, 3000, 5000, 9000, 15000].forEach(function (d) {
+      window.setTimeout(addArticleCredits, d);
     });
 
     startObserver();
