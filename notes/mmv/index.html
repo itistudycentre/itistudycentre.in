@@ -1,0 +1,1406 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITI Study Centre | Mechanic Motor Vehicle (MMV) - Trade Theory</title>
+    <meta name="description" content="ITI Study Centre - Mechanic Motor Vehicle (MMV) Trade Theory Study Material, NSQF Level 4, 1st Year & 2nd Year Modules">
+    <style>
+        /* ============================================================
+           GLOBAL / RESET
+           ============================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --header-blue: #003366;
+            --header-blue-light: #004080;
+            --accent-yellow: #ffcc00;
+            --bg-light: #f5f7fb;
+            --card-bg: #ffffff;
+            --text-dark: #1a1a2e;
+            --text-gray: #4a4a6a;
+            --border-light: #e0e4ef;
+            --success-green: #28a745;
+            --warning-orange: #ff8c00;
+            --danger-red: #dc3545;
+            --info-blue: #17a2b8;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Noto Sans Devanagari', Arial, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ============================================================
+           STICKY HEADER
+           ============================================================ */
+        .main-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--header-blue);
+            color: #fff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-brand .logo-circle {
+            width: 44px;
+            height: 44px;
+            background: var(--accent-yellow);
+            color: var(--header-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .header-brand h1 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .header-brand h1 span {
+            display: block;
+            font-size: 0.72rem;
+            font-weight: 400;
+            color: var(--accent-yellow);
+            letter-spacing: 0.5px;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .header-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            transition: all 0.25s;
+            border: 1px solid transparent;
+        }
+
+        .header-nav a:hover,
+        .header-nav a.active {
+            background: var(--accent-yellow);
+            color: var(--header-blue);
+            font-weight: 600;
+            border-color: var(--accent-yellow);
+        }
+
+        /* ============================================================
+           BREADCRUMB
+           ============================================================ */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+        }
+
+        .breadcrumb a {
+            color: var(--header-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+            color: #aaa;
+        }
+
+        /* ============================================================
+           HERO SECTION
+           ============================================================ */
+        .hero {
+            background: linear-gradient(135deg, var(--header-blue) 0%, #0a4a8a 100%);
+            color: #fff;
+            padding: 50px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -60%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 204, 0, 0.07);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -5%;
+            width: 350px;
+            height: 350px;
+            background: rgba(255, 204, 0, 0.05);
+            border-radius: 50%;
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent-yellow);
+            color: var(--header-blue);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 5px 16px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
+
+        .hero h1 span {
+            color: var(--accent-yellow);
+        }
+
+        .hero .subtitle {
+            font-size: 1.15rem;
+            opacity: 0.92;
+            margin-bottom: 6px;
+            font-weight: 400;
+        }
+
+        .hero .meta-line {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 28px;
+            margin-top: 18px;
+            font-size: 0.9rem;
+            opacity: 0.88;
+        }
+
+        .hero .meta-line span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero .meta-line .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-yellow);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* ============================================================
+           STATS ROW
+           ============================================================ */
+        .stats-row {
+            max-width: 1200px;
+            margin: -28px auto 0;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px 16px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 51, 102, 0.1);
+            border-bottom: 3px solid var(--accent-yellow);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 51, 102, 0.16);
+        }
+
+        .stat-card .stat-number {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--header-blue);
+            line-height: 1.2;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.82rem;
+            color: var(--text-gray);
+            font-weight: 500;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        /* ============================================================
+           SEARCH SECTION
+           ============================================================ */
+        .search-section {
+            max-width: 1200px;
+            margin: 28px auto 0;
+            padding: 0 20px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 51, 102, 0.08);
+            border: 2px solid var(--border-light);
+            overflow: hidden;
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .search-box:focus-within {
+            border-color: var(--accent-yellow);
+            box-shadow: 0 0 0 4px rgba(255, 204, 0, 0.15);
+        }
+
+        .search-box .search-icon {
+            padding: 0 8px 0 18px;
+            font-size: 1.2rem;
+            color: var(--text-gray);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 15px 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: transparent;
+            color: var(--text-dark);
+        }
+
+        .search-box input::placeholder {
+            color: #9a9ab0;
+        }
+
+        .search-box .clear-btn {
+            background: none;
+            border: none;
+            padding: 12px 18px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            display: none;
+            transition: color 0.2s;
+        }
+
+        .search-box .clear-btn:hover {
+            color: var(--danger-red);
+        }
+
+        /* ============================================================
+           TABS
+           ============================================================ */
+        .tabs-section {
+            max-width: 1200px;
+            margin: 28px auto 0;
+            padding: 0 20px;
+        }
+
+        .tabs-header {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 0;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 12px 26px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            font-family: inherit;
+            color: var(--text-gray);
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.25s;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .tab-btn:hover {
+            color: var(--header-blue);
+            background: rgba(0, 51, 102, 0.04);
+        }
+
+        .tab-btn.active {
+            color: var(--header-blue);
+            border-bottom-color: var(--accent-yellow);
+            background: rgba(255, 204, 0, 0.08);
+        }
+
+        .tab-btn .tab-count {
+            font-size: 0.75rem;
+            background: var(--border-light);
+            color: var(--text-gray);
+            padding: 2px 9px;
+            border-radius: 12px;
+            margin-left: 6px;
+            font-weight: 600;
+        }
+
+        .tab-btn.active .tab-count {
+            background: var(--accent-yellow);
+            color: var(--header-blue);
+        }
+
+        /* ============================================================
+           MODULE GRID
+           ============================================================ */
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 22px;
+            margin-bottom: 36px;
+        }
+
+        .module-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            box-shadow: 0 3px 14px rgba(0, 51, 102, 0.08);
+            overflow: hidden;
+            transition: transform 0.25s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-light);
+            position: relative;
+        }
+
+        .module-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 28px rgba(0, 51, 102, 0.15);
+        }
+
+        .module-card .card-accent {
+            height: 5px;
+            background: linear-gradient(90deg, var(--header-blue), var(--accent-yellow));
+        }
+
+        .module-card .card-body {
+            padding: 20px 22px 18px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .module-card .card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .module-card .module-num {
+            background: var(--header-blue);
+            color: var(--accent-yellow);
+            font-weight: 800;
+            font-size: 1.1rem;
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .module-card .module-titles {
+            flex: 1;
+        }
+
+        .module-card .module-titles .hindi {
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: var(--header-blue);
+            line-height: 1.3;
+        }
+
+        .module-card .module-titles .english {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .module-card .topics-list {
+            list-style: none;
+            margin: 0 0 14px 0;
+            padding: 0;
+            flex: 1;
+        }
+
+        .module-card .topics-list li {
+            font-size: 0.82rem;
+            color: var(--text-gray);
+            padding: 3px 0 3px 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .module-card .topics-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 2px;
+            color: var(--accent-yellow);
+            font-weight: 700;
+        }
+
+        .module-card .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .module-card .btn-open {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--header-blue);
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.25s, transform 0.2s;
+        }
+
+        .module-card .btn-open:hover {
+            background: #0a4a8a;
+            transform: scale(1.03);
+        }
+
+        .module-card .btn-mcq {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: transparent;
+            color: var(--header-blue);
+            text-decoration: none;
+            padding: 7px 14px;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            border: 1.5px solid var(--accent-yellow);
+            transition: all 0.25s;
+        }
+
+        .module-card .btn-mcq:hover {
+            background: var(--accent-yellow);
+            color: var(--header-blue);
+        }
+
+        /* ============================================================
+           NO RESULTS
+           ============================================================ */
+        .no-results {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-gray);
+            font-size: 1rem;
+            display: none;
+        }
+
+        .no-results .emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* ============================================================
+           DISCLAIMER
+           ============================================================ */
+        .disclaimer-section {
+            max-width: 1200px;
+            margin: 0 auto 28px;
+            padding: 0 20px;
+        }
+
+        .disclaimer-box {
+            background: #fff8e1;
+            border-left: 5px solid var(--warning-orange);
+            border-radius: 10px;
+            padding: 18px 22px;
+            font-size: 0.85rem;
+            color: #664d03;
+            line-height: 1.7;
+        }
+
+        .disclaimer-box strong {
+            color: #4a3500;
+        }
+
+        /* ============================================================
+           SUGGESTIONS
+           ============================================================ */
+        .suggestions-section {
+            max-width: 1200px;
+            margin: 0 auto 28px;
+            padding: 0 20px;
+        }
+
+        .suggestions-box {
+            background: #e8f4fd;
+            border-left: 5px solid var(--info-blue);
+            border-radius: 10px;
+            padding: 18px 22px;
+            font-size: 0.85rem;
+            color: #0c5460;
+            line-height: 1.7;
+        }
+
+        .suggestions-box strong {
+            color: #084298;
+        }
+
+        /* ============================================================
+           SHARE BUTTONS
+           ============================================================ */
+        .share-section {
+            max-width: 1200px;
+            margin: 0 auto 28px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .share-section .share-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-gray);
+            margin-right: 4px;
+        }
+
+        .share-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+            color: #fff;
+            transition: transform 0.2s, opacity 0.2s;
+            text-decoration: none;
+        }
+
+        .share-btn:hover {
+            transform: scale(1.12);
+            opacity: 0.9;
+        }
+
+        .share-btn.whatsapp { background: #25d366; }
+        .share-btn.facebook { background: #1877f2; }
+        .share-btn.twitter { background: #1da1f2; }
+        .share-btn.copy { background: #6c757d; }
+
+        /* ============================================================
+           SCROLL TO TOP
+           ============================================================ */
+        .scroll-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--header-blue);
+            color: var(--accent-yellow);
+            border: 2px solid var(--accent-yellow);
+            cursor: pointer;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0, 51, 102, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(16px);
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-top:hover {
+            background: var(--accent-yellow);
+            color: var(--header-blue);
+        }
+
+        /* ============================================================
+           FOOTER
+           ============================================================ */
+        .main-footer {
+            background: var(--header-blue);
+            color: rgba(255, 255, 255, 0.85);
+            padding: 40px 20px 24px;
+            margin-top: 20px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-yellow);
+            font-size: 1rem;
+            margin-bottom: 14px;
+            font-weight: 700;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.78);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 28px auto 0;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ============================================================
+           RESPONSIVE
+           ============================================================ */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header-nav {
+                width: 100%;
+            }
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .tab-btn {
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+            .scroll-top {
+                bottom: 18px;
+                right: 18px;
+                width: 42px;
+                height: 42px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+            .hero .meta-line {
+                flex-direction: column;
+                gap: 6px;
+            }
+            .stat-card .stat-number {
+                font-size: 1.5rem;
+            }
+            .stats-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+        }
+
+        /* ============================================================
+           HINDI FONT FIX
+           ============================================================ */
+        .hindi, [lang="hi"] {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         HEADER LOADER PLACEHOLDER
+         ============================================================ -->
+    <div id="header-placeholder"></div>
+
+    <!-- ============================================================
+         STICKY HEADER (fallback if header-loader.js not available)
+         ============================================================ -->
+    <header class="main-header">
+        <div class="header-inner">
+            <div class="header-brand">
+                <div class="logo-circle">ITI</div>
+                <h1>
+                    ITI Study Centre
+                    <span>Mechanic Motor Vehicle (MMV) — Trade Theory</span>
+                </h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="#modules">Modules</a>
+                <a href="#disclaimer">Disclaimer</a>
+                <a href="#suggestions">Suggestions</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         BREADCRUMB
+         ============================================================ -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="index.html">MMV</a>
+        <span>/</span>
+        <strong>Trade Theory</strong>
+    </div>
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">NSQF Level 4 • Revised 2022</div>
+            <h1>
+                मैकेनिक मोटर व्हीकल<br>
+                <span>Mechanic Motor Vehicle</span>
+            </h1>
+            <p class="subtitle">व्यवसाय सिद्धांत (Trade Theory) — संपूर्ण अध्ययन सामग्री</p>
+            <div class="meta-line">
+                <span><span class="dot"></span> Sector: Automotive</span>
+                <span><span class="dot"></span> Duration: 2 Years (1200 Hrs/Year)</span>
+                <span><span class="dot"></span> NSQF Level: 4</span>
+                <span><span class="dot"></span> Pattern: Annual (AITT)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         STATS ROW
+         ============================================================ -->
+    <div class="stats-row">
+        <div class="stat-card">
+            <div class="stat-number" id="total-modules">25</div>
+            <div class="stat-label">Total Modules</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">2400+</div>
+            <div class="stat-label">Total Hours</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">2</div>
+            <div class="stat-label">Years (1st & 2nd)</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Practicals</div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         SEARCH SECTION
+         ============================================================ -->
+    <div class="search-section">
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Search modules... (e.g. Transmission, Brake, Engine, Clutch, Steering)" autocomplete="off">
+            <button class="clear-btn" id="clearBtn" title="Clear search">✕</button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         TABS SECTION + MODULE GRID
+         ============================================================ -->
+    <section class="tabs-section" id="modules">
+        <div class="tabs-header">
+            <button class="tab-btn active" data-tab="all">
+                All Modules
+                <span class="tab-count" id="count-all">25</span>
+            </button>
+            <button class="tab-btn" data-tab="year1">
+                1st Year
+                <span class="tab-count" id="count-year1">14</span>
+            </button>
+            <button class="tab-btn" data-tab="year2">
+                2nd Year
+                <span class="tab-count" id="count-year2">11</span>
+            </button>
+        </div>
+
+        <div class="modules-grid" id="modulesGrid">
+            <!-- Module cards will be injected by JavaScript -->
+        </div>
+
+        <div class="no-results" id="noResults">
+            <span class="emoji">🔎</span>
+            <p>No modules found matching your search.</p>
+            <p style="font-size:0.85rem; margin-top:6px;">Try a different keyword or clear the search.</p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         DISCLAIMER
+         ============================================================ -->
+    <div class="disclaimer-section" id="disclaimer">
+        <div class="disclaimer-box">
+            <strong>⚠️ Disclaimer:</strong> This website is an unofficial study resource created for ITI trainees of the Mechanic Motor Vehicle (MMV) trade. The content is based on the NIMI Trade Theory textbooks (NSQF Level 4, Revised 2022). All copyrights of the original content belong to <strong>National Instructional Media Institute (NIMI), Chennai</strong>. This site is intended solely for educational and reference purposes.
+        </div>
+    </div>
+
+    <!-- ============================================================
+         SUGGESTIONS
+         ============================================================ -->
+    <div class="suggestions-section" id="suggestions">
+        <div class="suggestions-box">
+            <strong>💡 Suggestions:</strong> If you find any errors, missing content, or would like to contribute additional study material, please contact your instructor or the ITI Study Centre coordinator. Your feedback helps improve this resource for all trainees.
+        </div>
+    </div>
+
+    <!-- ============================================================
+         SHARE BUTTONS
+         ============================================================ -->
+    <div class="share-section">
+        <span class="share-label">Share:</span>
+        <a class="share-btn whatsapp" id="shareWhatsapp" title="Share on WhatsApp" target="_blank" rel="noopener">📱</a>
+        <a class="share-btn facebook" id="shareFacebook" title="Share on Facebook" target="_blank" rel="noopener">f</a>
+        <a class="share-btn twitter" id="shareTwitter" title="Share on Twitter" target="_blank" rel="noopener">🐦</a>
+        <button class="share-btn copy" id="shareCopy" title="Copy Link">🔗</button>
+    </div>
+
+    <!-- ============================================================
+         SCROLL TO TOP
+         ============================================================ -->
+    <button class="scroll-top" id="scrollTop" title="Scroll to Top">↑</button>
+
+    <!-- ============================================================
+         FOOTER
+         ============================================================ -->
+    <footer class="main-footer">
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h3>ITI Study Centre</h3>
+                <p>Mechanic Motor Vehicle (MMV) — Trade Theory study material for ITI trainees.</p>
+                <p>Based on NIMI textbooks (NSQF Level 4, Revised 2022).</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="#modules">All Modules</a>
+                <a href="#disclaimer">Disclaimer</a>
+                <a href="#suggestions">Suggestions</a>
+            </div>
+            <div class="footer-col">
+                <h3>Modules</h3>
+                <a href="trade1.html">1st Year Modules</a>
+                <a href="trade1.html">2nd Year Modules</a>
+                <a href="/question-bank/mmv/index.html">MCQ Practice</a>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>For queries and feedback, contact your ITI instructor or the study centre coordinator.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 ITI Study Centre — MMV Trade Theory. For educational use only. Original content © NIMI, Chennai.
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         JAVASCRIPT
+         ============================================================ -->
+    <script>
+    /* ============================================================
+       MODULE DATA
+       ============================================================ */
+    var modulesData = [
+        /* ---------- 1st YEAR (year1) ---------- */
+        {
+            year: 'year1',
+            num: 1,
+            hindi: 'कार्यशाला सुरक्षा अभ्यास',
+            english: 'Workshop Safety Practice',
+            topics: ['ITI संगठन और MMV का दायरा', 'सुरक्षा अभ्यास', 'व्यक्तिगत सुरक्षा (PPE)', 'अग्निशामक', 'प्रयुक्त तेल का निपटान', 'उठाने वाले उपकरणों का सुरक्षित संचालन']
+        },
+        {
+            year: 'year1',
+            num: 2,
+            hindi: 'इंजीनियरिंग माप',
+            english: 'Engineering Measurement',
+            topics: ['अंकन सामग्री', 'Try Square', 'कैलिपर्स के प्रकार', 'डिवाइडर', 'सतह गेज', 'स्क्राइबर', 'हाथ उपकरण', 'छेनी', 'बेंच वाइस', 'स्पैनर', 'माइक्रोमीटर', 'स्क्रू पिच गेज']
+        },
+        {
+            year: 'year1',
+            num: 3,
+            hindi: 'बुनियादी कार्यशाला अभ्यास',
+            english: 'Basic Workshop Practice',
+            topics: ['ड्रिलिंग मशीन (पोर्टेबल प्रकार)', 'अंकन और ड्रिलिंग', 'Twist Drill की शार्पनिंग', 'Taps और Dies', 'Hand Reamers', 'Lapping']
+        },
+        {
+            year: 'year1',
+            num: 4,
+            hindi: 'बेसिक इलेक्ट्रिकल और इलेक्ट्रॉनिक्स',
+            english: 'Basic Electrical & Electronics',
+            topics: ['बिजली का परिचय', 'Ohm\'s Law', 'प्रतिरोध (Resistors)', 'संधारित्र (Capacitors)', 'डायोड (Diodes)', 'ट्रांजिस्टर', 'मल्टीमीटर', 'बैटरी', 'चार्जिंग सिस्टम']
+        },
+        {
+            year: 'year1',
+            num: 5,
+            hindi: 'हाइड्रोलिक और न्यूमेटिक्स',
+            english: 'Hydraulic and Pneumatics',
+            topics: ['पास्कल का नियम', 'दबाव और विस्कोसिटी', 'हाइड्रोलिक सिस्टम', 'न्यूमेटिक सिस्टम', 'FRL यूनिट', 'हाइड्रोलिक वाल्व']
+        },
+        {
+            year: 'year1',
+            num: 6,
+            hindi: 'वाहन और इंजन का वर्गीकरण',
+            english: 'Classification of Vehicles & Engine',
+            topics: ['वाहनों का वर्गीकरण', 'इंजन का वर्गीकरण', 'IC vs EC Engine', '2-Stroke & 4-Stroke', 'SI & CI Engine', 'Vehicle Specifications']
+        },
+        {
+            year: 'year1',
+            num: 7,
+            hindi: 'इंजन अवयव',
+            english: 'Engine Components',
+            topics: ['सिलेंडर हेड', 'वाल्व और वाल्व ट्रेन', 'कैमशाफ्ट', 'पिस्टन और पिस्टन रिंग', 'कनेक्टिंग रॉड', 'क्रैंकशाफ्ट', 'फ्लाईव्हील', 'बेयरिंग', 'सिलेंडर ब्लॉक', 'लाइनर']
+        },
+        {
+            year: 'year1',
+            num: 8,
+            hindi: 'शीतलन और स्नेहन प्रणाली',
+            english: 'Cooling and Lubrication System',
+            topics: ['इंजन शीतलन प्रणाली', 'रेडिएटर', 'वाटर पंप', 'थर्मोस्टेट', 'एयर कूलिंग', 'स्नेहन प्रणाली', 'ऑयल पंप', 'ऑयल फिल्टर', 'ऑयल कूलर', 'PCV वाल्व']
+        },
+        {
+            year: 'year1',
+            num: 9,
+            hindi: 'सेवन और निकास प्रणाली',
+            english: 'Intake and Exhaust System',
+            topics: ['एयर क्लीनर', 'इनटेक मैनिफोल्ड', 'एग्जॉस्ट मैनिफोल्ड', 'मफलर', 'टर्बोचार्जर', 'सुपरचार्जर', 'इंटरकूलर', 'Catalytic Converter']
+        },
+        {
+            year: 'year1',
+            num: 10,
+            hindi: 'ईंधन प्रणाली',
+            english: 'Fuel System',
+            topics: ['डीजल ईंधन', 'ईंधन टैंक', 'ईंधन फिल्टर', 'फीड पंप', 'F.I.P.', 'इंजेक्टर', 'CRDI सिस्टम', 'गवर्नर', 'EDC सिस्टम', 'सेंसर']
+        },
+        {
+            year: 'year1',
+            num: 11,
+            hindi: 'इंजन प्रदर्शन परीक्षण',
+            english: 'Engine Performance Testing',
+            topics: ['इंजन कोडांतरण विशेष उपकरण', 'Compression Test', 'Vacuum Test', 'इंजन ट्यूनिंग', 'Idling Speed Adjustment']
+        },
+        {
+            year: 'year1',
+            num: 12,
+            hindi: 'उत्सर्जन नियंत्रण प्रणाली',
+            english: 'Emission Control System',
+            topics: ['उत्सर्जन के स्रोत', 'Euro & Bharat Standards', 'EVAP System', 'Catalytic Converter', 'PCV System', 'EGR Valve', 'SCR System', 'DPF']
+        },
+        {
+            year: 'year1',
+            num: 13,
+            hindi: 'चार्जिंग और स्टार्टिंग सिस्टम',
+            english: 'Charging and Starting System',
+            topics: ['अल्टरनेटर', 'Charging Circuit', 'Voltage Regulator', 'स्टार्टिंग सिस्टम', 'Starter Motor', 'Solenoid Switch', 'Drive Mechanism']
+        },
+        {
+            year: 'year1',
+            num: 14,
+            hindi: 'समस्या निवारण',
+            english: 'Trouble Shooting',
+            topics: ['इंजन स्टार्ट न होना', 'उच्च ईंधन खपत', 'इंजन ओवरहीटिंग', 'कम बिजली उत्पादन', 'उच्च तेल खपत', 'कम/उच्च तेल दबाव', 'इंजन शोर']
+        },
+
+        /* ---------- 2nd YEAR (year2) ---------- */
+        {
+            year: 'year2',
+            num: 1,
+            hindi: 'ट्रांसमिशन सिस्टम',
+            english: 'Transmission System',
+            topics: ['प्रमुख प्रणालियाँ और घटक', 'क्लच (Clutch)', 'Gear Shifting Mechanism', 'गियरबॉक्स (Gearbox)', 'Special Files', 'ऑटोमैटिक ट्रांसमिशन', 'Drive Shafts', 'Final Drive', 'Differential', '4WD & AWD']
+        },
+        {
+            year: 'year2',
+            num: 2,
+            hindi: 'स्टीयरिंग और सस्पेंशन सिस्टम',
+            english: 'Steering and Suspension System',
+            topics: ['स्टीयरिंग सिस्टम', 'Power Steering', 'सस्पेंशन सिस्टम', 'Shock Absorbers', 'टायर्स (Tyres)', 'Wheels', 'Wheel Alignment', 'Wheel Balancing']
+        },
+        {
+            year: 'year2',
+            num: 3,
+            hindi: 'ब्रेक सिस्टम',
+            english: 'Brake System',
+            topics: ['ब्रेक का सिद्धांत', 'Drum Brake', 'Disc Brake', 'Hydraulic Brakes', 'Master Cylinder', 'Air Brake System', 'ABS', 'EBD', 'TCS']
+        },
+        {
+            year: 'year2',
+            num: 4,
+            hindi: 'ट्रबल शूटिंग',
+            english: 'Trouble Shooting',
+            topics: ['समस्या निवारण (कारण और उपचार)', 'ECM और सेंसर', 'Ignition Circuit', 'इंजन नॉइज', 'कम प्रेशर']
+        },
+        {
+            year: 'year2',
+            num: 5,
+            hindi: 'इलेक्ट्रॉनिक कंट्रोल सिस्टम',
+            english: 'Electronic Control System',
+            topics: ['MPFI System', 'EFI System', 'ECU/ECM', 'सेंसर के प्रकार', 'Actuators', 'Ignition System', 'Electronic Ignition']
+        },
+        {
+            year: 'year2',
+            num: 6,
+            hindi: 'चार्जिंग और स्टार्टिंग सिस्टम',
+            english: 'Charging and Starting System',
+            topics: ['अल्टरनेटर', 'Charging System', 'स्टार्टिंग सिस्टम', 'Starter Motor', 'Drive Mechanisms', 'Bendix Drive', 'Over-running Clutch']
+        },
+        {
+            year: 'year2',
+            num: 7,
+            hindi: 'लाइटिंग सिस्टम',
+            english: 'Lighting System',
+            topics: ['Headlight Circuit', 'Parking Light', 'Panel Light', 'Dome Light', 'Fog Light', 'Stop Light', 'Reverse Light', 'Flasher Circuit', 'LED & Halogen']
+        },
+        {
+            year: 'year2',
+            num: 8,
+            hindi: 'विधुत घटकों का समस्या निवारण',
+            english: 'Electrical Components Trouble Shooting',
+            topics: ['हॉर्न (Horn)', 'Wiper Circuit', 'Power Window', 'Central Door Locking', 'Immobilizer System', 'Air Bag & Seat Belt', 'GPS Tracker', 'Smart Lighting']
+        },
+        {
+            year: 'year2',
+            num: 9,
+            hindi: 'एयर कंडीशनिंग सिस्टम',
+            english: 'Air Conditioning System',
+            topics: ['A/C के मूल सिद्धांत', 'Compressor', 'Condenser', 'Evaporator', 'Expansion Valve', 'Refrigerant', 'Thermostatic Switch', 'Automatic Climate Control']
+        },
+        {
+            year: 'year2',
+            num: 10,
+            hindi: 'व्हीकल सूचना और ड्राइविंग अभ्यास',
+            english: 'Vehicle Information and Driving Practices',
+            topics: ['Traffic Rules & Signals', 'Road Signs', 'Driving Practice', 'Vehicle Information Report', 'VIN', 'Scan Tool Data']
+        },
+        {
+            year: 'year2',
+            num: 11,
+            hindi: 'इलेक्ट्रिक व्हीकल टेक्नोलॉजी',
+            english: 'Electric Vehicle Technology',
+            topics: ['EV का परिचय', 'BEV, HEV, PHEV, FCEV', 'EV के प्रमुख घटक', 'Battery Management System', 'Electric Motor', 'Controller', 'Charging System']
+        }
+    ];
+
+    /* ============================================================
+       RENDER MODULE CARDS
+       ============================================================ */
+    function renderModules(filter, searchTerm) {
+        var grid = document.getElementById('modulesGrid');
+        var noResults = document.getElementById('noResults');
+        var filtered = modulesData.filter(function (m) {
+            // Tab filter
+            if (filter !== 'all' && m.year !== filter) return false;
+            // Search filter
+            if (searchTerm) {
+                var term = searchTerm.toLowerCase();
+                var haystack = (
+                    m.hindi + ' ' +
+                    m.english + ' ' +
+                    m.topics.join(' ') + ' ' +
+                    'module ' + m.num
+                ).toLowerCase();
+                if (haystack.indexOf(term) === -1) return false;
+            }
+            return true;
+        });
+
+        if (filtered.length === 0) {
+            grid.innerHTML = '';
+            noResults.style.display = 'block';
+            return;
+        }
+        noResults.style.display = 'none';
+
+        var html = '';
+        filtered.forEach(function (m) {
+            var yearLabel = m.year === 'year1' ? '1st Year' : '2nd Year';
+            var topicsHtml = m.topics.slice(0, 6).map(function (t) {
+                return '<li>' + t + '</li>';
+            }).join('');
+            var moreCount = m.topics.length - 6;
+            if (moreCount > 0) {
+                topicsHtml += '<li style="color:#999; font-style:italic;">+ ' + moreCount + ' more topics…</li>';
+            }
+
+            html += '<div class="module-card" data-year="' + m.year + '">' +
+                '<div class="card-accent"></div>' +
+                '<div class="card-body">' +
+                    '<div class="card-header">' +
+                        '<div class="module-num">' + m.num + '</div>' +
+                        '<div class="module-titles">' +
+                            '<div class="hindi">' + m.hindi + '</div>' +
+                            '<div class="english">' + m.english + '</div>' +
+                        '</div>' +
+                    '</div>' +
+                    '<ul class="topics-list">' + topicsHtml + '</ul>' +
+                    '<div class="card-footer">' +
+                        '<a href="trade' + m.num + '.html" class="btn-open">📖 Open Module</a>' +
+                        '<a href="/question-bank/mmv/index.html?mod=' + m.num + '" class="btn-mcq">✏️ MCQ</a>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
+        });
+        grid.innerHTML = html;
+    }
+
+    /* ============================================================
+       TAB HANDLING
+       ============================================================ */
+    var currentTab = 'all';
+    var currentSearch = '';
+
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            document.querySelectorAll('.tab-btn').forEach(function (b) {
+                b.classList.remove('active');
+            });
+            btn.classList.add('active');
+            currentTab = btn.getAttribute('data-tab');
+            renderModules(currentTab, currentSearch);
+        });
+    });
+
+    /* ============================================================
+       SEARCH HANDLING
+       ============================================================ */
+    var searchInput = document.getElementById('searchInput');
+    var clearBtn = document.getElementById('clearBtn');
+
+    searchInput.addEventListener('input', function () {
+        currentSearch = this.value.trim();
+        clearBtn.style.display = currentSearch ? 'block' : 'none';
+        renderModules(currentTab, currentSearch);
+    });
+
+    clearBtn.addEventListener('click', function () {
+        searchInput.value = '';
+        currentSearch = '';
+        clearBtn.style.display = 'none';
+        renderModules(currentTab, '');
+        searchInput.focus();
+    });
+
+    /* ============================================================
+       COUNT UPDATES
+       ============================================================ */
+    function updateCounts() {
+        var y1 = modulesData.filter(function (m) { return m.year === 'year1'; }).length;
+        var y2 = modulesData.filter(function (m) { return m.year === 'year2'; }).length;
+        document.getElementById('count-all').textContent = modulesData.length;
+        document.getElementById('count-year1').textContent = y1;
+        document.getElementById('count-year2').textContent = y2;
+        document.getElementById('total-modules').textContent = modulesData.length;
+    }
+
+    /* ============================================================
+       SHARE BUTTONS
+       ============================================================ */
+    function setupShare() {
+        var url = encodeURIComponent(window.location.href);
+        var text = encodeURIComponent('Check out MMV Trade Theory study material on ITI Study Centre!');
+
+        document.getElementById('shareWhatsapp').href = 'https://wa.me/?text=' + text + '%20' + url;
+        document.getElementById('shareFacebook').href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+        document.getElementById('shareTwitter').href = 'https://twitter.com/intent/tweet?text=' + text + '&url=' + url;
+
+        document.getElementById('shareCopy').addEventListener('click', function () {
+            navigator.clipboard.writeText(window.location.href).then(function () {
+                var btn = document.getElementById('shareCopy');
+                var original = btn.textContent;
+                btn.textContent = '✓';
+                btn.style.background = '#28a745';
+                setTimeout(function () {
+                    btn.textContent = original;
+                    btn.style.background = '#6c757d';
+                }, 1500);
+            }).catch(function () {
+                // Fallback
+                var temp = document.createElement('input');
+                temp.value = window.location.href;
+                document.body.appendChild(temp);
+                temp.select();
+                document.execCommand('copy');
+                document.body.removeChild(temp);
+            });
+        });
+    }
+
+    /* ============================================================
+       SCROLL TO TOP
+       ============================================================ */
+    function setupScrollTop() {
+        var btn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 400) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+        btn.addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    /* ============================================================
+       CONTENT PROTECTION (disable right-click & copy shortcuts)
+       ============================================================ */
+    function setupContentProtection() {
+        // Disable right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+            return false;
+        });
+
+        // Disable copy shortcuts (Ctrl+C, Ctrl+U, Ctrl+S, F12)
+        document.addEventListener('keydown', function (e) {
+            if (e.ctrlKey && (e.key === 'c' || e.key === 'C' ||
+                              e.key === 'u' || e.key === 'U' ||
+                              e.key === 's' || e.key === 'S')) {
+                e.preventDefault();
+                return false;
+            }
+            if (e.key === 'F12') {
+                e.preventDefault();
+                return false;
+            }
+        });
+    }
+
+    /* ============================================================
+       INITIALISE
+       ============================================================ */
+    document.addEventListener('DOMContentLoaded', function () {
+        updateCounts();
+        renderModules('all', '');
+        setupShare();
+        setupScrollTop();
+        setupContentProtection();
+
+        // If header-loader.js is available, load header
+        if (typeof loadHeader === 'function') {
+            loadHeader('index');
+        }
+    });
+
+    // Expose for header-loader if needed
+    window.MMV = {
+        modules: modulesData,
+        render: renderModules
+    };
+    </script>
+
+    <!-- ============================================================
+         HEADER LOADER (optional)
+         ============================================================ -->
+    <script src="header-loader.js" onerror="console.warn('header-loader.js not found — using inline header.');"></script>
+
+</body>
+</html>
