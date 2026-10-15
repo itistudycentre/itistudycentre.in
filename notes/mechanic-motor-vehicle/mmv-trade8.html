@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MMV Theory Module 8 – Cooling and Lubrication System | ITI Study Centre</title>
+<meta content="Mechanic Motor Vehicle (MMV) Trade Theory Module 8 – Cooling and Lubrication System (शीतलन और स्नेहन प्रणाली) – ITI, NSQF Level 4. Engine Cooling System, Radiator, Water Pump, Thermostat, Engine Lubricating System, Oil Pump, Oil Filter, Oil Cooler, PCV के Hindi English Notes." name="description"/>
+<meta content="MMV Theory Module 8, Cooling System, Lubrication System, Radiator, Water Pump, Thermostat, Oil Pump, Oil Filter, Oil Cooler, PCV, ITI MMV Notes Hindi" name="keywords"/>
+<link href="/images/favicon.png" rel="icon"/>
+<link href="/css/style.css" rel="stylesheet"/>
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1e2a3a;
+    line-height: 1.75;
+}
+
+.container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+
+.breadcrumb {
+    background: #eef1f5;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #dde1e7;
+}
+.breadcrumb a { color: #003366; text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb .current { color: #555; font-weight: 600; }
+
+.page-title { padding: 30px 0 18px; text-align: center; }
+.page-title h1 { font-size: 2.25rem; color: #003366; line-height: 1.35; }
+.page-title p { color: #555; font-size: 1.08rem; margin-top: 7px; }
+
+.module-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 25px;
+}
+.module-navigation a {
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 17px;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.25s;
+}
+.module-navigation a:hover { background: #002244; transform: translateY(-1px); }
+
+.search-section { display:flex; gap:10px; margin:0 auto 25px; }
+.search-section input { flex:1; padding:11px 14px; border:1px solid #cfd7e1; border-radius:7px; font-size:.95rem; outline:none; }
+.search-section input:focus { border-color:#003366; box-shadow:0 0 0 2px rgba(0,51,102,.08); }
+.search-section button { background:#003366; color:#fff; border:none; padding:10px 18px; border-radius:7px; font-size:.9rem; font-weight:600; cursor:pointer; transition:.25s; }
+.search-section button:hover { background:#002244; transform:translateY(-1px); }
+@media (max-width:768px) { .search-section { flex-direction:column; } .search-section button { width:100%; } }
+
+.toc-card {
+    background: #ffffff;
+    border: 1px solid #dfe5ec;
+    border-radius: 14px;
+    padding: 22px 25px;
+    margin: 18px 0 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+.toc-card h2 { color: #003366; font-size: 1.3rem; margin-bottom: 14px; }
+.toc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 15px; }
+.toc-grid a {
+    text-decoration: none;
+    color: #003366;
+    background: #f4f7fa;
+    border: 1px solid #e2e7ed;
+    padding: 8px 11px;
+    border-radius: 7px;
+    font-size: 0.92rem;
+    transition: 0.2s;
+}
+.toc-grid a:hover { background: #eaf1f8; border-color: #003366; }
+
+.module-content { margin-bottom: 35px; }
+
+.content-card {
+    background: #fff;
+    border: 1px solid #e1e6ec;
+    border-radius: 14px;
+    padding: 25px 28px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.035);
+}
+.content-card h2 {
+    color: #003366;
+    font-size: 1.42rem;
+    line-height: 1.4;
+    border-left: 5px solid #ffcc00;
+    padding-left: 12px;
+    margin-bottom: 14px;
+}
+.content-card h3 { color: #003366; font-size: 1.14rem; margin: 20px 0 8px; }
+.content-card h4 { color: #004080; font-size: 1rem; margin: 14px 0 6px; }
+.content-card p { margin: 8px 0; }
+.content-card ul, .content-card ol { margin: 10px 0 12px 24px; }
+.content-card li { margin-bottom: 6px; }
+.content-card strong { color: #003366; }
+
+.section-label {
+    display: inline-block;
+    background: #003366;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.info-box, .exam-box, .warning-box, .success-box {
+    border-radius: 9px;
+    padding: 15px 18px;
+    margin: 18px 0;
+}
+.info-box { background: #eef6ff; border-left: 5px solid #003366; }
+.exam-box { background: #fffdf0; border-left: 5px solid #ffcc00; }
+.warning-box { background: #fff5f2; border-left: 5px solid #e5533d; }
+.success-box { background: #eef9f1; border-left: 5px solid #198754; }
+.box-title { font-weight: 700; margin-bottom: 5px; color: #003366; }
+
+.flow-box {
+    background: #f5f8fb;
+    border: 1px solid #dce3ea;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 18px 0;
+    text-align: center;
+    color: #003366;
+    font-weight: 700;
+}
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 18px 0; }
+.content-table { width: 100%; min-width: 600px; border-collapse: collapse; background: #fff; }
+.content-table th { background: #003366; color: #fff; padding: 11px; text-align: left; }
+.content-table td { border: 1px solid #dfe3e8; padding: 10px; vertical-align: top; }
+.content-table tr:nth-child(even) { background: #f7f9fc; }
+
+.quick-revision {
+    background: #fffdf0;
+    border: 2px solid #ffcc00;
+    border-radius: 14px;
+    padding: 25px;
+    margin: 28px 0;
+}
+.quick-revision h2 { color: #003366; margin-bottom: 15px; }
+.quick-revision h3 { color: #003366; margin: 15px 0 5px; }
+
+.full-forms {
+    background: #ffffff;
+    border: 1px solid #dfe5eb;
+    border-radius: 14px;
+    padding: 22px 25px;
+    margin: 25px 0;
+}
+.full-forms h2 { color: #003366; margin-bottom: 12px; }
+
+.next-module {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 30px 0;
+}
+.next-module a {
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+    text-align: center;
+}
+.next-module a:hover { background: #002244; }
+
+.disclaimer {
+    background: #fff;
+    border: 1px solid #e1e6eb;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 25px 0;
+}
+.disclaimer h2 { color: #003366; font-size: 1.2rem; margin-bottom: 7px; }
+
+footer {
+    background: #1a2634;
+    color: #b0b8c5;
+    padding: 24px 20px;
+    text-align: center;
+    margin-top: 44px;
+    border-top: 4px solid #003366;
+}
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+    margin-bottom: 12px;
+}
+.footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; }
+.footer-links a:hover { color: #fff; }
+
+#scrollTop {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    display: none;
+    background: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .page-title h1 { font-size: 1.65rem; }
+    .module-navigation, .next-module { flex-direction: column; }
+    .module-navigation a, .next-module a { width: 100%; }
+    .content-card { padding: 19px; }
+    .toc-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 12px; }
+    .page-title h1 { font-size: 1.4rem; }
+    .content-card { padding: 16px; }
+    .content-card h2 { font-size: 1.18rem; }
+    .content-card p, .content-card li { font-size: 0.95rem; }
+    .quick-revision { padding: 18px; }
+}
+
+#readingProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg,#003366,#ffcc00);
+    z-index: 10000;
+    transition: width .08s linear;
+}
+
+@media print {
+    #readingProgress, #scrollTop, .module-navigation { display: none !important; }
+    body { background: #fff !important; }
+    .content-card, .toc-card, .full-forms, .disclaimer { box-shadow: none !important; break-inside: avoid; }
+}
+
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<script defer="" src="/js/header-loader.js"></script>
+
+<div aria-hidden="true" id="readingProgress"></div>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>
+  ›  
+<a href="/iti-study-centre-notes.html">ITI Notes</a>
+  ›  
+<span class="current">MMV Theory – Module 8</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>❄️ MMV Theory – Module 8</h1>
+<p>Cooling and Lubrication System | शीतलन और स्नेहन प्रणाली | Hindi + English Theory</p>
+</div>
+</section>
+
+<div class="container">
+<div class="module-navigation">
+<a href="/iti-study-centre-notes.html">← ITI Notes</a>
+<a href="/notes/mmv/">📚 All MMV Modules</a>
+<a href="mmv-trade9.html">Next Module →</a>
+</div>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()" type="button">🔍 Search</button>
+</section>
+
+<div class="toc-card" id="topics">
+<h2>📚 इस Module में क्या पढ़ेंगे?</h2>
+<div class="toc-grid">
+<a href="#intro">1. शीतलन प्रणाली का परिचय</a>
+<a href="#need">2. शीतलन प्रणाली की आवश्यकता</a>
+<a href="#types">3. शीतलन प्रणाली के प्रकार</a>
+<a href="#aircool">4. एयर कूलिंग सिस्टम</a>
+<a href="#watercool">5. वाटर कूलिंग सिस्टम</a>
+<a href="#pumpcool">6. थर्मो-साइफन और पंप परिसंचरण</a>
+<a href="#waterpump">7. वाटर पंप (Water Pump)</a>
+<a href="#radiator">8. रेडिएटर (Radiator)</a>
+<a href="#thermostat">9. थर्मोस्टेट (Thermostat)</a>
+<a href="#pressurecap">10. प्रेशर कैप और वैक्यूम वाल्व</a>
+<a href="#fan">11. कूलिंग फैन (Cooling Fan)</a>
+<a href="#tempindicator">12. तापमान संकेतक</a>
+<a href="#thermoswitch">13. थर्मो स्विच (Thermo Switch)</a>
+<a href="#coolant">14. शीतलक और गुण</a>
+<a href="#antifreeze">15. एंटी-फ्रीज मिश्रण</a>
+<a href="#coolproblems">16. शीतलन समस्याएँ और समाधान</a>
+<a href="#lubintro">17. स्नेहन प्रणाली का परिचय</a>
+<a href="#lubfunctions">18. स्नेहक के कार्य</a>
+<a href="#lubtypes">19. स्नेहन प्रणाली के प्रकार</a>
+<a href="#petroillub">20. पेट्रोइल स्नेहन</a>
+<a href="#splash">21. स्प्लैश स्नेहन</a>
+<a href="#pressurelub">22. प्रेशर स्नेहन सिस्टम</a>
+<a href="#combined">23. संयुक्त स्नेहन प्रणाली</a>
+<a href="#reliefvalve">24. दबाव राहत वाल्व</a>
+<a href="#oilpump">25. तेल पंप (Oil Pump)</a>
+<a href="#oilfilter">26. तेल फिल्टर</a>
+<a href="#oilcooler">27. तेल कूलर (Oil Cooler)</a>
+<a href="#crankvent">28. कैंककेस वेंटिलेशन</a>
+<a href="#oildipstick">29. तेल स्तर और दबाव संकेतक</a>
+<a href="#oilprops">30. स्नेहक तेल के गुण</a>
+<a href="#viscosity">31. विस्कोसिटी और SAE ग्रेड</a>
+<a href="#synthetic">32. सिंथेटिक तेल और एडिटिव्स</a>
+</div>
+</div>
+</div>
+
+<main class="container module-content">
+
+<!-- ======================================================
+     1. INTRODUCTION TO COOLING
+     ====================================================== -->
+<section class="content-card" id="intro">
+<span class="section-label">PART 1 · INTRODUCTION TO COOLING</span>
+<h2>1. शीतलन प्रणाली का परिचय (Engine Cooling System)</h2>
+<p>
+एक सिलेंडर के अंदर ईंधन के दहन से बहुत अधिक तापमान (लगभग <strong>2200°C</strong>) विकसित होता है। इस तापमान पर इंजन के पुर्जे फैलेंगे और जबड़ हो जाएंगे।
+</p>
+<p>
+इसी तरह चिकनाई वाला तेल अपना गुण खो देगा। इसलिए इंजन के तापमान को परिचालन सीमा तक रखना आवश्यक है। यह शीतलन प्रणाली द्वारा किया जाता है।
+</p>
+<p>
+मीडिया (पानी या हवा) को ठंडा करके इंजन से गर्मी हटा दी जाती है और वातावरण में फैल जाती है।
+</p>
+<div class="info-box">
+<div class="box-title">💡 महत्वपूर्ण</div>
+<p>
+एक कुशल शीतलन प्रणाली दहन कक्ष में उत्पन्न गर्मी के <strong>30 से 35%</strong> को हटा देती है।
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     2. NEED FOR COOLING
+     ====================================================== -->
+<section class="content-card" id="need">
+<span class="section-label">PART 2 · NEED FOR COOLING</span>
+<h2>2. शीतलन प्रणाली की आवश्यकता</h2>
+<h3>शीतलन प्रणाली की आवश्यकताएँ</h3>
+<ul>
+<li><strong>अत्यधिक गर्मी हटाना:</strong> इंजन के गर्म होने पर coolant को तेज गति से heat निकालना चाहिए।</li>
+<li><strong>सामान्य तापमान तक धीमी गति:</strong> जब तक इंजन अपने सामान्य operating temperature पर नहीं पहुंच जाता, तब तक coolant को धीमी गति से गर्मी को हटाना चाहिए।</li>
+<li><strong>बहुत अधिक ठंडा नहीं करना:</strong> Coolant को इंजन से बहुत अधिक गर्मी नहीं निकालनी चाहिए। बहुत अधिक गर्मी हटाने से इंजन की तापीय क्षमता कम हो जाती है।</li>
+<li><strong>मुक्त प्रसार:</strong> इसे cooling system में स्वतंत्र रूप से प्रसारित होना चाहिए।</li>
+<li><strong>Corrosion रोकना:</strong> यह आवृत्ति और जंग संरचनाओं को रोकना चाहिए।</li>
+<li><strong>किफायती:</strong> यह काफी सस्ता होना चाहिए।</li>
+<li><strong>वाष्पीकरण रोकना:</strong> इसे वाष्पीकरण द्वारा बर्बाद नहीं करना चाहिए।</li>
+<li><strong>साफ रखना:</strong> Water jacket/radiator में कोई विदेशी पदार्थ जमा नहीं होना चाहिए।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     3. TYPES OF COOLING
+     ====================================================== -->
+<section class="content-card" id="types">
+<span class="section-label">PART 3 · TYPES OF COOLING</span>
+<h2>3. शीतलन प्रणाली के प्रकार</h2>
+<p>
+इंजन में दो तरह के cooling system का इस्तेमाल किया जाता है।
+</p>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Direct Cooling / एयर कूलिंग</strong></td><td>हवा से सीधे ठंडा करना</td></tr>
+<tr><td><strong>Indirect Cooling / वाटर कूलिंग</strong></td><td>पानी के माध्यम से अप्रत्यक्ष रूप से ठंडा करना</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ======================================================
+     4. AIR COOLING
+     ====================================================== -->
+<section class="content-card" id="aircool">
+<span class="section-label">PART 4 · AIR COOLING</span>
+<h2>4. एयर कूलिंग सिस्टम (Air Cooling System)</h2>
+<p>
+Air-cooled इंजन में, सिलेंडर अर्थ-स्वतंत्र होते हैं। उन्हें एक ब्लॉक में समूहीकृत नहीं किया गया है।
+</p>
+<h3>निर्माण</h3>
+<ul>
+<li>इंजन से गर्मी को खत्म करने में मदद करने के लिए सिर और सिलेंडर पर धातु के पंख (Fins) दिए गए हैं।</li>
+<li>कुछ इंजनों में पंखे का उपयोग सिलेंडरों और सिरों के चारों ओर वायु परिसंचरण में सुधार करने के लिए भी किया जाता है।</li>
+</ul>
+<h3>उपयोग</h3>
+<ul>
+<li>दोपहिया और छोटे स्थिर इंजनों में कार्यरत।</li>
+<li>S.I. और C.I दोनों इंजनों में उपयोग।</li>
+</ul>
+<h3>लाभ</h3>
+<ul>
+<li>हल्का वजन</li>
+<li>सरल design</li>
+<li>कम maintenance</li>
+<li>जल्दी warm-up</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     5. WATER COOLING
+     ====================================================== -->
+<section class="content-card" id="watercool">
+<span class="section-label">PART 5 · WATER COOLING</span>
+<h2>5. वाटर कूलिंग सिस्टम (Water Cooling System)</h2>
+<p>
+दो प्रकार के water cooling system का उपयोग किया जाता है।
+</p>
+<ol>
+<li><strong>Thermo-Syphon System (थर्मो-साइफन प्रणाली)</strong></li>
+<li><strong>Forced Circulation System (जबरन परिसंचरण तंत्र)</strong></li>
+</ol>
+</section>
+
+<!-- ======================================================
+     6. THERMO-SYPHON & PUMP
+     ====================================================== -->
+<section class="content-card" id="pumpcool">
+<span class="section-label">PART 6 · THERMO-SYPHON &amp; PUMP</span>
+<h2>6. थर्मो-साइफन और पंप परिसंचरण</h2>
+<h3>Thermo-Syphon System</h3>
+<ul>
+<li>इस प्रणाली में पानी के संचलन के लिए किसी भी पंप का उपयोग नहीं किया जाता है।</li>
+<li>गर्म और ठंडे पानी के घनत्व में अंतर के कारण जल परिसंचरण प्राप्त होता है।</li>
+<li>पानी गर्मी को अवशोषित करता है और ब्लॉक में ऊपर उठता है और रेडिएटर के ऊपर की तरफ जाता है।</li>
+<li>रेडिएटर में पानी ठंडा किया जाता है।</li>
+<li>यह फिर से इंजन में water jacket में चला जाता है।</li>
+<li>पानी के निरंतर प्रवाह को बनाए रखने के लिए पानी के स्तर को एक निश्चित न्यूनतम स्तर पर बनाए रखा जाता है।</li>
+<li>यदि जल स्तर नीचे चला जाता है तो परिसंचरण बंद हो जाएगा।</li>
+<li>यह प्रणाली सरल है लेकिन शीतलन की दर बहुत धीमी है।</li>
+</ul>
+<h3>Pump Circulation System (Forced Feed System)</h3>
+<ul>
+<li>इस प्रणाली में पानी एक pump द्वारा परिचालित किया जाता है।</li>
+<li>Pump एक belt द्वारा संचालित होता है जो crankshaft pulley से जुड़ा होता है।</li>
+<li>परिसंचरण इंजन की गति पर निर्भर करता है।</li>
+<li>उच्च इंजन गति पर अधिक पानी परिचालित होता है।</li>
+<li>पानी इंजन से गर्मी को अवशोषित करता है और रेडिएटर के शीर्ष टैंक में प्रवाहित होता है।</li>
+<li>रेडिएटर के ऊपरी टैंक से पानी नीचे की टंकी में बहता है।</li>
+<li>पंखा रेडिएटर के पंखों से हवा खींचता है और गर्म पानी को ठंडा करता है।</li>
+<li>नीचे के टैंक से ठंडा पानी फिर से इंजन में डाला जाता है और चक्र दोहराया जाता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     7. WATER PUMP
+     ====================================================== -->
+<section class="content-card" id="waterpump">
+<span class="section-label">PART 7 · WATER PUMP</span>
+<h2>7. वाटर पंप (Water Pump)</h2>
+<p>
+इंजन में <strong>Centrifugal Type Water Pump</strong> का उपयोग किया जाता है।
+</p>
+<h3>निर्माण</h3>
+<ul>
+<li>यह cylinder block या head के सामने की तरफ लगा होता है।</li>
+<li>पानी pump crankshaft pulley द्वारा fan belt के माध्यम से संचालित होता है।</li>
+<li>Impeller पानी pump shaft के एक छोर पर लगाया जाता है।</li>
+<li>Shaft को bearings के साथ pump housing में fit किया गया है।</li>
+<li>पानी के रिसाव को रोकने और bearing में पानी के प्रवेश को रोकने के लिए pump में water seal लगाई जाती है।</li>
+</ul>
+<h3>कार्य</h3>
+<ul>
+<li>जब Impeller घूमता है तो यह radiator के निचले टैंक से पानी खींचता है।</li>
+<li>दबाव में केन्द्रापसारक बल द्वारा engine block में पानी pump करता है।</li>
+<li>Fan वाटर पंप pulley पर लगा होता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     8. RADIATOR
+     ====================================================== -->
+<section class="content-card" id="radiator">
+<span class="section-label">PART 8 · RADIATOR</span>
+<h2>8. रेडिएटर (Radiator)</h2>
+<p>
+शीतलन प्रणाली में रेडिएटर का उद्देश्य इंजन से निकलने वाले गर्म पानी को ठंडा करना है।
+</p>
+<p>
+इसमें एक बड़ा शीतलन सतह क्षेत्र है जिससे पर्याप्त हवा गुजर सकती है। इसके माध्यम से परिचालित पानी गुजरती हवा से ठंडा हो जाता है।
+</p>
+<h3>Radiator के भाग</h3>
+<ul>
+<li><strong>Upper Tank (ऊपरी टैंक):</strong> एक रबर की नली के माध्यम से इंजन के पानी के outlet से जुड़ा है।</li>
+<li><strong>Lower Tank (निचला टैंक):</strong> रबर की नली के माध्यम से पानी के pump से जुड़ा है।</li>
+<li><strong>Radiator Core:</strong> ऊपरी और निचले टैंक के बीच में।</li>
+</ul>
+<h3>Radiator Core के प्रकार</h3>
+<h4>1. Tubular Core (ट्यूबलर कोर)</h4>
+<ul>
+<li>ऊपरी और निचले टैंक tubes से जुड़े होते हैं।</li>
+<li>इन नलियों से पानी गुजरता है।</li>
+<li>वायुमंडलीय हवा में गर्मी को अवशोषित और विकीर्ण करने के लिए, tubes के चारों ओर cooling fins प्रदान किए जाते हैं।</li>
+</ul>
+<h4>2. Cellular Core (सेलुलर कोर)</h4>
+<ul>
+<li>बड़ी संख्या में व्यक्तिगत वायु कोशिकाएं प्रदान की जाती हैं।</li>
+<li>पानी से घिरी होती हैं।</li>
+<li>इसकी उपस्थिति के कारण, cellular प्रकार को <strong>'Honeycomb' Radiator</strong> के रूप में जाना जाता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     9. THERMOSTAT
+     ====================================================== -->
+<section class="content-card" id="thermostat">
+<span class="section-label">PART 9 · THERMOSTAT</span>
+<h2>9. थर्मोस्टेट (Thermostat)</h2>
+<p>
+Thermostat ठंडे इंजन को ऑपरेटिंग तापमान पर जल्दी लाने में मदद करता है।
+</p>
+<p>
+यह water cooling system में cylinder head और radiator के inlet के पानी के outlet के बीच में लगाया जाता है।
+</p>
+<h3>कार्य प्रक्रिया</h3>
+<ul>
+<li>जब इंजन ठंडा होता है, तो thermostat बंद हो जाता है।</li>
+<li>यह पानी को radiator में प्रवेश करने की अनुमति नहीं देता है।</li>
+<li>पानी bypass hole के माध्यम से इंजन में फिर से घूमता है और इंजन जल्दी से ऑपरेटिंग तापमान तक पहुँच जाता है।</li>
+<li>एक बार जब इंजन ऑपरेटिंग तापमान पर पहुँच जाता है तो thermostat खुल जाता है।</li>
+<li>यह bypass hole को बंद कर देता है और अब पानी को radiator tank में प्रवेश करने की अनुमति देता है।</li>
+<li>Thermostats को अलग-अलग तापमान पर खोलने के लिए rate किया गया है।</li>
+</ul>
+<h3>Thermostat के प्रकार</h3>
+<h4>1. Bellows Type (धौकनी प्रकार)</h4>
+<ul>
+<li>इसमें एक लचीला धातु का पैला है जो दोनों सिरों पर बंद है।</li>
+<li>धातु की पैली आंशिक रूप से एथिल से भरी होती है जिसका क्वथनांक कम होता है।</li>
+<li>जब इंजन ठंडा होता है तो valve अपने outlet मार्ग को बंद कर देता है।</li>
+<li>जब पानी काम कर रहे तापमान तक पहुंच जाता है, तो बंद बेलो में एथिल फैलता है और valve खोलता है।</li>
+</ul>
+<h4>2. Wax Pellet Type (मोम का प्रकार)</h4>
+<ul>
+<li>इस प्रकार में एक मोम की गोली का उपयोग ताप तत्व के रूप में किया जाता है।</li>
+<li>जब परिसंचारी पानी का तापमान ऑपरेटिंग तापमान से कम होता है, तो spring valve को बंद स्थिति में रखता है।</li>
+<li>जैसे ही पानी ऑपरेटिंग तापमान तक पहुंचता है, मोम की गोली फैल जाती है और valve को वसंत तनाव के खिलाफ खोलने के लिए मजबूर करती है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     10. PRESSURE CAP
+     ====================================================== -->
+<section class="content-card" id="pressurecap">
+<span class="section-label">PART 10 · PRESSURE CAP</span>
+<h2>10. प्रेशर कैप और वैक्यूम वाल्व</h2>
+<p>
+प्रेशर कैप को radiator tank के शीर्ष पर filler neck भाग में फिट किया जाता है।
+</p>
+<p>
+यदि दाब को <strong>15 PSI</strong> बढ़ा दिया जाए, तो क्वथनांक बढ़कर <strong>113°C</strong> हो जाता है।
+</p>
+<p>
+यह इंजन को उच्च तापमान पर भी संचालित करने की अनुमति देता है ताकि इंजन की बेहतर दक्षता हासिल की जा सके।
+</p>
+<h3>Pressure Cap के प्रकार</h3>
+<h4>1. दाब वाल्व (Pressure Valve)</h4>
+<ul>
+<li>यदि सिस्टम में दबाव बढ़ता है तो यह घटकों को नुकसान पहुंचा सकता है।</li>
+<li>इससे बचने के लिए एक दबाव राहत वाल्व का उपयोग अतिरिक्त दबाव को मुक्त करने के लिए किया जाता है।</li>
+<li>यह एक spring-loaded valve है।</li>
+<li>जब इंजन के ठंडे पानी को गर्म किया जाता है तो यह फैलता है जिसके परिणामस्वरूप सिस्टम में उच्च दबाव होता है।</li>
+<li>यदि दबाव के कारण बल spring के तनाव से अधिक है, तो valve खुल जाता है और जल वाष्प/भाप overflow pipe से बाहर निकल जाता है।</li>
+</ul>
+<h4>2. वैक्यूम वाल्व (Vacuum Valve)</h4>
+<ul>
+<li>जब इंजन ठंडा हो जाता है तो शीतलक के नुकसान के कारण सिस्टम में दबाव कम हो जाता है और एक vacuum बन जाता है।</li>
+<li>इस समय vacuum valve खुलता है और सिस्टम में हवा तब तक प्रवाहित होती है जब तक कि सिस्टम में vacuum भर नहीं जाता।</li>
+</ul>
+<h3>Expansion Tank / Recovery System</h3>
+<p>
+कुछ इंजनों में एक overflow pipe expansion tank से जुड़ा होता है।
+</p>
+<ul>
+<li>Expansion tank दबाव वाल्व संचालन के दौरान जल वाष्प एकत्र करता है।</li>
+<li>वही वाष्प, संघनन के बाद, vacuum valve के संचालन में radiator में जाता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     11. COOLING FAN
+     ====================================================== -->
+<section class="content-card" id="fan">
+<span class="section-label">PART 11 · COOLING FAN</span>
+<h2>11. कूलिंग फैन (Cooling Fan)</h2>
+<p>
+पानी pump shaft पर radiator के पीछे पंखा लगा होता है। जब इंजन चल रहा होता है तो radiator में पानी को ठंडा करने के लिए radiator core tube और fin के माध्यम से पंखा खींचा जाता है।
+</p>
+<h3>आधुनिक वाहनों में</h3>
+<ul>
+<li>Cooling fan electric power के माध्यम से संचालित होता है।</li>
+<li>यह ECU द्वारा दिए गए sensor base signal के अनुसार क्रिया करता है।</li>
+<li>सामान्य रूप से यह तब तक संचालित नहीं होता है जब तक कि पानी का तापमान निर्दिष्ट तापमान सीमा तक नहीं पहुंच जाता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     12. TEMPERATURE INDICATOR
+     ====================================================== -->
+<section class="content-card" id="tempindicator">
+<span class="section-label">PART 12 · TEMPERATURE INDICATOR</span>
+<h2>12. तापमान संकेतक (Temperature Indicator)</h2>
+<p>
+उपकरण पैनल पर temperature indicator लगाया जाता है। यह engine water jacket में पानी के तापमान को इंगित करता है।
+</p>
+<h3>Temperature Indicator के प्रकार</h3>
+<h4>1. यांत्रिक प्रकार (Mechanical Type)</h4>
+<ul>
+<li>एक सीलबंद बल्ब होता है जो cylinder head water jacket में fit होता है।</li>
+<li>Dash board पर एक महीन tube से तापमान दबाव गेज से जुड़ा होता है।</li>
+</ul>
+<h4>2. इलेक्ट्रिक प्रकार (Electric Type)</h4>
+<ul>
+<li>Electric Type Water Temperature Sending Unit को cylinder head water jacket में fit किया जाता है।</li>
+<li>यह electric wire के जरिए ignition switch से temperature gauge को जोड़ा जाता है।</li>
+<li>जब इंजन का तापमान सामान्य हो जाता है, तो इंजन यूनिट द्वारा green light circuit पूरा किया जाता है और dial हरी बत्ती को इंगित करता है।</li>
+<li>जब इंजन को गर्म किया जाता है तो इंजन इकाई लाल बत्ती circuit को पूरा करती है और dial लाल बत्ती को इंगित करता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     13. THERMO SWITCH
+     ====================================================== -->
+<section class="content-card" id="thermoswitch">
+<span class="section-label">PART 13 · THERMO SWITCH</span>
+<h2>13. थर्मो स्विच (Thermo Switch)</h2>
+<p>
+यह उपकरण radiator cooling fan को सक्रिय करके, शीतलक तापमान को मापने और इंजन नियंत्रण इकाई पर स्तर गेज और चेतावनी रोशनी को नियंत्रित करके इंजन को अधिक गर्म होने से रोकता है।
+</p>
+<p>
+इस उपकरण में अधिकतम चार टर्मिनल होते हैं और इसे radiator, cooling system tube या thermostat पर स्थापित किया जाता है, ताकि शीतलक संवेदन तत्व (द्विधातु डिस्क या थर्मिस्टर) में प्रवाहित हो।
+</p>
+<h3>Thermo Switch का कार्य</h3>
+<p>
+Thermo switch किसी भी वर्तमान आपूर्ति से स्वतंत्र रूप से संचालित होता है। तापमान का पता लगाने के लिए तापमान पर धातु डिस्क स्विच के माध्यम से प्रभाव पड़ता है।
+</p>
+<ul>
+<li>जब तापमान पर यह निर्धारित स्विच पहुंच जाता है तो यह द्विधातु डिस्क अच्छी तरह से snap हो जाता है।</li>
+<li>एक संपर्क बंद कर देता है सर्किट सिस्टम और वहां बिजली बंद करके डिवाइस को चालू किया जाना है।</li>
+<li>ठंडा होने और cut-off तापमान तक पहुंचने के बाद bimetal disc स्वचालित रूप से अपनी मूल स्थिति में वापस आ जाएगी और संपर्क खोल देगी।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     14. COOLANT
+     ====================================================== -->
+<section class="content-card" id="coolant">
+<span class="section-label">PART 14 · COOLANT</span>
+<h2>14. शीतलक और गुण (Coolant)</h2>
+<p>
+Coolant इंजन को ज़रूरत से ज़्यादा गर्म होने और ज़रूरत से ज़्यादा ठंडा होने — दोनों से बचाता है।
+</p>
+<h3>Coolant के प्रमुख गुण</h3>
+<ul>
+<li>यह antifreeze होना चाहिए (जमने से रोके)।</li>
+<li>यह उच्च तापमान पर भी कार्य कर सके (boiling point ऊँचा हो)।</li>
+<li>धातु के साथ अभिक्रिया न करे (Non-corrosive)।</li>
+<li>Water pump और rubber hoses के साथ संगत हो।</li>
+<li>Heat transfer गुण अच्छे हों।</li>
+<li>लंबे समय तक टिकाऊ हो।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     15. ANTIFREEZE
+     ====================================================== -->
+<section class="content-card" id="antifreeze">
+<span class="section-label">PART 15 · ANTIFREEZE</span>
+<h2>15. एंटी-फ्रीज मिश्रण (Antifreeze Mixture)</h2>
+<p>
+Antifreeze substances वे पदार्थ हैं जो पानी का freezing point कम कर देते हैं और boiling point बढ़ा देते हैं।
+</p>
+<h3>Antifreeze के प्रकार</h3>
+<ol>
+<li>लकड़ी की शराब (Methyl Alcohol)</li>
+<li>विकृत शराब (Ethyl Alcohol)</li>
+<li>लिसरीन (Glycerin)</li>
+<li>एथिलीन ग्लाइकॉल (Ethylene Glycol)</li>
+<li>प्रोपलीन ग्लाइकोल (Propylene Glycol)</li>
+<li>एल्कोहल और लिसरीन का मिश्रण</li>
+</ol>
+<div class="exam-box">
+<div class="box-title">📌 Exam Focus</div>
+<p>
+सबसे अधिक उपयोग किया जाने वाला Antifreeze: <strong>Ethylene Glycol (एथिलीन ग्लाइकॉल)</strong>।
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     16. COOLING PROBLEMS
+     ====================================================== -->
+<section class="content-card" id="coolproblems">
+<span class="section-label">PART 16 · COOLING PROBLEMS</span>
+<h2>16. शीतलन समस्याएँ और समाधान</h2>
+<h3>Coolant अंतराल परिवर्तन</h3>
+<ul>
+<li>Coolant को निर्माता द्वारा निर्दिष्ट के अनुसार बदला जाना चाहिए।</li>
+<li>Engine या radiator में प्रमुख मरम्मत के दौरान coolant को बदला जाना चाहिए।</li>
+<li>Coolant को तनु (पानी के साथ तेल मिश्रण) पर बदला जाना चाहिए।</li>
+</ul>
+<h3>सामान्य Cooling समस्याएँ</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Problem</th>
+<th>Cause</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Engine Overheating</td><td>Coolant level कम, Thermostat defective, Radiator clogged</td><td>Coolant top-up, Thermostat replace, Radiator flush</td></tr>
+<tr><td>Coolant Leakage</td><td>Damaged hoses, Loose clamps, Radiator leak</td><td>Hose replace, Clamp tight, Radiator repair</td></tr>
+<tr><td>Coolant Loss (बिना leak)</td><td>Head gasket failure, Internal leakage</td><td>Head gasket replace</td></tr>
+<tr><td>Temperature High</td><td>Fan not working, Water pump faulty</td><td>Fan motor check, Water pump overhaul</td></tr>
+<tr><td>Temperature Low</td><td>Thermostat stuck open</td><td>Thermostat replace</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ======================================================
+     17. LUBRICATION INTRODUCTION
+     ====================================================== -->
+<section class="content-card" id="lubintro">
+<span class="section-label">PART 17 · LUBRICATION</span>
+<h2>17. स्नेहन प्रणाली का परिचय (Engine Lubricating System)</h2>
+<p>
+Engine lubrication system का मुख्य उद्देश्य engine के moving parts के बीच friction को कम करना और उन्हें ठीक से काम करने देना है।
+</p>
+<p>
+Lubricating oil इंजन के विभिन्न हिस्सों में पहुँचाया जाता है जहाँ यह:
+</p>
+<ul>
+<li>Friction कम करता है</li>
+<li>Wear and tear कम करता है</li>
+<li>Heat को अवशोषित करता है</li>
+<li>Metal chips को साफ करता है</li>
+<li>Engine को जंग से बचाता है</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     18. FUNCTIONS OF LUBRICANT
+     ====================================================== -->
+<section class="content-card" id="lubfunctions">
+<span class="section-label">PART 18 · FUNCTIONS OF LUBRICANT</span>
+<h2>18. स्नेहक के कार्य (Functions of Lubricant)</h2>
+<p>
+स्नेहक का मुख्य कार्य दो चलती सतहों के बीच घर्षण को कम करना है जो एक दूसरे के संपर्क में हैं।
+</p>
+<h3>Lubricant के अन्य कार्य</h3>
+<ul>
+<li>घर्षण के कारण गतिमान भागों से ऊष्मा का अवशोषण।</li>
+<li>घटकों के पहनने और आंसू को कम करना।</li>
+<li>चलती भागों के बीच एक कुशनिंग प्रभाव प्रदान करना।</li>
+<li>इसके साथ धातु के चिप्स निकालकर भागों को साफ करना।</li>
+<li>भागों को जंग से बचाना।</li>
+<li>Rings और liner/bore के बीच एक oil film प्रदान करके गैसों के प्रवाह को रोकना।</li>
+</ul>
+<h3>स्नेहक के गुण (Properties)</h3>
+<ul>
+<li>परिचालन स्थितियों के अनुरूप इसमें चिपचिपापन होना चाहिए।</li>
+<li>गर्म और ठंडी दोनों स्थितियों में चिपचिपाहट समान रहनी चाहिए।</li>
+<li>इसका क्वथनांक अधिक होना चाहिए।</li>
+<li>यह संक्षारण प्रतिरोधी होना चाहिए।</li>
+<li>इसमें झाग नहीं बनना चाहिए।</li>
+<li>इसे महत्वपूर्ण परिचालन दबाव का सामना करना चाहिए।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     19. TYPES OF LUBRICATION
+     ====================================================== -->
+<section class="content-card" id="lubtypes">
+<span class="section-label">PART 19 · TYPES OF LUBRICATION</span>
+<h2>19. स्नेहन प्रणाली के प्रकार</h2>
+<p>
+इंजन में निम्न प्रकार के lubricating system का उपयोग किया जाता है।
+</p>
+<ol>
+<li><strong>Petroil Lubrication / पेट्रोल-तेल स्नेहन</strong></li>
+<li><strong>Dry Sump Lubrication / सूखी नाबदान स्नेहन</strong></li>
+<li><strong>Splash Lubrication / स्प्लैश स्नेहन</strong></li>
+<li><strong>Pressure Lubrication / दबावयुक्त स्नेहन</strong></li>
+<li><strong>Combined Lubrication / संयुक्त स्नेहन</strong></li>
+</ol>
+</section>
+
+<!-- ======================================================
+     20. PETROIL LUBRICATION
+     ====================================================== -->
+<section class="content-card" id="petroillub">
+<span class="section-label">PART 20 · PETROIL LUBRICATION</span>
+<h2>20. पेट्रोइल स्नेहन (Petroil Lubrication System)</h2>
+<p>
+इस प्रणाली में चिकनाई वाला तेल पेट्रोल के साथ मिलाया जाता है।
+</p>
+<h3>मुख्य विशेषताएँ</h3>
+<ul>
+<li><strong>Petrol और तेल का अनुपात:</strong> 20:1</li>
+<li>जब ईंधन crankcase chamber और crankshaft bearings में जाता है, तो तेल की धुंध चलती भागों से चिपक जाती है और चिकनाई प्रभाव देती है।</li>
+<li>इस system का इस्तेमाल ज्यादातर <strong>Two-Stroke Engines</strong> में किया जाता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     21. SPLASH LUBRICATION
+     ====================================================== -->
+<section class="content-card" id="splash">
+<span class="section-label">PART 21 · SPLASH LUBRICATION</span>
+<h2>21. स्प्लैश स्नेहन (Splash Lubrication System)</h2>
+<p>
+इस system में चिकनाई वाले तेल को एक नाबदान (Sump) में संग्रहित किया जाता है।
+</p>
+<h3>कार्य प्रक्रिया</h3>
+<ul>
+<li>Connecting rod के सबसे निचले हिस्से पर एक Dipper बनाया जाता है।</li>
+<li>जब crankshaft dipper को घुमाता है, तो dipper crankshaft के प्रत्येक चक्कर में एक बार तेल में डुबकी लगाता है।</li>
+<li>और cylinder की दीवारों पर तेल छिड़कता है।</li>
+</ul>
+<h3>लाभ</h3>
+<ul>
+<li>सरल design</li>
+<li>कम लागत</li>
+</ul>
+<h3>नुकसान</h3>
+<ul>
+<li>धीमी गति वाले इंजनों के लिए उपयुक्त।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     22. PRESSURE LUBRICATION
+     ====================================================== -->
+<section class="content-card" id="pressurelub">
+<span class="section-label">PART 22 · PRESSURE LUBRICATION</span>
+<h2>22. प्रेशर स्नेहन सिस्टम (Pressure Lubrication System)</h2>
+<p>
+सिस्टम में lubricating oil को इंजन के सभी गतिशील भागों में दबाव में, oil pump द्वारा camshaft द्वारा संचालित किया जाता है।
+</p>
+<h3>कार्य प्रक्रिया</h3>
+<ol>
+<li>नाबदान से तेल oil pump द्वारा छलनी (Strainer) और suction pipe के माध्यम से चूसा जाता है।</li>
+<li>छलनी ठोस धूल कणों को filter करती है।</li>
+<li>तेल filter के outlet से <strong>Main Gallery</strong> में बहता है।</li>
+<li>Main Oil Gallery से तेल crankshaft main journals और camshaft bushings में बहता है।</li>
+<li>Crankshaft main journal से तेल crankpin में प्रवाहित होता है।</li>
+<li>Camshaft bushings से यह cylinder के सिर तक बहती है और rocker bushes को lubricate देती है।</li>
+<li>जब crankshaft घुमाता है तो connecting rod bearing से तेल के छीटे निकलते हैं और piston rings और liner को lubricate देते हैं।</li>
+<li>कुछ engines में gudgeon pin bush को lubricate करने के लिए connecting rod के बड़े सिर से छोटे सिर तक एक oil hole drill किया जाता है।</li>
+</ol>
+<h3>अतिरिक्त भाग</h3>
+<ul>
+<li>Oil pump और filter के बीच के रास्ते में एक <strong>Relief Valve</strong> दिया गया है।</li>
+<li>Relief Valve system में तेल के अधिकतम दबाव को सीमित करता है।</li>
+<li>तेल के दबाव को इंगित करने के लिए एक Oil Pressure Gauge या indicator bulb प्रदान किया जाता है।</li>
+<li>इंजन के विभिन्न हिस्सों को lubricate करने के बाद, तेल तेल के नाबदान तक पहुँचता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     23. COMBINED LUBRICATION
+     ====================================================== -->
+<section class="content-card" id="combined">
+<span class="section-label">PART 23 · COMBINED LUBRICATION</span>
+<h2>23. संयुक्त स्नेहन प्रणाली (Combined Lubrication System)</h2>
+<p>
+यह Splash Lubrication System और Pressure Lubrication System का एक संयोजन है।
+</p>
+<h3>कार्य</h3>
+<ul>
+<li>कुछ हिस्सों को Splash Lubrication System द्वारा lubricate किया जाता है - जैसे cylinder की दीवार, camshaft bearings, connecting rod bearing।</li>
+<li>बाकी हिस्से Pressure Lubrication System द्वारा lubricate किए जाते हैं।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     24. RELIEF VALVE
+     ====================================================== -->
+<section class="content-card" id="reliefvalve">
+<span class="section-label">PART 24 · RELIEF VALVE</span>
+<h2>24. दबाव राहत वाल्व (Pressure Relief Valve)</h2>
+<p>
+Pressure relief valve का उपयोग तेल के अधिकतम दबाव को सीमित करने के लिए किया जाता है।
+</p>
+<p>
+जब तेल का दबाव निर्धारित सीमा से अधिक बढ़ जाता है, तो relief valve खुल जाता है और तेल को सीधे तेल के नाबदान में वापस जाने देता है।
+</p>
+<h3>Relief Valve के प्रकार</h3>
+<h4>1. Ball Type (गेंद का प्रकार)</h4>
+<ul>
+<li>इस प्रकार के relief valve में spring-loaded ball होता है।</li>
+<li>Return Channel खोलता है जब तेल का दबाव spring force पर आ जाता है।</li>
+<li>तेल वापसी channel के माध्यम से वापस तेल के नाबदान में बहता है।</li>
+</ul>
+<h4>2. Plunger Type (सवार प्रकार)</h4>
+<ul>
+<li>इस प्रकार का relief valve ball के प्रकार के समान होता है, सिवाय इसके कि ball के बजाय plunger का उपयोग किया जाता है।</li>
+<li>तेल को तेल के नाबदान में वापस जाने की अनुमति देने के लिए एक leakage oil relife मार्ग प्रदान किया जाता है जो plunger से होकर गुजरा है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     25. OIL PUMP
+     ====================================================== -->
+<section class="content-card" id="oilpump">
+<span class="section-label">PART 25 · OIL PUMP</span>
+<h2>25. तेल पंप (Oil Pump)</h2>
+<p>
+Oil pump का उपयोग तेल के नाबदान से तेल को एक निश्चित दबाव में तेल दीर्घाओं तक pump करने के लिए किया जाता है।
+</p>
+<p>
+यह crankcase में स्थित है और camshaft द्वारा संचालित है।
+</p>
+<h3>Oil Pump के प्रकार</h3>
+<h4>1. Gear Type Oil Pump (गियर प्रकार का तेल पंप)</h4>
+<ul>
+<li>इस प्रकार में pump housing में दो gear लगे होते हैं।</li>
+<li>Gear में pump housing के साथ बहुत कम निकासी है।</li>
+<li>जब gears घूमते हैं तो casing में एक vacuum बनाया जाता है।</li>
+<li>तेल inlet के माध्यम से चूसा जाता है और outlet के माध्यम से तेल gallery में pump किया जाता है।</li>
+</ul>
+<h4>2. Rotor Type Oil Pump (रोटर प्रकार का तेल पंप)</h4>
+<ul>
+<li>Rotor प्रकार के oil pump में एक inner driving rotor और एक outer drive rotor होता है।</li>
+<li>Outer rotor pump housing में स्वतंत्र रूप से घूमता है और inner rotor के संबंध में विलक्षण रूप से चलता है।</li>
+<li>तेल को pump में उस तरफ चूसा जाता है जहां rotor के दांतों के बीच की मात्रा बढ़ जाती है।</li>
+<li>और उस तरफ pump कर दिया जाता है जहां volume कम हो जाता है।</li>
+</ul>
+<h4>3. Vane Type Oil Pump (फलक पंप)</h4>
+<ul>
+<li>Vane प्रकार pump में rotor pump housing में विलक्षण रूप से चलता है।</li>
+<li>Spring-loaded vanes pump housing दीवारों के खिलाफ slide करते हैं।</li>
+<li>जब rotor घूमता है तो vanes द्वारा निर्मित suction।</li>
+<li>तेल को inlet duct के माध्यम से चूसा जाता है और discharge duct के माध्यम से discharge किया जाता है।</li>
+</ul>
+<h4>4. Plunger Type Oil Pump (प्लंजर प्रकार का तेल पंप)</h4>
+<ul>
+<li>इस प्रकार के plunger सिलेंडर में ऊपर-नीचे होता है।</li>
+<li>यह एक विशेष सनकी cam द्वारा संचालित होता है।</li>
+<li>इस pump में दो non-return ball valve हैं।</li>
+<li>ये valve spring-loaded ball हैं।</li>
+<li>इनमें से एक suction side पर है।</li>
+<li>ऊपर की ओर stroke के दौरान valve के माध्यम से तेल चूसा जाता है।</li>
+<li>Downward stroke के दौरान non-return valve बंद हो जाता है।</li>
+<li>दूसरा non-return valve जो delivery की तरफ होता है, खुलता है और pump से तेल को बाहर निकलने देता है।</li>
+<li>इस प्रकार के plunger pump का उपयोग मध्यम और उच्च दबाव lubrication systems में किया जाता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     26. OIL FILTER
+     ====================================================== -->
+<section class="content-card" id="oilfilter">
+<span class="section-label">PART 26 · OIL FILTER</span>
+<h2>26. तेल फिल्टर (Oil Filter)</h2>
+<h3>1. Full Flow Oil Filter System (पूर्ण प्रवाह तेल फिल्टर प्रणाली)</h3>
+<ul>
+<li>इस प्रणाली में मुख्य तेल gallery तक पहुंचने से पहले सारा तेल filter से होकर गुजरता है।</li>
+<li>Filter में एक bypass valve दिया गया है जो filter के चोक होने पर तेल को सीधे मुख्य तेल gallery तक पहुंचने की अनुमति देता है।</li>
+</ul>
+<h3>2. Bypass Oil Filter System (बायपास तेल फिल्टर सिस्टम)</h3>
+<ul>
+<li>इस system में engine oil का एक हिस्सा ही filter में प्रवेश करता है।</li>
+<li>छानने के बाद तेल तेल के नाबदान में चला जाता है।</li>
+<li>बचा हुआ तेल सीधे मुख्य तेल gallery में जाता है।</li>
+</ul>
+<h3>Filter Element</h3>
+<p>
+Filter elements felt, सूती कचरे, कपड़े और कागज से बने होते हैं। निर्माता द्वारा निर्दिष्ट इंजन के कुछ किलोमीटर चलने के बाद तेल filter को बदल दिया जाता है।
+</p>
+</section>
+
+<!-- ======================================================
+     27. OIL COOLER
+     ====================================================== -->
+<section class="content-card" id="oilcooler">
+<span class="section-label">PART 27 · OIL COOLER</span>
+<h2>27. तेल कूलर (Oil Cooler)</h2>
+<p>
+Oil cooler में दो भाग होते हैं। तेल परिसंचरण के लिए cooler के हिस्सों के बीच में passages दिए गए हैं।
+</p>
+<p>
+आवश्यक तेल के दबाव को बनाए रखने के लिए एक ball valve प्रदान किया जाता है। यह कच्चा लोहा से बना है।
+</p>
+<h3>Oil Cooler का उद्देश्य</h3>
+<ul>
+<li>Engine oil से गर्मी को ठंडे पानी में स्थानांतरित करना।</li>
+<li>Engine oil को ठंडा करना।</li>
+</ul>
+<h3>कार्य प्रक्रिया</h3>
+<ul>
+<li>Oil cooler की भीतरी दीवार ठंडे पानी के संपर्क में है।</li>
+<li>Engine oil जो oil cooler में दिए गए passages से circulate करने के लिए बनाया जाता है।</li>
+<li>अपनी heat को engine block में circulating cooling water और oil cooler की inner wall में transfer करता है।</li>
+<li>इससे इंजन का तापमान बना रहता है।</li>
+</ul>
+<h3>कार्य</h3>
+<ul>
+<li>भारी शुल्क वाले इंजनों में चिकनाई वाले तेल को ठंडा करना।</li>
+<li>जहाँ तेल का तापमान काफी अधिक हो जाता है, तेल को lubrication system में ठंडा रखा जाना चाहिए।</li>
+<li>एक oil cooler एक साधारण heat exchanger की तरह ही होता है।</li>
+<li>इसमें तेल को या तो radiator के ठंडे पानी से ठंडा किया जा सकता है।</li>
+<li>शुरू करने के समय जब पानी इतना गर्म होता है कि तेल, तेल को system में पूर्ण परिसंचरण प्रदान करने के लिए गरम किया जाता है।</li>
+<li>उच्च तापमान पर, जब तेल पानी से अधिक गर्म हो जाता है, तो पानी तेल को ठंडा कर देता है।</li>
+</ul>
+<h3>Construction</h3>
+<ul>
+<li>एक पानी के प्रकार का oil cooler, बस tubes से बना होता है जिसमें तेल फैलता है।</li>
+<li>Cooler के casing में पानी tubes के बाहर घूमता है।</li>
+<li>तेल की गर्मी परिसंचारी पानी द्वारा दूर की जाती है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     28. CRANKCASE VENTILATION
+     ====================================================== -->
+<section class="content-card" id="crankvent">
+<span class="section-label">PART 28 · CRANKCASE VENTILATION</span>
+<h2>28. कैंककेस वेंटिलेशन (Crankcase Ventilation)</h2>
+<p>
+Crankcase में तेल गैसों, कार्बन कणों, धातु कणों, रेत, धूल, गंदगी और सल्फ्यूरिक एसिड और फॉस्फोरिक एसिड जैसे निकास गैस संघनन से बनने वाले एसिड के मिश्रण के कारण पतला हो जाता है।
+</p>
+<p>
+यह स्नेहन को प्रभावित करता है और एक कीचड़ (गंदे तेल का संचय) बनाता है। बार-बार सफाई और तेल बदलने की जरूरत है। इस समस्या को दूर करने के लिए crankcase ventilation प्रदान किया जाता है।
+</p>
+<h3>1. Open Type Crankcase Ventilation</h3>
+<ul>
+<li>Crankcase में ताजी हवा की अनुमति है।</li>
+<li>पीछे की ओर एक breather pipe के माध्यम से परिसंचरण के बाद बाहर निकलती है।</li>
+<li>इस व्यवस्था को <strong>Open Type Crankcase Ventilation</strong> के रूप में जाना जाता है।</li>
+</ul>
+<h3>2. Positive Crankcase Ventilation (PCV)</h3>
+<ul>
+<li>इंजन से निकलने वाली निकास गैसें और अन्य कण सार्वजनिक स्वास्थ्य के लिए विषाक्त और हानिकारक हैं।</li>
+<li>इस positive crankcase को दूर करने के लिए ventilation या बंद प्रकार का ventilation प्रदान किया जाता है।</li>
+<li>इस व्यवस्था में इंजन crankcase से बहने वाली सभी हवा को intake manifold में वापस खींच लिया जाता है और खिलाया जाता है इंजन में।</li>
+<li>यह इंजन के बाहर गैसों के प्रवाह को रोकता है।</li>
+</ul>
+<h3>PCV Valve का कार्य</h3>
+<ul>
+<li>PCV वाल्व एक vacuum-operated valve है।</li>
+<li>यह intake manifold vacuum के अनुसार crankcase gases के flow को regulate करता है।</li>
+<li>Idle और deceleration के दौरान - High vacuum - valve restricts flow।</li>
+<li>Acceleration और heavy load पर - Low vacuum - valve allows maximum flow।</li>
+<li>Boost condition में (Turbocharged engine) - valve बंद हो जाता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     29. OIL LEVEL & PRESSURE INDICATORS
+     ====================================================== -->
+<section class="content-card" id="oildipstick">
+<span class="section-label">PART 29 · OIL LEVEL &amp; PRESSURE</span>
+<h2>29. तेल स्तर और दबाव संकेतक</h2>
+<h3>तेल स्तर संकेतक (Oil Dipstick)</h3>
+<ul>
+<li>यह नाबदान में तेल के स्तर (राशि) को मापने के लिए सामने के छोर पर एक steel की छड़ी है।</li>
+<li>Dipstick के निचले सिरे पर graduated marks <strong>"Full", "Half", "Low"</strong> होते हैं।</li>
+<li>ये marks बताते हैं कि तेल आवश्यक पूर्ण या आधा स्तर तक है या स्तर इतना कम है।</li>
+<li>कम तेल का स्तर इंजन के जीवन के लिए खतरा पैदा कर सकता है।</li>
+</ul>
+<h4>तेल स्तर मापने की विधि</h4>
+<ol>
+<li>इंजन से छड़ी को हटा दें।</li>
+<li>छड़ी को साफ करें।</li>
+<li>तेल के नाबदान में डुबोएं।</li>
+<li>फिर से देखें कि graduation oil चिपक गया है।</li>
+</ol>
+<h3>तेल दबाव संकेतक (Oil Pressure Indicator)</h3>
+<p>
+स्नेहन को इंगित करने के लिए dash board पर Oil Pressure Gauge या Oil Warning Light प्रदान की जाती है।
+</p>
+<h3>Oil Pressure Gauge के प्रकार</h3>
+<ol>
+<li><strong>दबाव विस्तार प्रकार (Pressure Expansion Type):</strong> Bourdon tube type</li>
+<li><strong>इलेक्ट्रिक प्रकार (Electric Type):</strong>
+    <ul>
+        <li>Balancing Coil Type - दो coils और pointer के साथ</li>
+        <li>Bimetal Thermal Type - Bimetal strip और heating element</li>
+    </ul>
+</li>
+</ol>
+<h3>Oil Warning Light</h3>
+<ul>
+<li>Ignition switch चालू होने पर और तेल का दबाव कम होने पर रोशनी आती है।</li>
+<li>Circuit चार चरण diaphragm switch का उपयोग करता है, जो विभिन्न इंजन गति के लिए आवश्यक दबाव के अनुसार एक चेतावनी दीपक संचालित करता है।</li>
+<li>Switch तेल मुख्य gallery में स्थित है।</li>
+<li>चेतावनी प्रकाश के साथ इसका संबंध ignition switch के माध्यम से होता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     30. OIL PROPERTIES
+     ====================================================== -->
+<section class="content-card" id="oilprops">
+<span class="section-label">PART 30 · OIL PROPERTIES</span>
+<h2>30. स्नेहक तेल के गुण (Lubricating Oil Properties)</h2>
+<p>
+Engine lubricating oil में निम्नलिखित properties होनी चाहिए।
+</p>
+<ul>
+<li><strong>Viscosity:</strong> चिपचिपापन - सबसे महत्वपूर्ण गुण</li>
+<li><strong>Viscosity Index:</strong> तापमान के साथ viscosity में परिवर्तन का माप</li>
+<li><strong>Flash Point:</strong> वह तापमान जिस पर तेल के वाष्प प्रज्वलित होते हैं</li>
+<li><strong>Fire Point:</strong> वह तापमान जिस पर तेल जलता है</li>
+<li><strong>Pour Point:</strong> वह तापमान जिस पर तेल बहना बंद कर देता है</li>
+<li><strong>Cloud Point:</strong> वह तापमान जिस पर तेल में wax crystals बनने लगती हैं</li>
+<li><strong>Oxidation Stability:</strong> Oxidation का विरोध</li>
+<li><strong>Corrosion Resistance:</strong> जंग का विरोध</li>
+<li><strong>Detergent Properties:</strong> सफाई प्रभाव</li>
+<li><strong>Anti-foaming:</strong> झाग न बनना</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     31. VISCOSITY & SAE GRADES
+     ====================================================== -->
+<section class="content-card" id="viscosity">
+<span class="section-label">PART 31 · VISCOSITY &amp; SAE GRADES</span>
+<h2>31. विस्कोसिटी और SAE ग्रेड</h2>
+<p>
+<strong>Viscosity:</strong> यह चिकनाई वाले तेलों का सबसे महत्वपूर्ण गुण है क्योंकि यह उनके प्रवाह की क्षमता को निर्धारित करता है।
+</p>
+<ul>
+<li>अत्यधिक उच्च चिपचिपाहट वाला तेल बहुत मोटा होता है, और रगड़ इंजन भागों के बीच निकासी को भेदना मुश्किल होता है।</li>
+<li>बहुत कम चिपचिपापन वाला तेल आसानी से बहता है और निकासी में नहीं रहता है।</li>
+<li>ताकि इंजन ऑयल का उपयोग विशेष इंजन विनिर्देशों और मौसम (सादे क्षेत्र या उच्च रवैया क्षेत्र) के रूप में किया जाना चाहिए।</li>
+</ul>
+<h3>SAE Oil Grades</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Temperature Range</th>
+<th>Single Viscosity Grade</th>
+<th>Multi Viscosity Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Minus 10°F से नीचे</td><td>SAE 5W</td><td>SAE 5W-20</td></tr>
+<tr><td>Minus 10°F से ऊपर</td><td>SAE 10W</td><td>SAE 10W-20, या SAE 10W-30</td></tr>
+<tr><td>Plus 10°F से ऊपर</td><td>SAE 20W</td><td>SAE 20W-30, या SAE 10W-30</td></tr>
+<tr><td>32°F से ऊपर</td><td>SAE 20W या 20</td><td>SAE 20W-30, या SAE 10W-30</td></tr>
+<tr><td>90°F से ऊपर</td><td>SAE 30 (कुछ निर्माता)</td><td>SAE 20W-30, या SAE 10W-30</td></tr>
+</tbody>
+</table>
+</div>
+<div class="exam-box">
+<div class="box-title">📌 Exam Focus</div>
+<p>
+<strong>SAE</strong> = Society of Automotive Engineers
+</p>
+<p>
+Multi-viscosity oil जैसे 10W-30 - यह oil cold पर 10W की तरह और hot पर 30 की तरह काम करता है।
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     32. SYNTHETIC OIL
+     ====================================================== -->
+<section class="content-card" id="synthetic">
+<span class="section-label">PART 32 · SYNTHETIC OIL</span>
+<h2>32. सिंथेटिक तेल और एडिटिव्स</h2>
+<h3>Synthetic Oil (सिंथेटिक तेल)</h3>
+<ul>
+<li>Synthetic तेल कच्चे तेल के अलावा अन्य पदार्थों से बने होते हैं।</li>
+<li>इन्हें वनस्पति तेलों से बनाया जा सकता है।</li>
+</ul>
+<h3>Synthetic Oil के प्रकार</h3>
+<ol>
+<li>पॉलीऐल्किलीन ग्लाइकॉल और उनके व्युत्पन्न</li>
+<li>सिलिकॉन जो कोयले और रेत से निर्मित होते हैं</li>
+</ol>
+<h3>Synthetic Oil के लाभ</h3>
+<ul>
+<li>Conventional oil की तुलना में लंबे समय तक service life।</li>
+<li>कम friction।</li>
+<li>बेहतर ईंधन अर्थव्यवस्था।</li>
+<li>उच्च तापमान पर बेहतर प्रदर्शन।</li>
+</ul>
+<h3>Oil Additives (तेल योजक)</h3>
+<p>
+कोई भी खनिज तेल अपने आप में सभी गुण नहीं रखता है। तेल कंपनियां मुख्य तेल एडिटिव्स के निर्माण की प्रक्रिया के दौरान तेल में कई एडिटिव्स मिलाती हैं।
+</p>
+<ul>
+<li><strong>Pour Point Depressant:</strong> ठंडे में तेल बहने में सहायता।</li>
+<li><strong>Oxidation Inhibitor:</strong> Oxidation से बचाव।</li>
+<li><strong>Rust and Corrosion Inhibitor:</strong> जंग और corrosion से बचाव।</li>
+<li><strong>Foam Inhibitor:</strong> झाग बनने से रोकना।</li>
+<li><strong>Detergent-Dispersant:</strong> गंदगी को साफ रखना और suspended रखना।</li>
+<li><strong>Extreme Pressure (EP) Additive:</strong> अत्यधिक दबाव पर सुरक्षा।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     QUICK REVISION
+     ====================================================== -->
+<section class="quick-revision">
+<h2>⭐ Module 8 – Quick Revision</h2>
+<h3>Cooling System Types</h3>
+<p>
+<strong>Direct Cooling (Air) · Indirect Cooling (Water)</strong>
+</p>
+<h3>Water Cooling Types</h3>
+<p>
+<strong>Thermo-Syphon System · Pump Circulation System</strong>
+</p>
+<h3>Cooling System Components</h3>
+<p>
+<strong>Radiator · Water Pump · Thermostat · Cooling Fan · Pressure Cap · Thermo Switch · Temperature Indicator</strong>
+</p>
+<h3>Radiator Core Types</h3>
+<p>
+<strong>Tubular Core · Cellular Core (Honeycomb)</strong>
+</p>
+<h3>Thermostat Types</h3>
+<p>
+<strong>Bellows Type · Wax Pellet Type</strong>
+</p>
+<h3>Pressure Cap</h3>
+<p>
+<strong>15 PSI → Boiling Point 113°C · Pressure Valve + Vacuum Valve</strong>
+</p>
+<h3>Antifreeze Types</h3>
+<p>
+<strong>Ethylene Glycol (सर्वाधिक उपयोग) · Propylene Glycol · Alcohol · Glycerin</strong>
+</p>
+<h3>Lubrication System Types</h3>
+<p>
+<strong>Petroil · Dry Sump · Splash · Pressure · Combined</strong>
+</p>
+<h3>Petroil Ratio</h3>
+<p>
+<strong>Petrol : Oil = 20 : 1 (Two-Stroke Engine)</strong>
+</p>
+<h3>Functions of Lubricant</h3>
+<p>
+<strong>Reduce Friction · Absorb Heat · Reduce Wear · Cushioning · Clean Parts · Prevent Rust · Seal Gases</strong>
+</p>
+<h3>Oil Pump Types</h3>
+<p>
+<strong>Gear Type · Rotor Type · Vane Type · Plunger Type</strong>
+</p>
+<h3>Oil Filter Types</h3>
+<p>
+<strong>Full Flow · Bypass</strong>
+</p>
+<h3>Relief Valve Types</h3>
+<p>
+<strong>Ball Type · Plunger Type</strong>
+</p>
+<h3>Crankcase Ventilation</h3>
+<p>
+<strong>Open Type · Positive Crankcase Ventilation (PCV)</strong>
+</p>
+<h3>Oil Properties</h3>
+<p>
+<strong>Viscosity · Flash Point · Fire Point · Pour Point · Cloud Point · Oxidation Stability</strong>
+</p>
+<h3>SAE Oil Grades</h3>
+<p>
+<strong>5W, 10W, 20W, 30, 40 · Multi-Grade: 10W-30, 20W-40</strong>
+</p>
+<h3>Oil Additives</h3>
+<p>
+<strong>Pour Point Depressant · Oxidation Inhibitor · Rust Inhibitor · Foam Inhibitor · Detergent-Dispersant · EP Additive</strong>
+</p>
+</section>
+
+<!-- ======================================================
+     FULL FORMS
+     ====================================================== -->
+<section class="full-forms">
+<h2>📘 Important Full Forms</h2>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Short Form</th>
+<th>Full Form</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>PCV</td><td>Positive Crankcase Ventilation</td></tr>
+<tr><td>SAE</td><td>Society of Automotive Engineers</td></tr>
+<tr><td>EP</td><td>Extreme Pressure</td></tr>
+<tr><td>PSI</td><td>Pound per Square Inch</td>
+</tr>
+<tr><td>TDC</td><td>Top Dead Centre</td></tr>
+<tr><td>BDC</td><td>Bottom Dead Centre</td></tr>
+<tr><td>ECU</td><td>Electronic Control Unit</td></tr>
+<tr><td>SI</td><td>Spark Ignition</td></tr>
+<tr><td>CI</td><td>Compression Ignition</td></tr>
+<tr><td>API</td><td>American Petroleum Institute</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ======================================================
+     IMPORTANT POINTS
+     ====================================================== -->
+<section class="content-card">
+<h2>📌 Module 8 – सबसे महत्वपूर्ण बातें</h2>
+<ul>
+<li>इंजन का दहन तापमान लगभग 2200°C तक पहुँचता है।</li>
+<li>Cooling System दहन कक्ष की 30-35% गर्मी हटाता है।</li>
+<li>Cooling System के 2 प्रकार - Direct (Air) और Indirect (Water)।</li>
+<li>Water Cooling के 2 प्रकार - Thermo-Syphon और Pump Circulation।</li>
+<li>Thermostat Bellows Type या Wax Pellet Type होता है।</li>
+<li>Pressure Cap 15 PSI तक दबाव बढ़ाकर Boiling Point 113°C तक ले जाता है।</li>
+<li>Coolant Ethylene Glycol आधारित होता है।</li>
+<li>Lubrication System के 5 प्रकार - Petroil, Dry Sump, Splash, Pressure, Combined।</li>
+<li>Petroil Lubrication Ratio - 20:1 (Two-Stroke Engines)।</li>
+<li>Lubricant के 7 कार्य - Friction कम करना, Heat absorb करना, Wear कम करना, Cushioning, Cleaning, Rust prevention, Sealing।</li>
+<li>Oil Pump के 4 प्रकार - Gear, Rotor, Vane, Plunger।</li>
+<li>Relief Valve के 2 प्रकार - Ball Type और Plunger Type।</li>
+<li>Oil Filter के 2 प्रकार - Full Flow और Bypass।</li>
+<li>PCV = Positive Crankcase Ventilation - Crankcase gases को intake manifold में वापस भेजता है।</li>
+<li>Viscosity सबसे महत्वपूर्ण oil property है।</li>
+<li>SAE Grade - 5W, 10W, 20W, 30, 40 - Multi-Grade 10W-30 आदि।</li>
+<li>Oil Additives - Pour Point Depressant, Oxidation Inhibitor, Rust Inhibitor, Foam Inhibitor, Detergent, EP Additive।</li>
+<li>Oil Cooler heat exchanger की तरह काम करता है।</li>
+<li>Thermo Switch Electric Cooling Fan को Control करता है।</li>
+<li>Expansion Tank Coolant Recovery System का हिस्सा है।</li>
+</ul>
+</section>
+
+<div class="next-module">
+<a href="/iti-study-centre-notes.html">← ITI Notes</a>
+<a href="/notes/mmv/">📚 All MMV Modules</a>
+<a href="mmv-trade9.html">Next Module →</a>
+</div>
+
+</main>
+
+<section class="container">
+<div class="disclaimer">
+<h2>⚠ Disclaimer</h2>
+<p>
+ITI Study Centre एक educational और study-support platform है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के लिए तैयार की गई है। Official syllabus, regulations और latest information के लिए संबंधित official authority की जानकारी को प्राथमिकता दें। मूल सामग्री का कॉपीराइट <strong>National Instructional Media Institute (NIMI), Chennai</strong> के पास सुरक्षित है।
+</p>
+</div>
+</section>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p id="footerYear">© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+
+document.querySelectorAll('.toc-grid a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+            event.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+const scrollBtn = document.getElementById("scrollTop");
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 450) { scrollBtn.style.display = "block"; }
+    else { scrollBtn.style.display = "none"; }
+});
+scrollBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+const footerYear = document.getElementById("footerYear");
+if (footerYear) {
+    footerYear.textContent = "© " + new Date().getFullYear() + " ITI Study Centre. All Rights Reserved.";
+}
+
+const progressBar = document.getElementById("readingProgress");
+window.addEventListener("scroll", function() {
+    if (!progressBar) return;
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = percent + "%";
+});
+
+console.log("✅ MMV Theory Module 8 – Final Template Loaded");
+
+</script>
+<script>
+function filterSections() {
+    const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+    const sections = document.querySelectorAll('main .content-card');
+    sections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+        section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+    });
+}
+document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') filterSections();
+});
+</script>
+</body>
+</html>
