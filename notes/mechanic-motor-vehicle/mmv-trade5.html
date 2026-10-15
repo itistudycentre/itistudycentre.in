@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MMV Theory Module 5 – Hydraulic and Pneumatics | ITI Study Centre</title>
+<meta content="Mechanic Motor Vehicle (MMV) Trade Theory Module 5 – Hydraulic and Pneumatics (हाइड्रोलिक और न्यूमेटिक्स) – ITI, NSQF Level 4. Pascal's Law, Pressure, Viscosity, Hydraulic System, Pneumatic System, FRL Unit, Hydraulic Valves, Actuators के Hindi English Notes." name="description"/>
+<meta content="MMV Theory Module 5, Hydraulic and Pneumatics, Pascal's Law, Pressure, Viscosity, Hydraulic System, Pneumatic System, FRL Unit, Hydraulic Valves, ITI MMV Notes Hindi" name="keywords"/>
+<link href="/images/favicon.png" rel="icon"/>
+<link href="/css/style.css" rel="stylesheet"/>
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1e2a3a;
+    line-height: 1.75;
+}
+
+.container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+
+.breadcrumb {
+    background: #eef1f5;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #dde1e7;
+}
+.breadcrumb a { color: #003366; text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb .current { color: #555; font-weight: 600; }
+
+.page-title { padding: 30px 0 18px; text-align: center; }
+.page-title h1 { font-size: 2.25rem; color: #003366; line-height: 1.35; }
+.page-title p { color: #555; font-size: 1.08rem; margin-top: 7px; }
+
+.module-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 25px;
+}
+.module-navigation a {
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 17px;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.25s;
+}
+.module-navigation a:hover { background: #002244; transform: translateY(-1px); }
+
+.search-section { display:flex; gap:10px; margin:0 auto 25px; }
+.search-section input { flex:1; padding:11px 14px; border:1px solid #cfd7e1; border-radius:7px; font-size:.95rem; outline:none; }
+.search-section input:focus { border-color:#003366; box-shadow:0 0 0 2px rgba(0,51,102,.08); }
+.search-section button { background:#003366; color:#fff; border:none; padding:10px 18px; border-radius:7px; font-size:.9rem; font-weight:600; cursor:pointer; transition:.25s; }
+.search-section button:hover { background:#002244; transform:translateY(-1px); }
+@media (max-width:768px) { .search-section { flex-direction:column; } .search-section button { width:100%; } }
+
+.toc-card {
+    background: #ffffff;
+    border: 1px solid #dfe5ec;
+    border-radius: 14px;
+    padding: 22px 25px;
+    margin: 18px 0 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+.toc-card h2 { color: #003366; font-size: 1.3rem; margin-bottom: 14px; }
+.toc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 15px; }
+.toc-grid a {
+    text-decoration: none;
+    color: #003366;
+    background: #f4f7fa;
+    border: 1px solid #e2e7ed;
+    padding: 8px 11px;
+    border-radius: 7px;
+    font-size: 0.92rem;
+    transition: 0.2s;
+}
+.toc-grid a:hover { background: #eaf1f8; border-color: #003366; }
+
+.module-content { margin-bottom: 35px; }
+
+.content-card {
+    background: #fff;
+    border: 1px solid #e1e6ec;
+    border-radius: 14px;
+    padding: 25px 28px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.035);
+}
+.content-card h2 {
+    color: #003366;
+    font-size: 1.42rem;
+    line-height: 1.4;
+    border-left: 5px solid #ffcc00;
+    padding-left: 12px;
+    margin-bottom: 14px;
+}
+.content-card h3 { color: #003366; font-size: 1.14rem; margin: 20px 0 8px; }
+.content-card h4 { color: #004080; font-size: 1rem; margin: 14px 0 6px; }
+.content-card p { margin: 8px 0; }
+.content-card ul, .content-card ol { margin: 10px 0 12px 24px; }
+.content-card li { margin-bottom: 6px; }
+.content-card strong { color: #003366; }
+
+.section-label {
+    display: inline-block;
+    background: #003366;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.info-box, .exam-box, .warning-box, .success-box {
+    border-radius: 9px;
+    padding: 15px 18px;
+    margin: 18px 0;
+}
+.info-box { background: #eef6ff; border-left: 5px solid #003366; }
+.exam-box { background: #fffdf0; border-left: 5px solid #ffcc00; }
+.warning-box { background: #fff5f2; border-left: 5px solid #e5533d; }
+.success-box { background: #eef9f1; border-left: 5px solid #198754; }
+.box-title { font-weight: 700; margin-bottom: 5px; color: #003366; }
+
+.flow-box {
+    background: #f5f8fb;
+    border: 1px solid #dce3ea;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 18px 0;
+    text-align: center;
+    color: #003366;
+    font-weight: 700;
+}
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 18px 0; }
+.content-table { width: 100%; min-width: 600px; border-collapse: collapse; background: #fff; }
+.content-table th { background: #003366; color: #fff; padding: 11px; text-align: left; }
+.content-table td { border: 1px solid #dfe3e8; padding: 10px; vertical-align: top; }
+.content-table tr:nth-child(even) { background: #f7f9fc; }
+
+.quick-revision {
+    background: #fffdf0;
+    border: 2px solid #ffcc00;
+    border-radius: 14px;
+    padding: 25px;
+    margin: 28px 0;
+}
+.quick-revision h2 { color: #003366; margin-bottom: 15px; }
+.quick-revision h3 { color: #003366; margin: 15px 0 5px; }
+
+.full-forms {
+    background: #ffffff;
+    border: 1px solid #dfe5eb;
+    border-radius: 14px;
+    padding: 22px 25px;
+    margin: 25px 0;
+}
+.full-forms h2 { color: #003366; margin-bottom: 12px; }
+
+.next-module {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 30px 0;
+}
+.next-module a {
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+    text-align: center;
+}
+.next-module a:hover { background: #002244; }
+
+.disclaimer {
+    background: #fff;
+    border: 1px solid #e1e6eb;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 25px 0;
+}
+.disclaimer h2 { color: #003366; font-size: 1.2rem; margin-bottom: 7px; }
+
+footer {
+    background: #1a2634;
+    color: #b0b8c5;
+    padding: 24px 20px;
+    text-align: center;
+    margin-top: 44px;
+    border-top: 4px solid #003366;
+}
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+    margin-bottom: 12px;
+}
+.footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; }
+.footer-links a:hover { color: #fff; }
+
+#scrollTop {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    display: none;
+    background: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .page-title h1 { font-size: 1.65rem; }
+    .module-navigation, .next-module { flex-direction: column; }
+    .module-navigation a, .next-module a { width: 100%; }
+    .content-card { padding: 19px; }
+    .toc-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 12px; }
+    .page-title h1 { font-size: 1.4rem; }
+    .content-card { padding: 16px; }
+    .content-card h2 { font-size: 1.18rem; }
+    .content-card p, .content-card li { font-size: 0.95rem; }
+    .quick-revision { padding: 18px; }
+}
+
+#readingProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg,#003366,#ffcc00);
+    z-index: 10000;
+    transition: width .08s linear;
+}
+
+@media print {
+    #readingProgress, #scrollTop, .module-navigation { display: none !important; }
+    body { background: #fff !important; }
+    .content-card, .toc-card, .full-forms, .disclaimer { box-shadow: none !important; break-inside: avoid; }
+}
+
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<script defer="" src="/js/header-loader.js"></script>
+
+<div aria-hidden="true" id="readingProgress"></div>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>
+  ›  
+<a href="/iti-study-centre-notes.html">ITI Notes</a>
+  ›  
+<span class="current">MMV Theory – Module 5</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>💧 MMV Theory – Module 5</h1>
+<p>Hydraulic and Pneumatics | हाइड्रोलिक और न्यूमेटिक्स | Hindi + English Theory</p>
+</div>
+</section>
+
+<div class="container">
+<div class="module-navigation">
+<a href="/iti-study-centre-notes.html">← ITI Notes</a>
+<a href="/notes/mmv/">📚 All MMV Modules</a>
+<a href="mmv-trade6.html">Next Module →</a>
+</div>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()" type="button">🔍 Search</button>
+</section>
+
+<div class="toc-card" id="topics">
+<h2>📚 इस Module में क्या पढ़ेंगे?</h2>
+<div class="toc-grid">
+<a href="#intro">1. हाइड्रोलिक और न्यूमेटिक्स का परिचय</a>
+<a href="#pascal">2. पास्कल का नियम (Pascal's Law)</a>
+<a href="#pressure">3. दबाव (Pressure) और इकाइयाँ</a>
+<a href="#force">4. बल गुणन (Force Multiplication)</a>
+<a href="#viscosity">5. विस्कोसिटी (Viscosity)</a>
+<a href="#hydoil">6. हाइड्रोलिक तेल और गुण</a>
+<a href="#hydsystem">7. हाइड्रोलिक प्रणाली</a>
+<a href="#reservoir">8. Reservoir, Filter और Valves</a>
+<a href="#pumps">9. हाइड्रोलिक पंप</a>
+<a href="#actuators">10. हाइड्रोलिक एक्ट्यूएटर</a>
+<a href="#hydvalves">11. हाइड्रोलिक वाल्व</a>
+<a href="#pneumatic">12. न्यूमेटिक प्रणाली</a>
+<a href="#compressor">13. एयर कंप्रेसर</a>
+<a href="#frl">14. FRL यूनिट</a>
+<a href="#pneuactuator">15. न्यूमेटिक एक्ट्यूएटर</a>
+<a href="#valves">16. द्रव शक्ति प्रणालियों में वाल्व</a>
+</div>
+</div>
+</div>
+
+<main class="container module-content">
+
+<!-- ======================================================
+     1. INTRODUCTION
+     ====================================================== -->
+<section class="content-card" id="intro">
+<span class="section-label">PART 1 · INTRODUCTION</span>
+<h2>1. हाइड्रोलिक और न्यूमेटिक्स का परिचय</h2>
+<p>
+<strong>Hydraulics और Pneumatics</strong> दोनों द्रव शक्ति (Fluid Power) प्रणालियाँ हैं जो दबाव में द्रव या गैस के माध्यम से शक्ति को संचारित और नियंत्रित करती हैं।
+</p>
+<h3>मुख्य अंतर</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Hydraulic System</th>
+<th>Pneumatic System</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>द्रव (Liquid) - तेल का उपयोग</td><td>गैस (Compressed Air) का उपयोग</td></tr>
+<tr><td>उच्च दबाव (High Pressure)</td><td>कम दबाव (Low Pressure)</td></tr>
+<tr><td>भारी भार उठाने के लिए</td><td>हल्के कार्यों के लिए</td></tr>
+<tr><td>उदाहरण: हाइड्रोलिक जैक, ब्रेक, लिफ्ट</td><td>उदाहरण: ब्रेक सिस्टम, एयर टूल्स, फ्लैप्स</td></tr>
+</tbody>
+</table>
+</div>
+<h3>उपयोग के क्षेत्र</h3>
+<ul>
+<li>Automotive में हाइड्रोलिक ब्रेक, हाइड्रोलिक जैक, पावर स्टीयरिंग</li>
+<li>Pneumatics में एयर ब्रेक, एयर सस्पेंशन, एयर टूल्स</li>
+<li>Industrial machinery में दोनों प्रणालियों का व्यापक उपयोग</li>
+<li>Earth moving equipment (JCB, Excavators) में हाइड्रोलिक</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     2. PASCAL'S LAW
+     ====================================================== -->
+<section class="content-card" id="pascal">
+<span class="section-label">PART 2 · PASCAL'S LAW</span>
+<h2>2. पास्कल का नियम (Pascal's Law)</h2>
+<p>
+<strong>ब्लेस पास्कल (1623-1662)</strong> द्वारा प्रतिपादित यह नियम हाइड्रोलिक ब्रेक, हाइड्रोलिक जैक जैसी मशीनों के विकास के लिए केंद्रीय कानून है।
+</p>
+<h3>नियम</h3>
+<div class="flow-box">
+'तरल पर दबाव समान रूप से सभी दिशाओं में प्रसारित होता है, समान क्षेत्रों पर समान बल के साथ कार्य करता है।'
+</div>
+<h3>हाइड्रोलिक दबाव का सिद्धांत</h3>
+<p>
+संपीडन के लिए दिए गए प्रतिरोध का परिणाम है जब एक बल के आवेदन द्वारा एक असंपीड्य (Incompressible) तेल माध्यम को निचोड़ा जाता है।
+</p>
+<p>
+पास्कल के नियम के अनुसार, यह दबाव पूरे माध्यम में सभी दिशाओं में समान रूप से प्रसारित होता है।
+</p>
+<h3>दबाव का सूत्र</h3>
+<div class="flow-box">
+P = F / A
+</div>
+<p>
+जहाँ P = दबाव, F = बल, A = क्षेत्रफल
+</p>
+<h3>पास्कल के नियम का अनुप्रयोग</h3>
+<ul>
+<li><strong>हाइड्रोलिक ब्रेक:</strong> Master Cylinder से Wheel Cylinders तक दबाव संचारित</li>
+<li><strong>हाइड्रोलिक जैक:</strong> कम बल से भारी भार उठाना</li>
+<li><strong>हाइड्रोलिक लिफ्ट:</strong> Service Station में वाहन उठाना</li>
+</ul>
+<div class="exam-box">
+<div class="box-title">📌 Exam Focus</div>
+<p>
+<strong>Pascal's Law:</strong> दबाव सभी दिशाओं में समान रूप से प्रसारित होता है।
+</p>
+<p>
+<strong>P = F / A</strong>
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     3. PRESSURE & UNITS
+     ====================================================== -->
+<section class="content-card" id="pressure">
+<span class="section-label">PART 3 · PRESSURE</span>
+<h2>3. दबाव (Pressure) और इकाइयाँ</h2>
+<p>
+दबाव को प्रति इकाई क्षेत्र में कार्य करने वाले बल के रूप में परिभाषित किया जा सकता है।
+</p>
+<h3>दबाव की इकाइयाँ</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Unit</th>
+<th>Conversion</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Pascal (Pa)</strong></td><td>1 N/m²</td></tr>
+<tr><td><strong>Bar</strong></td><td>100,000 Pa = 10⁵ Pa (100 kPa)</td></tr>
+<tr><td><strong>1 Bar</strong></td><td>14.5 psi</td></tr>
+<tr><td><strong>1 Bar</strong></td><td>1.02 kgf/cm²</td></tr>
+<tr><td><strong>1 kgf/cm²</strong></td><td>0.981 bar</td></tr>
+</tbody>
+</table>
+</div>
+<h3>हाइड्रोलिक बल (Hydraulic Force)</h3>
+<p>
+जब एक सिलेंडर पिस्टन के क्षेत्र (A) पर दबाव P लगाया जाता है, तो एक बल (F) विकसित होता है। विकसित बल की मात्रा लागू दबाव के क्षेत्रफल के बराबर होती है।
+</p>
+<div class="flow-box">
+F = P × A
+</div>
+<h3>तेल प्रवाह (Oil Flow)</h3>
+<p>
+एक हाइड्रोलिक प्रणाली, जिसमें एक पंप एक पाइपलाइन के माध्यम से तेल को लगातार धकेलता है, पाइपलाइन में किन्हीं दो बिंदुओं के बीच एक तेल प्रवाह उत्पन्न करता है, जब तक कि इन दो बिंदुओं के बीच दबाव अंतर होता है।
+</p>
+<h3>प्रवाह दर (Flow Rate)</h3>
+<p>
+तेल की प्रवाह दर समय की प्रति इकाई एक बिंदु से गुजरने वाले तेल की मात्रा का एक माप है। इसे आमतौर पर m³ प्रति मिनट या अन्य इकाइयों में मापा जाता है।
+</p>
+</section>
+
+<!-- ======================================================
+     4. FORCE MULTIPLICATION
+     ====================================================== -->
+<section class="content-card" id="force">
+<span class="section-label">PART 4 · FORCE MULTIPLICATION</span>
+<h2>4. बल गुणन (Force Multiplication)</h2>
+<p>
+दो अलग-अलग क्षेत्र वाले सिलेंडरों की व्यवस्था से कम इनपुट बल से अधिक आउटपुट बल प्राप्त किया जा सकता है।
+</p>
+<h3>सिद्धांत</h3>
+<p>
+जब प्लंजर पिस्टन A₁ को F₁ बल के साथ लगाया जाता है, तो तेल में एक दबाव (P₁) विकसित होता है, जो तेल के माध्यम से सभी दिशाओं में समान रूप से कार्य करता है।
+</p>
+<p>
+इसका मतलब है कि वही दबाव (P₁) राम पिस्टन A₂ पर कार्य करता है। यह एक बल के विकास का कारण बनता है (F₂)।
+</p>
+<h3>सूत्र</h3>
+<div class="flow-box">
+F₁ = P × A₁ &nbsp;&nbsp;&nbsp; और &nbsp;&nbsp;&nbsp; F₂ = P × A₂
+</div>
+<div class="flow-box">
+F₂ = F₁ × (A₂ / A₁)
+</div>
+<p>
+हम देख सकते हैं कि क्षेत्र अनुपात (A₂/A₁) को नियंत्रित करके एक छोटे इनपुट बल से एक बड़ा आउटपुट बल प्राप्त किया जा सकता है।
+</p>
+<h3>उदाहरण</h3>
+<p>
+F₁ = 25 N, A₁ = 10 cm², A₂ = 100 cm²
+</p>
+<ul>
+<li>P₁ = F₁ / A₁ = 25/10 = 2.5 N/cm²</li>
+<li>P₁ = P₂ = 2.5 N/cm²</li>
+<li>F₂ = A₂ × P₂ = 100 × 2.5 = <strong>250 N</strong></li>
+</ul>
+<div class="info-box">
+<div class="box-title">💡 महत्वपूर्ण</div>
+<p>
+इस सिद्धांत का उपयोग Service Station पर कार उठाने वाले हाइड्रोलिक जैक, वाहनों में ब्रेक, आदि में किया जाता है।
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     5. VISCOSITY
+     ====================================================== -->
+<section class="content-card" id="viscosity">
+<span class="section-label">PART 5 · VISCOSITY</span>
+<h2>5. विस्कोसिटी (Viscosity)</h2>
+<p>
+<strong>विस्कोसिटी (Viscosity)</strong> एक तरल के प्रवाह के प्रतिरोध का एक उपाय है। गाढ़े तेल में प्रवाह के लिए अधिक प्रतिरोध होता है और इसमें उच्च विस्कोसिटी होती है।
+</p>
+<h3>तापमान का प्रभाव</h3>
+<p>
+विस्कोसिटी तापमान से प्रभावित होती है। तेल का तापमान बढ़ने पर तेल की विस्कोसिटी कम हो जाती है।
+</p>
+<h3>Kinematic Viscosity</h3>
+<p>
+एक गुण, जो उस कठिनाई का वर्णन करता है जिसके साथ गुरुत्वाकर्षण बल के तहत तेल चलता है, <strong>Kinematic Viscosity</strong> कहलाता है। इसे स्टोक्स के संदर्भ में मापा जाता है।
+</p>
+<h3>Units of Viscosity</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Unit</th>
+<th>Conversion</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>1 Stokes</strong></td><td>1 cm²/s</td></tr>
+<tr><td><strong>1 cSt (Centistokes)</strong></td><td>0.01 Stokes</td></tr>
+<tr><td><strong>1 cSt</strong></td><td>1 mm²/s</td></tr>
+</tbody>
+</table>
+</div>
+<h3>विस्कोसिटी के प्रभाव</h3>
+<ul>
+<li><strong>अत्यधिक उच्च विस्कोसिटी:</strong> तेल बहुत मोटा होता है, जगहों तक पहुँचने में देर लगती है</li>
+<li><strong>बहुत कम विस्कोसिटी:</strong> तेल आसानी से बहता है, leakage की संभावना</li>
+<li><strong>सही विस्कोसिटी:</strong> इष्टतम कार्य प्रदर्शन</li>
+</ul>
+<div class="exam-box">
+<div class="box-title">📌 Exam Focus</div>
+<p>
+<strong>Viscosity</strong> = तरल के प्रवाह के प्रतिरोध का माप
+</p>
+<p>
+तापमान बढ़ने पर विस्कोसिटी कम हो जाती है।
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     6. HYDRAULIC OIL
+     ====================================================== -->
+<section class="content-card" id="hydoil">
+<span class="section-label">PART 6 · HYDRAULIC OIL</span>
+<h2>6. हाइड्रोलिक तेल और उसके गुण</h2>
+<p>
+हाइड्रोलिक तेल किसी भी हाइड्रोलिक सिस्टम की जीवनदायिनी है।
+</p>
+<h3>हाइड्रोलिक तेल के कार्य</h3>
+<ul>
+<li><strong>शक्ति संचरण:</strong> सिस्टम के एक हिस्से से दूसरे हिस्से में बिजली पहुंचाना</li>
+<li><strong>स्नेहन:</strong> सिस्टम घटकों के आंतरिक गतिमान भागों को लुब्रिकेट करना</li>
+<li><strong>सीलिंग:</strong> गतिमान भागों के बीच सील निकासी</li>
+<li><strong>ताप हस्तांतरण:</strong> गर्मी हस्तांतरण माध्यम के रूप में कार्य करना</li>
+</ul>
+<h3>तेल की संरचना</h3>
+<ul>
+<li>Base Stock (आधार तेल)</li>
+<li>Additives (योजक)</li>
+<li>अधिकांश अनुप्रयोगों में खनिज आधारित तेल (Mineral Oil)</li>
+</ul>
+<h3>तेल संदूषण की समस्या</h3>
+<p>
+हाइड्रोलिक तेल संदूषण की समस्या के लिए अतिसंवेदनशील होते हैं क्योंकि वे आमतौर पर कठोर वातावरण में उपयोग किए जाते हैं।
+</p>
+<h3>संदूषकों के प्रकार</h3>
+<ul>
+<li>कण (Particles)</li>
+<li>पानी (Water)</li>
+<li>वायु (Air)</li>
+<li>उनके प्रतिक्रिया उत्पाद</li>
+</ul>
+<p>
+इनकी उपस्थिति इन प्रणालियों के प्रदर्शन पर प्रतिकूल प्रभाव डाल सकती है। इसलिए, किसी भी हाइड्रोलिक सिस्टम की सबसे महत्वपूर्ण आवश्यकता उसके तेल माध्यम को स्वच्छ अवस्था में बनाए रखना है।
+</p>
+<h3>हाइड्रोलिक फिल्टर</h3>
+<p>
+हाइड्रोलिक तेल में ठोस दूषित पदार्थों को हटाने के लिए हाइड्रोलिक फिल्टर का उपयोग किया जाता है।
+</p>
+</section>
+
+<!-- ======================================================
+     7. HYDRAULIC SYSTEM
+     ====================================================== -->
+<section class="content-card" id="hydsystem">
+<span class="section-label">PART 7 · HYDRAULIC SYSTEM</span>
+<h2>7. हाइड्रोलिक प्रणाली (Hydraulic System)</h2>
+<p>
+एक विशिष्ट हाइड्रोलिक प्रणाली एक बंद प्रणाली है और इसमें तीन मुख्य भाग शामिल हैं।
+</p>
+<h3>हाइड्रोलिक प्रणाली के प्रमुख घटक</h3>
+<ol>
+<li><strong>Power Pack (पावर पैक):</strong>
+    <ul>
+        <li>इंजन से जुड़ा एक हाइड्रोलिक पंप</li>
+        <li>तेल से भरा एक जलाशय (Reservoir)</li>
+        <li>एक दबाव राहत वाल्व (Pressure Relief Valve - PRV)</li>
+    </ul>
+</li>
+<li><strong>Control Valve (नियंत्रण वाल्व):</strong> एक्ट्यूएटर की दिशा और गति को नियंत्रित करने के लिए</li>
+<li><strong>Actuator (एक्ट्यूएटर):</strong> हाइड्रोस्टैटिक ऊर्जा को वापस यांत्रिक ऊर्जा में बदलने के लिए</li>
+</ol>
+<h3>कार्य प्रक्रिया</h3>
+<ol>
+<li>पंप तेल को बंद प्रणाली में धकेलता है।</li>
+<li>यह एक उच्च दबाव विकसित करता है, जब पंप प्रवाह कुछ विरोध का सामना करता है।</li>
+<li>पंप के प्राइम मूवर द्वारा प्रदान की गई यांत्रिक ऊर्जा को हाइड्रोलिक ऊर्जा में परिवर्तित किया जाता है।</li>
+<li>यह ऊर्जा तेल के माध्यम से हाइड्रोलिक एक्ट्यूएटर्स को प्रेषित की जाती है।</li>
+</ul>
+<h3>सिस्टम घटक</h3>
+<ul>
+<li>द्रव कंडक्टर (पाइप, ट्यूबिंग, होसेस)</li>
+<li>प्रभावी सील (Seals)</li>
+<li>फिल्टर (तलछट हटाने के लिए)</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     8. RESERVOIR & FILTERS
+     ====================================================== -->
+<section class="content-card" id="reservoir">
+<span class="section-label">PART 8 · RESERVOIR &amp; FILTERS</span>
+<h2>8. Reservoir, Filter और Valves</h2>
+<h3>जलाशय (Reservoir)</h3>
+<p>
+हाइड्रोलिक सिस्टम में कार्यरत एक हाइड्रोलिक पावर पैक, सभी सिस्टम एक्ट्यूएटर्स के लिए आवश्यक दबाव और प्रवाह दर पर हाइड्रोलिक पावर में व्यक्त की गई शक्ति को बदल देता है।
+</p>
+<p>
+यह आमतौर पर एक कॉम्पैक्ट और पोर्टेबल असेंबली होती है जिसमें तेल की एक निश्चित मात्रा को स्टोर और कंडीशन करने और तेल के एक हिस्से को सिस्टम में धकेलने के लिए आवश्यक घटक होते हैं।
+</p>
+<h3>Reservoir के कार्य</h3>
+<ul>
+<li>सिस्टम के लिए आवश्यक पर्याप्त मात्रा में तेल संग्रहीत करना</li>
+<li>विदेशी पदार्थों को तेल से बाहर निकलने की अनुमति देना</li>
+<li>तेल से गर्मी को नष्ट करने में सहायता करना</li>
+</ul>
+<h3>तेल फिल्टर (Oil Filter)</h3>
+<p>
+यांत्रिक पहनने और बाहरी पर्यावरणीय प्रभावों के परिणामस्वरूप अशुद्धियों को एक प्रणाली में पेश किया जा सकता है।
+</p>
+<p>
+इस कारण से हाइड्रोलिक तेल से गंदगी कणों को हटाने के लिए हाइड्रोलिक सर्किट में फिल्टर लगाए जाते हैं। सिस्टम की विश्वसनीयता तेल की सफाई पर भी निर्भर करती है।
+</p>
+<h3>दबाव राहत वाल्व (Pressure Relief Valve - PRV)</h3>
+<p>
+किसी भी क्षति के खिलाफ ऑपरेटिंग कर्मियों को चोट और सिस्टम घटकों से बचाने के लिए सिस्टम के अधिकतम कामकाजी दबाव को एक सुरक्षित मूल्य तक सीमित करने के लिए हाइड्रोलिक सिस्टम में एक दबाव राहत वाल्व का उपयोग किया जाता है।
+</p>
+</section>
+
+<!-- ======================================================
+     9. HYDRAULIC PUMPS
+     ====================================================== -->
+<section class="content-card" id="pumps">
+<span class="section-label">PART 9 · HYDRAULIC PUMPS</span>
+<h2>9. हाइड्रोलिक पंप (Hydraulic Pumps)</h2>
+<h3>External Gear Pump (बाहरी गियर पंप)</h3>
+<p>
+इसमें मूल रूप से दो क्लोज-मेषिंग समान गियर होते हैं, जो एक क्लोज-फिटिंग हाउसिंग में संलग्न होते हैं।
+</p>
+<h3>निर्माण</h3>
+<ul>
+<li>तेल कक्ष गियर दांतों, पंप हाउसिंग और साइड प्लेट से घिरे स्थान में बनते हैं।</li>
+<li>प्रत्येक गियर अंत कवर में बीयरिंग पर समर्थित शाप्ट पर लगाया जाता है।</li>
+<li>एक गियर - जिसे Drive Gear कहा जाता है - को इसके drive shaft के माध्यम से prime mover से जोड़ा जाता है।</li>
+<li>दूसरा गियर संचालित होता है, क्योंकि यह drive gear के साथ मेल खाता है।</li>
+</ul>
+<h3>कार्य प्रक्रिया</h3>
+<ol>
+<li>Prime mover द्वारा संचालित होने पर गियर विपरीत दिशाओं में घूमते हैं।</li>
+<li>Diverge होते दांत pump के inlet side पर एक विस्तारित volume बनाते हैं।</li>
+<li>यह pump के inlet chamber में एक आंशिक वैक्यूम बनाता है, जो सिस्टम reservoir से chamber में तेल खींचता है।</li>
+<li>तेल घूर्णन गियर की परिधि के चारों ओर दो धाराओं के रूप में यात्रा करता है।</li>
+<li>चूंकि pump में रिसाव के खिलाफ एक सकारात्मक आंतरिक सील है, इसलिए तेल को उसके वितरण बंदरगाह से सकारात्मक रूप से बाहर निकाल दिया जाता है।</li>
+</ol>
+<h3>Internal Gear Pump (आंतरिक गियर पंप)</h3>
+<ul>
+<li>एक बाहरी रोटर गियर, एक आंतरिक स्पर गियर और एक अर्धचंद्राकार स्पेसर होता है।</li>
+<li>कम दांतों वाला आंतरिक गियर रोटर गियर के अंदर संचालित होता है।</li>
+<li>गियर एक दूसरे के लिए सनकी सेट हैं।</li>
+<li>स्थिर अर्धचंद्राकार स्पेसर इन गियर्स के बीच की जगह में मशीनीकृत किया जाता है।</li>
+<li>स्पेसर तेल की धारा को विभाजित करता है और suction और discharge बंदरगाहों के बीच एक मुहर के रूप में कार्य करता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     10. HYDRAULIC ACTUATORS
+     ====================================================== -->
+<section class="content-card" id="actuators">
+<span class="section-label">PART 10 · HYDRAULIC ACTUATORS</span>
+<h2>10. हाइड्रोलिक एक्ट्यूएटर (Hydraulic Actuators)</h2>
+<p>
+हाइड्रोलिक सिस्टम में एक रैखिक एक्ट्यूएटर का उपयोग किया जाता है, यह हाइड्रोलिक पावर को एक नियंत्रणीय रैखिक बल या गति में परिवर्तित करता है।
+</p>
+<h3>1. Single-Acting Hydraulic Cylinder (एकल-अभिनय सिलेंडर)</h3>
+<p>
+एक single-acting सिलेंडर को एक दिशा में हाइड्रोलिक रूप से बल लगाने के लिए डिज़ाइन किया गया है - या तो इसके विस्तार स्ट्रोक पर या इसके रिट्रैक्शन स्ट्रोक पर।
+</p>
+<p>
+यह गति को दूसरी दिशा में पूरा करने के लिए किसी अन्य बल का उपयोग करता है।
+</p>
+<h3>Single-Acting Cylinder के भाग</h3>
+<ul>
+<li><strong>Barrel (बैरल)</strong></li>
+<li><strong>Piston-End-Rod Assembly</strong></li>
+<li><strong>Spring (स्प्रिंग)</strong></li>
+<li><strong>End-Caps (एंड-कैप्स)</strong></li>
+<li><strong>Seals (सील्स)</strong></li>
+<li><strong>Port (पोर्ट)</strong></li>
+</ul>
+<h3>2. Double-Acting Hydraulic Cylinder</h3>
+<p>
+Single-acting सिलेंडर की तरह double-acting हाइड्रोलिक सिलेंडर भी रैखिक एक्ट्यूएटर हैं। एक double-acting सिलेंडर अपनी गति की दोनों दिशाओं में काम कर सकता है।
+</p>
+<h3>Double-Acting Cylinder के भाग</h3>
+<ul>
+<li><strong>Barrel</strong></li>
+<li><strong>Piston-End-Rod Assembly</strong></li>
+<li><strong>End-Caps</strong></li>
+<li><strong>Seals</strong></li>
+<li><strong>दो Ports:</strong> Piston-Side और Rod-Side</li>
+</ul>
+<h3>3. Double Rod-End Hydraulic Cylinder</h3>
+<p>
+एक double rod-end सिलेंडर में दोनों सिरों पर सिलेंडर से बाहर निकलने वाली piston-rod होती है। इसमें piston के दोनों किनारों पर समान क्षेत्र हैं।
+</p>
+</section>
+
+<!-- ======================================================
+     11. HYDRAULIC VALVES
+     ====================================================== -->
+<section class="content-card" id="hydvalves">
+<span class="section-label">PART 11 · HYDRAULIC VALVES</span>
+<h2>11. हाइड्रोलिक वाल्व (Hydraulic Valves)</h2>
+<h3>Non-Return Valve (NRV) / Check Valve</h3>
+<p>
+एक non-return valve हाइड्रोलिक सर्किट में उपयोग किए जाने वाले दिशात्मक नियंत्रण वाल्व का सबसे सरल प्रकार है। वाल्व अधिमानतः इसके माध्यम से एक दिशा में प्रवाह की अनुमति देता है और प्रवाह को विपरीत दिशा में अवरुद्ध करता है।
+</p>
+<h3>निर्माण</h3>
+<ul>
+<li>वाल्व बॉडी</li>
+<li>स्प्रिंग-लोडेड बॉल पॉपपेट या कोन पॉपपेट</li>
+<li>इनलेट/आउटलेट पोर्ट</li>
+</ul>
+<h3>कार्य</h3>
+<ul>
+<li>जब पोर्ट A पर सिस्टम का दबाव स्प्रिंग बल को दूर करने के लिए काफी अधिक होता है, तो पॉपपेट को अपनी सीट से धकेल दिया जाता है।</li>
+<li>सिस्टम तेल पोर्ट A से पोर्ट B तक वाल्व के माध्यम से स्वतंत्र रूप से प्रवाहित हो जाता है।</li>
+<li>वाल्व के माध्यम से प्रवाह अवरुद्ध हो जाता है जब इच्छित प्रवाह दिशा पोर्ट B से पोर्ट A तक होती है।</li>
+</ul>
+<h3>Throttle Valve (प्रवाह नियंत्रण वाल्व)</h3>
+<p>
+एक throttle valve एक प्रतिबंध वाला उपकरण है जो इसके माध्यम से बहने वाले सिस्टम तेल को प्रतिरोध प्रदान करता है। throttle valve सिस्टम तेल की प्रवाह दर को नियंत्रित करता है।
+</p>
+<h3>Throttle Valve के प्रकार</h3>
+<ol>
+<li><strong>Fixed Type (फिक्स्ड):</strong> प्रतिबंध तय होता है।</li>
+<li><strong>Adjustable Type (एडजस्टेबल):</strong> प्रतिबंध का क्षेत्र भिन्न हो सकता है।</li>
+</ol>
+<p>
+एक adjustable throttle valve में एक छिद्र होता है जिसका cross-section बाहरी रूप से समायोज्य सुई के आकार के plunger द्वारा नियंत्रित किया जा सकता है।
+</p>
+</section>
+
+<!-- ======================================================
+     12. PNEUMATIC SYSTEM
+     ====================================================== -->
+<section class="content-card" id="pneumatic">
+<span class="section-label">PART 12 · PNEUMATIC SYSTEM</span>
+<h2>12. न्यूमेटिक प्रणाली (Pneumatic System)</h2>
+<p>
+एक बुनियादी वायवीय प्रणाली को निम्नलिखित तीन मुख्य ब्लॉकों से युक्त माना जा सकता है:
+</p>
+<ol>
+<li><strong>शक्ति स्रोत (Power Source)</strong></li>
+<li><strong>नियंत्रण वाल्व (Control Valve)</strong></li>
+<li><strong>एक्ट्यूएटर (Actuator)</strong></li>
+</ol>
+<h3>वायवीय प्रणाली के घटक</h3>
+<ul>
+<li>Intake Filter</li>
+<li>Compressor (कंप्रेसर)</li>
+<li>Receiver Tank (रिसीवर टैंक)</li>
+<li>FRL Unit</li>
+<li>Control Valve</li>
+<li>Actuator</li>
+</ul>
+<h3>न्यूमेटिक प्रणाली के लाभ</h3>
+<ul>
+<li>संपीडित हवा का उपयोग - पर्यावरण के अनुकूल</li>
+<li>तेल रिसाव का कोई खतरा नहीं</li>
+<li>सरल और सस्ता</li>
+<li>उच्च गति के संचालन के लिए उपयुक्त</li>
+<li>Overload के दौरान सुरक्षित</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     13. AIR COMPRESSOR
+     ====================================================== -->
+<section class="content-card" id="compressor">
+<span class="section-label">PART 13 · AIR COMPRESSOR</span>
+<h2>13. एयर कंप्रेसर (Air Compressor)</h2>
+<p>
+कंप्रेसर सबसे आम औद्योगिक ऊर्जा आपूर्ति इकाई है जो यांत्रिक ऊर्जा को वायवीय ऊर्जा में परिवर्तित करती है।
+</p>
+<p>
+यह वायुमंडलीय दबाव में हवा लेने और उच्च दबाव पर एक बंद प्रणाली में पहुंचाने के लिए डिज़ाइन किया गया है।
+</p>
+<h3>बॉयल का नियम (Boyle's Law)</h3>
+<div class="flow-box">
+'स्थिर तापमान पर, गैस के दिए गए द्रव्यमान का आयतन निरपेक्ष दबाव के व्युत्क्रमानुपाती होता है।'
+</div>
+<div class="flow-box">
+P₁V₁ = P₂V₂ = Constant
+</div>
+<h3>Reciprocating Piston Compressor</h3>
+<p>
+यह बहुत आम हैं और दबाव की एक विस्तृत श्रृंखला प्रदान करते हैं। Piston compressor कार्यरत हैं जहां उच्च दबाव (4-30 bar) की आवश्यकता होती है।
+</p>
+<h3>कार्य प्रक्रिया</h3>
+<ol>
+<li><strong>Inlet Stroke:</strong> जैसे ही piston नीचे की ओर बढ़ता है, inlet valve खुलता है और cylinder में हवा खींचता है।</li>
+<li><strong>Compression Stroke:</strong> Piston के ऊपर की ओर गति के दौरान outlet valve के माध्यम से हवा को संपीडित और छुट्टी दी जाती है।</li>
+</ol>
+</section>
+
+<!-- ======================================================
+     14. FRL UNIT
+     ====================================================== -->
+<section class="content-card" id="frl">
+<span class="section-label">PART 14 · FRL UNIT</span>
+<h2>14. FRL यूनिट (Air Service Unit)</h2>
+<p>
+संपीडित हवा, जो शुष्क और स्वच्छ है, किसी भी वायवीय प्रणाली के संतोषजनक संचालन के लिए सबसे महत्वपूर्ण आवश्यकता है।
+</p>
+<p>
+वायवीय प्रणाली में संपीडित हवा उच्च स्तर तक दूषित होने के लिए उत्तरदायी है।
+</p>
+<h3>FRL का मतलब</h3>
+<ul>
+<li><strong>F - Filter (फिल्टर):</strong> हवा से गंदगी कणों को हटाने के लिए</li>
+<li><strong>R - Regulator (नियामक):</strong> दबाव को नियंत्रित करने के लिए</li>
+<li><strong>L - Lubricator (स्नेहक):</strong> संपीडित हवा में तेल की धुंध पेश करने के लिए</li>
+</ul>
+<h3>FRL Unit का कार्य</h3>
+<ul>
+<li>हवा से गंदगी कणों को हटाना</li>
+<li>दबाव को नियंत्रित करना</li>
+<li>स्नेहन की सहायता के लिए तेल की धुंध पेश करना</li>
+</ul>
+<div class="exam-box">
+<div class="box-title">📌 Exam Focus</div>
+<p>
+<strong>FRL = Filter + Regulator + Lubricator</strong>
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     15. PNEUMATIC ACTUATORS
+     ====================================================== -->
+<section class="content-card" id="pneuactuator">
+<span class="section-label">PART 15 · PNEUMATIC ACTUATORS</span>
+<h2>15. न्यूमेटिक एक्ट्यूएटर (Pneumatic Actuators)</h2>
+<p>
+न्यूमेटिक एक्ट्यूएटर रैखिक या रोटरी गति उत्पन्न करने या बल लगाने के लिए संपीडित हवा में निहित ऊर्जा के रूपांतरण के लिए आउटपुट डिवाइस हैं।
+</p>
+<h3>प्रकार</h3>
+<ol>
+<li><strong>Single-Acting Cylinder:</strong> एक दिशा में हवा से चलता है, वापसी स्प्रिंग द्वारा</li>
+<li><strong>Double-Acting Cylinder:</strong> दोनों दिशाओं में हवा से चलता है</li>
+</ol>
+<h3>Pneumatic Cylinder के लाभ</h3>
+<ul>
+<li>सरल और कॉम्पैक्ट</li>
+<li>कम लागत</li>
+<li>तेल के बिना संचालन संभव</li>
+<li>सुरक्षित (Fire/Explosion proof)</li>
+<li>उच्च गति के संचालन</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     16. FLUID POWER VALVES
+     ====================================================== -->
+<section class="content-card" id="valves">
+<span class="section-label">PART 16 · FLUID POWER VALVES</span>
+<h2>16. द्रव शक्ति प्रणालियों में वाल्व</h2>
+<p>
+द्रव शक्ति प्रणालियों में, एक सर्किट के भीतर दबाव में द्रव के माध्यम से शक्ति को संप्रेषित और नियंत्रित किया जाता है।
+</p>
+<p>
+इसलिए, वायवीय और हाइड्रोलिक सिस्टम को पावर स्रोत से विभिन्न एक्ट्यूएटर्स तक दबाव वाले तरल पदार्थ के प्रवाह को नियंत्रित या नियंत्रित करने के लिए वाल्व की आवश्यकता होती है।
+</p>
+<h3>कार्य के अनुसार वर्गीकरण</h3>
+<ol>
+<li><strong>Directional Control Valve (दिशात्मक नियंत्रण वाल्व):</strong> द्रव प्रवाह की दिशा को नियंत्रित करते हैं।</li>
+<li><strong>Non-Return Valve (गैर-वापसी वाल्व):</strong> द्रव को केवल एक दिशा में प्रवाहित करते हैं और दूसरी दिशा में प्रवाह को अवरुद्ध करते हैं।</li>
+<li><strong>Pressure Control Valve (दबाव नियंत्रण वाल्व):</strong> द्रव के दबाव को नियंत्रित या सीमित करते हैं।</li>
+<li><strong>Flow Control Valve (प्रवाह नियंत्रण वाल्व):</strong> तरल के प्रवाह को कम करने के लिए उसके प्रवाह को प्रतिबंधित करते हैं।</li>
+</ol>
+<h3>प्रतीक प्रतिनिधित्व (Symbolic Representation)</h3>
+<p>
+एक प्रतीक डिजाइन सिद्धांत को इंगित किए बिना केवल वाल्व के कार्य को निर्दिष्ट करता है।
+</p>
+<p>
+द्रव शक्ति प्रतीकों को <strong>ISO 1219</strong> में मानकीकृत और वर्णित किया गया है।
+</p>
+<h3>पोर्ट मार्किंग</h3>
+<p>
+वायवीय वाल्वों के बंदरगाहों को <strong>ISO 5599</strong> के अनुसार एक संख्या प्रणाली का उपयोग करके नामित किया गया है।
+</p>
+<p>
+Hydraulic वाल्वों के पोर्ट नामों को एक पत्र प्रणाली का उपयोग करके नामित किया गया है:
+</p>
+<ul>
+<li><strong>P</strong> - Pump (Pressure line)</li>
+<li><strong>T</strong> - Tank (Return line)</li>
+<li><strong>A, B</strong> - Actuator ports</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     QUICK REVISION
+     ====================================================== -->
+<section class="quick-revision">
+<h2>⭐ Module 5 – Quick Revision</h2>
+<h3>Pascal's Law</h3>
+<p>
+<strong>दबाव सभी दिशाओं में समान रूप से प्रसारित होता है · P = F / A</strong>
+</p>
+<h3>Force Multiplication</h3>
+<p>
+<strong>F₂ = F₁ × (A₂ / A₁)</strong>
+</p>
+<h3>Pressure Units</h3>
+<p>
+<strong>1 Pascal = 1 N/m² · 1 Bar = 10⁵ Pa = 14.5 psi · 1 Bar = 1.02 kgf/cm²</strong>
+</p>
+<h3>Viscosity</h3>
+<p>
+<strong>प्रवाह के प्रतिरोध का माप · तापमान बढ़ने पर विस्कोसिटी कम · 1 cSt = 1 mm²/s</strong>
+</p>
+<h3>Hydraulic System Components</h3>
+<p>
+<strong>Power Pack (Pump + Reservoir + PRV) · Control Valve · Actuator</strong>
+</p>
+<h3>Hydraulic Pumps</h3>
+<p>
+<strong>External Gear Pump · Internal Gear Pump · Vane Pump · Piston Pump</strong>
+</p>
+<h3>Hydraulic Cylinder Types</h3>
+<p>
+<strong>Single-Acting · Double-Acting · Double Rod-End</strong>
+</p>
+<h3>Hydraulic Valves</h3>
+<p>
+<strong>Non-Return Valve (NRV) · Throttle Valve (Fixed/Adjustable) · Pressure Relief Valve (PRV)</strong>
+</p>
+<h3>Pneumatic System</h3>
+<p>
+<strong>Compressor · Receiver Tank · FRL Unit · Control Valve · Actuator</strong>
+</p>
+<h3>Boyle's Law</h3>
+<p>
+<strong>P₁V₁ = P₂V₂</strong>
+</p>
+<h3>FRL Unit</h3>
+<p>
+<strong>Filter + Regulator + Lubricator</strong>
+</p>
+<h3>Fluid Power Valves</h3>
+<p>
+<strong>Directional · Non-Return · Pressure Control · Flow Control</strong>
+</p>
+<h3>Standards</h3>
+<p>
+<strong>ISO 1219 (Symbols) · ISO 5599 (Port Marking)</strong>
+</p>
+</section>
+
+<!-- ======================================================
+     FULL FORMS
+     ====================================================== -->
+<section class="full-forms">
+<h2>📘 Important Full Forms</h2>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Short Form</th>
+<th>Full Form</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>PRV</td><td>Pressure Relief Valve</td></tr>
+<tr><td>FRL</td><td>Filter Regulator Lubricator</td></tr>
+<tr><td>NRV</td><td>Non-Return Valve</td></tr>
+<tr><td>DCV</td><td>Directional Control Valve</td></tr>
+<tr><td>FCV</td><td>Flow Control Valve</td></tr>
+<tr><td>ISO</td><td>International Organization for Standardization</td></tr>
+<tr><td>PSI</td><td>Pound per Square Inch</td></tr>
+<tr><td>cSt</td><td>Centistokes</td></tr>
+<tr><td>PTO</td><td>Power Take Off</td></tr>
+<tr><td>SWL</td><td>Safe Working Load</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ======================================================
+     IMPORTANT POINTS
+     ====================================================== -->
+<section class="content-card">
+<h2>📌 Module 5 – सबसे महत्वपूर्ण बातें</h2>
+<ul>
+<li>Pascal's Law: दबाव सभी दिशाओं में समान रूप से प्रसारित होता है।</li>
+<li>P = F / A (दबाव = बल / क्षेत्रफल)।</li>
+<li>Force Multiplication: F₂ = F₁ × (A₂ / A₁)।</li>
+<li>Viscosity = तरल के प्रवाह के प्रतिरोध का माप।</li>
+<li>तापमान बढ़ने पर विस्कोसिटी कम हो जाती है।</li>
+<li>Hydraulic System में Incompressible तेल का उपयोग होता है।</li>
+<li>Hydraulic System के 3 मुख्य भाग: Power Pack, Control Valve, Actuator।</li>
+<li>Pressure Relief Valve (PRV) - सिस्टम के अधिकतम दबाव को सीमित करता है।</li>
+<li>External Gear Pump - दो meshing gears के साथ।</li>
+<li>Single-Acting Cylinder - एक दिशा में hydraulic force।</li>
+<li>Double-Acting Cylinder - दोनों दिशाओं में hydraulic force।</li>
+<li>Non-Return Valve (NRV) - एक दिशा में ही प्रवाह।</li>
+<li>Throttle Valve - प्रवाह दर को नियंत्रित करता है।</li>
+<li>Boyle's Law: P₁V₁ = P₂V₂ (स्थिर तापमान पर)।</li>
+<li>Reciprocating Compressor - उच्च दबाव (4-30 bar) के लिए।</li>
+<li>FRL = Filter + Regulator + Lubricator।</li>
+<li>ISO 1219 - Fluid Power Symbols का मानक।</li>
+<li>ISO 5599 - Valve Port Marking का मानक।</li>
+<li>Pneumatic System में Compressed Air का उपयोग होता है।</li>
+<li>Hydraulic System उच्च दबाव के लिए, Pneumatic System हल्के कार्यों के लिए।</li>
+</ul>
+</section>
+
+<div class="next-module">
+<a href="/iti-study-centre-notes.html">← ITI Notes</a>
+<a href="/notes/mmv/">📚 All MMV Modules</a>
+<a href="mmv-trade6.html">Next Module →</a>
+</div>
+
+</main>
+
+<section class="container">
+<div class="disclaimer">
+<h2>⚠ Disclaimer</h2>
+<p>
+ITI Study Centre एक educational और study-support platform है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के लिए तैयार की गई है। Official syllabus, regulations और latest information के लिए संबंधित official authority की जानकारी को प्राथमिकता दें। मूल सामग्री का कॉपीराइट <strong>National Instructional Media Institute (NIMI), Chennai</strong> के पास सुरक्षित है।
+</p>
+</div>
+</section>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p id="footerYear">© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+
+document.querySelectorAll('.toc-grid a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+            event.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+const scrollBtn = document.getElementById("scrollTop");
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 450) { scrollBtn.style.display = "block"; }
+    else { scrollBtn.style.display = "none"; }
+});
+scrollBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+const footerYear = document.getElementById("footerYear");
+if (footerYear) {
+    footerYear.textContent = "© " + new Date().getFullYear() + " ITI Study Centre. All Rights Reserved.";
+}
+
+const progressBar = document.getElementById("readingProgress");
+window.addEventListener("scroll", function() {
+    if (!progressBar) return;
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = percent + "%";
+});
+
+console.log("✅ MMV Theory Module 5 – Final Template Loaded");
+
+</script>
+<script>
+function filterSections() {
+    const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+    const sections = document.querySelectorAll('main .content-card');
+    sections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+        section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+    });
+}
+document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') filterSections();
+});
+</script>
+</body>
+</html>
