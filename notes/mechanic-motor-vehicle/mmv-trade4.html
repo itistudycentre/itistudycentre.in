@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MMV Theory Module 4 – Basic Electrical & Electronics | ITI Study Centre</title>
+<meta content="Mechanic Motor Vehicle (MMV) Trade Theory Module 4 – Basic Electrical & Electronics (बेसिक इलेक्ट्रिकल और इलेक्ट्रॉनिक्स) – ITI, NSQF Level 4. Ohm's Law, Resistors, Capacitors, Diodes, Transistors, Battery, Solenoid, Relay, SCR, Thermistor के Hindi English Notes." name="description"/>
+<meta content="MMV Theory Module 4, Basic Electrical, Electronics, Ohm's Law, Resistors, Capacitors, Diodes, Transistors, Battery, Solenoid, Relay, SCR, Thermistor, ITI MMV Notes Hindi" name="keywords"/>
+<link href="/images/favicon.png" rel="icon"/>
+<link href="/css/style.css" rel="stylesheet"/>
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1e2a3a;
+    line-height: 1.75;
+}
+
+.container { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+
+.breadcrumb {
+    background: #eef1f5;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #dde1e7;
+}
+.breadcrumb a { color: #003366; text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb .current { color: #555; font-weight: 600; }
+
+.page-title { padding: 30px 0 18px; text-align: center; }
+.page-title h1 { font-size: 2.25rem; color: #003366; line-height: 1.35; }
+.page-title p { color: #555; font-size: 1.08rem; margin-top: 7px; }
+
+.module-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 25px;
+}
+.module-navigation a {
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 17px;
+    border-radius: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.25s;
+}
+.module-navigation a:hover { background: #002244; transform: translateY(-1px); }
+
+.search-section { display:flex; gap:10px; margin:0 auto 25px; }
+.search-section input { flex:1; padding:11px 14px; border:1px solid #cfd7e1; border-radius:7px; font-size:.95rem; outline:none; }
+.search-section input:focus { border-color:#003366; box-shadow:0 0 0 2px rgba(0,51,102,.08); }
+.search-section button { background:#003366; color:#fff; border:none; padding:10px 18px; border-radius:7px; font-size:.9rem; font-weight:600; cursor:pointer; transition:.25s; }
+.search-section button:hover { background:#002244; transform:translateY(-1px); }
+@media (max-width:768px) { .search-section { flex-direction:column; } .search-section button { width:100%; } }
+
+.toc-card {
+    background: #ffffff;
+    border: 1px solid #dfe5ec;
+    border-radius: 14px;
+    padding: 22px 25px;
+    margin: 18px 0 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+.toc-card h2 { color: #003366; font-size: 1.3rem; margin-bottom: 14px; }
+.toc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 15px; }
+.toc-grid a {
+    text-decoration: none;
+    color: #003366;
+    background: #f4f7fa;
+    border: 1px solid #e2e7ed;
+    padding: 8px 11px;
+    border-radius: 7px;
+    font-size: 0.92rem;
+    transition: 0.2s;
+}
+.toc-grid a:hover { background: #eaf1f8; border-color: #003366; }
+
+.module-content { margin-bottom: 35px; }
+
+.content-card {
+    background: #fff;
+    border: 1px solid #e1e6ec;
+    border-radius: 14px;
+    padding: 25px 28px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.035);
+}
+.content-card h2 {
+    color: #003366;
+    font-size: 1.42rem;
+    line-height: 1.4;
+    border-left: 5px solid #ffcc00;
+    padding-left: 12px;
+    margin-bottom: 14px;
+}
+.content-card h3 { color: #003366; font-size: 1.14rem; margin: 20px 0 8px; }
+.content-card h4 { color: #004080; font-size: 1rem; margin: 14px 0 6px; }
+.content-card p { margin: 8px 0; }
+.content-card ul, .content-card ol { margin: 10px 0 12px 24px; }
+.content-card li { margin-bottom: 6px; }
+.content-card strong { color: #003366; }
+
+.section-label {
+    display: inline-block;
+    background: #003366;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.info-box, .exam-box, .warning-box, .success-box {
+    border-radius: 9px;
+    padding: 15px 18px;
+    margin: 18px 0;
+}
+.info-box { background: #eef6ff; border-left: 5px solid #003366; }
+.exam-box { background: #fffdf0; border-left: 5px solid #ffcc00; }
+.warning-box { background: #fff5f2; border-left: 5px solid #e5533d; }
+.success-box { background: #eef9f1; border-left: 5px solid #198754; }
+.box-title { font-weight: 700; margin-bottom: 5px; color: #003366; }
+
+.flow-box {
+    background: #f5f8fb;
+    border: 1px solid #dce3ea;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 18px 0;
+    text-align: center;
+    color: #003366;
+    font-weight: 700;
+}
+
+.table-wrap { width: 100%; overflow-x: auto; margin: 18px 0; }
+.content-table { width: 100%; min-width: 600px; border-collapse: collapse; background: #fff; }
+.content-table th { background: #003366; color: #fff; padding: 11px; text-align: left; }
+.content-table td { border: 1px solid #dfe3e8; padding: 10px; vertical-align: top; }
+.content-table tr:nth-child(even) { background: #f7f9fc; }
+
+.quick-revision {
+    background: #fffdf0;
+    border: 2px solid #ffcc00;
+    border-radius: 14px;
+    padding: 25px;
+    margin: 28px 0;
+}
+.quick-revision h2 { color: #003366; margin-bottom: 15px; }
+.quick-revision h3 { color: #003366; margin: 15px 0 5px; }
+
+.full-forms {
+    background: #ffffff;
+    border: 1px solid #dfe5eb;
+    border-radius: 14px;
+    padding: 22px 25px;
+    margin: 25px 0;
+}
+.full-forms h2 { color: #003366; margin-bottom: 12px; }
+
+.next-module {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 30px 0;
+}
+.next-module a {
+    background: #003366;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+    text-align: center;
+}
+.next-module a:hover { background: #002244; }
+
+.disclaimer {
+    background: #fff;
+    border: 1px solid #e1e6eb;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 25px 0;
+}
+.disclaimer h2 { color: #003366; font-size: 1.2rem; margin-bottom: 7px; }
+
+footer {
+    background: #1a2634;
+    color: #b0b8c5;
+    padding: 24px 20px;
+    text-align: center;
+    margin-top: 44px;
+    border-top: 4px solid #003366;
+}
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+    margin-bottom: 12px;
+}
+.footer-links a { color: #b0b8c5; text-decoration: none; font-size: 0.9rem; }
+.footer-links a:hover { color: #fff; }
+
+#scrollTop {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    display: none;
+    background: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .page-title h1 { font-size: 1.65rem; }
+    .module-navigation, .next-module { flex-direction: column; }
+    .module-navigation a, .next-module a { width: 100%; }
+    .content-card { padding: 19px; }
+    .toc-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 12px; }
+    .page-title h1 { font-size: 1.4rem; }
+    .content-card { padding: 16px; }
+    .content-card h2 { font-size: 1.18rem; }
+    .content-card p, .content-card li { font-size: 0.95rem; }
+    .quick-revision { padding: 18px; }
+}
+
+#readingProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(90deg,#003366,#ffcc00);
+    z-index: 10000;
+    transition: width .08s linear;
+}
+
+@media print {
+    #readingProgress, #scrollTop, .module-navigation { display: none !important; }
+    body { background: #fff !important; }
+    .content-card, .toc-card, .full-forms, .disclaimer { box-shadow: none !important; break-inside: avoid; }
+}
+
+</style>
+</head>
+<body>
+<div id="header-container"></div>
+<script defer="" src="/js/header-loader.js"></script>
+
+<div aria-hidden="true" id="readingProgress"></div>
+
+<div class="breadcrumb">
+<div class="container">
+<a href="/">🏠 Home</a>
+  ›  
+<a href="/iti-study-centre-notes.html">ITI Notes</a>
+  ›  
+<span class="current">MMV Theory – Module 4</span>
+</div>
+</div>
+
+<section class="page-title">
+<div class="container">
+<h1>⚡ MMV Theory – Module 4</h1>
+<p>Basic Electrical &amp; Electronics | बेसिक इलेक्ट्रिकल और इलेक्ट्रॉनिक्स | Hindi + English Theory</p>
+</div>
+</section>
+
+<div class="container">
+<div class="module-navigation">
+<a href="/iti-study-centre-notes.html">← ITI Notes</a>
+<a href="/notes/mmv/">📚 All MMV Modules</a>
+<a href="mmv-trade5.html">Next Module →</a>
+</div>
+
+<section class="search-section container">
+<input id="sectionSearch" placeholder="🔍 इस मॉड्यूल में खोजें (Enter दबाएँ)..." type="text"/>
+<button onclick="filterSections()" type="button">🔍 Search</button>
+</section>
+
+<div class="toc-card" id="topics">
+<h2>📚 इस Module में क्या पढ़ेंगे?</h2>
+<div class="toc-grid">
+<a href="#intro">1. बिजली का परिचय</a>
+<a href="#atom">2. पदार्थ की संरचना और परमाणु</a>
+<a href="#ground">3. ग्राउंड कनेक्शन</a>
+<a href="#ohm">4. ओम का नियम (Ohm's Law)</a>
+<a href="#circuits">5. विद्युत सर्किट के प्रकार</a>
+<a href="#meters">6. विद्युत मापने के उपकरण</a>
+<a href="#multimeter">7. मल्टीमीटर</a>
+<a href="#resistors">8. प्रतिरोध (Resistors)</a>
+<a href="#colorcode">9. रंग बैंड कोडिंग</a>
+<a href="#series">10. श्रृंखला सर्किट (Series)</a>
+<a href="#parallel">11. समानांतर सर्किट (Parallel)</a>
+<a href="#seriesparallel">12. श्रृंखला-समानांतर संयोजन</a>
+<a href="#fuse">12. प्यूज़ (Fuse)</a>
+<a href="#capacitors">13. संधारित्र (Capacitors)</a>
+<a href="#battery">14. बैटरी (Battery)</a>
+<a href="#effects">15. विद्युत के प्रभाव</a>
+<a href="#solenoid">16. सोलेनॉइड और रिले</a>
+<a href="#transformer">17. ट्रांसफॉर्मर और अल्टरनेटर</a>
+<a href="#diode">18. डायोड (Diodes)</a>
+<a href="#transistor">19. ट्रांजिस्टर और वर्गीकरण</a>
+<a href="#scr">20. थाइरिस्टर और SCR</a>
+<a href="#thermistor">21. थर्मिस्टर (Thermistor)</a>
+</div>
+</div>
+</div>
+
+<main class="container module-content">
+
+<!-- ======================================================
+     1. INTRODUCTION
+     ====================================================== -->
+<section class="content-card" id="intro">
+<span class="section-label">PART 1 · INTRODUCTION</span>
+<h2>1. बिजली का परिचय (Introduction to Electricity)</h2>
+<p>
+<strong>बिजली (Electricity)</strong> आज के ऊर्जा के सबसे उपयोगी स्रोतों में से एक है। आधुनिक उपकरणों और मशीनरी की आधुनिक दुनिया में बिजली की अत्यधिक आवश्यकता है।
+</p>
+<h3>बिजली के प्रकार</h3>
+<ul>
+<li><strong>गतिशील बिजली (Dynamic Electricity):</strong> जब बिजली गति में होती है, तो इसे <strong>विद्युत धारा (Electric Current)</strong> कहते हैं।</li>
+<li><strong>स्थैतिक बिजली (Static Electricity):</strong> जो बिजली चलती नहीं है, उसे स्थैतिक बिजली कहा जाता है।</li>
+</ul>
+<h3>विद्युत धारा के उदाहरण</h3>
+<ul>
+<li>घरेलू विद्युत आपूर्ति</li>
+<li>औद्योगिक विद्युत आपूर्ति</li>
+</ul>
+<h3>स्थैतिक बिजली के उदाहरण</h3>
+<ul>
+<li>एक कालीन वाले कमरे के दरवाजे के घुंडी से प्राप्त झटका</li>
+<li>कंधी के कागज का आकर्षण</li>
+</ul>
+<div class="info-box">
+<div class="box-title">💡 महत्वपूर्ण</div>
+<p>
+विद्युत को समझने के लिए पदार्थ की संरचना को समझना आवश्यक है। विद्युत पदार्थ के कुछ सबसे बुनियादी निर्माण खंडों से संबंधित है जो <strong>परमाणु (Atom)</strong> हैं।
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     2. ATOM STRUCTURE
+     ====================================================== -->
+<section class="content-card" id="atom">
+<span class="section-label">PART 2 · ATOM STRUCTURE</span>
+<h2>2. पदार्थ की संरचना और परमाणु</h2>
+<p>
+सारा पदार्थ इन्हीं विद्युत निर्माण खंडों से बना है, और इसलिए, सभी पदार्थ को 'विद्युत' कहा जाता है।
+</p>
+<h3>परमाणु संरचना</h3>
+<p>
+मूल रूप से, एक परमाणु में तीन प्रकार के उप-परमाणु कण होते हैं जो बिजली के लिए प्रासंगिक होते हैं: <strong>इलेक्ट्रॉन, प्रोटॉन और न्यूट्रॉन</strong>।
+</p>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Particle</th>
+<th>Charge</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>Proton / प्रोटॉन</strong></td><td>Positive (+)</td><td>Nucleus में</td></tr>
+<tr><td><strong>Electron / इलेक्ट्रॉन</strong></td><td>Negative (−)</td><td>Nucleus के चारों ओर घूमता है</td></tr>
+<tr><td><strong>Neutron / न्यूट्रॉन</strong></td><td>Neutral</td><td>Nucleus में</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Nucleus (नाभिक)</h3>
+<p>
+नाभिक परमाणु का मध्य भाग है। इसमें एक परमाणु के प्रोटॉन और न्यूट्रॉन होते हैं।
+</p>
+<h3>ऊर्जा के कोशे (Energy Shells)</h3>
+<p>
+एक परमाणु में, इलेक्ट्रॉनों को नाभिक के चारों ओर कोशों में व्यवस्थित किया जाता है। एक शेल एक या एक से अधिक इलेक्ट्रॉनों की एक परिक्रमा परत या ऊर्जा स्तर है।
+</p>
+<ul>
+<li>प्रमुख इलेक्ट्रॉन परतों की पहचान नाभिक के निकट <strong>'K'</strong> से शुरू होने वाले अक्षरों की संख्या से होती है।</li>
+<li>वर्णानुक्रम से बाहर की ओर जारी रहती है (K, L, M, N...)</li>
+<li>प्रत्येक शेल में अधिकतम इलेक्ट्रॉनों की संख्या हो सकती है।</li>
+</ul>
+<div class="exam-box">
+<div class="box-title">📌 Exam Focus</div>
+<p>
+<strong>Proton</strong> = Positive charge, <strong>Electron</strong> = Negative charge, <strong>Neutron</strong> = Neutral (no charge).
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     3. GROUND CONNECTIONS
+     ====================================================== -->
+<section class="content-card" id="ground">
+<span class="section-label">PART 3 · GROUND CONNECTIONS</span>
+<h2>3. ग्राउंड कनेक्शन (Ground Connections)</h2>
+<p>
+इलेक्ट्रिकल सर्किट में काम करते समय, एक इलेक्ट्रिशियन के लिए सबसे महत्वपूर्ण विचार सुरक्षा कारक है - न केवल खुद के लिए बल्कि बिजली का उपयोग करने वाले उपभोक्ता के लिए भी सुरक्षा।
+</p>
+<h3>ग्राउंडिंग के कारण</h3>
+<p>
+एक बिजली का झटका तभी खतरनाक होता है जब शरीर के माध्यम से करंट एक निश्चित मिलीएम्पियर मान से अधिक हो जाता है। सामान्य तौर पर शरीर के माध्यम से <strong>5 मिलीएम्पियर से अधिक</strong> बहने वाली कोई भी धारा खतरनाक मानी जाती है।
+</p>
+<h3>परिरक्षण (Shielding)</h3>
+<p>
+परिरक्षण इंसुलेटेड केबल के ऊपर सुरक्षात्मक उपकरण परत है। परिरक्षित केबल या स्क्रीन वाली केबल एक विद्युत केबल है जो एक सामान्य प्रवाहकीय परत से घिरे एक या अधिक इंसुलेटेड कंडक्टर हैं।
+</p>
+<h3>उपयोग</h3>
+<ul>
+<li>यह विद्युत उपकरणों के लिए पृथ्वी/जमीन के रूप में कार्य करता है।</li>
+<li>यह केबलों को नमी के साथ-साथ लचीलेपन में प्रवेश करने से बचाता है।</li>
+<li>यह यांत्रिक शक्ति के साथ-साथ केबलों के लिए लचीले के रूप में भी कार्य करता है।</li>
+<li>यह केबल को पानी, तेल, गैसों और गर्मी जैसी हर मौसम की स्थिति से बचाता है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     4. OHM'S LAW
+     ====================================================== -->
+<section class="content-card" id="ohm">
+<span class="section-label">PART 4 · OHM'S LAW</span>
+<h2>4. ओम का नियम (Ohm's Law)</h2>
+<h3>मूल विद्युत मात्राएँ</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Symbol</th>
+<th>Unit</th>
+<th>Measuring Instrument</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>EMF / Voltage (वोल्टेज)</strong></td><td>V</td><td>Volt</td><td>Voltmeter (समानांतर में जोड़ा जाता है)</td></tr>
+<tr><td><strong>Current (धारा)</strong></td><td>I</td><td>Ampere</td><td>Ammeter (श्रेणीक्रम में जोड़ा जाता है)</td></tr>
+<tr><td><strong>Resistance (प्रतिरोध)</strong></td><td>R</td><td>Ohm (Ω)</td><td>Ohmmeter (समानांतर में जोड़ा जाता है)</td></tr>
+</tbody>
+</table>
+</div>
+<h3>ओम का नियम कहता है</h3>
+<div class="flow-box">
+तापमान स्थिर रहने पर 'धारा वोल्टेज के सीधे अनुपातिक और प्रतिरोध के व्युत्क्रमानुपाती होती है।'
+</div>
+<h3>Mathematical Expressions</h3>
+<div class="flow-box">
+I = V / R &nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp; V = I × R &nbsp;&nbsp;&nbsp; OR &nbsp;&nbsp;&nbsp; R = V / I
+</div>
+<h3>प्रतिरोध की इकाइयाँ</h3>
+<ul>
+<li>1 KΩ = 10³ ohms</li>
+<li>1 Mega Ω = 10⁶ ohms</li>
+</ul>
+<h3>उदाहरण</h3>
+<p>
+एक परिपथ में 1.5 V की बैटरी और 1 kΩ का प्रतिरोध है। धारा कितनी होगी?
+</p>
+<ul>
+<li>V = 1.5 V</li>
+<li>R = 1 kΩ = 1000 Ω</li>
+<li>I = V / R = 1.5 / 1000 = <strong>0.0015 A (1.5 mA)</strong></li>
+</ul>
+<div class="exam-box">
+<div class="box-title">📌 Exam Focus</div>
+<p>
+<strong>Ohm's Law:</strong> V = I × R (Voltage = Current × Resistance)
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     5. ELECTRIC CIRCUITS
+     ====================================================== -->
+<section class="content-card" id="circuits">
+<span class="section-label">PART 5 · ELECTRIC CIRCUITS</span>
+<h2>5. विद्युत सर्किट के प्रकार</h2>
+<p>
+विद्युत परिपथ वह पथ है जिसमें विद्युत धारा प्रवाहित होती है।
+</p>
+<h3>1. Simple / Closed Circuit (सरल परिपथ)</h3>
+<p>
+एक साधारण विद्युत परिपथ बैटरी से स्विच और लोड के माध्यम से और बैटरी में वापस प्रवाह का एक पूरा मार्ग है। इसमें शामिल होते हैं:
+</p>
+<ul>
+<li>एक वोल्टेज स्रोत</li>
+<li>कनेक्टिंग वायर (कंडक्टर)</li>
+<li>एक भार (दीपक या मोटर)</li>
+<li>स्विच</li>
+</ul>
+<h3>2. Open Circuit (खुला परिपथ)</h3>
+<p>
+एक open circuit में, एक अनंत प्रतिरोध प्रदान किया जाता है, ज्यादातर समय open switch द्वारा। इसलिए कोई करंट प्रवाहित नहीं हो सकता।
+</p>
+<h3>3. Short Circuit (शॉर्ट सर्किट)</h3>
+<p>
+शॉर्ट सर्किट तब होता है जब एक ही सर्किट के दो टर्मिनल एक दूसरे को छूते हैं। यदि केबल के दो कोर के बीच का इंसुलेशन खराब हो तो शॉर्ट सर्किट भी हो सकता है।
+</p>
+<p>
+इसके परिणामस्वरूप कम प्रतिरोध होता है। इससे एक बड़ा करंट प्रवाहित होता है जो एक खतरा बन सकता है।
+</p>
+<h3>4. Series Circuit (श्रृंखला सर्किट)</h3>
+<p>
+इस सर्किट में केवल एक लोड और आपूर्ति का एक स्रोत होता है। इसमें धारा के प्रवाह के लिए एक सतत पथ है। इसलिए सर्किट में एक क्रम में सभी लोड के माध्यम से करंट प्रवाहित होता है।
+</p>
+<p>
+यदि कोई भी भाग विफल हो जाता है तो सर्किट टूट जाता है और करंट बहना बंद हो जाता है।
+</p>
+<h3>5. Parallel Circuit (समानांतर परिपथ)</h3>
+<p>
+इस परिपथ में दो या दो से अधिक भार जुड़े होते हैं। प्रत्येक भार आपूर्ति के स्रोत के अपने पथ के साथ प्रदान किया जाता है।
+</p>
+<p>
+समानांतर सर्किट में हेड लाइट की एक जोड़ी जुड़ी हुई है। जब समानांतर में तार दिया जाता है तो एक बल्ब के विफलता दूसरे बल्ब के संचालन को प्रभावित नहीं करेगी।
+</p>
+</section>
+
+<!-- ======================================================
+     6. ELECTRICAL MEASURING INSTRUMENTS
+     ====================================================== -->
+<section class="content-card" id="meters">
+<span class="section-label">PART 6 · MEASURING INSTRUMENTS</span>
+<h2>6. विद्युत मापने के उपकरण</h2>
+<p>
+विद्युत परिपथ और सहायक उपकरण का परीक्षण करने के लिए तीन बुनियादी प्रकार के मीटर का उपयोग किया जाता है।
+</p>
+<h3>1. Ammeter (अमीटर)</h3>
+<ul>
+<li>सर्किट में प्रवाहित होने वाली धारा की मात्रा को मापने के लिए उपयोग किया जाता है।</li>
+<li>यह सर्किट में <strong>श्रृंखला में जुड़ा</strong> होता है।</li>
+<li>यह भार के साथ श्रेणीक्रम में जुड़ा होता है।</li>
+<li>इसका उपयोग उस दर को इंगित करने के लिए किया जाता है जिस पर बैटरी चार्ज या डिस्चार्ज की जा रही है।</li>
+<li>Terminals पर "+" और "−" चिह्न का ध्यान रखें।</li>
+<li>आवश्यक सीमा के अनुसार एक एमीटर का चयन करें।</li>
+<li>Automotive charging system के लिए DC मीटर का प्रयोग करें।</li>
+</ul>
+<h3>2. Voltmeter (वोल्टमीटर)</h3>
+<ul>
+<li>विद्युत वोल्टता मापने के लिए वोल्टमीटर का प्रयोग किया जाता है।</li>
+<li>यह स्थायी रूप से वाहन पर नहीं लगाया जाता, बल्कि आवश्यकता होने पर अलग से उपयोग किया जाता है।</li>
+<li>यह सर्किट के <strong>समानांतर में जुड़ा</strong> होता है।</li>
+<li>मोटर वाहन के लिए DC वोल्टमीटर का प्रयोग करें।</li>
+<li>सर्किट के किसी भी बिंदु पर वोल्टेज को मापने के लिए।</li>
+<li>सर्किट में वोल्टेज ड्रॉप को मापने के लिए।</li>
+<li>बैटरी की स्थिति की जांच करने के लिए।</li>
+</ul>
+<h3>3. Ohmmeter (ओममीटर)</h3>
+<ul>
+<li>एक ओममीटर को प्रतिरोध मीटर के रूप में भी जाना जाता है।</li>
+<li>यह स्थायी रूप से वाहन पर नहीं लगाया जाता, आवश्यकता होने पर अलग से उपयोग किया जाता है।</li>
+<li>इसका अपना अंतर्निहित शक्ति स्रोत है।</li>
+<li>इसलिए ओममीटर से जांचे जा रहे उपकरण/सर्किट को बिजली की आपूर्ति से काट दिया जाना चाहिए।</li>
+<li>प्रतिरोध की इकाई एक ओम है।</li>
+<li>किसी भी चालक के प्रतिरोध को मापने के लिए।</li>
+<li>किसी भी भार के प्रतिरोध को मापने के लिए।</li>
+<li>फील्ड कॉइल की निरंतरता की जांच करने के लिए।</li>
+</ul>
+<div class="warning-box">
+<div class="box-title">⚠ Warning</div>
+<ul>
+<li>ओममीटर को लाइव सर्किट के किसी भी हिस्से से न जोड़ें।</li>
+<li>ओममीटर को बैटरी के टर्मिनलों से न जोड़ें।</li>
+<li>सर्किट में समानांतर में एक एमीटर को कनेक्ट न करें।</li>
+<li>वोल्टमीटर को परिपथ में श्रेणीक्रम में न जोड़ें।</li>
+</ul>
+</div>
+<h3>मीटर का रखरखाव</h3>
+<ul>
+<li>मीटर को सावधानी से संभालें।</li>
+<li>मीटर के उपयोग के दौरान कनेक्शन को चुस्त-दुरुस्त रखें।</li>
+<li>निर्दिष्ट भार के भीतर मीटर का प्रयोग करें।</li>
+<li>उपयोग के बाद मीटर को अलग जगह पर रखें।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     7. MULTIMETER
+     ====================================================== -->
+<section class="content-card" id="multimeter">
+<span class="section-label">PART 7 · MULTIMETER</span>
+<h2>7. मल्टीमीटर (Multimeter)</h2>
+<p>
+एक मल्टीमीटर एक उपकरण है जिसमें एक एमीटर, वोल्टमीटर और ओममीटर के कार्यों को क्रमशः वर्तमान, वोल्टेज और प्रतिरोध के मापन के लिए शामिल किया जाता है।
+</p>
+<p>
+कुछ निर्माता इसे <strong>VOM मीटर</strong> कहते हैं क्योंकि इस मीटर का उपयोग वोल्ट, ओम और मिली एमीटर के रूप में किया जाता है।
+</p>
+<h3>मल्टीमीटर के प्रकार</h3>
+<ol>
+<li><strong>Simple Multimeter:</strong> निष्क्रिय घटक (passive components) होते हैं।</li>
+<li><strong>Electronic Multimeter:</strong> सक्रिय और निष्क्रिय घटकों के साथ। यह Analog या Digital प्रकार का हो सकता है।</li>
+</ol>
+<h3>मल्टीमीटर के मुख्य भाग</h3>
+<ul>
+<li><strong>Pointer:</strong> स्केल पर रीडिंग दिखाने वाला।</li>
+<li><strong>Scale:</strong> विभिन्न पैमाने (प्रतिरोध, वोल्टेज, करंट)।</li>
+<li><strong>Mirror:</strong> लंबन त्रुटि से बचने के लिए।</li>
+<li><strong>Zero Adjusting Screw:</strong> मीटर शून्य समायोजित करने के लिए।</li>
+<li><strong>Polarity Selection Switch:</strong> ध्रुवता चुनने के लिए।</li>
+<li><strong>Zero Ohm Adjusting Knob:</strong> ओम मोड में शून्य सेट करने के लिए।</li>
+<li><strong>Range and Function Selection Switch:</strong> रेंज और फंक्शन चुनने के लिए।</li>
+<li><strong>Common Terminal:</strong> सामान्य टर्मिनल।</li>
+<li><strong>Measuring Terminal:</strong> मापन टर्मिनल।</li>
+</ul>
+<h3>मल्टीमीटर का पैमाना</h3>
+<ul>
+<li>प्रतिरोध के लिए - non-linear scale</li>
+<li>वोल्टेज और करंट के लिए - linear scale</li>
+<li>प्रतिरोध माप का पैमाना गैर-रेखिक है - शून्य और अनंत के बीच के विभाजन समान दूरी पर नहीं हैं</li>
+<li>पैमाना आमतौर पर 'पिछड़ा' होता है, जिसमें दाईं ओर शून्य होता है</li>
+</ul>
+<h3>शून्य समायोजन (Zero Adjustment)</h3>
+<p>
+जब selector सबसे कम प्रतिरोध रेंज में होता है और lead खुले होते हैं, तो pointer scale के बाईं ओर होता है, जो अनंत प्रतिरोध को दर्शाता है। जब lead को छोटा किया जाता है, तो pointer scale के दाईं ओर होता है, जो शून्य प्रतिरोध दर्शाता है।
+</p>
+<h3>Digital Multimeter (DMM)</h3>
+<ul>
+<li>Digital multimeter में मीटर की चाल को एक digital read-out से बदल दिया जाता है।</li>
+<li>यह read-out इलेक्ट्रॉनिक केलकुलेटर के समान है।</li>
+<li>Digital multimeter की आंतरिक सर्किटरी digital integrated सर्किट से बनी होती है।</li>
+<li>मापी गई मात्रा को चार अंकों की संख्या के रूप में दर्शाया जाता है।</li>
+<li>DC मात्राओं को मापा जाता है, तो ध्रुवता की पहचान संख्या के बाईं ओर + या − चिह्न के माध्यम से की जाती है।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     8. RESISTORS
+     ====================================================== -->
+<section class="content-card" id="resistors">
+<span class="section-label">PART 8 · RESISTORS</span>
+<h2>8. प्रतिरोध (Resistors)</h2>
+<p>
+<strong>निश्चित मूल्य प्रतिरोधक (Fixed Value Resistor):</strong> इसका ओमिक मान निश्चित होता है। यह मान उपयोगकर्ता द्वारा बदला नहीं जा सकता है।
+</p>
+<h3>Resistors की Categories</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Type</th>
+<th>Sub-type</th>
+</tr>
+</thead>
+<tbody>
+<tr><td rowspan="4"><strong>मूल्य भाव प्रतिरोधों</strong></td><td>Carbon Composition</td></tr>
+<tr><td>Carbon Film</td></tr>
+<tr><td>Metal Film</td></tr>
+<tr><td>Metal Oxide Film</td></tr>
+<tr><td rowspan="2"><strong>वायर वौंद प्रतिरोधों</strong></td><td>Cement Film</td></tr>
+<tr><td>Ceramic Film</td></tr>
+<tr><td><strong>मुद्रित प्रतिरोधों</strong></td><td>Printed Resistors</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Carbon Composition Resistor का निर्माण</h3>
+<ul>
+<li>बारीक पाउडर कार्बन या ग्रेफाइट, filler और binder का मिश्रण छड़ में बनाया जाता है।</li>
+<li>टिन किए गए तांबे से बने lead को शरीर में soldering या embedding द्वारा जोड़ा जाता है।</li>
+<li>Assembly के चारों ओर phenolic या बैकेलाइट की एक सुरक्षात्मक परत/ट्यूब डाला जाता है।</li>
+<li>अंत में इसका प्रतिरोध मान शरीर पर अंकित होता है।</li>
+</ul>
+<h3>अनुप्रयोग</h3>
+<ul>
+<li>Radio, Tape Recorder, Television जैसे सामान्य प्रयोजन के इलेक्ट्रॉनिक सर्किट में सबसे व्यापक रूप से उपयोग किए जाने वाले प्रतिरोधक।</li>
+<li>Electronic उद्योग में उपयोग किए जाने वाले 50% से अधिक प्रतिरोधक carbon प्रतिरोधक हैं।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     9. COLOR CODE
+     ====================================================== -->
+<section class="content-card" id="colorcode">
+<span class="section-label">PART 9 · COLOR CODE</span>
+<h2>9. रंग बैंड कोडिंग (Color Band Coding)</h2>
+<p>
+रंग बैंड कोडिंग का उपयोग आमतौर पर carbon composition प्रतिरोधों के लिए किया जाता है। Carbon composition resistor का भौतिक आकार आमतौर पर छोटा होता है, और इसलिए resistance value को सीधे body पर print करना मुश्किल होता है।
+</p>
+<h3>Resistor Color Code Table</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Colour</th>
+<th>Significant Figures</th>
+<th>Multiplier</th>
+<th>Tolerance</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Silver</td><td>—</td><td>10⁻²</td><td>±10%</td></tr>
+<tr><td>Gold</td><td>—</td><td>10⁻¹</td><td>±5%</td></tr>
+<tr><td>Black</td><td>0</td><td>1</td><td>—</td></tr>
+<tr><td>Brown</td><td>1</td><td>10</td><td>±1%</td></tr>
+<tr><td>Red</td><td>2</td><td>10²</td><td>±2%</td></tr>
+<tr><td>Orange</td><td>3</td><td>10³</td><td>±3%</td></tr>
+<tr><td>Yellow</td><td>4</td><td>10⁴</td><td>±4%</td></tr>
+<tr><td>Green</td><td>5</td><td>10⁵</td><td>±0.5%</td></tr>
+<tr><td>Blue</td><td>6</td><td>10⁶</td><td>—</td></tr>
+<tr><td>Violet</td><td>7</td><td>—</td><td>—</td></tr>
+<tr><td>Grey</td><td>8</td><td>—</td><td>—</td></tr>
+<tr><td>White</td><td>9</td><td>—</td><td>—</td></tr>
+<tr><td>(None)</td><td>—</td><td>—</td><td>±20%</td></tr>
+</tbody>
+</table>
+</div>
+<h3>सहनशीलता (Tolerance)</h3>
+<p>
+प्रतिरोधों के थोक उत्पादन/निर्माण में, विशेष सटीक मूल्यों के प्रतिरोधों का निर्माण करना कठिन और महंगा है। इसलिए निर्माता उस मानक मूल्य से संभावित भिन्नता को इंगित करता है।
+</p>
+<p>
+सहनशीलता वह सीमा (अधिकतम-से-मिनट) है जिसके भीतर रोकनेवाला का प्रतिरोध मान मौजूद होगा।
+</p>
+<h3>Resistor Lead Types</h3>
+<ul>
+<li><strong>Axial Lead:</strong> दोनों सिरों पर wire lead</li>
+<li><strong>Radial Lead:</strong> एक ही तरफ से निकले leads</li>
+<li><strong>Terminal Lugs:</strong> Terminal points</li>
+</ul>
+<div class="exam-box">
+<div class="box-title">📌 Exam Focus</div>
+<p>
+<strong>Example:</strong> Orange (3), Orange (3), Red (× 100), Silver (±10%) = <strong>3300 Ω ±10% (3.3 kΩ ±10%)</strong>
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     10. SERIES CIRCUIT
+     ====================================================== -->
+<section class="content-card" id="series">
+<span class="section-label">PART 10 · SERIES CIRCUIT</span>
+<h2>10. श्रृंखला सर्किट (Series Circuit)</h2>
+<p>
+Series circuit में दो resistance point A और point B के बीच series में जुड़े होते हैं। ऐसा connection current के प्रवाह के लिए केवल एक ही रास्ता प्रदान करता है।
+</p>
+<h3>Series Circuit की विशेषताएँ</h3>
+<ul>
+<li>पूरे सर्किट में करंट समान रहता है।</li>
+<li>एक श्रृंखला सर्किट में कुल प्रतिरोध श्रृंखला सर्किट के चारों ओर अलग-अलग प्रतिरोधों के योग के बराबर होता है।</li>
+<li>स्रोत वोल्टेज प्रतिरोधों के मूल्य के आधार पर श्रृंखला प्रतिरोध में विभाजित/गिरता है।</li>
+<li>व्यक्तिगत लोड वोल्टेज का योग स्रोत वोल्टेज के बराबर होता है।</li>
+</ul>
+<h3>Formulas</h3>
+<div class="flow-box">
+R = R₁ + R₂ + R₃ + ... + Rₙ
+</div>
+<p>
+जहाँ R कुल प्रतिरोध है, R₁, R₂, R₃... श्रृंखला में जुड़े प्रतिरोध हैं।
+</p>
+<p>
+जब एक परिपथ में समान मान के एक से अधिक प्रतिरोधक श्रेणीक्रम में होते हैं:
+</p>
+<div class="flow-box">
+R = R × N
+</div>
+<p>
+जहाँ 'R' प्रत्येक प्रतिरोधक का मान है और N श्रेणीक्रम में प्रतिरोधों की संख्या है।
+</p>
+<h3>Voltage की गणना</h3>
+<div class="flow-box">
+V = V_R1 + V_R2 + V_R3 + ...
+</div>
+<h3>Current की गणना</h3>
+<p>
+श्रृंखला परिपथ के किसी भी बिंदु पर धारा समान होगी।
+</p>
+<div class="flow-box">
+I = V / R
+</div>
+<h3>उदाहरण</h3>
+<p>
+चार 100-ohm resistors श्रृंखला में जुड़े हैं और 100 V की आपूर्ति से जुड़े हैं।
+</p>
+<ul>
+<li>कुल प्रतिरोध R = 100 + 100 + 100 + 100 = 400 Ω</li>
+<li>करंट I = 100/400 = <strong>0.25 A</strong></li>
+<li>प्रत्येक resistor पर voltage drop = 0.25 × 100 = <strong>25 V</strong></li>
+<li>कुल voltage = 25 + 25 + 25 + 25 = <strong>100 V</strong> ✓</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     11. PARALLEL CIRCUIT
+     ====================================================== -->
+<section class="content-card" id="parallel">
+<span class="section-label">PART 11 · PARALLEL CIRCUIT</span>
+<h2>11. समानांतर सर्किट (Parallel Circuit)</h2>
+<p>
+Parallel circuit में, तीन तापदीप्त लैंपों को जोड़ना संभव है। इस connection को parallel connection कहा जाता है, जिसमें तीनों लैंपों में समान स्रोत वोल्टेज लगाया जाता है।
+</p>
+<h3>Parallel Circuit की विशेषताएँ</h3>
+<ul>
+<li>Parallel सर्किट में वोल्टेज आपूर्ति वोल्टेज के समान है।</li>
+<li>कुल धारा व्यक्तिगत शाखा धाराओं का योग है।</li>
+<li>कुल प्रतिरोध का व्युत्क्रम अलग-अलग शाखा प्रतिरोधों के व्युत्क्रम के योग के बराबर होता है।</li>
+<li>परिणामी प्रतिरोध समानांतर संयोजन के सबसे छोटे प्रतिरोध से कम है।</li>
+</ul>
+<h3>Formulas</h3>
+<div class="flow-box">
+V = V₁ = V₂ = V₃
+</div>
+<div class="flow-box">
+I = I₁ + I₂ + I₃ + ... + Iₙ
+</div>
+<div class="flow-box">
+1/R = 1/R₁ + 1/R₂ + 1/R₃ + ...
+</div>
+<h3>विशेष मामला - समान प्रतिरोध</h3>
+<p>
+Parallel में समान प्रतिरोधों का कुल प्रतिरोध R, एक प्रतिरोधक के प्रतिरोध के बराबर है, R को प्रतिरोधों की संख्या से विभाजित किया जाता है।
+</p>
+<div class="flow-box">
+R = r / N
+</div>
+<h3>Parallel Circuit के अनुप्रयोग</h3>
+<ul>
+<li>एक विद्युत प्रणाली जिसमें एक खंड विफल हो सकता है और अन्य खंड समानांतर सर्किट में काम करना जारी रखते हैं।</li>
+<li>घरों में उपयोग की जाने वाली विद्युत प्रणाली में कई समानांतर सर्किट होते हैं।</li>
+<li>एक ऑटोमोबाइल इलेक्ट्रिक सिस्टम रोशनी, हॉर्न, मोटर, रेडियो आदि के लिए समानांतर सर्किट का उपयोग करता है।</li>
+<li>Television receiver का audio section तब भी काम कर सकता है जब video section निष्क्रिय हो।</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     12. SERIES-PARALLEL COMBINATION
+     ====================================================== -->
+<section class="content-card" id="seriesparallel">
+<span class="section-label">PART 12 · SERIES-PARALLEL</span>
+<h2>12. श्रृंखला-समानांतर संयोजन (Series-Parallel Combination)</h2>
+<p>
+श्रृंखला और समानांतर सर्किट के अलावा, तीसरे प्रकार की सर्किट व्यवस्था श्रृंखला-समानांतर सर्किट है। इस सर्किट में, श्रृंखला में कम से कम एक प्रतिरोध जुड़ा होता है और दो समानांतर में जुड़े होते हैं।
+</p>
+<h3>तुलना - Series vs Parallel</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Series Circuit</th>
+<th>Parallel Circuit</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>अलग-अलग प्रतिरोधों में वोल्टेज की बूंदों का योग लागू वोल्टेज के बराबर होता है।</td><td>लागू वोल्टेज प्रत्येक शाखा में समान होता है।</td></tr>
+<tr><td>कुल प्रतिरोध सर्किट बनाने वाले व्यक्तिगत प्रतिरोधों के योग के बराबर है: R = R₁ + R₂ + R₃ + ...</td><td>कुल प्रतिरोध का व्युत्क्रम प्रतिरोधों के व्युत्क्रम के योग के बराबर होता है। परिणामी प्रतिरोध समानांतर संयोजन के सबसे छोटे प्रतिरोध से कम है।</td></tr>
+<tr><td>परिपथ के सभी भागों में धारा समान होती है।</td><td>प्रत्येक शाखा में प्रत्येक शाखा के प्रतिरोध के अनुसार धारा विभाजित होती है।</td></tr>
+<tr><td>कुल शक्ति व्यक्तिगत प्रतिरोधों द्वारा नष्ट की गई शक्ति के योग के बराबर है।</td><td>कुल शक्ति व्यक्तिगत प्रतिरोधों द्वारा नष्ट की गई शक्ति के योग के बराबर होती है।</td></tr>
+</tbody>
+</table>
+</div>
+<h3>मूल व्यवस्थाएँ</h3>
+<ol>
+<li>R₁ और R₂ समानांतर में जुड़े हुए हैं और यह समानांतर कनेक्शन, बदले में, प्रतिरोध R₃ के साथ श्रृंखला में जुड़ा हुआ है।</li>
+<li>मूल रूप से समानांतर सर्किट की दो शाखाएं हैं। एक शाखा में इसके दो प्रतिरोध श्रृंखला R₂ और R₃ में हैं।</li>
+</ol>
+<h3>Solution Method</h3>
+<ol>
+<li>सर्किट को श्रृंखला/या समानांतर समूहों में विभाजित करें।</li>
+<li>प्रत्येक समानांतर समूह को उस समूह के संयुक्त प्रतिरोध के बराबर एक प्रतिरोध मान से बदलें।</li>
+<li>प्रत्येक श्रृंखला समूह को उस समूह के संयुक्त प्रतिरोध के बराबर एक प्रतिरोध मान से बदलें।</li>
+<li>Equivalent circuit बनाकर प्रत्येक घटक के लिए current, voltage और resistance का निर्धारण करें।</li>
+</ol>
+</section>
+
+<!-- ======================================================
+     13. FUSE
+     ====================================================== -->
+<section class="content-card" id="fuse">
+<span class="section-label">PART 13 · FUSE</span>
+<h2>13. प्यूज़ (Fuse)</h2>
+<p>
+<strong>प्यूज़</strong> एक सुरक्षात्मक उपकरण है। यह विद्युत परिपथ का सबसे कमजोर भाग है।
+</p>
+<p>
+एक विद्युत प्रवाह तार को गर्म करता है जब उसमें से करंट गुजरता है। गर्मी की मात्रा तार में करंट और प्रतिरोध पर निर्भर करती है।
+</p>
+<h3>प्यूज़ का उद्देश्य</h3>
+<p>
+जब सर्किट में करंट (अधिभार) प्रवाहित होता है, तो सहायक उपकरण को गंभीर नुकसान से बचाने के लिए प्यूज़ सर्किट को बाहर निकालता है। एक सर्किट में अतिरिक्त करंट का प्रवाह शॉर्ट सर्किट के कारण हो सकता है।
+</p>
+<h3>निर्माण</h3>
+<p>
+फ्यूज़ तत्व प्रत्येक सर्किट के लिए सही एम्परेज की पट्टी में लेड-टिन या टिन-कॉपर मिश्र धातु के तार के होते हैं।
+</p>
+<p>
+फ्यूज को कांच या सिरेमिक सामग्री के फ्यूज कैरियर में इकट्ठा किया जाता है। आजकल काँच की नलियों में इकट्ठे फ्यूज तत्व, जिन्हें <strong>Cartridge</strong> कहा जाता है, ऑटोमोटिव में व्यापक रूप से उपयोग किए जाते हैं।
+</p>
+<h3>कार्य करना</h3>
+<p>
+दो धातु कैप के बीच conductor से करंट प्रवाहित होता है और फिर उपकरण में प्रवाहित होता है।
+</p>
+<p>
+यदि वर्तमान मान फ्यूज पर निर्धारित सीमा से अधिक है, तो फ्यूज तत्व पिघल जाता है और सर्किट को खोलता है और उपकरण को नुकसान से बचाता है।
+</p>
+<h3>उड़े फ्यूज़ की पहचान</h3>
+<ul>
+<li>यदि आप जले हुए फ्यूज को देखें और यदि तत्व टूटा हुआ है तो फ्यूज ओवरलोडिंग के कारण जल जाता है।</li>
+<li>कांच धूमिल, सफेद या काला है - शॉर्ट सर्किट के कारण फ्यूज उड़ गया है।</li>
+</ul>
+<h3>फ्यूज़ से सुरक्षित सर्किट</h3>
+<ul>
+<li>Headlight Circuit</li>
+<li>Number Plate Circuit</li>
+<li>Internal Lamp Circuit</li>
+<li>Horn Circuit</li>
+<li>Dash Board / Panel Instruments Circuit</li>
+<li>Heater and Air Condition</li>
+<li>Charging Circuit</li>
+<li>Radio</li>
+<li>Cigarette Lighter</li>
+<li>Reverse Lamp</li>
+</ul>
+<h3>फ्यूज़ के बिना सर्किट</h3>
+<ul>
+<li>Starting Circuit</li>
+<li>Fuel Pump</li>
+<li>Stop Light Circuit</li>
+<li>Oil Pressure Lamp Circuit</li>
+<li>Ignition Warning Lamp Circuit</li>
+</ul>
+<h3>Fuse Rating और Colors</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Rating</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>3 Amp</td><td>Violet</td></tr>
+<tr><td>5 Amp</td><td>Tan</td></tr>
+<tr><td>10 Amp</td><td>Red</td></tr>
+<tr><td>20 Amp</td><td>Yellow</td></tr>
+<tr><td>25 Amp</td><td>Clear</td></tr>
+<tr><td>30 Amp</td><td>Light Green</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Circuit Breaker</h3>
+<p>
+सर्किट ब्रेकर इन इकाइयों को एक गैर-बदली जाने योग्य प्रकार के फ्यूज के रूप में माना जाता है। आमतौर पर headlight circuit में crafted किया जाता है।
+</p>
+<p>
+इसमें चलती संपर्क के साथ एक द्विधात्वीय पट्टी होती है। एक निश्चित संपर्क terminals के साथ प्रदान किया जाता है।
+</p>
+<p>
+जैसे ही करंट संबंधित विद्युत घटक के लिए अधिकतम अनुमेय मूल्य से अधिक हो जाता है, पट्टी झुक जाती है। इस तरह यह सर्किट को तोड़ने के लिए अंक खोलता है।
+</p>
+</section>
+
+<!-- ======================================================
+     14. CAPACITORS
+     ====================================================== -->
+<section class="content-card" id="capacitors">
+<span class="section-label">PART 14 · CAPACITORS</span>
+<h2>14. संधारित्र (Capacitors)</h2>
+<p>
+<strong>Capacitance</strong> रखने के लिए डिज़ाइन किए गए डिवाइस को कैपेसिटर कहा जाता है।
+</p>
+<h3>निर्माण</h3>
+<p>
+एक संधारित्र एक विद्युत उपकरण है जिसमें दो समानांतर प्रवाहकीय प्लेटें होती हैं, जो एक इन्सुलेट सामग्री द्वारा अलग होती हैं जिसे <strong>ढांकता हुआ (Dielectric)</strong> कहा जाता है।
+</p>
+<p>
+Connecting lead समानांतर प्लेटों से जुड़ी होती हैं।
+</p>
+<h3>कार्य</h3>
+<p>
+एक संधारित्र में विद्युत आवेश को दो कंडक्टरों या प्लेटों के बीच एक इलेक्ट्रोस्टैटिक क्षेत्र के रूप में संग्रहीत किया जाता है। आवेश का मात्रक कूलम्ब होता है और इसे 'C' अक्षर से प्रदर्शित किया जाता है।
+</p>
+<h3>समाई (Capacitance)</h3>
+<p>
+विद्युत आवेश के रूप में ऊर्जा को संचित करने की क्षमता को धारिता कहते हैं।
+</p>
+<h3>समाई की इकाई</h3>
+<p>
+समाई की आधार इकाई <strong>फैराड (Farad)</strong> है। फैराड का संक्षिप्त नाम F है।
+</p>
+<p>
+एक फैराड कैपेसिटेंस की वह मात्रा है जो कैपेसिटर को 1 V पर चार्ज करने पर 1 कूलम्ब चार्ज स्टोर करता है। दूसरे शब्दों में, फैराड प्रति वोल्ट (C/V) एक कूलम्ब है।
+</p>
+<div class="flow-box">
+C = Q / V
+</div>
+<p>
+जहाँ C = Capacitance (Farad), Q = Charge (Coulomb), V = Voltage (Volt)
+</p>
+<h3>समानांतर कैपेसिटर</h3>
+<p>
+समानांतर में जुड़े कैपेसिटर अपनी धारिता को एक साथ जोड़ देंगे।
+</p>
+<div class="flow-box">
+C_total = C₁ + C₂ + ... + Cₙ
+</div>
+<p>
+विद्युत आवेश के कुल भंडारण को बढ़ाने के लिए एक समानांतर सर्किट सबसे सुविधाजनक तरीका है। कुल वोल्टेज रेटिंग नहीं बदलती है।
+</p>
+<h3>श्रृंखला कैपेसिटर</h3>
+<p>
+श्रृंखला में जुड़े संधारित्रों की कुल धारिता परिपथ में किसी एक की तुलना में कम होगी।
+</p>
+<div class="flow-box">
+1/C_total = 1/C₁ + 1/C₂ + ... + 1/Cₙ
+</div>
+<p>
+यह श्रृंखला सर्किट एक उच्च कुल वोल्टेज रेटिंग प्रदान करता है।
+</p>
+<h3>अनुप्रयोग</h3>
+<ul>
+<li>Ignition Circuit</li>
+<li>Electronic circuits में ऊर्जा भंडारण</li>
+<li>Filter circuits में</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     15. BATTERY
+     ====================================================== -->
+<section class="content-card" id="battery">
+<span class="section-label">PART 15 · BATTERY</span>
+<h2>15. बैटरी (Battery)</h2>
+<p>
+<strong>सेल (Cell)</strong> एक इलेक्ट्रोकेमिकल डिवाइस है जिसमें दो इलेक्ट्रोड और एक इलेक्ट्रोलाइट होता है। इलेक्ट्रोड और इलेक्ट्रोलाइट के बीच रासायनिक प्रतिक्रिया एक वोल्टेज उत्पन्न करती है।
+</p>
+<h3>सेल का वर्गीकरण</h3>
+<ol>
+<li><strong>शुष्क कोशिकाएँ (Dry Cells):</strong> शुष्क कोशिका में पेस्ट या जेल इलेक्ट्रोलाइट होता है। यह सेमी सीलबंद है और इसे किसी भी स्थिति में इस्तेमाल किया जा सकता है।</li>
+<li><strong>गीली कोशिकाएँ (Wet Cells):</strong> इसमें दो प्लेट और एक तरल इलेक्ट्रोलाइट होता है। चार्जिंग और डिस्चार्जिंग के दौरान गैसों को बाहर निकलने की अनुमति देने के लिए इन कोशिकाओं में वेंट होते हैं।</li>
+</ol>
+<h3>Primary Cells</h3>
+<p>
+Primary cells वे कोशिकाएँ होती हैं जो रिचार्जेबल नहीं होती हैं। डिस्चार्ज के दौरान होने वाली रासायनिक प्रतिक्रिया प्रतिवर्ती नहीं होती है।
+</p>
+<ul>
+<li>Voltaic Cell</li>
+<li>Carbon Zinc Cell</li>
+<li>Alkaline Cell</li>
+<li>Mercury Cell</li>
+<li>Silver Oxide Cell</li>
+<li>Lithium Cell</li>
+</ul>
+<h3>Secondary Cells (Lead Acid Battery)</h3>
+<p>
+इन सेल्स को डिस्चार्ज की गई बैटरी के विपरीत दिशा में विद्युत प्रवाह की आपूर्ति करके रिचार्ज किया जा सकता है।
+</p>
+<p>
+Lead Acid Battery यह बैटरी विद्युत ऊर्जा को रासायनिक ऊर्जा में परिवर्तित करने के लिए एक विद्युत रासायनिक उपकरण है और इसके विपरीत।
+</p>
+<p>
+बैटरी का मुख्य उद्देश्य विद्युत ऊर्जा को रासायनिक ऊर्जा के रूप में संग्रहित करना है।
+</p>
+<h3>Lead Acid Battery का निर्माण</h3>
+<ul>
+<li>Battery की प्लेटें आयताकार होती हैं।</li>
+<li>वे सीसे (Lead) से बने होते हैं।</li>
+<li>उन्हें ताकत प्रदान करने के लिए सुरमा (Antimony) मिश्र धातु का उपयोग किया जाता है।</li>
+<li>Positive plates में लेड पेरोक्साइड के पेस्ट से भरे ग्रिड होते हैं। यह सीसा भूरे रंग का होता है।</li>
+<li>Negative plates में धात्विक लेड से भरे ग्रिड होते हैं जो प्रकृति में स्पंजी होते हैं। यह सीसा हल्के भूरे रंग का होता है।</li>
+<li>Separators का उपयोग Positive और Negative plates के संपर्क को रोकने के लिए किया जाता है।</li>
+<li>Container कठोर रबर से बना होता है।</li>
+<li>Sulphuric Acid और आसुत जल का घोल electrolyte के रूप में उपयोग किया जाता है।</li>
+</ul>
+<h3>Discharging (Fig 3)</h3>
+<p>
+Discharging के दौरान, सल्फ्यूरिक एसिड दो भागों में टूट जाता है, हाइड्रोजन (H₂) और सल्फेट (SO₄)।
+</p>
+<p>
+हाइड्रोजन को लेड पेरोक्साइड प्लेट्स (PbO₂) में मुक्त किया जाता है, जो उन्हें लेड ऑक्साइड (PbO) में कम कर देता है।
+</p>
+<p>
+SO₄ स्पंजी लेड प्लेट (Pb) पर मुक्त होता है और उनके साथ मिलकर लेड सल्फेट (PbSO₄) बनाता है।
+</p>
+<h3>Charging (Fig 4)</h3>
+<p>
+जब डायनेमो या चार्जर से विपरीत दिशा में करंट प्रवाहित करके बैटरी को चार्ज किया जाता है, तो विपरीत रासायनिक प्रतिक्रिया होती है।
+</p>
+<p>
+Positive plate पर Lead Sulphate, Lead Peroxide (PbO₂) बन जाता है। Negative plate पर Lead Sulphate, Spongy Lead बन जाता है और Sulphuric Acid की मात्रा बढ़ने के कारण Electrolyte अधिक सांद्रित हो जाता है।
+</p>
+<h3>बैटरी का रखरखाव</h3>
+<ul>
+<li>हर हफ्ते electrolyte level की जाँच करें और टॉप अप करें।</li>
+<li>प्लेटों के ऊपर electrolyte 10 mm से 15 mm ऊपर होना चाहिए।</li>
+<li>Hydrometer से बैटरी के विशिष्ट गुरुत्व की जाँच करें।</li>
+<li>यदि विशिष्ट गुरुत्व 1.180 से नीचे आता है तो sulphuric acid की कुछ बूँदें डालें।</li>
+<li>Cell tester का उपयोग करके प्रत्येक सेल के terminal में voltage की जाँच करें।</li>
+<li>चार्ज करते समय बैटरी को overcharge न करें।</li>
+<li>बैटरी terminals को हमेशा tight और साफ रखें।</li>
+<li>Terminals पर जंग को बनने से रोकने के लिए उस पर पेट्रोलियम जेली लगाएं।</li>
+</ul>
+<h3>Specific Gravity Chart</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Specific Gravity</th>
+<th>State of Charge</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1.260 - 1.280</td><td>पूरी तरह से चार्ज</td></tr>
+<tr><td>1.230 - 1.260</td><td>3/4 चार्ज</td></tr>
+<tr><td>1.200 - 1.230</td><td>1/2 चार्ज</td></tr>
+<tr><td>1.170 - 1.200</td><td>1/4 चार्ज</td></tr>
+<tr><td>1.140 - 1.170</td><td>Run Down के बारे में</td></tr>
+<tr><td>1.110 - 1.140</td><td>छुट्टी दे दी गई</td></tr>
+</tbody>
+</table>
+</div>
+<h3>बैटरी चयन और रेटिंग</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Vehicle Type</th>
+<th>Battery Capacity</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>2.5 Amps 12V Two wheeler without starter</td><td>2.5 Ah</td></tr>
+<tr><td>7 Amps 12V Two wheeler with starter motor</td><td>7 Ah</td></tr>
+<tr><td>35 Amps 12V 800CC-1000 car petrol</td><td>35 Ah</td></tr>
+<tr><td>40-45 Amps 12V 1300 Diesel vehicles</td><td>40-45 Ah</td></tr>
+<tr><td>60 Amps 12V 2.5 Lit LCV</td><td>60 Ah</td></tr>
+<tr><td>80 Amps 12V 4 Lit medium</td><td>80 Ah</td></tr>
+<tr><td>120 Amps 12V 6 Lit Diesel HCV</td><td>120 Ah</td></tr>
+<tr><td>180 Amps 12V 6 Lit Diesel passenger</td><td>180 Ah</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Slow Charging</h3>
+<p>
+Slow charging में battery को लगभग <strong>5A</strong> की दर से चार्ज करना होता है। इसके लिए 12 से 24 घंटे का समय चाहिए होता है। Electrolyte temperature <strong>110°F (43°C)</strong> से अधिक नहीं होना चाहिए।
+</p>
+<h3>Fast Charging</h3>
+<p>
+Fast charging में battery को <strong>10 से 50A</strong> की दर से चार्ज करना शामिल है। Electrolyte temperature <strong>125°F (65°C)</strong> से ऊपर नहीं होना चाहिए।
+</p>
+<h3>Sealed Maintenance Free Battery के लाभ</h3>
+<ul>
+<li>जीवन भर electrolyte level की जाँच और दोहन की कोई आवश्यकता नहीं</li>
+<li>Seal निर्माण - terminal या casing से electrolyte का रिसाव नहीं</li>
+<li>100 लीटर आसुत जल की बचत</li>
+<li>जनशक्ति की बचत</li>
+<li>फर्श को कोई नुकसान नहीं</li>
+<li>अलग बैटरी कक्ष की कोई आवश्यकता नहीं</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     16. ELECTRICITY EFFECTS
+     ====================================================== -->
+<section class="content-card" id="effects">
+<span class="section-label">PART 16 · ELECTRICITY EFFECTS</span>
+<h2>16. विद्युत के प्रभाव (Electricity Effects)</h2>
+<p>
+जब विद्युत धारा किसी परिपथ से प्रवाहित होती है, तो उसकी उपस्थिति का विश्लेषण उसके प्रभावों से किया जा सकता है।
+</p>
+<h3>1. रासायनिक प्रभाव (Chemical Effect)</h3>
+<p>
+यदि दो विद्युत चालक पदार्थ (धातु) को नमक के घोल में डुबोया जाता है, तो दो धातुओं (इलेक्ट्रोड) के बीच एक विद्युत आवेश उत्पन्न होता है।
+</p>
+<p>
+इस व्यवस्था को <strong>Wet Cell</strong> के रूप में जाना जाता है और यह Direct Current देती है।
+</p>
+<p>
+<strong>अनुप्रयोग:</strong> बैटरी के लिए।
+</p>
+<h3>2. ताप प्रभाव (Heating Effect)</h3>
+<p>
+जब एक बल्ब फिलामेंट (fine wire) पर करंट लगाया जाता है तो यह सफेद गर्म हो जाता है और इस प्रकार प्रकाश उत्पन्न करता है।
+</p>
+<p>
+<strong>अनुप्रयोग:</strong> प्रकाश के लिए Head Lamp Bulb।
+</p>
+<h3>3. चुंबकीय प्रभाव (Magnetic Effect)</h3>
+<p>
+यदि किसी तार की कुण्डली में लोहे की नरम छड़ रख दी जाए और तार से विद्युत धारा प्रवाहित की जाए तो लोहे की छड़ चुम्बकित हो जाती है।
+</p>
+<p>
+यदि धारा को वापस ले लिया जाता है तो सामग्री के आधार पर कुछ चुंबकत्व बनाए रखने के साथ बार demagnetize हो जाती है।
+</p>
+<p>
+<strong>अनुप्रयोग:</strong> Relay और Contactor में Electro Magnet।
+</p>
+<h3>4. आघात प्रभाव (Shock Effect)</h3>
+<p>
+यदि मानव शरीर के माध्यम से प्रवाह होता है, तो यह एक गंभीर shock दे सकता है या व्यक्तियों की मृत्यु भी कर सकता है। इसलिए सभी को काम के दौरान विद्युत प्रवाह से निपटने में सावधान रहना चाहिए।
+</p>
+<h3>5. धर्मो-कपल (Thermocouple)</h3>
+<p>
+यह एक ऐसी व्यवस्था है जिसमें विभिन्न धातुओं के तारों द्वारा परिपथ को बंद कर दिया जाता है। एक धातु के तार को कम तापमान पर और दूसरे को उच्च तापमान पर रखा जाता है।
+</p>
+<p>
+इस तरह धर्मो-इलेक्ट्रो मोटिव फोर्स का निर्माण होता है। यह बैक बैक के प्रभाव पर काम करता है।
+</p>
+<h3>6. Thermo Electric Energy</h3>
+<p>
+Thermo Electric Energy Seebeck Effect का उपयोग करके एक IC engine की अपशिष्ट गर्मी द्वारा उत्पादित विद्युत ऊर्जा है। यह अपशिष्ट गर्मी को engine coolant या exhaust से बिजली में परिवर्तित कर सकता है।
+</p>
+<h3>7. Piezo Electric Energy</h3>
+<p>
+Piezo Electric Sensor एक ऐसा उपकरण है जो piezo विद्युत प्रभाव का उपयोग दबाव, त्वरण या बल में परिवर्तन को विद्युत आवेश में परिवर्तित करके मापने के लिए करता है।
+</p>
+<p>
+<strong>अनुप्रयोग:</strong> Cylinder head में छेद में घुसाया Glow Plug जो IC engine में दहन शुरू करने के लिए प्रयुक्त होता है।
+</p>
+<h3>8. Photo Voltaic Energy</h3>
+<p>
+Photo Voltaic (PV) एक शब्द है जो photo voltaic प्रभाव को प्रदर्शित करने वाली अर्धचालक सामग्री का उपयोग करके प्रकाश के बिजली में रूपांतरण को कवर करता है।
+</p>
+</section>
+
+<!-- ======================================================
+     17. SOLENOID & RELAY
+     ====================================================== -->
+<section class="content-card" id="solenoid">
+<span class="section-label">PART 17 · SOLENOID &amp; RELAY</span>
+<h2>17. सोलेनॉइड और रिले (Solenoid and Relay)</h2>
+<h3>Relay (रिले)</h3>
+<p>
+रिले एक विद्युत उपकरण है जो मुख्य सर्किट में पूर्व निर्धारित शर्तों के तहत एक सहायक सर्किट को खोलता या बंद करता है।
+</p>
+<p>
+रिले का व्यापक रूप से इलेक्ट्रॉनिक्स, इलेक्ट्रिकल इंजीनियरिंग और कई अन्य क्षेत्रों में उपयोग किया जाता है।
+</p>
+<p>
+ऐसे रिले होते हैं जो वोल्टेज, करंट, तापमान, आवृत्ति या इन स्थितियों के कुछ संयोजन की स्थितियों के प्रति संवेदनशील होते हैं।
+</p>
+<h3>रिले का वर्गीकरण</h3>
+<ol>
+<li><strong>विद्युतचुंबकीय रिले (Electromagnetic Relay)</strong></li>
+<li><strong>धर्मल रिले (Thermal Relay)</strong></li>
+</ol>
+<h3>Electromagnetic Relay</h3>
+<p>
+ये रिले स्विच असेंबली चाल और निश्चित निम्न-प्रतिरोध संपर्कों का एक संयोजन है जो एक सर्किट को खोलता या बंद करता है।
+</p>
+<p>
+किसी कॉन्टैक्ट्स सिस्टम या ब्रेकट पर लगे होते हैं, जिनमें कुछ लचीलापन होता है। जब संपर्क एक स्थिर या hinged आर्म पर लगे होते हैं जो कि इलेक्ट्रोमैग्नेट द्वारा स्थानांतरित होते हैं।
+</p>
+<h3>Current Sensing Relay</h3>
+<p>
+एक करंट सेंसिंग रिले तब काम करता है जब करंट कॉइल एक ऊपरी सीमा तक पहुँच जाता है।
+</p>
+<ul>
+<li><strong>Pickup (संचालित होना चाहिए):</strong> Current reaches upper limit - Relay operates</li>
+<li><strong>Non-Pickup (संचालित नहीं होना चाहिए):</strong> Current below pickup level</li>
+<li><strong>Drop Out (रिलीज़ होना चाहिए):</strong> Current falls below threshold - Relay releases</li>
+<li><strong>Non-Drop Out (रिलीज़ नहीं होना चाहिए):</strong> Current above drop-out level</li>
+</ul>
+<h3>Voltage Sensing Relay</h3>
+<p>
+एक voltage sensing relay का उपयोग किया जाता है जहां कम वोल्टेज या अधिक वोल्टेज की स्थिति उपकरण को नुकसान पहुंचा सकती है। उदाहरण के लिए, इस प्रकार के रिले का उपयोग voltage stabilizers में किया जाता है।
+</p>
+<h3>Solenoid (सोलेनॉइड)</h3>
+<p>
+सोलेनॉइड तार के लंबे पतले लूप में कसकर पैक किया गया एक कुंडल घाव है, जिसे अक्सर धातु के कोर के चारों ओर लपेटा जाता है, जो अंतरिक्ष की मात्रा में एक समान चुंबकीय क्षेत्र का उत्पादन करता है।
+</p>
+<h3>Solenoid Switch की आवश्यकता</h3>
+<p>
+सोलेनॉइड स्विच एक मजबूत विद्युत चुम्बकीय स्विच है। इसका उपयोग fly wheel ring gear के साथ जुड़ने के लिए over running clutch drive pinion को संचालित करने के लिए किया जाता है।
+</p>
+<p>
+यह बैटरी और स्टार्टिंग मोटर के बीच संपर्कों को बंद करने के लिए एक रिले के रूप में भी कार्य करता है।
+</p>
+<h3>Solenoid Switch का निर्माण</h3>
+<p>
+एक solenoid में दो winding होते हैं:
+</p>
+<ul>
+<li><strong>Pull-in Winding (Series Winding):</strong> मोटे तारों के साथ wound, starter switch से जुड़ा</li>
+<li><strong>Hold-in Winding (Shunt Winding):</strong> पतली तारों की, hold switch terminal और ground से जुड़ा</li>
+</ul>
+<p>
+दो winding एक खोखले core के चारों ओर wound किए जाते हैं। एक लोहे का plunger core के अंदर रखा जाता है। Plunger का दूसरा सिरा fly wheel ring gear के साथ pinion को जोड़ने के लिए shift lever को घुमाता है।
+</p>
+<h3>Solenoid Switch का कार्य</h3>
+<ol>
+<li>जब starter switch को चालू किया जाता है, तो करंट battery को solenoid winding में प्रवाहित करता है।</li>
+<li>यह winding को सक्रिय करता है जो plunger को खींचती है।</li>
+<li>Plunger flywheel ring gear पर pinion को संलग्न करने के लिए shift lever को संचालित करता है।</li>
+<li>फिर यह battery और starter motor के बीच के सर्किट को बंद कर देता है।</li>
+</ol>
+</section>
+
+<!-- ======================================================
+     18. TRANSFORMER & ALTERNATOR
+     ====================================================== -->
+<section class="content-card" id="transformer">
+<span class="section-label">PART 18 · TRANSFORMER &amp; ALTERNATOR</span>
+<h2>18. ट्रांसफॉर्मर और अल्टरनेटर (Transformers and Alternators)</h2>
+<h3>Transformer (ट्रांसफॉर्मर)</h3>
+<p>
+अपने सरलतम रूप में एक transformer में दो स्थिर कॉइल होते हैं जो एक पारस्परिक चुंबकीय प्रवाह द्वारा युग्मित होते हैं। कॉइल्स को पारस्परिक रूप से युग्मित कहा जाता है क्योंकि वे एक सामान्य प्रवाह को जोड़ते हैं।
+</p>
+<h3>Transformer के प्रकार</h3>
+<ol>
+<li><strong>Step Up Transformer:</strong> Primary winding की तुलना में secondary winding में अधिक turns होते हैं। Output voltage बढ़ जाता है।</li>
+<li><strong>Step Down Transformer:</strong> Primary winding की तुलना में secondary winding में कम turns होते हैं। Output voltage घट जाता है।</li>
+</ol>
+<h3>Transformer के अनुप्रयोग</h3>
+<p>
+Petrol engine ignition system में <strong>Ignition Coil</strong> में transformer का उपयोग किया जाता है।
+</p>
+<h3>Ignition Coil</h3>
+<p>
+इसका उपयोग spark उत्पन्न करने के लिए कम वोल्टेज को उच्च वोल्टेज तक बढ़ाने के लिए किया जाता है।
+</p>
+<p>
+इसमें दो winding होते हैं, जिनमें से एक सॉफ्ट आयरन कोर होता है:
+</p>
+<ul>
+<li><strong>Secondary Winding:</strong> Core के ऊपर wound - लगभग 21,000 मोड़</li>
+<li><strong>Primary Winding:</strong> Secondary पर wound - लगभग 200-300 मोड़</li>
+</ul>
+<p>
+Secondary winding का एक सिरा secondary terminal से और दूसरा सिरा primary winding से जुड़ा है। इसमें बैकेलाइट cap container और primary terminals से secondary terminal को insulate करता है।
+</p>
+<h3>Alternator (अल्टरनेटर)</h3>
+<p>
+कारो, ट्रकों, ट्रैक्टरों और दोपहिया वाहनों में alternator का उपयोग किया जाता है।
+</p>
+<h3>Alternator के मुख्य कार्य</h3>
+<ol>
+<li>बैटरी चार्ज करने के लिए।</li>
+<li>वाहन चलाते समय करंट की आपूर्ति करना।</li>
+</ol>
+<h3>Alternator का विवरण</h3>
+<p>
+Alternator परिक्रमी क्षेत्र (rotating field) और स्थिर आर्मेचर (stationary armature) प्रकार की 3 चरण की मशीन है।
+</p>
+<p>
+स्टेटर winding से इसका output slip ring end shield के भीतर लगे heat sink में slip diodes के भीतर लगे built in silicon diodes के माध्यम से ठीक किया जाता है।
+</p>
+<p>
+रोटर उत्तेजना को बदलकर output नियंत्रण प्रभावित होता है।
+</p>
+<h3>Rotor Assembly</h3>
+<ul>
+<li>इसमें एक स्टील शाफ्ट होता है जिसमें driving pulley और cooling fan, एक बेलनाकार लोहे का core और दो insulated slip ring होते हैं।</li>
+<li>Field winding बनाने के लिए बड़ी संख्या में insulated तार के core के ऊपर wound होते हैं।</li>
+<li>Winding का प्रत्येक सिरा अपनी slip ring और spring-loaded brush से जुड़ा होता है।</li>
+<li>Winding दो लोहे के pole के टुकड़ों से आठ interlocking उंगलियों से घिरी होती है।</li>
+</ul>
+<h3>Stator Assembly</h3>
+<ul>
+<li>यह एक स्थिर भाग है जो दो अंत आवरणों के बीच में होता है।</li>
+<li>इसमें एक laminated, बेलनाकार, लोहे का core होता है।</li>
+<li>यह insulated winding के तीन सेटों की फिटिंग की अनुमति देने के लिए slotted होता है।</li>
+<li>हल्की इकाइयों में ये winding star से जुड़ी होती हैं और भारी इकाइयों में delta जुड़ी होती हैं।</li>
+</ul>
+<h3>Diode (डायोड)</h3>
+<p>
+डायोड सिलिकॉन से बने होते हैं और ये करंट को केवल एक दिशा में प्रवाहित करते हैं। वे इस तरह जुड़े होते हैं कि करंट को alternator से battery में प्रवाहित होने देते हैं लेकिन विपरीत दिशा में नहीं।
+</p>
+<ul>
+<li>Negative side पर तीन diodes rear end housing से जुड़े होते हैं।</li>
+<li>Positive side पर तीन diodes insulated heat sink पर लगे होते हैं।</li>
+<li>Diodes alternator द्वारा उत्पादित AC को DC में परिवर्तित करते हैं।</li>
+</ul>
+<h3>Electronic Regulator</h3>
+<p>
+Battery और सहायक उपकरण को उच्च वोल्टेज से बचाने के लिए, alternator voltage को नियंत्रित किया जाना चाहिए। यह एक voltage regulator का उपयोग करके किया जाता है जो वर्तमान प्रवाह को घूर्णन क्षेत्र (rotor) में बदलता है।
+</p>
+<p>
+एक transistor regulator में मुख्य रूप से प्रतिरोधक, capacitor, diode और transistor होते हैं।
+</p>
+<h3>Alternator vs Dynamo</h3>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Alternator</th>
+<th>DC Generator / Dynamo</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Alternator AC करंट विकसित करता है (जो diode द्वारा DC में बदला जाता है)</td><td>Generator DC करंट विकसित करता है</td></tr>
+<tr><td>यह इंजन की निष्क्रिय गति के दौरान पर्याप्त करंट उत्पन्न करता है (18-20 A)</td><td>यह निष्क्रियता के दौरान बहुत कम करंट पैदा करता है (battery चार्ज करना संभव नहीं)</td></tr>
+<tr><td>चार्जिंग सर्किट में किसी कट आउट की आवश्यकता नहीं</td><td>चार्जिंग सर्किट में कट आउट रिले का उपयोग किया जाता है</td></tr>
+<tr><td>समान आउटपुट के लिए वजन कम (8 kg for 12V)</td><td>वजन ज्यादा होता है (12 kg for 12V)</td></tr>
+<tr><td>अल्टरनेटर अपने वर्तमान को सीमित करता है</td><td>जनरेटर अपने स्वयं के वर्तमान को सीमित नहीं करता</td></tr>
+<tr><td>बहुत तेज गति तक चल सकता है (20,000 RPM)</td><td>RPM 9000 तक सीमित है</td></tr>
+<tr><td>कम रखरखाव</td><td>बार-बार रखरखाव</td></tr>
+<tr><td>इसका उच्च आउटपुट/वजन अनुपात है</td><td>इसका उत्पादन-भार अनुपात कम है</td></tr>
+<tr><td>निर्माण में सरल और मजबूत, कॉम्पैक्ट</td><td>बहुत मजबूत नहीं</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ======================================================
+     19. DIODES
+     ====================================================== -->
+<section class="content-card" id="diode">
+<span class="section-label">PART 19 · DIODES</span>
+<h2>19. डायोड (Diodes)</h2>
+<h3>Semiconductor (सेमी-कंडक्टर)</h3>
+<p>
+सेमी-कंडक्टर वे पदार्थ होते हैं जिनकी विद्युत संपत्ति कंडक्टर और इंसुलेटर के बीच होती है। इस तथ्य के कारण, इन सामग्रियों को अर्धचालक कहा जाता है।
+</p>
+<ul>
+<li><strong>Conductor:</strong> Valence इलेक्ट्रॉन हमेशा मुक्त होते हैं।</li>
+<li><strong>Insulator:</strong> Valence इलेक्ट्रॉन हमेशा बंधे रहते हैं।</li>
+<li><strong>Semiconductor:</strong> Valence इलेक्ट्रॉन सामान्य रूप से बंधे होते हैं, लेकिन थोड़ी मात्रा में ऊर्जा की आपूर्ति करके मुक्त किया जा सकता है।</li>
+</ul>
+<h3>N-Type Semiconductor</h3>
+<p>
+जब एक शुद्ध जर्मेनियम या शुद्ध सिलिकॉन क्रिस्टल में आर्सेनिक (As) जैसी पेंटावेलेंट सामग्री डाली जाती है, तो प्रति बंधन एक मुक्त इलेक्ट्रॉन का परिणाम होता है।
+</p>
+<ul>
+<li>प्रत्येक आर्सेनिक परमाणु एक मुक्त इलेक्ट्रॉन दान करता है - आर्सेनिक को <strong>Donor Impurity</strong> कहा जाता है।</li>
+<li>चूंकि एक मुक्त इलेक्ट्रॉन उपलब्ध है और इलेक्ट्रॉन ऋणात्मक आवेश का होता है, इसलिए मिश्रण से बनने वाले पदार्थ को <strong>N-Type Material</strong> के रूप में जाना जाता है।</li>
+</ul>
+<h3>P-Type Semiconductor</h3>
+<p>
+जब गैलियम (Ga) जैसी एक त्रिसंयोजक सामग्री को शुद्ध जर्मेनियम या शुद्ध सिलिकॉन क्रिस्टल में जोड़ा जाता है, तो प्रति बंधन में एक रिक्ति या इलेक्ट्रॉन की कमी होती है।
+</p>
+<ul>
+<li>प्रत्येक गैलियम परमाणु इलेक्ट्रॉन या छिद्र की एक कमी पैदा करता है - गैलियम को <strong>Acceptor Impurity</strong> कहा जाता है।</li>
+<li>चूंकि एक इलेक्ट्रॉन के लिए रिक्ति उपलब्ध है और रिक्ति एक छिद्र है जो सकारात्मक आवेश का है, इस प्रकार गठित सामग्री को <strong>P-Type Material</strong> के रूप में जाना जाता है।</li>
+</ul>
+<h3>P-N Junction</h3>
+<p>
+जब एक P-Type और एक N-Type अर्धचालक जुड़ जाते हैं, तो P-N Junction नामक दो सामग्रियों के बीच एक संपर्क सतह बनती है।
+</p>
+<p>
+इस junction की एक अनूठी विशेषता है। यह junction, एक दिशा में करंट पास करने और दूसरी दिशा में करंट प्रवाह को रोकने की क्षमता रखता है।
+</p>
+<h3>Diode के प्रकार (वर्गीकरण)</h3>
+<ol>
+<li><strong>Power Handling Capacity के आधार पर:</strong>
+    <ul>
+        <li>Low Power Diode - कुछ मिलीवाट</li>
+        <li>Medium Power Diode - कुछ वाट</li>
+        <li>High Power Diode - कई 100 वाट</li>
+    </ul>
+</li>
+<li><strong>Application के आधार पर:</strong>
+    <ul>
+        <li><strong>Signal Diode:</strong> Signal detection और mixing के लिए</li>
+        <li><strong>Switching Diode:</strong> Digital electronics में switching के लिए</li>
+        <li><strong>Rectifier Diode:</strong> AC voltage को DC में परिवर्तित करने के लिए</li>
+    </ul>
+</li>
+</ol>
+<h3>Polarity Marking</h3>
+<p>
+Diode के Cathode सिरे को आमतौर पर एक गोलाकार बैंड या एक डॉट या प्लस चिह्न द्वारा चिह्नित किया जाता है।
+</p>
+<h3>Type Numbers</h3>
+<p>
+Resistors, Capacitors या Inductors के विपरीत, Diode का कोई मूल्य नहीं होता है जिसे उसके शरीर पर मुद्रित या कोडित किया जा सकता है। सभी Diode के शरीर पर एक प्रकार की संख्या मुद्रित होगी।
+</p>
+<p>
+कुछ लोकप्रिय प्रकार के Diode हैं:
+</p>
+<ul>
+<li>OAxx (OA79, OA85)</li>
+<li>BYxxx (BY127, BY128)</li>
+<li>DRxxx (DR25, DR150)</li>
+<li>1Nxxxx (1N917, 1N4001, 1N4007)</li>
+</ul>
+</section>
+
+<!-- ======================================================
+     20. TRANSISTORS
+     ====================================================== -->
+<section class="content-card" id="transistor">
+<span class="section-label">PART 20 · TRANSISTORS</span>
+<h2>20. ट्रांजिस्टर और वर्गीकरण (Transistors and Classification)</h2>
+<p>
+ट्रांजिस्टर अर्धचालक उपकरण होते हैं जिनमें तीन या चार लीड/टर्मिनल होते हैं।
+</p>
+<h3>Transistor का परिचय</h3>
+<p>
+ट्रांजिस्टर का उपयोग मुख्य रूप से छोटे विद्युत/इलेक्ट्रॉनिक संकेतों को बढ़ाने या बढ़ाने के लिए किया जाता है। परिपथ जो ट्रांजिस्टर का उपयोग प्रवर्धन के लिए करता है उसे <strong>Transistor Amplifier</strong> के रूप में जाना जाता है।
+</p>
+<h3>ट्रांजिस्टर का अन्य महत्वपूर्ण अनुप्रयोग</h3>
+<p>
+एक ठोस अवस्था स्विच (Solid State Switch) के रूप में इसका उपयोग। एक solid state switch एक switch के अलावा और कुछ नहीं है जिसमें switching के लिए कोई भौतिक ON/OFF संपर्क शामिल नहीं होता है।
+</p>
+<h3>ट्रांजिस्टर का आविष्कार</h3>
+<p>
+23 दिसंबर 1947 को बेल टेलीफोन प्रयोगशालाओं के वाल्टर एच. ब्राटन और जॉन बार्डीन द्वारा ट्रांजिस्टर का आविष्कार किया गया था।
+</p>
+<h3>ट्रांजिस्टर के लाभ (वैक्यूम ट्यूब की तुलना में)</h3>
+<ul>
+<li>आकार में बहुत छोटा</li>
+<li>वजन में हल्के</li>
+<li>कम ऑपरेटिंग वोल्टेज</li>
+<li>निर्माण में सरल</li>
+<li>कम बिजली की खपत</li>
+<li>कम अवांछित गर्मी उत्पन्न</li>
+<li>मजबूत और भरोसेमंद</li>
+</ul>
+<h3>ट्रांजिस्टर के प्रकार (वर्गीकरण)</h3>
+<ol>
+<li><strong>प्रयुक्त अर्धचालक के आधार पर:</strong>
+    <ul>
+        <li><strong>Germanium Transistor</strong></li>
+        <li><strong>Silicon Transistor</strong> (अधिकांश transistors silicon से बनाए जाते हैं - wider temperature range, better thermal stability)</li>
+    </ul>
+</li>
+<li><strong>P और N जंक्शनों को व्यवस्थित करने के तरीके के आधार पर:</strong>
+    <ul>
+        <li><strong>NPN Transistor</strong> - NPN में PNP की तुलना में उच्च switching गति होती है</li>
+        <li><strong>PNP Transistor</strong></li>
+    </ul>
+</li>
+<li><strong>Power Handling Capacity के आधार पर:</strong>
+    <ul>
+        <li><strong>Low Power Transistor:</strong> 2 वाट से कम - छोटे signal amplifiers में</li>
+        <li><strong>Medium Power Transistor:</strong> 2 से 10 वाट</li>
+        <li><strong>High Power Transistor:</strong> 10 वाट से अधिक - Heat sink के साथ</li>
+    </ul>
+</li>
+</ol>
+<h3>ट्रांजिस्टर के प्रमुख Terminals</h3>
+<ul>
+<li><strong>Emitter (E):</strong> Charge carriers उत्सर्जित करता है</li>
+<li><strong>Base (B):</strong> Control terminal</li>
+<li><strong>Collector (C):</strong> Charge carriers एकत्र करता है</li>
+</ul>
+<h3>ट्रांजिस्टर के Type Numbers</h3>
+<p>
+BC 107, 2N 6004 आदि। इन प्रकार की संख्याओं के अनुरूप विशेषता डेटा ट्रांजिस्टर डेटा पुस्तकों में दिए गए हैं।
+</p>
+<h3>Heat Sink</h3>
+<p>
+High power transistor आमतौर पर धातु के chassis पर या धातु के भौतिक रूप से बड़े टुकड़े पर लगाए जाते हैं जिसे <strong>Heat Sink</strong> कहा जाता है। Heat Sink का कार्य transistor से गर्मी को दूर करना और उसे हवा में भेजना है।
+</p>
+</section>
+
+<!-- ======================================================
+     21. SCR & THYRISTOR
+     ====================================================== -->
+<section class="content-card" id="scr">
+<span class="section-label">PART 21 · SCR &amp; THYRISTOR</span>
+<h2>21. थाइरिस्टर और SCR (Thyristor and SCR)</h2>
+<h3>परिचय</h3>
+<p>
+थाइरिस्टर्स चार परत वाले उपकरण हैं जिन्हें मोटर्स और अन्य विद्युत उपकरणों के लिए अपेक्षाकृत बड़ी मात्रा में करंट को नियंत्रित करने के लिए इलेक्ट्रॉनिक रूप से 'चालू' या 'बंद' किया जा सकता है।
+</p>
+<p>
+<strong>Silicon Controlled Rectifier (SCR)</strong> और <strong>Triac Thyristor</strong> इसके उदाहरण हैं।
+</p>
+<h3>SCR का Construction</h3>
+<p>
+एक SCR एक चार-परत उपकरण है जिसमें तीन टर्मिनल होते हैं:
+</p>
+<ul>
+<li><strong>Anode (A)</strong></li>
+<li><strong>Cathode (K)</strong></li>
+<li><strong>Gate (G)</strong></li>
+</ul>
+<h3>SCR का कार्य सिद्धांत</h3>
+<ol>
+<li>जब Cathode के संबंध में Anode को सकारात्मक बनाया जाता है, तो जंक्शन J2 reverse-biased होता है और डिवाइस से केवल leakage current प्रवाहित होगा। इसे <strong>Forward Blocking State</strong> या <strong>OFF-State</strong> कहा जाता है।</li>
+<li>जब Anode-to-Cathode voltage बढ़ा दिया जाता है, तो reverse-biased junction J2 depletion layers में बड़े voltage gradient के कारण टूट जाएगा। यह <strong>Avalanche Breakdown</strong> है।</li>
+<li>चूंकि अन्य junctions J1 और J3 forward-biased हैं, इसलिए तीनों junctions में large carrier movement होगा, जिसके परिणामस्वरूप एक बड़ा Anode-to-Cathode forward current IF होगा। इसे <strong>ON-State</strong> कहा जाता है।</li>
+<li>ON-State में, वर्तमान बाहरी प्रतिबाधा द्वारा सीमित है।</li>
+<li>जब Forward Current Holding Current IH के स्तर से नीचे गिर जाता है, तो डिवाइस Blocking State में चला जाएगा।</li>
+</ol>
+<h3>SCR का परीक्षण (Testing with Multimeter)</h3>
+<ol>
+<li>Multimeter को कम रेंज पर सेट करें।</li>
+<li>Zero adjusting knob से zero और infinity adjust करें।</li>
+<li>SCR के Anode को Ohmmeter के Positive से और Cathode को Negative से जोड़ें।</li>
+<li>Meter कोई भी reading नहीं दिखाएगा (Infinite resistance)।</li>
+<li>Gate को Anode के साथ Moment के लिए छुएँ।</li>
+<li>Meter 30 और 40 ohm के बीच कम प्रतिरोध पढ़ेगा।</li>
+<li>जब Gate हटा दिया जाता है, तब भी meter 30-40 ohm के समान मान को पढ़ना जारी रखता है।</li>
+<li>इसका मतलब है कि SCR अच्छी काम करने की स्थिति में है।</li>
+</ol>
+<p>
+यदि meter कोई reading नहीं दिखाता है, तो SCR दोषपूर्ण है।
+</p>
+<div class="info-box">
+<div class="box-title">💡 महत्वपूर्ण</div>
+<p>
+जब Gate को एक छोटा Forward Bias दिया जाता है, तो SCR conducting हो जाता है - कैथोड से एनोड तक करंट आसानी से प्रवाहित हो सकता है। एक बार SCR conduct हो जाए तो Gate हटाने पर भी यह conduct करता रहता है।
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     22. THERMISTOR
+     ====================================================== -->
+<section class="content-card" id="thermistor">
+<span class="section-label">PART 22 · THERMISTOR</span>
+<h2>22. थर्मिस्टर (Thermistor)</h2>
+<p>
+थर्मिस्टर भी एक अर्धचालक उपकरण है जो आज के अधिकांश वाहनों में उपयोग किया जाता है।
+</p>
+<p>
+उनका नाम इसलिए रखा गया है क्योंकि वे वास्तव में एक <strong>तापमान संवेदनशील अवरोधक (Thermally Sensitive Resistor)</strong> हैं।
+</p>
+<h3>निर्माण</h3>
+<p>
+यह पाउडर निकल, कोबाल्ट, तांबा, लोहा और मैंगनीज से बना है जिसे उच्च तापमान पर एक साथ जोड़ा गया है।
+</p>
+<h3>विशेषताएँ</h3>
+<p>
+एक थर्मिस्टर का विद्युत प्रतिरोध तापमान के साथ बहुत बदल जाता है।
+</p>
+<h3>उपयोग</h3>
+<ul>
+<li>विभिन्न तापमानों या तापमान में परिवर्तन का पता लगाने के लिए।</li>
+<li>Engine Coolant Temperature का मापन।</li>
+<li>Inlet Air Temperature का मापन।</li>
+</ul>
+<h3>प्रकार</h3>
+<ol>
+<li><strong>Negative Temperature Coefficient (NTC):</strong> सबसे सामान्य प्रकार। तापमान बढ़ने पर प्रतिरोध कम हो जाता है।</li>
+<li><strong>Positive Temperature Coefficient (PTC):</strong> तापमान बढ़ने पर प्रतिरोध बढ़ जाता है।</li>
+</ol>
+<div class="exam-box">
+<div class="box-title">📌 Exam Focus</div>
+<p>
+<strong>Thermistor</strong> = Thermally Sensitive Resistor
+</p>
+<p>
+<strong>NTC</strong> = तापमान बढ़ने पर प्रतिरोध कम
+</p>
+<p>
+<strong>PTC</strong> = तापमान बढ़ने पर प्रतिरोध बढ़
+</p>
+</div>
+</section>
+
+<!-- ======================================================
+     QUICK REVISION
+     ====================================================== -->
+<section class="quick-revision">
+<h2>⭐ Module 4 – Quick Revision</h2>
+<h3>Atom Structure</h3>
+<p>
+<strong>Proton (+), Electron (−), Neutron (Neutral)</strong>
+</p>
+<h3>Ohm's Law</h3>
+<p>
+<strong>V = I × R</strong>
+</p>
+<p>
+I = V/R | R = V/I
+</p>
+<h3>Electrical Quantities</h3>
+<p>
+<strong>Voltage (V - Volt) · Current (I - Ampere) · Resistance (R - Ohm Ω)</strong>
+</p>
+<h3>Measuring Instruments</h3>
+<p>
+<strong>Ammeter (Series) · Voltmeter (Parallel) · Ohmmeter (Parallel, no power)</strong>
+</p>
+<h3>Resistors Color Code</h3>
+<p>
+<strong>BB ROY of Great Britain had Very Good Wife</strong>
+</p>
+<p>
+Black(0), Brown(1), Red(2), Orange(3), Yellow(4), Green(5), Blue(6), Violet(7), Grey(8), White(9)
+</p>
+<h3>Series Circuit</h3>
+<p>
+<strong>R = R₁ + R₂ + ... · I समान · V का योग = Source V</strong>
+</p>
+<h3>Parallel Circuit</h3>
+<p>
+<strong>V समान · I का योग = Total I · 1/R = 1/R₁ + 1/R₂ + ...</strong>
+</p>
+<h3>Fuse Ratings</h3>
+<p>
+Violet (3A), Tan (5A), Red (10A), Yellow (20A), Clear (25A), Light Green (30A)
+</p>
+<h3>Battery - Specific Gravity</h3>
+<p>
+<strong>1.260-1.280 = Full Charge · 1.110-1.140 = Fully Discharged</strong>
+</p>
+<h3>Battery Charging</h3>
+<p>
+<strong>Slow Charging:</strong> 5A, 12-24 hrs · Electrolyte < 110°F
+</p>
+<p>
+<strong>Fast Charging:</strong> 10-50A · Electrolyte < 125°F
+</p>
+<h3>Capacitor</h3>
+<p>
+<strong>C = Q/V · Unit = Farad (F) · Parallel: C = C₁ + C₂ · Series: 1/C = 1/C₁ + 1/C₂</strong>
+</p>
+<h3>Solenoid Switch</h3>
+<p>
+<strong>Pull-in Winding (Series, thick wire) · Hold-in Winding (Shunt, thin wire)</strong>
+</p>
+<h3>Alternator</h3>
+<p>
+<strong>Rotating Field + Stationary Armature + Built-in Diode Rectifier</strong>
+</p>
+<h3>Diodes</h3>
+<p>
+<strong>P-N Junction · N-Type (Donor) · P-Type (Acceptor) · Forward Bias = Conducts</strong>
+</p>
+<h3>Transistor</h3>
+<p>
+<strong>NPN / PNP · Emitter, Base, Collector · Amplifier + Switch</strong>
+</p>
+<h3>SCR</h3>
+<p>
+<strong>Anode, Cathode, Gate · 4-Layer Device · Latching Current / Holding Current</strong>
+</p>
+<h3>Thermistor</h3>
+<p>
+<strong>NTC (Negative Temperature Coefficient) · PTC (Positive Temperature Coefficient)</strong>
+</p>
+</section>
+
+<!-- ======================================================
+     FULL FORMS
+     ====================================================== -->
+<section class="full-forms">
+<h2>📘 Important Full Forms</h2>
+<div class="table-wrap">
+<table class="content-table">
+<thead>
+<tr>
+<th>Short Form</th>
+<th>Full Form</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>EMF</td><td>Electromotive Force</td></tr>
+<tr><td>VOM</td><td>Volt-Ohm-Milliammeter</td></tr>
+<tr><td>DMM</td><td>Digital Multimeter</td></tr>
+<tr><td>DC</td><td>Direct Current</td></tr>
+<tr><td>AC</td><td>Alternating Current</td></tr>
+<tr><td>PCB</td><td>Printed Circuit Board</td></tr>
+<tr><td>SCR</td><td>Silicon Controlled Rectifier</td></tr>
+<tr><td>NTC</td><td>Negative Temperature Coefficient</td></tr>
+<tr><td>PTC</td><td>Positive Temperature Coefficient</td></tr>
+<tr><td>IC</td><td>Integrated Circuit</td></tr>
+<tr><td>ECU</td><td>Electronic Control Unit</td></tr>
+<tr><td>ECM</td><td>Electronic Control Module</td></tr>
+<tr><td>LED</td><td>Light Emitting Diode</td></tr>
+<tr><td>PV</td><td>Photo Voltaic</td></tr>
+<tr><td>BCF</td><td>Bromo Chloro Di Fluoro Methane</td></tr>
+<tr><td>VVT</td><td>Variable Valve Timing</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ======================================================
+     IMPORTANT POINTS
+     ====================================================== -->
+<section class="content-card">
+<h2>📌 Module 4 – सबसे महत्वपूर्ण बातें</h2>
+<ul>
+<li>Atom में तीन मुख्य कण - Proton (+), Electron (−), Neutron (Neutral)।</li>
+<li>Ohm's Law: V = I × R।</li>
+<li>Ammeter सर्किट में श्रृंखला में, Voltmeter समानांतर में जोड़ा जाता है।</li>
+<li>Multimeter = Ammeter + Voltmeter + Ohmmeter।</li>
+<li>Resistor Color Code: Black(0), Brown(1), Red(2), Orange(3), Yellow(4), Green(5), Blue(6), Violet(7), Grey(8), White(9)।</li>
+<li>Series में कुल R = सभी R का योग, Parallel में 1/R = 1/R₁ + 1/R₂।</li>
+<li>Fuse = सर्किट का सबसे कमजोर हिस्सा।</li>
+<li>Battery का Specific Gravity: 1.260-1.280 = Full Charge।</li>
+<li>Lead Acid Battery में Positive Plate = Lead Peroxide, Negative Plate = Sponge Lead।</li>
+<li>Capacitor = दो प्लेट + Dielectric। Unit = Farad।</li>
+<li>Solenoid Switch में Pull-in Winding (Series) और Hold-in Winding (Shunt)।</li>
+<li>Alternator की तुलना में Dynamo का वजन ज्यादा और maintenance भी ज्यादा।</li>
+<li>Diode एक दिशा में current पास करता है - Rectifier के रूप में उपयोग।</li>
+<li>Transistor = NPN या PNP, Amplifier और Switch के रूप में उपयोग।</li>
+<li>SCR = 4-layer, 3-terminal device - Anode, Cathode, Gate।</li>
+<li>Thermistor = Temperature Sensitive Resistor - NTC या PTC।</li>
+<li>Automotive में Electromagnetic Relay, Voltage Sensing Relay आदि का उपयोग होता है।</li>
+<li>Ignition Coil एक Step-up Transformer है।</li>
+</ul>
+</section>
+
+<div class="next-module">
+<a href="/iti-study-centre-notes.html">← ITI Notes</a>
+<a href="/notes/mmv/">📚 All MMV Modules</a>
+<a href="mmv-trade5.html">Next Module →</a>
+</div>
+
+</main>
+
+<section class="container">
+<div class="disclaimer">
+<h2>⚠ Disclaimer</h2>
+<p>
+ITI Study Centre एक educational और study-support platform है। यहाँ उपलब्ध सामग्री विद्यार्थियों की अध्ययन सहायता के लिए तैयार की गई है। Official syllabus, regulations और latest information के लिए संबंधित official authority की जानकारी को प्राथमिकता दें। मूल सामग्री का कॉपीराइट <strong>National Instructional Media Institute (NIMI), Chennai</strong> के पास सुरक्षित है।
+</p>
+</div>
+</section>
+
+<footer>
+<div class="footer-links">
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/terms.html">Terms</a>
+<a href="/contact.html">Contact</a>
+</div>
+<p id="footerYear">© 2026 ITI Study Centre. All Rights Reserved.</p>
+</footer>
+
+<button id="scrollTop" title="Go to Top">⬆</button>
+
+<script>
+
+document.querySelectorAll('.toc-grid a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+            event.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+});
+
+const scrollBtn = document.getElementById("scrollTop");
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 450) { scrollBtn.style.display = "block"; }
+    else { scrollBtn.style.display = "none"; }
+});
+scrollBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+const footerYear = document.getElementById("footerYear");
+if (footerYear) {
+    footerYear.textContent = "© " + new Date().getFullYear() + " ITI Study Centre. All Rights Reserved.";
+}
+
+const progressBar = document.getElementById("readingProgress");
+window.addEventListener("scroll", function() {
+    if (!progressBar) return;
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = percent + "%";
+});
+
+console.log("✅ MMV Theory Module 4 – Final Template Loaded");
+
+</script>
+<script>
+function filterSections() {
+    const keyword = document.getElementById('sectionSearch').value.toLowerCase().trim();
+    const sections = document.querySelectorAll('main .content-card');
+    sections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+        section.style.display = (text.includes(keyword) || keyword === '') ? '' : 'none';
+    });
+}
+document.getElementById('sectionSearch').addEventListener('keyup', function(e) {
+    if (e.key === 'Enter') filterSections();
+});
+</script>
+</body>
+</html>
