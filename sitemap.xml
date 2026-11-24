@@ -1,47 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
-        <loc>https://www.itistudycentre.in/</loc>
-        <priority>1.0</priority>
-    </url>
-
-   
-    
-    <url>
-        <loc>https://www.itistudycentre.in/iti-result.html</loc>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://www.itistudycentre.in/iti-study-centre-notes.html</loc>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://www.itistudycentre.in/engineering-notes.html</loc>
-        <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://www.itistudycentre.in/about.html</loc>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.itistudycentre.in/contact.html</loc>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.itistudycentre.in/privacy-policy.html</loc>
-        <priority>0.5</priority>
-    </url>
-
-    <url>
-        <loc>https://www.itistudycentre.in/disclaimer.html</loc>
-        <priority>0.5</priority>
-    </url>
-
+  <url><loc>https://www.itistudycentre.in/</loc></url>
+  <url><loc>https://www.itistudycentre.in/iti-result.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/iti-study-centre-notes.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/about.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/contact.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/privacy-policy.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/disclaimer.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/terms.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/online-test.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/questionbank.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-6.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-11.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-5.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-3.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/ai-module-1.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-12.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/index.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-09.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-2-4.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-2.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-10.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-08.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-1.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-2-3.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-7.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-2-2.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-2-1.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-2-5.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/employability-skills/module-4.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber7.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber2.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/index.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber10.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber12.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber11.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber5.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber1.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber4.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber8.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber6.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber9.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/plumber/plumber3.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/mechanic-motor-vehicle/mmv-trade5.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/mechanic-motor-vehicle/index.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/mechanic-motor-vehicle/mmv-trade3.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/mechanic-motor-vehicle/mmv-trade1.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/mechanic-motor-vehicle/mmv-trade4.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/mechanic-motor-vehicle/mmv-trade2.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/mechanic-motor-vehicle/mmv-trade6.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/mechanic-motor-vehicle/mmv-trade7.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/mechanic-motor-vehicle/mmv-trade8.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter5.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/index.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter8.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter2-11.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter6.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter2-13.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter2-16.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter3.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter2-10.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter7.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter2-15.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter2.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter2-12.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter2-9.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter2-14.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter1.html</loc></url>
+  <url><loc>https://www.itistudycentre.in/notes/fitter/fitter4.html</loc></url>
 </urlset>

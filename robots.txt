@@ -13,3 +13,4 @@ Disallow: /.github/
 Disallow: /data/
 
 Sitemap: https://www.itistudycentre.in/sitemap.xml
+
