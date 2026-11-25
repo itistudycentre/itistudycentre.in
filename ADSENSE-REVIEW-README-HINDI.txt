@@ -18,3 +18,6 @@ Before upload:
 5) Apply for AdSense only after live review.
 
 This ZIP does not represent a Google approval guarantee. Original material should be independently reviewed for accuracy and copyright.
+
+
+अतिरिक्त सफाई (25-11-2026): उपयोगकर्ता की पुष्टि के अनुसार वेबसाइट पर News सेक्शन इस्तेमाल नहीं होता था। केवल अप्रयुक्त news/ फोल्डर और data/news.json हटाए गए हैं। Homepage, Notes, Question Bank, ITI Result, Official Updates, Policies और अन्य मौजूदा वेबसाइट फाइलें इस सफाई में नहीं बदली गई हैं।
