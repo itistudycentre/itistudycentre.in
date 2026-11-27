@@ -195,14 +195,14 @@
   }
 
 })();
- / ऐड्स को ऑटोमेटिक लोड करने के लिए (सबसे नीचे जोड़ें)
-(function loadAdsScript() {
-    // चेक करें कि कहीं ऐड्स पहले से लोड तो नहीं हो रहा
+// ऑटोमेटिक ऐड लोडर
+(function autoLoadAds() {
     if (!document.getElementById('auto-ads-script')) {
-        var script = document.createElement('script');
-        script.id = 'auto-ads-script';
-        script.src = '/js/ads.js'; 
-        script.async = true;
-        document.body.appendChild(script);
+        var adScript = document.createElement('script');
+        adScript.id = 'auto-ads-script';
+        // अगर आपकी साइट रूट फोल्डर में है तो /js/ads.js सही है
+        adScript.src = '/js/ads.js'; 
+        adScript.async = true;
+        document.head.appendChild(adScript); // इसे head में डालें ताकि जल्दी लोड हो
     }
 })();
