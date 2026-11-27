@@ -16,18 +16,7 @@
 
 (function () {
   "use strict";
-   / ऐड्स को ऑटोमेटिक लोड करने के लिए (सबसे नीचे जोड़ें)
-(function loadAdsScript() {
-    // चेक करें कि कहीं ऐड्स पहले से लोड तो नहीं हो रहा
-    if (!document.getElementById('auto-ads-script')) {
-        var script = document.createElement('script');
-        script.id = 'auto-ads-script';
-        script.src = '/js/ads.js'; 
-        script.async = true;
-        document.body.appendChild(script);
-    }
-})();
-
+  
   /* -------------------- HEADER CONTAINER -------------------- */
 
   var container = document.getElementById("header-container");
@@ -205,4 +194,15 @@
     history.scrollRestoration = "auto";
   }
 
+})();
+ / ऐड्स को ऑटोमेटिक लोड करने के लिए (सबसे नीचे जोड़ें)
+(function loadAdsScript() {
+    // चेक करें कि कहीं ऐड्स पहले से लोड तो नहीं हो रहा
+    if (!document.getElementById('auto-ads-script')) {
+        var script = document.createElement('script');
+        script.id = 'auto-ads-script';
+        script.src = '/js/ads.js'; 
+        script.async = true;
+        document.body.appendChild(script);
+    }
 })();
