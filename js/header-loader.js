@@ -195,14 +195,15 @@
   }
 
 })();
-// ऑटोमेटिक ऐड लोडर
-(function autoLoadAds() {
-    if (!document.getElementById('auto-ads-script')) {
+// --- Global Ads Auto Loader ---
+(function() {
+    // चेक करें कि ऐड स्क्रिप्ट पहले से लोड तो नहीं है
+    if (!document.getElementById('global-ads-script')) {
         var adScript = document.createElement('script');
-        adScript.id = 'auto-ads-script';
-        // अगर आपकी साइट रूट फोल्डर में है तो /js/ads.js सही है
+        adScript.id = 'global-ads-script';
+        // पाथ चेक करें: अगर आपकी सभी फाइलें रूट में हैं तो '/js/ads.js' सही है
         adScript.src = '/js/ads.js'; 
         adScript.async = true;
-        document.head.appendChild(adScript); // इसे head में डालें ताकि जल्दी लोड हो
+        document.body.appendChild(adScript);
     }
 })();
