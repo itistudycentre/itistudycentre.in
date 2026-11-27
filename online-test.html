@@ -99,7 +99,23 @@
       font-size: 0.85rem;
       font-weight: 600;
     }
-    .trade-card
+    .trade-card .soon-badge {
+      display: inline-block;
+      margin-top: 14px;
+      background: #fff3cd;
+      color: #8a6d00;
+      padding: 7px 18px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .trade-card.coming-soon {
+      opacity: 0.75;
+    }
+    .trade-card.coming-soon:hover {
+      border-color: #e2eaf2;
+      transform: none;
+    }
     .back-to-trades {
       display: inline-block;
       margin-bottom: 14px;
@@ -626,7 +642,7 @@
       display: none !important;
     }
   </style>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1309237879949023"></script></head>
+</head>
 <body>
 <div id="header-container"></div>
 <script defer="" src="/js/header-loader.js"></script>
@@ -641,7 +657,7 @@
 </div></div>
 <section class="page-title"><div class="container">
 <h1>📝 ऑनलाइन टेस्ट</h1>
-<p>वर्तमान में Employability Skills के लिए मुफ्त Mock Test उपलब्ध है — 25 प्रश्न · 15 मिनट · हर प्रश्न 2 अंक का</p>
+<p>अपना ट्रेड चुनें और मुफ्त मॉक टेस्ट दें — 25 प्रश्न · 15 मिनट · हर प्रश्न 2 अंक का</p>
 </div></section>
 <div class="container" id="tradeScreen">
 <div class="trade-grid" id="tradeGrid">
@@ -759,11 +775,23 @@
   }
 
   // --------------------------------------------------------------
-  // 1b. वर्तमान में उपलब्ध प्रश्न बैंक
+  // 1b. TRADES LIST (भविष्य में नया ट्रेड जोड़ना हो तो सिर्फ यहाँ एंट्री
+  //     जोड़ें — key वही होना चाहिए जो question-bank.js में
+  //     window.QUESTION_BANK.<key> में दिया गया है, और available:true
+  //     कर दें जब उस ट्रेड का question-bank.js साइट पर जोड़ दें)
   // --------------------------------------------------------------
   const TRADES = [
-    // केवल वही ट्रेड दिखाएँ जिनका प्रश्न बैंक इस वेबसाइट पर वास्तव में उपलब्ध है।
-    { key: 'employability', title: 'Employability Skills', hindi: 'रोजगार कौशल', icon: '📘' }
+    { key: 'employability',          title: 'Employability Skills',                              hindi: 'रोजगार कौशल',                         icon: '📘' },
+    { key: 'fitter',                 title: 'Fitter',                                           hindi: 'फिटर',                                 icon: '🔧' },
+    { key: 'plumber',                title: 'Plumber',                                          hindi: 'प्लंबर',                               icon: '🚰' },
+    { key: 'mechanic-motor-vehicle', title: 'Mechanic Motor Vehicle (MMV)',                     hindi: 'मैकेनिक मोटर व्हीकल',                  icon: '🚗' },
+    { key: 'welder',                 title: 'Welder',                                           hindi: 'वेल्डर',                               icon: '🔥' },
+    { key: 'mechanic-diesel',        title: 'Mechanic Diesel',                                  hindi: 'मैकेनिक डीजल',                         icon: '🚛' },
+    { key: 'rac',                    title: 'RAC – Refrigeration and Air Conditioning',          hindi: 'रेफ्रिजरेशन एवं एयर कंडीशनिंग',         icon: '❄️' },
+    { key: 'turner',                 title: 'Turner',                                           hindi: 'टर्नर',                                icon: '⚙️' },
+    { key: 'machinist',              title: 'Machinist',                                        hindi: 'मशीनिस्ट',                             icon: '🔩' },
+    { key: 'electrician',            title: 'Electrician',                                      hindi: 'इलेक्ट्रीशियन',                        icon: '⚡' },
+    { key: 'copa',                   title: 'COPA – Computer Operator and Programming Assistant', hindi: 'कोपा',                              icon: '💻' }
   ];
 
   // जिस ट्रेड में "1st Year" के साथ किसी अतिरिक्त key (जैसे "AI Module")
@@ -1209,20 +1237,24 @@
     const grid = document.getElementById('tradeGrid');
     grid.innerHTML = '';
 
-    TRADES.filter(t => window.QUESTION_BANK && window.QUESTION_BANK[t.key]).forEach(t => {
+    TRADES.forEach(t => {
       const isAvailable = !!(window.QUESTION_BANK && window.QUESTION_BANK[t.key]);
 
       const card = document.createElement('div');
-      card.className = 'trade-card';
+      card.className = 'trade-card' + (isAvailable ? '' : ' coming-soon');
       card.innerHTML = `
         <span class="trade-icon">${t.icon}</span>
         <div class="trade-name">${t.title}<span class="hi">${t.hindi}</span></div>
-        <span class="trade-btn">टेस्ट शुरू करें →</span>
+        ${isAvailable
+          ? '<span class="trade-btn">टेस्ट शुरू करें →</span>'
+          : '<span class="soon-badge">🔔 जल्द आ रहा है</span>'}
       `;
 
       card.addEventListener('click', () => {
         if (isAvailable) {
           openTrade(t.key, t.title, t.icon);
+        } else {
+          alert('🔔 ' + t.title + ' के लिए प्रश्न बैंक अभी उपलब्ध नहीं है।');
         }
       });
 
